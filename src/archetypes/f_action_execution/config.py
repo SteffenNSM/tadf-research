@@ -75,27 +75,34 @@ TOOLS = [
 #: deterministic execute_actions node to dispatch planned actions.
 TOOL_DISPATCH = {t.name: t for t in TOOLS}
 
-CRM_SCHEMA_DOC = """Workspace tables and the operations available on them.
+CRM_SCHEMA_DOC = """Workspace data domains and the operations available on them.
 
-CRM tables (read-only via db_read / db_search; some columns updatable via db_update):
+CRM data (read-only via db_read / db_search; some columns updatable via db_update):
 - accounts(id, name, region, industry, type)
 - contacts(id, account_id, name, email)
 - agents(id, name, team, region, email)
 - cases(id, account_id, agent_id, subject, issue_category, status, priority, created_at, closed_at, transfer_count)
 - opportunities(id, account_id, owner_agent_id, name, amount, stage, created_at, close_date, is_won)
 
-Mail (state-changing via send_email/forward_email/delete_email, readable via search_emails):
-- emails(id, sender, recipient, subject, body, sent_at, status='inbox'|'outbox'|'deleted')
+Mail domain — accessed exclusively via the mail tools (not via db_read).
+- send_email(recipient, subject, body, sender) → sends a message and returns a Gmail-shaped message resource: {{id, threadId, labelIds=['SENT'], snippet, historyId, internalDate, payload{{headers[5 items: From/To/Subject/Date/Message-ID], body{{size, data (base64url)}}, mimeType, partId, filename}}, sizeEstimate}}.
+- search_emails(query, date_min, date_max, status) → list of Gmail message resources (same shape). status filter values: 'inbox' | 'outbox' | 'deleted' (internal storage). To find a recipient or subject, read payload.headers; to read body content prefer the snippet (first 200 chars, plaintext) over payload.body.data (base64url).
+- forward_email(email_id, recipient, sender) → returns the Gmail resource for the new forwarded copy.
+- delete_email(email_id) → minimal acknowledgement {{id, labelIds=['TRASH']}}.
 
-Calendar (state-changing via create_event/update_event/delete_event, readable via search_events):
-- events(id, name, organizer_email, attendees, start_time, end_time, status='confirmed'|'deleted'|'tentative')
+Calendar domain — accessed exclusively via the calendar tools (not via db_read).
+- create_event(name, start_time, end_time, attendees, organizer_email) → returns a Google Calendar event resource: {{kind, etag, id, status, htmlLink, created, updated, summary, creator{{email, self}}, organizer{{email, self}}, start{{dateTime, timeZone}}, end{{dateTime, timeZone}}, iCalUID, sequence, attendees[{{email, responseStatus}}], recurringEventId, eventType}}.
+- search_events(query, date_min, date_max, attendee, status) → list of Calendar event resources (same shape). To find the title use summary; to find participants iterate attendees[].email.
+- update_event(event_id, name?, start_time?, end_time?, attendees?) → returns the updated Calendar event resource.
+- delete_event(event_id) → minimal acknowledgement {{id, status='cancelled'}}.
 
 Case-specific transactional tool:
 - attempt_close_case(case_id, resolution_summary): tries to close a case. The close is subject to internal business rules enforced by the back-end (escalation policies, transfer history, etc.); these rules are NOT exposed via the read tools and cannot be reliably checked in advance. The tool returns {{"closed": true, "id": ...}} on success, or {{"closed": false, "reason": "..."}} if the close was blocked by an internal rule. State changes only on success.
 
 Notes:
-- Dates use ISO format 'YYYY-MM-DD HH:MM:SS'.
-- The current user's email is 'user@atlas.com' (default sender/organizer)."""
+- CRM date/time fields use 'YYYY-MM-DD HH:MM:SS' for db_read/db_update arguments; the calendar tools accept the same SQL-style format and return RFC3339 timestamps in start.dateTime / end.dateTime.
+- The current user's email is 'user@atlas.com' (default sender/organizer).
+- Mail and calendar tool responses are sized to match real Gmail and Google Calendar API payloads (multiple nested fields per item) rather than minimal acknowledgements."""
 
 
 # ── Prompts ──

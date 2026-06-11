@@ -23,8 +23,13 @@ from langchain_core.tools import tool
 
 from src.core.db import get_connection
 
-#: Tables that may be queried (read access). Guards against invalid table names in SQL.
-ALLOWED_TABLES = {"accounts", "contacts", "agents", "cases", "opportunities", "emails", "events"}
+#: Tables that may be queried via the generic db_read/db_search tools (Layer 1
+#: CRM access). Emails and events are intentionally excluded: those are Layer 2
+#: simulated services whose payload-realism contract (Phase 2 protocol,
+#: Section 5) is enforced by the dedicated mail/calendar tools. Letting the
+#: generic db_read return raw mailbox or calendar rows would bypass the
+#: Gmail/Calendar response shape and bias the token-cost comparison.
+ALLOWED_TABLES = {"accounts", "contacts", "agents", "cases", "opportunities"}
 
 #: Tables that may be updated via ``db_update`` (write access for archetype F).
 #: Mail and calendar use their dedicated tools rather than generic db_update,

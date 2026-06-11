@@ -115,8 +115,9 @@ Co-primary: Task Completion Rate (TCR; B, C, D, F) or Output Quality Score (OQS;
 ## Current Status (2026-06-11)
 
 - A, B, F implemented and swept (single-run, 15 instances each); results in `data/results/`
-- TADF v1 rules derived for A (IT-012), B (IT-007), F four-quadrant (IT-015)
-- Open: archetypes C, D, E, G, H; consolidated three-run pass; perturbation/robustness runs; router conditions; payload-realism decision (D-006); per-archetype step limits (D-007)
+- Layer 2 payload realism implemented (Gmail-/Calendar-shaped tool responses, IT-016); F re-swept under realistic payloads (`f_validation_20260611_141158.json`, token ratio 2.77×)
+- TADF v1 rules derived for A (IT-012), B (IT-007), F four-quadrant (IT-015; aggregation quadrant pending multi-run confirmation, IT-016)
+- Open: archetypes C, D, E, G, H; consolidated three-run pass; perturbation/robustness runs; router conditions; per-archetype step limits (D-007); McNemar-vs-Wilcoxon decision for paired binary TCR
 - All deviations from the Phase 2 protocol: thesis Appendix B.1 deviation log
 
 ## Build and Run
