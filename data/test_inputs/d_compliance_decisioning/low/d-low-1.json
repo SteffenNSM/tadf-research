@@ -1,0 +1,30 @@
+{
+  "id": "d-low-1",
+  "archetype": "D",
+  "difficulty": "low",
+  "sub_class": "no_action_gate_G1",
+  "instruction": "Apply the approval policy to this quote request and return the required decision.",
+  "quote_request": {
+    "lead": {
+      "id": 5001,
+      "status": "unqualified",
+      "account_id": 12
+    },
+    "customer": {
+      "region": "AMER",
+      "is_existing": false,
+      "has_overdue_invoices": false
+    },
+    "quote": {
+      "amount": 50000,
+      "base_discount_pct": 5
+    }
+  },
+  "expected_label": "DECLINE",
+  "rationale_hint": "Gate G1 (lead.status must be 'qualified') fails — lead is 'unqualified'. Per the policy, gates evaluate first and a gate failure forces DECLINE with no further evaluation.",
+  "provenance": {
+    "source_benchmark": "CRMArena-Pro Workflow Execution (Huang et al., 2025); World of Workflows Constraint Understanding (Skyfall Research, 2025); WorkBench no-action subset (Styles et al., 2024); FlowBench rule-following (Xiao et al., 2024)",
+    "adaptation": "Author-constructed quote request and approval policy; task semantics follow the rule-application + no-action pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: no_action_gate_G1.",
+    "license": "Original work by the author (rule set, quote requests, task design); benchmark semantics reference only"
+  }
+}

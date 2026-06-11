@@ -1,0 +1,30 @@
+{
+  "id": "d-high-3",
+  "archetype": "D",
+  "difficulty": "high",
+  "sub_class": "precedence_P3_over_P4",
+  "instruction": "Apply the approval policy to this quote request and return the required decision.",
+  "quote_request": {
+    "lead": {
+      "id": 5013,
+      "status": "qualified",
+      "account_id": 10
+    },
+    "customer": {
+      "region": "AMER",
+      "is_existing": false,
+      "has_overdue_invoices": false
+    },
+    "quote": {
+      "amount": 4500,
+      "base_discount_pct": 8
+    }
+  },
+  "expected_label": "ESCALATE_DIRECTOR",
+  "rationale_hint": "Gates pass; no bonuses; effective 8 %; quote amount $4,500 < $5,000 AND effective > 5 %. P3 fires → ESCALATE_DIRECTOR. P3 takes precedence over P4's bracket, which would have selected APPROVE for an 8 % discount.",
+  "provenance": {
+    "source_benchmark": "CRMArena-Pro Workflow Execution (Huang et al., 2025); World of Workflows Constraint Understanding (Skyfall Research, 2025); WorkBench no-action subset (Styles et al., 2024); FlowBench rule-following (Xiao et al., 2024)",
+    "adaptation": "Author-constructed quote request and approval policy; task semantics follow the rule-application + no-action pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: precedence_P3_over_P4.",
+    "license": "Original work by the author (rule set, quote requests, task design); benchmark semantics reference only"
+  }
+}

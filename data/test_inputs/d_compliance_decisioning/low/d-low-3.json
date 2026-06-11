@@ -1,0 +1,30 @@
+{
+  "id": "d-low-3",
+  "archetype": "D",
+  "difficulty": "low",
+  "sub_class": null,
+  "instruction": "Apply the approval policy to this quote request and return the required decision.",
+  "quote_request": {
+    "lead": {
+      "id": 5003,
+      "status": "qualified",
+      "account_id": 4
+    },
+    "customer": {
+      "region": "AMER",
+      "is_existing": false,
+      "has_overdue_invoices": false
+    },
+    "quote": {
+      "amount": 50000,
+      "base_discount_pct": 5
+    }
+  },
+  "expected_label": "APPROVE",
+  "rationale_hint": "Gates pass; no EMEA or loyalty bonus applies; effective discount 5 %; falls in P4's [0,10] bracket → APPROVE.",
+  "provenance": {
+    "source_benchmark": "CRMArena-Pro Workflow Execution (Huang et al., 2025); World of Workflows Constraint Understanding (Skyfall Research, 2025); WorkBench no-action subset (Styles et al., 2024); FlowBench rule-following (Xiao et al., 2024)",
+    "adaptation": "Author-constructed quote request and approval policy; task semantics follow the rule-application + no-action pattern of the cited benchmarks. No benchmark text or data is reproduced.",
+    "license": "Original work by the author (rule set, quote requests, task design); benchmark semantics reference only"
+  }
+}

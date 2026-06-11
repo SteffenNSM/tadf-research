@@ -1,0 +1,30 @@
+{
+  "id": "d-high-1",
+  "archetype": "D",
+  "difficulty": "high",
+  "sub_class": "boundary_inclusive",
+  "instruction": "Apply the approval policy to this quote request and return the required decision.",
+  "quote_request": {
+    "lead": {
+      "id": 5011,
+      "status": "qualified",
+      "account_id": 1
+    },
+    "customer": {
+      "region": "EMEA",
+      "is_existing": true,
+      "has_overdue_invoices": false
+    },
+    "quote": {
+      "amount": 80000,
+      "base_discount_pct": 22
+    }
+  },
+  "expected_label": "ESCALATE_VP",
+  "rationale_hint": "Gates pass; B1 +5 %, B2 +3 %; effective exactly 30 %. P4's (20,30] bracket is inclusive at the upper bound — 30 % falls in ESCALATE_VP, not DECLINE. P1 fires only at > 30, so it does not apply at the boundary.",
+  "provenance": {
+    "source_benchmark": "CRMArena-Pro Workflow Execution (Huang et al., 2025); World of Workflows Constraint Understanding (Skyfall Research, 2025); WorkBench no-action subset (Styles et al., 2024); FlowBench rule-following (Xiao et al., 2024)",
+    "adaptation": "Author-constructed quote request and approval policy; task semantics follow the rule-application + no-action pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: boundary_inclusive.",
+    "license": "Original work by the author (rule set, quote requests, task design); benchmark semantics reference only"
+  }
+}

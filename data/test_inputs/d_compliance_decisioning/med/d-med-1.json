@@ -1,0 +1,30 @@
+{
+  "id": "d-med-1",
+  "archetype": "D",
+  "difficulty": "med",
+  "sub_class": null,
+  "instruction": "Apply the approval policy to this quote request and return the required decision.",
+  "quote_request": {
+    "lead": {
+      "id": 5006,
+      "status": "qualified",
+      "account_id": 3
+    },
+    "customer": {
+      "region": "EMEA",
+      "is_existing": false,
+      "has_overdue_invoices": false
+    },
+    "quote": {
+      "amount": 50000,
+      "base_discount_pct": 8
+    }
+  },
+  "expected_label": "ESCALATE_DIRECTOR",
+  "rationale_hint": "Gates pass; B1 (EMEA) adds 5 %; effective 13 %; P4 bracket (10,20] → ESCALATE_DIRECTOR. Without the EMEA bonus, 8 % would have stayed in [0,10] and APPROVE.",
+  "provenance": {
+    "source_benchmark": "CRMArena-Pro Workflow Execution (Huang et al., 2025); World of Workflows Constraint Understanding (Skyfall Research, 2025); WorkBench no-action subset (Styles et al., 2024); FlowBench rule-following (Xiao et al., 2024)",
+    "adaptation": "Author-constructed quote request and approval policy; task semantics follow the rule-application + no-action pattern of the cited benchmarks. No benchmark text or data is reproduced.",
+    "license": "Original work by the author (rule set, quote requests, task design); benchmark semantics reference only"
+  }
+}

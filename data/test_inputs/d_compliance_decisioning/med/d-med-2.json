@@ -1,0 +1,30 @@
+{
+  "id": "d-med-2",
+  "archetype": "D",
+  "difficulty": "med",
+  "sub_class": null,
+  "instruction": "Apply the approval policy to this quote request and return the required decision.",
+  "quote_request": {
+    "lead": {
+      "id": 5007,
+      "status": "qualified",
+      "account_id": 8
+    },
+    "customer": {
+      "region": "AMER",
+      "is_existing": true,
+      "has_overdue_invoices": false
+    },
+    "quote": {
+      "amount": 80000,
+      "base_discount_pct": 18
+    }
+  },
+  "expected_label": "ESCALATE_VP",
+  "rationale_hint": "Gates pass; B2 (loyalty) adds 3 %; effective 21 %; P4 bracket (20,30] → ESCALATE_VP.",
+  "provenance": {
+    "source_benchmark": "CRMArena-Pro Workflow Execution (Huang et al., 2025); World of Workflows Constraint Understanding (Skyfall Research, 2025); WorkBench no-action subset (Styles et al., 2024); FlowBench rule-following (Xiao et al., 2024)",
+    "adaptation": "Author-constructed quote request and approval policy; task semantics follow the rule-application + no-action pattern of the cited benchmarks. No benchmark text or data is reproduced.",
+    "license": "Original work by the author (rule set, quote requests, task design); benchmark semantics reference only"
+  }
+}
