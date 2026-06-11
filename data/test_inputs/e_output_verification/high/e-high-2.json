@@ -1,0 +1,27 @@
+{
+  "id": "e-high-2",
+  "archetype": "E",
+  "difficulty": "high",
+  "sub_class": "boundary_needs_revision_two_fails",
+  "instruction": "Apply the rubric to the candidate response and return the verdict.",
+  "inquiry": {
+    "sender": "logistics@stratos.example",
+    "subject": "Case #88 — delayed parts shipment",
+    "body": "Hi, our case #88 was filed Monday about the delayed parts shipment. We still haven't heard back. The parts are needed for a production line that's currently idled. Could you give us an update?"
+  },
+  "candidate_response": {
+    "subject": "Re: Case #80",
+    "body": "Hi, thanks for following up on case #80. We're looking into the delayed shipment with our logistics team and will get back to you shortly. We understand this is impacting your operations and appreciate your patience. Best regards, Support."
+  },
+  "criterion_failures": [
+    "C2",
+    "C5"
+  ],
+  "expected_label": "NEEDS_REVISION",
+  "rationale_hint": "Two failures: C2 ('shortly' no ETA) and C5 (cites case #80 vs the customer's case #88). C1, C3, C4 pass. Sits exactly at the 2-fail end of the NEEDS_REVISION band — one more failure would tip into FAIL. Tests whether the judge respects the count boundary.",
+  "provenance": {
+    "source_benchmark": "WONDERBREAD SOP Ranking and Demo Validation (Wornow et al., 2024); Kourani et al. (2025) self-improvement; TheAgentCompany feedback subtasks (Xu et al., 2024)",
+    "adaptation": "Author-constructed inquiry / candidate-response pair and rubric; task semantics follow the LLM-as-Judge pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: boundary_needs_revision_two_fails.",
+    "license": "Original work by the author (rubric, inquiries, candidate responses); benchmark semantics reference only"
+  }
+}

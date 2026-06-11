@@ -1,0 +1,26 @@
+{
+  "id": "e-med-1",
+  "archetype": "E",
+  "difficulty": "med",
+  "sub_class": "no_eta_in_friendly_wrapping",
+  "instruction": "Apply the rubric to the candidate response and return the verdict.",
+  "inquiry": {
+    "sender": "alma.cordero@northstar.example",
+    "subject": "Refund timeline for damaged order #20030",
+    "body": "Hi, my order #20030 arrived damaged last week. I was told a $200 refund would be processed. When will I see it on my card?"
+  },
+  "candidate_response": {
+    "subject": "Re: Order #20030 refund",
+    "body": "Hi, thanks for following up about order #20030. We've initiated the $200 refund for the damaged item and our finance team is processing it. We appreciate your patience and value your business. Best, Refunds Team."
+  },
+  "criterion_failures": [
+    "C2"
+  ],
+  "expected_label": "NEEDS_REVISION",
+  "rationale_hint": "C2 fails: response confirms the refund was initiated but gives no ETA on when the customer will actually see it on their card — which is the question the customer asked. C1, C3, C4, C5 pass.",
+  "provenance": {
+    "source_benchmark": "WONDERBREAD SOP Ranking and Demo Validation (Wornow et al., 2024); Kourani et al. (2025) self-improvement; TheAgentCompany feedback subtasks (Xu et al., 2024)",
+    "adaptation": "Author-constructed inquiry / candidate-response pair and rubric; task semantics follow the LLM-as-Judge pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: no_eta_in_friendly_wrapping.",
+    "license": "Original work by the author (rubric, inquiries, candidate responses); benchmark semantics reference only"
+  }
+}

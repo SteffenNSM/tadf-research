@@ -1,0 +1,28 @@
+{
+  "id": "e-med-4",
+  "archetype": "E",
+  "difficulty": "med",
+  "sub_class": "dismissive_plus_scope_creep",
+  "instruction": "Apply the rubric to the candidate response and return the verdict.",
+  "inquiry": {
+    "sender": "ana.morales@beacon.example",
+    "subject": "Payment failed at checkout",
+    "body": "Hi, I tried to purchase the team plan today and the payment didn't go through — I just see a 'something went wrong' message. Could you help me complete the order?"
+  },
+  "candidate_response": {
+    "subject": "Re: Payment failed at checkout",
+    "body": "Hi, payment issues happen sometimes — just retry the checkout. We've heard from a few customers about payment problems lately and we're rebuilding the checkout flow which should fix it for everyone eventually. Cheers, Support."
+  },
+  "criterion_failures": [
+    "C1",
+    "C2",
+    "C3"
+  ],
+  "expected_label": "FAIL",
+  "rationale_hint": "Three failures: C1 ('payment issues happen sometimes' deflects from the specific case), C2 ('just retry' offers no diagnostic next step or ETA from the support side, and 'eventually' carries no ETA), C3 ('rebuilding the checkout flow' is a future-feature commitment the customer did not ask about). C4 and C5 pass (no inquiry case ID, tone is informal but not condescending).",
+  "provenance": {
+    "source_benchmark": "WONDERBREAD SOP Ranking and Demo Validation (Wornow et al., 2024); Kourani et al. (2025) self-improvement; TheAgentCompany feedback subtasks (Xu et al., 2024)",
+    "adaptation": "Author-constructed inquiry / candidate-response pair and rubric; task semantics follow the LLM-as-Judge pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: dismissive_plus_scope_creep.",
+    "license": "Original work by the author (rubric, inquiries, candidate responses); benchmark semantics reference only"
+  }
+}

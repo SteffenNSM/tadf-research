@@ -1,0 +1,28 @@
+{
+  "id": "e-high-3",
+  "archetype": "E",
+  "difficulty": "high",
+  "sub_class": "boundary_fail_three_fails",
+  "instruction": "Apply the rubric to the candidate response and return the verdict.",
+  "inquiry": {
+    "sender": "platform.team@meridian.example",
+    "subject": "Case #155 — Salesforce integration intermittently fails",
+    "body": "Hi, our Salesforce integration fails intermittently — about once an hour the sync job errors out and we have to retry manually. Case #155."
+  },
+  "candidate_response": {
+    "subject": "Re: Integration trouble",
+    "body": "Look, integrations sometimes don't work and our engineering team will get to your Salesforce issue at some point. We're also considering adding a new integration adapter that should help in the future. Maybe ping us back next month if you don't hear anything."
+  },
+  "criterion_failures": [
+    "C1",
+    "C2",
+    "C3"
+  ],
+  "expected_label": "FAIL",
+  "rationale_hint": "Three failures push this to FAIL: C1 ('integrations sometimes don't work' is generic and dismissive of the specific case), C2 ('at some point' / 'next month if you don't hear' no ETA), C3 ('considering adding a new integration adapter' future feature). C4 and C5 are borderline but pass — no reference is required when the response omits one entirely (rubric C5 fails only on wrong or invented references).",
+  "provenance": {
+    "source_benchmark": "WONDERBREAD SOP Ranking and Demo Validation (Wornow et al., 2024); Kourani et al. (2025) self-improvement; TheAgentCompany feedback subtasks (Xu et al., 2024)",
+    "adaptation": "Author-constructed inquiry / candidate-response pair and rubric; task semantics follow the LLM-as-Judge pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: boundary_fail_three_fails.",
+    "license": "Original work by the author (rubric, inquiries, candidate responses); benchmark semantics reference only"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "e-med-2",
+  "archetype": "E",
+  "difficulty": "med",
+  "sub_class": "scope_creep_plus_vague",
+  "instruction": "Apply the rubric to the candidate response and return the verdict.",
+  "inquiry": {
+    "sender": "i.tran@quasar.example",
+    "subject": "Help enabling SSO for our team",
+    "body": "Hi, we'd like to enable single sign-on for our team. Could you point us at the right setup guide?"
+  },
+  "candidate_response": {
+    "subject": "Re: SSO setup",
+    "body": "Hi, thanks for asking about SSO. We're rolling out a major SSO upgrade later this year that will fully automate setup with one click — keep an eye out for that. For your current question, we'll have an engineer reach out in due course to walk you through the existing setup. Best, Customer Success."
+  },
+  "criterion_failures": [
+    "C2",
+    "C3"
+  ],
+  "expected_label": "NEEDS_REVISION",
+  "rationale_hint": "Two failures: C2 ('in due course', no concrete pointer to docs or scheduled follow-up) and C3 (promises a 'major SSO upgrade later this year' as a future feature commitment, which the customer did not ask about). C1, C4, C5 pass.",
+  "provenance": {
+    "source_benchmark": "WONDERBREAD SOP Ranking and Demo Validation (Wornow et al., 2024); Kourani et al. (2025) self-improvement; TheAgentCompany feedback subtasks (Xu et al., 2024)",
+    "adaptation": "Author-constructed inquiry / candidate-response pair and rubric; task semantics follow the LLM-as-Judge pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: scope_creep_plus_vague.",
+    "license": "Original work by the author (rubric, inquiries, candidate responses); benchmark semantics reference only"
+  }
+}

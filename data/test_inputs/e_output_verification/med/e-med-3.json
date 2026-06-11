@@ -1,0 +1,24 @@
+{
+  "id": "e-med-3",
+  "archetype": "E",
+  "difficulty": "med",
+  "sub_class": "compact_compliance",
+  "instruction": "Apply the rubric to the candidate response and return the verdict.",
+  "inquiry": {
+    "sender": "controller@arclight.example",
+    "subject": "Confirm renewal billing for April 1",
+    "body": "Could you confirm our renewal billing date and amount? Our records say April 1, 2026 for $24,000 but we want to double-check before the AP team locks the period."
+  },
+  "candidate_response": {
+    "subject": "Re: Renewal billing confirmation",
+    "body": "Confirmed: your account will be charged $24,000 on April 1, 2026 per the contract you signed in January 2026. The amount and date match our records and your purchase order. If anything looks off before April 1, reply here and we'll review again. Best, Billing Team."
+  },
+  "criterion_failures": [],
+  "expected_label": "PASS",
+  "rationale_hint": "All 5 criteria pass even though the response is short: it confirms the specific date and amount (C1, C2), stays within scope (C3), is professional (C4), and implicitly references the existing arrangement (C5). Tests whether the judge over-classifies on length rather than rubric content.",
+  "provenance": {
+    "source_benchmark": "WONDERBREAD SOP Ranking and Demo Validation (Wornow et al., 2024); Kourani et al. (2025) self-improvement; TheAgentCompany feedback subtasks (Xu et al., 2024)",
+    "adaptation": "Author-constructed inquiry / candidate-response pair and rubric; task semantics follow the LLM-as-Judge pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: compact_compliance.",
+    "license": "Original work by the author (rubric, inquiries, candidate responses); benchmark semantics reference only"
+  }
+}

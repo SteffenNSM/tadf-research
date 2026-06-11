@@ -1,0 +1,29 @@
+{
+  "id": "e-med-5",
+  "archetype": "E",
+  "difficulty": "med",
+  "sub_class": "stacked_subtle_fails",
+  "instruction": "Apply the rubric to the candidate response and return the verdict.",
+  "inquiry": {
+    "sender": "i.zubieta@aldebaran.example",
+    "subject": "Case #103 — migration stuck for 2 weeks",
+    "body": "Hi, we started the data migration 2 weeks ago and it's still showing as 'in progress'. Our cutover deadline is Friday. Could someone please look at case #103 and unblock it?"
+  },
+  "candidate_response": {
+    "subject": "Re: Case #130",
+    "body": "Hi, thanks for your patience on case #130. Migrations can take a while depending on data volume — typically a few weeks. We're investigating and will get back to you. In the meantime, we're building a new migration dashboard that will give you better visibility into progress. Best, Migration Team."
+  },
+  "criterion_failures": [
+    "C1",
+    "C2",
+    "C3",
+    "C5"
+  ],
+  "expected_label": "FAIL",
+  "rationale_hint": "Four failures: C1 ('migrations take a while' generic, ignores the 2-week stuck status and Friday deadline), C2 ('will get back to you' no ETA), C3 ('new migration dashboard' future feature commitment), C5 (cites case #130 vs the customer's case #103). C4 passes.",
+  "provenance": {
+    "source_benchmark": "WONDERBREAD SOP Ranking and Demo Validation (Wornow et al., 2024); Kourani et al. (2025) self-improvement; TheAgentCompany feedback subtasks (Xu et al., 2024)",
+    "adaptation": "Author-constructed inquiry / candidate-response pair and rubric; task semantics follow the LLM-as-Judge pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: stacked_subtle_fails.",
+    "license": "Original work by the author (rubric, inquiries, candidate responses); benchmark semantics reference only"
+  }
+}

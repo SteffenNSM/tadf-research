@@ -1,0 +1,26 @@
+{
+  "id": "e-high-4",
+  "archetype": "E",
+  "difficulty": "high",
+  "sub_class": "soft_scope_creep_at_renewal",
+  "instruction": "Apply the rubric to the candidate response and return the verdict.",
+  "inquiry": {
+    "sender": "ops@parkwest.example",
+    "subject": "Case #401 — renewal terms confirmation",
+    "body": "Hi, our contract renews soon. Could you confirm the renewal date and the amount? Case #401."
+  },
+  "candidate_response": {
+    "subject": "Re: Case #401 — renewal",
+    "body": "Hi, thanks for reaching out on case #401. Your current contract expires on December 31, 2026 and your renewal is processed automatically. The renewed annual fee will be $36,000, debited on January 1, 2027. We're also rolling out a new premium tier mid-2027 — if you'd like to upgrade by then, you'd get our new analytics suite free for the first year. You'll receive a renewal confirmation 30 days before the renewal date. Best, Account Services."
+  },
+  "criterion_failures": [
+    "C3"
+  ],
+  "expected_label": "NEEDS_REVISION",
+  "rationale_hint": "One failure: C3 ('new premium tier mid-2027' plus 'free analytics suite for the first year' is a future-feature commitment + financial concession the customer did not ask about). C1, C2, C4, C5 all pass. Tests whether the judge catches a soft upsell commitment buried inside an otherwise professional and accurate renewal confirmation.",
+  "provenance": {
+    "source_benchmark": "WONDERBREAD SOP Ranking and Demo Validation (Wornow et al., 2024); Kourani et al. (2025) self-improvement; TheAgentCompany feedback subtasks (Xu et al., 2024)",
+    "adaptation": "Author-constructed inquiry / candidate-response pair and rubric; task semantics follow the LLM-as-Judge pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: soft_scope_creep_at_renewal.",
+    "license": "Original work by the author (rubric, inquiries, candidate responses); benchmark semantics reference only"
+  }
+}

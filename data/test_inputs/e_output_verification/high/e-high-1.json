@@ -1,0 +1,24 @@
+{
+  "id": "e-high-1",
+  "archetype": "E",
+  "difficulty": "high",
+  "sub_class": "boundary_pass_eta_window",
+  "instruction": "Apply the rubric to the candidate response and return the verdict.",
+  "inquiry": {
+    "sender": "casey.lin@waypoint.example",
+    "subject": "Case #200 — chat sometimes drops messages",
+    "body": "Hi, our team has noticed that the in-app chat occasionally drops messages — they show as sent but the recipient never receives them. Case #200."
+  },
+  "candidate_response": {
+    "subject": "Re: Case #200 — chat drops",
+    "body": "Hi, thanks for the report on case #200. We're aware of intermittent message-dropping in the in-app chat and a fix is currently in QA — expected to be in production within the next 2 to 3 weeks. As a temporary workaround, you can use email for time-sensitive messages until the fix ships. I'll follow up on case #200 once the fix is live. Best, Support."
+  },
+  "criterion_failures": [],
+  "expected_label": "PASS",
+  "rationale_hint": "All 5 criteria pass. The boundary aspect: C2's '2 to 3 weeks' is a window rather than a fixed date, and C3 references a fix that is already in QA — this is acknowledging an in-flight effort, not promising a new feature. Tests whether the judge applies C2's window-ETA convention correctly and distinguishes in-flight from new commitments under C3.",
+  "provenance": {
+    "source_benchmark": "WONDERBREAD SOP Ranking and Demo Validation (Wornow et al., 2024); Kourani et al. (2025) self-improvement; TheAgentCompany feedback subtasks (Xu et al., 2024)",
+    "adaptation": "Author-constructed inquiry / candidate-response pair and rubric; task semantics follow the LLM-as-Judge pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: boundary_pass_eta_window.",
+    "license": "Original work by the author (rubric, inquiries, candidate responses); benchmark semantics reference only"
+  }
+}

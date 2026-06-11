@@ -1,0 +1,24 @@
+{
+  "id": "e-low-1",
+  "archetype": "E",
+  "difficulty": "low",
+  "sub_class": null,
+  "instruction": "Apply the rubric to the candidate response and return the verdict.",
+  "inquiry": {
+    "sender": "p.muller@acme-eu.example",
+    "subject": "Case #42 — shipping delay",
+    "body": "Hi, I haven't received the parts from case #42 even though they should have arrived by now. Could you check on the shipment? Our team needs them by mid-March."
+  },
+  "candidate_response": {
+    "subject": "Re: Case #42 — shipping delay",
+    "body": "Hi, thanks for following up on case #42. I checked with the carrier and your shipment is currently delayed in transit due to weather routing — the new expected delivery date is March 15, 2026. I've attached the updated tracking link to case #42. If the package has not arrived by March 15, please reply to this email and we'll dispatch a replacement via expedited shipping. Best regards, Support."
+  },
+  "criterion_failures": [],
+  "expected_label": "PASS",
+  "rationale_hint": "All 5 criteria pass: acknowledges case #42 shipping delay (C1), gives a specific ETA March 15 with a fallback action (C2), no scope-creep commitments (C3), professional tone (C4), references case #42 correctly (C5).",
+  "provenance": {
+    "source_benchmark": "WONDERBREAD SOP Ranking and Demo Validation (Wornow et al., 2024); Kourani et al. (2025) self-improvement; TheAgentCompany feedback subtasks (Xu et al., 2024)",
+    "adaptation": "Author-constructed inquiry / candidate-response pair and rubric; task semantics follow the LLM-as-Judge pattern of the cited benchmarks. No benchmark text or data is reproduced.",
+    "license": "Original work by the author (rubric, inquiries, candidate responses); benchmark semantics reference only"
+  }
+}

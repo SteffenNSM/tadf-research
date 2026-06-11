@@ -1,0 +1,24 @@
+{
+  "id": "e-low-5",
+  "archetype": "E",
+  "difficulty": "low",
+  "sub_class": null,
+  "instruction": "Apply the rubric to the candidate response and return the verdict.",
+  "inquiry": {
+    "sender": "finance@halberd.example",
+    "subject": "Annual invoice question — INV-9921",
+    "body": "Hi, our annual invoice INV-9921 shows the renewal at $48,000, but our signed purchase order is for $42,000. Could you check?"
+  },
+  "candidate_response": {
+    "subject": "Re: Annual invoice question — INV-9921",
+    "body": "Hi, thanks for catching this on invoice INV-9921. I've reviewed it against your purchase order and you're correct: the renewal should be billed at $42,000. I've initiated a corrected invoice and you'll receive the updated INV-9921 by end of business tomorrow, with the original voided in our system. Best regards, Billing Team."
+  },
+  "criterion_failures": [],
+  "expected_label": "PASS",
+  "rationale_hint": "All 5 criteria pass: addresses invoice mismatch (C1), concrete action and next-day ETA (C2), within scope (correction of an obvious billing error, C3), professional (C4), references INV-9921 correctly (C5).",
+  "provenance": {
+    "source_benchmark": "WONDERBREAD SOP Ranking and Demo Validation (Wornow et al., 2024); Kourani et al. (2025) self-improvement; TheAgentCompany feedback subtasks (Xu et al., 2024)",
+    "adaptation": "Author-constructed inquiry / candidate-response pair and rubric; task semantics follow the LLM-as-Judge pattern of the cited benchmarks. No benchmark text or data is reproduced.",
+    "license": "Original work by the author (rubric, inquiries, candidate responses); benchmark semantics reference only"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "e-low-2",
+  "archetype": "E",
+  "difficulty": "low",
+  "sub_class": "vague_eta",
+  "instruction": "Apply the rubric to the candidate response and return the verdict.",
+  "inquiry": {
+    "sender": "ops@northwind.example",
+    "subject": "Order #51234 not delivered",
+    "body": "Hi, order #51234 was supposed to arrive yesterday but it never came. Could you look into this?"
+  },
+  "candidate_response": {
+    "subject": "Re: Order #51234",
+    "body": "Hi, thanks for your message about order #51234. I'm looking into this with our shipping team and will get back to you soon. Best regards, Support."
+  },
+  "criterion_failures": [
+    "C2"
+  ],
+  "expected_label": "NEEDS_REVISION",
+  "rationale_hint": "C2 fails: 'soon' carries no concrete ETA and no actionable next step on the agent side. C1, C3, C4, C5 pass.",
+  "provenance": {
+    "source_benchmark": "WONDERBREAD SOP Ranking and Demo Validation (Wornow et al., 2024); Kourani et al. (2025) self-improvement; TheAgentCompany feedback subtasks (Xu et al., 2024)",
+    "adaptation": "Author-constructed inquiry / candidate-response pair and rubric; task semantics follow the LLM-as-Judge pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: vague_eta.",
+    "license": "Original work by the author (rubric, inquiries, candidate responses); benchmark semantics reference only"
+  }
+}

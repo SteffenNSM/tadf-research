@@ -1,0 +1,29 @@
+{
+  "id": "e-low-4",
+  "archetype": "E",
+  "difficulty": "low",
+  "sub_class": "obvious_multi_fail",
+  "instruction": "Apply the rubric to the candidate response and return the verdict.",
+  "inquiry": {
+    "sender": "lila.okonkwo@summitpartners.example",
+    "subject": "Account suspended without warning — urgent",
+    "body": "Hi, my account was suspended this morning with no warning or explanation. I need access urgently for a client meeting today. Account ID: 4477."
+  },
+  "candidate_response": {
+    "subject": "Re: Account question",
+    "body": "Hello, looking at account 6601: suspensions usually happen when users violate the terms of service. You should have read the ToS more carefully before signing up. We'll look into it eventually."
+  },
+  "criterion_failures": [
+    "C1",
+    "C2",
+    "C4",
+    "C5"
+  ],
+  "expected_label": "FAIL",
+  "rationale_hint": "Four criteria fail: C1 (doesn't address the urgency or the no-warning complaint, generic 'suspensions usually happen'), C2 ('eventually' no ETA), C4 ('should have read more carefully' is condescending), C5 (cites account 6601 vs the customer's 4477). C3 passes.",
+  "provenance": {
+    "source_benchmark": "WONDERBREAD SOP Ranking and Demo Validation (Wornow et al., 2024); Kourani et al. (2025) self-improvement; TheAgentCompany feedback subtasks (Xu et al., 2024)",
+    "adaptation": "Author-constructed inquiry / candidate-response pair and rubric; task semantics follow the LLM-as-Judge pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: obvious_multi_fail.",
+    "license": "Original work by the author (rubric, inquiries, candidate responses); benchmark semantics reference only"
+  }
+}

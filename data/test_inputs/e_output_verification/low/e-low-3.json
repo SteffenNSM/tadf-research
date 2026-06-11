@@ -1,0 +1,26 @@
+{
+  "id": "e-low-3",
+  "archetype": "E",
+  "difficulty": "low",
+  "sub_class": "wrong_reference",
+  "instruction": "Apply the rubric to the candidate response and return the verdict.",
+  "inquiry": {
+    "sender": "rin.takahashi@bluefin.example",
+    "subject": "Case #87 — can't log in",
+    "body": "Hi, I can't log into my account since yesterday and the password reset email never arrived. My case number is 87. Could you reset my password manually?"
+  },
+  "candidate_response": {
+    "subject": "Re: Case #78",
+    "body": "Hi, thanks for reaching out about case #78. I've reset your password manually and a new reset email should be in your inbox within 5 minutes. If you don't see it, please check your spam folder and reply to this email. Best regards, Support."
+  },
+  "criterion_failures": [
+    "C5"
+  ],
+  "expected_label": "NEEDS_REVISION",
+  "rationale_hint": "C5 fails: response cites case #78 but the inquiry's case number is #87. C1, C2, C3, C4 pass (specific action, ETA, professional tone).",
+  "provenance": {
+    "source_benchmark": "WONDERBREAD SOP Ranking and Demo Validation (Wornow et al., 2024); Kourani et al. (2025) self-improvement; TheAgentCompany feedback subtasks (Xu et al., 2024)",
+    "adaptation": "Author-constructed inquiry / candidate-response pair and rubric; task semantics follow the LLM-as-Judge pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: wrong_reference.",
+    "license": "Original work by the author (rubric, inquiries, candidate responses); benchmark semantics reference only"
+  }
+}

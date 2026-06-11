@@ -1,0 +1,24 @@
+{
+  "id": "e-high-5",
+  "archetype": "E",
+  "difficulty": "high",
+  "sub_class": "looks_critical_actually_pass",
+  "instruction": "Apply the rubric to the candidate response and return the verdict.",
+  "inquiry": {
+    "sender": "kira.evans@spinnaker.example",
+    "subject": "Case #500 — bug AND poor previous experience",
+    "body": "Hi, two things on case #500: (1) the dashboard widget bug is still happening — when I add more than 5 KPIs the page freezes, and (2) the last support agent we worked with on this just kept asking us to reproduce instead of actually looking. Could someone competent please look at the bug?"
+  },
+  "candidate_response": {
+    "subject": "Re: Case #500",
+    "body": "Hi, thanks for the detailed report on case #500. Here's where we are: (1) On the bug — case #500 has been escalated to engineering this morning. They've reproduced the freeze locally with 6+ KPIs and expect a fix in production by March 20, 2026. (2) On the previous support experience — I'm sorry that happened; I'll personally own this case going forward and you can reach me at this address directly. Best, M. Devereaux, Support."
+  },
+  "criterion_failures": [],
+  "expected_label": "PASS",
+  "rationale_hint": "All 5 criteria pass: addresses both the bug and the experience complaint (C1), gives a concrete repro confirmation plus a date (C2), no out-of-scope commitments — taking personal ownership of an open case is within support's normal scope (C3), professional and empathetic without exaggeration (C4), references case #500 correctly (C5). Tests whether the judge over-classifies a response to a complaint-heavy inquiry as NEEDS_REVISION on emotional weight rather than rubric content.",
+  "provenance": {
+    "source_benchmark": "WONDERBREAD SOP Ranking and Demo Validation (Wornow et al., 2024); Kourani et al. (2025) self-improvement; TheAgentCompany feedback subtasks (Xu et al., 2024)",
+    "adaptation": "Author-constructed inquiry / candidate-response pair and rubric; task semantics follow the LLM-as-Judge pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: looks_critical_actually_pass.",
+    "license": "Original work by the author (rubric, inquiries, candidate responses); benchmark semantics reference only"
+  }
+}
