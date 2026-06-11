@@ -34,6 +34,18 @@ SEED_DIR = REPO / "data" / "schema" / "seed"
 WORKBENCH = "WorkBench (Styles et al., 2024)"
 WORKARENA = "WorkArena L1/L2 (Drouin et al., 2024)"
 
+#: Provenance label for instances that have no direct counterpart in the
+#: benchmark corpus. The novel High-stratum instances (argmax-then-act,
+#: runtime-feedback branching) are author-constructed probes that
+#: operationalize the bipolar sub-classes of archetype F (Table 3 of the
+#: thesis); only their surface style (workplace action tasks over mail and
+#: CRM) follows the benchmark sources. Labeling them as benchmark-adapted
+#: would overclaim provenance.
+AUTHOR_NOVEL = (
+    "Author-constructed (no direct benchmark counterpart); surface style follows "
+    "WorkBench (Styles et al., 2024) and WorkArena L1/L2 (Drouin et al., 2024)"
+)
+
 # Highest ids in the freshly generated seed; any row with a larger id was
 # created by the task and counts as a candidate side-effect. Tied to
 # experiments/seed_crm.py.
@@ -55,17 +67,29 @@ def _seed_rows(table: str) -> dict[int, dict]:
 
 
 def _provenance(source: str, sub_class: str | None) -> dict:
-    note = (
-        "Action-task style adapted from the source benchmark; specific entities (account ids, "
-        "agent emails, case ids) reference the deterministic seed in seed_crm.py for stable "
-        "post-state predicates."
-    )
+    if source is AUTHOR_NOVEL:
+        note = (
+            "Instance designed by the author to operationalize the novel sub-class of "
+            "archetype F (runtime-feedback dependence / in-context aggregation), following "
+            "the outcome-centric task construction principle of WorkBench (Styles et al., "
+            "2024). No directly liftable counterpart exists in the benchmark corpus. "
+            "Specific entities (account ids, agent emails, case ids) reference the "
+            "deterministic seed in seed_crm.py for stable post-state predicates."
+        )
+        license_ = "Original work by the author (task design); benchmark style reference only"
+    else:
+        note = (
+            "Action-task style adapted from the source benchmark; specific entities (account ids, "
+            "agent emails, case ids) reference the deterministic seed in seed_crm.py for stable "
+            "post-state predicates."
+        )
+        license_ = "Adapted under fair use for academic research"
     if sub_class:
         note += f" Sub-class: {sub_class}."
     return {
         "source_benchmark": source,
         "adaptation": note,
-        "license": "Adapted under fair use for academic research",
+        "license": license_,
     }
 
 
@@ -307,7 +331,7 @@ INSTANCES: list[dict] = [
         "instruction": "Among the agents on the EMEA team, find the one who currently has the most cases with status 'Open'. Send that agent an email with subject 'Workload review' and body 'Hi, a quick note that you currently have the highest open case load on the EMEA team. Please let me know if you would like to reprioritize or get backup on any of the active cases. Best regards, Operations.'",
         "expected_post_state": "Exactly one new outbox row exists with recipient='agent05@atlas.com' (agent 5 has the most Open cases among EMEA agents 1, 5, 7, 10) and subject='Workload review'; no outbox row with that subject went to any other recipient.",
         "sub_class": "novel",
-        "source": WORKARENA,
+        "source": AUTHOR_NOVEL,
     },
     {
         "id": "f-high-5",
@@ -315,7 +339,7 @@ INSTANCES: list[dict] = [
         "instruction": "Use the attempt_close_case tool to try to close case 47 with the resolution summary 'Refund processed'. If the close succeeds, send the primary contact of case 47's account (the lowest-id contact at that account) an email with subject 'Case 47 resolved' and a brief body confirming that the refund is being processed and that the case is now closed. If the close is blocked by a business rule (the tool returns closed=false), send the same primary contact an email with subject 'Case 47 update' and a brief body explaining that the case is still under review and that you will follow up once it is resolved. Send exactly one of the two emails depending on the outcome of the close attempt.",
         "expected_post_state": "Because case 47 has transfer_count=4 in the seed, the back-end's escalation rule blocks the close: case 47 status remains 'Open'. Exactly one new outbox row exists, addressed to the primary contact of account 10 (case 47's account), with subject='Case 47 update'. No outbox row with subject='Case 47 resolved' exists. No other outbox rows are added.",
         "sub_class": "novel",
-        "source": WORKARENA,
+        "source": AUTHOR_NOVEL,
     },
 ]
 
