@@ -1,0 +1,16 @@
+{
+  "id": "b-high-3",
+  "archetype": "B",
+  "difficulty": "high",
+  "instruction": "Among cases handled by agents on the 'EMEA' team, which issue_category has the highest average handle time? Answer with the category name.",
+  "ground_truth": {
+    "value": "Shipping",
+    "unit": "issue_category"
+  },
+  "provenance": {
+    "source_benchmark": "CRMArena (Huang et al., 2025)",
+    "source_task_type": "Top Issue Identification",
+    "adaptation": "Schema and task type adapted from CRMArena structured querying; records synthesized locally (seed=42) for reproducibility.",
+    "license": "CC BY-NC 4.0"
+  }
+}

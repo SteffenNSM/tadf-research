@@ -1,0 +1,15 @@
+{
+  "id": "a-med-2",
+  "archetype": "A",
+  "difficulty": "med",
+  "instruction": "Who composed the opera 'Don Giovanni', and in what city was it first performed?",
+  "ground_truth": {
+    "value": "Wolfgang Amadeus Mozart, Prague",
+    "unit": "composer_and_city"
+  },
+  "provenance": {
+    "source_benchmark": "AssistantBench (Yoran et al., 2024)",
+    "adaptation": "Question style adapted from the source benchmark; specific instance curated for stable historically grounded ground truth so the answer does not drift with the live web. The structural research-and-synthesis profile (difficulty: med) is preserved.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

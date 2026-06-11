@@ -1,0 +1,13 @@
+{
+  "id": "f-low-5",
+  "archetype": "F",
+  "difficulty": "low",
+  "sub_class": null,
+  "instruction": "Set the priority of case 14 to 'High'.",
+  "expected_post_state": "cases.id=14 has priority='High' (was 'Low' in the seed).",
+  "provenance": {
+    "source_benchmark": "WorkBench (Styles et al., 2024)",
+    "adaptation": "Action-task style adapted from the source benchmark; specific entities (account ids, agent emails, case ids) reference the deterministic seed in seed_crm.py for stable post-state predicates.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

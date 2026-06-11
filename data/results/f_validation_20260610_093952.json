@@ -1,0 +1,205 @@
+{
+  "timestamp": "20260610_093952",
+  "runs": [
+    {
+      "instance": "f-low-1",
+      "difficulty": "low",
+      "sub_class": null,
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 1 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 1836,
+      "output_tokens": 443,
+      "total_tokens": 2279,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 159088.565169614
+        },
+        {
+          "tool": "db_read",
+          "t": 159088.56640846
+        },
+        {
+          "tool": "search_emails",
+          "t": 159088.567806773
+        },
+        {
+          "tool": "search_emails",
+          "t": 159088.845026175
+        },
+        {
+          "tool": "send_email",
+          "t": 159091.186020819
+        }
+      ],
+      "latency_s": 10.810458015010227,
+      "errors": []
+    },
+    {
+      "instance": "f-low-1",
+      "difficulty": "low",
+      "sub_class": null,
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Sent an email to contact005@example.com with the subject \u201cQ3 status update\u201d and the body \u201cPlease see the attached Q3 upd",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3485,
+      "output_tokens": 82,
+      "total_tokens": 3567,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "send_email",
+          "t": 159093.440724385
+        }
+      ],
+      "latency_s": 3.850013310991926,
+      "errors": []
+    },
+    {
+      "instance": "f-med-1",
+      "difficulty": "med",
+      "sub_class": null,
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 1949,
+      "output_tokens": 308,
+      "total_tokens": 2257,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 159097.98407407
+        },
+        {
+          "tool": "db_update",
+          "t": 159101.425161226
+        },
+        {
+          "tool": "db_update",
+          "t": 159101.428005341
+        },
+        {
+          "tool": "db_update",
+          "t": 159101.430317597
+        },
+        {
+          "tool": "db_update",
+          "t": 159101.432359357
+        }
+      ],
+      "latency_s": 6.053682543977629,
+      "errors": []
+    },
+    {
+      "instance": "f-med-1",
+      "difficulty": "med",
+      "sub_class": null,
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Updated all 4 open cases assigned to agent 3 (case IDs 8, 57, 68, 89) by changing their status from **Open** to **In Pro",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 5989,
+      "output_tokens": 195,
+      "total_tokens": 6184,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 159102.756267825
+        },
+        {
+          "tool": "db_update",
+          "t": 159104.906747454
+        },
+        {
+          "tool": "db_update",
+          "t": 159104.909183204
+        },
+        {
+          "tool": "db_update",
+          "t": 159104.909997028
+        },
+        {
+          "tool": "db_update",
+          "t": 159104.910795345
+        }
+      ],
+      "latency_s": 4.987744127982296,
+      "errors": []
+    },
+    {
+      "instance": "f-high-1",
+      "difficulty": "high",
+      "sub_class": "canonical",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 1924,
+      "output_tokens": 303,
+      "total_tokens": 2227,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 159109.820107
+        },
+        {
+          "tool": "db_read",
+          "t": 159109.821430203
+        },
+        {
+          "tool": "send_email",
+          "t": 159112.398287073
+        },
+        {
+          "tool": "send_email",
+          "t": 159112.711059414
+        }
+      ],
+      "latency_s": 6.539654734020587,
+      "errors": []
+    },
+    {
+      "instance": "f-high-1",
+      "difficulty": "high",
+      "sub_class": "canonical",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found 2 High-priority Open cases assigned to agent 1 (case IDs **40** and **118**) and sent **agent01@atlas.com** an e",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 5738,
+      "output_tokens": 195,
+      "total_tokens": 5933,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 159114.132824839
+        },
+        {
+          "tool": "send_email",
+          "t": 159115.841691091
+        },
+        {
+          "tool": "send_email",
+          "t": 159115.843113603
+        }
+      ],
+      "latency_s": 4.880911079002544,
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "a-med-4",
+  "archetype": "A",
+  "difficulty": "med",
+  "instruction": "In what calendar year was the first iPhone released by Apple, and who was the CEO of Apple at that time?",
+  "ground_truth": {
+    "value": "2007, Steve Jobs",
+    "unit": "year_and_ceo"
+  },
+  "provenance": {
+    "source_benchmark": "AssistantBench (Yoran et al., 2024)",
+    "adaptation": "Question style adapted from the source benchmark; specific instance curated for stable historically grounded ground truth so the answer does not drift with the live web. The structural research-and-synthesis profile (difficulty: med) is preserved.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

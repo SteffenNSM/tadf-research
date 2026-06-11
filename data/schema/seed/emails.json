@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "sender": "contact024@example.com",
+    "recipient": "agent09@atlas.com",
+    "subject": "Billing question",
+    "body": "Could you please get back to me on this?",
+    "sent_at": "2025-02-28 21:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 2,
+    "sender": "contact028@example.com",
+    "recipient": "agent04@atlas.com",
+    "subject": "Billing question",
+    "body": "Could you please get back to me on this?",
+    "sent_at": "2025-10-16 02:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 3,
+    "sender": "contact002@example.com",
+    "recipient": "agent09@atlas.com",
+    "subject": "Question about my recent case",
+    "body": "Could you please get back to me on this?",
+    "sent_at": "2025-11-08 21:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 4,
+    "sender": "contact018@example.com",
+    "recipient": "agent03@atlas.com",
+    "subject": "Issue with our product",
+    "body": "Could you please get back to me on this?",
+    "sent_at": "2025-06-08 22:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 5,
+    "sender": "contact012@example.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Renewal inquiry",
+    "body": "Could you please get back to me on this?",
+    "sent_at": "2025-03-16 02:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 6,
+    "sender": "contact010@example.com",
+    "recipient": "agent02@atlas.com",
+    "subject": "Billing question",
+    "body": "Could you please get back to me on this?",
+    "sent_at": "2025-01-16 18:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 7,
+    "sender": "contact025@example.com",
+    "recipient": "agent04@atlas.com",
+    "subject": "Issue with our product",
+    "body": "Could you please get back to me on this?",
+    "sent_at": "2025-08-04 00:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 8,
+    "sender": "contact024@example.com",
+    "recipient": "agent03@atlas.com",
+    "subject": "Billing question",
+    "body": "Could you please get back to me on this?",
+    "sent_at": "2025-06-09 22:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 9,
+    "sender": "contact006@example.com",
+    "recipient": "agent10@atlas.com",
+    "subject": "Follow-up on proposal",
+    "body": "Could you please get back to me on this?",
+    "sent_at": "2025-01-27 19:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 10,
+    "sender": "contact004@example.com",
+    "recipient": "agent10@atlas.com",
+    "subject": "Renewal inquiry",
+    "body": "Could you please get back to me on this?",
+    "sent_at": "2025-02-11 21:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 11,
+    "sender": "agent07@atlas.com",
+    "recipient": "contact032@example.com",
+    "subject": "Renewal options",
+    "body": "Please see attached or reply with any questions.",
+    "sent_at": "2025-11-08 00:00:00",
+    "status": "outbox"
+  },
+  {
+    "id": 12,
+    "sender": "agent05@atlas.com",
+    "recipient": "contact014@example.com",
+    "subject": "Information you requested",
+    "body": "Please see attached or reply with any questions.",
+    "sent_at": "2025-09-20 18:00:00",
+    "status": "outbox"
+  },
+  {
+    "id": 13,
+    "sender": "agent07@atlas.com",
+    "recipient": "contact008@example.com",
+    "subject": "Renewal options",
+    "body": "Please see attached or reply with any questions.",
+    "sent_at": "2025-05-27 02:00:00",
+    "status": "outbox"
+  },
+  {
+    "id": 14,
+    "sender": "agent09@atlas.com",
+    "recipient": "contact043@example.com",
+    "subject": "Quarterly check-in",
+    "body": "Please see attached or reply with any questions.",
+    "sent_at": "2025-06-07 17:00:00",
+    "status": "outbox"
+  },
+  {
+    "id": 15,
+    "sender": "agent07@atlas.com",
+    "recipient": "contact039@example.com",
+    "subject": "Quarterly check-in",
+    "body": "Please see attached or reply with any questions.",
+    "sent_at": "2025-01-29 17:00:00",
+    "status": "outbox"
+  },
+  {
+    "id": 16,
+    "sender": "agent05@atlas.com",
+    "recipient": "contact014@example.com",
+    "subject": "Information you requested",
+    "body": "Please see attached or reply with any questions.",
+    "sent_at": "2025-03-12 21:00:00",
+    "status": "outbox"
+  },
+  {
+    "id": 17,
+    "sender": "agent06@atlas.com",
+    "recipient": "contact008@example.com",
+    "subject": "Renewal options",
+    "body": "Please see attached or reply with any questions.",
+    "sent_at": "2025-01-05 00:00:00",
+    "status": "outbox"
+  },
+  {
+    "id": 18,
+    "sender": "agent03@atlas.com",
+    "recipient": "contact009@example.com",
+    "subject": "Quarterly check-in",
+    "body": "Please see attached or reply with any questions.",
+    "sent_at": "2025-07-15 01:00:00",
+    "status": "outbox"
+  },
+  {
+    "id": 19,
+    "sender": "agent09@atlas.com",
+    "recipient": "contact036@example.com",
+    "subject": "Renewal options",
+    "body": "Please see attached or reply with any questions.",
+    "sent_at": "2025-07-01 18:00:00",
+    "status": "outbox"
+  },
+  {
+    "id": 20,
+    "sender": "agent01@atlas.com",
+    "recipient": "contact028@example.com",
+    "subject": "Update on your case",
+    "body": "Please see attached or reply with any questions.",
+    "sent_at": "2025-01-11 00:00:00",
+    "status": "outbox"
+  }
+]

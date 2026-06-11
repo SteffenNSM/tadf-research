@@ -1,0 +1,15 @@
+{
+  "id": "a-low-1",
+  "archetype": "A",
+  "difficulty": "low",
+  "instruction": "What is the elevation of Mount Everest in meters, using the most widely cited current measurement?",
+  "ground_truth": {
+    "value": "8849",
+    "unit": "elevation_m"
+  },
+  "provenance": {
+    "source_benchmark": "AssistantBench (Yoran et al., 2024)",
+    "adaptation": "Question style adapted from the source benchmark; specific instance curated for stable historically grounded ground truth so the answer does not drift with the live web. The structural research-and-synthesis profile (difficulty: low) is preserved.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Fermat's last theorem - MacTutor History of Mathematics",
+    "url": "https://mathshistory.st-andrews.ac.uk/HistTopics/Fermat's_last_theorem",
+    "content": "From this it is easy to deduce the n=4 case of Fermat's theorem. Euler wrote to Goldbach on 4 August 1753 claiming he had a proof of Fermat's Theorem when n=3. Sophie Germain proved Case 1 of Fermat's Last Theorem for all n less than 100 and Legendre extended her methods to all numbers less than 197. In 1832 Dirichlet published a proof of Fermat's Last Theorem for n=14. By September 1847 Kummer sent to Dirichlet and the Berlin Academy a paper proving that a prime p is regular (and so Fermat's Last Theorem is true for that prime) if p does not divide the numerators of any of the Bernoulli numbers B2​,B4​,...,Bp−3​ . Using techniques based on Kummer's work, Fermat's Last Theorem was proved true, with the help of computers, for n up to 4,000,000 by 1993. The proof of Fermat's Last Theorem was completed in 1993 by Andrew Wiles, a British mathematician working at Princeton in the USA."
+  },
+  {
+    "title": "Fermat's Last Theorem: A Historical and Mathematical Overview",
+    "url": "https://essopenarchive.org/doi/10.22541/essoar.169447369.92321625",
+    "content": "Fermat's Last Theorem: A Historical and Mathematical Overview ... proof by Andrew Wiles in 1994. Beginning with historical context"
+  },
+  {
+    "title": "Fermat's Last Theorem Proof and Historical Context - Facebook",
+    "url": "https://www.facebook.com/groups/basicphysics2.0/posts/7970138393113111",
+    "content": "Fermat's Last Theorem- 1637 - was demonstrated in 1994 by Andrew Wiles... after more than 350 years! Q: What is Fermat's Last Theorem? ♥."
+  },
+  {
+    "title": "Andrew Wiles on the morning he discovered how to fix his proof of ...",
+    "url": "https://www.reddit.com/r/mathematics/comments/1opy00h/andrew_wiles_on_the_morning_he_discovered_how_to",
+    "content": "His 1994 proof, published in 1995, finally completed the chain of logic, providing a definitive proof of Fermat's Last Theorem. Wiles's work"
+  },
+  {
+    "title": "Fermat's Last Theorem - from history to new mathematics | Features",
+    "url": "https://www.maths.cam.ac.uk/features/fermats-last-theorem-history-new-mathematics",
+    "content": "+ Mathematics for Natural Sciences Tripos (NST). + Applied Mathematics and Theoretical Physics. + Pure Mathematics and Mathematical Statistics. + Summer Research in Mathematics: CMP and Research in the CMS. + Mathematics for all - outreach overview. Today researchers at the Department of Pure Mathematics and Mathematical Statistics lead the field that Wiles' work has opened up. \"I first found out about Fermat's Last theorem from the cover of a book by E.T. Bell when I was about ten years old,\" says Wiles, who earned his PhD here at Cambridge in 1980, and is now Regius Professor in Mathematics at the University of Oxford. Wiles says that Fermat's Last Theorem has sparked two periods of intense progress in the past: one in the 19th century when the foundations for Wiles' areas of mathematics were laid in attempts to prove Fermat's Last Theorem, and one in the 1980s, which finally lead to the proof. Among them is Professor Jack Thorne of the Department of Pure Mathematics and Mathematical Statistics here at Cambridge."
+  }
+]

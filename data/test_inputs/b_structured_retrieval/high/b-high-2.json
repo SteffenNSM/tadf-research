@@ -1,0 +1,16 @@
+{
+  "id": "b-high-2",
+  "archetype": "B",
+  "difficulty": "high",
+  "instruction": "Which agent team handled the most cases with issue_category 'Billing' that were closed in 2025? Answer with the team name.",
+  "ground_truth": {
+    "value": "AMER",
+    "unit": "team"
+  },
+  "provenance": {
+    "source_benchmark": "CRMArena (Huang et al., 2025)",
+    "source_task_type": "Top Issue Identification",
+    "adaptation": "Schema and task type adapted from CRMArena structured querying; records synthesized locally (seed=42) for reproducibility.",
+    "license": "CC BY-NC 4.0"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "f-high-1",
+  "archetype": "F",
+  "difficulty": "high",
+  "sub_class": "canonical",
+  "instruction": "Find every High-priority case currently assigned to agent 1 that is still Open. For each such case, send the agent (agent01@atlas.com) an email with subject 'High-priority case <case_id>' (substitute the actual case id) and a body asking them to provide a status update and an expected resolution date for the case.",
+  "expected_post_state": "Exactly two new outbox rows exist with recipient='agent01@atlas.com' and subjects {'High-priority case 40', 'High-priority case 118'}; no other outbox rows with that recipient and 'High-priority case' subject prefix.",
+  "provenance": {
+    "source_benchmark": "WorkBench (Styles et al., 2024)",
+    "adaptation": "Action-task style adapted from the source benchmark; specific entities (account ids, agent emails, case ids) reference the deterministic seed in seed_crm.py for stable post-state predicates. Sub-class: canonical.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

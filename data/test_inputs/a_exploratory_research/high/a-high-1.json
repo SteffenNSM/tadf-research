@@ -1,0 +1,15 @@
+{
+  "id": "a-high-1",
+  "archetype": "A",
+  "difficulty": "high",
+  "instruction": "Name the first three astronauts to walk on the surface of the Moon, in the order in which they stepped onto its surface.",
+  "ground_truth": {
+    "value": "Neil Armstrong, Buzz Aldrin, Pete Conrad",
+    "unit": "three_persons_ordered"
+  },
+  "provenance": {
+    "source_benchmark": "BrowseComp (Wei et al., 2025)",
+    "adaptation": "Question style adapted from the source benchmark; specific instance curated for stable historically grounded ground truth so the answer does not drift with the live web. The structural research-and-synthesis profile (difficulty: high) is preserved.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

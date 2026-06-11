@@ -1,0 +1,13 @@
+{
+  "id": "f-low-4",
+  "archetype": "F",
+  "difficulty": "low",
+  "sub_class": null,
+  "instruction": "Delete the email with id 5.",
+  "expected_post_state": "emails.id=5 has status='deleted'.",
+  "provenance": {
+    "source_benchmark": "WorkBench (Styles et al., 2024)",
+    "adaptation": "Action-task style adapted from the source benchmark; specific entities (account ids, agent emails, case ids) reference the deterministic seed in seed_crm.py for stable post-state predicates.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

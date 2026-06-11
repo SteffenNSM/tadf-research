@@ -1,0 +1,16 @@
+{
+  "id": "b-high-1",
+  "archetype": "B",
+  "difficulty": "high",
+  "instruction": "Which region generated the highest total won-opportunity amount for opportunities closed in Q3 2025? Answer with the region name.",
+  "ground_truth": {
+    "value": "EMEA",
+    "unit": "region"
+  },
+  "provenance": {
+    "source_benchmark": "CRMArena (Huang et al., 2025)",
+    "source_task_type": "Best Region Identification",
+    "adaptation": "Schema and task type adapted from CRMArena structured querying; records synthesized locally (seed=42) for reproducibility.",
+    "license": "CC BY-NC 4.0"
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "timestamp": "20260610_090902",
+  "runs": [
+    {
+      "instance": "f-low-1",
+      "difficulty": "low",
+      "sub_class": null,
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 1 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 1,
+      "input_tokens": 812,
+      "output_tokens": 96,
+      "total_tokens": 908,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "send_email",
+          "t": 157241.02112153
+        }
+      ],
+      "latency_s": 2.9647109829820693,
+      "errors": []
+    },
+    {
+      "instance": "f-low-1",
+      "difficulty": "low",
+      "sub_class": null,
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Sent an email to contact005@example.com with the subject \u201cQ3 status update\u201d and the body \u201cPlease see the attached Q3 upd",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3485,
+      "output_tokens": 82,
+      "total_tokens": 3567,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "send_email",
+          "t": 157243.058195153
+        }
+      ],
+      "latency_s": 3.2781796810158994,
+      "errors": []
+    },
+    {
+      "instance": "f-med-1",
+      "difficulty": "med",
+      "sub_class": null,
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 2 actions with failures",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 1,
+      "input_tokens": 803,
+      "output_tokens": 142,
+      "total_tokens": 945,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 157248.382188403
+        },
+        {
+          "tool": "db_update",
+          "t": 157248.383795667
+        }
+      ],
+      "latency_s": 3.742545415996574,
+      "errors": [
+        "tool_error: 1 validation error for db_update\nrecord_id\n  Field required [type=missing, input_value={'table': 'cases', 'filte...status': 'In Progress'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+      ]
+    },
+    {
+      "instance": "f-med-1",
+      "difficulty": "med",
+      "sub_class": null,
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Updated 4 cases assigned to agent 3 (case IDs 8, 57, 68, 89) from **Open** to **In Progress**.",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 5989,
+      "output_tokens": 189,
+      "total_tokens": 6178,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 157249.710005356
+        },
+        {
+          "tool": "db_update",
+          "t": 157252.130905836
+        },
+        {
+          "tool": "db_update",
+          "t": 157252.132319218
+        },
+        {
+          "tool": "db_update",
+          "t": 157252.133858332
+        },
+        {
+          "tool": "db_update",
+          "t": 157252.135069445
+        }
+      ],
+      "latency_s": 5.19143236297532,
+      "errors": []
+    },
+    {
+      "instance": "f-high-1",
+      "difficulty": "high",
+      "sub_class": "canonical",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions with failures",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 1,
+      "input_tokens": 836,
+      "output_tokens": 318,
+      "total_tokens": 1154,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_search",
+          "t": 157258.155060615
+        },
+        {
+          "tool": "send_email",
+          "t": 157258.155378601
+        },
+        {
+          "tool": "send_email",
+          "t": 157258.450863337
+        },
+        {
+          "tool": "send_email",
+          "t": 157258.746322837
+        }
+      ],
+      "latency_s": 5.3893947869946714,
+      "errors": [
+        "tool_error: 2 validation errors for db_search\ncolumn\n  Field required [type=missing, input_value={'table': 'cases', 'filte...igh', 'status': 'Open'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nquery\n  Field required [type=missing, input_value={'table': 'cases', 'filte...igh', 'status': 'Open'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+      ]
+    },
+    {
+      "instance": "f-high-1",
+      "difficulty": "high",
+      "sub_class": "canonical",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found 2 High-priority Open cases assigned to agent 1 (case IDs **40** and **118**) and sent **agent01@atlas.com** an e",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 5738,
+      "output_tokens": 194,
+      "total_tokens": 5932,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 157264.057939886
+        },
+        {
+          "tool": "send_email",
+          "t": 157265.747010222
+        },
+        {
+          "tool": "send_email",
+          "t": 157265.74793286
+        }
+      ],
+      "latency_s": 8.732760893995874,
+      "errors": []
+    }
+  ]
+}

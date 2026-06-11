@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Agent 01",
+    "team": "EMEA",
+    "region": "EMEA",
+    "email": "agent01@atlas.com"
+  },
+  {
+    "id": 2,
+    "name": "Agent 02",
+    "team": "AMER",
+    "region": "AMER",
+    "email": "agent02@atlas.com"
+  },
+  {
+    "id": 3,
+    "name": "Agent 03",
+    "team": "AMER",
+    "region": "APAC",
+    "email": "agent03@atlas.com"
+  },
+  {
+    "id": 4,
+    "name": "Agent 04",
+    "team": "APAC",
+    "region": "APAC",
+    "email": "agent04@atlas.com"
+  },
+  {
+    "id": 5,
+    "name": "Agent 05",
+    "team": "EMEA",
+    "region": "APAC",
+    "email": "agent05@atlas.com"
+  },
+  {
+    "id": 6,
+    "name": "Agent 06",
+    "team": "AMER",
+    "region": "EMEA",
+    "email": "agent06@atlas.com"
+  },
+  {
+    "id": 7,
+    "name": "Agent 07",
+    "team": "EMEA",
+    "region": "EMEA",
+    "email": "agent07@atlas.com"
+  },
+  {
+    "id": 8,
+    "name": "Agent 08",
+    "team": "AMER",
+    "region": "AMER",
+    "email": "agent08@atlas.com"
+  },
+  {
+    "id": 9,
+    "name": "Agent 09",
+    "team": "AMER",
+    "region": "EMEA",
+    "email": "agent09@atlas.com"
+  },
+  {
+    "id": 10,
+    "name": "Agent 10",
+    "team": "EMEA",
+    "region": "APAC",
+    "email": "agent10@atlas.com"
+  }
+]

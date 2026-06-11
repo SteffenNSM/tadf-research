@@ -1,0 +1,185 @@
+{
+  "timestamp": "20260527_091003",
+  "runs": [
+    {
+      "instance": "a-low-1",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": "8849",
+      "correct": true,
+      "answer": "8,848.86 meters",
+      "judge_rationale": "The candidate\u2019s 8,848.86 m is the same widely cited current measurement as 8,849 m, differing only by rounding/precision.",
+      "llm_calls": 2,
+      "input_tokens": 3927,
+      "output_tokens": 193,
+      "total_tokens": 4120,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 24411.854458848
+        },
+        {
+          "tool": "tavily_search",
+          "t": 24413.225906162
+        },
+        {
+          "tool": "tavily_search",
+          "t": 24415.523865742
+        },
+        {
+          "tool": "tavily_search",
+          "t": 24416.488206126
+        },
+        {
+          "tool": "tavily_search",
+          "t": 24417.626600462
+        }
+      ],
+      "latency_s": 14.342947247998381,
+      "errors": []
+    },
+    {
+      "instance": "a-low-1",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": "8849",
+      "correct": true,
+      "answer": "8,848.86 m",
+      "judge_rationale": "The candidate\u2019s 8,848.86 m is the same widely cited current Everest elevation as 8,849 m, just given with greater precision/rounding.",
+      "llm_calls": 2,
+      "input_tokens": 1099,
+      "output_tokens": 48,
+      "total_tokens": 1147,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 24425.284095646
+        }
+      ],
+      "latency_s": 4.547405172997969,
+      "errors": []
+    },
+    {
+      "instance": "a-med-1",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": "Argentina, Buenos Aires",
+      "correct": true,
+      "answer": "Argentina \u2014 Buenos Aires",
+      "judge_rationale": "The candidate answer identifies Argentina as the second-largest country in South America and gives its capital as Buenos Aires, matching the gold answer.",
+      "llm_calls": 2,
+      "input_tokens": 1540,
+      "output_tokens": 168,
+      "total_tokens": 1708,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 24433.144394717
+        },
+        {
+          "tool": "tavily_search",
+          "t": 24433.146611605
+        }
+      ],
+      "latency_s": 5.99549419899995,
+      "errors": []
+    },
+    {
+      "instance": "a-med-1",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": "Argentina, Buenos Aires",
+      "correct": true,
+      "answer": "Argentina \u2014 Buenos Aires",
+      "judge_rationale": "The candidate answer identifies Argentina as the second-largest country in South America and correctly gives its capital as Buenos Aires.",
+      "llm_calls": 2,
+      "input_tokens": 3236,
+      "output_tokens": 99,
+      "total_tokens": 3335,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 24441.435227229
+        },
+        {
+          "tool": "tavily_search",
+          "t": 24441.437005303
+        },
+        {
+          "tool": "tavily_search",
+          "t": 24441.439586677
+        }
+      ],
+      "latency_s": 5.3243851869992795,
+      "errors": []
+    },
+    {
+      "instance": "a-high-1",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": "Neil Armstrong, Buzz Aldrin, Pete Conrad",
+      "correct": true,
+      "answer": "Neil Armstrong; Buzz Aldrin; Charles \u201cPete\u201d Conrad",
+      "judge_rationale": "The candidate lists Neil Armstrong, Buzz Aldrin, and Charles \u201cPete\u201d Conrad in the correct order, matching the gold answer.",
+      "llm_calls": 2,
+      "input_tokens": 2442,
+      "output_tokens": 191,
+      "total_tokens": 2633,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 24451.884300977
+        },
+        {
+          "tool": "tavily_search",
+          "t": 24453.106337167
+        },
+        {
+          "tool": "tavily_search",
+          "t": 24454.28239287
+        }
+      ],
+      "latency_s": 10.115416429998731,
+      "errors": []
+    },
+    {
+      "instance": "a-high-1",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": "Neil Armstrong, Buzz Aldrin, Pete Conrad",
+      "correct": true,
+      "answer": "Neil Armstrong, Buzz Aldrin, Pete Conrad",
+      "judge_rationale": "The candidate answer exactly matches the gold answer, listing Neil Armstrong, Buzz Aldrin, and Pete Conrad in the correct order.",
+      "llm_calls": 2,
+      "input_tokens": 4233,
+      "output_tokens": 157,
+      "total_tokens": 4390,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 24463.771713163
+        },
+        {
+          "tool": "tavily_search",
+          "t": 24463.772706668
+        },
+        {
+          "tool": "tavily_search",
+          "t": 24463.775988169
+        },
+        {
+          "tool": "tavily_search",
+          "t": 24463.777579384
+        }
+      ],
+      "latency_s": 6.302450975999818,
+      "errors": []
+    }
+  ]
+}

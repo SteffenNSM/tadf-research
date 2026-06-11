@@ -1,0 +1,15 @@
+{
+  "id": "a-high-5",
+  "archetype": "A",
+  "difficulty": "high",
+  "instruction": "Name the three countries that have won the FIFA men's World Cup more than three times each.",
+  "ground_truth": {
+    "value": "Brazil, Italy, Germany",
+    "unit": "three_countries"
+  },
+  "provenance": {
+    "source_benchmark": "BrowseComp (Wei et al., 2025)",
+    "adaptation": "Question style adapted from the source benchmark; specific instance curated for stable historically grounded ground truth so the answer does not drift with the live web. The structural research-and-synthesis profile (difficulty: high) is preserved.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

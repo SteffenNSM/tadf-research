@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "name": "Catch-up",
+    "organizer_email": "agent06@atlas.com",
+    "attendees": "agent06@atlas.com,contact037@example.com",
+    "start_time": "2025-12-21 23:00:00",
+    "end_time": "2025-12-21 23:45:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 2,
+    "name": "Onboarding call",
+    "organizer_email": "agent07@atlas.com",
+    "attendees": "agent07@atlas.com,contact019@example.com",
+    "start_time": "2025-11-11 22:00:00",
+    "end_time": "2025-11-11 22:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 3,
+    "name": "Account review",
+    "organizer_email": "agent03@atlas.com",
+    "attendees": "agent03@atlas.com,contact040@example.com",
+    "start_time": "2025-12-26 00:00:00",
+    "end_time": "2025-12-26 00:45:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 4,
+    "name": "Product demo",
+    "organizer_email": "agent07@atlas.com",
+    "attendees": "agent07@atlas.com,contact007@example.com",
+    "start_time": "2025-11-28 22:00:00",
+    "end_time": "2025-11-28 23:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 5,
+    "name": "Onboarding call",
+    "organizer_email": "agent09@atlas.com",
+    "attendees": "agent09@atlas.com,contact006@example.com",
+    "start_time": "2025-12-17 20:00:00",
+    "end_time": "2025-12-17 21:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 6,
+    "name": "Catch-up",
+    "organizer_email": "agent04@atlas.com",
+    "attendees": "agent04@atlas.com,contact022@example.com",
+    "start_time": "2025-11-18 18:00:00",
+    "end_time": "2025-11-18 19:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 7,
+    "name": "Onboarding call",
+    "organizer_email": "agent02@atlas.com",
+    "attendees": "agent02@atlas.com,contact034@example.com",
+    "start_time": "2026-01-01 19:00:00",
+    "end_time": "2026-01-01 19:45:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 8,
+    "name": "Quarterly business review",
+    "organizer_email": "agent03@atlas.com",
+    "attendees": "agent03@atlas.com,contact016@example.com",
+    "start_time": "2025-11-10 19:00:00",
+    "end_time": "2025-11-10 19:45:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 9,
+    "name": "Quarterly business review",
+    "organizer_email": "agent03@atlas.com",
+    "attendees": "agent03@atlas.com,contact039@example.com",
+    "start_time": "2025-11-17 00:00:00",
+    "end_time": "2025-11-17 00:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 10,
+    "name": "Catch-up",
+    "organizer_email": "agent08@atlas.com",
+    "attendees": "agent08@atlas.com,contact030@example.com",
+    "start_time": "2026-01-08 23:00:00",
+    "end_time": "2026-01-08 23:45:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 11,
+    "name": "Catch-up",
+    "organizer_email": "agent10@atlas.com",
+    "attendees": "agent10@atlas.com,contact042@example.com",
+    "start_time": "2026-01-17 23:00:00",
+    "end_time": "2026-01-17 23:45:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 12,
+    "name": "Product demo",
+    "organizer_email": "agent06@atlas.com",
+    "attendees": "agent06@atlas.com,contact010@example.com",
+    "start_time": "2025-12-23 18:00:00",
+    "end_time": "2025-12-23 18:45:00",
+    "status": "confirmed"
+  }
+]

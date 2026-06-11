@@ -1,0 +1,16 @@
+{
+  "id": "b-med-1",
+  "archetype": "B",
+  "difficulty": "med",
+  "instruction": "What is the average handle time in hours (closed_at minus created_at) of closed cases handled by agents on the 'EMEA' team, rounded to one decimal?",
+  "ground_truth": {
+    "value": 94.6,
+    "unit": "hours"
+  },
+  "provenance": {
+    "source_benchmark": "CRMArena (Huang et al., 2025)",
+    "source_task_type": "Handle Time Understanding",
+    "adaptation": "Schema and task type adapted from CRMArena structured querying; records synthesized locally (seed=42) for reproducibility.",
+    "license": "CC BY-NC 4.0"
+  }
+}

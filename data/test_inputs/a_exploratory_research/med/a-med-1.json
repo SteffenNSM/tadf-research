@@ -1,0 +1,15 @@
+{
+  "id": "a-med-1",
+  "archetype": "A",
+  "difficulty": "med",
+  "instruction": "What is the second-largest country in South America by total area, and what is its capital city?",
+  "ground_truth": {
+    "value": "Argentina, Buenos Aires",
+    "unit": "country_and_capital"
+  },
+  "provenance": {
+    "source_benchmark": "AssistantBench (Yoran et al., 2024)",
+    "adaptation": "Question style adapted from the source benchmark; specific instance curated for stable historically grounded ground truth so the answer does not drift with the live web. The structural research-and-synthesis profile (difficulty: med) is preserved.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

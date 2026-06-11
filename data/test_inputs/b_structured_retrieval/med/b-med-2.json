@@ -1,0 +1,16 @@
+{
+  "id": "b-med-2",
+  "archetype": "B",
+  "difficulty": "med",
+  "instruction": "What is the total amount of won opportunities for accounts in the 'Technology' industry?",
+  "ground_truth": {
+    "value": 185303,
+    "unit": "currency"
+  },
+  "provenance": {
+    "source_benchmark": "CRMArena (Huang et al., 2025)",
+    "source_task_type": "Sales Volume Understanding",
+    "adaptation": "Schema and task type adapted from CRMArena structured querying; records synthesized locally (seed=42) for reproducibility.",
+    "license": "CC BY-NC 4.0"
+  }
+}

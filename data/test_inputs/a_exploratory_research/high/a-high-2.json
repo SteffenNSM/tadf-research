@@ -1,0 +1,15 @@
+{
+  "id": "a-high-2",
+  "archetype": "A",
+  "difficulty": "high",
+  "instruction": "List the first three women to be awarded a Nobel Prize in any field, in chronological order of their award years.",
+  "ground_truth": {
+    "value": "Marie Curie (1903), Bertha von Suttner (1905), Selma Lagerloef (1909)",
+    "unit": "three_persons_with_years_ordered"
+  },
+  "provenance": {
+    "source_benchmark": "BrowseComp (Wei et al., 2025)",
+    "adaptation": "Question style adapted from the source benchmark; specific instance curated for stable historically grounded ground truth so the answer does not drift with the live web. The structural research-and-synthesis profile (difficulty: high) is preserved.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

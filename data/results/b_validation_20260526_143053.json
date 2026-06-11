@@ -1,0 +1,147 @@
+{
+  "timestamp": "20260526_143053",
+  "runs": [
+    {
+      "instance": "b-low-1",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": 39,
+      "correct": true,
+      "answer": "39",
+      "llm_calls": 1,
+      "input_tokens": 914,
+      "output_tokens": 54,
+      "total_tokens": 968,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26211.305713704
+        }
+      ],
+      "latency_s": 2.9037225249994663,
+      "errors": []
+    },
+    {
+      "instance": "b-low-1",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": 39,
+      "correct": true,
+      "answer": "39",
+      "llm_calls": 2,
+      "input_tokens": 4297,
+      "output_tokens": 27,
+      "total_tokens": 4324,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26213.351455444
+        }
+      ],
+      "latency_s": 3.1935085479999543,
+      "errors": []
+    },
+    {
+      "instance": "b-med-1",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": 94.6,
+      "correct": true,
+      "answer": "94.57142857142857",
+      "llm_calls": 1,
+      "input_tokens": 939,
+      "output_tokens": 95,
+      "total_tokens": 1034,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26216.244013902
+        },
+        {
+          "tool": "db_read",
+          "t": 26216.246045716
+        }
+      ],
+      "latency_s": 1.743414581000252,
+      "errors": []
+    },
+    {
+      "instance": "b-med-1",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": 94.6,
+      "correct": false,
+      "answer": "83.5",
+      "llm_calls": 3,
+      "input_tokens": 6198,
+      "output_tokens": 53,
+      "total_tokens": 6251,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26217.482834857
+        },
+        {
+          "tool": "db_read",
+          "t": 26218.919690172
+        }
+      ],
+      "latency_s": 3.6952072530002624,
+      "errors": []
+    },
+    {
+      "instance": "b-high-1",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": "EMEA",
+      "correct": true,
+      "answer": "EMEA",
+      "llm_calls": 1,
+      "input_tokens": 931,
+      "output_tokens": 195,
+      "total_tokens": 1126,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26225.014238543
+        },
+        {
+          "tool": "db_read",
+          "t": 26225.017151055
+        }
+      ],
+      "latency_s": 5.072359238998615,
+      "errors": []
+    },
+    {
+      "instance": "b-high-1",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": "EMEA",
+      "correct": false,
+      "answer": "APAC",
+      "llm_calls": 3,
+      "input_tokens": 12587,
+      "output_tokens": 48,
+      "total_tokens": 12635,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26225.952714775
+        },
+        {
+          "tool": "db_read",
+          "t": 26227.383351929
+        }
+      ],
+      "latency_s": 4.443057303000387,
+      "errors": []
+    }
+  ]
+}

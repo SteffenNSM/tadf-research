@@ -1,0 +1,119 @@
+{
+  "timestamp": "20260609_171701",
+  "runs": [
+    {
+      "instance": "f-low-1",
+      "difficulty": "low",
+      "sub_class": null,
+      "paradigm": "workflow",
+      "correct": false,
+      "error": "Error code: 400 - {'error': {'message': \"Invalid schema for response_format 'ActionPlan': In context=(), 'required' is required to be supplied and to be an array including every key in properties. Ext"
+    },
+    {
+      "instance": "f-low-1",
+      "difficulty": "low",
+      "sub_class": null,
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Sent an email to contact005@example.com with the subject \u201cQ3 status update\u201d and the body \u201cPlease see the attached Q3 upd",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3485,
+      "output_tokens": 82,
+      "total_tokens": 3567,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "send_email",
+          "t": 139600.581669006
+        }
+      ],
+      "latency_s": 3.501513157010777,
+      "errors": []
+    },
+    {
+      "instance": "f-med-1",
+      "difficulty": "med",
+      "sub_class": null,
+      "paradigm": "workflow",
+      "correct": false,
+      "error": "Error code: 400 - {'error': {'message': \"Invalid schema for response_format 'ActionPlan': In context=(), 'required' is required to be supplied and to be an array including every key in properties. Ext"
+    },
+    {
+      "instance": "f-med-1",
+      "difficulty": "med",
+      "sub_class": null,
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Updated 4 cases (IDs 8, 57, 68, 89) assigned to agent 3 from **Open** to **In Progress**.",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 5989,
+      "output_tokens": 188,
+      "total_tokens": 6177,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 139604.761638878
+        },
+        {
+          "tool": "db_update",
+          "t": 139607.015267725
+        },
+        {
+          "tool": "db_update",
+          "t": 139607.01723545
+        },
+        {
+          "tool": "db_update",
+          "t": 139607.018175493
+        },
+        {
+          "tool": "db_update",
+          "t": 139607.020332609
+        }
+      ],
+      "latency_s": 5.136038930009818,
+      "errors": []
+    },
+    {
+      "instance": "f-high-1",
+      "difficulty": "high",
+      "sub_class": "canonical",
+      "paradigm": "workflow",
+      "correct": false,
+      "error": "Error code: 400 - {'error': {'message': \"Invalid schema for response_format 'ActionPlan': In context=(), 'required' is required to be supplied and to be an array including every key in properties. Ext"
+    },
+    {
+      "instance": "f-high-1",
+      "difficulty": "high",
+      "sub_class": "canonical",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found 2 High-priority Open cases assigned to agent 1 (case IDs 40 and 118) and sent agent01@atlas.com an email for eac",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 5738,
+      "output_tokens": 171,
+      "total_tokens": 5909,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 139610.29202291
+        },
+        {
+          "tool": "send_email",
+          "t": 139612.237165881
+        },
+        {
+          "tool": "send_email",
+          "t": 139612.238568487
+        }
+      ],
+      "latency_s": 5.339052430994343,
+      "errors": []
+    }
+  ]
+}

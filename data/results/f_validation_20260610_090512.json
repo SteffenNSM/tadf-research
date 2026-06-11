@@ -1,0 +1,161 @@
+{
+  "timestamp": "20260610_090512",
+  "runs": [
+    {
+      "instance": "f-low-1",
+      "difficulty": "low",
+      "sub_class": null,
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 1 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 1,
+      "input_tokens": 768,
+      "output_tokens": 88,
+      "total_tokens": 856,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "send_email",
+          "t": 157008.19865861
+        }
+      ],
+      "latency_s": 3.8862360439961776,
+      "errors": []
+    },
+    {
+      "instance": "f-low-1",
+      "difficulty": "low",
+      "sub_class": null,
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Sent an email to contact005@example.com with the subject \u201cQ3 status update\u201d and the body \u201cPlease see the attached Q3 upd",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3485,
+      "output_tokens": 82,
+      "total_tokens": 3567,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "send_email",
+          "t": 157010.926176619
+        }
+      ],
+      "latency_s": 4.67742435800028,
+      "errors": []
+    },
+    {
+      "instance": "f-med-1",
+      "difficulty": "med",
+      "sub_class": null,
+      "paradigm": "workflow",
+      "correct": false,
+      "error": "15 validation errors for ActionPlan\nactions.1.args.values.str\n  Input should be a valid string [type=string_type, input_value={'status': 'In Progress'}, input_type=dict]\n    For further information vi"
+    },
+    {
+      "instance": "f-med-1",
+      "difficulty": "med",
+      "sub_class": null,
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Updated 4 cases assigned to agent 3 with status **Open** to **In Progress** (case IDs: 8, 57, 68, 89).",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 5989,
+      "output_tokens": 190,
+      "total_tokens": 6179,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 157018.665017406
+        },
+        {
+          "tool": "db_update",
+          "t": 157020.759192212
+        },
+        {
+          "tool": "db_update",
+          "t": 157020.761041831
+        },
+        {
+          "tool": "db_update",
+          "t": 157020.76317513
+        },
+        {
+          "tool": "db_update",
+          "t": 157020.76514672
+        }
+      ],
+      "latency_s": 10.00296708100359,
+      "errors": []
+    },
+    {
+      "instance": "f-high-1",
+      "difficulty": "high",
+      "sub_class": "canonical",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions with failures",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 1,
+      "input_tokens": 792,
+      "output_tokens": 288,
+      "total_tokens": 1080,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_search",
+          "t": 157031.773224217
+        },
+        {
+          "tool": "send_email",
+          "t": 157031.773430564
+        },
+        {
+          "tool": "send_email",
+          "t": 157032.09149317
+        },
+        {
+          "tool": "send_email",
+          "t": 157032.422601254
+        }
+      ],
+      "latency_s": 5.329685311997309,
+      "errors": [
+        "tool_error: 1 validation error for db_search\ncolumn\n  Field required [type=missing, input_value={'table': 'cases', 'query...h' AND status = 'Open'\"}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+      ]
+    },
+    {
+      "instance": "f-high-1",
+      "difficulty": "high",
+      "sub_class": "canonical",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found 2 High-priority Open cases assigned to agent 1 (case IDs 40 and 118) and sent agent01@atlas.com an email for eac",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 5738,
+      "output_tokens": 187,
+      "total_tokens": 5925,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 157034.064122411
+        },
+        {
+          "tool": "send_email",
+          "t": 157036.1184507
+        },
+        {
+          "tool": "send_email",
+          "t": 157036.119483264
+        }
+      ],
+      "latency_s": 5.297342203994049,
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "b-low-2",
+  "archetype": "B",
+  "difficulty": "low",
+  "instruction": "What is the total amount of all won opportunities (is_won = true)?",
+  "ground_truth": {
+    "value": 1314825,
+    "unit": "currency"
+  },
+  "provenance": {
+    "source_benchmark": "CRMArena (Huang et al., 2025)",
+    "source_task_type": "Sales Volume Understanding",
+    "adaptation": "Schema and task type adapted from CRMArena structured querying; records synthesized locally (seed=42) for reproducibility.",
+    "license": "CC BY-NC 4.0"
+  }
+}

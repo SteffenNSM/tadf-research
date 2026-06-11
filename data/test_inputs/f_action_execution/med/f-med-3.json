@@ -1,0 +1,13 @@
+{
+  "id": "f-med-3",
+  "archetype": "F",
+  "difficulty": "med",
+  "sub_class": null,
+  "instruction": "Reassign all cases currently assigned to agent 5 to agent 8.",
+  "expected_post_state": "No cases row has agent_id=5; all cases that were assigned to agent 5 in the seed (ids 31, 32, 33, 42, 48, 53, 78, 93, 98) now have agent_id=8.",
+  "provenance": {
+    "source_benchmark": "WorkBench (Styles et al., 2024)",
+    "adaptation": "Action-task style adapted from the source benchmark; specific entities (account ids, agent emails, case ids) reference the deterministic seed in seed_crm.py for stable post-state predicates.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

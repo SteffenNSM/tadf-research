@@ -1,0 +1,13 @@
+{
+  "id": "f-low-2",
+  "archetype": "F",
+  "difficulty": "low",
+  "sub_class": null,
+  "instruction": "Update the status of case 6 to 'Closed'.",
+  "expected_post_state": "cases.id=6 has status='Closed' (was 'In Progress' in the seed).",
+  "provenance": {
+    "source_benchmark": "WorkBench (Styles et al., 2024)",
+    "adaptation": "Action-task style adapted from the source benchmark; specific entities (account ids, agent emails, case ids) reference the deterministic seed in seed_crm.py for stable post-state predicates.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

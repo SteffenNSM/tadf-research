@@ -1,0 +1,13 @@
+{
+  "id": "f-high-4",
+  "archetype": "F",
+  "difficulty": "high",
+  "sub_class": "novel",
+  "instruction": "Among the agents on the EMEA team, find the one who currently has the most cases with status 'Open'. Send that agent an email with subject 'Workload review' and body 'Hi, a quick note that you currently have the highest open case load on the EMEA team. Please let me know if you would like to reprioritize or get backup on any of the active cases. Best regards, Operations.'",
+  "expected_post_state": "Exactly one new outbox row exists with recipient='agent05@atlas.com' (agent 5 has the most Open cases among EMEA agents 1, 5, 7, 10) and subject='Workload review'; no outbox row with that subject went to any other recipient.",
+  "provenance": {
+    "source_benchmark": "WorkArena L1/L2 (Drouin et al., 2024)",
+    "adaptation": "Action-task style adapted from the source benchmark; specific entities (account ids, agent emails, case ids) reference the deterministic seed in seed_crm.py for stable post-state predicates. Sub-class: novel.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

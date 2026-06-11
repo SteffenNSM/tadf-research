@@ -1,0 +1,13 @@
+{
+  "id": "f-med-4",
+  "archetype": "F",
+  "difficulty": "med",
+  "sub_class": null,
+  "instruction": "Downgrade every opportunity currently in stage 'Negotiation' to stage 'Proposal'.",
+  "expected_post_state": "No opportunities row has stage='Negotiation'; the 16 opportunities that were in 'Negotiation' in the seed now have stage='Proposal'.",
+  "provenance": {
+    "source_benchmark": "WorkBench (Styles et al., 2024)",
+    "adaptation": "Action-task style adapted from the source benchmark; specific entities (account ids, agent emails, case ids) reference the deterministic seed in seed_crm.py for stable post-state predicates.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

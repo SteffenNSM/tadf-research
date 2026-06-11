@@ -1,0 +1,13 @@
+{
+  "id": "f-low-1",
+  "archetype": "F",
+  "difficulty": "low",
+  "sub_class": null,
+  "instruction": "Send an email to contact005@example.com with the subject 'Q3 status update' and the body 'Hi, I wanted to share our Q3 status update for your account. This quarter we resolved the open billing issues, completed the integration handover, and have a few recommendations to discuss for next quarter. Let me know if you would like to set up a short call. Best regards, Account Team.'",
+  "expected_post_state": "Exactly one new outbox row exists with recipient='contact005@example.com' and subject='Q3 status update'; no other outbox rows were added.",
+  "provenance": {
+    "source_benchmark": "WorkBench (Styles et al., 2024)",
+    "adaptation": "Action-task style adapted from the source benchmark; specific entities (account ids, agent emails, case ids) reference the deterministic seed in seed_crm.py for stable post-state predicates.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "f-high-3",
+  "archetype": "F",
+  "difficulty": "high",
+  "sub_class": "canonical",
+  "instruction": "For every won opportunity (is_won=1) belonging to an account in the 'EMEA' region, create a calendar event named 'Quarterly review' on 2026-09-15 from 14:00 to 14:30 with the account's primary contact as an attendee.",
+  "expected_post_state": "For each unique EMEA-won-account (accounts 3, 10, 6, 20, 9, 13), at least one new events row exists with name='Quarterly review', start_time='2026-09-15 14:00:00', and the account's primary-contact email in attendees. No newly created event has any other name; no existing seed event was modified.",
+  "provenance": {
+    "source_benchmark": "WorkBench (Styles et al., 2024)",
+    "adaptation": "Action-task style adapted from the source benchmark; specific entities (account ids, agent emails, case ids) reference the deterministic seed in seed_crm.py for stable post-state predicates. Sub-class: canonical.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

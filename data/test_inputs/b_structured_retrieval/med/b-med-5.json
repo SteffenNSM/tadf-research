@@ -1,0 +1,16 @@
+{
+  "id": "b-med-5",
+  "archetype": "B",
+  "difficulty": "med",
+  "instruction": "How many won opportunities belong to accounts in the 'APAC' region?",
+  "ground_truth": {
+    "value": 4,
+    "unit": "count"
+  },
+  "provenance": {
+    "source_benchmark": "CRMArena (Huang et al., 2025)",
+    "source_task_type": "Sales Volume Understanding",
+    "adaptation": "Schema and task type adapted from CRMArena structured querying; records synthesized locally (seed=42) for reproducibility.",
+    "license": "CC BY-NC 4.0"
+  }
+}

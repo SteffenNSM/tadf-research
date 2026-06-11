@@ -1,0 +1,181 @@
+{
+  "timestamp": "20260526_154026",
+  "runs": [
+    {
+      "instance": "a-low-1",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": "8849",
+      "correct": false,
+      "answer": "8,848.86 m",
+      "judge_rationale": "The candidate gives 8,848.86 m, while the widely cited current measurement is 8,849 m, so it does not match the gold value.",
+      "llm_calls": 2,
+      "input_tokens": 2341,
+      "output_tokens": 185,
+      "total_tokens": 2526,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 30348.453613607
+        },
+        {
+          "tool": "tavily_search",
+          "t": 30349.558389972
+        },
+        {
+          "tool": "tavily_search",
+          "t": 30350.581835292
+        },
+        {
+          "tool": "tavily_search",
+          "t": 30351.821561513
+        },
+        {
+          "tool": "tavily_search",
+          "t": 30353.092646119
+        }
+      ],
+      "latency_s": 12.926867311998649,
+      "errors": []
+    },
+    {
+      "instance": "a-low-1",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": "8849",
+      "correct": false,
+      "answer": "8,848.86 m",
+      "judge_rationale": "The gold answer gives 8849 m as the most widely cited current measurement, while the candidate states 8,848.86 m, a different value rather than the rounded widely cited figure.",
+      "llm_calls": 2,
+      "input_tokens": 1070,
+      "output_tokens": 51,
+      "total_tokens": 1121,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 30359.91831494
+        }
+      ],
+      "latency_s": 4.246120723000786,
+      "errors": []
+    },
+    {
+      "instance": "a-med-1",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": "Argentina",
+      "correct": true,
+      "answer": "Argentina",
+      "judge_rationale": "The candidate answer matches the gold answer, identifying Argentina as the second-largest country in South America by total land area.",
+      "llm_calls": 2,
+      "input_tokens": 2237,
+      "output_tokens": 138,
+      "total_tokens": 2375,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 30367.795396665
+        },
+        {
+          "tool": "tavily_search",
+          "t": 30368.854075019
+        },
+        {
+          "tool": "tavily_search",
+          "t": 30370.444464471
+        },
+        {
+          "tool": "tavily_search",
+          "t": 30371.693576002
+        }
+      ],
+      "latency_s": 10.622433743003057,
+      "errors": []
+    },
+    {
+      "instance": "a-med-1",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": "Argentina",
+      "correct": true,
+      "answer": "Argentina",
+      "judge_rationale": "The candidate answer matches the gold answer: Argentina is the second-largest country in South America by total land area.",
+      "llm_calls": 2,
+      "input_tokens": 1199,
+      "output_tokens": 31,
+      "total_tokens": 1230,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 30377.891709068
+        }
+      ],
+      "latency_s": 4.584444935997453,
+      "errors": []
+    },
+    {
+      "instance": "a-high-1",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": "Andrew Wiles",
+      "correct": true,
+      "answer": "Andrew Wiles",
+      "judge_rationale": "The candidate answer matches the gold answer by correctly naming Andrew Wiles as the mathematician who published the first complete proof in 1994.",
+      "llm_calls": 2,
+      "input_tokens": 3039,
+      "output_tokens": 207,
+      "total_tokens": 3246,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 30386.241103235
+        },
+        {
+          "tool": "tavily_search",
+          "t": 30387.489157896
+        },
+        {
+          "tool": "tavily_search",
+          "t": 30388.724006568
+        },
+        {
+          "tool": "tavily_search",
+          "t": 30389.825649478
+        },
+        {
+          "tool": "tavily_search",
+          "t": 30391.297751639
+        }
+      ],
+      "latency_s": 12.587861367999722,
+      "errors": []
+    },
+    {
+      "instance": "a-high-1",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": "Andrew Wiles",
+      "correct": true,
+      "answer": "Andrew Wiles",
+      "judge_rationale": "The candidate answer matches the gold answer by correctly naming Andrew Wiles as the mathematician who published the first complete proof in 1994.",
+      "llm_calls": 2,
+      "input_tokens": 1353,
+      "output_tokens": 44,
+      "total_tokens": 1397,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 30397.580918713
+        }
+      ],
+      "latency_s": 5.1065904530005355,
+      "errors": []
+    }
+  ]
+}

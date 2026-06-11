@@ -1,0 +1,13 @@
+{
+  "id": "f-med-1",
+  "archetype": "F",
+  "difficulty": "med",
+  "sub_class": null,
+  "instruction": "For every case currently assigned to agent 3 that has status 'Open', set the status to 'In Progress'.",
+  "expected_post_state": "Each of cases.id in {8, 57, 68, 89} (the open cases for agent 3 in the seed) has status='In Progress'.",
+  "provenance": {
+    "source_benchmark": "WorkBench (Styles et al., 2024)",
+    "adaptation": "Action-task style adapted from the source benchmark; specific entities (account ids, agent emails, case ids) reference the deterministic seed in seed_crm.py for stable post-state predicates.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

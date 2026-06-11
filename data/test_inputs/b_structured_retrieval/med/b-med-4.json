@@ -1,0 +1,16 @@
+{
+  "id": "b-med-4",
+  "archetype": "B",
+  "difficulty": "med",
+  "instruction": "What is the average transfer count of cases for accounts of type 'Partner', rounded to two decimals?",
+  "ground_truth": {
+    "value": 2.07,
+    "unit": "count"
+  },
+  "provenance": {
+    "source_benchmark": "CRMArena (Huang et al., 2025)",
+    "source_task_type": "Transfer Count Understanding",
+    "adaptation": "Schema and task type adapted from CRMArena structured querying; records synthesized locally (seed=42) for reproducibility.",
+    "license": "CC BY-NC 4.0"
+  }
+}

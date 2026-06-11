@@ -1,0 +1,857 @@
+{
+  "timestamp": "20260527_093105",
+  "runs": [
+    {
+      "instance": "a-low-1",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": "8849",
+      "correct": true,
+      "answer": "8,848.86 meters",
+      "judge_rationale": "The candidate\u2019s 8,848.86 m is the same widely cited current measurement as 8,849 m, differing only by rounding/precision.",
+      "llm_calls": 2,
+      "input_tokens": 1947,
+      "output_tokens": 265,
+      "total_tokens": 2212,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25524.600347892
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25525.753606932
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25526.674698552
+        }
+      ],
+      "latency_s": 8.731087641997874,
+      "errors": []
+    },
+    {
+      "instance": "a-low-1",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": "8849",
+      "correct": true,
+      "answer": "8,848.86 m",
+      "judge_rationale": "8,848.86 m is the widely cited current measurement and differs from the gold value 8849 only by rounding/precision, referring to the same elevation.",
+      "llm_calls": 2,
+      "input_tokens": 4436,
+      "output_tokens": 196,
+      "total_tokens": 4632,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25538.038818839
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25538.041211756
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25538.043537012
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25538.045820538
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25538.048796285
+        }
+      ],
+      "latency_s": 6.778736612999637,
+      "errors": []
+    },
+    {
+      "instance": "a-low-2",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": "2002",
+      "correct": true,
+      "answer": "2002",
+      "judge_rationale": "The candidate answer matches the gold answer that euro banknotes and coins first entered circulation in 2002.",
+      "llm_calls": 2,
+      "input_tokens": 1398,
+      "output_tokens": 144,
+      "total_tokens": 1542,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25545.723088177
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25547.014483432
+        }
+      ],
+      "latency_s": 11.060325898000883,
+      "errors": []
+    },
+    {
+      "instance": "a-low-2",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": "2002",
+      "correct": true,
+      "answer": "2002",
+      "judge_rationale": "The candidate answer matches the gold answer that euro banknotes and coins first entered circulation in 2002.",
+      "llm_calls": 2,
+      "input_tokens": 1097,
+      "output_tokens": 35,
+      "total_tokens": 1132,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25556.514265987
+        }
+      ],
+      "latency_s": 5.117586423999455,
+      "errors": []
+    },
+    {
+      "instance": "a-low-3",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": "Leonardo da Vinci",
+      "correct": true,
+      "answer": "Leonardo da Vinci",
+      "judge_rationale": "The candidate answer matches the gold answer exactly: Leonardo da Vinci painted the Mona Lisa.",
+      "llm_calls": 2,
+      "input_tokens": 1055,
+      "output_tokens": 118,
+      "total_tokens": 1173,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25564.064489304
+        }
+      ],
+      "latency_s": 3.729565546000231,
+      "errors": []
+    },
+    {
+      "instance": "a-low-3",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": "Leonardo da Vinci",
+      "correct": true,
+      "answer": "Leonardo da Vinci",
+      "judge_rationale": "The candidate answer matches the gold answer exactly: Leonardo da Vinci painted the Mona Lisa.",
+      "llm_calls": 2,
+      "input_tokens": 1716,
+      "output_tokens": 30,
+      "total_tokens": 1746,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25568.397859451
+        }
+      ],
+      "latency_s": 3.1798692930024117,
+      "errors": []
+    },
+    {
+      "instance": "a-low-4",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": "Canberra",
+      "correct": true,
+      "answer": "Canberra",
+      "judge_rationale": "The candidate answer matches the gold answer exactly: Canberra is the capital city of Australia.",
+      "llm_calls": 2,
+      "input_tokens": 1235,
+      "output_tokens": 84,
+      "total_tokens": 1319,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25572.961129732
+        }
+      ],
+      "latency_s": 3.797838270998909,
+      "errors": []
+    },
+    {
+      "instance": "a-low-4",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": "Canberra",
+      "correct": true,
+      "answer": "Canberra",
+      "judge_rationale": "The candidate answer matches the gold answer exactly: Canberra is the capital city of Australia.",
+      "llm_calls": 2,
+      "input_tokens": 1743,
+      "output_tokens": 27,
+      "total_tokens": 1770,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25577.461787316
+        }
+      ],
+      "latency_s": 2.1664929789985763,
+      "errors": []
+    },
+    {
+      "instance": "a-low-5",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": "Au",
+      "correct": true,
+      "answer": "Au",
+      "judge_rationale": "The candidate answer \"Au\" exactly matches the gold answer for the chemical symbol of gold.",
+      "llm_calls": 2,
+      "input_tokens": 950,
+      "output_tokens": 79,
+      "total_tokens": 1029,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25580.628914671
+        }
+      ],
+      "latency_s": 3.624357949000114,
+      "errors": []
+    },
+    {
+      "instance": "a-low-5",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": "Au",
+      "correct": true,
+      "answer": "Au",
+      "judge_rationale": "The candidate answer \"Au\" exactly matches the gold answer for the chemical symbol of gold.",
+      "llm_calls": 2,
+      "input_tokens": 1287,
+      "output_tokens": 27,
+      "total_tokens": 1314,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25585.859653907
+        }
+      ],
+      "latency_s": 4.096852279999439,
+      "errors": []
+    },
+    {
+      "instance": "a-med-1",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": "Argentina, Buenos Aires",
+      "correct": true,
+      "answer": "Argentina \u2014 Buenos Aires",
+      "judge_rationale": "The candidate answer identifies Argentina as the second-largest country in South America by area and gives its capital as Buenos Aires, matching the gold answer.",
+      "llm_calls": 2,
+      "input_tokens": 1744,
+      "output_tokens": 161,
+      "total_tokens": 1905,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25590.368699478
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25591.681876506
+        }
+      ],
+      "latency_s": 5.5365034799979185,
+      "errors": []
+    },
+    {
+      "instance": "a-med-1",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": "Argentina, Buenos Aires",
+      "correct": true,
+      "answer": "Argentina \u2014 Buenos Aires",
+      "judge_rationale": "The candidate answer identifies Argentina as the second-largest country in South America and gives its capital as Buenos Aires, matching the gold answer.",
+      "llm_calls": 2,
+      "input_tokens": 3741,
+      "output_tokens": 124,
+      "total_tokens": 3865,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25597.272095615
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25597.273329098
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25597.275509383
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25597.276725284
+        }
+      ],
+      "latency_s": 4.506495607998659,
+      "errors": []
+    },
+    {
+      "instance": "a-med-2",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": "Wolfgang Amadeus Mozart, Prague",
+      "correct": true,
+      "answer": "Wolfgang Amadeus Mozart; Prague",
+      "judge_rationale": "The candidate correctly identifies Mozart as the composer and Prague as the city of the first performance, matching the gold answer.",
+      "llm_calls": 2,
+      "input_tokens": 1076,
+      "output_tokens": 106,
+      "total_tokens": 1182,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25603.373879943
+        }
+      ],
+      "latency_s": 4.394919140002457,
+      "errors": []
+    },
+    {
+      "instance": "a-med-2",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": "Wolfgang Amadeus Mozart, Prague",
+      "correct": true,
+      "answer": "Wolfgang Amadeus Mozart, Prague",
+      "judge_rationale": "The candidate exactly matches the gold answer: Mozart composed 'Don Giovanni' and it premiered in Prague.",
+      "llm_calls": 2,
+      "input_tokens": 3296,
+      "output_tokens": 112,
+      "total_tokens": 3408,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25609.41762505
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25609.419344891
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25609.420467372
+        }
+      ],
+      "latency_s": 4.528732915001456,
+      "errors": []
+    },
+    {
+      "instance": "a-med-3",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": "Hadrian, 2nd century",
+      "correct": true,
+      "answer": "Emperor Hadrian; 2nd century AD",
+      "judge_rationale": "The candidate identifies Hadrian as the emperor and places the rebuilding in the 2nd century AD, matching the gold answer.",
+      "llm_calls": 2,
+      "input_tokens": 1349,
+      "output_tokens": 140,
+      "total_tokens": 1489,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25614.945890639
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25615.966445487
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25617.273174189
+        }
+      ],
+      "latency_s": 7.108082811002532,
+      "errors": []
+    },
+    {
+      "instance": "a-med-3",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": "Hadrian, 2nd century",
+      "correct": true,
+      "answer": "Hadrian, 2nd century AD",
+      "judge_rationale": "The candidate matches the gold answer by identifying Emperor Hadrian and placing the rebuilding in the 2nd century (AD), which is equivalent to the gold's timeframe.",
+      "llm_calls": 2,
+      "input_tokens": 3589,
+      "output_tokens": 173,
+      "total_tokens": 3762,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25623.867686758
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25623.870248356
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25623.872543349
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25623.874814495
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25623.876844447
+        }
+      ],
+      "latency_s": 5.50870838499759,
+      "errors": []
+    },
+    {
+      "instance": "a-med-4",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": "2007, Steve Jobs",
+      "correct": true,
+      "answer": "2007 \u2014 Steve Jobs",
+      "judge_rationale": "The candidate answer matches the gold answer, stating the iPhone was first released in 2007 and that Apple\u2019s CEO at the time was Steve Jobs.",
+      "llm_calls": 2,
+      "input_tokens": 1675,
+      "output_tokens": 129,
+      "total_tokens": 1804,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25629.589312191
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25630.508033281
+        }
+      ],
+      "latency_s": 5.080797114998859,
+      "errors": []
+    },
+    {
+      "instance": "a-med-4",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": "2007, Steve Jobs",
+      "correct": true,
+      "answer": "2007 \u2014 Steve Jobs",
+      "judge_rationale": "The candidate answer matches the gold answer, stating the iPhone was first released in 2007 and Apple\u2019s CEO at the time was Steve Jobs.",
+      "llm_calls": 2,
+      "input_tokens": 3574,
+      "output_tokens": 120,
+      "total_tokens": 3694,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25636.37812889
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25636.37946766
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25636.381198766
+        }
+      ],
+      "latency_s": 4.717009412001062,
+      "errors": []
+    },
+    {
+      "instance": "a-med-5",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": "English, French",
+      "correct": true,
+      "answer": "English and French",
+      "judge_rationale": "The candidate answer states English and French, which matches the two official federal languages of Canada in the gold answer.",
+      "llm_calls": 2,
+      "input_tokens": 1906,
+      "output_tokens": 138,
+      "total_tokens": 2044,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25641.364727944
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25642.441541581
+        }
+      ],
+      "latency_s": 5.538979678000032,
+      "errors": []
+    },
+    {
+      "instance": "a-med-5",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": "English, French",
+      "correct": true,
+      "answer": "English and French",
+      "judge_rationale": "The candidate answer states English and French, which matches the two official federal languages of Canada in the gold answer.",
+      "llm_calls": 2,
+      "input_tokens": 1567,
+      "output_tokens": 33,
+      "total_tokens": 1600,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25647.682783067
+        }
+      ],
+      "latency_s": 2.661266582999815,
+      "errors": []
+    },
+    {
+      "instance": "a-high-1",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": "Neil Armstrong, Buzz Aldrin, Pete Conrad",
+      "correct": true,
+      "answer": "Neil Armstrong, Buzz Aldrin, Pete Conrad",
+      "judge_rationale": "The candidate answer exactly matches the gold answer, listing Neil Armstrong, Buzz Aldrin, and Pete Conrad in the correct order.",
+      "llm_calls": 2,
+      "input_tokens": 2527,
+      "output_tokens": 211,
+      "total_tokens": 2738,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25654.059333995
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25656.028176402
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25657.089492483
+        }
+      ],
+      "latency_s": 9.474493977999373,
+      "errors": []
+    },
+    {
+      "instance": "a-high-1",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": "Neil Armstrong, Buzz Aldrin, Pete Conrad",
+      "correct": true,
+      "answer": "Neil Armstrong, Buzz Aldrin, Pete Conrad",
+      "judge_rationale": "The candidate answer exactly matches the gold answer, listing Neil Armstrong, Buzz Aldrin, and Pete Conrad in the correct order.",
+      "llm_calls": 3,
+      "input_tokens": 8721,
+      "output_tokens": 193,
+      "total_tokens": 8914,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25663.876665929
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25663.877812162
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25663.879495521
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25663.881458524
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25666.526199053
+        }
+      ],
+      "latency_s": 7.581706277000194,
+      "errors": []
+    },
+    {
+      "instance": "a-high-2",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": "Marie Curie (1903), Bertha von Suttner (1905), Selma Lagerloef (1909)",
+      "correct": true,
+      "answer": "Marie Curie (1903); Bertha von Suttner (1905); Selma Lagerl\u00f6f (1909)",
+      "judge_rationale": "The candidate lists the same three Nobel Prize\u2013awarded women in the correct chronological order with matching award years; the spelling difference in Lagerl\u00f6f is acceptable.",
+      "llm_calls": 2,
+      "input_tokens": 1826,
+      "output_tokens": 172,
+      "total_tokens": 1998,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25672.554959645
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25673.825114684
+        }
+      ],
+      "latency_s": 6.233122904999618,
+      "errors": []
+    },
+    {
+      "instance": "a-high-2",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": "Marie Curie (1903), Bertha von Suttner (1905), Selma Lagerloef (1909)",
+      "correct": true,
+      "answer": "Marie Curie; Bertha von Suttner; Selma Lagerl\u00f6f",
+      "judge_rationale": "The candidate lists the same three first female Nobel laureates in the correct chronological order; the omission of award years and the diacritic in Lagerl\u00f6f do not change the factual content.",
+      "llm_calls": 2,
+      "input_tokens": 6490,
+      "output_tokens": 174,
+      "total_tokens": 6664,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25681.709739496
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25681.71169475
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25681.713772582
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25681.71582242
+        }
+      ],
+      "latency_s": 6.32235186500111,
+      "errors": []
+    },
+    {
+      "instance": "a-high-3",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": "Belgium, Luxembourg, Switzerland",
+      "correct": true,
+      "answer": "Belgium, Luxembourg, Switzerland",
+      "judge_rationale": "The candidate answer exactly matches the gold answer, listing Belgium, Luxembourg, and Switzerland as the three countries bordering both Germany and France.",
+      "llm_calls": 2,
+      "input_tokens": 1681,
+      "output_tokens": 154,
+      "total_tokens": 1835,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25687.386334769
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25688.678259571
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25689.855087874
+        }
+      ],
+      "latency_s": 7.931656472999748,
+      "errors": []
+    },
+    {
+      "instance": "a-high-3",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": "Belgium, Luxembourg, Switzerland",
+      "correct": true,
+      "answer": "Belgium, Luxembourg, Switzerland",
+      "judge_rationale": "The candidate answer exactly matches the gold answer, listing Belgium, Luxembourg, and Switzerland as bordering both Germany and France.",
+      "llm_calls": 2,
+      "input_tokens": 3560,
+      "output_tokens": 153,
+      "total_tokens": 3713,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25697.366979145
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25697.369059851
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25697.371535267
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25697.373951013
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25697.375980131
+        }
+      ],
+      "latency_s": 5.699981406000006,
+      "errors": []
+    },
+    {
+      "instance": "a-high-4",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": "Mont Blanc, Monte Rosa (Dufourspitze), Dom",
+      "correct": false,
+      "answer": "Mont Blanc; Dufourspitze (Monte Rosa); Liskamm",
+      "judge_rationale": "The candidate lists Liskamm as the third-highest peak, but the gold answer\u2019s third-highest is Dom, so the set of peaks does not match.",
+      "llm_calls": 2,
+      "input_tokens": 1335,
+      "output_tokens": 129,
+      "total_tokens": 1464,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25703.521875998
+        }
+      ],
+      "latency_s": 4.711285178000253,
+      "errors": []
+    },
+    {
+      "instance": "a-high-4",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": "Mont Blanc, Monte Rosa (Dufourspitze), Dom",
+      "correct": true,
+      "answer": "Mont Blanc; Dufourspitze; Dom",
+      "judge_rationale": "The candidate lists the same three highest Alpine peaks in the correct descending order, using Dufourspitze as the summit of Monte Rosa.",
+      "llm_calls": 2,
+      "input_tokens": 4521,
+      "output_tokens": 188,
+      "total_tokens": 4709,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25711.392156138
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25711.393693269
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25711.39527588
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25711.397339852
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25711.399201581
+        }
+      ],
+      "latency_s": 6.713163876000181,
+      "errors": []
+    },
+    {
+      "instance": "a-high-5",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": "Brazil, Italy, Germany",
+      "correct": true,
+      "answer": "Brazil, Germany, Italy",
+      "judge_rationale": "The candidate lists the same three countries\u2014Brazil, Germany, and Italy\u2014as the gold answer, just in a different order, which is acceptable since no ordering is required.",
+      "llm_calls": 2,
+      "input_tokens": 1900,
+      "output_tokens": 112,
+      "total_tokens": 2012,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25717.551328579
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25719.212534489
+        }
+      ],
+      "latency_s": 5.943971869000961,
+      "errors": []
+    },
+    {
+      "instance": "a-high-5",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": "Brazil, Italy, Germany",
+      "correct": true,
+      "answer": "Brazil, Germany, Italy",
+      "judge_rationale": "The candidate lists the same three countries\u2014Brazil, Germany, and Italy\u2014as the gold answer, just in a different order.",
+      "llm_calls": 2,
+      "input_tokens": 15321,
+      "output_tokens": 184,
+      "total_tokens": 15505,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 25726.051618331
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25726.053951674
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25726.054968403
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25726.058466318
+        },
+        {
+          "tool": "tavily_search",
+          "t": 25726.059918497
+        }
+      ],
+      "latency_s": 6.125243350998062,
+      "errors": []
+    }
+  ]
+}

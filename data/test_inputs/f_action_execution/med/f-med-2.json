@@ -1,0 +1,13 @@
+{
+  "id": "f-med-2",
+  "archetype": "F",
+  "difficulty": "med",
+  "sub_class": null,
+  "instruction": "Find the primary contact of account 7 (the contact at that account with the lowest id) and send them an email with subject 'Renewal discussion' and body 'Hi, your renewal is coming up and I would like to find a time next week to walk through the options together. Could you let me know which days work for you? Best regards, Renewals Team.'",
+  "expected_post_state": "Exactly one new outbox row exists with recipient='contact013@example.com' (account 7's lowest-id contact) and subject='Renewal discussion'; no other outbox rows were added.",
+  "provenance": {
+    "source_benchmark": "WorkBench (Styles et al., 2024)",
+    "adaptation": "Action-task style adapted from the source benchmark; specific entities (account ids, agent emails, case ids) reference the deterministic seed in seed_crm.py for stable post-state predicates.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

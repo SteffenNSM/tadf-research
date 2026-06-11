@@ -1,0 +1,15 @@
+{
+  "id": "a-low-5",
+  "archetype": "A",
+  "difficulty": "low",
+  "instruction": "What is the chemical element symbol for gold?",
+  "ground_truth": {
+    "value": "Au",
+    "unit": "chemical_symbol"
+  },
+  "provenance": {
+    "source_benchmark": "AssistantBench (Yoran et al., 2024)",
+    "adaptation": "Question style adapted from the source benchmark; specific instance curated for stable historically grounded ground truth so the answer does not drift with the live web. The structural research-and-synthesis profile (difficulty: low) is preserved.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

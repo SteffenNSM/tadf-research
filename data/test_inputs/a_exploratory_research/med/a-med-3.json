@@ -1,0 +1,15 @@
+{
+  "id": "a-med-3",
+  "archetype": "A",
+  "difficulty": "med",
+  "instruction": "Which Roman emperor is credited with rebuilding the Pantheon in Rome as it stands today, and in approximately which century did the rebuilding take place?",
+  "ground_truth": {
+    "value": "Hadrian, 2nd century",
+    "unit": "person_and_century"
+  },
+  "provenance": {
+    "source_benchmark": "AssistantBench (Yoran et al., 2024)",
+    "adaptation": "Question style adapted from the source benchmark; specific instance curated for stable historically grounded ground truth so the answer does not drift with the live web. The structural research-and-synthesis profile (difficulty: med) is preserved.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

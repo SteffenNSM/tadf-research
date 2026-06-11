@@ -1,0 +1,16 @@
+{
+  "id": "b-low-5",
+  "archetype": "B",
+  "difficulty": "low",
+  "instruction": "What is the average amount across all opportunities, rounded to the nearest integer?",
+  "ground_truth": {
+    "value": 103035,
+    "unit": "currency"
+  },
+  "provenance": {
+    "source_benchmark": "CRMArena (Huang et al., 2025)",
+    "source_task_type": "Sales Volume Understanding",
+    "adaptation": "Schema and task type adapted from CRMArena structured querying; records synthesized locally (seed=42) for reproducibility.",
+    "license": "CC BY-NC 4.0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "b-high-4",
+  "archetype": "B",
+  "difficulty": "high",
+  "instruction": "In which month of 2025 were the most opportunities created for accounts in the 'Technology' industry? Answer with the month number (1-12).",
+  "ground_truth": {
+    "value": 7,
+    "unit": "month"
+  },
+  "provenance": {
+    "source_benchmark": "CRMArena (Huang et al., 2025)",
+    "source_task_type": "Monthly Trend Analysis",
+    "adaptation": "Schema and task type adapted from CRMArena structured querying; records synthesized locally (seed=42) for reproducibility.",
+    "license": "CC BY-NC 4.0"
+  }
+}

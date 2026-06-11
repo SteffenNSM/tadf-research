@@ -1,0 +1,16 @@
+{
+  "id": "b-med-3",
+  "archetype": "B",
+  "difficulty": "med",
+  "instruction": "How many cases were handled by agents on the 'AMER' team?",
+  "ground_truth": {
+    "value": 60,
+    "unit": "count"
+  },
+  "provenance": {
+    "source_benchmark": "CRMArena (Huang et al., 2025)",
+    "source_task_type": "Case Count",
+    "adaptation": "Schema and task type adapted from CRMArena structured querying; records synthesized locally (seed=42) for reproducibility.",
+    "license": "CC BY-NC 4.0"
+  }
+}

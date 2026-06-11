@@ -1,0 +1,13 @@
+{
+  "id": "f-low-3",
+  "archetype": "F",
+  "difficulty": "low",
+  "sub_class": null,
+  "instruction": "Create a calendar event called 'Sales review' on 2026-06-15 from 10:00 to 11:00 with attendee contact010@example.com.",
+  "expected_post_state": "An events row exists with name='Sales review', start_time='2026-06-15 10:00:00', and 'contact010@example.com' in attendees.",
+  "provenance": {
+    "source_benchmark": "WorkBench (Styles et al., 2024)",
+    "adaptation": "Action-task style adapted from the source benchmark; specific entities (account ids, agent emails, case ids) reference the deterministic seed in seed_crm.py for stable post-state predicates.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

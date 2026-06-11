@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Fermat’s last theorem | Definition, Example, & Facts | Britannica",
+    "url": "https://www.britannica.com/science/Fermats-last-theorem",
+    "content": "* Boston University Arts and Sciences - Department of Mathematics and Statistics - An Overview of the Proof of Fermatï¿½s Last Theorem. * University of Babylon - Fermatï¿½s Theorem (PDF). * University of Waterloo - Fermat's Last Theorem. # Fermat’s last theorem. In 1637 the French mathematician Pierre de Fermat wrote in his copy of the *Arithmetica* by Diophantus of Alexandria (*c.* 250 ce), “It is impossible for a cube to be a sum of two cubes, a fourth power to be a sum of two fourth powers, or in general for any number that is a power greater than the second to be the sum of two like powers. By that time, mathematicians had discovered that proving a special case of a result from algebraic geometry and number theory known as the Shimura-Taniyama-Weil conjecture would be equivalent to proving Fermat’s last theorem. An error was found in this proof, however, but, with help from his former student Richard Taylor, Wiles finally devised a proof of Fermat’s last theorem, which was published in 1995 in the journal *Annals of Mathematics*."
+  },
+  {
+    "title": "Andrew Wiles on the morning he discovered how to fix his ...",
+    "url": "https://www.facebook.com/xixidu/posts/andrew-wiles-on-the-morning-he-discovered-how-to-fix-his-proof-of-fermats-last-t/10173033388330637",
+    "content": "In 1994, they emerged with an absolutely perfect proof of Fermat's Last Theorem. The 357-year mathematical mystery was finally solved. The proof"
+  },
+  {
+    "title": "Fermat's Last Theorem: A Historical and Mathematical ...",
+    "url": "https://essopenarchive.org/doi/pdf/10.22541/essoar.169447369.92321625/v1?onload=true",
+    "content": "by I Kilani · 2023 · Cited by 3 — However, a general proof eluded mathematicians until Andrew Wiles provided one in 1994, thereby resolving one of the most famous problems in the"
+  },
+  {
+    "title": "How to present a proof of Fermat's Last Theorem?",
+    "url": "https://www.facebook.com/groups/1685507044817357/posts/25251744044433659",
+    "content": "The first complete proof of Fermat's last theorem was given by Andrew Wiles, a British mathematician, in 1995. He used techniques from algebraic"
+  },
+  {
+    "title": "Fermat's Last Theorem - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Fermat%27s_Last_Theorem",
+    "content": "# Fermat's Last Theorem. | Statement | For any integer *n* > 2, the equation *a**n* + *b**n* = *c**n* has no positive integer solutions. In number theory, **Fermat's Last Theorem** (sometimes called **Fermat's conjecture**, especially in older texts) states that there are no positive integers {\\displaystyle a,b,c,n} with {\\displaystyle n>2} such that {\\displaystyle a^{n}+b^{n}=c^{n}}. Although other statements claimed by Fermat without proof were subsequently proven by others and credited as theorems of Fermat (for example, Fermat's theorem on sums of two squares), Fermat's Last Theorem resisted proof, leading to doubt that Fermat ever had a correct proof. The Pythagorean equation, {\\displaystyle x^{2}+y^{2}=z^{2}}, has an infinite number of positive integer solutions for {\\displaystyle x}, {\\displaystyle y}, and {\\displaystyle z}; these solutions are known as Pythagorean triples (with the simplest example being 3, 4, 5). Around 1637, Fermat wrote in the margin of a book that the more general equation {\\displaystyle a^{n}+b^{n}=c^{n}} had no solutions in positive integers if {\\displaystyle n} is an integer greater than 2."
+  }
+]

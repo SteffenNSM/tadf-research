@@ -1,0 +1,165 @@
+{
+  "timestamp": "20260527_083603",
+  "runs": [
+    {
+      "instance": "a-low-1",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": "8849",
+      "correct": true,
+      "answer": "8,848.86 meters",
+      "judge_rationale": "The candidate\u2019s 8,848.86 m is the widely cited current measurement and differs from the gold 8,849 m only by rounding/precision.",
+      "llm_calls": 2,
+      "input_tokens": 2357,
+      "output_tokens": 182,
+      "total_tokens": 2539,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 22390.743037672
+        },
+        {
+          "tool": "tavily_search",
+          "t": 22391.97222482
+        },
+        {
+          "tool": "tavily_search",
+          "t": 22393.00741302
+        }
+      ],
+      "latency_s": 11.58608113200171,
+      "errors": []
+    },
+    {
+      "instance": "a-low-1",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": "8849",
+      "correct": true,
+      "answer": "8,848.86 m",
+      "judge_rationale": "The candidate\u2019s 8,848.86 m is the same widely cited current elevation as 8,849 m, differing only by rounding/precision.",
+      "llm_calls": 2,
+      "input_tokens": 4175,
+      "output_tokens": 193,
+      "total_tokens": 4368,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 22404.361122508
+        },
+        {
+          "tool": "tavily_search",
+          "t": 22404.363393649
+        },
+        {
+          "tool": "tavily_search",
+          "t": 22404.365747993
+        },
+        {
+          "tool": "tavily_search",
+          "t": 22404.368245215
+        },
+        {
+          "tool": "tavily_search",
+          "t": 22404.370923712
+        }
+      ],
+      "latency_s": 7.927255732000049,
+      "errors": []
+    },
+    {
+      "instance": "a-med-1",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": "Argentina",
+      "correct": true,
+      "answer": "Argentina",
+      "judge_rationale": "The candidate answer matches the gold answer by identifying Argentina as the second-largest country in South America by total land area.",
+      "llm_calls": 2,
+      "input_tokens": 1093,
+      "output_tokens": 153,
+      "total_tokens": 1246,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 22410.693886162
+        },
+        {
+          "tool": "tavily_search",
+          "t": 22410.695092453
+        }
+      ],
+      "latency_s": 3.933896167000057,
+      "errors": []
+    },
+    {
+      "instance": "a-med-1",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": "Argentina",
+      "correct": true,
+      "answer": "Argentina",
+      "judge_rationale": "The candidate answer matches the gold answer, identifying Argentina as the second-largest country in South America by total land area.",
+      "llm_calls": 2,
+      "input_tokens": 1199,
+      "output_tokens": 31,
+      "total_tokens": 1230,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 22415.017112063
+        }
+      ],
+      "latency_s": 2.225177972999518,
+      "errors": []
+    },
+    {
+      "instance": "a-high-1",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": "Andrew Wiles",
+      "correct": true,
+      "answer": "Andrew Wiles",
+      "judge_rationale": "The candidate answer matches the gold answer: Andrew Wiles published the first complete proof of Fermat's Last Theorem in 1994.",
+      "llm_calls": 2,
+      "input_tokens": 959,
+      "output_tokens": 151,
+      "total_tokens": 1110,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 22419.369270181
+        }
+      ],
+      "latency_s": 5.6332619469976635,
+      "errors": []
+    },
+    {
+      "instance": "a-high-1",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": "Andrew Wiles",
+      "correct": true,
+      "answer": "Andrew Wiles",
+      "judge_rationale": "The candidate answer matches the gold answer: Andrew Wiles published the first complete proof of Fermat's Last Theorem in 1994.",
+      "llm_calls": 2,
+      "input_tokens": 1286,
+      "output_tokens": 39,
+      "total_tokens": 1325,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 22425.533425812
+        }
+      ],
+      "latency_s": 3.4046519769981387,
+      "errors": []
+    }
+  ]
+}

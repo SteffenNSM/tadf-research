@@ -1,0 +1,15 @@
+{
+  "id": "a-low-2",
+  "archetype": "A",
+  "difficulty": "low",
+  "instruction": "In what calendar year did euro banknotes and coins first enter physical circulation in the eurozone?",
+  "ground_truth": {
+    "value": "2002",
+    "unit": "year"
+  },
+  "provenance": {
+    "source_benchmark": "AssistantBench (Yoran et al., 2024)",
+    "adaptation": "Question style adapted from the source benchmark; specific instance curated for stable historically grounded ground truth so the answer does not drift with the live web. The structural research-and-synthesis profile (difficulty: low) is preserved.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

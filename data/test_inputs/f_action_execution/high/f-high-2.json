@@ -1,0 +1,13 @@
+{
+  "id": "f-high-2",
+  "archetype": "F",
+  "difficulty": "high",
+  "sub_class": "canonical",
+  "instruction": "For every opportunity in stage 'Proposal' that belongs to an account in the 'Technology' industry, send an email to the account's primary contact (the contact with the lowest id at that account). Subject: 'Proposal follow-up'. Body: 'Hi, following up on the proposal we sent over. I would like to schedule a short call to discuss any questions and the next steps on your side. Please share a time that works in the coming week. Best regards, Sales Team.'",
+  "expected_post_state": "At least one new outbox row per unique primary contact of the Technology+Proposal accounts (recipients are contact012@example.com and contact033@example.com) with subject='Proposal follow-up'. No outbox row with that subject was sent to any other recipient.",
+  "provenance": {
+    "source_benchmark": "WorkBench (Styles et al., 2024)",
+    "adaptation": "Action-task style adapted from the source benchmark; specific entities (account ids, agent emails, case ids) reference the deterministic seed in seed_crm.py for stable post-state predicates. Sub-class: canonical.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

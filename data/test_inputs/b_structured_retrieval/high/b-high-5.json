@@ -1,0 +1,16 @@
+{
+  "id": "b-high-5",
+  "archetype": "B",
+  "difficulty": "high",
+  "instruction": "Which region has the highest average transfer count for High-priority cases? Answer with the region name.",
+  "ground_truth": {
+    "value": "AMER",
+    "unit": "region"
+  },
+  "provenance": {
+    "source_benchmark": "CRMArena (Huang et al., 2025)",
+    "source_task_type": "Transfer Count Understanding",
+    "adaptation": "Schema and task type adapted from CRMArena structured querying; records synthesized locally (seed=42) for reproducibility.",
+    "license": "CC BY-NC 4.0"
+  }
+}

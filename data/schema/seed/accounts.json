@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "name": "Account 01",
+    "region": "APAC",
+    "industry": "Technology",
+    "type": "Customer"
+  },
+  {
+    "id": 2,
+    "name": "Account 02",
+    "region": "APAC",
+    "industry": "Retail",
+    "type": "Customer"
+  },
+  {
+    "id": 3,
+    "name": "Account 03",
+    "region": "EMEA",
+    "industry": "Manufacturing",
+    "type": "Customer"
+  },
+  {
+    "id": 4,
+    "name": "Account 04",
+    "region": "APAC",
+    "industry": "Finance",
+    "type": "Customer"
+  },
+  {
+    "id": 5,
+    "name": "Account 05",
+    "region": "APAC",
+    "industry": "Healthcare",
+    "type": "Customer"
+  },
+  {
+    "id": 6,
+    "name": "Account 06",
+    "region": "EMEA",
+    "industry": "Technology",
+    "type": "Customer"
+  },
+  {
+    "id": 7,
+    "name": "Account 07",
+    "region": "EMEA",
+    "industry": "Finance",
+    "type": "Customer"
+  },
+  {
+    "id": 8,
+    "name": "Account 08",
+    "region": "APAC",
+    "industry": "Manufacturing",
+    "type": "Partner"
+  },
+  {
+    "id": 9,
+    "name": "Account 09",
+    "region": "EMEA",
+    "industry": "Healthcare",
+    "type": "Partner"
+  },
+  {
+    "id": 10,
+    "name": "Account 10",
+    "region": "EMEA",
+    "industry": "Manufacturing",
+    "type": "Partner"
+  },
+  {
+    "id": 11,
+    "name": "Account 11",
+    "region": "AMER",
+    "industry": "Retail",
+    "type": "Customer"
+  },
+  {
+    "id": 12,
+    "name": "Account 12",
+    "region": "EMEA",
+    "industry": "Retail",
+    "type": "Customer"
+  },
+  {
+    "id": 13,
+    "name": "Account 13",
+    "region": "EMEA",
+    "industry": "Healthcare",
+    "type": "Customer"
+  },
+  {
+    "id": 14,
+    "name": "Account 14",
+    "region": "AMER",
+    "industry": "Retail",
+    "type": "Partner"
+  },
+  {
+    "id": 15,
+    "name": "Account 15",
+    "region": "EMEA",
+    "industry": "Healthcare",
+    "type": "Customer"
+  },
+  {
+    "id": 16,
+    "name": "Account 16",
+    "region": "AMER",
+    "industry": "Technology",
+    "type": "Partner"
+  },
+  {
+    "id": 17,
+    "name": "Account 17",
+    "region": "APAC",
+    "industry": "Finance",
+    "type": "Partner"
+  },
+  {
+    "id": 18,
+    "name": "Account 18",
+    "region": "APAC",
+    "industry": "Manufacturing",
+    "type": "Customer"
+  },
+  {
+    "id": 19,
+    "name": "Account 19",
+    "region": "EMEA",
+    "industry": "Manufacturing",
+    "type": "Partner"
+  },
+  {
+    "id": 20,
+    "name": "Account 20",
+    "region": "EMEA",
+    "industry": "Manufacturing",
+    "type": "Customer"
+  }
+]
