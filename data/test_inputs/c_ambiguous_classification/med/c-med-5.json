@@ -1,0 +1,19 @@
+{
+  "id": "c-med-5",
+  "archetype": "C",
+  "difficulty": "med",
+  "sub_class": null,
+  "instruction": "Route this email to the correct support category.",
+  "email": {
+    "sender": "warehouse@coastline-supply.example",
+    "subject": "Order #52481 — delivered but not received",
+    "body": "Our last three orders showed up fine, but order #52481 is showing 'delivered' on the tracking page and we never received it. Could you check with the carrier and reissue if needed? Happy to cover any reshipping fees."
+  },
+  "expected_label": "Shipping",
+  "rationale_hint": "Side signal: 'happy to cover any reshipping fees' (Billing-adjacent). Dominant signal: a delivery discrepancy plus a request to chase the carrier and reissue — the ask is about tracking down the missing package → Shipping.",
+  "provenance": {
+    "source_benchmark": "CRMArena-Pro Case Routing / Activity Priority Understanding (Huang et al., 2025)",
+    "adaptation": "Author-constructed email texts; task semantics follow the CRMArena-Pro routing/disambiguation pattern. The five-category label set is mirrored from cases.issue_category in experiments/seed_crm.py so the routing decision is consistent with the local CRM schema.",
+    "license": "Original work by the author (email texts and task design); benchmark semantics reference only"
+  }
+}

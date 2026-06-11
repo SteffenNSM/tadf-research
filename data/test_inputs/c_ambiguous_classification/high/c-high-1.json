@@ -1,0 +1,19 @@
+{
+  "id": "c-high-1",
+  "archetype": "C",
+  "difficulty": "high",
+  "sub_class": "near_duplicate",
+  "instruction": "Route this email to the correct support category.",
+  "email": {
+    "sender": "h.bryant@summitline.example",
+    "subject": "Friday's seat addition — invoice rate",
+    "body": "Last Friday I added 15 new analytics seats through your admin portal. The portal showed the new tier price, I confirmed, and the seats were activated immediately. Today the invoice arrived and it's billed at the old per-seat rate, not the tiered enterprise rate we agreed in last quarter's QBR. Could you adjust the invoice to match the agreed pricing?"
+  },
+  "expected_label": "Billing",
+  "rationale_hint": "Near-duplicate distractor: heavy Account surface ('added 15 seats', 'admin portal'). The requester is NOT asking for a seat-addition change — that already happened correctly. The primary ask is 'adjust the invoice' to reflect agreed pricing → Billing.",
+  "provenance": {
+    "source_benchmark": "CRMArena-Pro Case Routing / Activity Priority Understanding (Huang et al., 2025)",
+    "adaptation": "Author-constructed email texts; task semantics follow the CRMArena-Pro routing/disambiguation pattern. The five-category label set is mirrored from cases.issue_category in experiments/seed_crm.py so the routing decision is consistent with the local CRM schema. High-stratum sub-class: near_duplicate.",
+    "license": "Original work by the author (email texts and task design); benchmark semantics reference only"
+  }
+}

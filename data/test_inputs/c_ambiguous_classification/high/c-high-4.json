@@ -1,0 +1,19 @@
+{
+  "id": "c-high-4",
+  "archetype": "C",
+  "difficulty": "high",
+  "sub_class": "near_duplicate",
+  "instruction": "Route this email to the correct support category.",
+  "email": {
+    "sender": "yusuf.mehta@quasar-labs.example",
+    "subject": "Group-level alert rules?",
+    "body": "Trying to set up alerts for the regional managers as a group. I see the 'Notifications' panel under each individual profile, but I want one rule applied across the whole regional cohort. Is that supported, or do I have to configure each person separately?"
+  },
+  "expected_label": "Product",
+  "rationale_hint": "Near-duplicate distractors: 'individual profiles' and 'regional cohort' read as Account; 'Notifications panel' reads as Technical. The actual ask is 'is this supported, or do I have to do it the long way' — a how-to / feature-capability question → Product. The user has not been blocked by a defect and is not asking for a structural change.",
+  "provenance": {
+    "source_benchmark": "CRMArena-Pro Case Routing / Activity Priority Understanding (Huang et al., 2025)",
+    "adaptation": "Author-constructed email texts; task semantics follow the CRMArena-Pro routing/disambiguation pattern. The five-category label set is mirrored from cases.issue_category in experiments/seed_crm.py so the routing decision is consistent with the local CRM schema. High-stratum sub-class: near_duplicate.",
+    "license": "Original work by the author (email texts and task design); benchmark semantics reference only"
+  }
+}

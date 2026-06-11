@@ -1,0 +1,19 @@
+{
+  "id": "c-low-3",
+  "archetype": "C",
+  "difficulty": "low",
+  "sub_class": null,
+  "instruction": "Route this email to the correct support category.",
+  "email": {
+    "sender": "ops@ridgeway-partners.example",
+    "subject": "Tracking stuck since Monday — order #45821",
+    "body": "Hi, order #45821 has been showing 'in transit' since Monday and the tracking number hasn't updated since. Could you check with the carrier? We need it on site by Friday."
+  },
+  "expected_label": "Shipping",
+  "rationale_hint": "Single-cluster signal: the requester wants information on a physical delivery and asks for carrier follow-up.",
+  "provenance": {
+    "source_benchmark": "CRMArena-Pro Case Routing / Activity Priority Understanding (Huang et al., 2025)",
+    "adaptation": "Author-constructed email texts; task semantics follow the CRMArena-Pro routing/disambiguation pattern. The five-category label set is mirrored from cases.issue_category in experiments/seed_crm.py so the routing decision is consistent with the local CRM schema.",
+    "license": "Original work by the author (email texts and task design); benchmark semantics reference only"
+  }
+}

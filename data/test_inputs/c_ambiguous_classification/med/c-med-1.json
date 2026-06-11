@@ -1,0 +1,19 @@
+{
+  "id": "c-med-1",
+  "archetype": "C",
+  "difficulty": "med",
+  "sub_class": null,
+  "instruction": "Route this email to the correct support category.",
+  "email": {
+    "sender": "remy.ohara@thalia-co.example",
+    "subject": "Error downloading invoice",
+    "body": "I keep hitting a 500 error every time I try to download my latest invoice from the Billing tab. Worked fine last week. Could you look at the page?"
+  },
+  "expected_label": "Technical",
+  "rationale_hint": "Side signal: 'invoice' and 'Billing tab' (Billing surface). Dominant signal: the user is reporting a 500 error on a page that previously worked — defect report → Technical. The billing context describes where the bug appears, not what the user wants resolved.",
+  "provenance": {
+    "source_benchmark": "CRMArena-Pro Case Routing / Activity Priority Understanding (Huang et al., 2025)",
+    "adaptation": "Author-constructed email texts; task semantics follow the CRMArena-Pro routing/disambiguation pattern. The five-category label set is mirrored from cases.issue_category in experiments/seed_crm.py so the routing decision is consistent with the local CRM schema.",
+    "license": "Original work by the author (email texts and task design); benchmark semantics reference only"
+  }
+}

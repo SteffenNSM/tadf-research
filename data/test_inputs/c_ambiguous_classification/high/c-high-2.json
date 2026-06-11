@@ -1,0 +1,19 @@
+{
+  "id": "c-high-2",
+  "archetype": "C",
+  "difficulty": "high",
+  "sub_class": "buried_under_compliment",
+  "instruction": "Route this email to the correct support category.",
+  "email": {
+    "sender": "ananya@beacon-partners.example",
+    "subject": "Loving the new dashboard — one quick thing",
+    "body": "Big fan of the new dashboard layout — feels way cleaner than before. Quick thing though: every time I try to export the Q3 numbers to CSV, the download starts and I end up with a 0-byte file. Worked fine before the rollout. Could one of the engineers take a look?"
+  },
+  "expected_label": "Technical",
+  "rationale_hint": "Buried-core distractor: opens with strong product praise that looks like Product feedback. The actual ask is at the bottom — a defect report on the CSV export feature, with a regression marker ('worked fine before the rollout'). The product compliment is social framing; the request is to fix a bug → Technical.",
+  "provenance": {
+    "source_benchmark": "CRMArena-Pro Case Routing / Activity Priority Understanding (Huang et al., 2025)",
+    "adaptation": "Author-constructed email texts; task semantics follow the CRMArena-Pro routing/disambiguation pattern. The five-category label set is mirrored from cases.issue_category in experiments/seed_crm.py so the routing decision is consistent with the local CRM schema. High-stratum sub-class: buried_under_compliment.",
+    "license": "Original work by the author (email texts and task design); benchmark semantics reference only"
+  }
+}

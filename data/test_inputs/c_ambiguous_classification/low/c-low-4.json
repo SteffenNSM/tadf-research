@@ -1,0 +1,19 @@
+{
+  "id": "c-low-4",
+  "archetype": "C",
+  "difficulty": "low",
+  "sub_class": null,
+  "instruction": "Route this email to the correct support category.",
+  "email": {
+    "sender": "j.farrell@halberd.example",
+    "subject": "Promote teammate to admin",
+    "body": "Could you change Sarah Klein (sarah.k@halberd.example) to an admin role? She's currently a viewer but needs admin access to manage our new project workspace."
+  },
+  "expected_label": "Account",
+  "rationale_hint": "Single-cluster signal: the requester is asking for a role change on a teammate, which is an account-level structural change.",
+  "provenance": {
+    "source_benchmark": "CRMArena-Pro Case Routing / Activity Priority Understanding (Huang et al., 2025)",
+    "adaptation": "Author-constructed email texts; task semantics follow the CRMArena-Pro routing/disambiguation pattern. The five-category label set is mirrored from cases.issue_category in experiments/seed_crm.py so the routing decision is consistent with the local CRM schema.",
+    "license": "Original work by the author (email texts and task design); benchmark semantics reference only"
+  }
+}

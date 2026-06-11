@@ -1,0 +1,19 @@
+{
+  "id": "c-high-3",
+  "archetype": "C",
+  "difficulty": "high",
+  "sub_class": "paraphrase_no_keywords",
+  "instruction": "Route this email to the correct support category.",
+  "email": {
+    "sender": "d.morley@parkwest.example",
+    "subject": "We've grown — need to extend our setup",
+    "body": "We've grown a lot this quarter and the original setup from when we onboarded a year ago doesn't quite fit anymore. I'd like to bring our European office team into the account and make sure the regional split shows up properly in our views. Who do I talk to about extending what we have?"
+  },
+  "expected_label": "Account",
+  "rationale_hint": "Paraphrase without keywords: no occurrence of 'users', 'seats', 'permissions', 'roles', or 'team members'. The requester is describing organic growth and asking to bring an additional team into the account with structural changes (regional split). That is an account-level expansion → Account.",
+  "provenance": {
+    "source_benchmark": "CRMArena-Pro Case Routing / Activity Priority Understanding (Huang et al., 2025)",
+    "adaptation": "Author-constructed email texts; task semantics follow the CRMArena-Pro routing/disambiguation pattern. The five-category label set is mirrored from cases.issue_category in experiments/seed_crm.py so the routing decision is consistent with the local CRM schema. High-stratum sub-class: paraphrase_no_keywords.",
+    "license": "Original work by the author (email texts and task design); benchmark semantics reference only"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "c-med-4",
+  "archetype": "C",
+  "difficulty": "med",
+  "sub_class": null,
+  "instruction": "Route this email to the correct support category.",
+  "email": {
+    "sender": "cfo@arclight.example",
+    "subject": "Renewal invoice — amount mismatch",
+    "body": "Quick follow-up on our renewal. The new contract total shows our enterprise discount applied as 10%, but the signed proposal had it at 15%. Could the team re-check the invoice math and send a corrected version?"
+  },
+  "expected_label": "Billing",
+  "rationale_hint": "Side signal: 'renewal' and 'contract' (Account/contract-adjacent surface). Dominant signal: the requester is asking for an invoice correction tied to a specific discount calculation — the ask is about money on an invoice → Billing.",
+  "provenance": {
+    "source_benchmark": "CRMArena-Pro Case Routing / Activity Priority Understanding (Huang et al., 2025)",
+    "adaptation": "Author-constructed email texts; task semantics follow the CRMArena-Pro routing/disambiguation pattern. The five-category label set is mirrored from cases.issue_category in experiments/seed_crm.py so the routing decision is consistent with the local CRM schema.",
+    "license": "Original work by the author (email texts and task design); benchmark semantics reference only"
+  }
+}

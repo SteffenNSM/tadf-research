@@ -1,0 +1,19 @@
+{
+  "id": "c-med-3",
+  "archetype": "C",
+  "difficulty": "med",
+  "sub_class": null,
+  "instruction": "Route this email to the correct support category.",
+  "email": {
+    "sender": "denise.k@harborstone.example",
+    "subject": "Bulk export panel — where is it?",
+    "body": "I'm trying to find the bulk export feature — the docs reference a 'bulk operations' panel under Settings, but I don't see it in our admin view. Is this a permissions thing or did the feature move?"
+  },
+  "expected_label": "Product",
+  "rationale_hint": "Side signal: 'permissions thing' (Account-adjacent). Dominant signal: a how-to / 'where is this feature' question. The user is asking about product behaviour, not requesting an account change.",
+  "provenance": {
+    "source_benchmark": "CRMArena-Pro Case Routing / Activity Priority Understanding (Huang et al., 2025)",
+    "adaptation": "Author-constructed email texts; task semantics follow the CRMArena-Pro routing/disambiguation pattern. The five-category label set is mirrored from cases.issue_category in experiments/seed_crm.py so the routing decision is consistent with the local CRM schema.",
+    "license": "Original work by the author (email texts and task design); benchmark semantics reference only"
+  }
+}

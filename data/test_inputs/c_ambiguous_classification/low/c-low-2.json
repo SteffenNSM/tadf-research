@@ -1,0 +1,19 @@
+{
+  "id": "c-low-2",
+  "archetype": "C",
+  "difficulty": "low",
+  "sub_class": null,
+  "instruction": "Route this email to the correct support category.",
+  "email": {
+    "sender": "lia.chen@bluespruce.example",
+    "subject": "Reporting module crashes on open",
+    "body": "The reporting module crashes every single time I try to open it. Started this morning around 9 AM. Browser console shows a 500 error. Could you look into it?"
+  },
+  "expected_label": "Technical",
+  "rationale_hint": "Single-cluster signal: the requester is reporting a defect (crash + 500 error) and expecting it to be fixed.",
+  "provenance": {
+    "source_benchmark": "CRMArena-Pro Case Routing / Activity Priority Understanding (Huang et al., 2025)",
+    "adaptation": "Author-constructed email texts; task semantics follow the CRMArena-Pro routing/disambiguation pattern. The five-category label set is mirrored from cases.issue_category in experiments/seed_crm.py so the routing decision is consistent with the local CRM schema.",
+    "license": "Original work by the author (email texts and task design); benchmark semantics reference only"
+  }
+}

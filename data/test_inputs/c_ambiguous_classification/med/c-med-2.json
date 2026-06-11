@@ -1,0 +1,19 @@
+{
+  "id": "c-med-2",
+  "archetype": "C",
+  "difficulty": "med",
+  "sub_class": null,
+  "instruction": "Route this email to the correct support category.",
+  "email": {
+    "sender": "ops-team@northwind.example",
+    "subject": "Onboarding 3 more users",
+    "body": "We're adding three more team members to our plan. Their emails are listed below. Please assign them to the Analytics group with the same role Sarah K. got last week. We ran into a few permission issues during Sarah's onboarding so please make sure access is set correctly from the start.\n\nnew.starter1@northwind.example\nnew.starter2@northwind.example\nnew.starter3@northwind.example"
+  },
+  "expected_label": "Account",
+  "rationale_hint": "Side signal: 'permission issues' during a previous onboarding (Technical-adjacent). Dominant signal: the requester is asking for three new seats to be added with role assignment — an account-level operational change. The mention of past issues is context, not the ask.",
+  "provenance": {
+    "source_benchmark": "CRMArena-Pro Case Routing / Activity Priority Understanding (Huang et al., 2025)",
+    "adaptation": "Author-constructed email texts; task semantics follow the CRMArena-Pro routing/disambiguation pattern. The five-category label set is mirrored from cases.issue_category in experiments/seed_crm.py so the routing decision is consistent with the local CRM schema.",
+    "license": "Original work by the author (email texts and task design); benchmark semantics reference only"
+  }
+}
