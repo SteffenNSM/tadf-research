@@ -112,6 +112,9 @@ def main() -> None:
                     "iteration_overflow": overflow,
                     "n_steps": rationale.get("n_steps", 0),
                     "score_rationale": rationale,
+                    # Full plan persisted for failure forensics (IT-024):
+                    # distinguishes read-stage under-fetch from mis-resolution.
+                    "plan_steps": [s.model_dump() for s in plan.steps] if plan else None,
                     **rec,
                 })
                 print(f"{inst['id']:11} {name:9} {str(ok):7} {rationale.get('n_steps', 0):>5} "

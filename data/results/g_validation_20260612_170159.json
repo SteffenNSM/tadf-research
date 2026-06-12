@@ -1,0 +1,371 @@
+{
+  "timestamp": "20260612_170159",
+  "runs": [
+    {
+      "instance": "g-low-1",
+      "difficulty": "low",
+      "sub_class": "close_notify",
+      "paradigm": "workflow",
+      "optimal_length": 3,
+      "correct": false,
+      "plan_parse_ok": true,
+      "iteration_overflow": false,
+      "n_steps": 2,
+      "score_rationale": {
+        "plan_parsed": true,
+        "n_steps": 2,
+        "sim_valid": true,
+        "failed_step": null,
+        "fail_reason": null,
+        "goal_breakdown": {
+          "cases_closed": true,
+          "case_fields": true,
+          "emails": false,
+          "events": true,
+          "no_other_changes": true
+        }
+      },
+      "llm_calls": 2,
+      "input_tokens": 1899,
+      "output_tokens": 201,
+      "total_tokens": 2100,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 269416.597720379
+        },
+        {
+          "tool": "db_read",
+          "t": 269416.612658693
+        }
+      ],
+      "latency_s": 6.91596309497254,
+      "errors": []
+    },
+    {
+      "instance": "g-low-1",
+      "difficulty": "low",
+      "sub_class": "close_notify",
+      "paradigm": "agent",
+      "optimal_length": 3,
+      "correct": true,
+      "plan_parse_ok": true,
+      "iteration_overflow": false,
+      "n_steps": 3,
+      "score_rationale": {
+        "plan_parsed": true,
+        "n_steps": 3,
+        "sim_valid": true,
+        "failed_step": null,
+        "fail_reason": null,
+        "goal_breakdown": {
+          "cases_closed": true,
+          "case_fields": true,
+          "emails": true,
+          "events": true,
+          "no_other_changes": true
+        }
+      },
+      "llm_calls": 3,
+      "input_tokens": 3716,
+      "output_tokens": 221,
+      "total_tokens": 3937,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 269421.130930361
+        },
+        {
+          "tool": "db_read",
+          "t": 269423.178777964
+        }
+      ],
+      "latency_s": 6.683879595017061,
+      "errors": []
+    },
+    {
+      "instance": "g-med-1",
+      "difficulty": "med",
+      "sub_class": "account_sweep",
+      "paradigm": "workflow",
+      "optimal_length": 7,
+      "correct": true,
+      "plan_parse_ok": true,
+      "iteration_overflow": false,
+      "n_steps": 7,
+      "score_rationale": {
+        "plan_parsed": true,
+        "n_steps": 7,
+        "sim_valid": true,
+        "failed_step": null,
+        "fail_reason": null,
+        "goal_breakdown": {
+          "cases_closed": true,
+          "emails": true,
+          "events": true,
+          "closes_before_emails": true,
+          "no_other_changes": true
+        }
+      },
+      "llm_calls": 2,
+      "input_tokens": 2317,
+      "output_tokens": 583,
+      "total_tokens": 2900,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 269429.991488148
+        },
+        {
+          "tool": "db_read",
+          "t": 269429.992747237
+        },
+        {
+          "tool": "db_read",
+          "t": 269429.993830947
+        },
+        {
+          "tool": "db_read",
+          "t": 269429.996028894
+        },
+        {
+          "tool": "db_read",
+          "t": 269429.997429343
+        }
+      ],
+      "latency_s": 12.046280306996778,
+      "errors": []
+    },
+    {
+      "instance": "g-med-1",
+      "difficulty": "med",
+      "sub_class": "account_sweep",
+      "paradigm": "agent",
+      "optimal_length": 7,
+      "correct": true,
+      "plan_parse_ok": true,
+      "iteration_overflow": false,
+      "n_steps": 7,
+      "score_rationale": {
+        "plan_parsed": true,
+        "n_steps": 7,
+        "sim_valid": true,
+        "failed_step": null,
+        "fail_reason": null,
+        "goal_breakdown": {
+          "cases_closed": true,
+          "emails": true,
+          "events": true,
+          "closes_before_emails": true,
+          "no_other_changes": true
+        }
+      },
+      "llm_calls": 2,
+      "input_tokens": 2817,
+      "output_tokens": 540,
+      "total_tokens": 3357,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 269440.834044973
+        },
+        {
+          "tool": "db_read",
+          "t": 269440.835476786
+        },
+        {
+          "tool": "db_read",
+          "t": 269440.837128874
+        },
+        {
+          "tool": "db_read",
+          "t": 269440.839215425
+        },
+        {
+          "tool": "db_read",
+          "t": 269440.84050208
+        }
+      ],
+      "latency_s": 8.253484860993922,
+      "errors": []
+    },
+    {
+      "instance": "g-high-1",
+      "difficulty": "high",
+      "sub_class": "two_account_sweep",
+      "paradigm": "workflow",
+      "optimal_length": 18,
+      "correct": true,
+      "plan_parse_ok": true,
+      "iteration_overflow": false,
+      "n_steps": 18,
+      "score_rationale": {
+        "plan_parsed": true,
+        "n_steps": 18,
+        "sim_valid": true,
+        "failed_step": null,
+        "fail_reason": null,
+        "goal_breakdown": {
+          "cases_closed": true,
+          "opp_fields": true,
+          "emails": true,
+          "events": true,
+          "closes_before_emails": true,
+          "no_other_changes": true
+        }
+      },
+      "llm_calls": 2,
+      "input_tokens": 3172,
+      "output_tokens": 1347,
+      "total_tokens": 4519,
+      "tool_call_count": 13,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 269451.065576394
+        },
+        {
+          "tool": "db_read",
+          "t": 269451.066838735
+        },
+        {
+          "tool": "db_read",
+          "t": 269451.067926161
+        },
+        {
+          "tool": "db_read",
+          "t": 269451.068888097
+        },
+        {
+          "tool": "db_read",
+          "t": 269451.070918153
+        },
+        {
+          "tool": "db_read",
+          "t": 269451.072075883
+        },
+        {
+          "tool": "db_read",
+          "t": 269451.073029245
+        },
+        {
+          "tool": "db_read",
+          "t": 269451.073960696
+        },
+        {
+          "tool": "db_read",
+          "t": 269451.074896643
+        },
+        {
+          "tool": "db_read",
+          "t": 269451.075826649
+        },
+        {
+          "tool": "db_read",
+          "t": 269451.076754502
+        },
+        {
+          "tool": "db_read",
+          "t": 269451.078602647
+        },
+        {
+          "tool": "db_read",
+          "t": 269451.079711887
+        }
+      ],
+      "latency_s": 19.041003710997757,
+      "errors": []
+    },
+    {
+      "instance": "g-high-1",
+      "difficulty": "high",
+      "sub_class": "two_account_sweep",
+      "paradigm": "agent",
+      "optimal_length": 18,
+      "correct": true,
+      "plan_parse_ok": true,
+      "iteration_overflow": false,
+      "n_steps": 18,
+      "score_rationale": {
+        "plan_parsed": true,
+        "n_steps": 18,
+        "sim_valid": true,
+        "failed_step": null,
+        "fail_reason": null,
+        "goal_breakdown": {
+          "cases_closed": true,
+          "opp_fields": true,
+          "emails": true,
+          "events": true,
+          "closes_before_emails": true,
+          "no_other_changes": true
+        }
+      },
+      "llm_calls": 2,
+      "input_tokens": 3667,
+      "output_tokens": 1241,
+      "total_tokens": 4908,
+      "tool_call_count": 13,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 269469.875008103
+        },
+        {
+          "tool": "db_read",
+          "t": 269469.876409019
+        },
+        {
+          "tool": "db_read",
+          "t": 269469.877929387
+        },
+        {
+          "tool": "db_read",
+          "t": 269469.880669618
+        },
+        {
+          "tool": "db_read",
+          "t": 269469.881608749
+        },
+        {
+          "tool": "db_read",
+          "t": 269469.882393276
+        },
+        {
+          "tool": "db_read",
+          "t": 269469.884222451
+        },
+        {
+          "tool": "db_read",
+          "t": 269469.885036381
+        },
+        {
+          "tool": "db_read",
+          "t": 269469.88593993
+        },
+        {
+          "tool": "db_read",
+          "t": 269469.887781814
+        },
+        {
+          "tool": "db_read",
+          "t": 269469.889400745
+        },
+        {
+          "tool": "db_read",
+          "t": 269469.891410935
+        },
+        {
+          "tool": "db_read",
+          "t": 269469.892251684
+        }
+      ],
+      "latency_s": 16.496822722023353,
+      "errors": []
+    }
+  ]
+}
