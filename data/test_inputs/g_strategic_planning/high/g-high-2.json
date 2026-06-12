@@ -1,0 +1,78 @@
+{
+  "id": "g-high-2",
+  "archetype": "G",
+  "difficulty": "high",
+  "sub_class": "capacity_rebalance",
+  "instruction": "Plan the rebalancing of agent 5's six open cases (31, 32, 53, 78, 93, 98): reassign every one to one of agents 2, 6 or 8, with AT MOST two cases per receiving agent, and increment each case's transfer_count by exactly 1 in the same update. Email the primary contact of each case's account with subject 'Case <id> reassigned' and a brief body. Email each receiving agent exactly once with subject 'Cases reassigned to you'. Finish with an event named 'Rebalance review' on 2026-07-03 with agent 5 as attendee.",
+  "goal": {
+    "cases_reassigned": [
+      31,
+      32,
+      53,
+      78,
+      93,
+      98
+    ],
+    "tc_incremented": [
+      31,
+      32,
+      53,
+      78,
+      93,
+      98
+    ],
+    "agent_capacity": {
+      "targets": [
+        2,
+        6,
+        8
+      ],
+      "max_new": 2
+    },
+    "emails": [
+      {
+        "recipient": "contact023@example.com",
+        "subject": "Case 31 reassigned"
+      },
+      {
+        "recipient": "contact039@example.com",
+        "subject": "Case 32 reassigned"
+      },
+      {
+        "recipient": "contact015@example.com",
+        "subject": "Case 53 reassigned"
+      },
+      {
+        "recipient": "contact036@example.com",
+        "subject": "Case 78 reassigned"
+      },
+      {
+        "recipient": "contact040@example.com",
+        "subject": "Case 93 reassigned"
+      },
+      {
+        "recipient": "contact015@example.com",
+        "subject": "Case 98 reassigned"
+      }
+    ],
+    "emails_one_per_new_owner": {
+      "subject": "Cases reassigned to you"
+    },
+    "events": [
+      {
+        "name": "Rebalance review",
+        "attendees_contain": [
+          "agent05@atlas.com"
+        ]
+      }
+    ],
+    "no_other_changes": true
+  },
+  "optimal_length": 16,
+  "rationale_hint": "Six cases over three targets at capacity 2 forces an exact 2/2/2 split; transfer_count increments require reading the current values (31->5, 32->3, 53->2, 78->4, 93->1, 98->4); six contact emails plus exactly one email per receiving agent.",
+  "provenance": {
+    "source_benchmark": "PlanBench (Valmeekam et al., 2023); FlowBench plan-generation variant (Xiao et al., 2024); WorkArena L2 compositional (Boisvert et al., 2024)",
+    "adaptation": "Author-constructed scenario over the local CRM seed; mechanical plan validation, plan-length difficulty, and temperature 0 follow PlanBench; plan-generation framing follows FlowBench and WorkArena L2. No benchmark text or data is reproduced. Sub-class: capacity_rebalance.",
+    "license": "Original work by the author (scenarios, goal specs, action doc); benchmark semantics reference only"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "id": "g-med-5",
+  "archetype": "G",
+  "difficulty": "med",
+  "sub_class": "blocked_in_sweep",
+  "instruction": "Plan the resolution of account 10's open cases 75, 110 and 47, recording a closure timestamp for every one and minding each case's transfer history when choosing the closing actions. After all closes, email the account's primary contact exactly once with subject 'All account 10 cases resolved', and email the owning agent of case 47 with subject 'Case 47 closed after review' (brief bodies).",
+  "goal": {
+    "cases_closed": [
+      75,
+      110,
+      47
+    ],
+    "emails": [
+      {
+        "recipient": "contact018@example.com",
+        "subject": "All account 10 cases resolved"
+      },
+      {
+        "recipient": "agent01@atlas.com",
+        "subject": "Case 47 closed after review"
+      }
+    ],
+    "events": [],
+    "closes_before_emails": true,
+    "no_other_changes": true
+  },
+  "optimal_length": 5,
+  "rationale_hint": "Case 47 has transfer_count 4 (db_update path); 75 and 110 are closable. Owning agent of case 47 is agent 1. Exactly two emails, after all closes.",
+  "provenance": {
+    "source_benchmark": "PlanBench (Valmeekam et al., 2023); FlowBench plan-generation variant (Xiao et al., 2024); WorkArena L2 compositional (Boisvert et al., 2024)",
+    "adaptation": "Author-constructed scenario over the local CRM seed; mechanical plan validation, plan-length difficulty, and temperature 0 follow PlanBench; plan-generation framing follows FlowBench and WorkArena L2. No benchmark text or data is reproduced. Sub-class: blocked_in_sweep.",
+    "license": "Original work by the author (scenarios, goal specs, action doc); benchmark semantics reference only"
+  }
+}

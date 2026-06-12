@@ -1,0 +1,38 @@
+{
+  "id": "g-low-5",
+  "archetype": "G",
+  "difficulty": "low",
+  "sub_class": "kickoff",
+  "instruction": "Plan the kickoff for account 6: schedule an event named 'Kickoff Account 6' on 2026-06-22 with agent 7 and the account's primary contact as attendees, email that contact with subject 'Kickoff scheduled' and a brief body, and raise the priority of account 6's open case 21 to 'High'.",
+  "goal": {
+    "case_fields": {
+      "21": {
+        "priority": "High",
+        "status": "Open"
+      }
+    },
+    "emails": [
+      {
+        "recipient": "contact012@example.com",
+        "subject": "Kickoff scheduled"
+      }
+    ],
+    "events": [
+      {
+        "name": "Kickoff Account 6",
+        "attendees_contain": [
+          "agent07@atlas.com",
+          "contact012@example.com"
+        ]
+      }
+    ],
+    "no_other_changes": true
+  },
+  "optimal_length": 3,
+  "rationale_hint": "Primary contact of account 6 must be resolved via the lowest-contact-id convention.",
+  "provenance": {
+    "source_benchmark": "PlanBench (Valmeekam et al., 2023); FlowBench plan-generation variant (Xiao et al., 2024); WorkArena L2 compositional (Boisvert et al., 2024)",
+    "adaptation": "Author-constructed scenario over the local CRM seed; mechanical plan validation, plan-length difficulty, and temperature 0 follow PlanBench; plan-generation framing follows FlowBench and WorkArena L2. No benchmark text or data is reproduced. Sub-class: kickoff.",
+    "license": "Original work by the author (scenarios, goal specs, action doc); benchmark semantics reference only"
+  }
+}

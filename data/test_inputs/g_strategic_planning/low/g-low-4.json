@@ -1,0 +1,37 @@
+{
+  "id": "g-low-4",
+  "archetype": "G",
+  "difficulty": "low",
+  "sub_class": "opportunity_win",
+  "instruction": "Plan the win booking of opportunity 3: set its stage to 'Closed Won' and is_won to true in one update, email the primary contact of its account with subject 'Opportunity 3 won' and a brief body, and schedule an event named 'Win review Account 16' on 2026-06-26 with agent 7 as attendee.",
+  "goal": {
+    "opp_fields": {
+      "3": {
+        "stage": "Closed Won",
+        "is_won": true
+      }
+    },
+    "emails": [
+      {
+        "recipient": "contact033@example.com",
+        "subject": "Opportunity 3 won"
+      }
+    ],
+    "events": [
+      {
+        "name": "Win review Account 16",
+        "attendees_contain": [
+          "agent07@atlas.com"
+        ]
+      }
+    ],
+    "no_other_changes": true
+  },
+  "optimal_length": 3,
+  "rationale_hint": "Opportunity 3 belongs to account 16; both fields in one db_update.",
+  "provenance": {
+    "source_benchmark": "PlanBench (Valmeekam et al., 2023); FlowBench plan-generation variant (Xiao et al., 2024); WorkArena L2 compositional (Boisvert et al., 2024)",
+    "adaptation": "Author-constructed scenario over the local CRM seed; mechanical plan validation, plan-length difficulty, and temperature 0 follow PlanBench; plan-generation framing follows FlowBench and WorkArena L2. No benchmark text or data is reproduced. Sub-class: opportunity_win.",
+    "license": "Original work by the author (scenarios, goal specs, action doc); benchmark semantics reference only"
+  }
+}

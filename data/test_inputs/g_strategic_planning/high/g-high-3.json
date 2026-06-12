@@ -1,0 +1,72 @@
+{
+  "id": "g-high-3",
+  "archetype": "G",
+  "difficulty": "high",
+  "sub_class": "mixed_discipline",
+  "instruction": "Plan the dual-account consolidation: close account 15's open cases 68, 116 and 120 and email the account's primary contact once per closed case with subject 'Case <id> closed'. Close account 18's open cases 30 and 89 and email that account's primary contact exactly once with subject 'Account 18 cases resolved'. Email the owning agent of each account-18 case with subject 'Handover complete' (one email per case). Move opportunities 10 and 13 to stage 'Proposal'. Schedule two events: 'Account 15 phase 2 kickoff' on 2026-07-06 with account 15's primary contact, and 'Account 18 retro' on 2026-07-07 with agent 4 as attendee. All emails use brief bodies.",
+  "goal": {
+    "cases_closed": [
+      68,
+      116,
+      120,
+      30,
+      89
+    ],
+    "emails": [
+      {
+        "recipient": "contact032@example.com",
+        "subject": "Case 68 closed"
+      },
+      {
+        "recipient": "contact032@example.com",
+        "subject": "Case 116 closed"
+      },
+      {
+        "recipient": "contact032@example.com",
+        "subject": "Case 120 closed"
+      },
+      {
+        "recipient": "contact039@example.com",
+        "subject": "Account 18 cases resolved"
+      },
+      {
+        "recipient": "agent04@atlas.com",
+        "subject": "Handover complete"
+      },
+      {
+        "recipient": "agent03@atlas.com",
+        "subject": "Handover complete"
+      }
+    ],
+    "opp_fields": {
+      "10": {
+        "stage": "Proposal"
+      },
+      "13": {
+        "stage": "Proposal"
+      }
+    },
+    "events": [
+      {
+        "name": "Account 15 phase 2 kickoff",
+        "attendees_contain": [
+          "contact032@example.com"
+        ]
+      },
+      {
+        "name": "Account 18 retro",
+        "attendees_contain": [
+          "agent04@atlas.com"
+        ]
+      }
+    ],
+    "no_other_changes": true
+  },
+  "optimal_length": 15,
+  "rationale_hint": "Mixed notification discipline: per-case emails for account 15, exactly one summary for account 18, plus per-case agent handovers (case 30 -> agent 4, case 89 -> agent 3, must be read). All five cases closable.",
+  "provenance": {
+    "source_benchmark": "PlanBench (Valmeekam et al., 2023); FlowBench plan-generation variant (Xiao et al., 2024); WorkArena L2 compositional (Boisvert et al., 2024)",
+    "adaptation": "Author-constructed scenario over the local CRM seed; mechanical plan validation, plan-length difficulty, and temperature 0 follow PlanBench; plan-generation framing follows FlowBench and WorkArena L2. No benchmark text or data is reproduced. Sub-class: mixed_discipline.",
+    "license": "Original work by the author (scenarios, goal specs, action doc); benchmark semantics reference only"
+  }
+}

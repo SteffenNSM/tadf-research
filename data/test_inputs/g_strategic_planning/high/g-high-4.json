@@ -1,0 +1,101 @@
+{
+  "id": "g-high-4",
+  "archetype": "G",
+  "difficulty": "high",
+  "sub_class": "escalated_at_scale",
+  "instruction": "Plan the resolution of the five escalated cases 7, 13, 31, 45 and 47. Every one of them has a transfer history that blocks the standard closing action — choose the closing path accordingly, record a closure timestamp, and set each case's priority to 'Low' in the same update. After all closes, email the primary contact of each case's account with subject 'Case <id> closed after review', and email each case's owning agent with subject 'Escalated case <id> resolved' (brief bodies). Move opportunities 12 and 26 to stage 'Proposal'. Finish with an event named 'Escalation retrospective' on 2026-07-08 with agents 1 and 2 as attendees.",
+  "goal": {
+    "cases_closed": [
+      7,
+      13,
+      31,
+      45,
+      47
+    ],
+    "case_fields": {
+      "7": {
+        "priority": "Low"
+      },
+      "13": {
+        "priority": "Low"
+      },
+      "31": {
+        "priority": "Low"
+      },
+      "45": {
+        "priority": "Low"
+      },
+      "47": {
+        "priority": "Low"
+      }
+    },
+    "emails": [
+      {
+        "recipient": "contact036@example.com",
+        "subject": "Case 7 closed after review"
+      },
+      {
+        "recipient": "contact005@example.com",
+        "subject": "Case 13 closed after review"
+      },
+      {
+        "recipient": "contact023@example.com",
+        "subject": "Case 31 closed after review"
+      },
+      {
+        "recipient": "contact007@example.com",
+        "subject": "Case 45 closed after review"
+      },
+      {
+        "recipient": "contact018@example.com",
+        "subject": "Case 47 closed after review"
+      },
+      {
+        "recipient": "agent02@atlas.com",
+        "subject": "Escalated case 7 resolved"
+      },
+      {
+        "recipient": "agent06@atlas.com",
+        "subject": "Escalated case 13 resolved"
+      },
+      {
+        "recipient": "agent05@atlas.com",
+        "subject": "Escalated case 31 resolved"
+      },
+      {
+        "recipient": "agent10@atlas.com",
+        "subject": "Escalated case 45 resolved"
+      },
+      {
+        "recipient": "agent01@atlas.com",
+        "subject": "Escalated case 47 resolved"
+      }
+    ],
+    "opp_fields": {
+      "12": {
+        "stage": "Proposal"
+      },
+      "26": {
+        "stage": "Proposal"
+      }
+    },
+    "events": [
+      {
+        "name": "Escalation retrospective",
+        "attendees_contain": [
+          "agent01@atlas.com",
+          "agent02@atlas.com"
+        ]
+      }
+    ],
+    "closes_before_emails": true,
+    "no_other_changes": true
+  },
+  "optimal_length": 18,
+  "rationale_hint": "All five cases have transfer_count > 3: attempt_close_case is rejected for every one; the optimal path bundles status, closed_at, and priority into one db_update per case. Ten emails with per-case account and agent resolution, two opportunity moves, one event.",
+  "provenance": {
+    "source_benchmark": "PlanBench (Valmeekam et al., 2023); FlowBench plan-generation variant (Xiao et al., 2024); WorkArena L2 compositional (Boisvert et al., 2024)",
+    "adaptation": "Author-constructed scenario over the local CRM seed; mechanical plan validation, plan-length difficulty, and temperature 0 follow PlanBench; plan-generation framing follows FlowBench and WorkArena L2. No benchmark text or data is reproduced. Sub-class: escalated_at_scale.",
+    "license": "Original work by the author (scenarios, goal specs, action doc); benchmark semantics reference only"
+  }
+}

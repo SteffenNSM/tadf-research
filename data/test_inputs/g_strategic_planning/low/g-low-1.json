@@ -1,0 +1,32 @@
+{
+  "id": "g-low-1",
+  "archetype": "G",
+  "difficulty": "low",
+  "sub_class": "close_notify",
+  "instruction": "Plan the resolution of case 5: close it (resolution summary 'Issue resolved'), set its priority to 'Low' once closed, and notify the primary contact of the case's account by email with subject 'Case 5 closed' and a brief body.",
+  "goal": {
+    "cases_closed": [
+      5
+    ],
+    "case_fields": {
+      "5": {
+        "priority": "Low"
+      }
+    },
+    "emails": [
+      {
+        "recipient": "contact007@example.com",
+        "subject": "Case 5 closed"
+      }
+    ],
+    "events": [],
+    "no_other_changes": true
+  },
+  "optimal_length": 3,
+  "rationale_hint": "Case 5 has transfer_count 2, so attempt_close_case is permitted; priority needs a separate db_update; one notification email to the primary contact of account 4.",
+  "provenance": {
+    "source_benchmark": "PlanBench (Valmeekam et al., 2023); FlowBench plan-generation variant (Xiao et al., 2024); WorkArena L2 compositional (Boisvert et al., 2024)",
+    "adaptation": "Author-constructed scenario over the local CRM seed; mechanical plan validation, plan-length difficulty, and temperature 0 follow PlanBench; plan-generation framing follows FlowBench and WorkArena L2. No benchmark text or data is reproduced. Sub-class: close_notify.",
+    "license": "Original work by the author (scenarios, goal specs, action doc); benchmark semantics reference only"
+  }
+}

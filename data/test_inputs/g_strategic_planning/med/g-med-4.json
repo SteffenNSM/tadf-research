@@ -1,0 +1,43 @@
+{
+  "id": "g-med-4",
+  "archetype": "G",
+  "difficulty": "med",
+  "sub_class": "pipeline_update",
+  "instruction": "Plan the account 8 pipeline review: move opportunities 4 and 17 to stage 'Proposal', close the account's open cases 71 and 98, email the account's primary contact exactly once with subject 'Account 8 update' and a brief body, and finish with an event named 'Pipeline review Account 8' on 2026-07-01 with agent 5 as attendee.",
+  "goal": {
+    "cases_closed": [
+      71,
+      98
+    ],
+    "opp_fields": {
+      "4": {
+        "stage": "Proposal"
+      },
+      "17": {
+        "stage": "Proposal"
+      }
+    },
+    "emails": [
+      {
+        "recipient": "contact015@example.com",
+        "subject": "Account 8 update"
+      }
+    ],
+    "events": [
+      {
+        "name": "Pipeline review Account 8",
+        "attendees_contain": [
+          "agent05@atlas.com"
+        ]
+      }
+    ],
+    "no_other_changes": true
+  },
+  "optimal_length": 6,
+  "rationale_hint": "Exactly one customer email despite two closed cases and two moved opportunities; both cases are closable (transfer_count <= 3).",
+  "provenance": {
+    "source_benchmark": "PlanBench (Valmeekam et al., 2023); FlowBench plan-generation variant (Xiao et al., 2024); WorkArena L2 compositional (Boisvert et al., 2024)",
+    "adaptation": "Author-constructed scenario over the local CRM seed; mechanical plan validation, plan-length difficulty, and temperature 0 follow PlanBench; plan-generation framing follows FlowBench and WorkArena L2. No benchmark text or data is reproduced. Sub-class: pipeline_update.",
+    "license": "Original work by the author (scenarios, goal specs, action doc); benchmark semantics reference only"
+  }
+}

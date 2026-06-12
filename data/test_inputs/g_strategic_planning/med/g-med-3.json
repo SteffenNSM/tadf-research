@@ -1,0 +1,41 @@
+{
+  "id": "g-med-3",
+  "archetype": "G",
+  "difficulty": "med",
+  "sub_class": "mixed_blocked",
+  "instruction": "Plan the closure of agent 5's open cases 31, 32 and 53, recording a closure timestamp for every one and minding each case's transfer history when choosing the closing action. Email the primary contact of each case's account with subject 'Case <id> resolved' and a brief body, and email agent 5 once with subject 'Case load resolved'.",
+  "goal": {
+    "cases_closed": [
+      31,
+      32,
+      53
+    ],
+    "emails": [
+      {
+        "recipient": "contact023@example.com",
+        "subject": "Case 31 resolved"
+      },
+      {
+        "recipient": "contact039@example.com",
+        "subject": "Case 32 resolved"
+      },
+      {
+        "recipient": "contact015@example.com",
+        "subject": "Case 53 resolved"
+      },
+      {
+        "recipient": "agent05@atlas.com",
+        "subject": "Case load resolved"
+      }
+    ],
+    "events": [],
+    "no_other_changes": true
+  },
+  "optimal_length": 7,
+  "rationale_hint": "Case 31 has transfer_count 4 (blocked: db_update path with closed_at); 32 and 53 are closable via attempt_close_case. Account mapping 31->12, 32->18, 53->8 must be read.",
+  "provenance": {
+    "source_benchmark": "PlanBench (Valmeekam et al., 2023); FlowBench plan-generation variant (Xiao et al., 2024); WorkArena L2 compositional (Boisvert et al., 2024)",
+    "adaptation": "Author-constructed scenario over the local CRM seed; mechanical plan validation, plan-length difficulty, and temperature 0 follow PlanBench; plan-generation framing follows FlowBench and WorkArena L2. No benchmark text or data is reproduced. Sub-class: mixed_blocked.",
+    "license": "Original work by the author (scenarios, goal specs, action doc); benchmark semantics reference only"
+  }
+}

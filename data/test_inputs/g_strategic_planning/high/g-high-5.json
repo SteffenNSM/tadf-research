@@ -1,0 +1,81 @@
+{
+  "id": "g-high-5",
+  "archetype": "G",
+  "difficulty": "high",
+  "sub_class": "account_cycle",
+  "instruction": "Plan the full account 16 cycle: close its open cases 16, 54, 81 and 104, setting case 16's priority to 'Low' after its close, and email the account's primary contact once per closed case with subject 'Case <id> closed' (brief bodies, only after all closes). Mark opportunity 3 as won (stage 'Closed Won', is_won true, one update). Email agents 7 and 10 one message each with subject 'Account 16 cycle complete'. Schedule three events: 'Account 16 kickoff EU' on 2026-07-09 with agent 7, 'Account 16 retro' on 2026-07-10 with agent 10, and 'Account 16 exec review' on 2026-07-11 with agent 7 as attendees.",
+  "goal": {
+    "cases_closed": [
+      16,
+      54,
+      81,
+      104
+    ],
+    "case_fields": {
+      "16": {
+        "priority": "Low"
+      }
+    },
+    "opp_fields": {
+      "3": {
+        "stage": "Closed Won",
+        "is_won": true
+      }
+    },
+    "emails": [
+      {
+        "recipient": "contact033@example.com",
+        "subject": "Case 16 closed"
+      },
+      {
+        "recipient": "contact033@example.com",
+        "subject": "Case 54 closed"
+      },
+      {
+        "recipient": "contact033@example.com",
+        "subject": "Case 81 closed"
+      },
+      {
+        "recipient": "contact033@example.com",
+        "subject": "Case 104 closed"
+      },
+      {
+        "recipient": "agent07@atlas.com",
+        "subject": "Account 16 cycle complete"
+      },
+      {
+        "recipient": "agent10@atlas.com",
+        "subject": "Account 16 cycle complete"
+      }
+    ],
+    "events": [
+      {
+        "name": "Account 16 kickoff EU",
+        "attendees_contain": [
+          "agent07@atlas.com"
+        ]
+      },
+      {
+        "name": "Account 16 retro",
+        "attendees_contain": [
+          "agent10@atlas.com"
+        ]
+      },
+      {
+        "name": "Account 16 exec review",
+        "attendees_contain": [
+          "agent07@atlas.com"
+        ]
+      }
+    ],
+    "closes_before_emails": true,
+    "no_other_changes": true
+  },
+  "optimal_length": 15,
+  "rationale_hint": "Four closable cases, one extra priority update on case 16, one bundled opportunity win, six emails, three events — 15 steps with closes-before-emails ordering.",
+  "provenance": {
+    "source_benchmark": "PlanBench (Valmeekam et al., 2023); FlowBench plan-generation variant (Xiao et al., 2024); WorkArena L2 compositional (Boisvert et al., 2024)",
+    "adaptation": "Author-constructed scenario over the local CRM seed; mechanical plan validation, plan-length difficulty, and temperature 0 follow PlanBench; plan-generation framing follows FlowBench and WorkArena L2. No benchmark text or data is reproduced. Sub-class: account_cycle.",
+    "license": "Original work by the author (scenarios, goal specs, action doc); benchmark semantics reference only"
+  }
+}

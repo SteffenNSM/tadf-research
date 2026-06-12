@@ -1,0 +1,35 @@
+{
+  "id": "g-low-3",
+  "archetype": "G",
+  "difficulty": "low",
+  "sub_class": "reassign_handover",
+  "instruction": "Plan the handover of case 8: reassign it to agent 2 and set its priority to 'Medium' in the same update, then email the receiving agent with subject 'Case 8 reassigned' and the previous owning agent with subject 'Case 8 handed over' (brief bodies). Do not close the case.",
+  "goal": {
+    "case_fields": {
+      "8": {
+        "agent_id": 2,
+        "priority": "Medium",
+        "status": "Open"
+      }
+    },
+    "emails": [
+      {
+        "recipient": "agent02@atlas.com",
+        "subject": "Case 8 reassigned"
+      },
+      {
+        "recipient": "agent03@atlas.com",
+        "subject": "Case 8 handed over"
+      }
+    ],
+    "events": [],
+    "no_other_changes": true
+  },
+  "optimal_length": 3,
+  "rationale_hint": "Bundled two-field db_update plus two emails; previous owner is agent 3 (must be read from the case row).",
+  "provenance": {
+    "source_benchmark": "PlanBench (Valmeekam et al., 2023); FlowBench plan-generation variant (Xiao et al., 2024); WorkArena L2 compositional (Boisvert et al., 2024)",
+    "adaptation": "Author-constructed scenario over the local CRM seed; mechanical plan validation, plan-length difficulty, and temperature 0 follow PlanBench; plan-generation framing follows FlowBench and WorkArena L2. No benchmark text or data is reproduced. Sub-class: reassign_handover.",
+    "license": "Original work by the author (scenarios, goal specs, action doc); benchmark semantics reference only"
+  }
+}

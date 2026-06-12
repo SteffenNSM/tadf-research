@@ -1,0 +1,34 @@
+{
+  "id": "g-low-2",
+  "archetype": "G",
+  "difficulty": "low",
+  "sub_class": "blocked_close",
+  "instruction": "Plan the closure of case 7. Mind its transfer history when choosing the closing action, and make sure the closure timestamp is recorded. Notify the primary contact of the case's account by email with subject 'Case 7 closed' and a brief body, and schedule a 30-minute review event named 'Case 7 review' on 2026-06-25 with the case's owning agent as attendee.",
+  "goal": {
+    "cases_closed": [
+      7
+    ],
+    "emails": [
+      {
+        "recipient": "contact036@example.com",
+        "subject": "Case 7 closed"
+      }
+    ],
+    "events": [
+      {
+        "name": "Case 7 review",
+        "attendees_contain": [
+          "agent02@atlas.com"
+        ]
+      }
+    ],
+    "no_other_changes": true
+  },
+  "optimal_length": 3,
+  "rationale_hint": "Case 7 has transfer_count 4 — attempt_close_case is rejected; the plan must use db_update with status AND closed_at. Owning agent is agent 2.",
+  "provenance": {
+    "source_benchmark": "PlanBench (Valmeekam et al., 2023); FlowBench plan-generation variant (Xiao et al., 2024); WorkArena L2 compositional (Boisvert et al., 2024)",
+    "adaptation": "Author-constructed scenario over the local CRM seed; mechanical plan validation, plan-length difficulty, and temperature 0 follow PlanBench; plan-generation framing follows FlowBench and WorkArena L2. No benchmark text or data is reproduced. Sub-class: blocked_close.",
+    "license": "Original work by the author (scenarios, goal specs, action doc); benchmark semantics reference only"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "g-med-2",
+  "archetype": "G",
+  "difficulty": "med",
+  "sub_class": "bulk_reassign",
+  "instruction": "Plan the rebalancing of account 14: reassign its open cases 40, 62, 63 and 118 to agent 8, setting each case's priority to 'Medium' in the same update, then email agent 8 once with subject 'Account 14 cases reassigned' and a brief body, and finish with an event named 'Handover sync' on 2026-06-30 with agent 8 as attendee. Do not close any case.",
+  "goal": {
+    "case_fields": {
+      "40": {
+        "agent_id": 8,
+        "priority": "Medium",
+        "status": "Open"
+      },
+      "62": {
+        "agent_id": 8,
+        "priority": "Medium",
+        "status": "Open"
+      },
+      "63": {
+        "agent_id": 8,
+        "priority": "Medium",
+        "status": "Open"
+      },
+      "118": {
+        "agent_id": 8,
+        "priority": "Medium",
+        "status": "Open"
+      }
+    },
+    "emails": [
+      {
+        "recipient": "agent08@atlas.com",
+        "subject": "Account 14 cases reassigned"
+      }
+    ],
+    "events": [
+      {
+        "name": "Handover sync",
+        "attendees_contain": [
+          "agent08@atlas.com"
+        ]
+      }
+    ],
+    "no_other_changes": true
+  },
+  "optimal_length": 6,
+  "rationale_hint": "Four bundled two-field updates; exactly one email despite four cases (count discipline).",
+  "provenance": {
+    "source_benchmark": "PlanBench (Valmeekam et al., 2023); FlowBench plan-generation variant (Xiao et al., 2024); WorkArena L2 compositional (Boisvert et al., 2024)",
+    "adaptation": "Author-constructed scenario over the local CRM seed; mechanical plan validation, plan-length difficulty, and temperature 0 follow PlanBench; plan-generation framing follows FlowBench and WorkArena L2. No benchmark text or data is reproduced. Sub-class: bulk_reassign.",
+    "license": "Original work by the author (scenarios, goal specs, action doc); benchmark semantics reference only"
+  }
+}
