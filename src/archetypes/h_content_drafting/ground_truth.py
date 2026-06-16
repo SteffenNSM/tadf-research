@@ -82,6 +82,33 @@ def _matches_allowed(value: float, allowed: list[float]) -> bool:
     return False
 
 
+def supported_numbers(allowed: list[float]) -> list[float]:
+    """Arithmetic closure of the table figures: a number is faithful if it is a
+    table value OR derivable from a pair of table values by sum, difference,
+    ratio (as a percentage), or percent change.
+
+    This operationalizes "faithful = traceable to the data by arithmetic" so
+    that legitimate analyst derivations (YoY deltas, growth percentages,
+    totals) are not flagged as fabrications, while figures unrelated to the
+    table remain unmatched. One-step closure over base pairs is sufficient:
+    a per-line growth like (1,240,000-1,100,000)/1,100,000*100 = 12.7% is the
+    percent change of two base values, and the absolute delta 140,000 is their
+    difference.
+    """
+    base = list(dict.fromkeys(allowed))
+    out: set[float] = set(base)
+    for a in base:
+        for b in base:
+            out.add(a + b)
+            out.add(a - b)
+            out.add(abs(a - b))
+            if b != 0:
+                out.add(a / b * 100.0)          # ratio as percentage
+                out.add((a - b) / b * 100.0)    # percent change
+                out.add(abs((a - b) / b * 100.0))
+    return list(out)
+
+
 def _contains_any(text: str, keywords: list[str]) -> bool:
     low = (text or "").lower()
     return any(k.lower() in low for k in keywords)
@@ -119,8 +146,9 @@ def check_compliance(inst: dict, title: str, body: str) -> tuple[bool, float, di
     breakdown["no_placeholder"] = no_placeholder
     checks.append(no_placeholder)
 
-    # faithfulness: every significant number supported by the table/derived set
-    allowed = list(inst.get("allowed_numbers", []))
+    # faithfulness: every significant number supported by the table or
+    # derivable from it by arithmetic (sum/diff/ratio/percent change)
+    allowed = supported_numbers(list(inst.get("allowed_numbers", [])))
     unsupported = [v for v, sig in extract_numbers(body) if sig and not _matches_allowed(v, allowed)]
     breakdown["unsupported_numbers"] = unsupported
     checks.append(not unsupported)

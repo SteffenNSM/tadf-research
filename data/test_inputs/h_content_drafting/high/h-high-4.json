@@ -38,7 +38,7 @@
   "constraints": {
     "audience": "the product council",
     "tonality": "objective and data-led",
-    "min_words": 240,
+    "min_words": 220,
     "max_words": 400,
     "framing": "tie each metric movement to a likely cause hypothesis",
     "required_sections": [

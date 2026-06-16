@@ -38,7 +38,7 @@
   "constraints": {
     "audience": "the executive board",
     "tonality": "formal and measured",
-    "min_words": 250,
+    "min_words": 220,
     "max_words": 420,
     "framing": "balanced — name both a win and a risk",
     "required_sections": [

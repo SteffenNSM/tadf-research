@@ -1,0 +1,35 @@
+{
+  "timestamp": "20260616_105644",
+  "runs": [
+    {
+      "instance": "h-low-1",
+      "paradigm": "workflow",
+      "error": "Connection error."
+    },
+    {
+      "instance": "h-low-1",
+      "paradigm": "agent",
+      "error": "Connection error."
+    },
+    {
+      "instance": "h-med-1",
+      "paradigm": "workflow",
+      "error": "Connection error."
+    },
+    {
+      "instance": "h-med-1",
+      "paradigm": "agent",
+      "error": "Connection error."
+    },
+    {
+      "instance": "h-high-1",
+      "paradigm": "workflow",
+      "error": "Connection error."
+    },
+    {
+      "instance": "h-high-1",
+      "paradigm": "agent",
+      "error": "Connection error."
+    }
+  ]
+}
