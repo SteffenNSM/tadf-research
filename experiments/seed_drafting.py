@@ -162,7 +162,9 @@ INSTANCES: list[dict] = [
         "feedback_rounds": ["Please name the strongest and weakest line explicitly, and add the total Q3 2025 revenue across all lines."],
         "feedback_requirements": [{"round": 1, "desc": "names strongest/weakest + total 2,530,000",
                                    "keywords": ["2,530,000", "2.53 million", "2.53m", "strongest", "weakest"]}],
-        "extra_allowed": [2530000, 2250000, 280000, 2024, 2025, 3],
+        # 320,000 = Core delta (140,000) + Analytics delta (180,000): a legitimate
+        # two-step cross-line aggregate beyond the one-step faithfulness closure.
+        "extra_allowed": [2530000, 2250000, 280000, 320000, 2024, 2025, 3],
         "rationale_hint": "Three required figures + framing; feedback adds total (2,530,000) and strongest/weakest naming.",
     },
     {

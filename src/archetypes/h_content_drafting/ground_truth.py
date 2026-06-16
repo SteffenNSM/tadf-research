@@ -38,40 +38,74 @@ _REL_TOL = 0.01
 _ABS_TOL = 0.5
 
 _PLACEHOLDER_RE = re.compile(r"\[(?:todo|tbd|insert[^\]]*|placeholder|xxx)\]|x{3,}", re.IGNORECASE)
-_NUM_RE = re.compile(r"[-+]?\$?€?£?\d[\d,]*(?:\.\d+)?\s*%?")
+_STRIP = ".,;:!?()[]{}\"'’"
+#: inline magnitude suffixes (attached to the digits, e.g. "9.6M", "10k")
+_INLINE_MAG = {"k": 1e3, "m": 1e6, "mn": 1e6, "mio": 1e6, "bn": 1e9,
+               "million": 1e6, "billion": 1e9, "thousand": 1e3}
+#: standalone magnitude words (the next whitespace token, e.g. "9.6 million")
+_WORD_MAG = {"million": 1e6, "billion": 1e9, "thousand": 1e3, "mn": 1e6, "bn": 1e9, "mio": 1e6}
+_PURE_NUM = re.compile(r"^[-+]?\d[\d,]*(?:\.\d+)?$")
+_INLINE_MAG_RE = re.compile(r"(?i)(k|mn|mio|m|bn|billion|million|thousand)$")
 
 
 def count_words(text: str) -> int:
     return len(re.findall(r"\b[\w'-]+\b", text or ""))
 
 
-def _normalize_number(token: str) -> tuple[float, bool] | None:
-    """Parse a numeric token -> (value, is_significant) or None.
+def _parse_token(tok: str) -> tuple[float, bool, bool] | None:
+    """Parse one whitespace token -> (value, significant, had_inline_magnitude).
 
-    is_significant is False for bare small integers (<= _TRIVIAL_INT_MAX with
-    no %, currency, or decimal marker), which are exempt from faithfulness.
+    Returns None if the token is not a pure numeric claim. Tokens that mix
+    letters with digits other than a recognized magnitude suffix (e.g.
+    identifiers like ``INC-204``, ``INV-7741``, ``Q3``) are rejected, which
+    is what keeps identifiers out of the faithfulness check.
     """
-    raw = token.strip()
+    raw = tok.strip().strip(_STRIP)
     if not raw:
         return None
-    has_pct = "%" in raw
-    has_cur = any(s in raw for s in ("$", "€", "£"))
-    cleaned = raw.replace("$", "").replace("€", "").replace("£", "").replace("%", "").replace(",", "").strip()
-    has_dec = "." in cleaned
+    has_pct = raw.endswith("%")
+    if has_pct:
+        raw = raw[:-1].strip()
+    has_cur = bool(raw[:1] in "$€£")
+    if has_cur:
+        raw = raw[1:].strip()
+    scale = 1.0
+    m = _INLINE_MAG_RE.search(raw)
+    if m and re.search(r"\d", raw[: m.start()]):
+        scale = _INLINE_MAG[m.group(1).lower()]
+        raw = raw[: m.start()].strip()
+    if not _PURE_NUM.match(raw):
+        return None
     try:
-        value = float(cleaned)
+        value = float(raw.replace(",", "")) * scale
     except ValueError:
         return None
-    significant = has_pct or has_cur or has_dec or abs(value) > _TRIVIAL_INT_MAX
-    return value, significant
+    has_dec = "." in raw
+    significant = has_pct or has_cur or scale > 1 or has_dec or abs(value) > _TRIVIAL_INT_MAX
+    return value, significant, scale > 1
 
 
 def extract_numbers(text: str) -> list[tuple[float, bool]]:
+    """Token-based numeric extraction with magnitude scaling and identifier
+    rejection. A bare number followed by a standalone magnitude word
+    ("9.6 million") is scaled by consuming the next token."""
+    tokens = (text or "").split()
     out: list[tuple[float, bool]] = []
-    for m in _NUM_RE.findall(text or ""):
-        parsed = _normalize_number(m)
-        if parsed is not None:
-            out.append(parsed)
+    i = 0
+    while i < len(tokens):
+        parsed = _parse_token(tokens[i])
+        if parsed is None:
+            i += 1
+            continue
+        value, significant, had_mag = parsed
+        if not had_mag and i + 1 < len(tokens):
+            nxt = tokens[i + 1].strip().strip(_STRIP).lower()
+            if nxt in _WORD_MAG:
+                value *= _WORD_MAG[nxt]
+                significant = True
+                i += 1
+        out.append((value, significant))
+        i += 1
     return out
 
 
@@ -97,14 +131,20 @@ def supported_numbers(allowed: list[float]) -> list[float]:
     """
     base = list(dict.fromkeys(allowed))
     out: set[float] = set(base)
+    # One-step closure over the table figures: a number is faithful if it is a
+    # base value or derivable from a pair by sum, difference, ratio (as a
+    # percentage), or percent change. One step keeps the supported set sparse
+    # enough that arbitrary fabrications are still caught; legitimate
+    # multi-line aggregates that need a second step (e.g. the sum of two
+    # per-line deltas) are listed explicitly per instance in extra_allowed.
     for a in base:
         for b in base:
             out.add(a + b)
             out.add(a - b)
             out.add(abs(a - b))
             if b != 0:
-                out.add(a / b * 100.0)          # ratio as percentage
-                out.add((a - b) / b * 100.0)    # percent change
+                out.add(a / b * 100.0)
+                out.add((a - b) / b * 100.0)
                 out.add(abs((a - b) / b * 100.0))
     return list(out)
 
