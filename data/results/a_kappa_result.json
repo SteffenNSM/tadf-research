@@ -1,0 +1,7 @@
+{
+  "n_pairs": 6,
+  "agreement": 1.0,
+  "cohen_kappa": 1.0,
+  "gwet_ac1": 1.0,
+  "note": "Verdict-stratified 20% sample incl. the single judge-incorrect call (a-high-4 workflow). Human vs gpt-5.2 judge: 6/6 agreement, both verdict classes represented. Judge validated; retained for A."
+}
