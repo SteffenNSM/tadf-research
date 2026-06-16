@@ -55,8 +55,9 @@ SOURCE_BENCHMARK = (
     "WorkArena L2 compositional (Boisvert et al., 2024)"
 )
 
-#: Protocol A.6: G is the only archetype at temperature 0.0 (PlanBench
-#: convention — determinism of the step sequence is the correctness target).
+#: Protocol A.6 (IT-030): temperature 0 for all archetypes; for G this is also
+#: the original PlanBench convention (determinism of the step sequence is the
+#: correctness target). Set explicitly here as G's correctness depends on it.
 TEMPERATURE = 0.0
 
 #: Per-difficulty maximum agent step limit (protocol A.6; resolves D-007 for

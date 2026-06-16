@@ -6,8 +6,8 @@ The thesis develops the **Task-Level Architecture Decision Framework (TADF)**: e
 
 ## Design
 
-- **Paradigm comparison:** each archetype is implemented twice (`workflow.py`, `agent.py`) and run against the same task instances (5 per difficulty level: low/med/high).
-- **Model:** `gpt-5.2-2025-12-11`, `reasoning_effort="none"`, temperature 0.2 (0.0 for planning), seed 42.
+- **Paradigm comparison:** each archetype is implemented twice (`workflow.py`, `agent.py`) and run once per paradigm against the same task instances (5 per difficulty level: low/med/high).
+- **Model:** `gpt-5.2-2025-12-11`, `reasoning_effort="none"`, temperature 0.0, seed 42; one run per paradigm (deterministic single-run evaluation, following WorkBench and PlanBench).
 - **Environment:** self-contained SQLite database (`data/crm.db`) rebuilt from a deterministic seed before every run; simulated mail/calendar tools with deterministic synthetic latency (300 ms ± 50 ms); Tavily web search with a per-query disk cache so both paradigms see identical snippets.
 - **Scoring:** outcome-centric post-state predicates (WorkBench-style) for B and F; frozen-prompt LLM judge for A.
 - **Metrics:** TCR/OQS and Token Cost (co-primary); latency, error rate, tool-call count, robustness (secondary).

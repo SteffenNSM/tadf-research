@@ -50,10 +50,10 @@ SOURCE_BENCHMARK = (
     "TheAgentCompany feedback subtasks (Xu et al., 2024)"
 )
 
-#: D-style temperature note: E runs at DEFAULT_TEMPERATURE (0.2) so the
-#: C/D/E ternary classification triad uses consistent decoding settings,
-#: which keeps the within-archetype Token-Cost / correctness comparison
-#: free of a temperature confound.
+#: Temperature 0 for all archetypes (IT-030, deterministic single-run); the
+#: C/D/E ternary classification triad uses identical decoding settings, so the
+#: within-archetype Token-Cost / correctness comparison is free of a
+#: temperature confound.
 TEMPERATURE = DEFAULT_TEMPERATURE
 
 #: Tool whitelist exposed to both paradigms (Phase-2 tool-symmetry

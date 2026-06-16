@@ -44,9 +44,9 @@ SOURCE_BENCHMARK = (
     "TheAgentCompany report drafting (Xu et al., 2024)"
 )
 
-#: H runs at DEFAULT_TEMPERATURE (0.2), consistent with every archetype
-#: except G. Drafting benefits from limited stochasticity and the variance
-#: estimate; the judge runs separately at temperature 0 (see judge.py).
+#: H runs at DEFAULT_TEMPERATURE (0, IT-030), like all archetypes —
+#: deterministic single-run generation; the judge also runs at temperature 0
+#: (see judge.py).
 TEMPERATURE = DEFAULT_TEMPERATURE
 
 #: Per-difficulty maximum agent self-revision turns (protocol A.6 step-limit

@@ -51,11 +51,10 @@ SOURCE_BENCHMARK = (
     "FlowBench rule-following (Xiao et al., 2024)"
 )
 
-#: Protocol A.6: temperature 0.0 applies ONLY to archetype G (the PlanBench
-#: convention for planning); all other archetypes run at 0.2 so the
-#: consolidated multi-run pass can estimate within-instance variance, and so
-#: the C/D comparison is not confounded by a temperature difference (C ran
-#: at 0.2).
+#: Protocol A.6 (IT-030): temperature 0 for all archetypes — deterministic
+#: single-run evaluation following WorkBench and PlanBench. Uniform across
+#: C/D/E so the classification triad is not confounded by a temperature
+#: difference.
 TEMPERATURE = DEFAULT_TEMPERATURE
 
 #: Tool whitelist exposed to both paradigms (Phase-2 tool-symmetry invariant

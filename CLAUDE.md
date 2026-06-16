@@ -97,7 +97,7 @@ Co-primary: Task Completion Rate (TCR; B, C, D, F) or Output Quality Score (OQS;
 ## Implementation Stack
 
 - **Framework:** LangGraph (Python 3.12), LangChain tool layer
-- **Model:** `gpt-5.2-2025-12-11`, `reasoning_effort="none"`, temperature 0.2 (0.0 for G), seed 42
+- **Model:** `gpt-5.2-2025-12-11`, `reasoning_effort="none"`, temperature 0.0, seed 42; one run per paradigm (deterministic single-run evaluation, following WorkBench and PlanBench)
 - **Persistence:** local SQLite (`data/crm.db`), reset to deterministic seed before each run (IT-003; protocol deviation D-001)
 - **Search:** Tavily with per-query disk cache (`data/search_cache/`), so both paradigms see identical snippets
 - **Synthetic latency:** 300 ms ± 50 ms per simulated mail/calendar call, derived from call-signature hash (deterministic across paradigms/re-runs)
@@ -116,8 +116,8 @@ Co-primary: Task Completion Rate (TCR; B, C, D, F) or Output Quality Score (OQS;
 
 - A, B, F implemented and swept (single-run, 15 instances each); results in `data/results/`
 - Layer 2 payload realism implemented (Gmail-/Calendar-shaped tool responses, IT-016); F re-swept under realistic payloads (`f_validation_20260611_141158.json`, token ratio 2.77×)
-- TADF v1 rules derived for A (IT-012), B (IT-007), F four-quadrant (IT-015; aggregation quadrant pending multi-run confirmation, IT-016)
-- Open: archetypes C, D, E, G, H; consolidated three-run pass; perturbation/robustness runs; router conditions; per-archetype step limits (D-007); McNemar-vs-Wilcoxon decision for paired binary TCR
+- TADF v1 rules derived for A (IT-012), B (IT-007), F four-quadrant (IT-015; aggregation quadrant pending consolidated-pass confirmation, IT-016)
+- Open: archetypes C, D, E, G, H; consolidated pass (one run per paradigm, temperature 0); perturbation/robustness runs; router conditions; per-archetype step limits (D-007); McNemar-vs-Wilcoxon decision for paired binary TCR
 - All deviations from the Phase 2 protocol: thesis Appendix B.1 deviation log
 
 ## Build and Run

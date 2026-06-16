@@ -6,7 +6,10 @@ paradigm, not the model configuration (Phase 2 protocol, Appendix A).
 
 Design decisions for scientific reproducibility:
 - Single pinned model snapshot across all runs (controlled variable).
-- Temperature policy per archetype: 0.0 for planning (G), 0.2 elsewhere.
+- Temperature 0 for all archetypes (deterministic single-run evaluation,
+  following WorkBench and PlanBench; see iteration log IT-030). Under
+  deterministic decoding a single run per instance is the appropriate design,
+  so no within-instance variance is estimated by repeated runs.
 - ``reasoning_effort`` is set to ``"none"`` explicitly, so the GPT-5 family is
   used in its standard chat-completion mode. Reasoning-mode tokens are billed
   separately and would not be cleanly comparable across paradigms; the
@@ -32,13 +35,14 @@ MODEL_NAME = "gpt-5.2-2025-12-11"
 #: it is disabled so token accounting compares cleanly across paradigms.
 REASONING_EFFORT = "none"
 
-#: Temperature for archetype G (Strategic and Adaptive Planning). Determinism
-#: aids plan validity, following PlanBench (Valmeekam et al., 2023).
-PLANNING_TEMPERATURE = 0.0
+#: Temperature for all archetypes. Set to 0 for deterministic single-run
+#: evaluation (WorkBench, PlanBench convention; IT-030). Changing this
+#: invalidates the deterministic-single-run rationale of the Phase 2 design.
+DEFAULT_TEMPERATURE = 0.0
 
-#: Temperature for all other archetypes. A small non-zero value permits a
-#: variance estimate across the repeated runs per task instance.
-DEFAULT_TEMPERATURE = 0.2
+#: Retained alias for archetype G's explicit reference; identical to the
+#: default now that all archetypes run deterministically.
+PLANNING_TEMPERATURE = 0.0
 
 #: Seed for reproducibility where the provider supports it.
 RANDOM_SEED = int(os.getenv("RANDOM_SEED", "42"))
@@ -47,10 +51,10 @@ RANDOM_SEED = int(os.getenv("RANDOM_SEED", "42"))
 def get_llm(temperature: float = DEFAULT_TEMPERATURE) -> ChatOpenAI:
     """Return the shared LLM instance at the given temperature.
 
-    The temperature is set per archetype in its ``config.py`` module:
-    ``PLANNING_TEMPERATURE`` for archetype G, ``DEFAULT_TEMPERATURE`` for the
-    rest. All other configuration is fixed to keep the model a controlled
-    variable across conditions.
+    The temperature is taken from each archetype's ``config.py`` module; all
+    archetypes use ``DEFAULT_TEMPERATURE`` (0) for deterministic single-run
+    evaluation. All other configuration is fixed to keep the model a
+    controlled variable across conditions.
 
     Args:
         temperature: Sampling temperature for this archetype.
