@@ -1,0 +1,10 @@
+{
+  "n_pairs": 30,
+  "exact_agreement": 0.833,
+  "within_1": 1.0,
+  "cohen_weighted_kappa_quadratic": 0.348,
+  "gwet_ac1_scale_q5": 0.822,
+  "gwet_ac1_observed_q2": 0.776,
+  "disagreements": "all 5 are adjacent (4 vs 5) at the top of the scale; max |diff| = 1",
+  "verdict": "Judge validated via paradox-resistant agreement (AC1 0.82); Cohen kappa deflated by ceiling/low-variance (kappa paradox)."
+}

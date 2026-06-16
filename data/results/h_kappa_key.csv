@@ -1,0 +1,7 @@
+artefact,instance,paradigm
+Artefact A,h-med-1,agent
+Artefact B,h-low-1,agent
+Artefact C,h-med-1,workflow
+Artefact D,h-high-1,workflow
+Artefact E,h-low-1,workflow
+Artefact F,h-high-1,agent
