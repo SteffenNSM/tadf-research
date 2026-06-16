@@ -1,0 +1,62 @@
+{
+  "id": "h-low-1",
+  "archetype": "H",
+  "difficulty": "low",
+  "sub_class": "social_post",
+  "format": "LinkedIn post",
+  "instruction": "Write a short LinkedIn post announcing this quarter's product revenue.",
+  "table": {
+    "caption": "Q3 2025 revenue by product line (EUR)",
+    "columns": [
+      "Product line",
+      "Q3 revenue"
+    ],
+    "rows": [
+      [
+        "Core",
+        1240000
+      ],
+      [
+        "Analytics",
+        880000
+      ],
+      [
+        "Connect",
+        410000
+      ]
+    ]
+  },
+  "constraints": {
+    "audience": "LinkedIn followers and prospects",
+    "tonality": "upbeat and confident",
+    "min_words": 30,
+    "max_words": 70,
+    "required_points": [
+      {
+        "desc": "Core revenue 1,240,000",
+        "keywords": [
+          "1,240,000",
+          "1.24 million",
+          "1.24m",
+          "1,24"
+        ]
+      }
+    ]
+  },
+  "feedback_rounds": [],
+  "feedback_requirements": [],
+  "allowed_numbers": [
+    3.0,
+    2025.0,
+    410000.0,
+    880000.0,
+    1240000.0,
+    2530000.0
+  ],
+  "rationale_hint": "Two constraints (tone, length) + one required figure; no feedback. Near-parity expected.",
+  "provenance": {
+    "source_benchmark": "WONDERBREAD SOP Generation / SOP Improvement (Wornow et al., 2024); TheAgentCompany report drafting (Xu et al., 2024)",
+    "adaptation": "Author-constructed table, brief, and constraints over synthetic figures; data-to-text drafting with scripted feedback follows the SOP-generation/improvement and report-drafting pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: social_post.",
+    "license": "Original work by the author (tables, briefs, constraints, judge rubric); benchmark semantics reference only"
+  }
+}

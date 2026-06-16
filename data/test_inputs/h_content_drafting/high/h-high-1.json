@@ -1,0 +1,119 @@
+{
+  "id": "h-high-1",
+  "archetype": "H",
+  "difficulty": "high",
+  "sub_class": "multi_section_report",
+  "format": "multi-section report",
+  "instruction": "Write a structured quarterly business review for the executive board.",
+  "table": {
+    "caption": "Q3 2025 company KPIs",
+    "columns": [
+      "KPI",
+      "Q2 2025",
+      "Q3 2025"
+    ],
+    "rows": [
+      [
+        "Revenue (EUR)",
+        2250000,
+        2530000
+      ],
+      [
+        "New customers",
+        480,
+        610
+      ],
+      [
+        "Churn rate",
+        "3.1%",
+        "2.7%"
+      ],
+      [
+        "Gross margin",
+        "71%",
+        "73%"
+      ]
+    ]
+  },
+  "constraints": {
+    "audience": "the executive board",
+    "tonality": "formal and measured",
+    "min_words": 250,
+    "max_words": 420,
+    "framing": "balanced — name both a win and a risk",
+    "required_sections": [
+      "Summary",
+      "Financials",
+      "Customers",
+      "Outlook"
+    ],
+    "required_points": [
+      {
+        "desc": "revenue 2,530,000",
+        "keywords": [
+          "2,530,000",
+          "2.53"
+        ]
+      },
+      {
+        "desc": "churn 2.7%",
+        "keywords": [
+          "2.7%",
+          "2.7 %"
+        ]
+      },
+      {
+        "desc": "gross margin 73%",
+        "keywords": [
+          "73%",
+          "73 %"
+        ]
+      }
+    ]
+  },
+  "feedback_rounds": [
+    "Add the quarter-over-quarter revenue growth as a percentage in the Financials section.",
+    "The board wants it tighter — cut it toward the lower end of the word range, but you must still keep all four sections and add the new-customer count for Q3."
+  ],
+  "feedback_requirements": [
+    {
+      "round": 1,
+      "desc": "QoQ revenue growth ~12.4%",
+      "keywords": [
+        "12.4%",
+        "12.4 %",
+        "12%",
+        "12 percent",
+        "12.4"
+      ]
+    },
+    {
+      "round": 2,
+      "desc": "Q3 new customers 610",
+      "keywords": [
+        "610"
+      ]
+    }
+  ],
+  "allowed_numbers": [
+    2.7,
+    3.1,
+    4.0,
+    12.0,
+    12.4,
+    71.0,
+    73.0,
+    480.0,
+    610.0,
+    2025.0,
+    280000.0,
+    2250000.0,
+    2530000.0
+  ],
+  "rationale_hint": "5+ constraints, four sections, two feedback rounds; round 2 is a tension revision (shorten yet add content). QoQ growth 280000/2250000 = 12.4%.",
+  "provenance": {
+    "source_benchmark": "WONDERBREAD SOP Generation / SOP Improvement (Wornow et al., 2024); TheAgentCompany report drafting (Xu et al., 2024)",
+    "adaptation": "Author-constructed table, brief, and constraints over synthetic figures; data-to-text drafting with scripted feedback follows the SOP-generation/improvement and report-drafting pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: multi_section_report.",
+    "license": "Original work by the author (tables, briefs, constraints, judge rubric); benchmark semantics reference only"
+  }
+}

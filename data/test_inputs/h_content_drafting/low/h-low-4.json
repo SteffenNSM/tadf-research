@@ -1,0 +1,59 @@
+{
+  "id": "h-low-4",
+  "archetype": "H",
+  "difficulty": "low",
+  "sub_class": "short_email",
+  "format": "status email",
+  "instruction": "Write a short status email to the support lead summarizing this week's ticket throughput.",
+  "table": {
+    "caption": "Support week 45",
+    "columns": [
+      "Metric",
+      "Value"
+    ],
+    "rows": [
+      [
+        "Tickets resolved",
+        612
+      ],
+      [
+        "Median response (h)",
+        4.2
+      ]
+    ]
+  },
+  "constraints": {
+    "audience": "the support team lead",
+    "tonality": "factual and brief",
+    "min_words": 35,
+    "max_words": 80,
+    "required_points": [
+      {
+        "desc": "612 resolved",
+        "keywords": [
+          "612"
+        ]
+      },
+      {
+        "desc": "4.2h median",
+        "keywords": [
+          "4.2"
+        ]
+      }
+    ]
+  },
+  "feedback_rounds": [],
+  "feedback_requirements": [],
+  "allowed_numbers": [
+    4.2,
+    45.0,
+    612.0,
+    2025.0
+  ],
+  "rationale_hint": "Two figures incl. a decimal; factual tone.",
+  "provenance": {
+    "source_benchmark": "WONDERBREAD SOP Generation / SOP Improvement (Wornow et al., 2024); TheAgentCompany report drafting (Xu et al., 2024)",
+    "adaptation": "Author-constructed table, brief, and constraints over synthetic figures; data-to-text drafting with scripted feedback follows the SOP-generation/improvement and report-drafting pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: short_email.",
+    "license": "Original work by the author (tables, briefs, constraints, judge rubric); benchmark semantics reference only"
+  }
+}

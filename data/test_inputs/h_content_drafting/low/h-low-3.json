@@ -1,0 +1,54 @@
+{
+  "id": "h-low-3",
+  "archetype": "H",
+  "difficulty": "low",
+  "sub_class": "social_post",
+  "format": "company-update post",
+  "instruction": "Write a celebratory post about reaching a customer milestone.",
+  "table": {
+    "caption": "Customer milestone",
+    "columns": [
+      "Metric",
+      "Value"
+    ],
+    "rows": [
+      [
+        "Total customers",
+        10000
+      ],
+      [
+        "Countries served",
+        42
+      ]
+    ]
+  },
+  "constraints": {
+    "audience": "customers and the public",
+    "tonality": "celebratory and warm",
+    "min_words": 30,
+    "max_words": 60,
+    "required_points": [
+      {
+        "desc": "10,000 customers",
+        "keywords": [
+          "10,000",
+          "10000",
+          "10k"
+        ]
+      }
+    ]
+  },
+  "feedback_rounds": [],
+  "feedback_requirements": [],
+  "allowed_numbers": [
+    42.0,
+    2025.0,
+    10000.0
+  ],
+  "rationale_hint": "Milestone post; one mandatory figure, celebratory tone.",
+  "provenance": {
+    "source_benchmark": "WONDERBREAD SOP Generation / SOP Improvement (Wornow et al., 2024); TheAgentCompany report drafting (Xu et al., 2024)",
+    "adaptation": "Author-constructed table, brief, and constraints over synthetic figures; data-to-text drafting with scripted feedback follows the SOP-generation/improvement and report-drafting pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: social_post.",
+    "license": "Original work by the author (tables, briefs, constraints, judge rubric); benchmark semantics reference only"
+  }
+}

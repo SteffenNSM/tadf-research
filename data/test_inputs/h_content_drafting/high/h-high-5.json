@@ -1,0 +1,102 @@
+{
+  "id": "h-high-5",
+  "archetype": "H",
+  "difficulty": "high",
+  "sub_class": "exec_email",
+  "format": "executive email",
+  "instruction": "Write an email to the board summarizing the funding-round readiness metrics and a recommendation.",
+  "table": {
+    "caption": "Funding readiness Q3 2025",
+    "columns": [
+      "Metric",
+      "Value"
+    ],
+    "rows": [
+      [
+        "ARR (EUR)",
+        9600000
+      ],
+      [
+        "Net revenue retention",
+        "118%"
+      ],
+      [
+        "Burn multiple",
+        1.4
+      ],
+      [
+        "Runway (months)",
+        19
+      ]
+    ]
+  },
+  "constraints": {
+    "audience": "the board of directors",
+    "tonality": "confident and precise",
+    "min_words": 170,
+    "max_words": 300,
+    "framing": "make a clear go/no-go recommendation on raising now",
+    "required_points": [
+      {
+        "desc": "ARR 9,600,000",
+        "keywords": [
+          "9,600,000",
+          "9.6 million",
+          "9.6m",
+          "9.6"
+        ]
+      },
+      {
+        "desc": "NRR 118%",
+        "keywords": [
+          "118%",
+          "118 %"
+        ]
+      },
+      {
+        "desc": "runway 19 months",
+        "keywords": [
+          "19 month",
+          "19-month",
+          "19"
+        ]
+      }
+    ]
+  },
+  "feedback_rounds": [
+    "Add the burn multiple and interpret whether it is healthy.",
+    "Shorten toward the lower word bound for the board, but keep the recommendation and add the net revenue retention interpretation."
+  ],
+  "feedback_requirements": [
+    {
+      "round": 1,
+      "desc": "burn multiple 1.4",
+      "keywords": [
+        "1.4"
+      ]
+    },
+    {
+      "round": 2,
+      "desc": "NRR interpretation kept",
+      "keywords": [
+        "118%",
+        "118 %",
+        "retention"
+      ]
+    }
+  ],
+  "allowed_numbers": [
+    1.4,
+    3.0,
+    19.0,
+    118.0,
+    2025.0,
+    9600000.0
+  ],
+  "rationale_hint": "Confident board email; round 2 tension (shorten yet keep recommendation + NRR interpretation).",
+  "provenance": {
+    "source_benchmark": "WONDERBREAD SOP Generation / SOP Improvement (Wornow et al., 2024); TheAgentCompany report drafting (Xu et al., 2024)",
+    "adaptation": "Author-constructed table, brief, and constraints over synthetic figures; data-to-text drafting with scripted feedback follows the SOP-generation/improvement and report-drafting pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: exec_email.",
+    "license": "Original work by the author (tables, briefs, constraints, judge rubric); benchmark semantics reference only"
+  }
+}

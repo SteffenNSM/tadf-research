@@ -1,0 +1,104 @@
+{
+  "id": "h-high-2",
+  "archetype": "H",
+  "difficulty": "high",
+  "sub_class": "multi_section_report",
+  "format": "multi-section report",
+  "instruction": "Write a structured incident retrospective for engineering leadership.",
+  "table": {
+    "caption": "Incident INC-204 metrics",
+    "columns": [
+      "Metric",
+      "Value"
+    ],
+    "rows": [
+      [
+        "Detection time (min)",
+        18
+      ],
+      [
+        "Resolution time (min)",
+        142
+      ],
+      [
+        "Customers affected",
+        2300
+      ],
+      [
+        "Error rate peak",
+        "7.4%"
+      ]
+    ]
+  },
+  "constraints": {
+    "audience": "engineering leadership",
+    "tonality": "blameless and analytical",
+    "min_words": 240,
+    "max_words": 400,
+    "framing": "blameless — focus on system and process, not individuals",
+    "required_sections": [
+      "Summary",
+      "Timeline",
+      "Impact",
+      "Action items"
+    ],
+    "required_points": [
+      {
+        "desc": "142 min resolution",
+        "keywords": [
+          "142"
+        ]
+      },
+      {
+        "desc": "2,300 customers",
+        "keywords": [
+          "2,300",
+          "2300"
+        ]
+      },
+      {
+        "desc": "peak error 7.4%",
+        "keywords": [
+          "7.4%",
+          "7.4 %"
+        ]
+      }
+    ]
+  },
+  "feedback_rounds": [
+    "Add the detection time and compute total time from detection to resolution in minutes.",
+    "Tighten it toward the lower word bound, but keep all four sections and add at least two concrete action items."
+  ],
+  "feedback_requirements": [
+    {
+      "round": 1,
+      "desc": "detection 18 + total 160 min",
+      "keywords": [
+        "160"
+      ]
+    },
+    {
+      "round": 2,
+      "desc": "action items present",
+      "keywords": [
+        "action item",
+        "action items"
+      ]
+    }
+  ],
+  "allowed_numbers": [
+    7.4,
+    18.0,
+    142.0,
+    160.0,
+    204.0,
+    2025.0,
+    2300.0
+  ],
+  "rationale_hint": "Blameless retro; round 1 adds total 18+142=160; round 2 tension (shorten + keep sections + add action items).",
+  "provenance": {
+    "source_benchmark": "WONDERBREAD SOP Generation / SOP Improvement (Wornow et al., 2024); TheAgentCompany report drafting (Xu et al., 2024)",
+    "adaptation": "Author-constructed table, brief, and constraints over synthetic figures; data-to-text drafting with scripted feedback follows the SOP-generation/improvement and report-drafting pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: multi_section_report.",
+    "license": "Original work by the author (tables, briefs, constraints, judge rubric); benchmark semantics reference only"
+  }
+}

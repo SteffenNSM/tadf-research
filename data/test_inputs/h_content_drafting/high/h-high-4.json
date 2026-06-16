@@ -1,0 +1,121 @@
+{
+  "id": "h-high-4",
+  "archetype": "H",
+  "difficulty": "high",
+  "sub_class": "multi_section_report",
+  "format": "multi-section report",
+  "instruction": "Write a structured monthly product report for the product council.",
+  "table": {
+    "caption": "Product metrics November 2025",
+    "columns": [
+      "Metric",
+      "Oct",
+      "Nov"
+    ],
+    "rows": [
+      [
+        "DAU",
+        41000,
+        47000
+      ],
+      [
+        "Feature adoption",
+        "38%",
+        "45%"
+      ],
+      [
+        "Crash-free rate",
+        "99.2%",
+        "99.6%"
+      ],
+      [
+        "Support tickets",
+        820,
+        690
+      ]
+    ]
+  },
+  "constraints": {
+    "audience": "the product council",
+    "tonality": "objective and data-led",
+    "min_words": 240,
+    "max_words": 400,
+    "framing": "tie each metric movement to a likely cause hypothesis",
+    "required_sections": [
+      "Engagement",
+      "Quality",
+      "Support",
+      "Next steps"
+    ],
+    "required_points": [
+      {
+        "desc": "DAU 47,000",
+        "keywords": [
+          "47,000",
+          "47000",
+          "47k"
+        ]
+      },
+      {
+        "desc": "crash-free 99.6%",
+        "keywords": [
+          "99.6%",
+          "99.6 %"
+        ]
+      },
+      {
+        "desc": "adoption 45%",
+        "keywords": [
+          "45%",
+          "45 %"
+        ]
+      }
+    ]
+  },
+  "feedback_rounds": [
+    "Add the month-over-month DAU growth as a percentage in the Engagement section.",
+    "Cut it toward the lower word bound, keep all four sections, and add the change in support tickets as an absolute number."
+  ],
+  "feedback_requirements": [
+    {
+      "round": 1,
+      "desc": "MoM DAU growth ~14.6%",
+      "keywords": [
+        "14.6%",
+        "14.6 %",
+        "15%",
+        "14.6",
+        "15 percent"
+      ]
+    },
+    {
+      "round": 2,
+      "desc": "ticket drop 130",
+      "keywords": [
+        "130"
+      ]
+    }
+  ],
+  "allowed_numbers": [
+    4.0,
+    14.6,
+    15.0,
+    38.0,
+    45.0,
+    99.2,
+    99.6,
+    130.0,
+    690.0,
+    820.0,
+    2025.0,
+    6000.0,
+    41000.0,
+    47000.0
+  ],
+  "rationale_hint": "Round 1 adds MoM DAU growth 6000/41000=14.6%; round 2 tension + ticket drop 820-690=130.",
+  "provenance": {
+    "source_benchmark": "WONDERBREAD SOP Generation / SOP Improvement (Wornow et al., 2024); TheAgentCompany report drafting (Xu et al., 2024)",
+    "adaptation": "Author-constructed table, brief, and constraints over synthetic figures; data-to-text drafting with scripted feedback follows the SOP-generation/improvement and report-drafting pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: multi_section_report.",
+    "license": "Original work by the author (tables, briefs, constraints, judge rubric); benchmark semantics reference only"
+  }
+}

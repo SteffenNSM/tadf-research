@@ -1,0 +1,99 @@
+{
+  "id": "h-med-1",
+  "archetype": "H",
+  "difficulty": "med",
+  "sub_class": "summary_email",
+  "format": "summary email",
+  "instruction": "Write an email to the sales director summarizing Q3 performance across the three product lines.",
+  "table": {
+    "caption": "Revenue by product line (EUR)",
+    "columns": [
+      "Product line",
+      "Q3 2024",
+      "Q3 2025"
+    ],
+    "rows": [
+      [
+        "Core",
+        1100000,
+        1240000
+      ],
+      [
+        "Analytics",
+        700000,
+        880000
+      ],
+      [
+        "Connect",
+        450000,
+        410000
+      ]
+    ]
+  },
+  "constraints": {
+    "audience": "the sales director (non-technical)",
+    "tonality": "professional and analytical",
+    "min_words": 120,
+    "max_words": 220,
+    "framing": "lead with the overall result, then the per-line detail",
+    "required_points": [
+      {
+        "desc": "Core Q3 2025 1,240,000",
+        "keywords": [
+          "1,240,000",
+          "1.24"
+        ]
+      },
+      {
+        "desc": "Analytics Q3 2025 880,000",
+        "keywords": [
+          "880,000",
+          "880"
+        ]
+      },
+      {
+        "desc": "Connect Q3 2025 410,000",
+        "keywords": [
+          "410,000",
+          "410"
+        ]
+      }
+    ]
+  },
+  "feedback_rounds": [
+    "Please name the strongest and weakest line explicitly, and add the total Q3 2025 revenue across all lines."
+  ],
+  "feedback_requirements": [
+    {
+      "round": 1,
+      "desc": "names strongest/weakest + total 2,530,000",
+      "keywords": [
+        "2,530,000",
+        "2.53 million",
+        "2.53m",
+        "strongest",
+        "weakest"
+      ]
+    }
+  ],
+  "allowed_numbers": [
+    3.0,
+    2024.0,
+    2025.0,
+    280000.0,
+    410000.0,
+    450000.0,
+    700000.0,
+    880000.0,
+    1100000.0,
+    1240000.0,
+    2250000.0,
+    2530000.0
+  ],
+  "rationale_hint": "Three required figures + framing; feedback adds total (2,530,000) and strongest/weakest naming.",
+  "provenance": {
+    "source_benchmark": "WONDERBREAD SOP Generation / SOP Improvement (Wornow et al., 2024); TheAgentCompany report drafting (Xu et al., 2024)",
+    "adaptation": "Author-constructed table, brief, and constraints over synthetic figures; data-to-text drafting with scripted feedback follows the SOP-generation/improvement and report-drafting pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: summary_email.",
+    "license": "Original work by the author (tables, briefs, constraints, judge rubric); benchmark semantics reference only"
+  }
+}

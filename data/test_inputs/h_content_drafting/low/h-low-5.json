@@ -1,0 +1,53 @@
+{
+  "id": "h-low-5",
+  "archetype": "H",
+  "difficulty": "low",
+  "sub_class": "social_post",
+  "format": "short post",
+  "instruction": "Write a brief post sharing the latest customer satisfaction score.",
+  "table": {
+    "caption": "CSAT Q3 2025",
+    "columns": [
+      "Metric",
+      "Value"
+    ],
+    "rows": [
+      [
+        "NPS",
+        58
+      ],
+      [
+        "Responses",
+        1300
+      ]
+    ]
+  },
+  "constraints": {
+    "audience": "customers",
+    "tonality": "appreciative",
+    "min_words": 25,
+    "max_words": 55,
+    "required_points": [
+      {
+        "desc": "NPS 58",
+        "keywords": [
+          "58"
+        ]
+      }
+    ]
+  },
+  "feedback_rounds": [],
+  "feedback_requirements": [],
+  "allowed_numbers": [
+    3.0,
+    58.0,
+    1300.0,
+    2025.0
+  ],
+  "rationale_hint": "Single required figure; appreciative tone.",
+  "provenance": {
+    "source_benchmark": "WONDERBREAD SOP Generation / SOP Improvement (Wornow et al., 2024); TheAgentCompany report drafting (Xu et al., 2024)",
+    "adaptation": "Author-constructed table, brief, and constraints over synthetic figures; data-to-text drafting with scripted feedback follows the SOP-generation/improvement and report-drafting pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: social_post.",
+    "license": "Original work by the author (tables, briefs, constraints, judge rubric); benchmark semantics reference only"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "id": "h-high-3",
+  "archetype": "H",
+  "difficulty": "high",
+  "sub_class": "exec_email",
+  "format": "executive email",
+  "instruction": "Write an email to the CEO summarizing the regional sales picture and recommending a focus region.",
+  "table": {
+    "caption": "Q3 2025 sales by region (EUR)",
+    "columns": [
+      "Region",
+      "Q3 sales",
+      "YoY change"
+    ],
+    "rows": [
+      [
+        "EMEA",
+        1150000,
+        "+14%"
+      ],
+      [
+        "AMER",
+        980000,
+        "+6%"
+      ],
+      [
+        "APAC",
+        400000,
+        "+22%"
+      ]
+    ]
+  },
+  "constraints": {
+    "audience": "the CEO",
+    "tonality": "concise, decisive, executive",
+    "min_words": 160,
+    "max_words": 280,
+    "framing": "end with a single clear recommendation",
+    "required_points": [
+      {
+        "desc": "EMEA 1,150,000",
+        "keywords": [
+          "1,150,000",
+          "1.15"
+        ]
+      },
+      {
+        "desc": "APAC +22%",
+        "keywords": [
+          "22%",
+          "22 %"
+        ]
+      },
+      {
+        "desc": "AMER 980,000",
+        "keywords": [
+          "980,000",
+          "980"
+        ]
+      }
+    ]
+  },
+  "feedback_rounds": [
+    "Add the total Q3 sales across all three regions.",
+    "Make it shorter and sharper for the CEO — move to the lower half of the word range — but keep the total and add the EMEA YoY figure."
+  ],
+  "feedback_requirements": [
+    {
+      "round": 1,
+      "desc": "total 2,530,000",
+      "keywords": [
+        "2,530,000",
+        "2.53"
+      ]
+    },
+    {
+      "round": 2,
+      "desc": "EMEA YoY +14%",
+      "keywords": [
+        "14%",
+        "14 %"
+      ]
+    }
+  ],
+  "allowed_numbers": [
+    3.0,
+    6.0,
+    14.0,
+    22.0,
+    2025.0,
+    400000.0,
+    980000.0,
+    1150000.0,
+    2530000.0
+  ],
+  "rationale_hint": "Executive email; round 2 tension (shorten yet add EMEA YoY + keep total).",
+  "provenance": {
+    "source_benchmark": "WONDERBREAD SOP Generation / SOP Improvement (Wornow et al., 2024); TheAgentCompany report drafting (Xu et al., 2024)",
+    "adaptation": "Author-constructed table, brief, and constraints over synthetic figures; data-to-text drafting with scripted feedback follows the SOP-generation/improvement and report-drafting pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: exec_email.",
+    "license": "Original work by the author (tables, briefs, constraints, judge rubric); benchmark semantics reference only"
+  }
+}
