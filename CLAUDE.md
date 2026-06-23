@@ -97,7 +97,7 @@ Co-primary: Task Completion Rate (TCR; B, C, D, F) or Output Quality Score (OQS;
 ## Implementation Stack
 
 - **Framework:** LangGraph (Python 3.12), LangChain tool layer
-- **Model:** final reported model `gpt-5.2-2025-12-11`, `reasoning_effort="none"`, temperature 0.0, seed 42; one run per paradigm (deterministic single-run evaluation, following WorkBench and PlanBench). The active model is set via `TADF_MODEL` (default currently `gpt-4o-mini-2024-07-18` for cheap dev shake-out; `reasoning_effort` is sent only for GPT-5 models). The active model is stamped into every results file, and dev-model runs are routed to `data/results/dev/` (gitignored) so they never mix with the final evidence base (IT-031)
+- **Model:** final reported model `gpt-5.2-2025-12-11`, `reasoning_effort="none"`, temperature 0.0, seed 42; one run per paradigm (deterministic single-run evaluation, following WorkBench and PlanBench). The active model is set via `TADF_MODEL` (default currently `gpt-5.4-nano-2026-03-17`, a GPT-5-family small model, for cheap dev shake-out; `reasoning_effort` is sent only for GPT-5 models, so it applies to gpt-5.4-nano). The active model is stamped into every results file, and dev-model runs are routed to `data/results/dev/` (gitignored) so they never mix with the final evidence base (IT-031)
 - **Persistence:** local SQLite (`data/crm.db`), reset to deterministic seed before each run (IT-003; protocol deviation D-001)
 - **Search:** Tavily with per-query disk cache (`data/search_cache/`), so both paradigms see identical snippets
 - **Synthetic latency:** 300 ms ± 50 ms per simulated mail/calendar call, derived from call-signature hash (deterministic across paradigms/re-runs)

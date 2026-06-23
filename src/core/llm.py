@@ -32,12 +32,12 @@ load_dotenv()
 #: The model the FINAL Phase 2 results are reported on (the real design).
 FINAL_MODEL = "gpt-5.2-2025-12-11"
 
-#: Active model. Defaults to a cheap development model (gpt-4o-mini) for fast,
-#: low-cost pipeline shake-out; override via the TADF_MODEL environment
-#: variable. Set TADF_MODEL=gpt-5.2-2025-12-11 (or leave it unset and change
-#: this default back) for the final reported sweep. The active model is
-#: stamped into every results file so dev and final runs are never confused.
-MODEL_NAME = os.getenv("TADF_MODEL", "gpt-4o-mini-2024-07-18")
+#: Active model. Defaults to a cheap development model (gpt-5.4-nano, a
+#: GPT-5-family small model) for fast, low-cost pipeline shake-out; override
+#: via the TADF_MODEL environment variable. Set TADF_MODEL=gpt-5.2-2025-12-11
+#: (or change this default back) for the final reported sweep. The active model
+#: is stamped into every results file so dev and final runs are never confused.
+MODEL_NAME = os.getenv("TADF_MODEL", "gpt-5.4-nano-2026-03-17")
 
 #: True while a non-final (development) model is active; routes results to a
 #: separate dev folder (see ``results_dir``).
