@@ -106,7 +106,13 @@ def get_llm(temperature: float = DEFAULT_TEMPERATURE) -> ChatOpenAI:
         "seed": RANDOM_SEED,
         "api_key": api_key,
     }
-    # reasoning_effort is a GPT-5 family parameter; other models reject it.
-    if _supports_reasoning_effort(MODEL_NAME):
+    # reasoning_effort is sent ONLY for the final reported model. Its purpose
+    # is clean reasoning-token accounting on the reported run; development
+    # models do not need it, and some GPT-5 small models (e.g. gpt-5.4-nano)
+    # reject reasoning_effort when function tools are bound (agent paradigm),
+    # returning a 400. Omitting it for dev models avoids that incompatibility
+    # without affecting the reported sweep. (Non-GPT-5 finals would reject the
+    # parameter outright, hence the family guard.)
+    if not IS_DEV_MODEL and _supports_reasoning_effort(MODEL_NAME):
         kwargs["model_kwargs"] = {"reasoning_effort": REASONING_EFFORT}
     return ChatOpenAI(**kwargs)
