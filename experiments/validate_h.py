@@ -35,6 +35,7 @@ from src.archetypes.h_content_drafting.agent import run_agent
 from src.archetypes.h_content_drafting.ground_truth import check_compliance
 from src.archetypes.h_content_drafting.judge import judge_artifact
 from src.archetypes.h_content_drafting.workflow import run_workflow
+from src.core.llm import MODEL_NAME, results_dir
 from src.core.logging import ExecutionLogger
 
 REPO = Path(__file__).resolve().parents[1]
@@ -112,10 +113,10 @@ def main() -> None:
                 print(f"{inst['id']:11} {paradigm:9} ERROR  {str(e)[:70]}")
             rows.append(row)
 
-    RESULTS.mkdir(parents=True, exist_ok=True)
+    out_dir = results_dir(RESULTS)
     stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    out = RESULTS / f"h_validation_{stamp}.json"
-    out.write_text(json.dumps({"timestamp": stamp, "runs": rows}, indent=2, default=str))
+    out = out_dir / f"h_validation_{stamp}.json"
+    out.write_text(json.dumps({"timestamp": stamp, "model": MODEL_NAME, "runs": rows}, indent=2, default=str))
     print(f"\nResults written to {out.relative_to(REPO)}")
 
     # Human-rating template for the 20% kappa validation (protocol A.7):
@@ -123,7 +124,7 @@ def main() -> None:
     sample_ids = {"h-low-1", "h-med-1", "h-high-1"}
     kappa_rows = [r for r in rows if r.get("instance") in sample_ids and "error" not in r]
     if kappa_rows:
-        kpath = RESULTS / f"h_kappa_template_{stamp}.csv"
+        kpath = out_dir / f"h_kappa_template_{stamp}.csv"
         with kpath.open("w", newline="") as f:
             w = csv.writer(f)
             w.writerow(["instance", "paradigm", "criterion", "judge_score", "human_score (fill 1-5)"])

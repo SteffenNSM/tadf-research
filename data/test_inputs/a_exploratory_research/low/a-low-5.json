@@ -2,14 +2,27 @@
   "id": "a-low-5",
   "archetype": "A",
   "difficulty": "low",
-  "instruction": "What is the chemical element symbol for gold?",
+  "instruction": "In which Bavarian municipality was the packaging-machine manufacturer Multivac originally founded in 1961 (in a garage), before it moved to Wolfertschwenden?",
   "ground_truth": {
-    "value": "Au",
-    "unit": "chemical_symbol"
+    "value": "Boehen",
+    "unit": "municipality"
   },
   "provenance": {
-    "source_benchmark": "AssistantBench (Yoran et al., 2024)",
-    "adaptation": "Question style adapted from the source benchmark; specific instance curated for stable historically grounded ground truth so the answer does not drift with the live web. The structural research-and-synthesis profile (difficulty: low) is preserved.",
-    "license": "Adapted under fair use for academic research"
+    "source_benchmark": "BrowseComp (Wei et al., 2025)",
+    "construction_method": "inverted-question (BrowseComp Sec. 2.1); author-constructed (not lifted)",
+    "difficulty_axis": "number of distinct sources (1)",
+    "domain": "SME hidden champion",
+    "sources": [
+      "https://de.wikipedia.org/wiki/Multivac_Sepp_Haggenm%C3%BCller",
+      "https://www.neue-verpackung.de/markt/von-boehen-im-allgaeu-auf-den-weltmarkt-771.html"
+    ],
+    "verification": {
+      "memorization_no_tool": "pending (replacement for a memorized instance)",
+      "retrievable_via_tavily": "pending",
+      "one_shot_breaks": "n/a (single-hop)",
+      "unique": "yes"
+    },
+    "note": "Replaces memorized Laerdal-length item. Single obscure source-fact.",
+    "license": "Original work by the author (task design); BrowseComp construction method referenced only"
   }
 }

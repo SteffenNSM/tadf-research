@@ -16,7 +16,7 @@ from langgraph.prebuilt import create_react_agent
 
 from src.archetypes.b_structured_retrieval.config import (
     AGENT_SYSTEM_PROMPT,
-    CRM_SCHEMA_DOC,
+    SOURCE_SCHEMA_DOC,
     TEMPERATURE,
     TOOLS,
 )
@@ -24,9 +24,9 @@ from src.core.llm import get_llm
 
 
 def build_agent():
-    """Construct a ReAct agent for archetype B with read-only CRM tools."""
+    """Construct a ReAct agent for archetype B with read-only CRM/Mail/Calendar tools."""
     llm = get_llm(TEMPERATURE)
-    system_message = SystemMessage(content=AGENT_SYSTEM_PROMPT.format(schema=CRM_SCHEMA_DOC))
+    system_message = SystemMessage(content=AGENT_SYSTEM_PROMPT.format(schema=SOURCE_SCHEMA_DOC))
     return create_react_agent(model=llm, tools=TOOLS, prompt=system_message)
 
 

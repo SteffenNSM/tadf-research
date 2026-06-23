@@ -178,5 +178,203 @@
     "body": "Please see attached or reply with any questions.",
     "sent_at": "2025-01-11 00:00:00",
     "status": "outbox"
+  },
+  {
+    "id": 1001,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Contract countersigned",
+    "body": "Contract countersigned for Opportunity 002. Reference on file.",
+    "sent_at": "2025-08-15 10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1002,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Contract countersigned",
+    "body": "Contract countersigned for Opportunity 007. Reference on file.",
+    "sent_at": "2025-08-15 10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1003,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Contract countersigned",
+    "body": "Contract countersigned for Opportunity 009. Reference on file.",
+    "sent_at": "2025-08-15 10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1004,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Contract countersigned",
+    "body": "Contract countersigned for Opportunity 011. Reference on file.",
+    "sent_at": "2025-08-15 10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1005,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Contract countersigned",
+    "body": "Contract countersigned for Opportunity 014. Reference on file.",
+    "sent_at": "2025-08-15 10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1006,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Contract countersigned",
+    "body": "Contract countersigned for Opportunity 021. Reference on file.",
+    "sent_at": "2025-08-15 10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1007,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Contract countersigned",
+    "body": "Contract countersigned for Opportunity 023. Reference on file.",
+    "sent_at": "2025-08-15 10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1008,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Contract countersigned",
+    "body": "Contract countersigned for Opportunity 044. Reference on file.",
+    "sent_at": "2025-08-15 10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1009,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Contract countersigned",
+    "body": "Contract countersigned for Opportunity 047. Reference on file.",
+    "sent_at": "2025-08-15 10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1010,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Contract countersigned",
+    "body": "Contract countersigned for Opportunity 048. Reference on file.",
+    "sent_at": "2025-08-15 10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1011,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Contract countersigned",
+    "body": "Contract countersigned for Opportunity 057. Reference on file.",
+    "sent_at": "2025-08-15 10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1012,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Payment received",
+    "body": "Payment received for Opportunity 002. Reference on file.",
+    "sent_at": "2025-08-15 10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1013,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Payment received",
+    "body": "Payment received for Opportunity 003. Reference on file.",
+    "sent_at": "2025-08-15 10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1014,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Payment received",
+    "body": "Payment received for Opportunity 007. Reference on file.",
+    "sent_at": "2025-08-15 10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1015,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Payment received",
+    "body": "Payment received for Opportunity 014. Reference on file.",
+    "sent_at": "2025-08-15 10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1016,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Payment received",
+    "body": "Payment received for Opportunity 025. Reference on file.",
+    "sent_at": "2025-08-15 10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1017,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Payment received",
+    "body": "Payment received for Opportunity 036. Reference on file.",
+    "sent_at": "2025-08-15 10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1018,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Payment received",
+    "body": "Payment received for Opportunity 042. Reference on file.",
+    "sent_at": "2025-08-15 10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1019,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Payment received",
+    "body": "Payment received for Opportunity 047. Reference on file.",
+    "sent_at": "2025-08-15 10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1020,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Payment received",
+    "body": "Payment received for Opportunity 048. Reference on file.",
+    "sent_at": "2025-08-15 10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1021,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Payment received",
+    "body": "Payment received for Opportunity 050. Reference on file.",
+    "sent_at": "2025-08-15 10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1022,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Payment received",
+    "body": "Payment received for Opportunity 060. Reference on file.",
+    "sent_at": "2025-08-15 10:00:00",
+    "status": "inbox"
   }
 ]

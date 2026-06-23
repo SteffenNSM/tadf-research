@@ -29,6 +29,7 @@ from src.archetypes.d_compliance_decisioning.ground_truth import (
     score,
 )
 from src.archetypes.d_compliance_decisioning.workflow import workflow
+from src.core.llm import MODEL_NAME, results_dir
 from src.core.logging import ExecutionLogger
 
 REPO = Path(__file__).resolve().parents[1]
@@ -137,11 +138,11 @@ def main() -> None:
                 print(f"{inst['id']:12} {name:9} ERROR  {str(e)[:80]}")
             rows.append(row)
 
-    RESULTS.mkdir(parents=True, exist_ok=True)
+    out_dir = results_dir(RESULTS)
     stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    out = RESULTS / f"d_validation_{stamp}.json"
+    out = out_dir / f"d_validation_{stamp}.json"
     out.write_text(
-        json.dumps({"timestamp": stamp, "runs": rows}, indent=2, default=str)
+        json.dumps({"timestamp": stamp, "model": MODEL_NAME, "runs": rows}, indent=2, default=str)
     )
     print(f"\nResults written to {out.relative_to(REPO)}")
 

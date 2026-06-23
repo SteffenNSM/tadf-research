@@ -35,6 +35,8 @@ A candidate is INCORRECT if any of the following holds:
 - It expresses uncertainty (for example "I don't know" or "I could not determine").
 - It omits the core answer.
 
+Score the candidate ONLY against the Gold answer below. If the question asks the reader to first identify an intermediate entity and then state a final detail (a pivot question), the Gold answer is the final detail only: do NOT mark the candidate incorrect for omitting the intermediate entity, as long as the final detail matches the Gold. Require a two-fact (compound) match only when the Gold answer itself contains two facts.
+
 Question: {question}
 Gold answer: {gold}
 Candidate answer: {candidate}

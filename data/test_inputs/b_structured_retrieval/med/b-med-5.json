@@ -2,15 +2,21 @@
   "id": "b-med-5",
   "archetype": "B",
   "difficulty": "med",
-  "instruction": "How many won opportunities belong to accounts in the 'APAC' region?",
+  "instruction": "How many WON opportunities (is_won = 1) had a payment received (email subject 'Payment received' naming them as 'Opportunity NNN')? Answer with the count.",
   "ground_truth": {
-    "value": 4,
+    "value": 8,
     "unit": "count"
   },
+  "sources_required": [
+    "CRM.opportunities",
+    "Mail"
+  ],
+  "n_sources": 2,
+  "operation": "count",
   "provenance": {
-    "source_benchmark": "CRMArena (Huang et al., 2025)",
-    "source_task_type": "Sales Volume Understanding",
-    "adaptation": "Schema and task type adapted from CRMArena structured querying; records synthesized locally (seed=42) for reproducibility.",
+    "source_benchmark": "CRMArena structured querying (Huang et al., 2025) + WorkBench mailbox/calendar (Styles et al., 2024)",
+    "construction_method": "Author-constructed multi-source sweep-all: a CRM structured set intersected with Mail/Calendar-derived sets; all sources knowable from the question (plan-time-decidable). Labelled honestly per IT-017.",
+    "difficulty_axis": "number of distinct sources that must be combined",
     "license": "CC BY-NC 4.0"
   }
 }

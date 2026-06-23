@@ -2,14 +2,27 @@
   "id": "a-high-2",
   "archetype": "A",
   "difficulty": "high",
-  "instruction": "List the first three women to be awarded a Nobel Prize in any field, in chronological order of their award years.",
+  "instruction": "The world's largest assembly- and fastener-technology company is a German group headquartered in a town in Baden-Wuerttemberg. Name the ventilation-technology world market leader (a family company) headquartered in that same town.",
   "ground_truth": {
-    "value": "Marie Curie (1903), Bertha von Suttner (1905), Selma Lagerloef (1909)",
-    "unit": "three_persons_with_years_ordered"
+    "value": "Ziehl-Abegg",
+    "unit": "company_name"
   },
   "provenance": {
     "source_benchmark": "BrowseComp (Wei et al., 2025)",
-    "adaptation": "Question style adapted from the source benchmark; specific instance curated for stable historically grounded ground truth so the answer does not drift with the live web. The structural research-and-synthesis profile (difficulty: high) is preserved.",
-    "license": "Adapted under fair use for academic research"
+    "construction_method": "inverted-question (BrowseComp Sec. 2.1); author-constructed",
+    "difficulty_axis": "3 sources; runtime-dependent (the town of the fastener company determines the ventilation-leader query)",
+    "domain": "SME hidden champion / cluster",
+    "sources": [
+      "https://www.hidden-champions.de/unternehmen/detail/ziehl-abegg-se",
+      "https://die-deutsche-wirtschaft.de/unternehmen/ziehl-abegg-se-kuenzelsau/"
+    ],
+    "verification": {
+      "memorization_no_tool": "pending",
+      "retrievable_via_tavily": "pending",
+      "one_shot_breaks": "candidate-breaks (Ziehl-Abegg only findable once Kuenzelsau is known; short-circuit risk: 'ventilation world market leader Germany' -> Ziehl-Abegg directly -> confirm via check)",
+      "unique": "yes"
+    },
+    "note": "Cluster chain: fastener leader -> Wuerth/Kuenzelsau -> ventilation world leader there -> Ziehl-Abegg.",
+    "license": "Original work by the author (task design); BrowseComp construction method referenced only"
   }
 }

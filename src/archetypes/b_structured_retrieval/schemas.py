@@ -55,3 +55,57 @@ class QuerySpec(BaseModel):
     group_metric: Literal["count", "sum", "avg"] | None = Field(
         default=None, description="Per-group metric for argmax_group"
     )
+
+
+# ── Multi-source plan (difficulty axis = number of sources to combine) ──
+
+
+class CrmSource(BaseModel):
+    """The CRM structured input to a multi-source plan."""
+
+    table: Literal["accounts", "contacts", "agents", "cases", "opportunities"] = Field(
+        description="CRM table holding the rows to filter/aggregate"
+    )
+    filters: list[FilterSpec] = Field(
+        default_factory=list, description="Exact/comparison filters, combined with AND"
+    )
+    key_column: str | None = Field(
+        default=None,
+        description="Join key used to intersect with Mail/Calendar, e.g. 'name' for opportunities. Required when mail or calendar is set.",
+    )
+    value_column: str | None = Field(
+        default=None, description="Column to sum when operation == 'sum', e.g. 'amount'"
+    )
+
+
+class MailSource(BaseModel):
+    """A Mail-derived key set: opportunities named in matching emails."""
+
+    query: str = Field(description="Subject/body substring identifying the emails, e.g. 'Contract countersigned'")
+    extract: Literal["opportunity"] = Field(
+        default="opportunity", description="Entity to extract from the email text ('Opportunity NNN')"
+    )
+
+
+class CalendarSource(BaseModel):
+    """A Calendar-derived key set: opportunities named in matching events."""
+
+    query: str = Field(description="Event-name substring identifying the events, e.g. 'Closing call'")
+    extract: Literal["opportunity"] = Field(
+        default="opportunity", description="Entity to extract from the event name ('Opportunity NNN')"
+    )
+
+
+class MultiSourcePlan(BaseModel):
+    """A declarative multi-source retrieval plan produced by the plan node.
+
+    When only ``crm`` is set, the operation is applied to the filtered CRM rows
+    directly (single source). When ``mail`` and/or ``calendar`` are also set,
+    the answer is computed over the INTERSECTION of the per-source key sets
+    (sweep-all), keyed by ``crm.key_column``.
+    """
+
+    crm: CrmSource = Field(description="The CRM source (always present)")
+    mail: MailSource | None = Field(default=None, description="Optional Mail source to intersect")
+    calendar: CalendarSource | None = Field(default=None, description="Optional Calendar source to intersect")
+    operation: Literal["count", "sum"] = Field(description="Final aggregation over the combined set")

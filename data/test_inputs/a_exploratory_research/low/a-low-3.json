@@ -2,14 +2,28 @@
   "id": "a-low-3",
   "archetype": "A",
   "difficulty": "low",
-  "instruction": "Who painted the Mona Lisa?",
+  "instruction": "In which municipality is the snuff manufacturer Alois Poeschl (Poeschl Tabak) headquartered today?",
   "ground_truth": {
-    "value": "Leonardo da Vinci",
-    "unit": "person_name"
+    "value": "Geisenhausen",
+    "unit": "municipality"
   },
   "provenance": {
-    "source_benchmark": "AssistantBench (Yoran et al., 2024)",
-    "adaptation": "Question style adapted from the source benchmark; specific instance curated for stable historically grounded ground truth so the answer does not drift with the live web. The structural research-and-synthesis profile (difficulty: low) is preserved.",
-    "license": "Adapted under fair use for academic research"
+    "source_benchmark": "BrowseComp (Wei et al., 2025)",
+    "construction_method": "inverted-question (BrowseComp Sec. 2.1); author-constructed (not lifted)",
+    "difficulty_axis": "number of search hops / distinct sources",
+    "domain": "SME hidden champion",
+    "hops": "1",
+    "sources": [
+      "https://de.wikipedia.org/wiki/Alois_P%C3%B6schl",
+      "https://www.poeschl-tobacco.com/en/company/company-history/"
+    ],
+    "verification": {
+      "memorization_no_tool": "pending",
+      "retrievable_via_tavily": "pending",
+      "one_shot_breaks": "n/a (single-hop)",
+      "unique": "yes"
+    },
+    "note": "",
+    "license": "Original work by the author (task design); BrowseComp construction method referenced only"
   }
 }

@@ -2,14 +2,27 @@
   "id": "a-med-3",
   "archetype": "A",
   "difficulty": "med",
-  "instruction": "Which Roman emperor is credited with rebuilding the Pantheon in Rome as it stands today, and in approximately which century did the rebuilding take place?",
+  "instruction": "Which company was founded earlier: Uhlmann Pac-Systeme (headquartered in Laupheim) or Multivac (headquartered in Wolfertschwenden)? Answer with the company name.",
   "ground_truth": {
-    "value": "Hadrian, 2nd century",
-    "unit": "person_and_century"
+    "value": "Uhlmann Pac-Systeme",
+    "unit": "company_name"
   },
   "provenance": {
-    "source_benchmark": "AssistantBench (Yoran et al., 2024)",
-    "adaptation": "Question style adapted from the source benchmark; specific instance curated for stable historically grounded ground truth so the answer does not drift with the live web. The structural research-and-synthesis profile (difficulty: med) is preserved.",
-    "license": "Adapted under fair use for academic research"
+    "source_benchmark": "BrowseComp (Wei et al., 2025)",
+    "construction_method": "inverted-question (BrowseComp Sec. 2.1); author-constructed (not lifted)",
+    "difficulty_axis": "number of distinct sources (2, independent)",
+    "domain": "SME hidden champion",
+    "sources": [
+      "https://de.wikipedia.org/wiki/Uhlmann_Pac-Systeme",
+      "https://de.wikipedia.org/wiki/Multivac_Sepp_Haggenm%C3%BCller"
+    ],
+    "verification": {
+      "memorization_no_tool": "pending (replacement for a memorized instance)",
+      "retrievable_via_tavily": "pending",
+      "one_shot_breaks": "unlikely (workflow can plan both queries)",
+      "unique": "yes"
+    },
+    "note": "Uhlmann 1948 vs Multivac 1961 -> Uhlmann earlier. Both packaging machinery, not guessable; requires two separate founding-year lookups. Plan-time-decidable -> cost-differentiator.",
+    "license": "Original work by the author (task design); BrowseComp construction method referenced only"
   }
 }

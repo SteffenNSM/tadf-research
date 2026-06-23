@@ -2,15 +2,22 @@
   "id": "b-high-1",
   "archetype": "B",
   "difficulty": "high",
-  "instruction": "Which region generated the highest total won-opportunity amount for opportunities closed in Q3 2025? Answer with the region name.",
+  "instruction": "What is the total amount (sum of 'amount') of WON opportunities (is_won = 1) that were BOTH countersigned by email (subject 'Contract countersigned') AND have a 'Closing call' calendar event, each naming the opportunity as 'Opportunity NNN'? Answer with the total amount.",
   "ground_truth": {
-    "value": "EMEA",
-    "unit": "region"
+    "value": 194411,
+    "unit": "currency"
   },
+  "sources_required": [
+    "CRM.opportunities",
+    "Mail",
+    "Calendar"
+  ],
+  "n_sources": 3,
+  "operation": "sum",
   "provenance": {
-    "source_benchmark": "CRMArena (Huang et al., 2025)",
-    "source_task_type": "Best Region Identification",
-    "adaptation": "Schema and task type adapted from CRMArena structured querying; records synthesized locally (seed=42) for reproducibility.",
+    "source_benchmark": "CRMArena structured querying (Huang et al., 2025) + WorkBench mailbox/calendar (Styles et al., 2024)",
+    "construction_method": "Author-constructed multi-source sweep-all: a CRM structured set intersected with Mail/Calendar-derived sets; all sources knowable from the question (plan-time-decidable). Labelled honestly per IT-017.",
+    "difficulty_axis": "number of distinct sources that must be combined",
     "license": "CC BY-NC 4.0"
   }
 }

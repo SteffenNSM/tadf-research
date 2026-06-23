@@ -2,14 +2,28 @@
   "id": "a-low-1",
   "archetype": "A",
   "difficulty": "low",
-  "instruction": "What is the elevation of Mount Everest in meters, using the most widely cited current measurement?",
+  "instruction": "What is the full company name of 'Autohaus Niesmann' in Ahlen, Germany, as registered in the commercial register?",
   "ground_truth": {
-    "value": "8849",
-    "unit": "elevation_m"
+    "value": "Niesmann Am Dicken Stein GmbH",
+    "unit": "company_legal_name"
   },
   "provenance": {
-    "source_benchmark": "AssistantBench (Yoran et al., 2024)",
-    "adaptation": "Question style adapted from the source benchmark; specific instance curated for stable historically grounded ground truth so the answer does not drift with the live web. The structural research-and-synthesis profile (difficulty: low) is preserved.",
-    "license": "Adapted under fair use for academic research"
+    "source_benchmark": "BrowseComp (Wei et al., 2025)",
+    "construction_method": "inverted-question (BrowseComp Sec. 2.1); author-constructed (not lifted)",
+    "difficulty_axis": "number of search hops / distinct sources",
+    "domain": "SME / local company registry",
+    "hops": "1",
+    "sources": [
+      "https://www.auto-niesmann.de/impressum.php",
+      "https://firmeneintrag.creditreform.de/59229/4150070335/NIESMANN_AM_DICKEN_STEIN_GMBH"
+    ],
+    "verification": {
+      "memorization_no_tool": "pending",
+      "retrievable_via_tavily": "pending",
+      "one_shot_breaks": "n/a (single-hop)",
+      "unique": "yes"
+    },
+    "note": "Author's own family business; consider replacing with another local firm for optics.",
+    "license": "Original work by the author (task design); BrowseComp construction method referenced only"
   }
 }

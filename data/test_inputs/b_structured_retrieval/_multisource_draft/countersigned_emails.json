@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1001,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Contract countersigned",
+    "body": "Contract countersigned for Opportunity 002. Fully executed copy is on file.",
+    "sent_at": "2025-08-15T10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1002,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Contract countersigned",
+    "body": "Contract countersigned for Opportunity 007. Fully executed copy is on file.",
+    "sent_at": "2025-08-15T10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1003,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Contract countersigned",
+    "body": "Contract countersigned for Opportunity 009. Fully executed copy is on file.",
+    "sent_at": "2025-08-15T10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1004,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Contract countersigned",
+    "body": "Contract countersigned for Opportunity 012. Fully executed copy is on file.",
+    "sent_at": "2025-08-15T10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1005,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Contract countersigned",
+    "body": "Contract countersigned for Opportunity 014. Fully executed copy is on file.",
+    "sent_at": "2025-08-15T10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1006,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Contract countersigned",
+    "body": "Contract countersigned for Opportunity 021. Fully executed copy is on file.",
+    "sent_at": "2025-08-15T10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1007,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Contract countersigned",
+    "body": "Contract countersigned for Opportunity 047. Fully executed copy is on file.",
+    "sent_at": "2025-08-15T10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1008,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Contract countersigned",
+    "body": "Contract countersigned for Opportunity 048. Fully executed copy is on file.",
+    "sent_at": "2025-08-15T10:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 1009,
+    "sender": "legal@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Contract countersigned",
+    "body": "Contract countersigned for Opportunity 057. Fully executed copy is on file.",
+    "sent_at": "2025-08-15T10:00:00",
+    "status": "inbox"
+  }
+]

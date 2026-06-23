@@ -106,5 +106,158 @@
     "start_time": "2025-12-23 18:00:00",
     "end_time": "2025-12-23 18:45:00",
     "status": "confirmed"
+  },
+  {
+    "id": 1001,
+    "name": "Closing call: Opportunity 014",
+    "organizer_email": "agent01@atlas.com",
+    "attendees": "agent01@atlas.com,legal@atlas.com",
+    "start_time": "2025-09-01 09:00:00",
+    "end_time": "2025-09-01 09:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 1002,
+    "name": "Closing call: Opportunity 025",
+    "organizer_email": "agent01@atlas.com",
+    "attendees": "agent01@atlas.com,legal@atlas.com",
+    "start_time": "2025-09-01 09:00:00",
+    "end_time": "2025-09-01 09:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 1003,
+    "name": "Closing call: Opportunity 036",
+    "organizer_email": "agent01@atlas.com",
+    "attendees": "agent01@atlas.com,legal@atlas.com",
+    "start_time": "2025-09-01 09:00:00",
+    "end_time": "2025-09-01 09:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 1004,
+    "name": "Closing call: Opportunity 038",
+    "organizer_email": "agent01@atlas.com",
+    "attendees": "agent01@atlas.com,legal@atlas.com",
+    "start_time": "2025-09-01 09:00:00",
+    "end_time": "2025-09-01 09:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 1005,
+    "name": "Closing call: Opportunity 048",
+    "organizer_email": "agent01@atlas.com",
+    "attendees": "agent01@atlas.com,legal@atlas.com",
+    "start_time": "2025-09-01 09:00:00",
+    "end_time": "2025-09-01 09:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 1006,
+    "name": "Closing call: Opportunity 049",
+    "organizer_email": "agent01@atlas.com",
+    "attendees": "agent01@atlas.com,legal@atlas.com",
+    "start_time": "2025-09-01 09:00:00",
+    "end_time": "2025-09-01 09:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 1007,
+    "name": "Closing call: Opportunity 054",
+    "organizer_email": "agent01@atlas.com",
+    "attendees": "agent01@atlas.com,legal@atlas.com",
+    "start_time": "2025-09-01 09:00:00",
+    "end_time": "2025-09-01 09:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 1008,
+    "name": "Closing call: Opportunity 055",
+    "organizer_email": "agent01@atlas.com",
+    "attendees": "agent01@atlas.com,legal@atlas.com",
+    "start_time": "2025-09-01 09:00:00",
+    "end_time": "2025-09-01 09:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 1009,
+    "name": "Closing call: Opportunity 060",
+    "organizer_email": "agent01@atlas.com",
+    "attendees": "agent01@atlas.com,legal@atlas.com",
+    "start_time": "2025-09-01 09:00:00",
+    "end_time": "2025-09-01 09:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 1010,
+    "name": "Kickoff scheduled: Opportunity 002",
+    "organizer_email": "agent01@atlas.com",
+    "attendees": "agent01@atlas.com,legal@atlas.com",
+    "start_time": "2025-09-01 09:00:00",
+    "end_time": "2025-09-01 09:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 1011,
+    "name": "Kickoff scheduled: Opportunity 011",
+    "organizer_email": "agent01@atlas.com",
+    "attendees": "agent01@atlas.com,legal@atlas.com",
+    "start_time": "2025-09-01 09:00:00",
+    "end_time": "2025-09-01 09:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 1012,
+    "name": "Kickoff scheduled: Opportunity 013",
+    "organizer_email": "agent01@atlas.com",
+    "attendees": "agent01@atlas.com,legal@atlas.com",
+    "start_time": "2025-09-01 09:00:00",
+    "end_time": "2025-09-01 09:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 1013,
+    "name": "Kickoff scheduled: Opportunity 021",
+    "organizer_email": "agent01@atlas.com",
+    "attendees": "agent01@atlas.com,legal@atlas.com",
+    "start_time": "2025-09-01 09:00:00",
+    "end_time": "2025-09-01 09:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 1014,
+    "name": "Kickoff scheduled: Opportunity 023",
+    "organizer_email": "agent01@atlas.com",
+    "attendees": "agent01@atlas.com,legal@atlas.com",
+    "start_time": "2025-09-01 09:00:00",
+    "end_time": "2025-09-01 09:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 1015,
+    "name": "Kickoff scheduled: Opportunity 024",
+    "organizer_email": "agent01@atlas.com",
+    "attendees": "agent01@atlas.com,legal@atlas.com",
+    "start_time": "2025-09-01 09:00:00",
+    "end_time": "2025-09-01 09:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 1016,
+    "name": "Kickoff scheduled: Opportunity 025",
+    "organizer_email": "agent01@atlas.com",
+    "attendees": "agent01@atlas.com,legal@atlas.com",
+    "start_time": "2025-09-01 09:00:00",
+    "end_time": "2025-09-01 09:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 1017,
+    "name": "Kickoff scheduled: Opportunity 055",
+    "organizer_email": "agent01@atlas.com",
+    "attendees": "agent01@atlas.com,legal@atlas.com",
+    "start_time": "2025-09-01 09:00:00",
+    "end_time": "2025-09-01 09:30:00",
+    "status": "confirmed"
   }
 ]

@@ -20,6 +20,7 @@ Design decisions for scientific reproducibility:
 """
 
 import os
+from pathlib import Path
 
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
@@ -28,12 +29,41 @@ load_dotenv()
 
 # ── Controlled model configuration ──
 
-#: Pinned model snapshot. Changing this invalidates cross-run comparability.
-MODEL_NAME = "gpt-5.2-2025-12-11"
+#: The model the FINAL Phase 2 results are reported on (the real design).
+FINAL_MODEL = "gpt-5.2-2025-12-11"
+
+#: Active model. Defaults to a cheap development model (gpt-4o-mini) for fast,
+#: low-cost pipeline shake-out; override via the TADF_MODEL environment
+#: variable. Set TADF_MODEL=gpt-5.2-2025-12-11 (or leave it unset and change
+#: this default back) for the final reported sweep. The active model is
+#: stamped into every results file so dev and final runs are never confused.
+MODEL_NAME = os.getenv("TADF_MODEL", "gpt-4o-mini-2024-07-18")
+
+#: True while a non-final (development) model is active; routes results to a
+#: separate dev folder (see ``results_dir``).
+IS_DEV_MODEL = MODEL_NAME != FINAL_MODEL
 
 #: GPT-5 family supports an internal reasoning mode. For controlled experiments
-#: it is disabled so token accounting compares cleanly across paradigms.
+#: it is disabled so token accounting compares cleanly across paradigms. The
+#: parameter is GPT-5-only; other families (e.g. gpt-4o-mini) reject it, so it
+#: is passed conditionally in ``get_llm``.
 REASONING_EFFORT = "none"
+
+
+def _supports_reasoning_effort(model: str) -> bool:
+    """Whether the model accepts the ``reasoning_effort`` parameter (GPT-5+)."""
+    return model.startswith("gpt-5")
+
+
+def results_dir(base_results: Path) -> Path:
+    """Return the results directory for the active model.
+
+    Development-model runs are written to ``<results>/dev/`` (gitignored) so
+    they never mix with or overwrite the final evidence base in ``<results>/``.
+    """
+    target = base_results / "dev" if IS_DEV_MODEL else base_results
+    target.mkdir(parents=True, exist_ok=True)
+    return target
 
 #: Temperature for all archetypes. Set to 0 for deterministic single-run
 #: evaluation (WorkBench, PlanBench convention; IT-030). Changing this
@@ -70,10 +100,13 @@ def get_llm(temperature: float = DEFAULT_TEMPERATURE) -> ChatOpenAI:
     if not api_key or api_key == "your-key-here":
         raise ValueError("Set a valid OPENAI_API_KEY in .env")
 
-    return ChatOpenAI(
-        model=MODEL_NAME,
-        temperature=temperature,
-        seed=RANDOM_SEED,
-        api_key=api_key,
-        model_kwargs={"reasoning_effort": REASONING_EFFORT},
-    )
+    kwargs: dict = {
+        "model": MODEL_NAME,
+        "temperature": temperature,
+        "seed": RANDOM_SEED,
+        "api_key": api_key,
+    }
+    # reasoning_effort is a GPT-5 family parameter; other models reject it.
+    if _supports_reasoning_effort(MODEL_NAME):
+        kwargs["model_kwargs"] = {"reasoning_effort": REASONING_EFFORT}
+    return ChatOpenAI(**kwargs)

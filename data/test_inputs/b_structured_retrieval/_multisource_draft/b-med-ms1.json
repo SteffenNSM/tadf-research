@@ -1,0 +1,27 @@
+{
+  "id": "b-med-ms1",
+  "archetype": "B",
+  "difficulty": "med",
+  "difficulty_axis": "number of distinct sources that must be combined (=2: CRM opportunities + Mail)",
+  "instruction": "What is the total amount (sum of the opportunity 'amount' field) of WON opportunities whose contract was countersigned? A contract counts as countersigned only if there is an email with the subject 'Contract countersigned' whose body names the opportunity in the form 'Opportunity NNN'. Include an opportunity only if it is BOTH won (is_won = 1 in the CRM) AND named in such an email. Answer with the total amount as a number.",
+  "ground_truth": {
+    "value": 744931,
+    "unit": "currency"
+  },
+  "sources_required": [
+    "CRM.opportunities (is_won filter + amount)",
+    "Mail (subject 'Contract countersigned' -> referenced opportunity names)"
+  ],
+  "provenance": {
+    "source_benchmark": "CRMArena structured querying (Huang et al., 2025) + WorkBench mailbox (Styles et al., 2024)",
+    "construction_method": "Author-constructed multi-source sweep-all: a CRM structured aggregate intersected with a mail-derived set; both sources are knowable from the question (plan-time-decidable). Labelled honestly per IT-017.",
+    "discriminative_design": "Neither source alone yields the answer: 3 referenced opportunities are not-won (excluded by the CRM is_won filter) and 8 won opportunities are not referenced by any countersigned email (excluded by the mail filter).",
+    "sources": ["CRM.opportunities", "Mail (emails table)"],
+    "verification": {
+      "won_and_referenced_ids": [2, 7, 14, 21, 47, 48],
+      "referenced_not_won_distractor_ids": [9, 12, 57],
+      "gold_rule": "sum(opportunities.amount) WHERE is_won=1 AND name IN referenced('Contract countersigned' emails)"
+    },
+    "license": "CC BY-NC 4.0"
+  }
+}

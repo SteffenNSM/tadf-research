@@ -1,0 +1,1025 @@
+{
+  "timestamp": "20260621_171421",
+  "runs": [
+    {
+      "instance": "a-low-1",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": "Niesmann Am Dicken Stein GmbH",
+      "correct": true,
+      "answer": "Niesmann Am Dicken Stein GmbH",
+      "judge_rationale": "The candidate answer exactly matches the gold company name registered in the commercial register.",
+      "llm_calls": 2,
+      "input_tokens": 1847,
+      "output_tokens": 231,
+      "total_tokens": 2078,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43105.758102908
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43107.154721691
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43108.642417185
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43109.908719279
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43111.550738069
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43112.857243199
+        }
+      ],
+      "latency_s": 15.165609176001453,
+      "errors": []
+    },
+    {
+      "instance": "a-low-1",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": "Niesmann Am Dicken Stein GmbH",
+      "correct": true,
+      "answer": "Niesmann Am Dicken Stein GmbH",
+      "judge_rationale": "The candidate answer exactly matches the gold answer company name as registered in the commercial register.",
+      "llm_calls": 3,
+      "input_tokens": 4034,
+      "output_tokens": 78,
+      "total_tokens": 4112,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43118.875365016
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43122.352510651
+        }
+      ],
+      "latency_s": 7.104374561997247,
+      "errors": []
+    },
+    {
+      "instance": "a-low-2",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": "1948",
+      "correct": true,
+      "answer": "1948",
+      "judge_rationale": "The candidate answer matches the gold answer exactly, stating that Uhlmann Pac-Systeme GmbH & Co. KG was founded in 1948.",
+      "llm_calls": 2,
+      "input_tokens": 2673,
+      "output_tokens": 219,
+      "total_tokens": 2892,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43128.972108774
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43130.391832074
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43131.542572243
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43133.567020305
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43134.643074686
+        }
+      ],
+      "latency_s": 11.709374083999137,
+      "errors": []
+    },
+    {
+      "instance": "a-low-2",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": "1948",
+      "correct": true,
+      "answer": "1948",
+      "judge_rationale": "The candidate answer matches the gold answer exactly, stating that Uhlmann Pac-Systeme GmbH & Co. KG was founded in 1948.",
+      "llm_calls": 2,
+      "input_tokens": 2407,
+      "output_tokens": 40,
+      "total_tokens": 2447,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43140.739337065
+        }
+      ],
+      "latency_s": 3.1734605279998505,
+      "errors": []
+    },
+    {
+      "instance": "a-low-3",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": "Geisenhausen",
+      "correct": true,
+      "answer": "Geisenhausen",
+      "judge_rationale": "The candidate answer matches the gold answer exactly: Geisenhausen.",
+      "llm_calls": 2,
+      "input_tokens": 2416,
+      "output_tokens": 138,
+      "total_tokens": 2554,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43147.034646032
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43148.315232162
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43149.538659997
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43150.592728336
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43151.896172304
+        }
+      ],
+      "latency_s": 10.34349927099538,
+      "errors": []
+    },
+    {
+      "instance": "a-low-3",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": "Geisenhausen",
+      "correct": true,
+      "answer": "Geisenhausen",
+      "judge_rationale": "The candidate answer matches the gold answer exactly: Geisenhausen.",
+      "llm_calls": 2,
+      "input_tokens": 1141,
+      "output_tokens": 32,
+      "total_tokens": 1173,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43156.671131424
+        }
+      ],
+      "latency_s": 3.1034971330009284,
+      "errors": []
+    },
+    {
+      "instance": "a-low-4",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": "1937",
+      "correct": true,
+      "answer": "1937",
+      "judge_rationale": "The candidate answer matches the gold answer exactly: 1937.",
+      "llm_calls": 2,
+      "input_tokens": 2223,
+      "output_tokens": 215,
+      "total_tokens": 2438,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43163.263930228
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43164.480037971
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43165.654604594
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43166.797369108
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43168.116698256
+        }
+      ],
+      "latency_s": 11.664980901005038,
+      "errors": []
+    },
+    {
+      "instance": "a-low-4",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": "1937",
+      "correct": true,
+      "answer": "1937",
+      "judge_rationale": "The candidate answer matches the gold answer year exactly: 1937.",
+      "llm_calls": 3,
+      "input_tokens": 3723,
+      "output_tokens": 69,
+      "total_tokens": 3792,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43173.706748963
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43176.069331647
+        }
+      ],
+      "latency_s": 5.752613491000375,
+      "errors": []
+    },
+    {
+      "instance": "a-low-5",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": "24.51",
+      "correct": true,
+      "answer": "24.51 km",
+      "judge_rationale": "The candidate answer gives 24.51 km, which matches the gold value of 24.51 kilometres exactly.",
+      "llm_calls": 2,
+      "input_tokens": 1129,
+      "output_tokens": 117,
+      "total_tokens": 1246,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43181.494624572
+        }
+      ],
+      "latency_s": 5.055377814001986,
+      "errors": []
+    },
+    {
+      "instance": "a-low-5",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": "24.51",
+      "correct": true,
+      "answer": "24.5 km",
+      "judge_rationale": "The candidate\u2019s 24.5 km matches the gold value 24.51 km within acceptable rounding/precision for the same tunnel length.",
+      "llm_calls": 2,
+      "input_tokens": 1869,
+      "output_tokens": 40,
+      "total_tokens": 1909,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43187.228718947
+        }
+      ],
+      "latency_s": 3.4804998869949486,
+      "errors": []
+    },
+    {
+      "instance": "a-med-1",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": "Poeschl Tabak (Alois Poeschl GmbH & Co. KG)",
+      "correct": true,
+      "answer": "Alois P\u00f6schl GmbH & Co. KG (P\u00f6schl Tabak)",
+      "judge_rationale": "The candidate names the same company as the gold answer\u2014P\u00f6schl Tabak / Alois P\u00f6schl GmbH & Co. KG\u2014just with equivalent wording and umlaut spelling.",
+      "llm_calls": 2,
+      "input_tokens": 2058,
+      "output_tokens": 228,
+      "total_tokens": 2286,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43193.886456555
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43195.462125769
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43196.657647266
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43198.28416096
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43199.615012718
+        }
+      ],
+      "latency_s": 11.464082630998746,
+      "errors": []
+    },
+    {
+      "instance": "a-med-1",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": "Poeschl Tabak (Alois Poeschl GmbH & Co. KG)",
+      "correct": true,
+      "answer": "P\u00f6schl Tabak GmbH & Co. KG",
+      "judge_rationale": "The candidate answer names P\u00f6schl Tabak GmbH & Co. KG, which is the same company as the gold answer (Poeschl Tabak / Alois P\u00f6schl GmbH & Co. KG), differing only by spelling/diacritics and omission of the founder\u2019s first name.",
+      "llm_calls": 2,
+      "input_tokens": 6363,
+      "output_tokens": 185,
+      "total_tokens": 6548,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43206.478103768
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43206.480331861
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43206.483349055
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43206.485564219
+        }
+      ],
+      "latency_s": 5.924131655003293,
+      "errors": []
+    },
+    {
+      "instance": "a-med-2",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": "Big Dutchman",
+      "correct": true,
+      "answer": "Big Dutchman",
+      "judge_rationale": "The candidate answer exactly matches the gold answer, naming Big Dutchman.",
+      "llm_calls": 2,
+      "input_tokens": 2529,
+      "output_tokens": 243,
+      "total_tokens": 2772,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43215.386525213
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43217.102237607
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43218.652954367
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43220.016952284
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43221.631293246
+        }
+      ],
+      "latency_s": 13.705071429001691,
+      "errors": []
+    },
+    {
+      "instance": "a-med-2",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": "Big Dutchman",
+      "correct": true,
+      "answer": "Big Dutchman",
+      "judge_rationale": "The candidate answer exactly matches the gold answer: Big Dutchman.",
+      "llm_calls": 2,
+      "input_tokens": 4232,
+      "output_tokens": 171,
+      "total_tokens": 4403,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43230.891647408
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43230.894539955
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43230.895725087
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43230.898684789
+        }
+      ],
+      "latency_s": 6.0331544279979425,
+      "errors": []
+    },
+    {
+      "instance": "a-med-3",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": "Karl Mayer (Karl Mayer Group)",
+      "correct": true,
+      "answer": "Karl Mayer (KARL MAYER Group)",
+      "judge_rationale": "The candidate answer names the same company as the gold (Karl Mayer / Karl Mayer Group), with only capitalization differences that do not change the factual content.",
+      "llm_calls": 2,
+      "input_tokens": 2856,
+      "output_tokens": 205,
+      "total_tokens": 3061,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43238.528731894
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43239.653238319
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43240.778053805
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43242.037366193
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43243.326296733
+        }
+      ],
+      "latency_s": 10.561485056998208,
+      "errors": []
+    },
+    {
+      "instance": "a-med-3",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": "Karl Mayer (Karl Mayer Group)",
+      "correct": true,
+      "answer": "KARL MAYER",
+      "judge_rationale": "The candidate answer 'KARL MAYER' matches the gold answer Karl Mayer (Karl Mayer Group) and unambiguously identifies the same company.",
+      "llm_calls": 7,
+      "input_tokens": 26937,
+      "output_tokens": 236,
+      "total_tokens": 27173,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43248.602972963
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43251.466847725
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43253.99261417
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43256.362619867
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43258.495995671
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43260.774469545
+        }
+      ],
+      "latency_s": 15.728854224005772,
+      "errors": []
+    },
+    {
+      "instance": "a-med-4",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": "Uhlmann Pac-Systeme",
+      "correct": true,
+      "answer": "Uhlmann Pac-Systeme GmbH & Co. KG",
+      "judge_rationale": "The candidate answer names the same company as the gold answer, with only the fuller legal entity suffix added.",
+      "llm_calls": 2,
+      "input_tokens": 2756,
+      "output_tokens": 208,
+      "total_tokens": 2964,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43267.406154146
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43268.838670106
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43270.126558581
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43271.425846552
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43272.534979438
+        }
+      ],
+      "latency_s": 11.369333137001377,
+      "errors": []
+    },
+    {
+      "instance": "a-med-4",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": "Uhlmann Pac-Systeme",
+      "correct": true,
+      "answer": "Uhlmann Pac-Systeme GmbH & Co. KG",
+      "judge_rationale": "The candidate answer names the same company as the gold answer, with only the fuller legal entity suffix added.",
+      "llm_calls": 2,
+      "input_tokens": 2131,
+      "output_tokens": 53,
+      "total_tokens": 2184,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43278.568979566
+        }
+      ],
+      "latency_s": 4.197708601001068,
+      "errors": []
+    },
+    {
+      "instance": "a-med-5",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": "Brueckner Maschinenbau (Brueckner Group)",
+      "correct": true,
+      "answer": "Br\u00fcckner Maschinenbau",
+      "judge_rationale": "The candidate answer names Br\u00fcckner Maschinenbau, which is the same company as the gold answer (Brueckner Maschinenbau/Brueckner Group), differing only by spelling/umlaut and omission of the parent group.",
+      "llm_calls": 2,
+      "input_tokens": 2424,
+      "output_tokens": 276,
+      "total_tokens": 2700,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43285.953685657
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43287.680485768
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43289.10819432
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43290.654042682
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43292.369104602
+        }
+      ],
+      "latency_s": 13.565548307000427,
+      "errors": []
+    },
+    {
+      "instance": "a-med-5",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": "Brueckner Maschinenbau (Brueckner Group)",
+      "correct": true,
+      "answer": "Br\u00fcckner Maschinenbau GmbH",
+      "judge_rationale": "The candidate names Br\u00fcckner Maschinenbau GmbH, which corresponds to the gold company Brueckner Maschinenbau (Brueckner Group), differing only by spelling/format and legal form.",
+      "llm_calls": 2,
+      "input_tokens": 2004,
+      "output_tokens": 58,
+      "total_tokens": 2062,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43299.255939425
+        }
+      ],
+      "latency_s": 4.097394158001407,
+      "errors": []
+    },
+    {
+      "instance": "a-high-1",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": "1948",
+      "correct": true,
+      "answer": "KARL MAYER; 1948",
+      "judge_rationale": "The candidate identifies the company as KARL MAYER and states the first machine delivery year as 1948, matching the gold answer\u2019s year.",
+      "llm_calls": 2,
+      "input_tokens": 2606,
+      "output_tokens": 248,
+      "total_tokens": 2854,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43306.528922114
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43307.80073526
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43309.000828508
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43310.25644376
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43311.362323822
+        }
+      ],
+      "latency_s": 10.576354958000593,
+      "errors": []
+    },
+    {
+      "instance": "a-high-1",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": "1948",
+      "correct": true,
+      "answer": "1948",
+      "judge_rationale": "The candidate answer matches the gold answer exactly by stating the first machine was delivered in 1948.",
+      "llm_calls": 3,
+      "input_tokens": 12257,
+      "output_tokens": 242,
+      "total_tokens": 12499,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43318.575875191
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43318.57834409
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43318.580617772
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43318.582852688
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43318.585514589
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43321.912894536
+        }
+      ],
+      "latency_s": 8.944972277000488,
+      "errors": []
+    },
+    {
+      "instance": "a-high-2",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": "A4",
+      "correct": true,
+      "answer": "MULTIVAC \u2014 MULTIVAC A 4",
+      "judge_rationale": "The candidate identifies the company as MULTIVAC and gives its first machine model as A4 (written as \u201cA 4\u201d), which matches the gold answer in substance.",
+      "llm_calls": 2,
+      "input_tokens": 1960,
+      "output_tokens": 226,
+      "total_tokens": 2186,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43332.599525106
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43334.425901745
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43335.604939905
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43337.096059099
+        }
+      ],
+      "latency_s": 9.698492288000125,
+      "errors": []
+    },
+    {
+      "instance": "a-high-2",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": "A4",
+      "correct": true,
+      "answer": "A4",
+      "judge_rationale": "The candidate answer matches the gold answer exactly by giving the first machine\u2019s model designation as A4.",
+      "llm_calls": 2,
+      "input_tokens": 3571,
+      "output_tokens": 190,
+      "total_tokens": 3761,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43344.273591181
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43344.275549593
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43344.279258972
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43344.280509478
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43344.282613142
+        }
+      ],
+      "latency_s": 6.076973957002338,
+      "errors": []
+    },
+    {
+      "instance": "a-high-3",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": "Calveslage",
+      "correct": true,
+      "answer": "Big Dutchman; Calveslage (Vechta-Calveslage)",
+      "judge_rationale": "The candidate correctly identifies the company as Big Dutchman and the Vechta district for its 1985 HQ relocation as Calveslage (Vechta-Calveslage), matching the gold district answer.",
+      "llm_calls": 2,
+      "input_tokens": 2798,
+      "output_tokens": 246,
+      "total_tokens": 3044,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43352.706348414
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43354.856644351
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43356.404429942
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43357.504439133
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43358.676680865
+        }
+      ],
+      "latency_s": 13.252109063003445,
+      "errors": []
+    },
+    {
+      "instance": "a-high-3",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": "Calveslage",
+      "correct": false,
+      "answer": "Calveslage",
+      "judge_rationale": "The question requires both the company name and the Vechta district it relocated to in 1985, but the candidate only provides \"Calveslage\" and omits the company name.",
+      "llm_calls": 3,
+      "input_tokens": 12954,
+      "output_tokens": 265,
+      "total_tokens": 13219,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43366.94096784
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43366.94293081
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43366.946423499
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43366.948548758
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43366.951005004
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43370.827925297
+        }
+      ],
+      "latency_s": 10.299324343002809,
+      "errors": []
+    },
+    {
+      "instance": "a-high-4",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": "Tittmoning",
+      "correct": false,
+      "answer": "Br\u00fcckner Maschinenbau; Munich",
+      "judge_rationale": "The gold answer requires the original founding town to be Tittmoning, but the candidate gives Munich (even though it correctly names Br\u00fcckner Maschinenbau as the company).",
+      "llm_calls": 2,
+      "input_tokens": 1652,
+      "output_tokens": 161,
+      "total_tokens": 1813,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43382.025899542
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43383.085194674
+        }
+      ],
+      "latency_s": 10.925236297000083,
+      "errors": []
+    },
+    {
+      "instance": "a-high-4",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": "Tittmoning",
+      "correct": false,
+      "answer": "Rosenheim",
+      "judge_rationale": "The gold answer states the company was originally founded in Tittmoning, but the candidate answer gives Rosenheim, which is a different town.",
+      "llm_calls": 7,
+      "input_tokens": 54659,
+      "output_tokens": 443,
+      "total_tokens": 55102,
+      "tool_call_count": 10,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43390.799421073
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43390.801373568
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43390.804720095
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43390.806214408
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43390.80869412
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43394.691126208
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43397.871076115
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43400.424030182
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43403.087757888
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43405.607879378
+        }
+      ],
+      "latency_s": 20.388110251995386,
+      "errors": []
+    },
+    {
+      "instance": "a-high-5",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": "3",
+      "correct": true,
+      "answer": "L\u00e6rdal Tunnel \u2014 3",
+      "judge_rationale": "The candidate correctly identifies the L\u00e6rdal Tunnel and states it is divided by 3 large mountain caves, matching the gold answer.",
+      "llm_calls": 2,
+      "input_tokens": 2117,
+      "output_tokens": 145,
+      "total_tokens": 2262,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43411.686426222
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43412.952842454
+        }
+      ],
+      "latency_s": 6.229179759000544,
+      "errors": []
+    },
+    {
+      "instance": "a-high-5",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": "3",
+      "correct": true,
+      "answer": "3",
+      "judge_rationale": "The candidate answer matches the gold answer by stating that the tunnel is divided by 3 large mountain caves.",
+      "llm_calls": 2,
+      "input_tokens": 7254,
+      "output_tokens": 175,
+      "total_tokens": 7429,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 43419.675254762
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43419.677219209
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43419.680609272
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43419.68209106
+        },
+        {
+          "tool": "tavily_search",
+          "t": 43419.68488288
+        }
+      ],
+      "latency_s": 6.256906900998729,
+      "errors": []
+    }
+  ]
+}

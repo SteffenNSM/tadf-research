@@ -34,6 +34,7 @@ from src.archetypes.g_strategic_planning.agent import run_agent
 from src.archetypes.g_strategic_planning.config import MAX_AGENT_STEPS
 from src.archetypes.g_strategic_planning.ground_truth import extract_plan, score_plan
 from src.archetypes.g_strategic_planning.schemas import Plan
+from src.core.llm import MODEL_NAME, results_dir
 from src.core.logging import ExecutionLogger
 
 REPO = Path(__file__).resolve().parents[1]
@@ -125,10 +126,10 @@ def main() -> None:
                 print(f"{inst['id']:11} {name:9} ERROR  {str(e)[:80]}")
             rows.append(row)
 
-    RESULTS.mkdir(parents=True, exist_ok=True)
+    out_dir = results_dir(RESULTS)
     stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    out = RESULTS / f"g_validation_{stamp}.json"
-    out.write_text(json.dumps({"timestamp": stamp, "runs": rows}, indent=2, default=str))
+    out = out_dir / f"g_validation_{stamp}.json"
+    out.write_text(json.dumps({"timestamp": stamp, "model": MODEL_NAME, "runs": rows}, indent=2, default=str))
     print(f"\nResults written to {out.relative_to(REPO)}")
 
 

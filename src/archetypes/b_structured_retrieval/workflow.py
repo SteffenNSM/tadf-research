@@ -1,4 +1,4 @@
-"""Workflow implementation for archetype B: Structured Data Retrieval.
+"""Workflow implementation for archetype B: multi-source Structured Retrieval.
 
 LangGraph StateGraph in DAG mode. External orchestration fixes the step
 sequence; the LLM does not decide which step follows, which tools to call, or
@@ -8,52 +8,56 @@ Graph topology:
     [plan] -> [execute] -> [format] -> END
 
 Canonical minimal form: one LLM call (the plan node), which translates the
-question into a structured QuerySpec. The execute node performs the retrieval
-and aggregation deterministically via the query executor, and the format node
-builds the structured answer. The aggregation is never delegated to the LLM,
-which is the defining property of the workflow paradigm for this archetype.
-Removing the plan node would prevent generic question handling; removing the
-execute node would force the LLM to compute the aggregation, changing the
-paradigm. No optional nodes are included.
+question into a structured MultiSourcePlan (which sources, how to combine). The
+execute node performs retrieval, the cross-source intersection, and the
+aggregation deterministically via the multi-source executor; the format node
+builds the structured answer. The aggregation and the intersection are never
+delegated to the LLM, which is the defining property of the workflow paradigm
+for this archetype. Reads are routed through the same LangChain tools the agent
+uses (db_read / search_emails / search_events) so tool calls are counted on
+equal footing (fair TCC).
 """
 
 from langchain_core.runnables import RunnableConfig
 from langgraph.graph import END, StateGraph
 
 from src.archetypes.b_structured_retrieval.config import (
-    CRM_SCHEMA_DOC,
     PLAN_PROMPT,
+    SOURCE_SCHEMA_DOC,
     TEMPERATURE,
 )
-from src.archetypes.b_structured_retrieval.query_executor import run_query
-from src.archetypes.b_structured_retrieval.schemas import QueryAnswer, QuerySpec
+from src.archetypes.b_structured_retrieval.multisource_executor import run_plan
+from src.archetypes.b_structured_retrieval.schemas import MultiSourcePlan, QueryAnswer
 from src.core.llm import get_llm
+from src.core.tools.calendar import search_events
 from src.core.tools.database import db_read
+from src.core.tools.mail import search_emails
 
 
 def plan(state: dict) -> dict:
-    """Node 1: translate the question into a QuerySpec (the single LLM call)."""
-    llm = get_llm(TEMPERATURE).with_structured_output(QuerySpec)
-    prompt = PLAN_PROMPT.format(schema=CRM_SCHEMA_DOC, question=state["instruction"])
-    spec: QuerySpec = llm.invoke(prompt)
-    return {**state, "spec": spec.model_dump()}
+    """Node 1: translate the question into a MultiSourcePlan (the single LLM call)."""
+    llm = get_llm(TEMPERATURE).with_structured_output(MultiSourcePlan)
+    prompt = PLAN_PROMPT.format(schema=SOURCE_SCHEMA_DOC, question=state["instruction"])
+    plan_obj: MultiSourcePlan = llm.invoke(prompt)
+    return {**state, "plan": plan_obj.model_dump()}
 
 
 def execute(state: dict, config: RunnableConfig | None = None) -> dict:
-    """Node 2: run the query deterministically against the database.
+    """Node 2: run the plan deterministically, routing reads through the tools."""
 
-    The reads are issued through the ``db_read`` LangChain tool so that the
-    workflow's database accesses are counted by the ExecutionLogger callback
-    on equal footing with the agent's tool calls. The aggregation itself
-    remains deterministic and is performed in the query executor, never by
-    the LLM.
-    """
-
-    def load(table: str) -> list[dict]:
+    def crm_loader(table: str) -> list[dict]:
         return db_read.invoke({"table": table, "filters": None}, config=config)
 
-    spec = QuerySpec(**state["spec"])
-    value = run_query(spec, load)
+    def mail_loader(query: str) -> list[str]:
+        msgs = search_emails.invoke({"query": query}, config=config)
+        return [m.get("snippet", "") for m in msgs]
+
+    def cal_loader(query: str) -> list[str]:
+        events = search_events.invoke({"query": query}, config=config)
+        return [e.get("summary", "") for e in events]
+
+    plan_obj = MultiSourcePlan(**state["plan"])
+    value = run_plan(plan_obj, crm_loader, mail_loader, cal_loader)
     return {**state, "raw_value": value}
 
 

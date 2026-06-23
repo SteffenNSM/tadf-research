@@ -2,15 +2,20 @@
   "id": "b-low-4",
   "archetype": "B",
   "difficulty": "low",
-  "instruction": "How many accounts are in the 'EMEA' region?",
+  "instruction": "What is the total amount (sum of 'amount') of all won opportunities (is_won = 1)? Answer with the number.",
   "ground_truth": {
-    "value": 10,
-    "unit": "count"
+    "value": 1314825,
+    "unit": "currency"
   },
+  "sources_required": [
+    "CRM.opportunities"
+  ],
+  "n_sources": 1,
+  "operation": "sum",
   "provenance": {
-    "source_benchmark": "CRMArena (Huang et al., 2025)",
-    "source_task_type": "Account Count",
-    "adaptation": "Schema and task type adapted from CRMArena structured querying; records synthesized locally (seed=42) for reproducibility.",
+    "source_benchmark": "CRMArena structured querying (Huang et al., 2025) + WorkBench mailbox/calendar (Styles et al., 2024)",
+    "construction_method": "Author-constructed multi-source sweep-all: a CRM structured set intersected with Mail/Calendar-derived sets; all sources knowable from the question (plan-time-decidable). Labelled honestly per IT-017.",
+    "difficulty_axis": "number of distinct sources that must be combined",
     "license": "CC BY-NC 4.0"
   }
 }

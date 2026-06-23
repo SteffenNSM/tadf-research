@@ -1,0 +1,167 @@
+[
+  {
+    "instance": "a-low-1",
+    "memorized": false,
+    "verdicts": [
+      0,
+      0,
+      0
+    ],
+    "gold": "Niesmann Am Dicken Stein GmbH",
+    "no_tool_answer": "I don't know"
+  },
+  {
+    "instance": "a-low-2",
+    "memorized": false,
+    "verdicts": [
+      0,
+      0,
+      0
+    ],
+    "gold": "1948",
+    "no_tool_answer": "I don't know"
+  },
+  {
+    "instance": "a-low-3",
+    "memorized": false,
+    "verdicts": [
+      0,
+      0,
+      0
+    ],
+    "gold": "Geisenhausen",
+    "no_tool_answer": "I don't know"
+  },
+  {
+    "instance": "a-low-4",
+    "memorized": false,
+    "verdicts": [
+      0,
+      0,
+      0
+    ],
+    "gold": "1937",
+    "no_tool_answer": "I don't know"
+  },
+  {
+    "instance": "a-low-5",
+    "memorized": false,
+    "verdicts": [
+      0,
+      0,
+      0
+    ],
+    "gold": "Boehen",
+    "no_tool_answer": "I don't know"
+  },
+  {
+    "instance": "a-med-1",
+    "memorized": false,
+    "verdicts": [
+      0,
+      0,
+      0
+    ],
+    "gold": "46",
+    "no_tool_answer": "I don't know"
+  },
+  {
+    "instance": "a-med-2",
+    "memorized": false,
+    "verdicts": [
+      0,
+      0,
+      0
+    ],
+    "gold": "Brueckner Maschinenbau",
+    "no_tool_answer": "I don't know"
+  },
+  {
+    "instance": "a-med-3",
+    "memorized": false,
+    "verdicts": [
+      0,
+      0,
+      0
+    ],
+    "gold": "Uhlmann Pac-Systeme",
+    "no_tool_answer": "I don't know"
+  },
+  {
+    "instance": "a-med-4",
+    "memorized": false,
+    "verdicts": [
+      0,
+      0,
+      0
+    ],
+    "gold": "58",
+    "no_tool_answer": "I don't know"
+  },
+  {
+    "instance": "a-med-5",
+    "memorized": false,
+    "verdicts": [
+      0,
+      0,
+      0
+    ],
+    "gold": "Uhlmann Pac-Systeme",
+    "no_tool_answer": "I don't know"
+  },
+  {
+    "instance": "a-high-1",
+    "memorized": false,
+    "verdicts": [
+      0,
+      0,
+      0
+    ],
+    "gold": "Aesculap",
+    "no_tool_answer": "I don't know"
+  },
+  {
+    "instance": "a-high-2",
+    "memorized": false,
+    "verdicts": [
+      0,
+      0,
+      0
+    ],
+    "gold": "Ziehl-Abegg",
+    "no_tool_answer": "I don't know"
+  },
+  {
+    "instance": "a-high-3",
+    "memorized": false,
+    "verdicts": [
+      0,
+      0,
+      0
+    ],
+    "gold": "Karl Mayer",
+    "no_tool_answer": "I don't know"
+  },
+  {
+    "instance": "a-high-4",
+    "memorized": false,
+    "verdicts": [
+      0,
+      0,
+      0
+    ],
+    "gold": "Multivac",
+    "no_tool_answer": "I don't know"
+  },
+  {
+    "instance": "a-high-5",
+    "memorized": false,
+    "verdicts": [
+      0,
+      0,
+      0
+    ],
+    "gold": "59",
+    "no_tool_answer": "I don't know"
+  }
+]

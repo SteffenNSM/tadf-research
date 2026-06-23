@@ -2,15 +2,21 @@
   "id": "b-med-1",
   "archetype": "B",
   "difficulty": "med",
-  "instruction": "What is the average handle time in hours (closed_at minus created_at) of closed cases handled by agents on the 'EMEA' team, rounded to one decimal?",
+  "instruction": "What is the total amount (sum of 'amount') of WON opportunities (is_won = 1) whose contract was countersigned? A contract is countersigned only if an email with subject 'Contract countersigned' names the opportunity as 'Opportunity NNN' in its body. Answer with the total amount.",
   "ground_truth": {
-    "value": 94.6,
-    "unit": "hours"
+    "value": 826534,
+    "unit": "currency"
   },
+  "sources_required": [
+    "CRM.opportunities",
+    "Mail"
+  ],
+  "n_sources": 2,
+  "operation": "sum",
   "provenance": {
-    "source_benchmark": "CRMArena (Huang et al., 2025)",
-    "source_task_type": "Handle Time Understanding",
-    "adaptation": "Schema and task type adapted from CRMArena structured querying; records synthesized locally (seed=42) for reproducibility.",
+    "source_benchmark": "CRMArena structured querying (Huang et al., 2025) + WorkBench mailbox/calendar (Styles et al., 2024)",
+    "construction_method": "Author-constructed multi-source sweep-all: a CRM structured set intersected with Mail/Calendar-derived sets; all sources knowable from the question (plan-time-decidable). Labelled honestly per IT-017.",
+    "difficulty_axis": "number of distinct sources that must be combined",
     "license": "CC BY-NC 4.0"
   }
 }

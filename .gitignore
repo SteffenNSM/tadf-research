@@ -25,3 +25,6 @@ venv/
 
 # Claude Code
 CLAUDE.local.md
+
+# Development-model runs (cheap dev sweeps, not the reported evidence base)
+data/results/dev/
