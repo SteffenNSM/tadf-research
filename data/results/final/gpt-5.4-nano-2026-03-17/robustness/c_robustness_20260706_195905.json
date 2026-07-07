@@ -1,0 +1,332 @@
+{
+  "timestamp": "20260706_195905",
+  "model": "gpt-5.4-nano-2026-03-17",
+  "runs": [
+    {
+      "instance": "rc-low-1",
+      "base_instance": "c-low-1",
+      "perturbation_type": "typos",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "expected": {
+        "e1": "Billing",
+        "e2": "Technical",
+        "e3": "Shipping"
+      },
+      "accuracy": 1.0,
+      "n_correct": 3,
+      "n_total": 3,
+      "predicted": {
+        "e1": "Billing",
+        "e2": "Technical",
+        "e3": "Shipping"
+      },
+      "n_chunks": 1,
+      "llm_calls": 1,
+      "input_tokens": 941,
+      "output_tokens": 124,
+      "total_tokens": 1065,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 2.8888685690035345,
+      "errors": []
+    },
+    {
+      "instance": "rc-low-1",
+      "base_instance": "c-low-1",
+      "perturbation_type": "typos",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "expected": {
+        "e1": "Billing",
+        "e2": "Technical",
+        "e3": "Shipping"
+      },
+      "accuracy": 1.0,
+      "n_correct": 3,
+      "n_total": 3,
+      "predicted": {
+        "e1": "Billing",
+        "e2": "Technical",
+        "e3": "Shipping"
+      },
+      "n_chunks": null,
+      "llm_calls": 1,
+      "input_tokens": 1102,
+      "output_tokens": 26,
+      "total_tokens": 1128,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 1.0927617110064602,
+      "errors": []
+    },
+    {
+      "instance": "rc-low-2",
+      "base_instance": "c-low-2",
+      "perturbation_type": "colloquial",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "expected": {
+        "e1": "Account",
+        "e2": "Product",
+        "e3": "Billing"
+      },
+      "accuracy": 1.0,
+      "n_correct": 3,
+      "n_total": 3,
+      "predicted": {
+        "e1": "Account",
+        "e2": "Product",
+        "e3": "Billing"
+      },
+      "n_chunks": 1,
+      "llm_calls": 1,
+      "input_tokens": 930,
+      "output_tokens": 139,
+      "total_tokens": 1069,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 1.7517774239968276,
+      "errors": []
+    },
+    {
+      "instance": "rc-low-2",
+      "base_instance": "c-low-2",
+      "perturbation_type": "colloquial",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "expected": {
+        "e1": "Account",
+        "e2": "Product",
+        "e3": "Billing"
+      },
+      "accuracy": 1.0,
+      "n_correct": 3,
+      "n_total": 3,
+      "predicted": {
+        "e1": "Account",
+        "e2": "Product",
+        "e3": "Billing"
+      },
+      "n_chunks": null,
+      "llm_calls": 1,
+      "input_tokens": 1091,
+      "output_tokens": 26,
+      "total_tokens": 1117,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 1.43831513600162,
+      "errors": []
+    },
+    {
+      "instance": "rc-med-1",
+      "base_instance": "c-med-1",
+      "perturbation_type": "jargon_synonym",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "expected": {
+        "e1": "Account",
+        "e2": "Billing",
+        "e3": "Technical",
+        "e4": "Shipping",
+        "e5": "Product"
+      },
+      "accuracy": 1.0,
+      "n_correct": 5,
+      "n_total": 5,
+      "predicted": {
+        "e1": "Account",
+        "e2": "Billing",
+        "e3": "Technical",
+        "e4": "Shipping",
+        "e5": "Product"
+      },
+      "n_chunks": 1,
+      "llm_calls": 1,
+      "input_tokens": 1101,
+      "output_tokens": 197,
+      "total_tokens": 1298,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 2.355481767001038,
+      "errors": []
+    },
+    {
+      "instance": "rc-med-1",
+      "base_instance": "c-med-1",
+      "perturbation_type": "jargon_synonym",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "expected": {
+        "e1": "Account",
+        "e2": "Billing",
+        "e3": "Technical",
+        "e4": "Shipping",
+        "e5": "Product"
+      },
+      "accuracy": 1.0,
+      "n_correct": 5,
+      "n_total": 5,
+      "predicted": {
+        "e1": "Account",
+        "e2": "Billing",
+        "e3": "Technical",
+        "e4": "Shipping",
+        "e5": "Product"
+      },
+      "n_chunks": null,
+      "llm_calls": 1,
+      "input_tokens": 1262,
+      "output_tokens": 42,
+      "total_tokens": 1304,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 1.2651601909965393,
+      "errors": []
+    },
+    {
+      "instance": "rc-med-2",
+      "base_instance": "c-med-2",
+      "perturbation_type": "redundant_selfcorrecting",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "expected": {
+        "e1": "Account",
+        "e2": "Billing",
+        "e3": "Technical",
+        "e4": "Account",
+        "e5": "Billing"
+      },
+      "accuracy": 1.0,
+      "n_correct": 5,
+      "n_total": 5,
+      "predicted": {
+        "e1": "Account",
+        "e2": "Billing",
+        "e3": "Technical",
+        "e4": "Account",
+        "e5": "Billing"
+      },
+      "n_chunks": 1,
+      "llm_calls": 1,
+      "input_tokens": 1149,
+      "output_tokens": 190,
+      "total_tokens": 1339,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 2.5706358839961467,
+      "errors": []
+    },
+    {
+      "instance": "rc-med-2",
+      "base_instance": "c-med-2",
+      "perturbation_type": "redundant_selfcorrecting",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "expected": {
+        "e1": "Account",
+        "e2": "Billing",
+        "e3": "Technical",
+        "e4": "Account",
+        "e5": "Billing"
+      },
+      "accuracy": 1.0,
+      "n_correct": 5,
+      "n_total": 5,
+      "predicted": {
+        "e1": "Account",
+        "e2": "Billing",
+        "e3": "Technical",
+        "e4": "Account",
+        "e5": "Billing"
+      },
+      "n_chunks": null,
+      "llm_calls": 1,
+      "input_tokens": 1310,
+      "output_tokens": 42,
+      "total_tokens": 1352,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 1.282743586001743,
+      "errors": []
+    },
+    {
+      "instance": "rc-high-1",
+      "base_instance": "c-high-1",
+      "perturbation_type": "jargon_typos",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "expected": {
+        "e1": "Technical",
+        "e2": "Shipping",
+        "e3": "Product",
+        "e4": "Billing",
+        "e5": "Technical",
+        "e6": "Account",
+        "e7": "Shipping",
+        "e8": "Product"
+      },
+      "accuracy": 1.0,
+      "n_correct": 8,
+      "n_total": 8,
+      "predicted": {
+        "e1": "Technical",
+        "e2": "Shipping",
+        "e3": "Product",
+        "e4": "Billing",
+        "e5": "Technical",
+        "e6": "Account",
+        "e7": "Shipping",
+        "e8": "Product"
+      },
+      "n_chunks": 2,
+      "llm_calls": 2,
+      "input_tokens": 2162,
+      "output_tokens": 330,
+      "total_tokens": 2492,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 4.445162362004339,
+      "errors": []
+    },
+    {
+      "instance": "rc-high-1",
+      "base_instance": "c-high-1",
+      "perturbation_type": "jargon_typos",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "expected": {
+        "e1": "Technical",
+        "e2": "Shipping",
+        "e3": "Product",
+        "e4": "Billing",
+        "e5": "Technical",
+        "e6": "Account",
+        "e7": "Shipping",
+        "e8": "Product"
+      },
+      "accuracy": 1.0,
+      "n_correct": 8,
+      "n_total": 8,
+      "predicted": {
+        "e1": "Technical",
+        "e2": "Shipping",
+        "e3": "Product",
+        "e4": "Billing",
+        "e5": "Technical",
+        "e6": "Account",
+        "e7": "Shipping",
+        "e8": "Product"
+      },
+      "n_chunks": null,
+      "llm_calls": 1,
+      "input_tokens": 1567,
+      "output_tokens": 66,
+      "total_tokens": 1633,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 1.6927611130013247,
+      "errors": []
+    }
+  ]
+}

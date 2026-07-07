@@ -1,0 +1,16 @@
+{
+  "id": "r-low-1",
+  "archetype": "B",
+  "difficulty": "low",
+  "base_instance": "b-low-1",
+  "perturbation_type": "typos",
+  "instruction": "whats the valeu of the deal we wonn with Mayer & Co?",
+  "ground_truth": {
+    "value": 120000,
+    "unit": "currency"
+  },
+  "provenance": {
+    "construction_method": "Surface perturbation (typos) of b-low-1; gold unchanged. Robustness check, not a new task.",
+    "license": "CC BY-NC 4.0"
+  }
+}

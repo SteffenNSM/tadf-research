@@ -2,27 +2,26 @@
   "id": "a-low-4",
   "archetype": "A",
   "difficulty": "low",
-  "instruction": "In which year was the warp-knitting machine company Karl Mayer in Obertshausen founded?",
+  "instruction": "In the German town of Harsewinkel, an agricultural-machinery company with a doubled letter 'A' in its name is headquartered. What is the company, and what is the name of the important monastery in that town?",
   "ground_truth": {
-    "value": "1937",
-    "unit": "founding_year"
+    "value": "CLAAS; Kloster Marienfeld",
+    "unit": "company_and_monastery"
   },
   "provenance": {
-    "source_benchmark": "BrowseComp (Wei et al., 2025)",
-    "construction_method": "inverted-question (BrowseComp Sec. 2.1); author-constructed (not lifted)",
-    "difficulty_axis": "number of search hops / distinct sources",
-    "domain": "SME hidden champion",
-    "hops": "1",
+    "source_benchmark": "AssistantBench (Yoran et al., 2024); BrowseComp (Wei et al., 2025)",
+    "construction_method": "Two parallel facts about Harsewinkel (town given in the question): the company (CLAAS) and the town's notable monastery (Kloster Marienfeld, in the Marienfeld district). Neither fact depends on the other.",
+    "difficulty_axis": "two distinct sources combined, retrievable in parallel",
+    "domain": "SME hidden champion + local history",
     "sources": [
-      "https://de.wikipedia.org/wiki/Karl_Mayer_Gruppe"
+      "https://de.wikipedia.org/wiki/Claas",
+      "https://de.wikipedia.org/wiki/Kloster_Marienfeld"
     ],
     "verification": {
-      "memorization_no_tool": "pending",
-      "retrievable_via_tavily": "pending",
-      "one_shot_breaks": "n/a (single-hop)",
-      "unique": "yes"
+      "memorization_no_tool": "pending (must be non-memorized on the strongest model used)",
+      "retrievable_via_tavily": "pending (confirm on the run)",
+      "gold_verified": "author-supplied; confirm on the run"
     },
     "note": "",
-    "license": "Original work by the author (task design); BrowseComp construction method referenced only"
+    "license": "Original work by the author (task design)"
   }
 }

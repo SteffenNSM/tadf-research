@@ -1,0 +1,37 @@
+{
+  "id": "rc-low-1",
+  "archetype": "C",
+  "difficulty": "low",
+  "base_instance": "c-low-1",
+  "perturbation_type": "typos",
+  "instruction": "Triage this batch of customer support emails: assign each email to exactly one support category by its primary intent.",
+  "emails": [
+    {
+      "id": "e1",
+      "sender": "user1@customer.example",
+      "subject": "Invoice question",
+      "body": "the sept invoce total looks wrong — can someone doublecheck the charges n tell me whats going on?"
+    },
+    {
+      "id": "e2",
+      "sender": "user2@customer.example",
+      "subject": "App keeps crashing",
+      "body": "since this mornin the dashbaord crashes w a 500 error whenver i open the reprots page. pls fix"
+    },
+    {
+      "id": "e3",
+      "sender": "user3@customer.example",
+      "subject": "Where is my package",
+      "body": "my ordr shiped 5 days ago but the trackign hasnt moved. can u tell me where the packge is?"
+    }
+  ],
+  "expected": {
+    "e1": "Billing",
+    "e2": "Technical",
+    "e3": "Shipping"
+  },
+  "provenance": {
+    "construction_method": "Surface perturbation (typos) of c-low-1's email bodies; ids/subjects/gold unchanged. Robustness check, not a new task.",
+    "license": "Original work by the author (email texts and task design); benchmark semantics reference only"
+  }
+}

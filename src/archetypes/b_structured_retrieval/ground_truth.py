@@ -50,8 +50,37 @@ def _decimals(expected: Any) -> int:
     return len(text.split(".")[1]) if "." in text else 0
 
 
+def _present(predicted: str, expected: Any) -> bool:
+    """Whether a single expected value appears anywhere in the predicted text.
+
+    Used for multi-field (customer-360) answers, where the last-number
+    heuristic does not apply because several values share the response. A
+    numeric expected value matches if the same integer appears as a token
+    (thousands separators tolerated); a string/date matches by case-insensitive
+    substring or whole-word membership.
+    """
+    pe = _to_number(expected)
+    text = str(predicted)
+    if pe is not None and not isinstance(expected, str):
+        for n in _find_numbers(text):
+            if round(n, _decimals(expected)) == round(pe, _decimals(expected)):
+                return True
+        return False
+    es = str(expected).strip().lower()
+    ps = text.strip().lower()
+    return es in ps or bool(re.search(rf"\b{re.escape(es)}\b", ps))
+
+
 def is_correct(predicted: Any, expected: Any) -> bool:
-    """Return True if the predicted answer matches the expected ground truth."""
+    """Return True if the predicted answer matches the expected ground truth.
+
+    Multi-field (customer-360) golds are dicts: every field value must appear in
+    the predicted text. Single-fact golds use the last-number heuristic for
+    numerics and whole-word membership for entity names.
+    """
+    if isinstance(expected, dict):
+        return all(_present(predicted, v) for v in expected.values())
+
     pe = _to_number(expected)
     if pe is not None:
         nums = _find_numbers(str(predicted))

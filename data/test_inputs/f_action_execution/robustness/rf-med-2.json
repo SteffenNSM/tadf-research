@@ -1,0 +1,13 @@
+{
+  "id": "rf-med-2",
+  "archetype": "F",
+  "difficulty": "med",
+  "base_instance": "f-med-4",
+  "perturbation_type": "redundant_buried",
+  "instruction": "so the pricing committee met yesterday (long story, don't ask) and decided we're pulling back on all the deals we'd already pushed into contract talks. concretely, what I need in the system: every opportunity that is currently in stage 'Negotiation' goes back to stage 'Proposal'. nothing else changes, no emails to anyone, just the stage downgrades please.",
+  "expected_post_state": "No opportunities row has stage='Negotiation'; the 16 opportunities that were in 'Negotiation' in the seed now have stage='Proposal'.",
+  "provenance": {
+    "construction_method": "Surface perturbation (redundant_buried) of f-med-4's instruction; all action values remain stated in the text, post-state gold and predicate unchanged. Robustness check, not a new task.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

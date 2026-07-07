@@ -1,0 +1,16 @@
+{
+  "id": "r-low-3",
+  "archetype": "B",
+  "difficulty": "low",
+  "base_instance": "b-low-2",
+  "perturbation_type": "jargon_synonym",
+  "instruction": "which sector or vertical does Helvetia Finance operate in?",
+  "ground_truth": {
+    "value": "Finance",
+    "unit": "industry"
+  },
+  "provenance": {
+    "construction_method": "Surface perturbation (jargon_synonym) of b-low-2; gold unchanged. Robustness check, not a new task.",
+    "license": "CC BY-NC 4.0"
+  }
+}

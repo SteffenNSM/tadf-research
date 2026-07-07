@@ -2,7 +2,7 @@
   "id": "d-high-3",
   "archetype": "D",
   "difficulty": "high",
-  "sub_class": "precedence_P3_over_P4",
+  "sub_class": "new_bonuses_apac_newlogo_strategic_regional_vp",
   "instruction": "Apply the approval policy to this quote request and return the required decision.",
   "quote_request": {
     "lead": {
@@ -11,20 +11,25 @@
       "account_id": 10
     },
     "customer": {
-      "region": "AMER",
+      "region": "APAC",
       "is_existing": false,
-      "has_overdue_invoices": false
+      "has_overdue_invoices": false,
+      "has_credit_hold": false,
+      "is_new_logo": true,
+      "segment": "Strategic"
     },
     "quote": {
-      "amount": 4500,
-      "base_discount_pct": 8
+      "amount": 150000,
+      "base_discount_pct": 8,
+      "term_months": 24
     }
   },
-  "expected_label": "ESCALATE_DIRECTOR",
-  "rationale_hint": "Gates pass; no bonuses; effective 8 %; quote amount $4,500 < $5,000 AND effective > 5 %. P3 fires → ESCALATE_DIRECTOR. P3 takes precedence over P4's bracket, which would have selected APPROVE for an 8 % discount.",
+  "request_text": "Subject: Quote approval request — lead 5013\n\nHi Compliance team,\n\nCould you run our quote approval policy on the request below and let me know the decision?\n\nThe lead (ID 5013) is currently marked \"qualified\" in the CRM. The customer is in the APAC region, is a new (non-existing) customer, sits in the Strategic segment, has no overdue invoices on file, and is not on any credit hold. The deal is for $150,000 over a 24-month term, with a requested base discount of 8%. This deal is a new-logo acquisition.\n\nThanks,\nSales Operations",
+  "expected_label": "ESCALATE_REGIONAL_VP",
+  "rationale_hint": "All four gates pass; B4 (APAC +2), B5 (new-logo +3), B3 (24-month +4) fire → effective 17 %. The deal is $150,000: below the $200,000 high-value threshold (P2) but Strategic and above $100,000, so P2s (precedence 2.5) fires → ESCALATE_REGIONAL_VP, overriding the (10,20] bracket. Exercises the two new bonuses B4/B5.",
   "provenance": {
     "source_benchmark": "CRMArena-Pro Workflow Execution (Huang et al., 2025); World of Workflows Constraint Understanding (Skyfall Research, 2025); WorkBench no-action subset (Styles et al., 2024); FlowBench rule-following (Xiao et al., 2024)",
-    "adaptation": "Author-constructed quote request and approval policy; task semantics follow the rule-application + no-action pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: precedence_P3_over_P4.",
+    "adaptation": "Author-constructed quote request and approval policy; task semantics follow the rule-application + no-action pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: new_bonuses_apac_newlogo_strategic_regional_vp.",
     "license": "Original work by the author (rule set, quote requests, task design); benchmark semantics reference only"
   }
 }

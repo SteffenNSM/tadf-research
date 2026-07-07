@@ -1,0 +1,16 @@
+{
+  "id": "r-low-2",
+  "archetype": "B",
+  "difficulty": "low",
+  "base_instance": "b-low-4",
+  "perturbation_type": "colloquial",
+  "instruction": "yo how much have we bagged in total from Sunrise Retail deals we actually closed / won?",
+  "ground_truth": {
+    "value": 125000,
+    "unit": "currency"
+  },
+  "provenance": {
+    "construction_method": "Surface perturbation (colloquial) of b-low-4; gold unchanged. Robustness check, not a new task.",
+    "license": "CC BY-NC 4.0"
+  }
+}

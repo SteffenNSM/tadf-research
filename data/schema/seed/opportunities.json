@@ -658,5 +658,93 @@
     "created_at": "2025-03-21 09:00:00",
     "close_date": "2025-06-23",
     "is_won": true
+  },
+  {
+    "id": 101,
+    "account_id": 101,
+    "owner_agent_id": 1,
+    "name": "Mayer Renewal 2025",
+    "amount": 120000,
+    "stage": "Closed Won",
+    "created_at": "2025-03-04",
+    "close_date": "2025-08-20",
+    "is_won": true
+  },
+  {
+    "id": 102,
+    "account_id": 101,
+    "owner_agent_id": 1,
+    "name": "Mayer Expansion",
+    "amount": 80000,
+    "stage": "Proposal",
+    "created_at": "2025-09-02",
+    "close_date": "2025-12-01",
+    "is_won": false
+  },
+  {
+    "id": 103,
+    "account_id": 102,
+    "owner_agent_id": 2,
+    "name": "Brueckner Fleet Deal",
+    "amount": 45000,
+    "stage": "Closed Won",
+    "created_at": "2025-02-10",
+    "close_date": "2025-05-15",
+    "is_won": true
+  },
+  {
+    "id": 104,
+    "account_id": 103,
+    "owner_agent_id": 3,
+    "name": "Sunrise POS Rollout",
+    "amount": 95000,
+    "stage": "Closed Won",
+    "created_at": "2025-01-20",
+    "close_date": "2025-04-30",
+    "is_won": true
+  },
+  {
+    "id": 105,
+    "account_id": 103,
+    "owner_agent_id": 3,
+    "name": "Sunrise Loyalty Add-on",
+    "amount": 30000,
+    "stage": "Closed Won",
+    "created_at": "2025-05-02",
+    "close_date": "2025-07-10",
+    "is_won": true
+  },
+  {
+    "id": 106,
+    "account_id": 103,
+    "owner_agent_id": 3,
+    "name": "Sunrise Analytics",
+    "amount": 60000,
+    "stage": "Negotiation",
+    "created_at": "2025-08-15",
+    "close_date": "2025-11-30",
+    "is_won": false
+  },
+  {
+    "id": 107,
+    "account_id": 104,
+    "owner_agent_id": 4,
+    "name": "Helvetia Compliance Suite",
+    "amount": 150000,
+    "stage": "Proposal",
+    "created_at": "2025-09-10",
+    "close_date": "2025-12-20",
+    "is_won": false
+  },
+  {
+    "id": 108,
+    "account_id": 105,
+    "owner_agent_id": 5,
+    "name": "Pacific Pilot",
+    "amount": 25000,
+    "stage": "Closed Won",
+    "created_at": "2025-03-30",
+    "close_date": "2025-06-12",
+    "is_won": true
   }
 ]

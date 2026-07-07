@@ -1,0 +1,29 @@
+{
+  "id": "re-high-1",
+  "archetype": "E",
+  "difficulty": "high",
+  "sub_class": "boundary_fail_three_fails",
+  "instruction": "Apply the rubric to the candidate response and return the verdict.",
+  "inquiry": {
+    "sender": "platform.team@meridian.example",
+    "subject": "Case #155 — Salesforce integration intermittently fails",
+    "body": "hi -- a few things, mostly one big thing. we rolled the new build last week (fine), the dashboards are fine too. the actual problem: our Salesforce integration keeps failing intermittently, roughly once an hour the sync job errors out and we retry by hand, which is getting old fast. it's case #155. please look at that one."
+  },
+  "candidate_response": {
+    "subject": "Re: Integration trouble",
+    "body": "Look, integrations sometimes don't work and our engineering team will get to your Salesforce issue at some point. We're also considering adding a new integration adapter that should help in the future. Maybe ping us back next month if you don't hear anything."
+  },
+  "criterion_failures": [
+    "C1",
+    "C2",
+    "C3"
+  ],
+  "expected_label": "FAIL",
+  "rationale_hint": "Three failures push this to FAIL: C1 ('integrations sometimes don't work' is generic and dismissive of the specific case), C2 ('at some point' / 'next month if you don't hear' no ETA), C3 ('considering adding a new integration adapter' future feature). C4 and C5 are borderline but pass — no reference is required when the response omits one entirely (rubric C5 fails only on wrong or invented references).",
+  "provenance": {
+    "construction_method": "Surface perturbation (buried_noise) of e-high-3's inquiry body; the candidate response, the criterion-failure gold, and the expected label are copied verbatim, and every issue, identifier, amount, and date remains stated. Robustness check, not a new task.",
+    "license": "Original work by the author (rubric, inquiries, candidate responses); benchmark semantics reference only"
+  },
+  "base_instance": "e-high-3",
+  "perturbation_type": "buried_noise"
+}

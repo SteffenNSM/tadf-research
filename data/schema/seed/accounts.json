@@ -138,5 +138,40 @@
     "region": "EMEA",
     "industry": "Manufacturing",
     "type": "Customer"
+  },
+  {
+    "id": 101,
+    "name": "Mayer & Co",
+    "region": "EMEA",
+    "industry": "Manufacturing",
+    "type": "Key Account"
+  },
+  {
+    "id": 102,
+    "name": "Brueckner Logistics",
+    "region": "EMEA",
+    "industry": "Logistics",
+    "type": "Key Account"
+  },
+  {
+    "id": 103,
+    "name": "Sunrise Retail",
+    "region": "AMER",
+    "industry": "Retail",
+    "type": "Key Account"
+  },
+  {
+    "id": 104,
+    "name": "Helvetia Finance",
+    "region": "EMEA",
+    "industry": "Finance",
+    "type": "Key Account"
+  },
+  {
+    "id": 105,
+    "name": "Pacific HealthTech",
+    "region": "APAC",
+    "industry": "Healthcare",
+    "type": "Key Account"
   }
 ]

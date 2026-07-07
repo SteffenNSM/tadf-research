@@ -29,18 +29,29 @@ load_dotenv()
 
 # ── Controlled model configuration ──
 
-#: The model the FINAL Phase 2 results are reported on (the real design).
+#: The strong reference model of the final evaluation grid (pre-registered in
+#: the protocol) and the frozen judge model. NOTE (final-grid design): the
+#: reported Phase 2 results come from a THREE-TIER capability grid on the
+#: frozen artifact state -- gpt-5.4-nano (2x clean + 1x robustness),
+#: gpt-5.4-mini (2x clean + 1x robustness), gpt-5.2 (1x clean + 1x
+#: robustness). nano and mini are therefore RESULT models, not development-
+#: only models; the earlier binary dev/final labeling applies only to
+#: unlabeled ad-hoc runs (see ``results_dir``).
 FINAL_MODEL = "gpt-5.2-2025-12-11"
 
-#: Active model. Defaults to a cheap development model (gpt-5.4-nano, a
-#: GPT-5-family small model) for fast, low-cost pipeline shake-out; override
-#: via the TADF_MODEL environment variable. Set TADF_MODEL=gpt-5.2-2025-12-11
-#: (or change this default back) for the final reported sweep. The active model
-#: is stamped into every results file so dev and final runs are never confused.
+#: Optional grid-run label (e.g. "run1", "run2", "robustness"). When set,
+#: results are written to ``<results>/final/<model>/<label>/`` for every
+#: model tier; when unset, the legacy dev/final routing applies.
+RUN_LABEL = os.getenv("TADF_RUN_LABEL", "")
+
+#: Active model. Defaults to gpt-5.4-nano (capability tier 1 of the final
+#: grid; also the cheap pipeline-shake-out model during development);
+#: override via the TADF_MODEL environment variable. The active model is
+#: stamped into every results file so runs are never confused.
 MODEL_NAME = os.getenv("TADF_MODEL", "gpt-5.4-nano-2026-03-17")
 
-#: True while a non-final (development) model is active; routes results to a
-#: separate dev folder (see ``results_dir``).
+#: True while a non-reference model is active WITHOUT a grid label; routes
+#: unlabeled ad-hoc runs to the dev folder (see ``results_dir``).
 IS_DEV_MODEL = MODEL_NAME != FINAL_MODEL
 
 #: GPT-5 family supports an internal reasoning mode. For controlled experiments
@@ -56,12 +67,19 @@ def _supports_reasoning_effort(model: str) -> bool:
 
 
 def results_dir(base_results: Path) -> Path:
-    """Return the results directory for the active model.
+    """Return the results directory for the active model and run label.
 
-    Development-model runs are written to ``<results>/dev/`` (gitignored) so
-    they never mix with or overwrite the final evidence base in ``<results>/``.
+    Grid runs (TADF_RUN_LABEL set) are written to
+    ``<results>/final/<model>/<label>/`` for every capability tier, so the
+    model and run assignment is encoded in the path as well as in the file's
+    ``model`` stamp. Unlabeled runs keep the legacy routing: non-reference
+    models go to ``<results>/dev/`` (ad-hoc shake-out), the reference model
+    to ``<results>/`` directly.
     """
-    target = base_results / "dev" if IS_DEV_MODEL else base_results
+    if RUN_LABEL:
+        target = base_results / "final" / MODEL_NAME / RUN_LABEL
+    else:
+        target = base_results / "dev" if IS_DEV_MODEL else base_results
     target.mkdir(parents=True, exist_ok=True)
     return target
 
@@ -105,6 +123,13 @@ def get_llm(temperature: float = DEFAULT_TEMPERATURE) -> ChatOpenAI:
         "temperature": temperature,
         "seed": RANDOM_SEED,
         "api_key": api_key,
+        # Bound provider stalls: without an explicit timeout the OpenAI client
+        # waits up to 600s PER ATTEMPT with retries, so a throttled call can
+        # silently stall a grid cell for ~30 minutes (observed 2026-07-06:
+        # 120s+ single-call latencies under rate limiting). 300s per attempt,
+        # 3 retries keeps slow-but-legitimate calls alive and hangs bounded.
+        "timeout": float(os.getenv("TADF_LLM_TIMEOUT", "300")),
+        "max_retries": int(os.getenv("TADF_LLM_RETRIES", "3")),
     }
     # reasoning_effort is sent ONLY for the final reported model. Its purpose
     # is clean reasoning-token accounting on the reported run; development

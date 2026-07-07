@@ -47,7 +47,10 @@ def run_workflow_instance(inst: dict) -> tuple[str, dict]:
     )
     logger.stop()
     answer = state.get("output", {}).get("value", "")
-    return answer, logger.to_record()
+    rec = logger.to_record()
+    rec["spec"] = state.get("spec")                    # LLM #1: RetrievalSpec (searches + SQL)
+    rec["field_results"] = state.get("field_results")  # deterministic results fed to the aggregator
+    return answer, rec
 
 
 def run_agent_instance(inst: dict) -> tuple[str, dict]:

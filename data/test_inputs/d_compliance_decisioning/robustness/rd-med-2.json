@@ -1,0 +1,35 @@
+{
+  "id": "rd-med-2",
+  "archetype": "D",
+  "difficulty": "med",
+  "base_instance": "d-med-3",
+  "perturbation_type": "numeric_shorthand",
+  "critical_fact": "amount (rule P3 threshold)",
+  "instruction": "Apply the approval policy to this quote request and return the required decision.",
+  "request_text": "Subject: tiny deal, lead 5008\n\nOne of the little ones: qualified lead (5008), AMER, new account, Commercial segment, nothing overdue, no credit hold, not a new-logo deal. It's just a $4k deal, 12-month term, with a 6% discount requested. Still needs the policy run though — what's the verdict?",
+  "quote_request": {
+    "lead": {
+      "id": 5008,
+      "status": "qualified",
+      "account_id": 11
+    },
+    "customer": {
+      "region": "AMER",
+      "is_existing": false,
+      "has_overdue_invoices": false,
+      "segment": "Commercial",
+      "has_credit_hold": false,
+      "is_new_logo": false
+    },
+    "quote": {
+      "amount": 4000,
+      "base_discount_pct": 6,
+      "term_months": 12
+    }
+  },
+  "expected_label": "ESCALATE_DIRECTOR",
+  "provenance": {
+    "construction_method": "Surface perturbation (numeric_shorthand) of d-med-3 targeting the decision-critical fact [amount (rule P3 threshold)]; gold label unchanged. Robustness check, not a new task.",
+    "license": "Original work by the author (rule set, quote requests, task design); benchmark semantics reference only"
+  }
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Distance from Goslar, Germany to Hildesheim, Germany - Travelmath",
+    "url": "https://www.travelmath.com/distance/from/Goslar,+Germany/to/Hildesheim,+Germany",
+    "content": "The total straight line flight distance from Goslar, Germany to Hildesheim, Germany is 26 miles. This is equivalent to 42 kilometers or 23 nautical miles."
+  },
+  {
+    "title": "How far is it? - Straight Line Distance Calculator - GPS Coordinates",
+    "url": "https://www.gps-coordinates.net/distance",
+    "content": "# How far is it? This tool enables you to calculate the straight line **distance between** two locations or two cities, \"as the crow flies\". As you can share your location, it will let you know easily how far you are in a straight line from any point of interest. Here are the steps to use it:. 1. Enter the address or the city of the first location. 2. Enter the address or the city of the second location. 3. Click on the \"Calculate the distance\" button. **How far is it?** The result of the geodesic distance calculation is immediately displayed, along with a map showing the two points linked by a straight line. Our formula integrates the curve of the earth to calculate as best as possible the distance as the crow flies. It is extremely accurate, especially for shorter distances. Click on the button to use your geolocation instead of manually entering an address. LoaderAllow or deny location access to proceed."
+  },
+  {
+    "title": "Distance Calculator - Latitude Longitude Data",
+    "url": "https://latlongdata.com/distance-calculator",
+    "content": "[Skip to content](https://latlongdata.com/distance-calculator#content). *   [Calculators](https://latlongdata.com/lat-long-converter/). *   [Distance Calculator](https://latlongdata.com/distance-calculator/). *   [Distance Calculator](https://latlongdata.com/distance-calculator/). # Distance Calculator. ## Calculate Distance. [+](https://latlongdata.com/distance-calculator# \"Zoom in\")[−](https://latlongdata.com/distance-calculator# \"Zoom out\"). ## How to Use the Distance Calculator. *   **Efficient Travel Planning:** The driving distance calculator provides realistic estimates for road trips, delivery routes, and commute times. ### How accurate is this Distance Calculator? 2.   The [Haversine formula](https://en.wikipedia.org/wiki/Haversine_formula) to calculate the great-circle (straight-line) distance between coordinates. 3.   Mapping and routing APIs to calculate driving routes, distances, and estimated travel times based on established road networks. ### Can this tool calculate the distance between two addresses? Simply enter the start and end addresses in the respective input fields for a complete calculation of both driving and straight-line distances. ### Is there a limit to the distances I can calculate? The straight-line distance calculation remains accurate for any two points on Earth. *   [Distance Calculator](https://latlongdata.com/distance-calculator/). *   [Distance Calculator](https://latlongdata.com/distance-calculator/). *   [Distance Calculator](https://latlongdata.com/distance-calculator/)."
+  },
+  {
+    "title": "Calculation of the distance in a straight line | Admin e-guide",
+    "url": "https://admin-eguide.web.cern.ch/en/content/calculation-distance-straight-line",
+    "content": "# Calculation of the distance in a straight line. In the framework of administrative work at CERN, it is sometimes necessary to calculate distances like a crow flies between several locations, like between CERN and the staff member's home station, his place of residence or an educational establishment. The geographical coordinates of the two locations have to be entered in **decimal format**:. Following site can be used to obtain the geographical coordinates of a specified address:. The first location in the calculator below - \"from\" line - is **initialised with CERN's coordinates** (official postal address: CH-1217 Meyrin, Route de Meyrin 385) that can be overwritten if necessary. After having entered the coordinates, press the \"Calculate\" button in order to display the result in km **(Sorry, this calculator does not work with Internet Explorer!)**. | Calculator  ---   Distance like a crow flies | | |. Distance like a crow flies."
+  },
+  {
+    "title": "Calculate distance and bearing between two Latitude/Longitude ...",
+    "url": "https://www.movable-type.co.uk/scripts/latlong.html",
+    "content": "This uses the ‘**haversine**’ formula to calculate the great-circle distance between two points – that is, the shortest distance over the earth’s surface – giving an ‘as-the-crow-flies’ distance between the points (ignoring any hills they fly over, of course!). | Haversine formula: | a = sin²(Δφ/2) + cos φ1 ⋅ cos φ2 ⋅ sin²(Δλ/2) |. | JavaScript: | ``` const R = 6371e3; // metres const φ1 = lat1 * Math.PI/180; // φ, λ in radians const φ2 = lat2 * Math.PI/180; const Δφ = (lat2-lat1) * Math.PI/180; const Δλ = (lon2-lon1) * Math.PI/180; const a = Math.sin(Δφ/2) * Math.sin(Δφ/2) + Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ/2) * Math.sin(Δλ/2); const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); const d = R * c; // in metres ``` |. | Law of cosines: | d = acos( sin φ1 ⋅ sin φ2 + cos φ1 ⋅ cos φ2 ⋅ cos Δλ ) ⋅ R |."
+  }
+]

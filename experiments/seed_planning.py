@@ -107,14 +107,28 @@ def _provenance(sub_class: str | None) -> dict:
     }
 
 
+#: Shared support-runbook excerpt appended verbatim to EVERY instruction
+#: (IT-049 pattern, tau-bench style: the organization owns the procedure, the
+#: requester speaks naturally). It carries the stable conventions the goal
+#: specs rely on -- the primary-contact definition, the default closure-
+#: notification template and its ordering discipline, and the blocked-close
+#: mechanics -- so the requests below can state goals and explicit deviations
+#: instead of dictating procedure. Both paradigms receive the identical text.
+RUNBOOK = """
+
+Support runbook (excerpt):
+- Primary contact: an account's primary contact is the contact with the lowest id at that account.
+- Customer notification on closures: unless the request says otherwise, the account's primary contact receives one email per closed case with subject 'Case <id> closed' (substitute the actual case id) and a brief body, and closure notifications are sent only after every close in the work package is done.
+- Escalation-blocked cases: a case whose transfer history is above the escalation threshold cannot be closed with attempt_close_case; such a case is closed via a direct update that also records the closure timestamp (closed_at).
+- Keep email and event bodies brief, and plan only the actions the work package requires."""
+
+
 INSTANCES: list[dict] = [
     # ── LOW: optimal 3 steps ──
     {
         "id": "g-low-1", "difficulty": "low", "sub_class": "close_notify",
         "instruction": (
-            "Plan the resolution of case 5: close it (resolution summary 'Issue resolved'), "
-            "set its priority to 'Low' once closed, and notify the primary contact of the "
-            "case's account by email with subject 'Case 5 closed' and a brief body."
+            "Case 5 needs to be wrapped up, please: close it with the resolution summary 'Issue resolved' and drop its priority to 'Low' once it is closed. The customer should hear about the closure in the usual way."
         ),
         "goal": {"cases_closed": [5], "case_fields": {"5": {"priority": "Low"}},
                  "emails": [{"recipient": pc(4), "subject": "Case 5 closed"}],
@@ -125,11 +139,7 @@ INSTANCES: list[dict] = [
     {
         "id": "g-low-2", "difficulty": "low", "sub_class": "blocked_close",
         "instruction": (
-            "Plan the closure of case 7. Mind its transfer history when choosing the closing "
-            "action, and make sure the closure timestamp is recorded. Notify the primary "
-            "contact of the case's account by email with subject 'Case 7 closed' and a brief "
-            "body, and schedule a 30-minute review event named 'Case 7 review' on 2026-06-25 "
-            "with the case's owning agent as attendee."
+            "Case 7 has been open far too long -- please plan its closure; check the case's transfer history first so you pick a closing path that actually works. The customer gets the usual closure note, and put a 30-minute review named 'Case 7 review' on 2026-06-25 into the calendar with the case's owning agent as attendee."
         ),
         "goal": {"cases_closed": [7],
                  "emails": [{"recipient": pc(17), "subject": "Case 7 closed"}],
@@ -141,10 +151,7 @@ INSTANCES: list[dict] = [
     {
         "id": "g-low-3", "difficulty": "low", "sub_class": "reassign_handover",
         "instruction": (
-            "Plan the handover of case 8: reassign it to agent 2 and set its priority to "
-            "'Medium' in the same update, then email the receiving agent with subject "
-            "'Case 8 reassigned' and the previous owning agent with subject 'Case 8 handed "
-            "over' (brief bodies). Do not close the case."
+            "Please hand case 8 over to agent 2, setting its priority to 'Medium' in the same update. Let agent 2 know by email with subject 'Case 8 reassigned', and give the previous owning agent a short heads-up with subject 'Case 8 handed over'. The case itself stays open."
         ),
         "goal": {"case_fields": {"8": {"agent_id": 2, "priority": "Medium", "status": "Open"}},
                  "emails": [{"recipient": am(2), "subject": "Case 8 reassigned"},
@@ -156,10 +163,7 @@ INSTANCES: list[dict] = [
     {
         "id": "g-low-4", "difficulty": "low", "sub_class": "opportunity_win",
         "instruction": (
-            "Plan the win booking of opportunity 3: set its stage to 'Closed Won' and is_won "
-            "to true in one update, email the primary contact of its account with subject "
-            "'Opportunity 3 won' and a brief body, and schedule an event named 'Win review "
-            "Account 16' on 2026-06-26 with agent 7 as attendee."
+            "Good news, opportunity 3 came through -- book the win: stage 'Closed Won' and is_won set to true in one update. Send the account's primary contact a note with subject 'Opportunity 3 won', and schedule an event named 'Win review Account 16' on 2026-06-26 with agent 7 as attendee."
         ),
         "goal": {"opp_fields": {"3": {"stage": "Closed Won", "is_won": True}},
                  "emails": [{"recipient": pc(16), "subject": "Opportunity 3 won"}],
@@ -171,10 +175,7 @@ INSTANCES: list[dict] = [
     {
         "id": "g-low-5", "difficulty": "low", "sub_class": "kickoff",
         "instruction": (
-            "Plan the kickoff for account 6: schedule an event named 'Kickoff Account 6' on "
-            "2026-06-22 with agent 7 and the account's primary contact as attendees, email "
-            "that contact with subject 'Kickoff scheduled' and a brief body, and raise the "
-            "priority of account 6's open case 21 to 'High'."
+            "Please set up the kickoff for account 6: an event named 'Kickoff Account 6' on 2026-06-22 with agent 7 and the account's primary contact as attendees, plus an email to that contact with subject 'Kickoff scheduled'. While you are at it, their open case 21 goes up to 'High' priority."
         ),
         "goal": {"case_fields": {"21": {"priority": "High", "status": "Open"}},
                  "emails": [{"recipient": pc(6), "subject": "Kickoff scheduled"}],
@@ -187,11 +188,7 @@ INSTANCES: list[dict] = [
     {
         "id": "g-med-1", "difficulty": "med", "sub_class": "account_sweep",
         "instruction": (
-            "Plan the cleanup of account 13: close its open cases 18, 22 and 67, email the "
-            "account's primary contact once per closed case with subject 'Case <id> closed' "
-            "(e.g. 'Case 18 closed') and brief bodies, sending the notifications only after "
-            "all closes, and finish with an event named 'Account 13 wrap-up' on 2026-06-29 "
-            "with agent 1 as attendee."
+            "Support agreed we finally wrap up account 13: close their open cases 18, 22 and 67 and notify the customer in the usual way. Finish with an event named 'Account 13 wrap-up' on 2026-06-29 with agent 1 as attendee."
         ),
         "goal": {"cases_closed": [18, 22, 67],
                  "emails": [{"recipient": pc(13), "subject": f"Case {i} closed"} for i in (18, 22, 67)],
@@ -203,11 +200,7 @@ INSTANCES: list[dict] = [
     {
         "id": "g-med-2", "difficulty": "med", "sub_class": "bulk_reassign",
         "instruction": (
-            "Plan the rebalancing of account 14: reassign its open cases 40, 62, 63 and 118 "
-            "to agent 8, setting each case's priority to 'Medium' in the same update, then "
-            "email agent 8 once with subject 'Account 14 cases reassigned' and a brief body, "
-            "and finish with an event named 'Handover sync' on 2026-06-30 with agent 8 as "
-            "attendee. Do not close any case."
+            "Please plan the account 14 rebalancing: their open cases 40, 62, 63 and 118 all move to agent 8, each set to 'Medium' priority in the same update. Agent 8 gets one email, subject 'Account 14 cases reassigned', and we finish with an event named 'Handover sync' on 2026-06-30 with agent 8 as attendee. Nothing gets closed."
         ),
         "goal": {"case_fields": {str(i): {"agent_id": 8, "priority": "Medium", "status": "Open"}
                                   for i in (40, 62, 63, 118)},
@@ -220,11 +213,7 @@ INSTANCES: list[dict] = [
     {
         "id": "g-med-3", "difficulty": "med", "sub_class": "mixed_blocked",
         "instruction": (
-            "Plan the closure of agent 5's open cases 31, 32 and 53, recording a closure "
-            "timestamp for every one and minding each case's transfer history when choosing "
-            "the closing action. Email the primary contact of each case's account with "
-            "subject 'Case <id> resolved' and a brief body, and email agent 5 once with "
-            "subject 'Case load resolved'."
+            "Agent 5's open cases 31, 32 and 53 need closing -- check each case's transfer history when picking the closing path. For the customer notes, use the wording 'Case <id> resolved' instead of the runbook's usual 'closed' subject. Agent 5 gets one email at the end, subject 'Case load resolved'."
         ),
         "goal": {"cases_closed": [31, 32, 53],
                  "emails": [{"recipient": pc(12), "subject": "Case 31 resolved"},
@@ -238,11 +227,7 @@ INSTANCES: list[dict] = [
     {
         "id": "g-med-4", "difficulty": "med", "sub_class": "pipeline_update",
         "instruction": (
-            "Plan the account 8 pipeline review: move opportunities 4 and 17 to stage "
-            "'Proposal', close the account's open cases 71 and 98, email the account's "
-            "primary contact exactly once with subject 'Account 8 update' and a brief body, "
-            "and finish with an event named 'Pipeline review Account 8' on 2026-07-01 with "
-            "agent 5 as attendee."
+            "Time for the account 8 pipeline review: opportunities 4 and 17 move to stage 'Proposal' and the account's open cases 71 and 98 get closed. Instead of per-case notes, the customer gets exactly one email, subject 'Account 8 update'. Finish with an event named 'Pipeline review Account 8' on 2026-07-01 with agent 5 as attendee."
         ),
         "goal": {"cases_closed": [71, 98],
                  "opp_fields": {"4": {"stage": "Proposal"}, "17": {"stage": "Proposal"}},
@@ -255,12 +240,7 @@ INSTANCES: list[dict] = [
     {
         "id": "g-med-5", "difficulty": "med", "sub_class": "blocked_in_sweep",
         "instruction": (
-            "Plan the resolution of account 10's open cases 75, 110 and 47, recording a "
-            "closure timestamp for every one and minding each case's transfer history when "
-            "choosing the closing actions. After all closes, email the account's primary "
-            "contact exactly once with subject 'All account 10 cases resolved', and email "
-            "the owning agent of case 47 with subject 'Case 47 closed after review' (brief "
-            "bodies)."
+            "Account 10's open cases 75, 110 and 47 need to be resolved -- check each case's transfer history when picking the closing path. Instead of per-case notes, the customer gets exactly one email after all closes, subject 'All account 10 cases resolved', and the owning agent of case 47 additionally gets one email with subject 'Case 47 closed after review'."
         ),
         "goal": {"cases_closed": [75, 110, 47],
                  "emails": [{"recipient": pc(10), "subject": "All account 10 cases resolved"},
@@ -273,13 +253,7 @@ INSTANCES: list[dict] = [
     {
         "id": "g-high-1", "difficulty": "high", "sub_class": "two_account_sweep",
         "instruction": (
-            "Plan the Q2 cleanup of accounts 14 and 16: close every open case of these two "
-            "accounts that is NOT escalation-blocked — that is cases 40, 62, 63 and 118 "
-            "(account 14) and 16, 54, 81 and 104 (account 16). Email the respective "
-            "account's primary contact once per closed case with subject 'Case <id> closed' "
-            "and brief bodies, only after all closes. Move opportunity 3 to stage "
-            "'Closed Lost'. Finish with an event named 'Q2 cleanup review' on 2026-07-02 "
-            "with agents 7 and 8 as attendees."
+            "Q2 cleanup for accounts 14 and 16, please: close every open case of the two accounts that is not escalation-blocked -- that is cases 40, 62, 63 and 118 on account 14 and cases 16, 54, 81 and 104 on account 16 -- and notify the customers in the usual way. Opportunity 3 unfortunately goes to stage 'Closed Lost'. Wrap up with an event named 'Q2 cleanup review' on 2026-07-02 with agents 7 and 8 as attendees."
         ),
         "goal": {"cases_closed": [40, 62, 63, 118, 16, 54, 81, 104],
                  "emails": ([{"recipient": pc(14), "subject": f"Case {i} closed"} for i in (40, 62, 63, 118)]
@@ -293,13 +267,7 @@ INSTANCES: list[dict] = [
     {
         "id": "g-high-2", "difficulty": "high", "sub_class": "capacity_rebalance",
         "instruction": (
-            "Plan the rebalancing of agent 5's six open cases (31, 32, 53, 78, 93, 98): "
-            "reassign every one to one of agents 2, 6 or 8, with AT MOST two cases per "
-            "receiving agent, and increment each case's transfer_count by exactly 1 in the "
-            "same update. Email the primary contact of each case's account with subject "
-            "'Case <id> reassigned' and a brief body. Email each receiving agent exactly "
-            "once with subject 'Cases reassigned to you'. Finish with an event named "
-            "'Rebalance review' on 2026-07-03 with agent 5 as attendee."
+            "Agent 5 is overloaded -- please plan the rebalancing of their six open cases (31, 32, 53, 78, 93, 98): every one moves to one of agents 2, 6 or 8, with at most two cases per receiving agent, and each case's transfer_count goes up by exactly 1 in the same update. The affected customers get one note per case, subject 'Case <id> reassigned', and every receiving agent gets exactly one email with subject 'Cases reassigned to you'. Finish with an event named 'Rebalance review' on 2026-07-03 with agent 5 as attendee."
         ),
         "goal": {"cases_reassigned": [31, 32, 53, 78, 93, 98],
                  "tc_incremented": [31, 32, 53, 78, 93, 98],
@@ -319,15 +287,7 @@ INSTANCES: list[dict] = [
     {
         "id": "g-high-3", "difficulty": "high", "sub_class": "mixed_discipline",
         "instruction": (
-            "Plan the dual-account consolidation: close account 15's open cases 68, 116 and "
-            "120 and email the account's primary contact once per closed case with subject "
-            "'Case <id> closed'. Close account 18's open cases 30 and 89 and email that "
-            "account's primary contact exactly once with subject 'Account 18 cases "
-            "resolved'. Email the owning agent of each account-18 case with subject "
-            "'Handover complete' (one email per case). Move opportunities 10 and 13 to "
-            "stage 'Proposal'. Schedule two events: 'Account 15 phase 2 kickoff' on "
-            "2026-07-06 with account 15's primary contact, and 'Account 18 retro' on "
-            "2026-07-07 with agent 4 as attendee. All emails use brief bodies."
+            "Please plan the dual-account consolidation. Account 15: close their open cases 68, 116 and 120 and notify the customer in the usual way. Account 18: close their open cases 30 and 89, but instead of per-case notes their contact gets exactly one email with subject 'Account 18 cases resolved', and the owning agent of each account-18 case gets an email with subject 'Handover complete' (one per case). Opportunities 10 and 13 move to stage 'Proposal'. Two events to schedule: 'Account 15 phase 2 kickoff' on 2026-07-06 with account 15's primary contact, and 'Account 18 retro' on 2026-07-07 with agent 4 as attendee."
         ),
         "goal": {"cases_closed": [68, 116, 120, 30, 89],
                  "emails": ([{"recipient": pc(15), "subject": f"Case {i} closed"} for i in (68, 116, 120)]
@@ -344,15 +304,7 @@ INSTANCES: list[dict] = [
     {
         "id": "g-high-4", "difficulty": "high", "sub_class": "escalated_at_scale",
         "instruction": (
-            "Plan the resolution of the five escalated cases 7, 13, 31, 45 and 47. Every "
-            "one of them has a transfer history that blocks the standard closing action — "
-            "choose the closing path accordingly, record a closure timestamp, and set each "
-            "case's priority to 'Low' in the same update. After all closes, email the "
-            "primary contact of each case's account with subject 'Case <id> closed after "
-            "review', and email each case's owning agent with subject 'Escalated case <id> "
-            "resolved' (brief bodies). Move opportunities 12 and 26 to stage 'Proposal'. "
-            "Finish with an event named 'Escalation retrospective' on 2026-07-08 with "
-            "agents 1 and 2 as attendees."
+            "The five escalated cases 7, 13, 31, 45 and 47 finally need resolving. All of them have a transfer history that blocks the standard closing action, so pick the closing path accordingly, and set each case's priority to 'Low' in the same update. For the customer notes use the wording 'Case <id> closed after review', and each case's owning agent additionally gets an email with subject 'Escalated case <id> resolved'. Opportunities 12 and 26 move to stage 'Proposal'. Finish with an event named 'Escalation retrospective' on 2026-07-08 with agents 1 and 2 as attendees."
         ),
         "goal": {"cases_closed": [7, 13, 31, 45, 47],
                  "case_fields": {str(i): {"priority": "Low"} for i in (7, 13, 31, 45, 47)},
@@ -369,14 +321,7 @@ INSTANCES: list[dict] = [
     {
         "id": "g-high-5", "difficulty": "high", "sub_class": "account_cycle",
         "instruction": (
-            "Plan the full account 16 cycle: close its open cases 16, 54, 81 and 104, "
-            "setting case 16's priority to 'Low' after its close, and email the account's "
-            "primary contact once per closed case with subject 'Case <id> closed' (brief "
-            "bodies, only after all closes). Mark opportunity 3 as won (stage 'Closed Won', "
-            "is_won true, one update). Email agents 7 and 10 one message each with subject "
-            "'Account 16 cycle complete'. Schedule three events: 'Account 16 kickoff EU' on "
-            "2026-07-09 with agent 7, 'Account 16 retro' on 2026-07-10 with agent 10, and "
-            "'Account 16 exec review' on 2026-07-11 with agent 7 as attendees."
+            "Let's run the full account 16 cycle and be done with it: close their open cases 16, 54, 81 and 104 (case 16 drops to priority 'Low' after its close) and notify the customer in the usual way. Opportunity 3 is a win -- stage 'Closed Won', is_won true, one update. Agents 7 and 10 each get one email with subject 'Account 16 cycle complete'. And three events: 'Account 16 kickoff EU' on 2026-07-09 with agent 7, 'Account 16 retro' on 2026-07-10 with agent 10, and 'Account 16 exec review' on 2026-07-11 with agent 7 as attendees."
         ),
         "goal": {"cases_closed": [16, 54, 81, 104],
                  "case_fields": {"16": {"priority": "Low"}},
@@ -499,7 +444,7 @@ def main() -> None:
             "archetype": "G",
             "difficulty": inst["difficulty"],
             "sub_class": inst.get("sub_class"),
-            "instruction": inst["instruction"],
+            "instruction": inst["instruction"] + RUNBOOK,
             "goal": inst["goal"],
             "optimal_length": inst["optimal_length"],
             "rationale_hint": inst["rationale_hint"],

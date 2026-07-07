@@ -58,7 +58,7 @@ def run_workflow_instance(inst: dict) -> tuple[dict, dict]:
         {
             "input_id": inst["id"],
             "instruction": inst["instruction"],
-            "quote_request": inst["quote_request"],
+            "request_text": inst["request_text"],
         },
         config={"callbacks": [logger]},
     )
@@ -71,7 +71,7 @@ def run_agent_instance(inst: dict) -> tuple[str, dict]:
     logger = ExecutionLogger()
     logger.start()
     result = run_agent(
-        inst["instruction"], inst["quote_request"], config={"callbacks": [logger]}
+        inst["instruction"], inst["request_text"], config={"callbacks": [logger]}
     )
     logger.stop()
     summary = result["messages"][-1].content if result.get("messages") else ""

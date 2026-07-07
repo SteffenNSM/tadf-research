@@ -1,0 +1,51 @@
+{
+  "id": "rc-med-2",
+  "archetype": "C",
+  "difficulty": "med",
+  "base_instance": "c-med-2",
+  "perturbation_type": "redundant_selfcorrecting",
+  "instruction": "Triage this batch of customer support emails: assign each email to exactly one support category by its primary intent.",
+  "emails": [
+    {
+      "id": "e1",
+      "sender": "user1@customer.example",
+      "subject": "Contractor can't get in",
+      "body": "our new contractor — well, contractor-to-be — says the portal doesn't work, but it works for the rest of us, so i mean it's not down, they just never got added; pls give viewer access to the Atlas project"
+    },
+    {
+      "id": "e2",
+      "sender": "user2@customer.example",
+      "subject": "Double charge among praise",
+      "body": "love the tool, anyway — small thing, the webhook docs are thin, for later — the thing i need now, sorry: our last invoice has two identical line items, we got double-charged, refund one pls"
+    },
+    {
+      "id": "e3",
+      "sender": "user3@customer.example",
+      "subject": "Sync failing, not the address",
+      "body": "thanks for the address fix last week; separate thing, that charge question is resolved on our side — the actual live issue: nightly data sync via your API has timed out for 3 nights, reports are stale, pls look"
+    },
+    {
+      "id": "e4",
+      "sender": "user4@customer.example",
+      "subject": "Access after role change",
+      "body": "after you changed my role, or updated it i guess, i can't reach billing anymore — colleagues can, so not an outage — just restore my perms"
+    },
+    {
+      "id": "e5",
+      "sender": "user5@customer.example",
+      "subject": "Still charged for removed seats",
+      "body": "we removed seats last month, that part's done, but the invoice, this one, still charges the old count — fix the charge pls"
+    }
+  ],
+  "expected": {
+    "e1": "Account",
+    "e2": "Billing",
+    "e3": "Technical",
+    "e4": "Account",
+    "e5": "Billing"
+  },
+  "provenance": {
+    "construction_method": "Surface perturbation (redundant_selfcorrecting) of c-med-2's email bodies; ids/subjects/gold unchanged. Robustness check, not a new task.",
+    "license": "Original work by the author (email texts and task design); benchmark semantics reference only"
+  }
+}

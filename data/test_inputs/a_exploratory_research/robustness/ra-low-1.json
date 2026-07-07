@@ -1,0 +1,16 @@
+{
+  "id": "ra-low-1",
+  "archetype": "A",
+  "difficulty": "low",
+  "base_instance": "a-low-2",
+  "perturbation_type": "typos",
+  "instruction": "whats the name of the guy who foundd BCG (Boston Consluting Group), and the founder of Heidelberg Materials (ex HeidelbergCement)?",
+  "ground_truth": {
+    "value": "Bruce Doolin Henderson; Johann Philipp Schifferdecker",
+    "unit": "two_founders"
+  },
+  "provenance": {
+    "construction_method": "Surface perturbation (typos) of a-low-2; gold unchanged. Robustness check, not a new task.",
+    "license": "Original work by the author (task design)"
+  }
+}

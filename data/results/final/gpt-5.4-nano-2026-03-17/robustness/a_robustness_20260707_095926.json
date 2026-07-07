@@ -1,0 +1,450 @@
+{
+  "timestamp": "20260707_095926",
+  "model": "gpt-5.4-nano-2026-03-17",
+  "runs": [
+    {
+      "instance": "ra-low-1",
+      "base_instance": "a-low-2",
+      "perturbation_type": "typos",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": "Bruce Doolin Henderson; Johann Philipp Schifferdecker",
+      "correct": true,
+      "answer": "Bruce Doolin Henderson (BCG founder) and Johann Philipp Schifferdecker (HeidelbergCement/Heidelberg Materials founder).",
+      "judge_rationale": "The candidate correctly identifies Bruce Doolin Henderson as the BCG founder and Johann Philipp Schifferdecker as the founder of HeidelbergCement/Heidelberg Materials.",
+      "llm_calls": 2,
+      "input_tokens": 5269,
+      "output_tokens": 235,
+      "total_tokens": 5504,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 66018.377896511
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66020.802554902
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66023.263524041
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66025.12393781
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66025.40310367
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66026.73151327
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66028.269369715
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66029.706757238
+        }
+      ],
+      "latency_s": 22.013065093007754,
+      "errors": []
+    },
+    {
+      "instance": "ra-low-1",
+      "base_instance": "a-low-2",
+      "perturbation_type": "typos",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": "Bruce Doolin Henderson; Johann Philipp Schifferdecker",
+      "correct": true,
+      "answer": "Bruce Henderson, Johann Philipp Schifferdecker",
+      "judge_rationale": "The candidate correctly identifies Bruce Doolin Henderson (as Bruce Henderson) and Johann Philipp Schifferdecker, matching both names in the gold answer.",
+      "llm_calls": 3,
+      "input_tokens": 6807,
+      "output_tokens": 105,
+      "total_tokens": 6912,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 66036.204474796
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66036.206099866
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66038.828248122
+        }
+      ],
+      "latency_s": 5.422972845000913,
+      "errors": []
+    },
+    {
+      "instance": "ra-low-2",
+      "base_instance": "a-low-4",
+      "perturbation_type": "colloquial",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": "CLAAS; Kloster Marienfeld",
+      "correct": true,
+      "answer": "CLAAS; Kloster Marienfeld",
+      "judge_rationale": "The candidate correctly identifies both CLAAS and Kloster Marienfeld, matching the gold answer.",
+      "llm_calls": 2,
+      "input_tokens": 6898,
+      "output_tokens": 219,
+      "total_tokens": 7117,
+      "tool_call_count": 10,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 66043.643879317
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66043.936371
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66045.57081869
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66047.22772866
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66048.88964531
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66053.702314503
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66054.050600331
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66055.862953008
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66057.627545885
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66060.255946571
+        }
+      ],
+      "latency_s": 22.22335588799615,
+      "errors": []
+    },
+    {
+      "instance": "ra-low-2",
+      "base_instance": "a-low-4",
+      "perturbation_type": "colloquial",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": "CLAAS; Kloster Marienfeld",
+      "correct": true,
+      "answer": "CLAAS \u2014 Marienfeld (Kloster Marienfeld)",
+      "judge_rationale": "The candidate correctly identifies CLAAS and the monastery as Kloster Marienfeld in Marienfeld.",
+      "llm_calls": 4,
+      "input_tokens": 7904,
+      "output_tokens": 96,
+      "total_tokens": 8000,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 66066.165087164
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66068.831019699
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66071.78106909
+        }
+      ],
+      "latency_s": 9.418266577995382,
+      "errors": []
+    },
+    {
+      "instance": "ra-med-1",
+      "base_instance": "a-med-3",
+      "perturbation_type": "jargon_synonym",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": "Toyota: 28 August 1937; Volkswagen: 28 May 1937; Porsche: 25 April 1931",
+      "correct": false,
+      "answer": "Toyota: 1937; VW: May 28, 1937; Porsche: 1931",
+      "judge_rationale": "The candidate omits the exact founding dates for Toyota and Porsche (only years are given), so it does not match the gold founding dates precisely.",
+      "llm_calls": 2,
+      "input_tokens": 5487,
+      "output_tokens": 254,
+      "total_tokens": 5741,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 66077.742929485
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66080.21780226
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66081.74607185
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66083.408419139
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66086.137137223
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66087.724874474
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66089.203430299
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66090.748148464
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66092.488879532
+        }
+      ],
+      "latency_s": 21.700130347991944,
+      "errors": []
+    },
+    {
+      "instance": "ra-med-1",
+      "base_instance": "a-med-3",
+      "perturbation_type": "jargon_synonym",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": "Toyota: 28 August 1937; Volkswagen: 28 May 1937; Porsche: 25 April 1931",
+      "correct": false,
+      "answer": "Toyota \u2014 1937  \nVW \u2014 May 28, 1937  \nPorsche \u2014 1931",
+      "judge_rationale": "The candidate misses the exact founding dates for Toyota and Porsche (provides only the year for each) even though the gold specifies specific day-and-month founding dates.",
+      "llm_calls": 2,
+      "input_tokens": 7575,
+      "output_tokens": 124,
+      "total_tokens": 7699,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 66099.626625848
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66099.628011554
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66099.629389186
+        }
+      ],
+      "latency_s": 4.1038106990017695,
+      "errors": []
+    },
+    {
+      "instance": "ra-med-2",
+      "base_instance": "a-med-5",
+      "perturbation_type": "redundant_selfcorrecting",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": "RWE Platz 1; Br\u00fcsseler Platz 1; Petuelring 130",
+      "correct": true,
+      "answer": "RWE AG \u2014 RWE Platz 1, 45141 Essen; E.ON SE \u2014 Br\u00fcsseler Platz 1, 45131 Essen; BMW Group Konzernzentrale \u2014 Petuelring 130, 80788 M\u00fcnchen",
+      "judge_rationale": "The candidate provides the same street names and building numbers as the gold answer for RWE Platz 1, Br\u00fcsseler Platz 1, and Petuelring 130.",
+      "llm_calls": 2,
+      "input_tokens": 5151,
+      "output_tokens": 286,
+      "total_tokens": 5437,
+      "tool_call_count": 10,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 66105.595321579
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66108.154213859
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66109.797510217
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66111.329688552
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66113.375662219
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66113.672542767
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66116.091290688
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66117.430921087
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66119.213025657
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66121.066861826
+        }
+      ],
+      "latency_s": 20.600478972992278,
+      "errors": []
+    },
+    {
+      "instance": "ra-med-2",
+      "base_instance": "a-med-5",
+      "perturbation_type": "redundant_selfcorrecting",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": "RWE Platz 1; Br\u00fcsseler Platz 1; Petuelring 130",
+      "correct": true,
+      "answer": "RWE AG: RWE Platz 1; E.ON SE: Br\u00fcsseler Platz 1; BMW Group: Petuelring 130",
+      "judge_rationale": "The candidate provides the same three HQ street addresses as the gold: RWE Platz 1, Br\u00fcsseler Platz 1, and Petuelring 130.",
+      "llm_calls": 2,
+      "input_tokens": 3575,
+      "output_tokens": 126,
+      "total_tokens": 3701,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 66127.35993023
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66127.361279221
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66127.362831802
+        }
+      ],
+      "latency_s": 6.526677772009862,
+      "errors": []
+    },
+    {
+      "instance": "ra-high-1",
+      "base_instance": "a-high-5",
+      "perturbation_type": "jargon_typos",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": "Katrin Reuscher",
+      "correct": true,
+      "answer": "Katrin Reuscher",
+      "judge_rationale": "The candidate answer correctly names Katrin Reuscher as the mayor/B\u00fcrgermeister in 2022.",
+      "llm_calls": 2,
+      "input_tokens": 7762,
+      "output_tokens": 270,
+      "total_tokens": 8032,
+      "tool_call_count": 10,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 66134.397992346
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66136.016165047
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66136.365814134
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66138.566287936
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66139.971502014
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66142.03994359
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66144.661427539
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66146.282944938
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66147.831308111
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66149.806618249
+        }
+      ],
+      "latency_s": 19.880696129010175,
+      "errors": []
+    },
+    {
+      "instance": "ra-high-1",
+      "base_instance": "a-high-5",
+      "perturbation_type": "jargon_typos",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": "Katrin Reuscher",
+      "correct": true,
+      "answer": "Katrin Reuscher",
+      "judge_rationale": "The candidate answer correctly names Katrin Reuscher as the mayor/B\u00fcrgermeister in 2022.",
+      "llm_calls": 3,
+      "input_tokens": 3789,
+      "output_tokens": 67,
+      "total_tokens": 3856,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 66154.364148758
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66156.588270518
+        }
+      ],
+      "latency_s": 4.180383570987033,
+      "errors": []
+    }
+  ]
+}

@@ -25,6 +25,8 @@ from typing import Any
 from dotenv import load_dotenv
 from langchain_core.tools import tool
 
+from src.core.tools._latency import synthetic_delay
+
 load_dotenv()
 
 #: Repository-local cache directory; created on first use.
@@ -96,4 +98,12 @@ def tavily_search(query: str) -> list[dict[str, str]]:
     Returns:
         A list of snippet dicts (up to five).
     """
+    # Synthetic per-call latency so the cached web-search calls reflect the
+    # order of magnitude of a real web-search round trip, rather than the
+    # near-zero latency of a disk-cache read. This restores latency parity with
+    # the Layer 2 Mail/Calendar tools (protocol A.5): the workflow's upfront
+    # many-query plan now incurs a visible, deterministic latency cost, on equal
+    # footing with the agent's per-query searches. Disabled by
+    # TADF_DISABLE_SYNTHETIC_LATENCY (set in unit tests).
+    synthetic_delay("tavily_search", {"query": query})
     return web_search(query, DEFAULT_MAX_RESULTS)

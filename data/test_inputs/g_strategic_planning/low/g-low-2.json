@@ -3,7 +3,7 @@
   "archetype": "G",
   "difficulty": "low",
   "sub_class": "blocked_close",
-  "instruction": "Plan the closure of case 7. Mind its transfer history when choosing the closing action, and make sure the closure timestamp is recorded. Notify the primary contact of the case's account by email with subject 'Case 7 closed' and a brief body, and schedule a 30-minute review event named 'Case 7 review' on 2026-06-25 with the case's owning agent as attendee.",
+  "instruction": "Case 7 has been open far too long -- please plan its closure; check the case's transfer history first so you pick a closing path that actually works. The customer gets the usual closure note, and put a 30-minute review named 'Case 7 review' on 2026-06-25 into the calendar with the case's owning agent as attendee.\n\nSupport runbook (excerpt):\n- Primary contact: an account's primary contact is the contact with the lowest id at that account.\n- Customer notification on closures: unless the request says otherwise, the account's primary contact receives one email per closed case with subject 'Case <id> closed' (substitute the actual case id) and a brief body, and closure notifications are sent only after every close in the work package is done.\n- Escalation-blocked cases: a case whose transfer history is above the escalation threshold cannot be closed with attempt_close_case; such a case is closed via a direct update that also records the closure timestamp (closed_at).\n- Keep email and event bodies brief, and plan only the actions the work package requires.",
   "goal": {
     "cases_closed": [
       7

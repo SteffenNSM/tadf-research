@@ -1,0 +1,1606 @@
+{
+  "timestamp": "20260706_202243",
+  "model": "gpt-5.2-2025-12-11",
+  "runs": [
+    {
+      "instance": "rg-low-1",
+      "base_instance": "g-low-2",
+      "perturbation_type": "colloquial_indirect",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "optimal_length": 3,
+      "correct": true,
+      "plan_parse_ok": true,
+      "iteration_overflow": false,
+      "n_steps": 3,
+      "score_rationale": {
+        "plan_parsed": true,
+        "n_steps": 3,
+        "sim_valid": true,
+        "failed_step": null,
+        "fail_reason": null,
+        "goal_breakdown": {
+          "cases_closed": true,
+          "emails": true,
+          "events": true,
+          "no_other_changes": true
+        }
+      },
+      "plan_steps": [
+        {
+          "tool": "db_update",
+          "args": {
+            "table": "cases",
+            "record_id": 7,
+            "updates": {
+              "status": "Closed",
+              "closed_at": "2026-07-06 00:00:00"
+            }
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact036@example.com",
+            "subject": "Case 7 closed",
+            "body": "Hello Contact 036,\n\nYour support case 7 (Shipping) has been closed. If the issue persists, reply to this email to reopen a new case.\n\nThanks,"
+          }
+        },
+        {
+          "tool": "create_event",
+          "args": {
+            "name": "Case 7 review",
+            "start_time": "2026-06-25 00:00:00",
+            "end_time": "2026-06-25 00:30:00",
+            "attendees": [
+              "agent02@atlas.com"
+            ]
+          }
+        }
+      ],
+      "llm_calls": 2,
+      "input_tokens": 4182,
+      "output_tokens": 358,
+      "total_tokens": 4540,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 50738.479343023
+        },
+        {
+          "tool": "db_read",
+          "t": 50738.792788727
+        },
+        {
+          "tool": "db_read",
+          "t": 50739.089554431
+        }
+      ],
+      "latency_s": 10.794334497993987,
+      "errors": []
+    },
+    {
+      "instance": "rg-low-1",
+      "base_instance": "g-low-2",
+      "perturbation_type": "colloquial_indirect",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "optimal_length": 3,
+      "correct": true,
+      "plan_parse_ok": true,
+      "iteration_overflow": false,
+      "n_steps": 3,
+      "score_rationale": {
+        "plan_parsed": true,
+        "n_steps": 3,
+        "sim_valid": true,
+        "failed_step": null,
+        "fail_reason": null,
+        "goal_breakdown": {
+          "cases_closed": true,
+          "emails": true,
+          "events": true,
+          "no_other_changes": true
+        }
+      },
+      "plan_steps": [
+        {
+          "tool": "db_update",
+          "args": {
+            "table": "cases",
+            "record_id": 7,
+            "updates": {
+              "status": "Closed",
+              "closed_at": "2026-07-06 00:00:00"
+            }
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact036@example.com",
+            "subject": "Case 7 closed",
+            "body": "Hello Contact 036,\n\nCase 7 (Case 007) has been closed. Reply to this email if you need it reopened or have any follow-up questions.\n\nThanks,"
+          }
+        },
+        {
+          "tool": "create_event",
+          "args": {
+            "name": "Case 7 review",
+            "start_time": "2026-06-25 09:00:00",
+            "end_time": "2026-06-25 09:30:00",
+            "attendees": [
+              "agent02@atlas.com"
+            ]
+          }
+        }
+      ],
+      "llm_calls": 3,
+      "input_tokens": 5184,
+      "output_tokens": 385,
+      "total_tokens": 5569,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 50748.038368615
+        },
+        {
+          "tool": "db_read",
+          "t": 50748.040213168
+        },
+        {
+          "tool": "db_read",
+          "t": 50749.62069913
+        },
+        {
+          "tool": "db_read",
+          "t": 50749.624743321
+        }
+      ],
+      "latency_s": 8.880830938003783,
+      "errors": []
+    },
+    {
+      "instance": "rg-low-2",
+      "base_instance": "g-low-5",
+      "perturbation_type": "values_as_words",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "optimal_length": 3,
+      "correct": true,
+      "plan_parse_ok": true,
+      "iteration_overflow": false,
+      "n_steps": 3,
+      "score_rationale": {
+        "plan_parsed": true,
+        "n_steps": 3,
+        "sim_valid": true,
+        "failed_step": null,
+        "fail_reason": null,
+        "goal_breakdown": {
+          "case_fields": true,
+          "emails": true,
+          "events": true,
+          "no_other_changes": true
+        }
+      },
+      "plan_steps": [
+        {
+          "tool": "create_event",
+          "args": {
+            "name": "Kickoff Account 6",
+            "start_time": "2026-06-22 10:00:00",
+            "end_time": "2026-06-22 11:00:00",
+            "attendees": [
+              "agent07@atlas.com",
+              "contact012@example.com"
+            ]
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact012@example.com",
+            "subject": "Kickoff scheduled",
+            "body": "Hi Contact 012,\n\nYour kickoff for Account 6 has been scheduled for 2026-06-22 10:00\u201311:00.\n\nThanks."
+          }
+        },
+        {
+          "tool": "db_update",
+          "args": {
+            "table": "cases",
+            "record_id": 21,
+            "updates": {
+              "priority": "High"
+            }
+          }
+        }
+      ],
+      "llm_calls": 2,
+      "input_tokens": 2325,
+      "output_tokens": 318,
+      "total_tokens": 2643,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 50757.187620445
+        },
+        {
+          "tool": "db_read",
+          "t": 50757.456667702
+        },
+        {
+          "tool": "db_read",
+          "t": 50757.779177702
+        }
+      ],
+      "latency_s": 13.195340344995202,
+      "errors": []
+    },
+    {
+      "instance": "rg-low-2",
+      "base_instance": "g-low-5",
+      "perturbation_type": "values_as_words",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "optimal_length": 3,
+      "correct": true,
+      "plan_parse_ok": true,
+      "iteration_overflow": false,
+      "n_steps": 3,
+      "score_rationale": {
+        "plan_parsed": true,
+        "n_steps": 3,
+        "sim_valid": true,
+        "failed_step": null,
+        "fail_reason": null,
+        "goal_breakdown": {
+          "case_fields": true,
+          "emails": true,
+          "events": true,
+          "no_other_changes": true
+        }
+      },
+      "plan_steps": [
+        {
+          "tool": "create_event",
+          "args": {
+            "name": "Kickoff Account 6",
+            "start_time": "2026-06-22 10:00:00",
+            "end_time": "2026-06-22 11:00:00",
+            "attendees": [
+              "agent07@atlas.com",
+              "contact012@example.com"
+            ]
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact012@example.com",
+            "subject": "Kickoff scheduled",
+            "body": "Your kickoff for Account 6 is scheduled for 2026-06-22 10:00-11:00. Attendees: Agent 07 and you."
+          }
+        },
+        {
+          "tool": "db_update",
+          "args": {
+            "table": "cases",
+            "record_id": 21,
+            "updates": {
+              "priority": "High"
+            }
+          }
+        }
+      ],
+      "llm_calls": 2,
+      "input_tokens": 2882,
+      "output_tokens": 311,
+      "total_tokens": 3193,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 50769.99152283
+        },
+        {
+          "tool": "db_read",
+          "t": 50769.993981272
+        },
+        {
+          "tool": "db_read",
+          "t": 50769.996284868
+        },
+        {
+          "tool": "db_read",
+          "t": 50769.998105304
+        }
+      ],
+      "latency_s": 5.533169435999298,
+      "errors": []
+    },
+    {
+      "instance": "rg-med-1",
+      "base_instance": "g-med-1",
+      "perturbation_type": "redundant_buried",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "optimal_length": 7,
+      "correct": true,
+      "plan_parse_ok": true,
+      "iteration_overflow": false,
+      "n_steps": 7,
+      "score_rationale": {
+        "plan_parsed": true,
+        "n_steps": 7,
+        "sim_valid": true,
+        "failed_step": null,
+        "fail_reason": null,
+        "goal_breakdown": {
+          "cases_closed": true,
+          "emails": true,
+          "events": true,
+          "closes_before_emails": true,
+          "no_other_changes": true
+        }
+      },
+      "plan_steps": [
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 18,
+            "resolution_summary": "Closing per support agreement; thread concluded and no further action required."
+          }
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 22,
+            "resolution_summary": "Closing per support agreement; account thread concluded and request resolved."
+          }
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 67,
+            "resolution_summary": "Closing per support agreement; product issue thread concluded and no further action required."
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact026@example.com",
+            "subject": "Case 18 closed",
+            "body": "Hello Contact 026,\n\nCase 18 has been closed. If you have any further questions, reply to this email.\n"
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact026@example.com",
+            "subject": "Case 22 closed",
+            "body": "Hello Contact 026,\n\nCase 22 has been closed. If you have any further questions, reply to this email.\n"
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact026@example.com",
+            "subject": "Case 67 closed",
+            "body": "Hello Contact 026,\n\nCase 67 has been closed. If you have any further questions, reply to this email.\n"
+          }
+        },
+        {
+          "tool": "create_event",
+          "args": {
+            "name": "Account 13 wrap-up",
+            "start_time": "2026-06-29 09:00:00",
+            "end_time": "2026-06-29 09:30:00",
+            "attendees": [
+              "agent01@atlas.com"
+            ]
+          }
+        }
+      ],
+      "llm_calls": 2,
+      "input_tokens": 2621,
+      "output_tokens": 559,
+      "total_tokens": 3180,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 50775.887706975
+        },
+        {
+          "tool": "db_read",
+          "t": 50776.238486246
+        },
+        {
+          "tool": "db_read",
+          "t": 50776.536127439
+        },
+        {
+          "tool": "db_read",
+          "t": 50776.823357143
+        },
+        {
+          "tool": "db_read",
+          "t": 50777.113537609
+        }
+      ],
+      "latency_s": 11.051772147999145,
+      "errors": []
+    },
+    {
+      "instance": "rg-med-1",
+      "base_instance": "g-med-1",
+      "perturbation_type": "redundant_buried",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "optimal_length": 7,
+      "correct": true,
+      "plan_parse_ok": true,
+      "iteration_overflow": false,
+      "n_steps": 7,
+      "score_rationale": {
+        "plan_parsed": true,
+        "n_steps": 7,
+        "sim_valid": true,
+        "failed_step": null,
+        "fail_reason": null,
+        "goal_breakdown": {
+          "cases_closed": true,
+          "emails": true,
+          "events": true,
+          "closes_before_emails": true,
+          "no_other_changes": true
+        }
+      },
+      "plan_steps": [
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 18,
+            "resolution_summary": "Closing per support agreement; no further action required."
+          }
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 22,
+            "resolution_summary": "Closing per support agreement; no further action required."
+          }
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 67,
+            "resolution_summary": "Closing per support agreement; no further action required."
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact026@example.com",
+            "subject": "Case 18 closed",
+            "body": "Hi Contact 026,\n\nCase 18 has been closed. Reply to this email if anything else is needed.\n"
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact026@example.com",
+            "subject": "Case 22 closed",
+            "body": "Hi Contact 026,\n\nCase 22 has been closed. Reply to this email if anything else is needed.\n"
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact026@example.com",
+            "subject": "Case 67 closed",
+            "body": "Hi Contact 026,\n\nCase 67 has been closed. Reply to this email if anything else is needed.\n"
+          }
+        },
+        {
+          "tool": "create_event",
+          "args": {
+            "name": "Account 13 wrap-up",
+            "start_time": "2026-06-29 09:00:00",
+            "end_time": "2026-06-29 09:30:00",
+            "attendees": [
+              "agent01@atlas.com"
+            ]
+          }
+        }
+      ],
+      "llm_calls": 2,
+      "input_tokens": 3520,
+      "output_tokens": 460,
+      "total_tokens": 3980,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 50786.579296821
+        },
+        {
+          "tool": "db_read",
+          "t": 50786.581634224
+        },
+        {
+          "tool": "db_read",
+          "t": 50786.584367927
+        }
+      ],
+      "latency_s": 7.164658498004428,
+      "errors": []
+    },
+    {
+      "instance": "rg-med-2",
+      "base_instance": "g-med-2",
+      "perturbation_type": "self_correction_on_ids",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "optimal_length": 6,
+      "correct": true,
+      "plan_parse_ok": true,
+      "iteration_overflow": false,
+      "n_steps": 6,
+      "score_rationale": {
+        "plan_parsed": true,
+        "n_steps": 6,
+        "sim_valid": true,
+        "failed_step": null,
+        "fail_reason": null,
+        "goal_breakdown": {
+          "case_fields": true,
+          "emails": true,
+          "events": true,
+          "no_other_changes": true
+        }
+      },
+      "plan_steps": [
+        {
+          "tool": "db_update",
+          "args": {
+            "table": "cases",
+            "record_id": 40,
+            "updates": {
+              "agent_id": 8,
+              "priority": "Medium"
+            }
+          }
+        },
+        {
+          "tool": "db_update",
+          "args": {
+            "table": "cases",
+            "record_id": 62,
+            "updates": {
+              "agent_id": 8,
+              "priority": "Medium"
+            }
+          }
+        },
+        {
+          "tool": "db_update",
+          "args": {
+            "table": "cases",
+            "record_id": 63,
+            "updates": {
+              "agent_id": 8,
+              "priority": "Medium"
+            }
+          }
+        },
+        {
+          "tool": "db_update",
+          "args": {
+            "table": "cases",
+            "record_id": 118,
+            "updates": {
+              "agent_id": 8,
+              "priority": "Medium"
+            }
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "agent08@atlas.com",
+            "subject": "Account 14 cases reassigned",
+            "body": "Cases 40, 62, 63, and 118 for account 14 have been reassigned to you and set to Medium priority."
+          }
+        },
+        {
+          "tool": "create_event",
+          "args": {
+            "name": "Handover sync",
+            "start_time": "2026-06-30 09:00:00",
+            "end_time": "2026-06-30 09:30:00",
+            "attendees": [
+              "agent08@atlas.com"
+            ]
+          }
+        }
+      ],
+      "llm_calls": 2,
+      "input_tokens": 2654,
+      "output_tokens": 426,
+      "total_tokens": 3080,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 50793.745790054
+        },
+        {
+          "tool": "db_read",
+          "t": 50794.061140388
+        },
+        {
+          "tool": "db_read",
+          "t": 50794.351745831
+        },
+        {
+          "tool": "db_read",
+          "t": 50794.654890707
+        },
+        {
+          "tool": "db_read",
+          "t": 50794.995241789
+        }
+      ],
+      "latency_s": 7.970732724003028,
+      "errors": []
+    },
+    {
+      "instance": "rg-med-2",
+      "base_instance": "g-med-2",
+      "perturbation_type": "self_correction_on_ids",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "optimal_length": 6,
+      "correct": true,
+      "plan_parse_ok": true,
+      "iteration_overflow": false,
+      "n_steps": 6,
+      "score_rationale": {
+        "plan_parsed": true,
+        "n_steps": 6,
+        "sim_valid": true,
+        "failed_step": null,
+        "fail_reason": null,
+        "goal_breakdown": {
+          "case_fields": true,
+          "emails": true,
+          "events": true,
+          "no_other_changes": true
+        }
+      },
+      "plan_steps": [
+        {
+          "tool": "db_update",
+          "args": {
+            "table": "cases",
+            "record_id": 40,
+            "updates": {
+              "agent_id": 8,
+              "priority": "Medium"
+            }
+          }
+        },
+        {
+          "tool": "db_update",
+          "args": {
+            "table": "cases",
+            "record_id": 62,
+            "updates": {
+              "agent_id": 8,
+              "priority": "Medium"
+            }
+          }
+        },
+        {
+          "tool": "db_update",
+          "args": {
+            "table": "cases",
+            "record_id": 63,
+            "updates": {
+              "agent_id": 8,
+              "priority": "Medium"
+            }
+          }
+        },
+        {
+          "tool": "db_update",
+          "args": {
+            "table": "cases",
+            "record_id": 118,
+            "updates": {
+              "agent_id": 8,
+              "priority": "Medium"
+            }
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "agent08@atlas.com",
+            "subject": "Account 14 cases reassigned",
+            "body": "Cases 40, 62, 63, and 118 have been reassigned to you with Medium priority."
+          }
+        },
+        {
+          "tool": "create_event",
+          "args": {
+            "name": "Handover sync",
+            "start_time": "2026-06-30 09:00:00",
+            "end_time": "2026-06-30 09:30:00",
+            "attendees": [
+              "agent08@atlas.com"
+            ]
+          }
+        }
+      ],
+      "llm_calls": 2,
+      "input_tokens": 3153,
+      "output_tokens": 417,
+      "total_tokens": 3570,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 50803.329169089
+        },
+        {
+          "tool": "db_read",
+          "t": 50803.33176734
+        },
+        {
+          "tool": "db_read",
+          "t": 50803.334955895
+        },
+        {
+          "tool": "db_read",
+          "t": 50803.337574625
+        },
+        {
+          "tool": "db_read",
+          "t": 50803.342506198
+        }
+      ],
+      "latency_s": 7.980311868996068,
+      "errors": []
+    },
+    {
+      "instance": "rg-high-1",
+      "base_instance": "g-high-1",
+      "perturbation_type": "jargon_synonym",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "optimal_length": 18,
+      "correct": true,
+      "plan_parse_ok": true,
+      "iteration_overflow": false,
+      "n_steps": 18,
+      "score_rationale": {
+        "plan_parsed": true,
+        "n_steps": 18,
+        "sim_valid": true,
+        "failed_step": null,
+        "fail_reason": null,
+        "goal_breakdown": {
+          "cases_closed": true,
+          "opp_fields": true,
+          "emails": true,
+          "events": true,
+          "closes_before_emails": true,
+          "no_other_changes": true
+        }
+      },
+      "plan_steps": [
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 40,
+            "resolution_summary": "Q2 hygiene sweep: resolved and closed."
+          }
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 62,
+            "resolution_summary": "Q2 hygiene sweep: resolved and closed."
+          }
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 63,
+            "resolution_summary": "Q2 hygiene sweep: resolved and closed."
+          }
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 118,
+            "resolution_summary": "Q2 hygiene sweep: resolved and closed."
+          }
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 16,
+            "resolution_summary": "Q2 hygiene sweep: resolved and closed."
+          }
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 54,
+            "resolution_summary": "Q2 hygiene sweep: resolved and closed."
+          }
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 81,
+            "resolution_summary": "Q2 hygiene sweep: resolved and closed."
+          }
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 104,
+            "resolution_summary": "Q2 hygiene sweep: resolved and closed."
+          }
+        },
+        {
+          "tool": "db_update",
+          "args": {
+            "table": "opportunities",
+            "record_id": 3,
+            "updates": {
+              "stage": "Closed Lost",
+              "is_won": 0
+            }
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact029@example.com",
+            "subject": "Case 40 closed",
+            "body": "Your support case 40 has been resolved and closed as part of our Q2 hygiene sweep."
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact029@example.com",
+            "subject": "Case 62 closed",
+            "body": "Your support case 62 has been resolved and closed as part of our Q2 hygiene sweep."
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact029@example.com",
+            "subject": "Case 63 closed",
+            "body": "Your support case 63 has been resolved and closed as part of our Q2 hygiene sweep."
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact029@example.com",
+            "subject": "Case 118 closed",
+            "body": "Your support case 118 has been resolved and closed as part of our Q2 hygiene sweep."
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact033@example.com",
+            "subject": "Case 16 closed",
+            "body": "Your support case 16 has been resolved and closed as part of our Q2 hygiene sweep."
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact033@example.com",
+            "subject": "Case 54 closed",
+            "body": "Your support case 54 has been resolved and closed as part of our Q2 hygiene sweep."
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact033@example.com",
+            "subject": "Case 81 closed",
+            "body": "Your support case 81 has been resolved and closed as part of our Q2 hygiene sweep."
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact033@example.com",
+            "subject": "Case 104 closed",
+            "body": "Your support case 104 has been resolved and closed as part of our Q2 hygiene sweep."
+          }
+        },
+        {
+          "tool": "create_event",
+          "args": {
+            "name": "Q2 cleanup review",
+            "start_time": "2026-07-02 09:00:00",
+            "end_time": "2026-07-02 09:30:00",
+            "attendees": [
+              "agent07@atlas.com",
+              "agent08@atlas.com"
+            ]
+          }
+        }
+      ],
+      "llm_calls": 2,
+      "input_tokens": 3457,
+      "output_tokens": 1066,
+      "total_tokens": 4523,
+      "tool_call_count": 13,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 50811.256136436
+        },
+        {
+          "tool": "db_read",
+          "t": 50811.57046408
+        },
+        {
+          "tool": "db_read",
+          "t": 50811.85816834
+        },
+        {
+          "tool": "db_read",
+          "t": 50812.159957147
+        },
+        {
+          "tool": "db_read",
+          "t": 50812.49608779
+        },
+        {
+          "tool": "db_read",
+          "t": 50812.817129364
+        },
+        {
+          "tool": "db_read",
+          "t": 50813.098465912
+        },
+        {
+          "tool": "db_read",
+          "t": 50813.390932475
+        },
+        {
+          "tool": "db_read",
+          "t": 50813.693870417
+        },
+        {
+          "tool": "db_read",
+          "t": 50814.019352866
+        },
+        {
+          "tool": "db_read",
+          "t": 50814.334843916
+        },
+        {
+          "tool": "db_read",
+          "t": 50814.663125776
+        },
+        {
+          "tool": "db_read",
+          "t": 50814.991417348
+        }
+      ],
+      "latency_s": 16.481488067998725,
+      "errors": []
+    },
+    {
+      "instance": "rg-high-1",
+      "base_instance": "g-high-1",
+      "perturbation_type": "jargon_synonym",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "optimal_length": 18,
+      "correct": true,
+      "plan_parse_ok": true,
+      "iteration_overflow": false,
+      "n_steps": 18,
+      "score_rationale": {
+        "plan_parsed": true,
+        "n_steps": 18,
+        "sim_valid": true,
+        "failed_step": null,
+        "fail_reason": null,
+        "goal_breakdown": {
+          "cases_closed": true,
+          "opp_fields": true,
+          "emails": true,
+          "events": true,
+          "closes_before_emails": true,
+          "no_other_changes": true
+        }
+      },
+      "plan_steps": [
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 40,
+            "resolution_summary": "Closed as part of Q2 hygiene sweep (account 14)."
+          }
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 62,
+            "resolution_summary": "Closed as part of Q2 hygiene sweep (account 14)."
+          }
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 63,
+            "resolution_summary": "Closed as part of Q2 hygiene sweep (account 14)."
+          }
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 118,
+            "resolution_summary": "Closed as part of Q2 hygiene sweep (account 14)."
+          }
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 16,
+            "resolution_summary": "Closed as part of Q2 hygiene sweep (account 16)."
+          }
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 54,
+            "resolution_summary": "Closed as part of Q2 hygiene sweep (account 16)."
+          }
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 81,
+            "resolution_summary": "Closed as part of Q2 hygiene sweep (account 16)."
+          }
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 104,
+            "resolution_summary": "Closed as part of Q2 hygiene sweep (account 16)."
+          }
+        },
+        {
+          "tool": "db_update",
+          "args": {
+            "table": "opportunities",
+            "record_id": 3,
+            "updates": {
+              "stage": "Closed Lost",
+              "is_won": 0
+            }
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact029@example.com",
+            "subject": "Case 40 closed",
+            "body": "Case 40 has been resolved and closed. Thanks."
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact029@example.com",
+            "subject": "Case 62 closed",
+            "body": "Case 62 has been resolved and closed. Thanks."
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact029@example.com",
+            "subject": "Case 63 closed",
+            "body": "Case 63 has been resolved and closed. Thanks."
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact029@example.com",
+            "subject": "Case 118 closed",
+            "body": "Case 118 has been resolved and closed. Thanks."
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact033@example.com",
+            "subject": "Case 16 closed",
+            "body": "Case 16 has been resolved and closed. Thanks."
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact033@example.com",
+            "subject": "Case 54 closed",
+            "body": "Case 54 has been resolved and closed. Thanks."
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact033@example.com",
+            "subject": "Case 81 closed",
+            "body": "Case 81 has been resolved and closed. Thanks."
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact033@example.com",
+            "subject": "Case 104 closed",
+            "body": "Case 104 has been resolved and closed. Thanks."
+          }
+        },
+        {
+          "tool": "create_event",
+          "args": {
+            "name": "Q2 cleanup review",
+            "start_time": "2026-07-02 09:00:00",
+            "end_time": "2026-07-02 09:30:00",
+            "attendees": [
+              "agent07@atlas.com",
+              "agent08@atlas.com"
+            ]
+          }
+        }
+      ],
+      "llm_calls": 2,
+      "input_tokens": 14425,
+      "output_tokens": 826,
+      "total_tokens": 15251,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 50827.539412831
+        },
+        {
+          "tool": "db_read",
+          "t": 50827.54290736
+        },
+        {
+          "tool": "db_read",
+          "t": 50827.545303921
+        },
+        {
+          "tool": "db_read",
+          "t": 50827.547713333
+        },
+        {
+          "tool": "db_read",
+          "t": 50827.550758219
+        }
+      ],
+      "latency_s": 12.294275070998992,
+      "errors": []
+    },
+    {
+      "instance": "rg-high-2",
+      "base_instance": "g-high-5",
+      "perturbation_type": "colloquial_buried",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "optimal_length": 15,
+      "correct": true,
+      "plan_parse_ok": true,
+      "iteration_overflow": false,
+      "n_steps": 15,
+      "score_rationale": {
+        "plan_parsed": true,
+        "n_steps": 15,
+        "sim_valid": true,
+        "failed_step": null,
+        "fail_reason": null,
+        "goal_breakdown": {
+          "cases_closed": true,
+          "case_fields": true,
+          "opp_fields": true,
+          "emails": true,
+          "events": true,
+          "closes_before_emails": true,
+          "no_other_changes": true
+        }
+      },
+      "plan_steps": [
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 16,
+            "resolution_summary": "Closing case 16 as part of Account 16 full-cycle wrap-up."
+          }
+        },
+        {
+          "tool": "db_update",
+          "args": {
+            "table": "cases",
+            "record_id": 16,
+            "updates": {
+              "priority": "Low"
+            }
+          }
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 54,
+            "resolution_summary": "Closing case 54 as part of Account 16 full-cycle wrap-up."
+          }
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 81,
+            "resolution_summary": "Closing case 81 as part of Account 16 full-cycle wrap-up."
+          }
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 104,
+            "resolution_summary": "Closing case 104 as part of Account 16 full-cycle wrap-up."
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact033@example.com",
+            "subject": "Case 16 closed",
+            "body": "Your case 16 has been closed. If you have any follow-up questions, reply to this email."
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact033@example.com",
+            "subject": "Case 54 closed",
+            "body": "Your case 54 has been closed. If you have any follow-up questions, reply to this email."
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact033@example.com",
+            "subject": "Case 81 closed",
+            "body": "Your case 81 has been closed. If you have any follow-up questions, reply to this email."
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact033@example.com",
+            "subject": "Case 104 closed",
+            "body": "Your case 104 has been closed. If you have any follow-up questions, reply to this email."
+          }
+        },
+        {
+          "tool": "db_update",
+          "args": {
+            "table": "opportunities",
+            "record_id": 3,
+            "updates": {
+              "stage": "Closed Won",
+              "is_won": 1
+            }
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "agent07@atlas.com",
+            "subject": "Account 16 cycle complete",
+            "body": "Account 16 work package complete: cases 16/54/81/104 closed and opportunity 3 marked Closed Won."
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "agent10@atlas.com",
+            "subject": "Account 16 cycle complete",
+            "body": "Account 16 work package complete: cases 16/54/81/104 closed and opportunity 3 marked Closed Won."
+          }
+        },
+        {
+          "tool": "create_event",
+          "args": {
+            "name": "Account 16 kickoff EU",
+            "start_time": "2026-07-09 09:00:00",
+            "end_time": "2026-07-09 10:00:00",
+            "attendees": [
+              "agent07@atlas.com"
+            ]
+          }
+        },
+        {
+          "tool": "create_event",
+          "args": {
+            "name": "Account 16 retro",
+            "start_time": "2026-07-10 09:00:00",
+            "end_time": "2026-07-10 10:00:00",
+            "attendees": [
+              "agent10@atlas.com"
+            ]
+          }
+        },
+        {
+          "tool": "create_event",
+          "args": {
+            "name": "Account 16 exec review",
+            "start_time": "2026-07-11 09:00:00",
+            "end_time": "2026-07-11 10:00:00",
+            "attendees": [
+              "agent07@atlas.com"
+            ]
+          }
+        }
+      ],
+      "llm_calls": 2,
+      "input_tokens": 3037,
+      "output_tokens": 942,
+      "total_tokens": 3979,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 50839.212841833
+        },
+        {
+          "tool": "db_read",
+          "t": 50839.529720661
+        },
+        {
+          "tool": "db_read",
+          "t": 50839.809073998
+        },
+        {
+          "tool": "db_read",
+          "t": 50840.101283632
+        },
+        {
+          "tool": "db_read",
+          "t": 50840.405582913
+        },
+        {
+          "tool": "db_read",
+          "t": 50840.717192235
+        },
+        {
+          "tool": "db_read",
+          "t": 50841.044045492
+        },
+        {
+          "tool": "db_read",
+          "t": 50841.371542701
+        }
+      ],
+      "latency_s": 13.39240265099943,
+      "errors": []
+    },
+    {
+      "instance": "rg-high-2",
+      "base_instance": "g-high-5",
+      "perturbation_type": "colloquial_buried",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "optimal_length": 15,
+      "correct": true,
+      "plan_parse_ok": true,
+      "iteration_overflow": false,
+      "n_steps": 15,
+      "score_rationale": {
+        "plan_parsed": true,
+        "n_steps": 15,
+        "sim_valid": true,
+        "failed_step": null,
+        "fail_reason": null,
+        "goal_breakdown": {
+          "cases_closed": true,
+          "case_fields": true,
+          "opp_fields": true,
+          "emails": true,
+          "events": true,
+          "closes_before_emails": true,
+          "no_other_changes": true
+        }
+      },
+      "plan_steps": [
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 16,
+            "resolution_summary": "Full cycle completed for Account 16; case closed per request."
+          }
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 54,
+            "resolution_summary": "Full cycle completed for Account 16; case closed per request."
+          }
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 81,
+            "resolution_summary": "Full cycle completed for Account 16; case closed per request."
+          }
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 104,
+            "resolution_summary": "Full cycle completed for Account 16; case closed per request."
+          }
+        },
+        {
+          "tool": "db_update",
+          "args": {
+            "table": "cases",
+            "record_id": 16,
+            "updates": {
+              "priority": "Low"
+            }
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact033@example.com",
+            "subject": "Case 16 closed",
+            "body": "Hello, your case 16 for Account 16 has been closed. Reply to this email if you need anything else."
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact033@example.com",
+            "subject": "Case 54 closed",
+            "body": "Hello, your case 54 for Account 16 has been closed. Reply to this email if you need anything else."
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact033@example.com",
+            "subject": "Case 81 closed",
+            "body": "Hello, your case 81 for Account 16 has been closed. Reply to this email if you need anything else."
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact033@example.com",
+            "subject": "Case 104 closed",
+            "body": "Hello, your case 104 for Account 16 has been closed. Reply to this email if you need anything else."
+          }
+        },
+        {
+          "tool": "db_update",
+          "args": {
+            "table": "opportunities",
+            "record_id": 3,
+            "updates": {
+              "stage": "Closed Won",
+              "is_won": true
+            }
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "agent07@atlas.com",
+            "subject": "Account 16 cycle complete",
+            "body": "Account 16: cases 16/54/81/104 closed; opportunity 3 set to Closed Won."
+          }
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "agent10@atlas.com",
+            "subject": "Account 16 cycle complete",
+            "body": "Account 16: cases 16/54/81/104 closed; opportunity 3 set to Closed Won."
+          }
+        },
+        {
+          "tool": "create_event",
+          "args": {
+            "name": "Account 16 kickoff EU",
+            "start_time": "2026-07-09 09:00:00",
+            "end_time": "2026-07-09 10:00:00",
+            "attendees": [
+              "agent07@atlas.com"
+            ]
+          }
+        },
+        {
+          "tool": "create_event",
+          "args": {
+            "name": "Account 16 retro",
+            "start_time": "2026-07-10 09:00:00",
+            "end_time": "2026-07-10 10:00:00",
+            "attendees": [
+              "agent10@atlas.com"
+            ]
+          }
+        },
+        {
+          "tool": "create_event",
+          "args": {
+            "name": "Account 16 exec review",
+            "start_time": "2026-07-11 09:00:00",
+            "end_time": "2026-07-11 10:00:00",
+            "attendees": [
+              "agent07@atlas.com"
+            ]
+          }
+        }
+      ],
+      "llm_calls": 2,
+      "input_tokens": 3482,
+      "output_tokens": 886,
+      "total_tokens": 4368,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 50852.607732762
+        },
+        {
+          "tool": "db_read",
+          "t": 50852.609834749
+        },
+        {
+          "tool": "db_read",
+          "t": 50852.612514195
+        },
+        {
+          "tool": "db_read",
+          "t": 50852.617421602
+        },
+        {
+          "tool": "db_read",
+          "t": 50852.620557609
+        }
+      ],
+      "latency_s": 15.224220552998304,
+      "errors": []
+    }
+  ]
+}

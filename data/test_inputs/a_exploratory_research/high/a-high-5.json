@@ -2,28 +2,26 @@
   "id": "a-high-5",
   "archetype": "A",
   "difficulty": "high",
-  "instruction": "Consider the German companies that are world market leaders for (i) snuff, (ii) poultry and pig housing equipment, and (iii) thermoforming packaging machines. How many years separate the founding of the oldest and the youngest of the three? Answer with the number of years.",
+  "instruction": "Who was the mayor (Bürgermeister) in 2022 of the town in which VEKA AG is headquartered?",
   "ground_truth": {
-    "value": "59",
-    "unit": "years"
+    "value": "Katrin Reuscher",
+    "unit": "mayor"
   },
   "provenance": {
-    "source_benchmark": "BrowseComp (Wei et al., 2025)",
-    "construction_method": "inverted-question (BrowseComp Sec. 2.1); author-constructed",
-    "difficulty_axis": "3 sources (independent / plan-time-decidable)",
-    "domain": "SME hidden champion / cluster",
+    "source_benchmark": "AssistantBench (Yoran et al., 2024); BrowseComp (Wei et al., 2025)",
+    "construction_method": "Chain: VEKA AG -> town Sendenhorst -> the town's 2022 mayor. Single-value endpoint; obscure final fact, needs the town.",
+    "difficulty_axis": "runtime-dependent chain: each search's result is the input to the next (a plan-upfront workflow cannot chain)",
+    "domain": "SME hidden champion + local politics",
     "sources": [
-      "https://de.wikipedia.org/wiki/Alois_P%C3%B6schl",
-      "https://en.wikipedia.org/wiki/Big_Dutchman",
-      "https://de.wikipedia.org/wiki/Multivac_Sepp_Haggenm%C3%BCller"
+      "https://de.wikipedia.org/wiki/Veka",
+      "https://de.wikipedia.org/wiki/Sendenhorst"
     ],
     "verification": {
-      "memorization_no_tool": "pending",
-      "retrievable_via_tavily": "pending",
-      "one_shot_breaks": "unlikely (plannable)",
-      "unique": "yes"
+      "memorization_no_tool": "pending (must be non-memorized on the strongest model used)",
+      "retrievable_via_tavily": "pending (confirm on the run)",
+      "gold_verified": "author-supplied; confirm on the run"
     },
-    "note": "Poeschl 1902, Big Dutchman 1938, Multivac 1961 -> 1961-1902 = 59. Numeric three-source combination.",
-    "license": "Original work by the author (task design); BrowseComp construction method referenced only"
+    "note": "",
+    "license": "Original work by the author (task design)"
   }
 }

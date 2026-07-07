@@ -1,0 +1,75 @@
+{
+  "id": "rg-high-1",
+  "archetype": "G",
+  "difficulty": "high",
+  "base_instance": "g-high-1",
+  "perturbation_type": "jargon_synonym",
+  "instruction": "time for the Q2 hygiene sweep on accounts 14 and 16: every open ticket on those two that isn't escalation-blocked gets resolved -- concretely cases 40, 62, 63 and 118 on account 14 and cases 16, 54, 81 and 104 on account 16 ('resolved' meaning closed in the CRM) -- and the customers hear about it per the usual routine. opp 3 sadly goes to stage 'Closed Lost'. wrap with a calendar entry named 'Q2 cleanup review' on 2026-07-02, agents 7 and 8 attending.\n\nSupport runbook (excerpt):\n- Primary contact: an account's primary contact is the contact with the lowest id at that account.\n- Customer notification on closures: unless the request says otherwise, the account's primary contact receives one email per closed case with subject 'Case <id> closed' (substitute the actual case id) and a brief body, and closure notifications are sent only after every close in the work package is done.\n- Escalation-blocked cases: a case whose transfer history is above the escalation threshold cannot be closed with attempt_close_case; such a case is closed via a direct update that also records the closure timestamp (closed_at).\n- Keep email and event bodies brief, and plan only the actions the work package requires.",
+  "goal": {
+    "cases_closed": [
+      40,
+      62,
+      63,
+      118,
+      16,
+      54,
+      81,
+      104
+    ],
+    "emails": [
+      {
+        "recipient": "contact029@example.com",
+        "subject": "Case 40 closed"
+      },
+      {
+        "recipient": "contact029@example.com",
+        "subject": "Case 62 closed"
+      },
+      {
+        "recipient": "contact029@example.com",
+        "subject": "Case 63 closed"
+      },
+      {
+        "recipient": "contact029@example.com",
+        "subject": "Case 118 closed"
+      },
+      {
+        "recipient": "contact033@example.com",
+        "subject": "Case 16 closed"
+      },
+      {
+        "recipient": "contact033@example.com",
+        "subject": "Case 54 closed"
+      },
+      {
+        "recipient": "contact033@example.com",
+        "subject": "Case 81 closed"
+      },
+      {
+        "recipient": "contact033@example.com",
+        "subject": "Case 104 closed"
+      }
+    ],
+    "opp_fields": {
+      "3": {
+        "stage": "Closed Lost"
+      }
+    },
+    "events": [
+      {
+        "name": "Q2 cleanup review",
+        "attendees_contain": [
+          "agent07@atlas.com",
+          "agent08@atlas.com"
+        ]
+      }
+    ],
+    "closes_before_emails": true,
+    "no_other_changes": true
+  },
+  "optimal_length": 18,
+  "provenance": {
+    "construction_method": "Surface perturbation (jargon_synonym) of g-high-1's instruction; every id, subject, date, and value remains stated in the text; goal spec and optimal length copied verbatim. Robustness check, not a new task.",
+    "license": "Original work by the author (scenarios, goal specs, action doc); benchmark semantics reference only"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ra-med-1",
+  "archetype": "A",
+  "difficulty": "med",
+  "base_instance": "a-med-3",
+  "perturbation_type": "jargon_synonym",
+  "instruction": "when did the automakers Toyota, VW and Porsche each get established? gimme the founding dates for each",
+  "ground_truth": {
+    "value": "Toyota: 28 August 1937; Volkswagen: 28 May 1937; Porsche: 25 April 1931",
+    "unit": "three_founding_dates"
+  },
+  "provenance": {
+    "construction_method": "Surface perturbation (jargon_synonym) of a-med-3; gold unchanged. Robustness check, not a new task.",
+    "license": "Original work by the author (task design)"
+  }
+}

@@ -19,9 +19,12 @@ axis is the depth of the rule chain to apply.
 
 The C task is solvable from the email text alone (Information Availability
 = HIGH). Both paradigms expose ``db_read`` and ``db_search`` to preserve the
-Phase-2 tool-symmetry invariant; the canonical-minimal workflow never calls
-them, the agent may. Token cost of unnecessary agent lookups is therefore an
-observable comparison signal, analogous to the IT-010 floor finding for A.
+Phase-2 tool-symmetry invariant; the workflow never calls them, and the agent
+too made ZERO tool calls in every run. The a-priori expectation that the
+agent's unnecessary lookups would be the observable cost signal did NOT
+materialise. In the batch-triage design the observed cost signal is instead the
+workflow's chunk overhead at High (the category document is re-sent per chunk),
+so the agent's single-context call is actually the cheaper paradigm there.
 """
 
 from src.archetypes.c_ambiguous_classification.schemas import (
@@ -42,6 +45,20 @@ DIMENSIONAL_PROFILE = {
 
 SOURCE_BENCHMARK = "CRMArena-Pro Case Routing / Activity Priority Understanding (Huang et al., 2025)"
 TEMPERATURE = DEFAULT_TEMPERATURE
+
+#: Chunk size for the workflow's deterministic map-reduce over a batch. A batch
+#: of N emails is split into ceil(N / CHUNK_SIZE) LLM calls: Low (3) -> 1, Med
+#: (5) -> 1, High (8) -> 2. It is the internal conditional branching that keeps
+#: this a single task (one batch input -> one labelled output; Section 2.2.3).
+#: NOTE: at these batch sizes chunking is net OVERHEAD, not an advantage --
+#: each chunk re-sends the full category document, so at High the workflow costs
+#: ~1.5x the agent's tokens (~2.5k vs ~1.6k) with no accuracy gain, and the
+#: agent carries all 8 emails in one call. The threshold was raised from 3 to 5
+#: only to remove the even larger premature-chunking overhead the first nano run
+#: showed at Med. Chunking would pay off (on accuracy/feasibility, not tokens)
+#: only once a single call degrades under far larger load, which C's regime does
+#: not reach; see the iteration log for the batch-load discussion.
+CHUNK_SIZE = 5
 
 #: Tool whitelist exposed to both paradigms. Required by the Phase-2
 #: tool-symmetry invariant: differences in observed behaviour must be
@@ -82,11 +99,23 @@ Task: {instruction}
 Output your routing decision as a ClassificationResult: pick the `label` that captures the requester's primary intent, and give a one-sentence `rationale` describing what the requester is asking for."""
 
 
-AGENT_SYSTEM_PROMPT = """You are a support-desk router. You receive a customer email and assign it to exactly one of the support-ticket categories defined below.
+#: Workflow batch prompt. One call classifies one CHUNK of the batch; the
+#: deterministic node loops over chunks and merges the results.
+BATCH_CLASSIFY_PROMPT = """You are a support-desk router. Classify EACH email in the batch below into exactly one of the support-ticket categories defined below.
 
 {definitions}
 
-The customer email is included in the user message. The email text alone is sufficient to determine the routing target in nearly every case; the read tools (db_read, db_search) are available if you decide a CRM lookup is useful, but the routing decision is about the email's stated intent and rarely requires additional context.
+Emails to classify (each has an `id`):
+{emails}
 
-End your response with a single line in the exact format:
-FINAL_ANSWER: <one of: Billing | Technical | Shipping | Account | Product>"""
+For every email, output an EmailClassification carrying its `email_id` (copied exactly from the input), the `label` capturing that requester's primary intent, and a one-sentence `rationale`. Return exactly one classification per email in the batch above."""
+
+
+AGENT_SYSTEM_PROMPT = """You are a support-desk router. You receive a BATCH of customer emails and must assign EACH to exactly one of the support-ticket categories defined below.
+
+{definitions}
+
+The batch of emails (each with an `id`) is in the user message. Classify every email by its stated primary intent. The email text alone is sufficient in nearly every case; the read tools (db_read, db_search) are available if you decide a CRM lookup is useful, but the routing decision is about each email's stated intent.
+
+End your response with ONE line per email, in the exact format (one line each):
+FINAL_ANSWER <email_id>: <one of: Billing | Technical | Shipping | Account | Product>"""

@@ -83,3 +83,49 @@ def score(predicted_label: str | None, expected_label: str) -> tuple[float, str]
     if predicted_label == expected_label:
         return 1.0, "match"
     return 0.0, f"predicted {predicted_label!r}, expected {expected_label!r}"
+
+
+# ── Batch-triage scoring ──
+
+#: A ``FINAL_ANSWER <email_id>: <label>`` line, one per email in the batch.
+_BATCH_LINE_RE = re.compile(
+    r"FINAL_ANSWER\s+([A-Za-z0-9_\-]+)\s*[:\-]\s*\**\s*([A-Za-z]+)",
+    re.IGNORECASE,
+)
+
+
+def extract_batch_labels(text: str) -> dict[str, str]:
+    """Parse the agent's free-text batch output into ``{email_id: label}``.
+
+    Reads every ``FINAL_ANSWER <email_id>: <label>`` line and normalizes the
+    label to the canonical enum casing. Lines whose label is not a valid
+    category are skipped (the email then scores as incorrect, the desired
+    behaviour for an invented label).
+    """
+    out: dict[str, str] = {}
+    if not text:
+        return out
+    for m in _BATCH_LINE_RE.finditer(text):
+        eid, raw = m.group(1).strip(), m.group(2).strip()
+        for label in VALID_LABELS:
+            if label.lower() == raw.lower():
+                out[eid] = label
+                break
+    return out
+
+
+def score_batch(
+    predicted: dict[str, str], expected: dict[str, str]
+) -> tuple[float, int, int]:
+    """Per-item batch score.
+
+    Returns ``(accuracy, n_correct, n_total)`` where accuracy is the fraction of
+    the expected emails whose predicted label matches the gold. A missing email
+    (the paradigm dropped it from the batch) counts as incorrect, which captures
+    the batch-completeness failure mode.
+    """
+    total = len(expected)
+    if total == 0:
+        return 0.0, 0, 0
+    correct = sum(1 for eid, gold in expected.items() if predicted.get(eid) == gold)
+    return correct / total, correct, total

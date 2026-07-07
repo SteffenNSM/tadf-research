@@ -2,18 +2,49 @@
   "id": "c-med-1",
   "archetype": "C",
   "difficulty": "med",
-  "sub_class": null,
-  "instruction": "Route this email to the correct support category.",
-  "email": {
-    "sender": "remy.ohara@thalia-co.example",
-    "subject": "Error downloading invoice",
-    "body": "I keep hitting a 500 error every time I try to download my latest invoice from the Billing tab. Worked fine last week. Could you look at the page?"
+  "instruction": "Triage this batch of customer support emails: assign each email to exactly one support category by its primary intent.",
+  "emails": [
+    {
+      "id": "e1",
+      "sender": "user1@customer.example",
+      "subject": "Access after role change",
+      "body": "Since you changed my role I can't see the billing section anymore. Pages load fine for my colleagues, so nothing is down — I just need my permissions put back so I can reach billing."
+    },
+    {
+      "id": "e2",
+      "sender": "user2@customer.example",
+      "subject": "Still charged for removed seats",
+      "body": "We removed three seats last month and the app reflects it correctly. The problem is only this invoice: it still bills the old seat count. Please correct the charge."
+    },
+    {
+      "id": "e3",
+      "sender": "user3@customer.example",
+      "subject": "Export: broken or intended?",
+      "body": "When we export a large report to CSV it fails every time with an error. Is that expected behaviour, or is it broken? For us it never completes — it just errors out."
+    },
+    {
+      "id": "e4",
+      "sender": "user4@customer.example",
+      "subject": "Wrong SKU sent",
+      "body": "You shipped the wrong unit. I'd like the correct one sent out; once it arrives we can reconcile the price difference, but the priority is getting the right item delivered."
+    },
+    {
+      "id": "e5",
+      "sender": "user5@customer.example",
+      "subject": "Totals look wrong",
+      "body": "Our weekly totals look wrong, so at first we thought it was a bug. After checking, the numbers are actually correct — we just don't understand how your 'week' is defined. Can you explain how the weekly rollup works?"
+    }
+  ],
+  "expected": {
+    "e1": "Account",
+    "e2": "Billing",
+    "e3": "Technical",
+    "e4": "Shipping",
+    "e5": "Product"
   },
-  "expected_label": "Technical",
-  "rationale_hint": "Side signal: 'invoice' and 'Billing tab' (Billing surface). Dominant signal: the user is reporting a 500 error on a page that previously worked — defect report → Technical. The billing context describes where the bug appears, not what the user wants resolved.",
   "provenance": {
     "source_benchmark": "CRMArena-Pro Case Routing / Activity Priority Understanding (Huang et al., 2025)",
-    "adaptation": "Author-constructed email texts; task semantics follow the CRMArena-Pro routing/disambiguation pattern. The five-category label set is mirrored from cases.issue_category in experiments/seed_crm.py so the routing decision is consistent with the local CRM schema.",
+    "construction_method": "Batch-triage task (single input batch -> single labelled output, Section 2.2.3). Difficulty = batch size (3/5/8) x per-email ambiguity; Med/High emails carry competing near-duplicate signals with one primary intent; High emails are verbose with a buried core ask to load the context. Author-constructed from a labelled pool; no benchmark text reproduced.",
     "license": "Original work by the author (email texts and task design); benchmark semantics reference only"
   }
 }

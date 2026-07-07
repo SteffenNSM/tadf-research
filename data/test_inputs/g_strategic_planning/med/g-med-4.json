@@ -3,7 +3,7 @@
   "archetype": "G",
   "difficulty": "med",
   "sub_class": "pipeline_update",
-  "instruction": "Plan the account 8 pipeline review: move opportunities 4 and 17 to stage 'Proposal', close the account's open cases 71 and 98, email the account's primary contact exactly once with subject 'Account 8 update' and a brief body, and finish with an event named 'Pipeline review Account 8' on 2026-07-01 with agent 5 as attendee.",
+  "instruction": "Time for the account 8 pipeline review: opportunities 4 and 17 move to stage 'Proposal' and the account's open cases 71 and 98 get closed. Instead of per-case notes, the customer gets exactly one email, subject 'Account 8 update'. Finish with an event named 'Pipeline review Account 8' on 2026-07-01 with agent 5 as attendee.\n\nSupport runbook (excerpt):\n- Primary contact: an account's primary contact is the contact with the lowest id at that account.\n- Customer notification on closures: unless the request says otherwise, the account's primary contact receives one email per closed case with subject 'Case <id> closed' (substitute the actual case id) and a brief body, and closure notifications are sent only after every close in the work package is done.\n- Escalation-blocked cases: a case whose transfer history is above the escalation threshold cannot be closed with attempt_close_case; such a case is closed via a direct update that also records the closure timestamp (closed_at).\n- Keep email and event bodies brief, and plan only the actions the work package requires.",
   "goal": {
     "cases_closed": [
       71,

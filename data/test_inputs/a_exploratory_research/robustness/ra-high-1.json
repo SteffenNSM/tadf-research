@@ -1,0 +1,16 @@
+{
+  "id": "ra-high-1",
+  "archetype": "A",
+  "difficulty": "high",
+  "base_instance": "a-high-5",
+  "perturbation_type": "jargon_typos",
+  "instruction": "who was runing the town where VEKA AG sits as its mayor / Bürgermeistr back in 2022?",
+  "ground_truth": {
+    "value": "Katrin Reuscher",
+    "unit": "mayor"
+  },
+  "provenance": {
+    "construction_method": "Surface perturbation (jargon_typos) of a-high-5; gold unchanged. Robustness check, not a new task.",
+    "license": "Original work by the author (task design)"
+  }
+}

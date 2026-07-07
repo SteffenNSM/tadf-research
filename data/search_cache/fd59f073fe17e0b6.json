@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Airports Near Me - Lorch, Germany - Travelmath",
+    "url": "https://www.travelmath.com/nearest-airport/Lorch,+Germany",
+    "content": "The closest major airport to Lorch, Germany is Stuttgart Airport (STR / EDDS). This airport is in Stuttgart, Germany and is 51 km from the center of Lorch,"
+  },
+  {
+    "title": "Airports Near Me - Lorsch, Germany | Travelmath",
+    "url": "https://www.travelmath.com/nearest-airport/Lorsch,+Germany",
+    "content": "# Major airports near Lorsch, Germany:. Search for **direct flights** from your hometown and find **hotels near Lorsch, Germany**, or scroll down for more **international airports** or **domestic airports**. You can also browse local airports if you're a pilot. ## International airports near Lorsch, Germany. ## Domestic airports near Lorsch, Germany. ## Local airports near Lorsch, Germany. This airport has domestic flights from Mannheim, Germany and is 31 km from the center of Lorsch, Germany. Another major airport is **Frankfurt am Main Airport** (FRA / EDDF), which has international and domestic flights from Frankfurt, Germany and is 55 km from Lorsch, Germany. ## Lorsch, Germany. Many times there are multiple airports near the city you want to visit, so you can often find a cheaper flight into a different airport. If you're booking an international flight, you probably want the closest major airport, otherwise if you're a pilot you may be looking for a local airport."
+  },
+  {
+    "title": "Airports Near Me, Nearest Airport Search, Germany - GlobeFeed.com",
+    "url": "https://airport.globefeed.com/germany_Nearest_Airport.asp",
+    "content": "### **Airports Near Me, Nearest Airport Search, Germany**. This is an online tool to search airports in Germany nearest to the entered place, city, town or village and display them on the map with their distances. Click \"Airports Near Me, Find Now\" button to search airport from Germany near your location. OR Enter the place in the above text box and select from the list of options. This will display the tabular list of airports nearest to the selected place, city, town or village in Germany, sorted by their distance. Bellow is the list of some of the major cities with their nearest airport in Germany for your quick reference. Click the city link to display nearest 10 airports around the city with distances on map. | Koeln(Nordrhein-Westfalen) | Cologne Bonn Airport |. | Essen(Nordrhein-Westfalen) | Düsseldorf International Airport |. | Dusseldorf(Nordrhein-Westfalen) | Düsseldorf International Airport |. | Duisburg(Nordrhein-Westfalen) | Düsseldorf International Airport |. | Wuppertal(Nordrhein-Westfalen) | Düsseldorf International Airport |."
+  },
+  {
+    "title": "List of airports in Germany - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/List_of_airports_in_Germany",
+    "content": "# List of airports in Germany. This is a **list of airports in Germany**, sorted by location. | International | |  |  | | --- | --- | | Major | * Berlin–Brandenburg * Cologne/Bonn * Düsseldorf * Frankfurt * Hamburg * Munich * Stuttgart | | Minor | * Bremen * Dortmund * Dresden * Erfurt/Weimar * Friedrichshafen * Hahn * Hannover * Heringsdorf * Karlsruhe/Baden-Baden * Kassel * Leipzig/Halle * Lübeck * Mannheim * Memmingen * Münster/Osnabrück * Nuremberg * Paderborn/Lippstadt * Rostock * Saarbrücken * Sylt * Weeze | |. | Unscheduled | * Aachen * Augsburg * Baltrum * Bayreuth * Bitburg * Braunschweig/Wolfsburg * Cuxhaven/Nordholz * Essen/Mülheim * Frankfurt-Egelsbach * Hamburg–Finkenwerder * Hof–Plauen * Ingolstadt/Manching Air Base * Kiel * Lahr * Langeoog * Leipzig–Altenburg * Magdeburg * Mönchengladbach * Müritz * Neubrandenburg * Norderney * Parchim * Sankt Peter-Ording * Siegerland * Stralsund–Barth * Straubing * Uetersen * Wilhelmshaven * Zweibrücken |."
+  },
+  {
+    "title": "Lufthansa Developer Center - Nearest Airports",
+    "url": "https://developer.lufthansa.com/docs/read/api_details/reference_data/Nearest_Airport",
+    "content": "# Nearest Airports. Find the 5 closest airports to the given latitude and longitude, irrespective of the radius of the reference point. Hence, a radius is not needed for this service. You can use the distance in the response to decide whether to present the user with more than one option or automatically choose the nearest. GET /references/airports/nearest/{latitude},{longitude} GET /references/airports/nearest/{latitude},{longitude}[? Range: -90 (South Pole) to +90 (North Pole), e.g. Range: -180 (West of Prime Meridian) to +180 (East of Prime Meridian). | *{languageCode**}* | Optionally return the airport names in only this language. If not specified, all languages will be in the response. | 2-letter ISO 639-1 language code, e.g. | .Airports | Container for airport elements. | ..Airport[] | Array of all available airports or one airport matching the request. | ...AirportCode | 3-letter IATA airport code, e.g. | @LanguageCode | 2-letter ISO 639-1 language code for the corresponding item. | ...Distance | How close is this airport to the reference point."
+  }
+]

@@ -2,21 +2,20 @@
   "id": "b-high-3",
   "archetype": "B",
   "difficulty": "high",
-  "instruction": "What is the total amount (sum of 'amount') of WON opportunities (is_won = 1) that had a payment received (email subject 'Payment received') AND a 'Kickoff scheduled' calendar event, each naming the opportunity as 'Opportunity NNN'? Answer with the total amount.",
+  "instruction": "Brief me on Brueckner Logistics: the value of the deal we won, when we last heard from them, and our next meeting.",
   "ground_truth": {
-    "value": 327437,
-    "unit": "currency"
+    "value": {
+      "won_value": 45000,
+      "last_contact": "2025-07-21",
+      "next_meeting": "2025-09-18"
+    },
+    "unit": "multi"
   },
-  "sources_required": [
-    "CRM.opportunities",
-    "Mail",
-    "Calendar"
-  ],
   "n_sources": 3,
-  "operation": "sum",
+  "answer_type": "multi_field",
   "provenance": {
     "source_benchmark": "CRMArena structured querying (Huang et al., 2025) + WorkBench mailbox/calendar (Styles et al., 2024)",
-    "construction_method": "Author-constructed multi-source sweep-all: a CRM structured set intersected with Mail/Calendar-derived sets; all sources knowable from the question (plan-time-decidable). Labelled honestly per IT-017.",
+    "construction_method": "Author-constructed multi-source retrieval over a coherent named-customer dataset; natural-language prompts; sweep-all / plan-time-decidable. Labelled honestly per IT-017.",
     "difficulty_axis": "number of distinct sources that must be combined",
     "license": "CC BY-NC 4.0"
   }

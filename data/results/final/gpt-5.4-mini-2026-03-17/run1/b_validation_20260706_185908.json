@@ -1,0 +1,1151 @@
+{
+  "timestamp": "20260706_185908",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "runs": [
+    {
+      "instance": "b-low-1",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": 120000,
+      "correct": true,
+      "answer": "120000",
+      "llm_calls": 2,
+      "input_tokens": 1876,
+      "output_tokens": 99,
+      "total_tokens": 1975,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 3.1637463089937228,
+      "errors": [],
+      "spec": {
+        "mail_queries": [],
+        "calendar_queries": [],
+        "fields": [
+          {
+            "name": "answer",
+            "sql": "SELECT amount FROM opportunities o JOIN accounts a ON o.account_id = a.id WHERE a.name = 'Mayer & Co' AND o.is_won = 1 ORDER BY o.created_at DESC LIMIT 1;"
+          }
+        ]
+      },
+      "field_results": {
+        "answer": 120000.0
+      }
+    },
+    {
+      "instance": "b-low-1",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": 120000,
+      "correct": true,
+      "answer": "120000",
+      "llm_calls": 3,
+      "input_tokens": 4210,
+      "output_tokens": 64,
+      "total_tokens": 4274,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_search",
+          "t": 45700.240174929
+        },
+        {
+          "tool": "db_read",
+          "t": 45701.772785994
+        }
+      ],
+      "latency_s": 3.584035733998462,
+      "errors": []
+    },
+    {
+      "instance": "b-low-2",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": "Finance",
+      "correct": true,
+      "answer": "Finance",
+      "llm_calls": 2,
+      "input_tokens": 1863,
+      "output_tokens": 72,
+      "total_tokens": 1935,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 3.568437306006672,
+      "errors": [],
+      "spec": {
+        "mail_queries": [],
+        "calendar_queries": [],
+        "fields": [
+          {
+            "name": "answer",
+            "sql": "SELECT industry FROM accounts WHERE name = 'Helvetia Finance' LIMIT 1;"
+          }
+        ]
+      },
+      "field_results": {
+        "answer": "Finance"
+      }
+    },
+    {
+      "instance": "b-low-2",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": "Finance",
+      "correct": true,
+      "answer": "Finance",
+      "llm_calls": 2,
+      "input_tokens": 2688,
+      "output_tokens": 32,
+      "total_tokens": 2720,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "db_search",
+          "t": 45707.196931899
+        }
+      ],
+      "latency_s": 2.1649502820000635,
+      "errors": []
+    },
+    {
+      "instance": "b-low-3",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": "APAC",
+      "correct": true,
+      "answer": "APAC",
+      "llm_calls": 2,
+      "input_tokens": 1864,
+      "output_tokens": 72,
+      "total_tokens": 1936,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 2.0481407449988183,
+      "errors": [],
+      "spec": {
+        "mail_queries": [],
+        "calendar_queries": [],
+        "fields": [
+          {
+            "name": "answer",
+            "sql": "SELECT region FROM accounts WHERE name = 'Pacific HealthTech' LIMIT 1;"
+          }
+        ]
+      },
+      "field_results": {
+        "answer": "APAC"
+      }
+    },
+    {
+      "instance": "b-low-3",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": "APAC",
+      "correct": true,
+      "answer": "APAC",
+      "llm_calls": 2,
+      "input_tokens": 2686,
+      "output_tokens": 32,
+      "total_tokens": 2718,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "db_search",
+          "t": 45712.012302721
+        }
+      ],
+      "latency_s": 3.17538223000156,
+      "errors": []
+    },
+    {
+      "instance": "b-low-4",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": 125000,
+      "correct": true,
+      "answer": "125000.0",
+      "llm_calls": 2,
+      "input_tokens": 1880,
+      "output_tokens": 102,
+      "total_tokens": 1982,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 2.457587388002139,
+      "errors": [],
+      "spec": {
+        "mail_queries": [],
+        "calendar_queries": [],
+        "fields": [
+          {
+            "name": "answer",
+            "sql": "SELECT COALESCE(SUM(opportunities.amount), 0) AS answer FROM opportunities JOIN accounts ON opportunities.account_id = accounts.id WHERE accounts.name = 'Sunrise Retail' AND opportunities.is_won = 1;"
+          }
+        ]
+      },
+      "field_results": {
+        "answer": 125000.0
+      }
+    },
+    {
+      "instance": "b-low-4",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": 125000,
+      "correct": true,
+      "answer": "125000",
+      "llm_calls": 3,
+      "input_tokens": 4288,
+      "output_tokens": 63,
+      "total_tokens": 4351,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_search",
+          "t": 45717.031569783
+        },
+        {
+          "tool": "db_read",
+          "t": 45718.243642524
+        }
+      ],
+      "latency_s": 3.173490403998585,
+      "errors": []
+    },
+    {
+      "instance": "b-low-5",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": "Mayer & Co",
+      "correct": true,
+      "answer": "Mayer & Co",
+      "llm_calls": 2,
+      "input_tokens": 1876,
+      "output_tokens": 106,
+      "total_tokens": 1982,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 2.152999963000184,
+      "errors": [],
+      "spec": {
+        "mail_queries": [],
+        "calendar_queries": [],
+        "fields": [
+          {
+            "name": "answer",
+            "sql": "SELECT a.name AS answer FROM accounts a JOIN opportunities o ON o.account_id = a.id WHERE a.type = 'Key Account' AND o.is_won = 1 ORDER BY o.amount DESC, o.created_at DESC LIMIT 1;"
+          }
+        ]
+      },
+      "field_results": {
+        "answer": "Mayer & Co"
+      }
+    },
+    {
+      "instance": "b-low-5",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": "Mayer & Co",
+      "correct": true,
+      "answer": "Mayer & Co",
+      "llm_calls": 4,
+      "input_tokens": 7065,
+      "output_tokens": 222,
+      "total_tokens": 7287,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 45722.357487
+        },
+        {
+          "tool": "db_read",
+          "t": 45724.19987717
+        },
+        {
+          "tool": "db_read",
+          "t": 45724.201655779
+        },
+        {
+          "tool": "db_read",
+          "t": 45724.203183667
+        },
+        {
+          "tool": "db_read",
+          "t": 45724.204721466
+        },
+        {
+          "tool": "db_read",
+          "t": 45724.20669179
+        },
+        {
+          "tool": "db_read",
+          "t": 45725.939779203
+        }
+      ],
+      "latency_s": 11.363030067004729,
+      "errors": []
+    },
+    {
+      "instance": "b-med-1",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": 80000,
+      "correct": false,
+      "answer": "None",
+      "llm_calls": 2,
+      "input_tokens": 1884,
+      "output_tokens": 156,
+      "total_tokens": 2040,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 45735.05756556
+        },
+        {
+          "tool": "search_emails",
+          "t": 45735.418252017
+        }
+      ],
+      "latency_s": 4.428905382002995,
+      "errors": [],
+      "spec": {
+        "mail_queries": [
+          "Mayer & Co",
+          "mayer"
+        ],
+        "calendar_queries": [],
+        "fields": [
+          {
+            "name": "answer",
+            "sql": "SELECT o.amount FROM opportunities o JOIN accounts a ON o.account_id = a.id JOIN contacts c ON c.account_id = a.id JOIN fetched_emails e ON (e.sender = c.email OR e.recipient = c.email) WHERE a.name = 'Mayer & Co' AND (e.subject LIKE '%' || a.name || '%' OR e.body LIKE '%' || a.name || '%') ORDER BY e.sent_at DESC, o.created_at DESC LIMIT 1"
+          }
+        ]
+      },
+      "field_results": {
+        "answer": null
+      }
+    },
+    {
+      "instance": "b-med-1",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": 80000,
+      "correct": true,
+      "answer": "80000",
+      "llm_calls": 3,
+      "input_tokens": 4675,
+      "output_tokens": 118,
+      "total_tokens": 4793,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_search",
+          "t": 45738.125940249
+        },
+        {
+          "tool": "db_read",
+          "t": 45744.166754353
+        },
+        {
+          "tool": "db_read",
+          "t": 45744.169673072
+        },
+        {
+          "tool": "search_emails",
+          "t": 45744.171498106
+        }
+      ],
+      "latency_s": 7.963782329999958,
+      "errors": []
+    },
+    {
+      "instance": "b-med-2",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": 120000,
+      "correct": true,
+      "answer": "120000",
+      "llm_calls": 2,
+      "input_tokens": 1890,
+      "output_tokens": 126,
+      "total_tokens": 2016,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "search_events",
+          "t": 45746.627141062
+        }
+      ],
+      "latency_s": 2.660693491001439,
+      "errors": [],
+      "spec": {
+        "mail_queries": [],
+        "calendar_queries": [
+          ""
+        ],
+        "fields": [
+          {
+            "name": "answer",
+            "sql": "SELECT o.amount FROM opportunities o JOIN accounts a ON o.account_id = a.id JOIN contacts c ON c.account_id = a.id JOIN fetched_events e ON e.attendees LIKE '%' || c.email || '%' WHERE a.name = 'Mayer & Co' AND o.is_won = 1 ORDER BY o.created_at DESC LIMIT 1;"
+          }
+        ]
+      },
+      "field_results": {
+        "answer": 120000.0
+      }
+    },
+    {
+      "instance": "b-med-2",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": 120000,
+      "correct": true,
+      "answer": "120000",
+      "llm_calls": 3,
+      "input_tokens": 4563,
+      "output_tokens": 117,
+      "total_tokens": 4680,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_search",
+          "t": 45748.671631426
+        },
+        {
+          "tool": "search_events",
+          "t": 45750.105914609
+        },
+        {
+          "tool": "db_read",
+          "t": 45750.114523867
+        }
+      ],
+      "latency_s": 3.58245772599912,
+      "errors": []
+    },
+    {
+      "instance": "b-med-3",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": 150000,
+      "correct": false,
+      "answer": "80000",
+      "llm_calls": 2,
+      "input_tokens": 1906,
+      "output_tokens": 146,
+      "total_tokens": 2052,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 45752.874186184
+        }
+      ],
+      "latency_s": 2.7025674139949842,
+      "errors": [],
+      "spec": {
+        "mail_queries": [
+          ""
+        ],
+        "calendar_queries": [],
+        "fields": [
+          {
+            "name": "answer",
+            "sql": "SELECT o.amount FROM opportunities o JOIN accounts a ON a.id = o.account_id JOIN fetched_emails e ON (e.sender LIKE '%@atlas.com' AND e.recipient LIKE '%@atlas.com') AND (e.subject LIKE '%' || a.name || '%' OR e.body LIKE '%' || a.name || '%') WHERE a.type = 'Key Account' AND o.is_won = 0 ORDER BY o.created_at DESC LIMIT 1;"
+          }
+        ]
+      },
+      "field_results": {
+        "answer": 80000.0
+      }
+    },
+    {
+      "instance": "b-med-3",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": 150000,
+      "correct": true,
+      "answer": "150000",
+      "llm_calls": 8,
+      "input_tokens": 20606,
+      "output_tokens": 217,
+      "total_tokens": 20823,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 45755.125770317
+        },
+        {
+          "tool": "search_emails",
+          "t": 45756.248998499
+        },
+        {
+          "tool": "search_emails",
+          "t": 45757.616237027
+        },
+        {
+          "tool": "search_emails",
+          "t": 45758.811039378
+        },
+        {
+          "tool": "search_emails",
+          "t": 45759.935510434
+        },
+        {
+          "tool": "db_read",
+          "t": 45761.474898163
+        },
+        {
+          "tool": "db_read",
+          "t": 45761.476665051
+        },
+        {
+          "tool": "db_read",
+          "t": 45762.803272054
+        }
+      ],
+      "latency_s": 9.666028097999515,
+      "errors": []
+    },
+    {
+      "instance": "b-med-4",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": 45000,
+      "correct": true,
+      "answer": "45000",
+      "llm_calls": 2,
+      "input_tokens": 1896,
+      "output_tokens": 152,
+      "total_tokens": 2048,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 45765.361663597
+        },
+        {
+          "tool": "search_emails",
+          "t": 45765.704019305
+        }
+      ],
+      "latency_s": 4.117503251996823,
+      "errors": [],
+      "spec": {
+        "mail_queries": [
+          "delivery delay",
+          ""
+        ],
+        "calendar_queries": [],
+        "fields": [
+          {
+            "name": "answer",
+            "sql": "SELECT o.amount AS answer FROM opportunities o JOIN accounts a ON a.id = o.account_id JOIN contacts c ON c.account_id = a.id JOIN fetched_emails e ON (e.sender = c.email OR e.recipient = c.email) WHERE a.type = 'Key Account' AND (e.subject LIKE '%delivery delay%' OR e.body LIKE '%delivery delay%') AND o.is_won = 1 ORDER BY o.created_at DESC LIMIT 1;"
+          }
+        ]
+      },
+      "field_results": {
+        "answer": 45000.0
+      }
+    },
+    {
+      "instance": "b-med-4",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": 45000,
+      "correct": true,
+      "answer": "45000",
+      "llm_calls": 4,
+      "input_tokens": 9772,
+      "output_tokens": 117,
+      "total_tokens": 9889,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 45769.15238731
+        },
+        {
+          "tool": "search_emails",
+          "t": 45770.687670318
+        },
+        {
+          "tool": "db_read",
+          "t": 45770.692194508
+        },
+        {
+          "tool": "db_read",
+          "t": 45771.815433411
+        }
+      ],
+      "latency_s": 4.71197450299951,
+      "errors": []
+    },
+    {
+      "instance": "b-med-5",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": 315000,
+      "correct": true,
+      "answer": "315000.0",
+      "llm_calls": 2,
+      "input_tokens": 1886,
+      "output_tokens": 129,
+      "total_tokens": 2015,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "search_events",
+          "t": 45774.068695398
+        }
+      ],
+      "latency_s": 2.764041915004782,
+      "errors": [],
+      "spec": {
+        "mail_queries": [],
+        "calendar_queries": [
+          ""
+        ],
+        "fields": [
+          {
+            "name": "answer",
+            "sql": "SELECT COALESCE(SUM(o.amount),0) AS answer FROM opportunities o JOIN accounts a ON a.id = o.account_id WHERE a.type = 'Key Account' AND o.is_won = 1 AND EXISTS (SELECT 1 FROM contacts c JOIN fetched_events e ON e.attendees LIKE '%' || c.email || '%' WHERE c.account_id = a.id)"
+          }
+        ]
+      },
+      "field_results": {
+        "answer": 315000.0
+      }
+    },
+    {
+      "instance": "b-med-5",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": 315000,
+      "correct": true,
+      "answer": "315000",
+      "llm_calls": 5,
+      "input_tokens": 11439,
+      "output_tokens": 426,
+      "total_tokens": 11865,
+      "tool_call_count": 15,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 45776.174127051
+        },
+        {
+          "tool": "db_read",
+          "t": 45777.754313208
+        },
+        {
+          "tool": "db_read",
+          "t": 45777.756663374
+        },
+        {
+          "tool": "db_read",
+          "t": 45777.758901711
+        },
+        {
+          "tool": "db_read",
+          "t": 45777.760929758
+        },
+        {
+          "tool": "db_read",
+          "t": 45777.7625087
+        },
+        {
+          "tool": "search_events",
+          "t": 45780.022758365
+        },
+        {
+          "tool": "search_events",
+          "t": 45780.028250214
+        },
+        {
+          "tool": "search_events",
+          "t": 45780.030527757
+        },
+        {
+          "tool": "search_events",
+          "t": 45780.032437408
+        },
+        {
+          "tool": "search_events",
+          "t": 45780.035092715
+        },
+        {
+          "tool": "db_read",
+          "t": 45781.747742952
+        },
+        {
+          "tool": "db_read",
+          "t": 45781.749151442
+        },
+        {
+          "tool": "db_read",
+          "t": 45781.750385688
+        },
+        {
+          "tool": "db_read",
+          "t": 45781.751362434
+        }
+      ],
+      "latency_s": 7.377013552002609,
+      "errors": []
+    },
+    {
+      "instance": "b-high-1",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": {
+        "last_contact": "2025-09-12",
+        "last_offer": 80000,
+        "next_meeting": "2025-10-03"
+      },
+      "correct": false,
+      "answer": "Last heard from: unknown; most recent offer: $80,000; meeting scheduled: Yes",
+      "llm_calls": 2,
+      "input_tokens": 1929,
+      "output_tokens": 239,
+      "total_tokens": 2168,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 45784.699627894
+        },
+        {
+          "tool": "search_events",
+          "t": 45785.055353443
+        }
+      ],
+      "latency_s": 4.295405110999127,
+      "errors": [],
+      "spec": {
+        "mail_queries": [
+          "Mayer & Co"
+        ],
+        "calendar_queries": [
+          ""
+        ],
+        "fields": [
+          {
+            "name": "last_heard_from",
+            "sql": "SELECT date(MAX(sent_at)) FROM fetched_emails e JOIN contacts c ON (e.sender = c.email OR e.recipient = c.email) JOIN accounts a ON a.id = c.account_id WHERE a.name = 'Mayer & Co'"
+          },
+          {
+            "name": "most_recent_offer_amount",
+            "sql": "SELECT amount FROM opportunities o JOIN accounts a ON a.id = o.account_id WHERE a.name = 'Mayer & Co' ORDER BY o.created_at DESC LIMIT 1"
+          },
+          {
+            "name": "meeting_scheduled",
+            "sql": "SELECT CASE WHEN EXISTS (SELECT 1 FROM fetched_events fe JOIN contacts c ON fe.attendees LIKE '%' || c.email || '%' JOIN accounts a ON a.id = c.account_id WHERE a.name = 'Mayer & Co') THEN 'Yes' ELSE 'No' END"
+          }
+        ]
+      },
+      "field_results": {
+        "last_heard_from": null,
+        "most_recent_offer_amount": 80000.0,
+        "meeting_scheduled": "Yes"
+      }
+    },
+    {
+      "instance": "b-high-1",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": {
+        "last_contact": "2025-09-12",
+        "last_offer": 80000,
+        "next_meeting": "2025-10-03"
+      },
+      "correct": false,
+      "answer": "Last heard from them: 2025-09-05  \nMost recent offer: 80000  \nMeeting scheduled: Yes \u2014 2025-10-03 10:00 UTC",
+      "llm_calls": 3,
+      "input_tokens": 5555,
+      "output_tokens": 150,
+      "total_tokens": 5705,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_search",
+          "t": 45788.300631393
+        },
+        {
+          "tool": "search_emails",
+          "t": 45788.303465188
+        },
+        {
+          "tool": "search_events",
+          "t": 45788.306475745
+        },
+        {
+          "tool": "db_read",
+          "t": 45789.633315109
+        }
+      ],
+      "latency_s": 8.278073829002096,
+      "errors": []
+    },
+    {
+      "instance": "b-high-2",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": {
+        "won_total": 125000,
+        "last_contact": "2025-09-25",
+        "next_meeting": "2025-10-10"
+      },
+      "correct": true,
+      "answer": "Total value won so far: $125,000; last heard from: 2025-09-25; next scheduled meeting: 2025-10-10 15:00:00",
+      "llm_calls": 2,
+      "input_tokens": 1942,
+      "output_tokens": 251,
+      "total_tokens": 2193,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 45797.005119115
+        },
+        {
+          "tool": "search_events",
+          "t": 45797.349789654
+        }
+      ],
+      "latency_s": 5.188096043995756,
+      "errors": [],
+      "spec": {
+        "mail_queries": [
+          ""
+        ],
+        "calendar_queries": [
+          ""
+        ],
+        "fields": [
+          {
+            "name": "total_value_won_so_far",
+            "sql": "SELECT COALESCE(SUM(amount),0) FROM opportunities o JOIN accounts a ON a.id = o.account_id WHERE a.name = 'Sunrise Retail' AND o.is_won = 1"
+          },
+          {
+            "name": "last_heard_from",
+            "sql": "SELECT date(MAX(sent_at)) FROM fetched_emails fe JOIN contacts c ON fe.sender = c.email OR fe.recipient = c.email JOIN accounts a ON a.id = c.account_id WHERE a.name = 'Sunrise Retail'"
+          },
+          {
+            "name": "next_scheduled_meeting",
+            "sql": "SELECT MIN(fe.start_time) FROM fetched_events fe JOIN contacts c ON fe.attendees LIKE '%' || c.email || '%' JOIN accounts a ON a.id = c.account_id WHERE a.name = 'Sunrise Retail'"
+          }
+        ]
+      },
+      "field_results": {
+        "total_value_won_so_far": 125000.0,
+        "last_heard_from": "2025-09-25",
+        "next_scheduled_meeting": "2025-10-10 15:00:00"
+      }
+    },
+    {
+      "instance": "b-high-2",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": {
+        "won_total": 125000,
+        "last_contact": "2025-09-25",
+        "next_meeting": "2025-10-10"
+      },
+      "correct": false,
+      "answer": "Total value won so far: 125000\n\nLast heard from them: no customer email found in the mailbox\n\nNext scheduled meeting: 2025-10-10 15:00 UTC",
+      "llm_calls": 5,
+      "input_tokens": 8636,
+      "output_tokens": 279,
+      "total_tokens": 8915,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_search",
+          "t": 45801.51181978
+        },
+        {
+          "tool": "db_read",
+          "t": 45803.561647929
+        },
+        {
+          "tool": "db_read",
+          "t": 45803.563198272
+        },
+        {
+          "tool": "search_emails",
+          "t": 45803.564831999
+        },
+        {
+          "tool": "search_events",
+          "t": 45803.566531411
+        },
+        {
+          "tool": "search_emails",
+          "t": 45805.094895081
+        },
+        {
+          "tool": "search_events",
+          "t": 45805.096219658
+        },
+        {
+          "tool": "search_emails",
+          "t": 45806.793000352
+        }
+      ],
+      "latency_s": 7.424646824001684,
+      "errors": []
+    },
+    {
+      "instance": "b-high-3",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": {
+        "won_value": 45000,
+        "last_contact": "2025-07-21",
+        "next_meeting": "2025-09-18"
+      },
+      "correct": true,
+      "answer": "Deal value: 45000.0; last heard from: 2025-07-21; next meeting: 2025-09-18",
+      "llm_calls": 2,
+      "input_tokens": 1934,
+      "output_tokens": 261,
+      "total_tokens": 2195,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 45809.906324655
+        },
+        {
+          "tool": "search_events",
+          "t": 45810.254375987
+        }
+      ],
+      "latency_s": 4.401346906997787,
+      "errors": [],
+      "spec": {
+        "mail_queries": [
+          ""
+        ],
+        "calendar_queries": [
+          ""
+        ],
+        "fields": [
+          {
+            "name": "deal_value",
+            "sql": "SELECT amount AS deal_value FROM opportunities o JOIN accounts a ON o.account_id = a.id WHERE a.name = 'Brueckner Logistics' AND o.is_won = 1 ORDER BY o.created_at DESC LIMIT 1;"
+          },
+          {
+            "name": "last_heard_from",
+            "sql": "SELECT date(MAX(e.sent_at)) AS last_heard_from FROM fetched_emails e JOIN contacts c ON e.sender = c.email OR e.recipient = c.email JOIN accounts a ON c.account_id = a.id WHERE a.name = 'Brueckner Logistics';"
+          },
+          {
+            "name": "next_meeting",
+            "sql": "SELECT date(MIN(ev.start_time)) AS next_meeting FROM fetched_events ev JOIN contacts c ON ev.attendees LIKE '%' || c.email || '%' JOIN accounts a ON c.account_id = a.id WHERE a.name = 'Brueckner Logistics';"
+          }
+        ]
+      },
+      "field_results": {
+        "deal_value": 45000.0,
+        "last_heard_from": "2025-07-21",
+        "next_meeting": "2025-09-18"
+      }
+    },
+    {
+      "instance": "b-high-3",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": {
+        "won_value": 45000,
+        "last_contact": "2025-07-21",
+        "next_meeting": "2025-09-18"
+      },
+      "correct": true,
+      "answer": "Won deal value: 45,000  \nLast heard from them: 2025-07-21  \nNext meeting: 2025-09-18 13:00 UTC",
+      "llm_calls": 5,
+      "input_tokens": 8438,
+      "output_tokens": 359,
+      "total_tokens": 8797,
+      "tool_call_count": 10,
+      "tool_calls": [
+        {
+          "tool": "db_search",
+          "t": 45813.696376516
+        },
+        {
+          "tool": "db_search",
+          "t": 45813.697758853
+        },
+        {
+          "tool": "db_read",
+          "t": 45815.027580389
+        },
+        {
+          "tool": "db_read",
+          "t": 45816.668911205
+        },
+        {
+          "tool": "search_emails",
+          "t": 45816.670540052
+        },
+        {
+          "tool": "search_emails",
+          "t": 45816.673752594
+        },
+        {
+          "tool": "search_events",
+          "t": 45816.676543109
+        },
+        {
+          "tool": "search_emails",
+          "t": 45818.305223912
+        },
+        {
+          "tool": "search_emails",
+          "t": 45818.308259241
+        },
+        {
+          "tool": "search_events",
+          "t": 45818.309568124
+        }
+      ],
+      "latency_s": 7.476117259000603,
+      "errors": []
+    },
+    {
+      "instance": "b-high-4",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": 80000,
+      "correct": true,
+      "answer": "80000",
+      "llm_calls": 2,
+      "input_tokens": 1900,
+      "output_tokens": 176,
+      "total_tokens": 2076,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 45821.479081232
+        },
+        {
+          "tool": "search_events",
+          "t": 45821.821254574
+        }
+      ],
+      "latency_s": 3.2786075949989026,
+      "errors": [],
+      "spec": {
+        "mail_queries": [
+          ""
+        ],
+        "calendar_queries": [
+          ""
+        ],
+        "fields": [
+          {
+            "name": "answer",
+            "sql": "SELECT o.amount AS answer\nFROM opportunities o\nJOIN accounts a ON a.id = o.account_id\nJOIN contacts c ON c.account_id = a.id\nJOIN fetched_emails e ON (\n  (e.sender LIKE '%@atlas.com' AND e.recipient LIKE '%@atlas.com')\n  AND (e.subject LIKE '%' || a.name || '%' OR e.body LIKE '%' || a.name || '%')\n)\nWHERE a.type = 'Key Account'\n  AND o.is_won = 0\nORDER BY o.created_at DESC\nLIMIT 1"
+          }
+        ]
+      },
+      "field_results": {
+        "answer": 80000.0
+      }
+    },
+    {
+      "instance": "b-high-4",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": 80000,
+      "correct": false,
+      "error": "Recursion limit of 25 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://docs.langchain.com/oss/pytho"
+    },
+    {
+      "instance": "b-high-5",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": "AMER",
+      "correct": false,
+      "answer": "None",
+      "llm_calls": 2,
+      "input_tokens": 1888,
+      "output_tokens": 222,
+      "total_tokens": 2110,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 45842.596807342
+        },
+        {
+          "tool": "search_events",
+          "t": 45842.937704981
+        }
+      ],
+      "latency_s": 3.3955008359989733,
+      "errors": [],
+      "spec": {
+        "mail_queries": [
+          ""
+        ],
+        "calendar_queries": [
+          ""
+        ],
+        "fields": [
+          {
+            "name": "answer",
+            "sql": "SELECT a.region FROM accounts a JOIN contacts c ON c.account_id = a.id WHERE a.type = 'Key Account' AND c.email IN (SELECT DISTINCT CASE WHEN sender LIKE '%@%' THEN sender ELSE recipient END FROM fetched_emails WHERE sender IN (SELECT email FROM contacts WHERE account_id = a.id) OR recipient IN (SELECT email FROM contacts WHERE account_id = a.id) ORDER BY sent_at DESC LIMIT 1) AND EXISTS (SELECT 1 FROM fetched_events e WHERE e.start_time > CURRENT_TIMESTAMP AND e.attendees LIKE '%' || c.email || '%') ORDER BY (SELECT MAX(sent_at) FROM fetched_emails fe WHERE fe.sender IN (SELECT email FROM contacts WHERE account_id = a.id) OR fe.recipient IN (SELECT email FROM contacts WHERE account_id = a.id)) DESC LIMIT 1"
+          }
+        ]
+      },
+      "field_results": {
+        "answer": null
+      }
+    },
+    {
+      "instance": "b-high-5",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": "AMER",
+      "correct": false,
+      "answer": "EMEA",
+      "llm_calls": 3,
+      "input_tokens": 41008,
+      "output_tokens": 172,
+      "total_tokens": 41180,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "search_events",
+          "t": 45845.507248051
+        },
+        {
+          "tool": "search_emails",
+          "t": 45845.508607395
+        },
+        {
+          "tool": "db_search",
+          "t": 45849.540348808
+        },
+        {
+          "tool": "db_search",
+          "t": 45849.541385588
+        },
+        {
+          "tool": "db_search",
+          "t": 45849.543040775
+        },
+        {
+          "tool": "db_search",
+          "t": 45849.543950481
+        }
+      ],
+      "latency_s": 6.374174106000282,
+      "errors": []
+    }
+  ]
+}

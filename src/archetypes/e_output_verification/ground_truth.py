@@ -67,3 +67,33 @@ def score(predicted_label: str | None, expected_label: str) -> tuple[float, str]
     if predicted_label == expected_label:
         return 1.0, "match"
     return 0.0, f"predicted {predicted_label!r}, expected {expected_label!r}"
+
+
+# ── Per-criterion scoring (workflow path only) ──
+
+#: The rubric's criterion ids, mirroring verdict_engine.CRITERIA.
+CRITERIA = ["C1", "C2", "C3", "C4", "C5"]
+
+
+def score_criteria(
+    predicted_failed: list[str], gold_failed: list[str]
+) -> tuple[float, list[str], list[str]]:
+    """Score the workflow's per-criterion judgments against the gold.
+
+    Compares the predicted failed-criteria set with the instance's
+    ``criterion_failures`` gold. Returns ``(criterion_accuracy,
+    false_fails, missed_fails)`` where criterion_accuracy is the fraction
+    of the five criteria judged correctly, false_fails are criteria the
+    workflow failed but the gold passes, and missed_fails are gold
+    failures the workflow judged as passing.
+
+    This attribution exists only for the workflow path by design: the
+    agent's holistic free text carries no reliable per-criterion structure,
+    and that asymmetry is itself an auditability observable of the
+    paradigm comparison (see the iteration log).
+    """
+    pred, gold = set(predicted_failed), set(gold_failed)
+    correct = sum(1 for c in CRITERIA if (c in pred) == (c in gold))
+    false_fails = sorted(pred - gold, key=CRITERIA.index)
+    missed_fails = sorted(gold - pred, key=CRITERIA.index)
+    return correct / len(CRITERIA), false_fails, missed_fails

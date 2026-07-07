@@ -1,0 +1,54 @@
+{
+  "id": "rh-low-3",
+  "archetype": "H",
+  "difficulty": "low",
+  "sub_class": "social_post",
+  "format": "short post",
+  "instruction": "so the CSAT results landed yesterday, took forever this time (the survey tool acted up again, different story). anyway -- write a brief post sharing the latest customer satisfaction score, please.",
+  "table": {
+    "caption": "CSAT Q3 2025",
+    "columns": [
+      "Metric",
+      "Value"
+    ],
+    "rows": [
+      [
+        "NPS",
+        58
+      ],
+      [
+        "Responses",
+        1300
+      ]
+    ]
+  },
+  "constraints": {
+    "audience": "customers",
+    "tonality": "appreciative",
+    "min_words": 25,
+    "max_words": 55,
+    "required_points": [
+      {
+        "desc": "NPS 58",
+        "keywords": [
+          "58"
+        ]
+      }
+    ]
+  },
+  "feedback_rounds": [],
+  "feedback_requirements": [],
+  "allowed_numbers": [
+    3.0,
+    58.0,
+    1300.0,
+    2025.0
+  ],
+  "rationale_hint": "Single required figure; appreciative tone.",
+  "provenance": {
+    "construction_method": "Surface perturbation (redundant_noise) of h-low-5's brief instruction; the structured constraint, table, feedback, and allowed-number fields are copied verbatim. Robustness check, not a new task.",
+    "license": "Original work by the author (tables, briefs, constraints, judge rubric); benchmark semantics reference only"
+  },
+  "base_instance": "h-low-5",
+  "perturbation_type": "redundant_noise"
+}

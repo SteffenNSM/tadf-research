@@ -45,7 +45,11 @@ from src.core.tools.mail import (
 # ── TADF metadata ──
 
 DIMENSIONAL_PROFILE = {
-    "step_predictability": "high_for_canonical_low_for_novel",
+    # Bipolar (conditional value, not a range): HIGH when the action set is
+    # plan-time-decidable (incl. read-conditional branches), LOW when the next
+    # action depends on a prior action's runtime outcome. The canonical/novel
+    # framing was superseded by IT-015; sub-condition labels live per instance.
+    "step_predictability": "bipolar_high_plan_time_low_runtime_feedback",
     "information_availability": "high",
     "output_ambiguity": "low",
     "error_consequence": "high",

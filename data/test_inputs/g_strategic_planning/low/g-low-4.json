@@ -3,7 +3,7 @@
   "archetype": "G",
   "difficulty": "low",
   "sub_class": "opportunity_win",
-  "instruction": "Plan the win booking of opportunity 3: set its stage to 'Closed Won' and is_won to true in one update, email the primary contact of its account with subject 'Opportunity 3 won' and a brief body, and schedule an event named 'Win review Account 16' on 2026-06-26 with agent 7 as attendee.",
+  "instruction": "Good news, opportunity 3 came through -- book the win: stage 'Closed Won' and is_won set to true in one update. Send the account's primary contact a note with subject 'Opportunity 3 won', and schedule an event named 'Win review Account 16' on 2026-06-26 with agent 7 as attendee.\n\nSupport runbook (excerpt):\n- Primary contact: an account's primary contact is the contact with the lowest id at that account.\n- Customer notification on closures: unless the request says otherwise, the account's primary contact receives one email per closed case with subject 'Case <id> closed' (substitute the actual case id) and a brief body, and closure notifications are sent only after every close in the work package is done.\n- Escalation-blocked cases: a case whose transfer history is above the escalation threshold cannot be closed with attempt_close_case; such a case is closed via a direct update that also records the closure timestamp (closed_at).\n- Keep email and event bodies brief, and plan only the actions the work package requires.",
   "goal": {
     "opp_fields": {
       "3": {

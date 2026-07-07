@@ -2,28 +2,26 @@
   "id": "a-low-2",
   "archetype": "A",
   "difficulty": "low",
-  "instruction": "In which year was Uhlmann Pac-Systeme GmbH & Co. KG in Laupheim founded?",
+  "instruction": "What is the name of the founder of the Boston Consulting Group (BCG), and what is the name of the founder of Heidelberg Materials (formerly HeidelbergCement)?",
   "ground_truth": {
-    "value": "1948",
-    "unit": "founding_year"
+    "value": "Bruce Doolin Henderson; Johann Philipp Schifferdecker",
+    "unit": "two_founders"
   },
   "provenance": {
-    "source_benchmark": "BrowseComp (Wei et al., 2025)",
-    "construction_method": "inverted-question (BrowseComp Sec. 2.1); author-constructed (not lifted)",
-    "difficulty_axis": "number of search hops / distinct sources",
-    "domain": "SME hidden champion",
-    "hops": "1",
+    "source_benchmark": "AssistantBench (Yoran et al., 2024); BrowseComp (Wei et al., 2025)",
+    "construction_method": "Two independent founder facts combined in parallel.",
+    "difficulty_axis": "two distinct sources combined, retrievable in parallel",
+    "domain": "corporate history",
     "sources": [
-      "https://de.wikipedia.org/wiki/Uhlmann_Pac-Systeme",
-      "https://www.uhlmann.de/en/insights/magazine/75-years-uhlmann-pac-systeme"
+      "https://en.wikipedia.org/wiki/Boston_Consulting_Group",
+      "https://en.wikipedia.org/wiki/Heidelberg_Materials"
     ],
     "verification": {
-      "memorization_no_tool": "pending",
-      "retrievable_via_tavily": "pending",
-      "one_shot_breaks": "n/a (single-hop)",
-      "unique": "yes"
+      "memorization_no_tool": "pending (must be non-memorized on the strongest model used)",
+      "retrievable_via_tavily": "pending (confirm on the run)",
+      "gold_verified": "author-supplied; confirm on the run"
     },
     "note": "",
-    "license": "Original work by the author (task design); BrowseComp construction method referenced only"
+    "license": "Original work by the author (task design)"
   }
 }

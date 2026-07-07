@@ -268,5 +268,35 @@
     "account_id": 20,
     "name": "Contact 045",
     "email": "contact045@example.com"
+  },
+  {
+    "id": 101,
+    "account_id": 101,
+    "name": "Anna Brandt",
+    "email": "anna.brandt@mayer.example"
+  },
+  {
+    "id": 102,
+    "account_id": 102,
+    "name": "Tom Keller",
+    "email": "tom.keller@brueckner.example"
+  },
+  {
+    "id": 103,
+    "account_id": 103,
+    "name": "Maria Lopez",
+    "email": "maria.lopez@sunrise.example"
+  },
+  {
+    "id": 104,
+    "account_id": 104,
+    "name": "Lukas Frei",
+    "email": "lukas.frei@helvetia.example"
+  },
+  {
+    "id": 105,
+    "account_id": 105,
+    "name": "Hiro Tanaka",
+    "email": "hiro.tanaka@pacificht.example"
   }
 ]

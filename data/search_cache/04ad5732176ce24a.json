@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Great Circle Calculation - Lat1, Long1, Lat2, Long2 -> GC",
+    "url": "https://onboardintelligence.com/GC",
+    "content": "**Great Circle Calculation**_**Departure position (latitude, longitude) + Arrival position (latitude, longitude). Longitude Interval (optional), Maximum Latitude (optional). Error in degrees of latitude Error in minutes of latitude Error in fraction of minute. Error in degrees of longitude Error in minutes of longitude Error in fraction of minute. Error in degrees of longitude Error in minutes of longitude. Error in degrees of latitude Error in minutes of latitude. The GC distance is X nautical miles as the sum of the rhumb lines (RLs). The Vertex is on/outside the track. The Vertex distance is X nautical miles. Great Circle Theoretical Departure Course. Great Circle Theoretical Arrival Course. The period of the geodetic curve is X°. No/The maximum latitude is reached. The total distance indicated above is the distance with composite sailing. Lat/Long accuracy (fraction of minute). © 1999-2026 Johan Machtelinckx, all rights reserved."
+  },
+  {
+    "title": "Great Circle Distance Batch Calculator | Center for Geographic Analysis",
+    "url": "https://gis.harvard.edu/great-circle-distance-batch-calculator",
+    "content": "# Great Circle Distance Batch Calculator. This tool for ArcGIS version 10 allows for the input of an unlimited number of origin/destination latitude, longitude pairs in CSV format, and calculates the distance between the origin and destination for each pair using the great circle distance formula (the shortest distance between 2 points on earth). Created by CGA intern Brian Bettenhausen."
+  },
+  {
+    "title": "Great Circle Distance Calculator | Modern Airline Retailing Tools",
+    "url": "https://www.modernairlineretailing.com/tools/great-circle.html",
+    "content": "# Great Circle Distance Calculator. Pick any two airports worldwide to compute the great-circle distance, bearings and midpoint. Results use the WGS84 Earth radius and update instantly for quick network planning and benchmarking. ### Great-circle distance. ### Estimated flight time @ 800 km/h. ### Initial / final bearing. ### Midpoint. #### Origin -. Select an airport to see details. #### Destination -."
+  },
+  {
+    "title": "Great circle calculator - Cactus2000",
+    "url": "https://www.cactus2000.de/uk/unit/massgrk.shtml",
+    "content": "location: | | | | | | | | | | | latitude: |  | deg |  | min |  | sec | NS | or |  | degrees | | longitude: |  | deg |  | min |  | sec | EW | or |  | degrees |         |  |  |  |  | | --- | --- | --- | --- | | sphere: | | WGS84-ellipsoid: | | |  | **km** (kilometer) |  | **km** (kilometer) | |  | **mi** (miles1) |  | **mi** (miles1) | |  | **sm** (nautical miles2) |  | **sm** (nautical miles2) | | departure course (TC) at 1. Decimal sign: pointcomma 1international mile; 2international nautical mile |  |  |  |  |  |  |  |  |  |  | | --- | --- | --- | --- | --- | --- | --- | --- | --- | | A great circle is the intersection of a sphere with a plane going through its center. The shorter segment between two points on a great circle is the shortest path between the two points on the sphere, also known as an orthodrome or the great circle distance. You may calculate the great circle distance between two points on the Earth from the geographical coordinates."
+  },
+  {
+    "title": "Great Circle Calculator",
+    "url": "https://www.omnicalculator.com/math/great-circle",
+    "content": "# Great Circle Calculator. We will teach you how to calculate the great circle distance between two points, both on a sphere and a more realistic shape for Earth. ## What is the great circle? Introduction to the great circle between two points. Before the definitions, though, it's better to introduce the situations in which we will test our great circle calculator! The **great circle** is the closed circle deriving from the intersection of a sphere and a plane passing through the center of the sphere. The same holds if we consider the great circle passing through a point on the sphere's surface. When considering two points and the great circle between them, we can define (and calculate) the distance between them on the great circle: there are **two possible values**:. The great circle is the circle containing the **shortest possible path** between two points on a sphere. Earlier, we said that the great circle distance we calculate between two points is the **shortest possible path**."
+  }
+]

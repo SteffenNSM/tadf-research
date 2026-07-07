@@ -2,18 +2,70 @@
   "id": "c-high-3",
   "archetype": "C",
   "difficulty": "high",
-  "sub_class": "paraphrase_no_keywords",
-  "instruction": "Route this email to the correct support category.",
-  "email": {
-    "sender": "d.morley@parkwest.example",
-    "subject": "We've grown — need to extend our setup",
-    "body": "We've grown a lot this quarter and the original setup from when we onboarded a year ago doesn't quite fit anymore. I'd like to bring our European office team into the account and make sure the regional split shows up properly in our views. Who do I talk to about extending what we have?"
+  "instruction": "Triage this batch of customer support emails: assign each email to exactly one support category by its primary intent.",
+  "emails": [
+    {
+      "id": "e1",
+      "sender": "user1@customer.example",
+      "subject": "Access after role change",
+      "body": "Since you changed my role I can't see the billing section anymore. Pages load fine for my colleagues, so nothing is down — I just need my permissions put back so I can reach billing."
+    },
+    {
+      "id": "e2",
+      "sender": "user2@customer.example",
+      "subject": "Still charged for removed seats",
+      "body": "We removed three seats last month and the app reflects it correctly. The problem is only this invoice: it still bills the old seat count. Please correct the charge."
+    },
+    {
+      "id": "e3",
+      "sender": "user3@customer.example",
+      "subject": "Export: broken or intended?",
+      "body": "When we export a large report to CSV it fails every time with an error. Is that expected behaviour, or is it broken? For us it never completes — it just errors out."
+    },
+    {
+      "id": "e4",
+      "sender": "user4@customer.example",
+      "subject": "Reorg with money and product noise",
+      "body": "We're splitting into two regional teams. I know that means new invoices for the split, and the new hires will probably want a product walkthrough at some point. But right now what I actually need is operational: move eight users from the EMEA org into a new APAC org and set their manager. It's purely an account-structure change."
+    },
+    {
+      "id": "e5",
+      "sender": "user5@customer.example",
+      "subject": "Long complaint, real blocker",
+      "body": "Honestly a bit frustrated. Support was slow last week, the app logged me out twice (I got back in fine), and I still don't fully understand the new line on our bill. But the thing that's blocking us right now: the replacement device you promised for Monday still hasn't arrived — it's Thursday and there's no tracking update. Where is the shipment?"
+    },
+    {
+      "id": "e6",
+      "sender": "user6@customer.example",
+      "subject": "Reads like a bug, is a how-to",
+      "body": "Our analysts flagged the reporting as 'broken' because the numbers 'don't add up'. I dug in: it's not a defect, the figures are correct. What we actually need is to understand how your rollups define a reporting week and when data is cut off — point us to the docs or explain the behaviour. No fix required."
+    },
+    {
+      "id": "e7",
+      "sender": "user7@customer.example",
+      "subject": "Praise, wishlist, buried refund",
+      "body": "Genuinely one of the better tools we use, and your team's been great. Two small things for later: the webhook docs are thin, and it'd be nice if the mobile app remembered my filters. The one thing I need handled now: we were charged twice for the same subscription on the latest invoice and need one of the duplicate charges refunded."
+    },
+    {
+      "id": "e8",
+      "sender": "user8@customer.example",
+      "subject": "Access request dressed as an outage",
+      "body": "The project portal 'doesn't work' for our new contractor and it's holding up onboarding. To be precise, the pages load fine for everyone else on the team, so this isn't a service outage — the contractor was just never added. Please grant them viewer permissions on the Atlas project workspace."
+    }
+  ],
+  "expected": {
+    "e1": "Account",
+    "e2": "Billing",
+    "e3": "Technical",
+    "e4": "Account",
+    "e5": "Shipping",
+    "e6": "Product",
+    "e7": "Billing",
+    "e8": "Account"
   },
-  "expected_label": "Account",
-  "rationale_hint": "Paraphrase without keywords: no occurrence of 'users', 'seats', 'permissions', 'roles', or 'team members'. The requester is describing organic growth and asking to bring an additional team into the account with structural changes (regional split). That is an account-level expansion → Account.",
   "provenance": {
     "source_benchmark": "CRMArena-Pro Case Routing / Activity Priority Understanding (Huang et al., 2025)",
-    "adaptation": "Author-constructed email texts; task semantics follow the CRMArena-Pro routing/disambiguation pattern. The five-category label set is mirrored from cases.issue_category in experiments/seed_crm.py so the routing decision is consistent with the local CRM schema. High-stratum sub-class: paraphrase_no_keywords.",
+    "construction_method": "Batch-triage task (single input batch -> single labelled output, Section 2.2.3). Difficulty = batch size (3/5/8) x per-email ambiguity; Med/High emails carry competing near-duplicate signals with one primary intent; High emails are verbose with a buried core ask to load the context. Author-constructed from a labelled pool; no benchmark text reproduced.",
     "license": "Original work by the author (email texts and task design); benchmark semantics reference only"
   }
 }

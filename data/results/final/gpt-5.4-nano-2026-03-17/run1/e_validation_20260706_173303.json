@@ -1,0 +1,1156 @@
+{
+  "timestamp": "20260706_173303",
+  "model": "gpt-5.4-nano-2026-03-17",
+  "runs": [
+    {
+      "instance": "e-low-1",
+      "difficulty": "low",
+      "sub_class": null,
+      "paradigm": "workflow",
+      "failed_criteria_predicted": [],
+      "failed_criteria_gold": [],
+      "criterion_accuracy": 1.0,
+      "false_fails": [],
+      "missed_fails": [],
+      "assessments": [
+        {
+          "criterion_id": "C1",
+          "passed": true,
+          "evidence": "The response addresses the shipping delay for case #42, stating it \u201cchecked with the carrier\u201d and the shipment is delayed, which directly responds to \u201cCould you check on the shipment?\u201d"
+        },
+        {
+          "criterion_id": "C2",
+          "passed": true,
+          "evidence": "It provides a specific ETA: \u201cnew expected delivery date is March 15, 2026.\u201d It also gives an action if not arrived by that date (\u201cplease reply\u2026 and we'll dispatch a replacement via expedited shipping\u201d)."
+        },
+        {
+          "criterion_id": "C3",
+          "passed": true,
+          "evidence": "It offers a replacement shipment only conditionally if the package hasn\u2019t arrived by March 15, which is a reasonable resolution to the reported delay and does not promise unrelated future changes or refunds."
+        },
+        {
+          "criterion_id": "C4",
+          "passed": true,
+          "evidence": "The tone is professional and respectful: \u201cHi, thanks for following up\u2026\u201d and \u201cBest regards, Support,\u201d with no condescension or blame."
+        },
+        {
+          "criterion_id": "C5",
+          "passed": true,
+          "evidence": "It correctly references the same case ID as the inquiry: \u201ccase #42\u201d and \u201cattached the updated tracking link to case #42,\u201d matching the customer\u2019s request."
+        }
+      ],
+      "correct": true,
+      "predicted": "PASS",
+      "expected": "PASS",
+      "score_rationale": "match",
+      "summary": "All five rubric criteria are met.",
+      "llm_calls": 1,
+      "input_tokens": 1138,
+      "output_tokens": 274,
+      "total_tokens": 1412,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 4.204350439002155,
+      "errors": []
+    },
+    {
+      "instance": "e-low-1",
+      "difficulty": "low",
+      "sub_class": null,
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": false,
+      "predicted": "NEEDS_REVISION",
+      "expected": "PASS",
+      "score_rationale": "predicted 'NEEDS_REVISION', expected 'PASS'",
+      "summary": "C1. Issue acknowledgment: PASS \u2014 The response addresses the shipping delay for case #42 and the missing parts.  \nC2. Actionable next steps: PASS \u2014 It provides a specific new delivery date (March 15, 2",
+      "llm_calls": 1,
+      "input_tokens": 1137,
+      "output_tokens": 172,
+      "total_tokens": 1309,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 2.8496814949976397,
+      "errors": []
+    },
+    {
+      "instance": "e-low-2",
+      "difficulty": "low",
+      "sub_class": "vague_eta",
+      "paradigm": "workflow",
+      "failed_criteria_predicted": [
+        "C2"
+      ],
+      "failed_criteria_gold": [
+        "C2"
+      ],
+      "criterion_accuracy": 1.0,
+      "false_fails": [],
+      "missed_fails": [],
+      "assessments": [
+        {
+          "criterion_id": "C1",
+          "passed": true,
+          "evidence": "The response references the specific issue by acknowledging the customer\u2019s message \u201cabout order #51234\u201d and says \u201cI'm looking into this with our shipping team.\u201d"
+        },
+        {
+          "criterion_id": "C2",
+          "passed": false,
+          "evidence": "It provides no concrete next step or timing, stating only \u201cwill get back to you soon.\u201d"
+        },
+        {
+          "criterion_id": "C3",
+          "passed": true,
+          "evidence": "It does not promise any additional features, refunds, or exceptions; it only says it is \u201clooking into this.\u201d"
+        },
+        {
+          "criterion_id": "C4",
+          "passed": true,
+          "evidence": "The tone is polite and professional: \u201cHi\u2026 thanks for your message\u2026 Best regards, Support.\u201d"
+        },
+        {
+          "criterion_id": "C5",
+          "passed": true,
+          "evidence": "The response correctly uses the same order identifier as the inquiry: \u201corder #51234.\u201d"
+        }
+      ],
+      "correct": true,
+      "predicted": "NEEDS_REVISION",
+      "expected": "NEEDS_REVISION",
+      "score_rationale": "match",
+      "summary": "Criteria C2 failed (1 failure); recoverable with targeted edits.",
+      "llm_calls": 1,
+      "input_tokens": 1067,
+      "output_tokens": 202,
+      "total_tokens": 1269,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 2.7329766459952225,
+      "errors": []
+    },
+    {
+      "instance": "e-low-2",
+      "difficulty": "low",
+      "sub_class": "vague_eta",
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": true,
+      "predicted": "NEEDS_REVISION",
+      "expected": "NEEDS_REVISION",
+      "score_rationale": "match",
+      "summary": "C1. Issue acknowledgment: The response references \u201corder #51234\u201d and indicates they\u2019re looking into the delivery issue. PASS.  \nC2. Actionable next steps: It says \u201cwill get back to you soon,\u201d which is",
+      "llm_calls": 1,
+      "input_tokens": 1066,
+      "output_tokens": 137,
+      "total_tokens": 1203,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 2.3885954180004774,
+      "errors": []
+    },
+    {
+      "instance": "e-low-3",
+      "difficulty": "low",
+      "sub_class": "wrong_reference",
+      "paradigm": "workflow",
+      "failed_criteria_predicted": [
+        "C1",
+        "C5"
+      ],
+      "failed_criteria_gold": [
+        "C5"
+      ],
+      "criterion_accuracy": 0.8,
+      "false_fails": [
+        "C1"
+      ],
+      "missed_fails": [],
+      "assessments": [
+        {
+          "criterion_id": "C1",
+          "passed": false,
+          "evidence": "The response references \"case #78\" and does not address the customer's stated issue \"Case #87 \u2014 can't log in\" (it does not reference case 87)."
+        },
+        {
+          "criterion_id": "C2",
+          "passed": true,
+          "evidence": "It provides a specific timeframe: \"within 5 minutes\" for the new reset email."
+        },
+        {
+          "criterion_id": "C3",
+          "passed": true,
+          "evidence": "It performs the requested action \"I've reset your password manually\" and does not promise unrelated changes or refunds."
+        },
+        {
+          "criterion_id": "C4",
+          "passed": true,
+          "evidence": "The tone is professional and respectful (\"thanks for reaching out\", \"Best regards, Support\")."
+        },
+        {
+          "criterion_id": "C5",
+          "passed": false,
+          "evidence": "The customer inquiry cites \"Case number is 87\" but the response says \"case #78\" in both the subject and body, indicating an incorrect identifier."
+        }
+      ],
+      "correct": true,
+      "predicted": "NEEDS_REVISION",
+      "expected": "NEEDS_REVISION",
+      "score_rationale": "match",
+      "summary": "Criteria C1, C5 failed (2 failures); recoverable with targeted edits.",
+      "llm_calls": 1,
+      "input_tokens": 1100,
+      "output_tokens": 216,
+      "total_tokens": 1316,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 2.663097132994153,
+      "errors": []
+    },
+    {
+      "instance": "e-low-3",
+      "difficulty": "low",
+      "sub_class": "wrong_reference",
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": true,
+      "predicted": "NEEDS_REVISION",
+      "expected": "NEEDS_REVISION",
+      "score_rationale": "match",
+      "summary": "C1. Issue acknowledgment: FAIL \u2014 The response references case #78 and \u201ccan\u2019t log in\u201d is not clearly tied to case #87 from the customer.  \nC2. Actionable next steps: PASS \u2014 It provides a concrete next ",
+      "llm_calls": 1,
+      "input_tokens": 1099,
+      "output_tokens": 166,
+      "total_tokens": 1265,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 2.6398590489989147,
+      "errors": []
+    },
+    {
+      "instance": "e-low-4",
+      "difficulty": "low",
+      "sub_class": "obvious_multi_fail",
+      "paradigm": "workflow",
+      "failed_criteria_predicted": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5"
+      ],
+      "failed_criteria_gold": [
+        "C1",
+        "C2",
+        "C4",
+        "C5"
+      ],
+      "criterion_accuracy": 0.8,
+      "false_fails": [
+        "C3"
+      ],
+      "missed_fails": [],
+      "assessments": [
+        {
+          "criterion_id": "C1",
+          "passed": false,
+          "evidence": "The response does not address the customer's urgent issue (account suspended without warning and need access for a client meeting), and instead only says \u201clooking at account 6601: suspensions usually happen\u2026\u201d."
+        },
+        {
+          "criterion_id": "C2",
+          "passed": false,
+          "evidence": "No concrete next step, resolution, or ETA is provided; it only says \u201cWe\u2019ll look into it eventually.\u201d"
+        },
+        {
+          "criterion_id": "C3",
+          "passed": false,
+          "evidence": "It implies a reason for suspension (\u201cusers violate the terms of service\u201d) and instructs the customer about ToS, which is a commitment/explanation not requested and not established in the inquiry."
+        },
+        {
+          "criterion_id": "C4",
+          "passed": false,
+          "evidence": "Tone is dismissive/blaming: \u201cYou should have read the ToS more carefully before signing up.\u201d"
+        },
+        {
+          "criterion_id": "C5",
+          "passed": false,
+          "evidence": "The customer provided Account ID 4477, but the response refers to \u201caccount 6601,\u201d citing a different identifier."
+        }
+      ],
+      "correct": true,
+      "predicted": "FAIL",
+      "expected": "FAIL",
+      "score_rationale": "match",
+      "summary": "Criteria C1, C2, C3, C4, C5 failed (5 failures); the response should not be sent in its current form.",
+      "llm_calls": 1,
+      "input_tokens": 1086,
+      "output_tokens": 238,
+      "total_tokens": 1324,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 3.198308156002895,
+      "errors": []
+    },
+    {
+      "instance": "e-low-4",
+      "difficulty": "low",
+      "sub_class": "obvious_multi_fail",
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": true,
+      "predicted": "FAIL",
+      "expected": "FAIL",
+      "score_rationale": "match",
+      "summary": "C1. Issue acknowledgment: FAIL \u2014 The response does not acknowledge the customer\u2019s account ID \u201c4477\u201d suspension \u201cthis morning with no warning or explanation\u201d as stated; instead it references \u201caccount 6",
+      "llm_calls": 1,
+      "input_tokens": 1085,
+      "output_tokens": 173,
+      "total_tokens": 1258,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 2.533999600993411,
+      "errors": []
+    },
+    {
+      "instance": "e-low-5",
+      "difficulty": "low",
+      "sub_class": null,
+      "paradigm": "workflow",
+      "failed_criteria_predicted": [],
+      "failed_criteria_gold": [],
+      "criterion_accuracy": 1.0,
+      "false_fails": [],
+      "missed_fails": [],
+      "assessments": [
+        {
+          "criterion_id": "C1",
+          "passed": true,
+          "evidence": "The response directly addresses the customer's invoice issue: \u201cThanks for catching this on invoice INV-9921\u2026 reviewed it against your purchase order and you're correct: the renewal should be billed at $42,000.\u201d"
+        },
+        {
+          "criterion_id": "C2",
+          "passed": true,
+          "evidence": "It provides a specific delivery ETA and action: \u201cyou'll receive the updated INV-9921 by end of business tomorrow.\u201d"
+        },
+        {
+          "criterion_id": "C3",
+          "passed": true,
+          "evidence": "No unrelated commitments are made; it only states it will correct the invoice and void the original in \u201cour system.\u201d"
+        },
+        {
+          "criterion_id": "C4",
+          "passed": true,
+          "evidence": "Tone is professional and respectful: \u201cHi, thanks for catching this\u2026 Best regards, Billing Team.\u201d"
+        },
+        {
+          "criterion_id": "C5",
+          "passed": true,
+          "evidence": "It references the same identifier as the inquiry: \u201cinvoice INV-9921,\u201d and aligns the dispute amounts by stating renewal should be $42,000 per the customer\u2019s PO."
+        }
+      ],
+      "correct": true,
+      "predicted": "PASS",
+      "expected": "PASS",
+      "score_rationale": "match",
+      "summary": "All five rubric criteria are met.",
+      "llm_calls": 1,
+      "input_tokens": 1123,
+      "output_tokens": 237,
+      "total_tokens": 1360,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 3.1996340149999014,
+      "errors": []
+    },
+    {
+      "instance": "e-low-5",
+      "difficulty": "low",
+      "sub_class": null,
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": true,
+      "predicted": "PASS",
+      "expected": "PASS",
+      "score_rationale": "match",
+      "summary": "C1. Issue acknowledgment: The response directly addresses the mismatch between invoice INV-9921 renewal ($48,000) and the PO amount ($42,000). PASS.  \nC2. Actionable next steps: It provides a concrete",
+      "llm_calls": 1,
+      "input_tokens": 1122,
+      "output_tokens": 155,
+      "total_tokens": 1277,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 2.52832091399614,
+      "errors": []
+    },
+    {
+      "instance": "e-med-1",
+      "difficulty": "med",
+      "sub_class": "no_eta_in_friendly_wrapping",
+      "paradigm": "workflow",
+      "failed_criteria_predicted": [
+        "C2"
+      ],
+      "failed_criteria_gold": [
+        "C2"
+      ],
+      "criterion_accuracy": 1.0,
+      "false_fails": [],
+      "missed_fails": [],
+      "assessments": [
+        {
+          "criterion_id": "C1",
+          "passed": true,
+          "evidence": "The response directly addresses the refund request for the damaged order by stating, \"We've initiated the $200 refund for the damaged item\" for \"order #20030\"."
+        },
+        {
+          "criterion_id": "C2",
+          "passed": false,
+          "evidence": "No specific timeline or ETA is provided; it only says, \"our finance team is processing it\" without any date or time window for when it will appear on the card."
+        },
+        {
+          "criterion_id": "C3",
+          "passed": true,
+          "evidence": "The response only commits to initiating processing the $200 refund that the customer was already told about, and does not promise any unrelated feature, fix, or other exception."
+        },
+        {
+          "criterion_id": "C4",
+          "passed": true,
+          "evidence": "The tone is professional and polite, e.g., \"We appreciate your patience and value your business. Best, Refunds Team.\" without blame or condescension."
+        },
+        {
+          "criterion_id": "C5",
+          "passed": true,
+          "evidence": "It uses the same order identifier as the inquiry: \"order #20030\" and does not introduce any conflicting case/order/account details."
+        }
+      ],
+      "correct": true,
+      "predicted": "NEEDS_REVISION",
+      "expected": "NEEDS_REVISION",
+      "score_rationale": "match",
+      "summary": "Criteria C2 failed (1 failure); recoverable with targeted edits.",
+      "llm_calls": 1,
+      "input_tokens": 1095,
+      "output_tokens": 253,
+      "total_tokens": 1348,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 4.740869929999462,
+      "errors": []
+    },
+    {
+      "instance": "e-med-1",
+      "difficulty": "med",
+      "sub_class": "no_eta_in_friendly_wrapping",
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": true,
+      "predicted": "NEEDS_REVISION",
+      "expected": "NEEDS_REVISION",
+      "score_rationale": "match",
+      "summary": "C1. Issue acknowledgment: The response directly addresses the refund for the damaged order #20030 and the timeline aspect (\u201cprocessing\u201d). PASS.  \nC2. Actionable next steps: It says the refund has been",
+      "llm_calls": 1,
+      "input_tokens": 1094,
+      "output_tokens": 161,
+      "total_tokens": 1255,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 2.252852294004697,
+      "errors": []
+    },
+    {
+      "instance": "e-med-2",
+      "difficulty": "med",
+      "sub_class": "scope_creep_plus_vague",
+      "paradigm": "workflow",
+      "failed_criteria_predicted": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "failed_criteria_gold": [
+        "C2",
+        "C3"
+      ],
+      "criterion_accuracy": 0.8,
+      "false_fails": [
+        "C1"
+      ],
+      "missed_fails": [],
+      "assessments": [
+        {
+          "criterion_id": "C1",
+          "passed": false,
+          "evidence": "The response does not point to any specific setup guide or directly answer the request to \"point us at the right setup guide\"; it only says an engineer will reach out \"to walk you through the existing setup.\""
+        },
+        {
+          "criterion_id": "C2",
+          "passed": false,
+          "evidence": "It provides no concrete next step timing or ETA\u2014\"in due course\" is vague and not a specific date or numeric time window."
+        },
+        {
+          "criterion_id": "C3",
+          "passed": false,
+          "evidence": "It promises a \"major SSO upgrade later this year\" with \"fully automate setup with one click,\" which is a commitment not asked for in the inquiry."
+        },
+        {
+          "criterion_id": "C4",
+          "passed": true,
+          "evidence": "The tone is professional and respectful: \"Hi, thanks for asking about SSO\" and \"Best, Customer Success\" without blame or condescension."
+        },
+        {
+          "criterion_id": "C5",
+          "passed": true,
+          "evidence": "No case ID, order ID, account, or specific identifier from the inquiry is referenced incorrectly; none are mentioned in either the inquiry or response."
+        }
+      ],
+      "correct": false,
+      "predicted": "FAIL",
+      "expected": "NEEDS_REVISION",
+      "score_rationale": "predicted 'FAIL', expected 'NEEDS_REVISION'",
+      "summary": "Criteria C1, C2, C3 failed (3 failures); the response should not be sent in its current form.",
+      "llm_calls": 1,
+      "input_tokens": 1100,
+      "output_tokens": 253,
+      "total_tokens": 1353,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 3.1728362270005164,
+      "errors": []
+    },
+    {
+      "instance": "e-med-2",
+      "difficulty": "med",
+      "sub_class": "scope_creep_plus_vague",
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": false,
+      "predicted": "FAIL",
+      "expected": "NEEDS_REVISION",
+      "score_rationale": "predicted 'FAIL', expected 'NEEDS_REVISION'",
+      "summary": "C1. Issue acknowledgment: The response mentions SSO setup but does not point the customer to a specific setup guide as requested. This fails because it doesn\u2019t address the \u201cright setup guide\u201d request.",
+      "llm_calls": 1,
+      "input_tokens": 1099,
+      "output_tokens": 174,
+      "total_tokens": 1273,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 3.081278026998916,
+      "errors": []
+    },
+    {
+      "instance": "e-med-3",
+      "difficulty": "med",
+      "sub_class": "compact_compliance",
+      "paradigm": "workflow",
+      "failed_criteria_predicted": [],
+      "failed_criteria_gold": [],
+      "criterion_accuracy": 1.0,
+      "false_fails": [],
+      "missed_fails": [],
+      "assessments": [
+        {
+          "criterion_id": "C1",
+          "passed": true,
+          "evidence": "The response directly addresses the request to confirm the renewal billing date and amount: \"your account will be charged $24,000 on April 1, 2026.\""
+        },
+        {
+          "criterion_id": "C2",
+          "passed": true,
+          "evidence": "It provides a specific resolution/confirmation with concrete details (\"charged $24,000\" and \"on April 1, 2026\"), including an instruction to reply before that date."
+        },
+        {
+          "criterion_id": "C3",
+          "passed": true,
+          "evidence": "It does not promise any unrelated actions like refunds, feature changes, or other commitments beyond confirming billing and offering to review if something looks off."
+        },
+        {
+          "criterion_id": "C4",
+          "passed": true,
+          "evidence": "The tone is professional and respectful, e.g., \"Best, Billing Team\" and no blame or condescension is present."
+        },
+        {
+          "criterion_id": "C5",
+          "passed": true,
+          "evidence": "It matches the identifiers/details from the inquiry (\"April 1, 2026\" and \"$24,000\"); it does not introduce any conflicting case/order/customer ID."
+        }
+      ],
+      "correct": true,
+      "predicted": "PASS",
+      "expected": "PASS",
+      "score_rationale": "match",
+      "summary": "All five rubric criteria are met.",
+      "llm_calls": 1,
+      "input_tokens": 1115,
+      "output_tokens": 254,
+      "total_tokens": 1369,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 3.2334439609985566,
+      "errors": []
+    },
+    {
+      "instance": "e-med-3",
+      "difficulty": "med",
+      "sub_class": "compact_compliance",
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": true,
+      "predicted": "PASS",
+      "expected": "PASS",
+      "score_rationale": "match",
+      "summary": "C1. Issue acknowledgment: The response directly confirms the renewal billing date and amount the customer asked to double-check. **PASS**  \nC2. Actionable next steps: It provides a clear instruction (",
+      "llm_calls": 1,
+      "input_tokens": 1114,
+      "output_tokens": 170,
+      "total_tokens": 1284,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 5.65790684500098,
+      "errors": []
+    },
+    {
+      "instance": "e-med-4",
+      "difficulty": "med",
+      "sub_class": "dismissive_plus_scope_creep",
+      "paradigm": "workflow",
+      "failed_criteria_predicted": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "failed_criteria_gold": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "criterion_accuracy": 1.0,
+      "false_fails": [],
+      "missed_fails": [],
+      "assessments": [
+        {
+          "criterion_id": "C1",
+          "passed": false,
+          "evidence": "The response mentions \"payment issues\" and \"retry the checkout,\" but it does not address the specific customer request to help them \"complete the order\" after a checkout \"something went wrong\" message for the team plan."
+        },
+        {
+          "criterion_id": "C2",
+          "passed": false,
+          "evidence": "It provides no concrete next step beyond \"just retry the checkout\" and includes \"rebuilding the checkout flow which should fix it for everyone eventually\" without any clear ETA or specific resolution."
+        },
+        {
+          "criterion_id": "C3",
+          "passed": false,
+          "evidence": "It promises a process change by stating \"we're rebuilding the checkout flow which should fix it for everyone eventually,\" implying a future fix not requested or guaranteed as an immediate resolution."
+        },
+        {
+          "criterion_id": "C4",
+          "passed": true,
+          "evidence": "The tone is respectful and not condescending or blame-shifting (\"Hi, payment issues happen sometimes \u2014 just retry the checkout.\" and \"Cheers, Support.\")."
+        },
+        {
+          "criterion_id": "C5",
+          "passed": true,
+          "evidence": "No case ID, order ID, or other specific identifier from the inquiry is referenced or contradicted; the inquiry contains none, and the response does not invent one."
+        }
+      ],
+      "correct": true,
+      "predicted": "FAIL",
+      "expected": "FAIL",
+      "score_rationale": "match",
+      "summary": "Criteria C1, C2, C3 failed (3 failures); the response should not be sent in its current form.",
+      "llm_calls": 1,
+      "input_tokens": 1089,
+      "output_tokens": 273,
+      "total_tokens": 1362,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 3.7969768529947032,
+      "errors": []
+    },
+    {
+      "instance": "e-med-4",
+      "difficulty": "med",
+      "sub_class": "dismissive_plus_scope_creep",
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": true,
+      "predicted": "FAIL",
+      "expected": "FAIL",
+      "score_rationale": "match",
+      "summary": "C1. Issue acknowledgment: The response mentions \u201cpayment issues\u201d and tells the user to retry checkout, but it doesn\u2019t directly address the specific problem from the inquiry (\u201cPayment failed at checkou",
+      "llm_calls": 1,
+      "input_tokens": 1088,
+      "output_tokens": 220,
+      "total_tokens": 1308,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 4.607236417003151,
+      "errors": []
+    },
+    {
+      "instance": "e-med-5",
+      "difficulty": "med",
+      "sub_class": "stacked_subtle_fails",
+      "paradigm": "workflow",
+      "failed_criteria_predicted": [
+        "C1",
+        "C2",
+        "C3",
+        "C5"
+      ],
+      "failed_criteria_gold": [
+        "C1",
+        "C2",
+        "C3",
+        "C5"
+      ],
+      "criterion_accuracy": 1.0,
+      "false_fails": [],
+      "missed_fails": [],
+      "assessments": [
+        {
+          "criterion_id": "C1",
+          "passed": false,
+          "evidence": "The response references \u201ccase #130\u201d and does not address the customer\u2019s request to look at \u201ccase #103\u201d or to unblock case #103."
+        },
+        {
+          "criterion_id": "C2",
+          "passed": false,
+          "evidence": "It says \u201cwe're investigating and will get back to you\u201d with no clear ETA or specific next step for unblocking the migration before Friday cutover."
+        },
+        {
+          "criterion_id": "C3",
+          "passed": false,
+          "evidence": "It promises \u201cwe're building a new migration dashboard that will give you better visibility,\u201d which is an unsolicited commitment not requested and not a specific resolution to the current stuck migration."
+        },
+        {
+          "criterion_id": "C4",
+          "passed": true,
+          "evidence": "The tone is professional and respectful: \u201cHi, thanks for your patience\u2026 We\u2019re investigating\u2026\u201d without condescension or blame."
+        },
+        {
+          "criterion_id": "C5",
+          "passed": false,
+          "evidence": "The customer asked about \u201ccase #103,\u201d but the response uses a different identifier: \u201ccase #130.\u201d"
+        }
+      ],
+      "correct": true,
+      "predicted": "FAIL",
+      "expected": "FAIL",
+      "score_rationale": "match",
+      "summary": "Criteria C1, C2, C3, C5 failed (4 failures); the response should not be sent in its current form.",
+      "llm_calls": 1,
+      "input_tokens": 1118,
+      "output_tokens": 236,
+      "total_tokens": 1354,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 3.073111245998007,
+      "errors": []
+    },
+    {
+      "instance": "e-med-5",
+      "difficulty": "med",
+      "sub_class": "stacked_subtle_fails",
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": true,
+      "predicted": "FAIL",
+      "expected": "FAIL",
+      "score_rationale": "match",
+      "summary": "C1. Issue acknowledgment: FAIL \u2014 The response refers to case #130 and generally discusses migrations, but does not address the customer\u2019s specific request to look at case #103 and unblock it.  \nC2. Ac",
+      "llm_calls": 1,
+      "input_tokens": 1117,
+      "output_tokens": 178,
+      "total_tokens": 1295,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 2.2519404089980526,
+      "errors": []
+    },
+    {
+      "instance": "e-high-1",
+      "difficulty": "high",
+      "sub_class": "boundary_pass_eta_window",
+      "paradigm": "workflow",
+      "failed_criteria_predicted": [
+        "C3"
+      ],
+      "failed_criteria_gold": [],
+      "criterion_accuracy": 0.8,
+      "false_fails": [
+        "C3"
+      ],
+      "missed_fails": [],
+      "assessments": [
+        {
+          "criterion_id": "C1",
+          "passed": true,
+          "evidence": "The response directly references the customer's issue about \u201cintermittent message-dropping in the in-app chat\u201d for \u201ccase #200.\u201d"
+        },
+        {
+          "criterion_id": "C2",
+          "passed": true,
+          "evidence": "It provides actionable specifics: \u201cexpected to be in production within the next 2 to 3 weeks\u201d and suggests a workaround (\u201cuse email for time-sensitive messages until the fix ships\u201d)."
+        },
+        {
+          "criterion_id": "C3",
+          "passed": false,
+          "evidence": "It commits to a \u201cfix \u2026 expected to be in production within the next 2 to 3 weeks\u201d and implies resolution availability, which goes beyond a first-reply assurance unless already confirmed by the support function."
+        },
+        {
+          "criterion_id": "C4",
+          "passed": true,
+          "evidence": "The tone is professional and helpful (\u201cthanks for the report,\u201d \u201ctemporary workaround,\u201d \u201cBest, Support\u201d) with no blame or condescension."
+        },
+        {
+          "criterion_id": "C5",
+          "passed": true,
+          "evidence": "It correctly uses the same case identifier referenced by the customer: \u201ccase #200\u201d (and subject \u201cRe: Case #200\u201d)."
+        }
+      ],
+      "correct": false,
+      "predicted": "NEEDS_REVISION",
+      "expected": "PASS",
+      "score_rationale": "predicted 'NEEDS_REVISION', expected 'PASS'",
+      "summary": "Criteria C3 failed (1 failure); recoverable with targeted edits.",
+      "llm_calls": 1,
+      "input_tokens": 1129,
+      "output_tokens": 254,
+      "total_tokens": 1383,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 3.5053406639999594,
+      "errors": []
+    },
+    {
+      "instance": "e-high-1",
+      "difficulty": "high",
+      "sub_class": "boundary_pass_eta_window",
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": false,
+      "predicted": "NEEDS_REVISION",
+      "expected": "PASS",
+      "score_rationale": "predicted 'NEEDS_REVISION', expected 'PASS'",
+      "summary": "C1. Issue acknowledgment: The response explicitly addresses \u201cin-app chat occasionally drops messages\u201d and references case #200. **PASS**  \nC2. Actionable next steps: It provides a concrete ETA (\u201cnext ",
+      "llm_calls": 1,
+      "input_tokens": 1128,
+      "output_tokens": 190,
+      "total_tokens": 1318,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 2.650471216002188,
+      "errors": []
+    },
+    {
+      "instance": "e-high-2",
+      "difficulty": "high",
+      "sub_class": "boundary_needs_revision_two_fails",
+      "paradigm": "workflow",
+      "failed_criteria_predicted": [
+        "C1",
+        "C2",
+        "C5"
+      ],
+      "failed_criteria_gold": [
+        "C2",
+        "C5"
+      ],
+      "criterion_accuracy": 0.8,
+      "false_fails": [
+        "C1"
+      ],
+      "missed_fails": [],
+      "assessments": [
+        {
+          "criterion_id": "C1",
+          "passed": false,
+          "evidence": "The response references \"case #80\" and does not address the customer's requested update for \"case #88\" about the delayed parts shipment."
+        },
+        {
+          "criterion_id": "C2",
+          "passed": false,
+          "evidence": "It says \"will get back to you shortly\" without a concrete ETA, date, or specific resolution."
+        },
+        {
+          "criterion_id": "C3",
+          "passed": true,
+          "evidence": "It does not promise any unauthorized actions, refunds, or future feature/process changes; it only says they are \"looking into\" the shipment."
+        },
+        {
+          "criterion_id": "C4",
+          "passed": true,
+          "evidence": "The tone is professional and respectful: \"We understand this is impacting your operations and appreciate your patience.\""
+        },
+        {
+          "criterion_id": "C5",
+          "passed": false,
+          "evidence": "Customer inquiry is for \"Case #88\" but the response is titled \"Re: Case #80\" and says \"following up on case #80,\" citing a different case ID."
+        }
+      ],
+      "correct": false,
+      "predicted": "FAIL",
+      "expected": "NEEDS_REVISION",
+      "score_rationale": "predicted 'FAIL', expected 'NEEDS_REVISION'",
+      "summary": "Criteria C1, C2, C5 failed (3 failures); the response should not be sent in its current form.",
+      "llm_calls": 1,
+      "input_tokens": 1100,
+      "output_tokens": 225,
+      "total_tokens": 1325,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 2.6049336780051817,
+      "errors": []
+    },
+    {
+      "instance": "e-high-2",
+      "difficulty": "high",
+      "sub_class": "boundary_needs_revision_two_fails",
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": false,
+      "predicted": "FAIL",
+      "expected": "NEEDS_REVISION",
+      "score_rationale": "predicted 'FAIL', expected 'NEEDS_REVISION'",
+      "summary": "C1. Issue acknowledgment: FAIL \u2014 The response references \u201ccase #80\u201d instead of the customer\u2019s \u201ccase #88\u201d and doesn\u2019t clearly address the delayed parts shipment for case #88.\nC2. Actionable next steps:",
+      "llm_calls": 1,
+      "input_tokens": 1099,
+      "output_tokens": 145,
+      "total_tokens": 1244,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 2.0938921369961463,
+      "errors": []
+    },
+    {
+      "instance": "e-high-3",
+      "difficulty": "high",
+      "sub_class": "boundary_fail_three_fails",
+      "paradigm": "workflow",
+      "failed_criteria_predicted": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5"
+      ],
+      "failed_criteria_gold": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "criterion_accuracy": 0.6,
+      "false_fails": [
+        "C4",
+        "C5"
+      ],
+      "missed_fails": [],
+      "assessments": [
+        {
+          "criterion_id": "C1",
+          "passed": false,
+          "evidence": "The response is generic (\u201cintegrations sometimes don't work\u2026 will get to your Salesforce issue at some point\u201d) and does not explicitly address the specific request about intermittent Salesforce sync job errors or reference \u201cCase #155\u201d."
+        },
+        {
+          "criterion_id": "C2",
+          "passed": false,
+          "evidence": "It provides no concrete next step, resolution, or ETA; phrases like \u201cat some point\u201d and \u201cMaybe ping us back next month\u201d are vague and not a clear actionable resolution."
+        },
+        {
+          "criterion_id": "C3",
+          "passed": false,
+          "evidence": "It promises consideration of a \u201cnew integration adapter that should help in the future,\u201d which commits to a feature/plan not requested in the inquiry."
+        },
+        {
+          "criterion_id": "C4",
+          "passed": false,
+          "evidence": "Tone is dismissive/dismissive language: \u201cLook, integrations sometimes don't work\u201d plus \u201cat some point\u201d can come across as non-responsive."
+        },
+        {
+          "criterion_id": "C5",
+          "passed": false,
+          "evidence": "The inquiry references \u201cCase #155,\u201d but the response does not mention Case #155 or any matching identifier, and uses no specific identifiers from the inquiry."
+        }
+      ],
+      "correct": true,
+      "predicted": "FAIL",
+      "expected": "FAIL",
+      "score_rationale": "match",
+      "summary": "Criteria C1, C2, C3, C4, C5 failed (5 failures); the response should not be sent in its current form.",
+      "llm_calls": 1,
+      "input_tokens": 1090,
+      "output_tokens": 261,
+      "total_tokens": 1351,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 3.0897129399963887,
+      "errors": []
+    },
+    {
+      "instance": "e-high-3",
+      "difficulty": "high",
+      "sub_class": "boundary_fail_three_fails",
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": true,
+      "predicted": "FAIL",
+      "expected": "FAIL",
+      "score_rationale": "match",
+      "summary": "C1. Issue acknowledgment: FAIL \u2014 The response is generic and does not meaningfully address the specific issue described (intermittent Salesforce integration failing about once an hour) or the request ",
+      "llm_calls": 1,
+      "input_tokens": 1089,
+      "output_tokens": 183,
+      "total_tokens": 1272,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 2.4632483599998523,
+      "errors": []
+    },
+    {
+      "instance": "e-high-4",
+      "difficulty": "high",
+      "sub_class": "soft_scope_creep_at_renewal",
+      "paradigm": "workflow",
+      "failed_criteria_predicted": [
+        "C3"
+      ],
+      "failed_criteria_gold": [
+        "C3"
+      ],
+      "criterion_accuracy": 1.0,
+      "false_fails": [],
+      "missed_fails": [],
+      "assessments": [
+        {
+          "criterion_id": "C1",
+          "passed": true,
+          "evidence": "The response directly addresses the inquiry by confirming the renewal/contract renewal date and the renewal amount for Case #401 (\u201cYour current contract expires on December 31, 2026\u2026 The renewed annual fee will be $36,000\u2026\u201d)."
+        },
+        {
+          "criterion_id": "C2",
+          "passed": true,
+          "evidence": "It provides concrete timing details: expiration date (December 31, 2026), debit/renewal processing date (January 1, 2027), and when confirmation is sent (\u201cYou\u2019ll receive a renewal confirmation 30 days before the renewal date\u201d)."
+        },
+        {
+          "criterion_id": "C3",
+          "passed": false,
+          "evidence": "It promises an unrequested future action/entitlement: \u201cWe\u2019re also rolling out a new premium tier mid-2027\u2026 you\u2019d get our new analytics suite free for the first year,\u201d which the customer did not ask for."
+        },
+        {
+          "criterion_id": "C4",
+          "passed": true,
+          "evidence": "The tone is professional and polite (\u201cHi, thanks for reaching out\u2026 Best, Account Services.\u201d) with no condescension or blame."
+        },
+        {
+          "criterion_id": "C5",
+          "passed": true,
+          "evidence": "The response references the same case identifier as the customer: \u201ccase #401\u201d in both the subject line and body, matching the inquiry."
+        }
+      ],
+      "correct": true,
+      "predicted": "NEEDS_REVISION",
+      "expected": "NEEDS_REVISION",
+      "score_rationale": "match",
+      "summary": "Criteria C3 failed (1 failure); recoverable with targeted edits.",
+      "llm_calls": 1,
+      "input_tokens": 1140,
+      "output_tokens": 294,
+      "total_tokens": 1434,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 3.687739895998675,
+      "errors": []
+    },
+    {
+      "instance": "e-high-4",
+      "difficulty": "high",
+      "sub_class": "soft_scope_creep_at_renewal",
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": true,
+      "predicted": "NEEDS_REVISION",
+      "expected": "NEEDS_REVISION",
+      "score_rationale": "match",
+      "summary": "C1. Issue acknowledgment: The response addresses Case #401 and confirms renewal date and amount. PASS.  \nC2. Actionable next steps: It provides specific dates (Dec 31, 2026; Jan 1, 2027) and when conf",
+      "llm_calls": 1,
+      "input_tokens": 1139,
+      "output_tokens": 173,
+      "total_tokens": 1312,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 3.528072021996195,
+      "errors": []
+    },
+    {
+      "instance": "e-high-5",
+      "difficulty": "high",
+      "sub_class": "looks_critical_actually_pass",
+      "paradigm": "workflow",
+      "failed_criteria_predicted": [],
+      "failed_criteria_gold": [],
+      "criterion_accuracy": 1.0,
+      "false_fails": [],
+      "missed_fails": [],
+      "assessments": [
+        {
+          "criterion_id": "C1",
+          "passed": true,
+          "evidence": "The response explicitly addresses both items in the inquiry: the \"dashboard widget\" bug on \"case #500\" (freeze with 6+ KPIs) and the prior support experience on \"case #500\"."
+        },
+        {
+          "criterion_id": "C2",
+          "passed": true,
+          "evidence": "It provides actionable resolution/ETA details: \"They've reproduced the freeze... and expect a fix in production by March 20, 2026.\""
+        },
+        {
+          "criterion_id": "C3",
+          "passed": true,
+          "evidence": "It does not promise any unrequested feature/refund; it only states the bug has been escalated and that the agent will \"personally own this case going forward.\""
+        },
+        {
+          "criterion_id": "C4",
+          "passed": true,
+          "evidence": "The tone is respectful and professional, including an apology: \"I'm sorry that happened\" and no blame or condescension."
+        },
+        {
+          "criterion_id": "C5",
+          "passed": true,
+          "evidence": "It matches the customer\u2019s referenced identifier, consistently using \"case #500\" and does not introduce a conflicting case/order/account."
+        }
+      ],
+      "correct": true,
+      "predicted": "PASS",
+      "expected": "PASS",
+      "score_rationale": "match",
+      "summary": "All five rubric criteria are met.",
+      "llm_calls": 1,
+      "input_tokens": 1187,
+      "output_tokens": 248,
+      "total_tokens": 1435,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 2.922721258997626,
+      "errors": []
+    },
+    {
+      "instance": "e-high-5",
+      "difficulty": "high",
+      "sub_class": "looks_critical_actually_pass",
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": true,
+      "predicted": "PASS",
+      "expected": "PASS",
+      "score_rationale": "match",
+      "summary": "C1. Issue acknowledgment: The response explicitly addresses both items in the inquiry (dashboard widget bug/freezes with >5 KPIs, and dissatisfaction with prior support). PASS.  \nC2. Actionable next s",
+      "llm_calls": 1,
+      "input_tokens": 1186,
+      "output_tokens": 177,
+      "total_tokens": 1363,
+      "tool_call_count": 0,
+      "tool_calls": [],
+      "latency_s": 3.381416863994673,
+      "errors": []
+    }
+  ]
+}

@@ -3,7 +3,7 @@
   "archetype": "G",
   "difficulty": "low",
   "sub_class": "reassign_handover",
-  "instruction": "Plan the handover of case 8: reassign it to agent 2 and set its priority to 'Medium' in the same update, then email the receiving agent with subject 'Case 8 reassigned' and the previous owning agent with subject 'Case 8 handed over' (brief bodies). Do not close the case.",
+  "instruction": "Please hand case 8 over to agent 2, setting its priority to 'Medium' in the same update. Let agent 2 know by email with subject 'Case 8 reassigned', and give the previous owning agent a short heads-up with subject 'Case 8 handed over'. The case itself stays open.\n\nSupport runbook (excerpt):\n- Primary contact: an account's primary contact is the contact with the lowest id at that account.\n- Customer notification on closures: unless the request says otherwise, the account's primary contact receives one email per closed case with subject 'Case <id> closed' (substitute the actual case id) and a brief body, and closure notifications are sent only after every close in the work package is done.\n- Escalation-blocked cases: a case whose transfer history is above the escalation threshold cannot be closed with attempt_close_case; such a case is closed via a direct update that also records the closure timestamp (closed_at).\n- Keep email and event bodies brief, and plan only the actions the work package requires.",
   "goal": {
     "case_fields": {
       "8": {

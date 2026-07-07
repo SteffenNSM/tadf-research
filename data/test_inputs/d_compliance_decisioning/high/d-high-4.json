@@ -2,7 +2,7 @@
   "id": "d-high-4",
   "archetype": "D",
   "difficulty": "high",
-  "sub_class": "precedence_P2_over_P4",
+  "sub_class": "no_action_credit_hold_gate_dominates_full_chain",
   "instruction": "Apply the approval policy to this quote request and return the required decision.",
   "quote_request": {
     "lead": {
@@ -13,18 +13,23 @@
     "customer": {
       "region": "EMEA",
       "is_existing": true,
-      "has_overdue_invoices": false
+      "has_overdue_invoices": false,
+      "has_credit_hold": true,
+      "is_new_logo": false,
+      "segment": "Commercial"
     },
     "quote": {
-      "amount": 250000,
-      "base_discount_pct": 5
+      "amount": 80000,
+      "base_discount_pct": 15,
+      "term_months": 24
     }
   },
-  "expected_label": "ESCALATE_REGIONAL_VP",
-  "rationale_hint": "Gates pass; B1 +5 %, B2 +3 %; effective 13 %; quote amount $250,000 > $200,000. P2 fires → ESCALATE_REGIONAL_VP. P2 takes precedence over P4, which would have selected ESCALATE_DIRECTOR for the 13 % bracket.",
+  "request_text": "Subject: Quote approval request — lead 5014\n\nHi Compliance team,\n\nCould you run our quote approval policy on the request below and let me know the decision?\n\nThe lead (ID 5014) is currently marked \"qualified\" in the CRM. The customer is in the EMEA region, is an existing customer, sits in the Commercial segment, has no overdue invoices on file, and is on a credit hold. The deal is for $80,000 over a 24-month term, with a requested base discount of 15%.\n\nThanks,\nSales Operations",
+  "expected_label": "DECLINE",
+  "rationale_hint": "Gate G4 fires: the customer is on a credit hold → DECLINE before any discount logic. The complete trail (B1 +5, B2 +3, B3 +4 → effective 27 %, P4 (20,30] → ESCALATE_VP) is a distractor; a compliance gate dominates everything that follows. Exercises the new G4 gate.",
   "provenance": {
     "source_benchmark": "CRMArena-Pro Workflow Execution (Huang et al., 2025); World of Workflows Constraint Understanding (Skyfall Research, 2025); WorkBench no-action subset (Styles et al., 2024); FlowBench rule-following (Xiao et al., 2024)",
-    "adaptation": "Author-constructed quote request and approval policy; task semantics follow the rule-application + no-action pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: precedence_P2_over_P4.",
+    "adaptation": "Author-constructed quote request and approval policy; task semantics follow the rule-application + no-action pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: no_action_credit_hold_gate_dominates_full_chain.",
     "license": "Original work by the author (rule set, quote requests, task design); benchmark semantics reference only"
   }
 }

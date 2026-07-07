@@ -1,62 +1,93 @@
-"""Workflow implementation for archetype D: Compliance and Rule-Based Decisioning.
+"""Workflow for archetype D: rule-retrieval + deterministic decision engine.
 
-Canonical-minimal form for a rule-application decision task: a single LLM
-call with ``with_structured_output(DecisionResult, ...)`` against the quote
-request provided in state. No plan stage, no tool dispatch; the policy
-application is the entire task and structured output constrains the label
-to the documented Literal enum so the workflow cannot emit an invented
-decision.
+A realistic compliance sub-flow with **mid information availability**: the
+approval policy is not in the prompt; it is fetched from the external Policy
+Registry and applied by a deterministic rule engine. The single LLM call
+extracts the request fields — it never applies the policy. This is the same
+division of labour as B's ETL workflow (LLM plans/extracts, engine computes),
+and it is what makes D a genuine workflow-vs-agent paradigm test instead of a
+single in-context call.
 
 Graph topology:
-    [decide] -> END
+    [survey] -> [fetch_rules] -> [extract] -> [decide] -> END
+      det.        det.+latency     LLM         det. engine
 
-The architecture parallels archetype C deliberately: both archetypes share
-the high Step Predictability / high Information Availability / low Output
-Ambiguity profile, so the canonical-minimal forms collapse to the same
-structural pattern (one LLM call, structured output, no information
-gathering). The empirical difference between C and D shows in the failure
-distribution rather than in the workflow's graph: C tests input-ambiguity
-resolution, D tests rule-depth application, and the difficulty axes are
-operationalized accordingly.
+- survey (deterministic): call list_policies() to read the policy catalogue.
+- fetch_rules (deterministic): call get_policy(topic) for every catalogued
+  document (Policy-Registry API, payload realism + synthetic latency) and
+  assemble the complete clause set. The workflow loads the whole governing
+  policy; the engine's precedence logic selects what actually applies.
+- extract (LLM): read the natural-language request and emit QuoteFacts.
+- decide (deterministic): the rule engine evaluates the fetched clauses
+  against the extracted facts and returns the DecisionResult. The label is
+  constrained to the documented enum by the engine's own decision space.
 """
 
 from __future__ import annotations
-
-import json
 
 from langchain_core.runnables import RunnableConfig
 from langgraph.graph import END, StateGraph
 
 from src.archetypes.d_compliance_decisioning.config import (
-    CLASSIFY_PROMPT,
-    POLICY_RULES,
+    EXTRACT_PROMPT,
     TEMPERATURE,
 )
-from src.archetypes.d_compliance_decisioning.schemas import DecisionResult
+from src.archetypes.d_compliance_decisioning.rule_engine import evaluate
+from src.archetypes.d_compliance_decisioning.schemas import (
+    DecisionResult,
+    QuoteFacts,
+)
 from src.core.llm import get_llm
+from src.core.tools.policy import get_policy, list_policies
 
 
-def decide(state: dict, config: RunnableConfig | None = None) -> dict:
-    """Node 1: produce the DecisionResult (single LLM call)."""
+def survey(state: dict, config: RunnableConfig | None = None) -> dict:
+    """Node 1 (deterministic): read the policy catalogue from the registry."""
+    catalogue = list_policies.invoke({}, config=config)
+    return {**state, "policy_catalogue": catalogue}
+
+
+def fetch_rules(state: dict, config: RunnableConfig | None = None) -> dict:
+    """Node 2 (deterministic): fetch every policy document and assemble clauses."""
+    clauses: list[dict] = []
+    docs: list[dict] = []
+    for entry in state["policy_catalogue"]:
+        doc = get_policy.invoke({"topic": entry["topic"]}, config=config)
+        if isinstance(doc, dict) and "clauses" in doc:
+            docs.append(doc)
+            clauses.extend(doc["clauses"])
+    return {**state, "policy_docs": docs, "clauses": clauses}
+
+
+def extract(state: dict) -> dict:
+    """Node 3 (LLM): extract structured QuoteFacts from the free-text request."""
     llm = get_llm(TEMPERATURE).with_structured_output(
-        DecisionResult, method="function_calling"
+        QuoteFacts, method="function_calling"
     )
-    qr_json = json.dumps(state["quote_request"], indent=2, ensure_ascii=False)
-    result: DecisionResult = llm.invoke(
-        CLASSIFY_PROMPT.format(
-            rules=POLICY_RULES,
-            quote_request=qr_json,
-            instruction=state["instruction"],
-        )
+    facts: QuoteFacts = llm.invoke(
+        EXTRACT_PROMPT.format(request_text=state["request_text"])
     )
+    return {**state, "facts": facts.model_dump()}
+
+
+def decide(state: dict) -> dict:
+    """Node 4 (deterministic): apply the rule engine to facts + clauses."""
+    label, rationale = evaluate(state["clauses"], state["facts"])
+    result = DecisionResult(label=label, rationale=rationale)
     return {**state, "output": result.model_dump(), "completed": True}
 
 
 def build_workflow():
-    """Construct and compile the archetype D workflow."""
+    """Construct and compile the archetype D rule-retrieval workflow."""
     graph = StateGraph(dict)
+    graph.add_node("survey", survey)
+    graph.add_node("fetch_rules", fetch_rules)
+    graph.add_node("extract", extract)
     graph.add_node("decide", decide)
-    graph.set_entry_point("decide")
+    graph.set_entry_point("survey")
+    graph.add_edge("survey", "fetch_rules")
+    graph.add_edge("fetch_rules", "extract")
+    graph.add_edge("extract", "decide")
     graph.add_edge("decide", END)
     return graph.compile()
 

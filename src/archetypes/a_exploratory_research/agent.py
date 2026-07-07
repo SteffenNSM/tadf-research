@@ -28,6 +28,15 @@ def build_agent():
     return create_react_agent(model=llm, tools=TOOLS, prompt=system_message)
 
 
+#: Safety ceiling on the agent's sequential tool calls, symmetric with the
+#: workflow's MAX_QUERIES = 10 (workflow.py). This is NOT stated in the agent
+#: prompt: the agent decides adaptively when to stop, and the limit only
+#: prevents a pathological runaway loop. In LangGraph each tool call spans two
+#: super-steps (agent node + tool node), so recursion_limit = 2 * 10 + 1.
+MAX_TOOL_CALLS = 10
+_RECURSION_LIMIT = 2 * MAX_TOOL_CALLS + 1
+
+
 def run_agent(instruction: str, config: dict | None = None) -> dict:
     """Execute the agent on a single research task.
 
@@ -40,7 +49,8 @@ def run_agent(instruction: str, config: dict | None = None) -> dict:
         message; the runner extracts it for scoring.
     """
     agent = build_agent()
+    run_config = {"recursion_limit": _RECURSION_LIMIT, **(config or {})}
     return agent.invoke(
         {"messages": [("human", instruction)]},
-        config=config or {},
+        config=run_config,
     )

@@ -2,27 +2,27 @@
   "id": "a-med-1",
   "archetype": "A",
   "difficulty": "med",
-  "instruction": "How many years separate the founding of Poeschl Tabak (Alois Poeschl) and Uhlmann Pac-Systeme? Answer with the number of years.",
+  "instruction": "By straight-line distance, which two of these three sites lie closest to each other: Bauhaus Dessau, Naumburg Cathedral, or the Wartburg? Answer with the two site names.",
   "ground_truth": {
-    "value": "46",
-    "unit": "years"
+    "value": "Bauhaus Dessau and Naumburg Cathedral",
+    "unit": "site_pair"
   },
   "provenance": {
-    "source_benchmark": "BrowseComp (Wei et al., 2025)",
-    "construction_method": "inverted-question (BrowseComp Sec. 2.1); author-constructed",
-    "difficulty_axis": "number of distinct sources (2, independent / plan-time-decidable)",
-    "domain": "SME hidden champion",
+    "source_benchmark": "AssistantBench (Yoran et al., 2024); BrowseComp (Wei et al., 2025)",
+    "construction_method": "Three site locations retrieved; the closest pair is selected. Parallel, no runtime dependency.",
+    "difficulty_axis": "three distinct sources aggregated in parallel",
+    "domain": "German cultural geography",
     "sources": [
-      "https://de.wikipedia.org/wiki/Alois_P%C3%B6schl",
-      "https://de.wikipedia.org/wiki/Uhlmann_Pac-Systeme"
+      "https://de.wikipedia.org/wiki/Bauhaus_Dessau",
+      "https://de.wikipedia.org/wiki/Naumburger_Dom",
+      "https://de.wikipedia.org/wiki/Wartburg"
     ],
     "verification": {
-      "memorization_no_tool": "pending",
-      "retrievable_via_tavily": "pending",
-      "one_shot_breaks": "unlikely (workflow can plan both queries)",
-      "unique": "yes"
+      "memorization_no_tool": "pending (must be non-memorized on the strongest model used)",
+      "retrievable_via_tavily": "pending (confirm on the run)",
+      "gold_verified": "author-supplied; confirm on the run"
     },
-    "note": "Poeschl 1902, Uhlmann 1948 -> 46. Numeric two-source combination: cannot be guessed without both exact founding years from two separate pages.",
-    "license": "Original work by the author (task design); BrowseComp construction method referenced only"
+    "note": "Reused from the prior corpus (a-high-3).",
+    "license": "Original work by the author (task design)"
   }
 }

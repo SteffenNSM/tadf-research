@@ -1,0 +1,13 @@
+{
+  "id": "rf-low-1",
+  "archetype": "F",
+  "difficulty": "low",
+  "base_instance": "f-low-1",
+  "perturbation_type": "colloquial_buried",
+  "instruction": "hey, quick one -- been meaning to get this out all week. can you shoot contact005@example.com a note for me? subject line should be exactly 'Q3 status update', and for the body just use this text as it is: 'Hi, I wanted to share our Q3 status update for your account. This quarter we resolved the open billing issues, completed the integration handover, and have a few recommendations to discuss for next quarter. Let me know if you would like to set up a short call. Best regards, Account Team.' thanks!!",
+  "expected_post_state": "Exactly one new outbox row exists with recipient='contact005@example.com' and subject='Q3 status update'; no other outbox rows were added.",
+  "provenance": {
+    "construction_method": "Surface perturbation (colloquial_buried) of f-low-1's instruction; all action values remain stated in the text, post-state gold and predicate unchanged. Robustness check, not a new task.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

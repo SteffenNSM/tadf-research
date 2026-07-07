@@ -2,18 +2,49 @@
   "id": "c-med-4",
   "archetype": "C",
   "difficulty": "med",
-  "sub_class": null,
-  "instruction": "Route this email to the correct support category.",
-  "email": {
-    "sender": "cfo@arclight.example",
-    "subject": "Renewal invoice — amount mismatch",
-    "body": "Quick follow-up on our renewal. The new contract total shows our enterprise discount applied as 10%, but the signed proposal had it at 15%. Could the team re-check the invoice math and send a corrected version?"
+  "instruction": "Triage this batch of customer support emails: assign each email to exactly one support category by its primary intent.",
+  "emails": [
+    {
+      "id": "e1",
+      "sender": "user1@customer.example",
+      "subject": "Sync failing, not the address",
+      "body": "Thanks for fixing our delivery address last week. Unrelated: finance had a charge question we've already resolved. The live problem: our nightly data sync via your API has failed with timeouts for three days and the reports are stale — please investigate."
+    },
+    {
+      "id": "e2",
+      "sender": "user2@customer.example",
+      "subject": "Access after role change",
+      "body": "Since you changed my role I can't see the billing section anymore. Pages load fine for my colleagues, so nothing is down — I just need my permissions put back so I can reach billing."
+    },
+    {
+      "id": "e3",
+      "sender": "user3@customer.example",
+      "subject": "Still charged for removed seats",
+      "body": "We removed three seats last month and the app reflects it correctly. The problem is only this invoice: it still bills the old seat count. Please correct the charge."
+    },
+    {
+      "id": "e4",
+      "sender": "user4@customer.example",
+      "subject": "Export: broken or intended?",
+      "body": "When we export a large report to CSV it fails every time with an error. Is that expected behaviour, or is it broken? For us it never completes — it just errors out."
+    },
+    {
+      "id": "e5",
+      "sender": "user5@customer.example",
+      "subject": "Wrong SKU sent",
+      "body": "You shipped the wrong unit. I'd like the correct one sent out; once it arrives we can reconcile the price difference, but the priority is getting the right item delivered."
+    }
+  ],
+  "expected": {
+    "e1": "Technical",
+    "e2": "Account",
+    "e3": "Billing",
+    "e4": "Technical",
+    "e5": "Shipping"
   },
-  "expected_label": "Billing",
-  "rationale_hint": "Side signal: 'renewal' and 'contract' (Account/contract-adjacent surface). Dominant signal: the requester is asking for an invoice correction tied to a specific discount calculation — the ask is about money on an invoice → Billing.",
   "provenance": {
     "source_benchmark": "CRMArena-Pro Case Routing / Activity Priority Understanding (Huang et al., 2025)",
-    "adaptation": "Author-constructed email texts; task semantics follow the CRMArena-Pro routing/disambiguation pattern. The five-category label set is mirrored from cases.issue_category in experiments/seed_crm.py so the routing decision is consistent with the local CRM schema.",
+    "construction_method": "Batch-triage task (single input batch -> single labelled output, Section 2.2.3). Difficulty = batch size (3/5/8) x per-email ambiguity; Med/High emails carry competing near-duplicate signals with one primary intent; High emails are verbose with a buried core ask to load the context. Author-constructed from a labelled pool; no benchmark text reproduced.",
     "license": "Original work by the author (email texts and task design); benchmark semantics reference only"
   }
 }

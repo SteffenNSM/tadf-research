@@ -27,6 +27,7 @@ from src.archetypes.e_output_verification.agent import run_agent
 from src.archetypes.e_output_verification.ground_truth import (
     extract_label,
     score,
+    score_criteria,
 )
 from src.archetypes.e_output_verification.workflow import workflow
 from src.core.llm import MODEL_NAME, results_dir
@@ -114,6 +115,23 @@ def main() -> None:
                         if isinstance(output, dict)
                         else str(output)
                     )
+                    # Per-criterion attribution (workflow path only): compare
+                    # the assess node's failed set against the gold list.
+                    if isinstance(output, dict) and "failed_criteria" in output:
+                        crit_acc, false_fails, missed_fails = score_criteria(
+                            output["failed_criteria"],
+                            inst.get("criterion_failures", []),
+                        )
+                        row.update(
+                            {
+                                "failed_criteria_predicted": output["failed_criteria"],
+                                "failed_criteria_gold": inst.get("criterion_failures", []),
+                                "criterion_accuracy": crit_acc,
+                                "false_fails": false_fails,
+                                "missed_fails": missed_fails,
+                                "assessments": output.get("assessments"),
+                            }
+                        )
                 else:
                     summary_text = output if isinstance(output, str) else ""
                     predicted = extract_label(summary_text)

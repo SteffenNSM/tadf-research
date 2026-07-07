@@ -67,6 +67,50 @@ BENCHMARK_REF = (
 )
 
 
+def _render_request_text(qr: dict) -> str:
+    """Render a structured quote request as a natural-language email.
+
+    The D redesign lowers information availability to mid: the workflow and
+    agent receive the request as free text (the policy is fetched separately
+    from the Policy Registry). This renderer embeds all six policy-relevant
+    facts — lead status, region, existing/new, overdue invoices, amount, base
+    discount — unambiguously in prose, so the only linguistic work is
+    extraction, not disambiguation (the latter is archetype C's axis).
+    """
+    lead = qr["lead"]
+    cust = qr["customer"]
+    quote = qr["quote"]
+    existing_phrase = (
+        "an existing customer" if cust["is_existing"] else "a new (non-existing) customer"
+    )
+    new_logo_phrase = (
+        " This deal is a new-logo acquisition." if cust.get("is_new_logo") else ""
+    )
+    overdue_phrase = (
+        "has overdue invoices outstanding"
+        if cust["has_overdue_invoices"]
+        else "has no overdue invoices on file"
+    )
+    credit_phrase = (
+        "is on a credit hold"
+        if cust.get("has_credit_hold")
+        else "is not on any credit hold"
+    )
+    return (
+        f"Subject: Quote approval request — lead {lead['id']}\n\n"
+        f"Hi Compliance team,\n\n"
+        f"Could you run our quote approval policy on the request below and let "
+        f"me know the decision?\n\n"
+        f"The lead (ID {lead['id']}) is currently marked \"{lead['status']}\" in "
+        f"the CRM. The customer is in the {cust['region']} region, is "
+        f"{existing_phrase}, sits in the {cust['segment']} segment, "
+        f"{overdue_phrase}, and {credit_phrase}. The deal is for "
+        f"${quote['amount']:,} over a {quote['term_months']}-month term, with a "
+        f"requested base discount of {quote['base_discount_pct']}%.{new_logo_phrase}\n\n"
+        f"Thanks,\nSales Operations"
+    )
+
+
 def _provenance(sub_class: str | None) -> dict:
     note = (
         "Author-constructed quote request and approval policy; task semantics "
@@ -238,89 +282,95 @@ INSTANCES: list[dict] = [
             "DECLINE. Note that the base discount alone (28 %) would have been ESCALATE_VP."
         ),
     },
-    # ── HIGH: five or more rules with precedence conflicts ──
+    # ── HIGH: full-ruleset reconciliation. Each requires evaluating ~10 rules --
+    #    four gates (G1 lead, G2 overdue, G3 segment, G4 credit hold), up to three
+    #    of the five bonuses (B1 EMEA, B2 loyalty, B3 term, B4 APAC, B5 new-logo),
+    #    and precedence across P1 cap / P2 high-value / P2s strategic / P3 small /
+    #    P4 brackets -- plus two distractor policies that must be ignored. ──
     {
         "id": "d-high-1",
         "difficulty": "high",
-        "sub_class": "boundary_inclusive",
+        "sub_class": "boundary_inclusive_triple_bonus",
         "instruction": "Apply the approval policy to this quote request and return the required decision.",
         "quote_request": {
             "lead": {"id": 5011, "status": "qualified", "account_id": 1},
-            "customer": {"region": "EMEA", "is_existing": True, "has_overdue_invoices": False},
-            "quote": {"amount": 80000, "base_discount_pct": 22},
+            "customer": {"region": "EMEA", "is_existing": True, "has_overdue_invoices": False, "has_credit_hold": False, "is_new_logo": False, "segment": "Commercial"},
+            "quote": {"amount": 80000, "base_discount_pct": 18, "term_months": 24},
         },
         "expected_label": "ESCALATE_VP",
         "rationale_hint": (
-            "Gates pass; B1 +5 %, B2 +3 %; effective exactly 30 %. P4's (20,30] bracket is inclusive at "
-            "the upper bound — 30 % falls in ESCALATE_VP, not DECLINE. P1 fires only at > 30, so it does "
-            "not apply at the boundary."
+            "All four gates pass. Of the five bonuses, B1 (EMEA +5), B2 (loyalty +3), B3 (24-month +4) "
+            "fire while B4/B5 do not: effective = 18 + 12 = exactly 30 %. P1 fires only above 30, so the "
+            "(20,30] bracket applies inclusively → ESCALATE_VP."
         ),
     },
     {
         "id": "d-high-2",
         "difficulty": "high",
-        "sub_class": "no_action_over_limit_via_bonuses",
+        "sub_class": "no_action_over_limit_via_three_bonuses",
         "instruction": "Apply the approval policy to this quote request and return the required decision.",
         "quote_request": {
             "lead": {"id": 5012, "status": "qualified", "account_id": 5},
-            "customer": {"region": "EMEA", "is_existing": True, "has_overdue_invoices": False},
-            "quote": {"amount": 100000, "base_discount_pct": 25},
+            "customer": {"region": "EMEA", "is_existing": True, "has_overdue_invoices": False, "has_credit_hold": False, "is_new_logo": False, "segment": "Commercial"},
+            "quote": {"amount": 80000, "base_discount_pct": 20, "term_months": 24},
         },
         "expected_label": "DECLINE",
         "rationale_hint": (
-            "Gates pass; B1 +5 %, B2 +3 %; effective 33 % > 30 %. P1 fires → DECLINE. The base "
-            "discount alone (25 %) would have been ESCALATE_VP; both bonuses together push it over the cap."
+            "All four gates pass; B1 +5, B2 +3, B3 +4 add 12 to base 20 % → effective 32 % > 30 %. P1 "
+            "(over-limit cap) fires → DECLINE. The base alone (20 %) would have been ESCALATE_VP; the "
+            "three stacking bonuses push it over the cap."
         ),
     },
     {
         "id": "d-high-3",
         "difficulty": "high",
-        "sub_class": "precedence_P3_over_P4",
+        "sub_class": "new_bonuses_apac_newlogo_strategic_regional_vp",
         "instruction": "Apply the approval policy to this quote request and return the required decision.",
         "quote_request": {
             "lead": {"id": 5013, "status": "qualified", "account_id": 10},
-            "customer": {"region": "AMER", "is_existing": False, "has_overdue_invoices": False},
-            "quote": {"amount": 4500, "base_discount_pct": 8},
+            "customer": {"region": "APAC", "is_existing": False, "has_overdue_invoices": False, "has_credit_hold": False, "is_new_logo": True, "segment": "Strategic"},
+            "quote": {"amount": 150000, "base_discount_pct": 8, "term_months": 24},
         },
-        "expected_label": "ESCALATE_DIRECTOR",
+        "expected_label": "ESCALATE_REGIONAL_VP",
         "rationale_hint": (
-            "Gates pass; no bonuses; effective 8 %; quote amount $4,500 < $5,000 AND effective > 5 %. "
-            "P3 fires → ESCALATE_DIRECTOR. P3 takes precedence over P4's bracket, which would have "
-            "selected APPROVE for an 8 % discount."
+            "All four gates pass; B4 (APAC +2), B5 (new-logo +3), B3 (24-month +4) fire → effective 17 %. "
+            "The deal is $150,000: below the $200,000 high-value threshold (P2) but Strategic and above "
+            "$100,000, so P2s (precedence 2.5) fires → ESCALATE_REGIONAL_VP, overriding the (10,20] "
+            "bracket. Exercises the two new bonuses B4/B5."
         ),
     },
     {
         "id": "d-high-4",
         "difficulty": "high",
-        "sub_class": "precedence_P2_over_P4",
+        "sub_class": "no_action_credit_hold_gate_dominates_full_chain",
         "instruction": "Apply the approval policy to this quote request and return the required decision.",
         "quote_request": {
             "lead": {"id": 5014, "status": "qualified", "account_id": 17},
-            "customer": {"region": "EMEA", "is_existing": True, "has_overdue_invoices": False},
-            "quote": {"amount": 250000, "base_discount_pct": 5},
+            "customer": {"region": "EMEA", "is_existing": True, "has_overdue_invoices": False, "has_credit_hold": True, "is_new_logo": False, "segment": "Commercial"},
+            "quote": {"amount": 80000, "base_discount_pct": 15, "term_months": 24},
         },
-        "expected_label": "ESCALATE_REGIONAL_VP",
+        "expected_label": "DECLINE",
         "rationale_hint": (
-            "Gates pass; B1 +5 %, B2 +3 %; effective 13 %; quote amount $250,000 > $200,000. P2 fires "
-            "→ ESCALATE_REGIONAL_VP. P2 takes precedence over P4, which would have selected "
-            "ESCALATE_DIRECTOR for the 13 % bracket."
+            "Gate G4 fires: the customer is on a credit hold → DECLINE before any discount logic. The "
+            "complete trail (B1 +5, B2 +3, B3 +4 → effective 27 %, P4 (20,30] → ESCALATE_VP) is a "
+            "distractor; a compliance gate dominates everything that follows. Exercises the new G4 gate."
         ),
     },
     {
         "id": "d-high-5",
         "difficulty": "high",
-        "sub_class": "no_action_gate_dominates_full_chain",
+        "sub_class": "precedence_P2_high_value_over_bracket",
         "instruction": "Apply the approval policy to this quote request and return the required decision.",
         "quote_request": {
             "lead": {"id": 5015, "status": "qualified", "account_id": 18},
-            "customer": {"region": "EMEA", "is_existing": True, "has_overdue_invoices": True},
-            "quote": {"amount": 80000, "base_discount_pct": 5},
+            "customer": {"region": "EMEA", "is_existing": True, "has_overdue_invoices": False, "has_credit_hold": False, "is_new_logo": False, "segment": "Commercial"},
+            "quote": {"amount": 250000, "base_discount_pct": 5, "term_months": 24},
         },
-        "expected_label": "DECLINE",
+        "expected_label": "ESCALATE_REGIONAL_VP",
         "rationale_hint": (
-            "Gate G2 (customer.has_overdue_invoices must be false) fails. The complete discount logic "
-            "trail (B1, B2, effective 13 %, P4 bracket → ESCALATE_DIRECTOR) is a distractor — gates "
-            "evaluate first and dominate everything that follows. DECLINE."
+            "All four gates pass; B1 +5, B2 +3, B3 +4 → effective 17 %. The deal is $250,000 > $200,000, "
+            "so P2 (high-value, precedence 2) fires → ESCALATE_REGIONAL_VP, overriding the (10,20] "
+            "bracket P4 would otherwise choose. Precedence of P2 over P4 on top of three-bonus stacking."
         ),
     },
 ]
@@ -329,6 +379,15 @@ INSTANCES: list[dict] = [
 def main() -> None:
     written = 0
     for inst in INSTANCES:
+        # Neutral defaults for the segment/term fields added in the
+        # rule-depth extension: Low/Med instances carry segment="Commercial"
+        # (neither the Restricted gate G3 nor the Strategic routing P2s fires)
+        # and term_months=12 (the 24-month bonus B3 does not fire), so their
+        # gold labels are unchanged. High instances set these explicitly.
+        inst["quote_request"]["customer"].setdefault("segment", "Commercial")
+        inst["quote_request"]["customer"].setdefault("has_credit_hold", False)
+        inst["quote_request"]["customer"].setdefault("is_new_logo", False)
+        inst["quote_request"]["quote"].setdefault("term_months", 12)
         directory = INPUT_DIR / inst["difficulty"]
         directory.mkdir(parents=True, exist_ok=True)
         record = {
@@ -338,6 +397,7 @@ def main() -> None:
             "sub_class": inst.get("sub_class"),
             "instruction": inst["instruction"],
             "quote_request": inst["quote_request"],
+            "request_text": _render_request_text(inst["quote_request"]),
             "expected_label": inst["expected_label"],
             "rationale_hint": inst["rationale_hint"],
             "provenance": _provenance(inst.get("sub_class")),

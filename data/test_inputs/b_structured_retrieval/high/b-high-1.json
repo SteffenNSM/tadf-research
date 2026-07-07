@@ -2,21 +2,20 @@
   "id": "b-high-1",
   "archetype": "B",
   "difficulty": "high",
-  "instruction": "What is the total amount (sum of 'amount') of WON opportunities (is_won = 1) that were BOTH countersigned by email (subject 'Contract countersigned') AND have a 'Closing call' calendar event, each naming the opportunity as 'Opportunity NNN'? Answer with the total amount.",
+  "instruction": "I'm preparing the renewal with Mayer & Co. When did we last hear from them, how large was our most recent offer, and is a meeting scheduled?",
   "ground_truth": {
-    "value": 194411,
-    "unit": "currency"
+    "value": {
+      "last_contact": "2025-09-12",
+      "last_offer": 80000,
+      "next_meeting": "2025-10-03"
+    },
+    "unit": "multi"
   },
-  "sources_required": [
-    "CRM.opportunities",
-    "Mail",
-    "Calendar"
-  ],
   "n_sources": 3,
-  "operation": "sum",
+  "answer_type": "multi_field",
   "provenance": {
     "source_benchmark": "CRMArena structured querying (Huang et al., 2025) + WorkBench mailbox/calendar (Styles et al., 2024)",
-    "construction_method": "Author-constructed multi-source sweep-all: a CRM structured set intersected with Mail/Calendar-derived sets; all sources knowable from the question (plan-time-decidable). Labelled honestly per IT-017.",
+    "construction_method": "Author-constructed multi-source retrieval over a coherent named-customer dataset; natural-language prompts; sweep-all / plan-time-decidable. Labelled honestly per IT-017.",
     "difficulty_axis": "number of distinct sources that must be combined",
     "license": "CC BY-NC 4.0"
   }

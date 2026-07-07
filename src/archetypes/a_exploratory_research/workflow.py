@@ -34,39 +34,56 @@ def plan_searches(state: dict, config: RunnableConfig | None = None) -> dict:
     return {**state, "search_plan": plan.model_dump()}
 
 
+#: Hard ceiling on the number of upfront queries the workflow may issue,
+#: symmetric with the agent's tool-call safety limit (see agent.py). The
+#: workflow plans all queries before seeing any results, so the cap bounds the
+#: planned batch; the agent's cap bounds its sequential tool calls.
+MAX_QUERIES = 10
+
+
 def execute_searches(state: dict, config: RunnableConfig | None = None) -> dict:
     """Node 2: run each planned query via the tavily_search tool.
 
     The reads are issued through the ``tavily_search`` LangChain tool so the
-    workflow's tool calls are counted on equal footing with the agent's.
-    Snippets are accumulated, deduplicated by URL.
+    workflow's tool calls are counted on equal footing with the agent's. The
+    planned batch is capped at ``MAX_QUERIES``. Results are kept grouped by the
+    query that produced them (the merge), with URLs deduplicated globally so a
+    source is attributed to the first query that returned it.
     """
     plan = SearchPlan(**state["search_plan"])
-    snippets: list[dict] = []
+    merged: list[dict] = []
     seen_urls: set[str] = set()
-    for query in plan.queries:
+    for query in plan.queries[:MAX_QUERIES]:
         results = tavily_search.invoke({"query": query}, config=config)
+        group: list[dict] = []
         for snippet in results:
             url = snippet.get("url", "")
             if url and url not in seen_urls:
                 seen_urls.add(url)
-                snippets.append(snippet)
-    return {**state, "snippets": snippets}
+                group.append(snippet)
+        merged.append({"query": query, "results": group})
+    return {**state, "merged": merged}
 
 
-def _format_snippets(snippets: list[dict]) -> str:
-    """Compact textual rendering of the snippet pool for the synthesize prompt."""
+def _format_merge(merged: list[dict]) -> str:
+    """Render the query-grouped snippet merge for the synthesize prompt."""
     blocks = []
-    for snippet in snippets:
-        content = (snippet.get("content", "") or "")[:800]
-        blocks.append(f"[{snippet.get('url', '')}]\n{content}")
+    for group in merged:
+        lines = [f"Query: {group['query']}"]
+        if group["results"]:
+            for snippet in group["results"]:
+                content = (snippet.get("content", "") or "")[:800]
+                lines.append(f"  [{snippet.get('url', '')}]\n  {content}")
+        else:
+            lines.append("  (no new results)")
+        blocks.append("\n".join(lines))
     return "\n\n".join(blocks) if blocks else "(no snippets retrieved)"
 
 
 def synthesize(state: dict, config: RunnableConfig | None = None) -> dict:
-    """Node 3: produce the ResearchAnswer from the snippet pool (LLM call 2)."""
+    """Node 3: produce the ResearchAnswer from the query-grouped merge (LLM call 2)."""
     llm = get_llm(TEMPERATURE).with_structured_output(ResearchAnswer)
-    snippets_text = _format_snippets(state["snippets"])
+    snippets_text = _format_merge(state["merged"])
     answer: ResearchAnswer = llm.invoke(
         SYNTHESIZE_PROMPT.format(
             question=state["instruction"], snippets=snippets_text

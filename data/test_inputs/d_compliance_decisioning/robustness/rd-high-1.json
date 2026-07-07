@@ -1,0 +1,35 @@
+{
+  "id": "rd-high-1",
+  "archetype": "D",
+  "difficulty": "high",
+  "base_instance": "d-high-1",
+  "perturbation_type": "negated_and_indirect",
+  "critical_fact": "three bonuses at the cap boundary",
+  "instruction": "Apply the approval policy to this quote request and return the required decision.",
+  "request_text": "Subject: lead 5011\n\nQualified lead (5011), EMEA region, an existing customer we've had for years (so not a new-logo). They have no overdue invoices anymore and are no longer on any credit hold. Commercial segment. The deal is $80,000 on a two-year term (that's 24 months) at an 18% base discount. What's the decision?",
+  "quote_request": {
+    "lead": {
+      "id": 5011,
+      "status": "qualified",
+      "account_id": 1
+    },
+    "customer": {
+      "region": "EMEA",
+      "is_existing": true,
+      "has_overdue_invoices": false,
+      "has_credit_hold": false,
+      "is_new_logo": false,
+      "segment": "Commercial"
+    },
+    "quote": {
+      "amount": 80000,
+      "base_discount_pct": 18,
+      "term_months": 24
+    }
+  },
+  "expected_label": "ESCALATE_VP",
+  "provenance": {
+    "construction_method": "Surface perturbation (negated_and_indirect) of d-high-1 targeting the decision-critical fact [three bonuses at the cap boundary]; gold label unchanged. Robustness check, not a new task.",
+    "license": "Original work by the author (rule set, quote requests, task design); benchmark semantics reference only"
+  }
+}

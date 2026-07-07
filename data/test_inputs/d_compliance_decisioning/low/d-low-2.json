@@ -13,13 +13,18 @@
     "customer": {
       "region": "AMER",
       "is_existing": true,
-      "has_overdue_invoices": true
+      "has_overdue_invoices": true,
+      "segment": "Commercial",
+      "has_credit_hold": false,
+      "is_new_logo": false
     },
     "quote": {
       "amount": 80000,
-      "base_discount_pct": 8
+      "base_discount_pct": 8,
+      "term_months": 12
     }
   },
+  "request_text": "Subject: Quote approval request — lead 5002\n\nHi Compliance team,\n\nCould you run our quote approval policy on the request below and let me know the decision?\n\nThe lead (ID 5002) is currently marked \"qualified\" in the CRM. The customer is in the AMER region, is an existing customer, sits in the Commercial segment, has overdue invoices outstanding, and is not on any credit hold. The deal is for $80,000 over a 12-month term, with a requested base discount of 8%.\n\nThanks,\nSales Operations",
   "expected_label": "DECLINE",
   "rationale_hint": "Gate G2 (customer.has_overdue_invoices must be false) fails. DECLINE before any discount computation.",
   "provenance": {

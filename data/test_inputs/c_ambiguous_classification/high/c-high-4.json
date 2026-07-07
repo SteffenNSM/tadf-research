@@ -2,18 +2,70 @@
   "id": "c-high-4",
   "archetype": "C",
   "difficulty": "high",
-  "sub_class": "near_duplicate",
-  "instruction": "Route this email to the correct support category.",
-  "email": {
-    "sender": "yusuf.mehta@quasar-labs.example",
-    "subject": "Group-level alert rules?",
-    "body": "Trying to set up alerts for the regional managers as a group. I see the 'Notifications' panel under each individual profile, but I want one rule applied across the whole regional cohort. Is that supported, or do I have to configure each person separately?"
+  "instruction": "Triage this batch of customer support emails: assign each email to exactly one support category by its primary intent.",
+  "emails": [
+    {
+      "id": "e1",
+      "sender": "user1@customer.example",
+      "subject": "Wrong SKU sent",
+      "body": "You shipped the wrong unit. I'd like the correct one sent out; once it arrives we can reconcile the price difference, but the priority is getting the right item delivered."
+    },
+    {
+      "id": "e2",
+      "sender": "user2@customer.example",
+      "subject": "Totals look wrong",
+      "body": "Our weekly totals look wrong, so at first we thought it was a bug. After checking, the numbers are actually correct — we just don't understand how your 'week' is defined. Can you explain how the weekly rollup works?"
+    },
+    {
+      "id": "e3",
+      "sender": "user3@customer.example",
+      "subject": "Contractor can't get in",
+      "body": "Our new contractor says the portal 'doesn't work'. But it loads fine for the rest of us, so it isn't an outage — they were simply never granted access. Please give them viewer access to the Atlas project."
+    },
+    {
+      "id": "e4",
+      "sender": "user4@customer.example",
+      "subject": "Delivery and billing noise, API is the issue",
+      "body": "Thanks again for sorting our delivery address the other week, and the charge question from finance is resolved on our end. The live problem I need eyes on: our nightly data synchronisation through your API has been failing with timeouts for three straight nights, so all of our dashboards are now showing stale figures. Please investigate the API failures."
+    },
+    {
+      "id": "e5",
+      "sender": "user5@customer.example",
+      "subject": "Quarter recap, one real ask",
+      "body": "Hope you're well — busy quarter here. The team loved the new dashboard, though the export button took a while to find, and our admin had to re-add two seats after someone left (all sorted now). The reason I'm actually writing: our renewal invoice shows a mid-term price increase we never agreed to. Everything else is fine; we just need the pricing on that invoice explained and corrected."
+    },
+    {
+      "id": "e6",
+      "sender": "user6@customer.example",
+      "subject": "Several threads, one urgent",
+      "body": "A few things piled up this week. The hardware add-on shipped late (already resolved with the carrier). Someone also asked whether PDF export is supported — no rush on that. The urgent part: since Tuesday's release the login page throws an error for every one of our users, so nobody can get in. It's clearly on your side — please treat the outage as priority one."
+    },
+    {
+      "id": "e7",
+      "sender": "user7@customer.example",
+      "subject": "Reorg with money and product noise",
+      "body": "We're splitting into two regional teams. I know that means new invoices for the split, and the new hires will probably want a product walkthrough at some point. But right now what I actually need is operational: move eight users from the EMEA org into a new APAC org and set their manager. It's purely an account-structure change."
+    },
+    {
+      "id": "e8",
+      "sender": "user8@customer.example",
+      "subject": "Long complaint, real blocker",
+      "body": "Honestly a bit frustrated. Support was slow last week, the app logged me out twice (I got back in fine), and I still don't fully understand the new line on our bill. But the thing that's blocking us right now: the replacement device you promised for Monday still hasn't arrived — it's Thursday and there's no tracking update. Where is the shipment?"
+    }
+  ],
+  "expected": {
+    "e1": "Shipping",
+    "e2": "Product",
+    "e3": "Account",
+    "e4": "Technical",
+    "e5": "Billing",
+    "e6": "Technical",
+    "e7": "Account",
+    "e8": "Shipping"
   },
-  "expected_label": "Product",
-  "rationale_hint": "Near-duplicate distractors: 'individual profiles' and 'regional cohort' read as Account; 'Notifications panel' reads as Technical. The actual ask is 'is this supported, or do I have to do it the long way' — a how-to / feature-capability question → Product. The user has not been blocked by a defect and is not asking for a structural change.",
   "provenance": {
     "source_benchmark": "CRMArena-Pro Case Routing / Activity Priority Understanding (Huang et al., 2025)",
-    "adaptation": "Author-constructed email texts; task semantics follow the CRMArena-Pro routing/disambiguation pattern. The five-category label set is mirrored from cases.issue_category in experiments/seed_crm.py so the routing decision is consistent with the local CRM schema. High-stratum sub-class: near_duplicate.",
+    "construction_method": "Batch-triage task (single input batch -> single labelled output, Section 2.2.3). Difficulty = batch size (3/5/8) x per-email ambiguity; Med/High emails carry competing near-duplicate signals with one primary intent; High emails are verbose with a buried core ask to load the context. Author-constructed from a labelled pool; no benchmark text reproduced.",
     "license": "Original work by the author (email texts and task design); benchmark semantics reference only"
   }
 }

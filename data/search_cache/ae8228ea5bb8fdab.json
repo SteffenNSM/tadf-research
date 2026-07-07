@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Goslar to Quedlinburg - 5 ways to travel via train, line 230 bus, car ...",
+    "url": "https://www.rome2rio.com/s/Goslar/Quedlinburg",
+    "content": "The distance between Goslar and Quedlinburg is 79 km. The road distance is 62.4 km. Get driving directions. How do I"
+  },
+  {
+    "title": "Quedlinburg to Goslar train tickets from US$29.00 | Rail Europe",
+    "url": "https://www.raileurope.com/en-us/destinations/quedlinburg-goslar-train",
+    "content": "The fastest trains from Quedlinburg to Goslar take around 1 hour and 17 minutes, covering a distance of approximately 52 kilometres. On weekdays, the first"
+  },
+  {
+    "title": "Distance from Wetzlar, Germany to Quedlinburg ... - Travelmath",
+    "url": "https://www.travelmath.com/distance/from/Wetzlar,+Germany/to/Quedlinburg,+Germany",
+    "content": "The total straight line flight distance from Wetzlar, Germany to Quedlinburg, Germany is 143 miles. This is equivalent to 231 kilometers or 125 nautical miles."
+  },
+  {
+    "title": "How far is it? - Straight Line Distance Calculator - GPS Coordinates",
+    "url": "https://www.gps-coordinates.net/distance",
+    "content": "# How far is it? This tool enables you to calculate the straight line **distance between** two locations or two cities, \"as the crow flies\". As you can share your location, it will let you know easily how far you are in a straight line from any point of interest. Here are the steps to use it:. 1. Enter the address or the city of the first location. 2. Enter the address or the city of the second location. 3. Click on the \"Calculate the distance\" button. **How far is it?** The result of the geodesic distance calculation is immediately displayed, along with a map showing the two points linked by a straight line. Our formula integrates the curve of the earth to calculate as best as possible the distance as the crow flies. It is extremely accurate, especially for shorter distances. Click on the button to use your geolocation instead of manually entering an address. LoaderAllow or deny location access to proceed."
+  },
+  {
+    "title": "Calculate straight-line distance—Portal for ArcGIS | Documentation for ArcGIS Enterprise",
+    "url": "https://enterprise.arcgis.com/en/portal/11.3/use/calculate-straight-line-distance.htm",
+    "content": "Straight-line Euclidean distance is the distance that typically comes to mind when you think of distance analysis. It is the shortest distance between two points. Straight-line distance is the distance that you measure with a ruler on a paper map. Straight-line distance does not account for the surface between the two points. It is the distance a bird or airplane would travel between the two points when flying above the surface. Distance Accumulation is the primary tool for calculating straight-line distance. For each nonsource cell, the tool will calculate the straight-line distance to the closest source location. The straight-line distance from each non-source cell to the closest ranger station (purple points). The straight-line direction from each non-source cell to the closest ranger station. Once the shortest distance to a source is determined, if it is less than the specified maximum distance, that value is assigned to the cell location on the output raster. Straight-line distance between a source cell and a nonsource cell."
+  }
+]

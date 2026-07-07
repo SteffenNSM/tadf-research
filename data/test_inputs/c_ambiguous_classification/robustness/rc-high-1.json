@@ -1,0 +1,72 @@
+{
+  "id": "rc-high-1",
+  "archetype": "C",
+  "difficulty": "high",
+  "base_instance": "c-high-1",
+  "perturbation_type": "jargon_typos",
+  "instruction": "Triage this batch of customer support emails: assign each email to exactly one support category by its primary intent.",
+  "emails": [
+    {
+      "id": "e1",
+      "sender": "user1@customer.example",
+      "subject": "Export: broken or intended?",
+      "body": "csv egress on big reprots errrors out evry time — intended or broke? never completes for us"
+    },
+    {
+      "id": "e2",
+      "sender": "user2@customer.example",
+      "subject": "Wrong SKU sent",
+      "body": "you shiped the wrong unit, pls send the corect one — can sort the price diff after, priority is the right item"
+    },
+    {
+      "id": "e3",
+      "sender": "user3@customer.example",
+      "subject": "Totals look wrong",
+      "body": "weekly totals lookd wrong so we thot bug, but the numbrs r right — we jst dont get how yr 'week' is defined, explain the rollup?"
+    },
+    {
+      "id": "e4",
+      "sender": "user4@customer.example",
+      "subject": "Quarter recap, one real ask",
+      "body": "busy qtr, team loved the dashbaord, admin re-added 2 seats (sorted) — real ask: our renewal invoce has a mid-term price hike we never agreed to, pls explain n correct the pricing"
+    },
+    {
+      "id": "e5",
+      "sender": "user5@customer.example",
+      "subject": "Several threads, one urgent",
+      "body": "hw add-on shiped late (resolved), someone askd about pdf export (no rush) — URGENT: since tues release the login page errors for ALL our users, nobody can get in, its on yr side, P1 pls"
+    },
+    {
+      "id": "e6",
+      "sender": "user6@customer.example",
+      "subject": "Reorg with money and product noise",
+      "body": "splitting into 2 regional teams, ill get new invoces n the new hires want a walkthru later — rn what i need: move 8 users from the EMEA org to a new APAC org n set their manager, pure acct-structure change"
+    },
+    {
+      "id": "e7",
+      "sender": "user7@customer.example",
+      "subject": "Long complaint, real blocker",
+      "body": "support was slow, app logged me out twice (back in fine), still dont get the new bill line — but whats blocking us: the replacment device promised for mon still isnt here, its thurs no trackign, where is it?"
+    },
+    {
+      "id": "e8",
+      "sender": "user8@customer.example",
+      "subject": "Reads like a bug, is a how-to",
+      "body": "analysts flagd reporting as 'broken' cuz numbers dont add up — dug in, not a defect, figures r correct — we jst need to understand how yr rollups define a week n the cutoff, no fix needed"
+    }
+  ],
+  "expected": {
+    "e1": "Technical",
+    "e2": "Shipping",
+    "e3": "Product",
+    "e4": "Billing",
+    "e5": "Technical",
+    "e6": "Account",
+    "e7": "Shipping",
+    "e8": "Product"
+  },
+  "provenance": {
+    "construction_method": "Surface perturbation (jargon_typos) of c-high-1's email bodies; ids/subjects/gold unchanged. Robustness check, not a new task.",
+    "license": "Original work by the author (email texts and task design); benchmark semantics reference only"
+  }
+}

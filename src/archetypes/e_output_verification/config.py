@@ -8,17 +8,23 @@ E is the canonical LLM-as-Judge archetype. The judge receives a customer
 inquiry, a candidate support response, and a five-criterion rubric, and
 renders one ternary verdict (PASS / NEEDS_REVISION / FAIL). The dimensional
 profile (high Step Predictability, high Information Availability, low
-Output Ambiguity, moderate Error Consequence) places E firmly in the
-workflow-leaning region of Table 3; the canonical-minimal form is a single
-LLM call with structured output, parallel to archetypes C and D.
+Output Ambiguity, moderate Error Consequence) places E in the
+workflow-leaning region of Table 3.
 
-The empirical question for E is whether the workflow's structured-output
-verdict is more reliable than the agent's free-text verdict at the same
-single-call cost. C showed a token efficiency advantage but no correctness
-gap (Ceiling). D showed a 13-percentage-point correctness gap (the
-schema-rationale-forces-visible-reasoning effect). E tests whether the
-LLM-as-Judge setup shows the C pattern (efficient but tied) or the D
-pattern (workflow strictly more reliable).
+Rebuild (per-criterion decomposition — see iteration log, supersedes the
+IT-022 single-call operationalization). In the IT-022 baseline both
+paradigms were one LLM call applying the full rubric, a degenerate
+comparison (IT-040 pattern): flat 1.40x overhead, verdict parity, and every
+observed error was criterion miscalibration followed by a correctly applied
+count rule on the wrong count. The rubric's verdict rule is arithmetic, so
+following the B/D principle (IT-043, IT-041/IT-045: the LLM does the soft
+step, code does the computation) the workflow now judges the five criteria
+in ISOLATION (one structured call, per-criterion pass/fail plus evidence)
+and a deterministic verdict engine applies the count rule. The agent is
+unchanged: holistic in-context rubric application including the counting.
+The empirical question is whether decomposed judgment plus engine
+aggregation outperforms holistic judgment — the isolation hypothesis from
+the D robustness work, tested on IT-022's stacked-subtle failure set.
 
 Sources: WONDERBREAD SOP Ranking and Demo Validation (Wornow et al.,
 2024); Kourani et al. (2025) self-improvement; TheAgentCompany feedback
@@ -86,6 +92,27 @@ Valid verdict labels are exactly: PASS | NEEDS_REVISION | FAIL."""
 
 # ── Prompts ──
 
+#: Workflow assess step. The LLM's ONLY job in the rebuilt workflow: judge
+#: each rubric criterion independently. It does not count failures and does
+#: not derive the verdict — the deterministic verdict engine does that.
+ASSESS_PROMPT = """You are a senior support quality reviewer. You receive a customer inquiry and a candidate response drafted by a support agent. Your task is to assess the candidate response against EACH of the five rubric criteria below, one at a time and independently of the others.
+
+{rubric}
+
+Customer inquiry:
+{inquiry}
+
+Candidate response (drafted by an agent):
+{candidate_response}
+
+Task context: {instruction}
+
+Output a RubricAssessment containing exactly five CriterionAssessment entries, one for each criterion C1, C2, C3, C4, C5 in order. For each criterion, decide `passed` strictly on that criterion's own pass/fail condition and cite in `evidence` the specific part of the candidate response that satisfies or violates it. Evaluate the candidate as written; do not assume facts the response itself does not state. Do NOT derive an overall verdict and do NOT count failures; the verdict is computed downstream from your per-criterion decisions."""
+
+
+#: Legacy single-call judge prompt (IT-022 baseline). Retained for
+#: reference and potential ablation runs; the rebuilt workflow uses
+#: ASSESS_PROMPT plus the deterministic verdict engine instead.
 CLASSIFY_PROMPT = """You are a senior support quality reviewer. You receive a customer inquiry and a candidate response drafted by a support agent, and you must apply the evaluation rubric below to return one verdict.
 
 {rubric}

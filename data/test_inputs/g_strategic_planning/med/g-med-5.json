@@ -3,7 +3,7 @@
   "archetype": "G",
   "difficulty": "med",
   "sub_class": "blocked_in_sweep",
-  "instruction": "Plan the resolution of account 10's open cases 75, 110 and 47, recording a closure timestamp for every one and minding each case's transfer history when choosing the closing actions. After all closes, email the account's primary contact exactly once with subject 'All account 10 cases resolved', and email the owning agent of case 47 with subject 'Case 47 closed after review' (brief bodies).",
+  "instruction": "Account 10's open cases 75, 110 and 47 need to be resolved -- check each case's transfer history when picking the closing path. Instead of per-case notes, the customer gets exactly one email after all closes, subject 'All account 10 cases resolved', and the owning agent of case 47 additionally gets one email with subject 'Case 47 closed after review'.\n\nSupport runbook (excerpt):\n- Primary contact: an account's primary contact is the contact with the lowest id at that account.\n- Customer notification on closures: unless the request says otherwise, the account's primary contact receives one email per closed case with subject 'Case <id> closed' (substitute the actual case id) and a brief body, and closure notifications are sent only after every close in the work package is done.\n- Escalation-blocked cases: a case whose transfer history is above the escalation threshold cannot be closed with attempt_close_case; such a case is closed via a direct update that also records the closure timestamp (closed_at).\n- Keep email and event bodies brief, and plan only the actions the work package requires.",
   "goal": {
     "cases_closed": [
       75,

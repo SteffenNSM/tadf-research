@@ -2,20 +2,16 @@
   "id": "b-med-2",
   "archetype": "B",
   "difficulty": "med",
-  "instruction": "How many WON opportunities (is_won = 1) have a 'Closing call' calendar event? An opportunity has one only if a calendar event named 'Closing call' names it as 'Opportunity NNN'. Answer with the count.",
+  "instruction": "We have a call scheduled to discuss a won deal with Mayer & Co. What is that deal worth?",
   "ground_truth": {
-    "value": 7,
-    "unit": "count"
+    "value": 120000,
+    "unit": "currency"
   },
-  "sources_required": [
-    "CRM.opportunities",
-    "Calendar"
-  ],
   "n_sources": 2,
-  "operation": "count",
+  "answer_type": "single_fact",
   "provenance": {
     "source_benchmark": "CRMArena structured querying (Huang et al., 2025) + WorkBench mailbox/calendar (Styles et al., 2024)",
-    "construction_method": "Author-constructed multi-source sweep-all: a CRM structured set intersected with Mail/Calendar-derived sets; all sources knowable from the question (plan-time-decidable). Labelled honestly per IT-017.",
+    "construction_method": "Author-constructed multi-source retrieval over a coherent named-customer dataset; natural-language prompts; sweep-all / plan-time-decidable. Labelled honestly per IT-017.",
     "difficulty_axis": "number of distinct sources that must be combined",
     "license": "CC BY-NC 4.0"
   }

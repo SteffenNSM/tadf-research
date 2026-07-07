@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Great-circle distance - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Great-circle_distance",
+    "content": "The **great-circle distance**, **orthodromic distance**, or **spherical distance** is the distance between two points \"Point (geometry)\") on a sphere, measured along the great-circle arc between them. This arc is the shortest path between the two points on the surface of the sphere. (By comparison, the shortest path passing through the sphere's interior is the chord \"Chord (geometry)\") between the points.). Any two distinct points on a sphere that are not antipodal (diametrically opposite) both lie on a unique great circle, which the points separate into two arcs; the length of the shorter arc is the great-circle distance between the points. This arc length is proportional to the central angle between the points, which if measured in radians can be scaled up by the sphere's radius to obtain the arc length. {\\displaystyle \\lambda \\_{1},\\phi \\_{1}}. {\\displaystyle \\lambda _{2},\\phi _{2}} be the geographical longitude and latitude of two points 1 and 2, and. {\\displaystyle \\Delta \\sigma ={\\arccos }{\\bigl (}\\sin \\phi _{1}\\sin \\phi _{2}+\\cos \\phi _{1}\\cos \\phi _{2}\\cos \\Delta \\lambda {\\bigr )}.}."
+  },
+  {
+    "title": "Distance Between Cities Places On Map Distance Calculator",
+    "url": "https://www.distancefromto.net",
+    "content": "# Distance Between Cities on Map. **Distance calculator** finds the distance between cities or places and shows the *distance* in miles and kilometers. Type the city name, location name or the location coordinates in lat long format (lat,long) and hit measure button to calculate the **distance between cities** or *two places*. Find the *distance from cities in miles and kilometers* for flying air distance. — The red line on the map indicates the **Great Circle Distance**. **Distance between cities** or 2 locations are measured in both kilometers, miles and nautical miles at the same time. **Air distance is the bird fly distance** between two locations which is calculated with the great circle formula. **nmi**: is the symbol of nautical miles in distance calculation. Now you can enter the lat long coordinates of places to calculate *distance from to*. * We've updated the cities of country pages, distance between major cities are now listed. And the list of cities of a country are updated."
+  },
+  {
+    "title": "Great Circle Distance Finder",
+    "url": "http://www.globetrot.co.uk/tools/Great-Circle-Distance-Finder.aspx",
+    "content": "[](http://www.globetrot.co.uk/Default.aspx). # Great Circle Distance Finder. Pick 2 Airports from the drop-down lists below, or enter 2 latitude / longitude coordinates which you want to know the Great Circle distance between."
+  },
+  {
+    "title": "Distance Calculator",
+    "url": "https://www.calculator.net/distance-calculator.html",
+    "content": "Use this calculator to find the distance between two points on a 2D coordinate plane. Use this calculator to find the distance between two points on a 3D coordinate space. The distance between two points on a 2D coordinate plane can be found using the following distance formula. The distance between two points on a 3D coordinate plane can be found using the following distance formula. The haversine formula can be used to find the distance between two points on a sphere given their latitude and longitude:. In the haversine formula, d is the distance between two points along a great circle, r is the radius of the sphere, ϕ 1 and ϕ 2 are the latitudes of the two points, and λ 1 and λ 2 are the longitudes of the two points, all in radians. The haversine formula works by finding the great-circle distance between points of latitude and longitude on a sphere, which can be used to approximate distance on the Earth (since it is mostly spherical)."
+  },
+  {
+    "title": "Flight Distance and Duration Calculator - Airport and Aviation Database - Great Circle Mapper",
+    "url": "https://www.greatcirclemapper.net",
+    "content": "Draw you **flight path on a map** and calculate the great circle distance in nautical miles and kilometers. Get **estimated flight time** by choosing an aircraft type or entering the cruising speed.Click in the large textfield above to enter all the airports of your flight route! For this reason we are no longer able to offer our service unlimitedly free of cost. We need you to create an account on greatcirclemapper.net and complete a monthly subscription. Your subscription for the new greatcirclemapper.net will come with some great adventages:. Furthermore we are working on some great features, that will improve the usage of greatcirclemapper.net a lot:. * As member of the greatcirclemapper.net community, you will be able to contribute to our airports and aircraft database. This will help us keeping the database up to date and improve the experience for everybody. * You will be able to store several home base airports, favorite routes and your aircraft fleet."
+  }
+]

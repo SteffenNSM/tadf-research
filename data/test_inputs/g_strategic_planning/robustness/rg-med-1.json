@@ -1,0 +1,44 @@
+{
+  "id": "rg-med-1",
+  "archetype": "G",
+  "difficulty": "med",
+  "base_instance": "g-med-1",
+  "perturbation_type": "redundant_buried",
+  "instruction": "quick context: account 13 has been quiet for months, the CSM changed twice, and after a long thread (not important here) support agreed we finally wrap it up. so: their open cases 18, 22 and 67 get closed, the customer hears about it the usual way, and to round things off there is an event named 'Account 13 wrap-up' on 2026-06-29 with agent 1 attending.\n\nSupport runbook (excerpt):\n- Primary contact: an account's primary contact is the contact with the lowest id at that account.\n- Customer notification on closures: unless the request says otherwise, the account's primary contact receives one email per closed case with subject 'Case <id> closed' (substitute the actual case id) and a brief body, and closure notifications are sent only after every close in the work package is done.\n- Escalation-blocked cases: a case whose transfer history is above the escalation threshold cannot be closed with attempt_close_case; such a case is closed via a direct update that also records the closure timestamp (closed_at).\n- Keep email and event bodies brief, and plan only the actions the work package requires.",
+  "goal": {
+    "cases_closed": [
+      18,
+      22,
+      67
+    ],
+    "emails": [
+      {
+        "recipient": "contact026@example.com",
+        "subject": "Case 18 closed"
+      },
+      {
+        "recipient": "contact026@example.com",
+        "subject": "Case 22 closed"
+      },
+      {
+        "recipient": "contact026@example.com",
+        "subject": "Case 67 closed"
+      }
+    ],
+    "events": [
+      {
+        "name": "Account 13 wrap-up",
+        "attendees_contain": [
+          "agent01@atlas.com"
+        ]
+      }
+    ],
+    "closes_before_emails": true,
+    "no_other_changes": true
+  },
+  "optimal_length": 7,
+  "provenance": {
+    "construction_method": "Surface perturbation (redundant_buried) of g-med-1's instruction; every id, subject, date, and value remains stated in the text; goal spec and optimal length copied verbatim. Robustness check, not a new task.",
+    "license": "Original work by the author (scenarios, goal specs, action doc); benchmark semantics reference only"
+  }
+}

@@ -2,28 +2,26 @@
   "id": "a-high-4",
   "archetype": "A",
   "difficulty": "high",
-  "instruction": "Of the German companies that are world market leaders for (i) pharmaceutical blister packaging machines, (ii) film-stretching lines, and (iii) thermoforming packaging machines, which was founded most recently? Answer with the company name.",
+  "instruction": "What is the name of the iconic natural swimming pool in the U.S. city that is home to the university of the Texas Longhorns?",
   "ground_truth": {
-    "value": "Multivac",
-    "unit": "company_name"
+    "value": "Barton Springs Pool",
+    "unit": "natural_pool"
   },
   "provenance": {
-    "source_benchmark": "BrowseComp (Wei et al., 2025)",
-    "construction_method": "inverted-question (BrowseComp Sec. 2.1); author-constructed",
-    "difficulty_axis": "3 sources (independent / plan-time-decidable)",
-    "domain": "SME hidden champion / cluster",
+    "source_benchmark": "AssistantBench (Yoran et al., 2024); BrowseComp (Wei et al., 2025)",
+    "construction_method": "Chain: Texas Longhorns -> University of Texas at Austin -> Austin -> Barton Springs Pool. Single-value endpoint; the pool needs the city, which needs identifying the team's university.",
+    "difficulty_axis": "runtime-dependent chain: each search's result is the input to the next (a plan-upfront workflow cannot chain)",
+    "domain": "US sports + local geography",
     "sources": [
-      "https://de.wikipedia.org/wiki/Uhlmann_Pac-Systeme",
-      "https://de.wikipedia.org/wiki/Br%C3%BCckner_Group",
-      "https://de.wikipedia.org/wiki/Multivac_Sepp_Haggenm%C3%BCller"
+      "https://en.wikipedia.org/wiki/Texas_Longhorns",
+      "https://en.wikipedia.org/wiki/Barton_Springs_Pool"
     ],
     "verification": {
-      "memorization_no_tool": "pending",
-      "retrievable_via_tavily": "pending",
-      "one_shot_breaks": "unlikely (plannable)",
-      "unique": "yes"
+      "memorization_no_tool": "pending (must be non-memorized on the strongest model used)",
+      "retrievable_via_tavily": "pending (confirm on the run)",
+      "gold_verified": "author-supplied; confirm on the run"
     },
-    "note": "Uhlmann 1948 < Brueckner 1960 < Multivac 1961 -> Multivac most recent. Two of three within one year -> requires precise retrieval.",
-    "license": "Original work by the author (task design); BrowseComp construction method referenced only"
+    "note": "",
+    "license": "Original work by the author (task design)"
   }
 }

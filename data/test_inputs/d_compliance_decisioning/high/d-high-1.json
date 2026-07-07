@@ -2,7 +2,7 @@
   "id": "d-high-1",
   "archetype": "D",
   "difficulty": "high",
-  "sub_class": "boundary_inclusive",
+  "sub_class": "boundary_inclusive_triple_bonus",
   "instruction": "Apply the approval policy to this quote request and return the required decision.",
   "quote_request": {
     "lead": {
@@ -13,18 +13,23 @@
     "customer": {
       "region": "EMEA",
       "is_existing": true,
-      "has_overdue_invoices": false
+      "has_overdue_invoices": false,
+      "has_credit_hold": false,
+      "is_new_logo": false,
+      "segment": "Commercial"
     },
     "quote": {
       "amount": 80000,
-      "base_discount_pct": 22
+      "base_discount_pct": 18,
+      "term_months": 24
     }
   },
+  "request_text": "Subject: Quote approval request — lead 5011\n\nHi Compliance team,\n\nCould you run our quote approval policy on the request below and let me know the decision?\n\nThe lead (ID 5011) is currently marked \"qualified\" in the CRM. The customer is in the EMEA region, is an existing customer, sits in the Commercial segment, has no overdue invoices on file, and is not on any credit hold. The deal is for $80,000 over a 24-month term, with a requested base discount of 18%.\n\nThanks,\nSales Operations",
   "expected_label": "ESCALATE_VP",
-  "rationale_hint": "Gates pass; B1 +5 %, B2 +3 %; effective exactly 30 %. P4's (20,30] bracket is inclusive at the upper bound — 30 % falls in ESCALATE_VP, not DECLINE. P1 fires only at > 30, so it does not apply at the boundary.",
+  "rationale_hint": "All four gates pass. Of the five bonuses, B1 (EMEA +5), B2 (loyalty +3), B3 (24-month +4) fire while B4/B5 do not: effective = 18 + 12 = exactly 30 %. P1 fires only above 30, so the (20,30] bracket applies inclusively → ESCALATE_VP.",
   "provenance": {
     "source_benchmark": "CRMArena-Pro Workflow Execution (Huang et al., 2025); World of Workflows Constraint Understanding (Skyfall Research, 2025); WorkBench no-action subset (Styles et al., 2024); FlowBench rule-following (Xiao et al., 2024)",
-    "adaptation": "Author-constructed quote request and approval policy; task semantics follow the rule-application + no-action pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: boundary_inclusive.",
+    "adaptation": "Author-constructed quote request and approval policy; task semantics follow the rule-application + no-action pattern of the cited benchmarks. No benchmark text or data is reproduced. Sub-class: boundary_inclusive_triple_bonus.",
     "license": "Original work by the author (rule set, quote requests, task design); benchmark semantics reference only"
   }
 }

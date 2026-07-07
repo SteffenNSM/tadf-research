@@ -1,0 +1,16 @@
+{
+  "id": "ra-low-2",
+  "archetype": "A",
+  "difficulty": "low",
+  "base_instance": "a-low-4",
+  "perturbation_type": "colloquial",
+  "instruction": "yo that farm-machine company with the double A in Harsewinkel — whats it called, and whats the big old monastery in that town?",
+  "ground_truth": {
+    "value": "CLAAS; Kloster Marienfeld",
+    "unit": "company_and_monastery"
+  },
+  "provenance": {
+    "construction_method": "Surface perturbation (colloquial) of a-low-4; gold unchanged. Robustness check, not a new task.",
+    "license": "Original work by the author (task design)"
+  }
+}

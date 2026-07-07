@@ -13,13 +13,18 @@
     "customer": {
       "region": "EMEA",
       "is_existing": false,
-      "has_overdue_invoices": false
+      "has_overdue_invoices": false,
+      "segment": "Commercial",
+      "has_credit_hold": false,
+      "is_new_logo": false
     },
     "quote": {
       "amount": 50000,
-      "base_discount_pct": 8
+      "base_discount_pct": 8,
+      "term_months": 12
     }
   },
+  "request_text": "Subject: Quote approval request — lead 5006\n\nHi Compliance team,\n\nCould you run our quote approval policy on the request below and let me know the decision?\n\nThe lead (ID 5006) is currently marked \"qualified\" in the CRM. The customer is in the EMEA region, is a new (non-existing) customer, sits in the Commercial segment, has no overdue invoices on file, and is not on any credit hold. The deal is for $50,000 over a 12-month term, with a requested base discount of 8%.\n\nThanks,\nSales Operations",
   "expected_label": "ESCALATE_DIRECTOR",
   "rationale_hint": "Gates pass; B1 (EMEA) adds 5 %; effective 13 %; P4 bracket (10,20] → ESCALATE_DIRECTOR. Without the EMEA bonus, 8 % would have stayed in [0,10] and APPROVE.",
   "provenance": {

@@ -2,28 +2,26 @@
   "id": "a-high-3",
   "archetype": "A",
   "difficulty": "high",
-  "instruction": "Of the German companies that are world market leaders for (i) warp-knitting machines, (ii) pharmaceutical blister packaging machines, and (iii) film-stretching lines, which was founded earliest? Answer with the company name.",
+  "instruction": "What is the full street address of the home stadium of the team that won the German 2. Bundesliga in 1997?",
   "ground_truth": {
-    "value": "Karl Mayer",
-    "unit": "company_name"
+    "value": "Fritz-Walter-Straße 1, 67663 Kaiserslautern",
+    "unit": "stadium_address"
   },
   "provenance": {
-    "source_benchmark": "BrowseComp (Wei et al., 2025)",
-    "construction_method": "inverted-question (BrowseComp Sec. 2.1); author-constructed",
-    "difficulty_axis": "3 sources (independent / plan-time-decidable)",
-    "domain": "SME hidden champion / cluster",
+    "source_benchmark": "AssistantBench (Yoran et al., 2024); BrowseComp (Wei et al., 2025)",
+    "construction_method": "Chain: 2. Bundesliga 1996/97 champion -> 1. FC Kaiserslautern -> Fritz-Walter-Stadion -> its address. Single-value endpoint; the address needs the club and stadium.",
+    "difficulty_axis": "runtime-dependent chain: each search's result is the input to the next (a plan-upfront workflow cannot chain)",
+    "domain": "football + venue address",
     "sources": [
-      "https://de.wikipedia.org/wiki/Karl_Mayer_Gruppe",
-      "https://de.wikipedia.org/wiki/Uhlmann_Pac-Systeme",
-      "https://de.wikipedia.org/wiki/Br%C3%BCckner_Group"
+      "https://de.wikipedia.org/wiki/2._Fu%C3%9Fball-Bundesliga_1996/97",
+      "https://de.wikipedia.org/wiki/Fritz-Walter-Stadion"
     ],
     "verification": {
-      "memorization_no_tool": "pending",
-      "retrievable_via_tavily": "pending",
-      "one_shot_breaks": "unlikely (workflow can plan all three queries)",
-      "unique": "yes"
+      "memorization_no_tool": "pending (must be non-memorized on the strongest model used)",
+      "retrievable_via_tavily": "pending (confirm on the run)",
+      "gold_verified": "author-supplied; confirm on the run"
     },
-    "note": "Karl Mayer 1937 < Uhlmann 1948 < Brueckner 1960 -> Karl Mayer earliest. Three separate founding-year lookups; same sector -> not heuristically guessable.",
-    "license": "Original work by the author (task design); BrowseComp construction method referenced only"
+    "note": "",
+    "license": "Original work by the author (task design)"
   }
 }

@@ -1,0 +1,55 @@
+{
+  "id": "rh-low-2",
+  "archetype": "H",
+  "difficulty": "low",
+  "sub_class": "social_post",
+  "format": "company-update post",
+  "instruction": "we finally hit that customer milestone everyone has been waiting for -- would be great if something celebratory went out about it. a post, you know the drill.",
+  "table": {
+    "caption": "Customer milestone",
+    "columns": [
+      "Metric",
+      "Value"
+    ],
+    "rows": [
+      [
+        "Total customers",
+        10000
+      ],
+      [
+        "Countries served",
+        42
+      ]
+    ]
+  },
+  "constraints": {
+    "audience": "customers and the public",
+    "tonality": "celebratory and warm",
+    "min_words": 30,
+    "max_words": 60,
+    "required_points": [
+      {
+        "desc": "10,000 customers",
+        "keywords": [
+          "10,000",
+          "10000",
+          "10k"
+        ]
+      }
+    ]
+  },
+  "feedback_rounds": [],
+  "feedback_requirements": [],
+  "allowed_numbers": [
+    42.0,
+    2025.0,
+    10000.0
+  ],
+  "rationale_hint": "Milestone post; one mandatory figure, celebratory tone.",
+  "provenance": {
+    "construction_method": "Surface perturbation (indirect_request) of h-low-3's brief instruction; the structured constraint, table, feedback, and allowed-number fields are copied verbatim. Robustness check, not a new task.",
+    "license": "Original work by the author (tables, briefs, constraints, judge rubric); benchmark semantics reference only"
+  },
+  "base_instance": "h-low-3",
+  "perturbation_type": "indirect_request"
+}

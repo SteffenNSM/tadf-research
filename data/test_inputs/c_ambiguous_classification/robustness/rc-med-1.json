@@ -1,0 +1,51 @@
+{
+  "id": "rc-med-1",
+  "archetype": "C",
+  "difficulty": "med",
+  "base_instance": "c-med-1",
+  "perturbation_type": "jargon_synonym",
+  "instruction": "Triage this batch of customer support emails: assign each email to exactly one support category by its primary intent.",
+  "emails": [
+    {
+      "id": "e1",
+      "sender": "user1@customer.example",
+      "subject": "Access after role change",
+      "body": "post the role change i've lost visibility into the billing module — my peers can see it fine so it's not an outage, just need my entitlements reinstated"
+    },
+    {
+      "id": "e2",
+      "sender": "user2@customer.example",
+      "subject": "Still charged for removed seats",
+      "body": "we de-provisioned three seats last cycle and the app reflects it, but this statement still bills the old seat count — please true up the charge"
+    },
+    {
+      "id": "e3",
+      "sender": "user3@customer.example",
+      "subject": "Export: broken or intended?",
+      "body": "our CSV egress on large reports errors out every run — is that by design or a defect? for us it never completes"
+    },
+    {
+      "id": "e4",
+      "sender": "user4@customer.example",
+      "subject": "Wrong SKU sent",
+      "body": "you dispatched the wrong SKU; kindly ship the correct unit — we can reconcile the price delta afterwards, the priority is the right item"
+    },
+    {
+      "id": "e5",
+      "sender": "user5@customer.example",
+      "subject": "Totals look wrong",
+      "body": "our weekly aggregates looked off so we suspected a bug; turns out the figures are right, we just don't grok how your 'week' is bucketed — can you explain the rollup?"
+    }
+  ],
+  "expected": {
+    "e1": "Account",
+    "e2": "Billing",
+    "e3": "Technical",
+    "e4": "Shipping",
+    "e5": "Product"
+  },
+  "provenance": {
+    "construction_method": "Surface perturbation (jargon_synonym) of c-med-1's email bodies; ids/subjects/gold unchanged. Robustness check, not a new task.",
+    "license": "Original work by the author (email texts and task design); benchmark semantics reference only"
+  }
+}

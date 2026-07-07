@@ -1,0 +1,35 @@
+{
+  "id": "rd-med-1",
+  "archetype": "D",
+  "difficulty": "med",
+  "base_instance": "d-med-1",
+  "perturbation_type": "numeric_as_words",
+  "critical_fact": "amount + discount",
+  "instruction": "Apply the approval policy to this quote request and return the required decision.",
+  "request_text": "Subject: policy check, lead 5006\n\nHey — qualified lead five-thousand-and-six, handled out of our EMEA office, a brand-new (non-existing) customer in the Commercial segment, no invoices overdue and no credit hold, not a new-logo win. The deal is fifty thousand dollars over a twelve-month term with an eight-percent base discount. Let me know the decision.",
+  "quote_request": {
+    "lead": {
+      "id": 5006,
+      "status": "qualified",
+      "account_id": 3
+    },
+    "customer": {
+      "region": "EMEA",
+      "is_existing": false,
+      "has_overdue_invoices": false,
+      "segment": "Commercial",
+      "has_credit_hold": false,
+      "is_new_logo": false
+    },
+    "quote": {
+      "amount": 50000,
+      "base_discount_pct": 8,
+      "term_months": 12
+    }
+  },
+  "expected_label": "ESCALATE_DIRECTOR",
+  "provenance": {
+    "construction_method": "Surface perturbation (numeric_as_words) of d-med-1 targeting the decision-critical fact [amount + discount]; gold label unchanged. Robustness check, not a new task.",
+    "license": "Original work by the author (rule set, quote requests, task design); benchmark semantics reference only"
+  }
+}

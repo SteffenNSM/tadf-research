@@ -1,0 +1,370 @@
+{
+  "timestamp": "20260707_100152",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "runs": [
+    {
+      "instance": "ra-low-1",
+      "base_instance": "a-low-2",
+      "perturbation_type": "typos",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": "Bruce Doolin Henderson; Johann Philipp Schifferdecker",
+      "correct": true,
+      "answer": "Bruce Henderson and Johann Philipp Schifferdecker",
+      "judge_rationale": "The candidate gives the same two founders as the gold answer, with only minor variation in Henderson\u2019s middle name and formatting.",
+      "llm_calls": 2,
+      "input_tokens": 4089,
+      "output_tokens": 186,
+      "total_tokens": 4275,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 66179.445752959
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66180.837821963
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66182.408944875
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66186.07862872
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66188.701116834
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66190.537523405
+        }
+      ],
+      "latency_s": 17.926546945003793,
+      "errors": []
+    },
+    {
+      "instance": "ra-low-1",
+      "base_instance": "a-low-2",
+      "perturbation_type": "typos",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": "Bruce Doolin Henderson; Johann Philipp Schifferdecker",
+      "correct": true,
+      "answer": "Bruce Henderson and Johann Philipp Schifferdecker",
+      "judge_rationale": "The candidate gives the same two founders as the gold answer, with only minor wording/formatting differences and an abbreviated middle name for Bruce Doolin Henderson.",
+      "llm_calls": 2,
+      "input_tokens": 3458,
+      "output_tokens": 81,
+      "total_tokens": 3539,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 66197.34630278
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66197.347675434
+        }
+      ],
+      "latency_s": 4.3699883299996145,
+      "errors": []
+    },
+    {
+      "instance": "ra-low-2",
+      "base_instance": "a-low-4",
+      "perturbation_type": "colloquial",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": "CLAAS; Kloster Marienfeld",
+      "correct": true,
+      "answer": "CLAAS; Marienfeld Monastery",
+      "judge_rationale": "The candidate correctly identifies the farm-machine company as CLAAS and refers to the monastery in Harsewinkel as Marienfeld Monastery, which matches Kloster Marienfeld.",
+      "llm_calls": 2,
+      "input_tokens": 4116,
+      "output_tokens": 139,
+      "total_tokens": 4255,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 66219.191432228
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66223.557459108
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66226.345291127
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66228.243241886
+        }
+      ],
+      "latency_s": 31.126131691009505,
+      "errors": []
+    },
+    {
+      "instance": "ra-low-2",
+      "base_instance": "a-low-4",
+      "perturbation_type": "colloquial",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": "CLAAS; Kloster Marienfeld",
+      "correct": true,
+      "answer": "CLAAS; Marienfeld Abbey",
+      "judge_rationale": "The candidate correctly identifies the company as CLAAS and gives the monastery in Harsewinkel as Marienfeld Abbey, which matches Kloster Marienfeld.",
+      "llm_calls": 4,
+      "input_tokens": 11291,
+      "output_tokens": 96,
+      "total_tokens": 11387,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 66235.885815447
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66238.615917443
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66241.462014884
+        }
+      ],
+      "latency_s": 10.359376114007318,
+      "errors": []
+    },
+    {
+      "instance": "ra-med-1",
+      "base_instance": "a-med-3",
+      "perturbation_type": "jargon_synonym",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": "Toyota: 28 August 1937; Volkswagen: 28 May 1937; Porsche: 25 April 1931",
+      "correct": true,
+      "answer": "Toyota: 1937; Volkswagen: 1937; Porsche: 1931",
+      "judge_rationale": "The candidate gives the correct founding years for Toyota, Volkswagen, and Porsche, which matches the gold answer despite omitting the exact day and month.",
+      "llm_calls": 2,
+      "input_tokens": 3609,
+      "output_tokens": 145,
+      "total_tokens": 3754,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 66248.342464881
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66250.565924288
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66252.538506779
+        }
+      ],
+      "latency_s": 9.054905103010242,
+      "errors": []
+    },
+    {
+      "instance": "ra-med-1",
+      "base_instance": "a-med-3",
+      "perturbation_type": "jargon_synonym",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": "Toyota: 28 August 1937; Volkswagen: 28 May 1937; Porsche: 25 April 1931",
+      "correct": true,
+      "answer": "Toyota: 1937; VW: 1937; Porsche: 1931",
+      "judge_rationale": "The candidate gives the correct founding years for Toyota, Volkswagen, and Porsche, which matches the gold answer in substance despite omitting the exact dates.",
+      "llm_calls": 2,
+      "input_tokens": 8948,
+      "output_tokens": 109,
+      "total_tokens": 9057,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 66258.682701956
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66258.684073933
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66258.685173128
+        }
+      ],
+      "latency_s": 4.121894072988653,
+      "errors": []
+    },
+    {
+      "instance": "ra-med-2",
+      "base_instance": "a-med-5",
+      "perturbation_type": "redundant_selfcorrecting",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": "RWE Platz 1; Br\u00fcsseler Platz 1; Petuelring 130",
+      "correct": true,
+      "answer": "RWE AG: RWE Platz 1; E.ON SE: Br\u00fcsseler Platz 1; BMW Group Konzernzentrale: Petuelring 130",
+      "judge_rationale": "The candidate gives the exact street names and building numbers for RWE AG, E.ON SE, and BMW Group Konzernzentrale, matching the gold answer.",
+      "llm_calls": 2,
+      "input_tokens": 6141,
+      "output_tokens": 220,
+      "total_tokens": 6361,
+      "tool_call_count": 10,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 66265.339155748
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66265.636991143
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66265.912868943
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66266.254446663
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66267.942831974
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66270.897229444
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66273.752662706
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66276.085718366
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66277.93583839
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66280.688831361
+        }
+      ],
+      "latency_s": 21.532610066002235,
+      "errors": []
+    },
+    {
+      "instance": "ra-med-2",
+      "base_instance": "a-med-5",
+      "perturbation_type": "redundant_selfcorrecting",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": "RWE Platz 1; Br\u00fcsseler Platz 1; Petuelring 130",
+      "correct": false,
+      "answer": "Br\u00fcsseler Platz 1; Petuelring 130; 45131 Essen; 80809 M\u00fcnchen",
+      "judge_rationale": "The candidate includes the correct addresses for E.ON SE and BMW Group Konzernzentrale, but it gives a postal code/city for RWE instead of the required street address \"RWE Platz 1\".",
+      "llm_calls": 2,
+      "input_tokens": 3289,
+      "output_tokens": 120,
+      "total_tokens": 3409,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 66287.152269296
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66287.153578475
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66287.155027302
+        }
+      ],
+      "latency_s": 4.999704197005485,
+      "errors": []
+    },
+    {
+      "instance": "ra-high-1",
+      "base_instance": "a-high-5",
+      "perturbation_type": "jargon_typos",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": "Katrin Reuscher",
+      "correct": false,
+      "answer": "Tobias Hagemann",
+      "judge_rationale": "The candidate names Tobias Hagemann, but the gold answer is Katrin Reuscher, so the factual entity does not match.",
+      "llm_calls": 2,
+      "input_tokens": 4148,
+      "output_tokens": 146,
+      "total_tokens": 4294,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 66293.711811411
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66295.346888437
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66298.10431839
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66300.07040961
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66303.022649909
+        }
+      ],
+      "latency_s": 15.143451704003382,
+      "errors": []
+    },
+    {
+      "instance": "ra-high-1",
+      "base_instance": "a-high-5",
+      "perturbation_type": "jargon_typos",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": "Katrin Reuscher",
+      "correct": true,
+      "answer": "Katrin Reuscher",
+      "judge_rationale": "The candidate exactly matches the gold answer, Katrin Reuscher.",
+      "llm_calls": 3,
+      "input_tokens": 5431,
+      "output_tokens": 78,
+      "total_tokens": 5509,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 66309.474433542
+        },
+        {
+          "tool": "tavily_search",
+          "t": 66313.775205006
+        }
+      ],
+      "latency_s": 11.760041967005236,
+      "errors": []
+    }
+  ]
+}

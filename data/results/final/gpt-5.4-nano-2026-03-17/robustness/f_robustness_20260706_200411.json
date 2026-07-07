@@ -1,0 +1,334 @@
+{
+  "timestamp": "20260706_200411",
+  "model": "gpt-5.4-nano-2026-03-17",
+  "runs": [
+    {
+      "instance": "rf-low-1",
+      "base_instance": "f-low-1",
+      "perturbation_type": "colloquial_buried",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 1 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2837,
+      "output_tokens": 199,
+      "total_tokens": 3036,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "send_email",
+          "t": 49610.291203549
+        }
+      ],
+      "latency_s": 6.289158993000456,
+      "errors": []
+    },
+    {
+      "instance": "rf-low-1",
+      "base_instance": "f-low-1",
+      "perturbation_type": "colloquial_buried",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Done\u2014I sent an email to **contact005@example.com** with subject **\u201cQ3 status update\u201d** and the exact body text you provi",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 6084,
+      "output_tokens": 124,
+      "total_tokens": 6208,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "send_email",
+          "t": 49612.555309329
+        }
+      ],
+      "latency_s": 3.482159494997177,
+      "errors": []
+    },
+    {
+      "instance": "rf-low-2",
+      "base_instance": "f-low-3",
+      "perturbation_type": "values_as_words",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 1 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2863,
+      "output_tokens": 421,
+      "total_tokens": 3284,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 49616.852319858
+        },
+        {
+          "tool": "search_events",
+          "t": 49617.177264753
+        },
+        {
+          "tool": "search_events",
+          "t": 49617.453299531
+        },
+        {
+          "tool": "create_event",
+          "t": 49619.767460298
+        }
+      ],
+      "latency_s": 5.933970735997718,
+      "errors": []
+    },
+    {
+      "instance": "rf-low-2",
+      "base_instance": "f-low-3",
+      "perturbation_type": "values_as_words",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Scheduled a calendar event titled **\u201cSales review\u201d** for **June 15, 2026, 10:00\u201311:00 (UTC)** and invited **contact010@e",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 5692,
+      "output_tokens": 112,
+      "total_tokens": 5804,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "create_event",
+          "t": 49621.976834456
+        }
+      ],
+      "latency_s": 3.472651763004251,
+      "errors": []
+    },
+    {
+      "instance": "rf-low-3",
+      "base_instance": "f-low-4",
+      "perturbation_type": "self_correction_on_id",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 1 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2695,
+      "output_tokens": 111,
+      "total_tokens": 2806,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "delete_email",
+          "t": 49628.42291206
+        }
+      ],
+      "latency_s": 5.127676654999959,
+      "errors": []
+    },
+    {
+      "instance": "rf-low-3",
+      "base_instance": "f-low-4",
+      "perturbation_type": "self_correction_on_id",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I deleted the email with id **5** from the shared mailbox (moved it to Trash), leaving all other emails unchanged.",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 5416,
+      "output_tokens": 47,
+      "total_tokens": 5463,
+      "tool_call_count": 1,
+      "tool_calls": [
+        {
+          "tool": "delete_email",
+          "t": 49629.85914551
+        }
+      ],
+      "latency_s": 2.8540898889987147,
+      "errors": []
+    },
+    {
+      "instance": "rf-med-1",
+      "base_instance": "f-med-1",
+      "perturbation_type": "jargon_synonym",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3034,
+      "output_tokens": 307,
+      "total_tokens": 3341,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 49708.810530515
+        },
+        {
+          "tool": "db_update",
+          "t": 49711.67041603
+        },
+        {
+          "tool": "db_update",
+          "t": 49711.673217178
+        },
+        {
+          "tool": "db_update",
+          "t": 49711.675637189
+        },
+        {
+          "tool": "db_update",
+          "t": 49711.67817608
+        }
+      ],
+      "latency_s": 80.05755801199848,
+      "errors": []
+    },
+    {
+      "instance": "rf-med-1",
+      "base_instance": "f-med-1",
+      "perturbation_type": "jargon_synonym",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Moved agent **#3**\u2019s CRM tickets from **\u201cOpen\u201d** to **\u201cIn Progress\u201d** for cases **#8, #57, #68, and #89** (left the alre",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 9651,
+      "output_tokens": 203,
+      "total_tokens": 9854,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 49717.98074039
+        },
+        {
+          "tool": "db_update",
+          "t": 49734.00244208
+        },
+        {
+          "tool": "db_update",
+          "t": 49734.004123802
+        },
+        {
+          "tool": "db_update",
+          "t": 49734.005405254
+        },
+        {
+          "tool": "db_update",
+          "t": 49734.006681601
+        }
+      ],
+      "latency_s": 23.93707577099849,
+      "errors": []
+    },
+    {
+      "instance": "rf-med-2",
+      "base_instance": "f-med-4",
+      "perturbation_type": "redundant_buried",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "correct": false,
+      "error": "153 validation errors for ActionPlan\nactions.0.args.updates.str\n  Input should be a valid string [type=string_type, input_value={'table': 'opportunities'...: {'stage': 'Proposal'}}, input_type=dict]\n "
+    },
+    {
+      "instance": "rf-med-2",
+      "base_instance": "f-med-4",
+      "perturbation_type": "redundant_buried",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Updated 16 opportunities currently in stage **\u201cNegotiation\u201d** back to **\u201cProposal\u201d** (stage only), with no other changes",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 11868,
+      "output_tokens": 523,
+      "total_tokens": 12391,
+      "tool_call_count": 18,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 49745.776994287
+        },
+        {
+          "tool": "db_update",
+          "t": 49751.717119508
+        },
+        {
+          "tool": "db_update",
+          "t": 49751.718514624
+        },
+        {
+          "tool": "db_update",
+          "t": 49751.72043312
+        },
+        {
+          "tool": "db_update",
+          "t": 49751.721321325
+        },
+        {
+          "tool": "db_update",
+          "t": 49751.722217481
+        },
+        {
+          "tool": "db_update",
+          "t": 49751.723828562
+        },
+        {
+          "tool": "db_update",
+          "t": 49751.725366436
+        },
+        {
+          "tool": "db_update",
+          "t": 49751.726326267
+        },
+        {
+          "tool": "db_update",
+          "t": 49751.728208002
+        },
+        {
+          "tool": "db_update",
+          "t": 49751.7292975
+        },
+        {
+          "tool": "db_update",
+          "t": 49751.730733609
+        },
+        {
+          "tool": "db_update",
+          "t": 49751.731774202
+        },
+        {
+          "tool": "db_update",
+          "t": 49751.733521257
+        },
+        {
+          "tool": "db_update",
+          "t": 49751.734326044
+        },
+        {
+          "tool": "db_update",
+          "t": 49751.735708874
+        },
+        {
+          "tool": "db_update",
+          "t": 49751.736425257
+        },
+        {
+          "tool": "db_update",
+          "t": 49751.737806969
+        }
+      ],
+      "latency_s": 9.085552668999298,
+      "errors": []
+    }
+  ]
+}

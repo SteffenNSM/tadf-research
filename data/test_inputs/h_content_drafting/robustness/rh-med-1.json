@@ -1,0 +1,101 @@
+{
+  "id": "rh-med-1",
+  "archetype": "H",
+  "difficulty": "med",
+  "sub_class": "summary_email",
+  "format": "summary email",
+  "instruction": "the sales director wants to know how Q3 went across our three product lines -- can you put that into an email for her? summary style, she reads fast.",
+  "table": {
+    "caption": "Revenue by product line (EUR)",
+    "columns": [
+      "Product line",
+      "Q3 2024",
+      "Q3 2025"
+    ],
+    "rows": [
+      [
+        "Core",
+        1100000,
+        1240000
+      ],
+      [
+        "Analytics",
+        700000,
+        880000
+      ],
+      [
+        "Connect",
+        450000,
+        410000
+      ]
+    ]
+  },
+  "constraints": {
+    "audience": "the sales director (non-technical)",
+    "tonality": "professional and analytical",
+    "min_words": 120,
+    "max_words": 220,
+    "framing": "lead with the overall result, then the per-line detail",
+    "required_points": [
+      {
+        "desc": "Core Q3 2025 1,240,000",
+        "keywords": [
+          "1,240,000",
+          "1.24"
+        ]
+      },
+      {
+        "desc": "Analytics Q3 2025 880,000",
+        "keywords": [
+          "880,000",
+          "880"
+        ]
+      },
+      {
+        "desc": "Connect Q3 2025 410,000",
+        "keywords": [
+          "410,000",
+          "410"
+        ]
+      }
+    ]
+  },
+  "feedback_rounds": [
+    "Please name the strongest and weakest line explicitly, and add the total Q3 2025 revenue across all lines."
+  ],
+  "feedback_requirements": [
+    {
+      "round": 1,
+      "desc": "names strongest/weakest + total 2,530,000",
+      "keywords": [
+        "2,530,000",
+        "2.53 million",
+        "2.53m",
+        "strongest",
+        "weakest"
+      ]
+    }
+  ],
+  "allowed_numbers": [
+    3.0,
+    2024.0,
+    2025.0,
+    280000.0,
+    320000.0,
+    410000.0,
+    450000.0,
+    700000.0,
+    880000.0,
+    1100000.0,
+    1240000.0,
+    2250000.0,
+    2530000.0
+  ],
+  "rationale_hint": "Three required figures + framing; feedback adds total (2,530,000) and strongest/weakest naming.",
+  "provenance": {
+    "construction_method": "Surface perturbation (colloquial_indirect) of h-med-1's brief instruction; the structured constraint, table, feedback, and allowed-number fields are copied verbatim. Robustness check, not a new task.",
+    "license": "Original work by the author (tables, briefs, constraints, judge rubric); benchmark semantics reference only"
+  },
+  "base_instance": "h-med-1",
+  "perturbation_type": "colloquial_indirect"
+}

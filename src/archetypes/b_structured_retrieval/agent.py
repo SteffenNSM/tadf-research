@@ -15,8 +15,8 @@ from langchain_core.messages import SystemMessage
 from langgraph.prebuilt import create_react_agent
 
 from src.archetypes.b_structured_retrieval.config import (
+    AGENT_SCHEMA_DOC,
     AGENT_SYSTEM_PROMPT,
-    SOURCE_SCHEMA_DOC,
     TEMPERATURE,
     TOOLS,
 )
@@ -26,8 +26,18 @@ from src.core.llm import get_llm
 def build_agent():
     """Construct a ReAct agent for archetype B with read-only CRM/Mail/Calendar tools."""
     llm = get_llm(TEMPERATURE)
-    system_message = SystemMessage(content=AGENT_SYSTEM_PROMPT.format(schema=SOURCE_SCHEMA_DOC))
+    system_message = SystemMessage(content=AGENT_SYSTEM_PROMPT.format(schema=AGENT_SCHEMA_DOC))
     return create_react_agent(model=llm, tools=TOOLS, prompt=system_message)
+
+
+#: Safety ceiling on the agent's sequential tool calls. NOT stated in the
+#: prompt: the agent decides adaptively when to stop; the limit only prevents a
+#: pathological runaway loop (earlier B runs reached ~15 tool calls / 143k
+#: tokens). B answers combine at most three sources, so 12 tool calls is
+#: generous and does not bind normal behaviour. In LangGraph each tool call
+#: spans two super-steps (agent node + tool node), so recursion_limit = 2*12+1.
+MAX_TOOL_CALLS = 12
+_RECURSION_LIMIT = 2 * MAX_TOOL_CALLS + 1
 
 
 def run_agent(instruction: str, config: dict | None = None) -> dict:
@@ -42,7 +52,8 @@ def run_agent(instruction: str, config: dict | None = None) -> dict:
         message; the runner extracts it for scoring.
     """
     agent = build_agent()
+    run_config = {"recursion_limit": _RECURSION_LIMIT, **(config or {})}
     return agent.invoke(
         {"messages": [("human", instruction)]},
-        config=config or {},
+        config=run_config,
     )

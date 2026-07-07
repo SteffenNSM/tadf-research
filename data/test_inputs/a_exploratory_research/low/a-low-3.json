@@ -2,28 +2,26 @@
   "id": "a-low-3",
   "archetype": "A",
   "difficulty": "low",
-  "instruction": "In which municipality is the snuff manufacturer Alois Poeschl (Poeschl Tabak) headquartered today?",
+  "instruction": "In which year was the Kamener Kreuz motorway interchange opened, and at which motorway interchange does the German Bundesautobahn 2 (A 2) begin?",
   "ground_truth": {
-    "value": "Geisenhausen",
-    "unit": "municipality"
+    "value": "1937; Kreuz Oberhausen",
+    "unit": "year_and_interchange"
   },
   "provenance": {
-    "source_benchmark": "BrowseComp (Wei et al., 2025)",
-    "construction_method": "inverted-question (BrowseComp Sec. 2.1); author-constructed (not lifted)",
-    "difficulty_axis": "number of search hops / distinct sources",
-    "domain": "SME hidden champion",
-    "hops": "1",
+    "source_benchmark": "AssistantBench (Yoran et al., 2024); BrowseComp (Wei et al., 2025)",
+    "construction_method": "Two independent infrastructure facts combined in parallel.",
+    "difficulty_axis": "two distinct sources combined, retrievable in parallel",
+    "domain": "German road infrastructure",
     "sources": [
-      "https://de.wikipedia.org/wiki/Alois_P%C3%B6schl",
-      "https://www.poeschl-tobacco.com/en/company/company-history/"
+      "https://de.wikipedia.org/wiki/Kamener_Kreuz",
+      "https://de.wikipedia.org/wiki/Bundesautobahn_2"
     ],
     "verification": {
-      "memorization_no_tool": "pending",
-      "retrievable_via_tavily": "pending",
-      "one_shot_breaks": "n/a (single-hop)",
-      "unique": "yes"
+      "memorization_no_tool": "pending (must be non-memorized on the strongest model used)",
+      "retrievable_via_tavily": "pending (confirm on the run)",
+      "gold_verified": "author-supplied; confirm on the run"
     },
     "note": "",
-    "license": "Original work by the author (task design); BrowseComp construction method referenced only"
+    "license": "Original work by the author (task design)"
   }
 }

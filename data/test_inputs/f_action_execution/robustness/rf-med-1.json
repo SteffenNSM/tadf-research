@@ -1,0 +1,13 @@
+{
+  "id": "rf-med-1",
+  "archetype": "F",
+  "difficulty": "med",
+  "base_instance": "f-med-1",
+  "perturbation_type": "jargon_synonym",
+  "instruction": "every open ticket currently sitting with agent #3 needs to move to WIP -- that's the 'In Progress' status in our CRM. only the ones still in 'Open', obviously; don't touch anything that's already moving.",
+  "expected_post_state": "Each of cases.id in {8, 57, 68, 89} (the open cases for agent 3 in the seed) has status='In Progress'.",
+  "provenance": {
+    "construction_method": "Surface perturbation (jargon_synonym) of f-med-1's instruction; all action values remain stated in the text, post-state gold and predicate unchanged. Robustness check, not a new task.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

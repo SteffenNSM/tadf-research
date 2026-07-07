@@ -1,0 +1,13 @@
+{
+  "id": "rf-low-3",
+  "archetype": "F",
+  "difficulty": "low",
+  "base_instance": "f-low-4",
+  "perturbation_type": "self_correction_on_id",
+  "instruction": "we're cleaning the shared mailbox a bit. delete the email with id 4 -- hold on, wrong row, I mean the one with id 5. just that one, leave everything else as it is.",
+  "expected_post_state": "emails.id=5 has status='deleted'.",
+  "provenance": {
+    "construction_method": "Surface perturbation (self_correction_on_id) of f-low-4's instruction; all action values remain stated in the text, post-state gold and predicate unchanged. Robustness check, not a new task.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

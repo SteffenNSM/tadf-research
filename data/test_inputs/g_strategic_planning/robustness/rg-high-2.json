@@ -1,0 +1,80 @@
+{
+  "id": "rg-high-2",
+  "archetype": "G",
+  "difficulty": "high",
+  "base_instance": "g-high-5",
+  "perturbation_type": "colloquial_buried",
+  "instruction": "honestly account 16 has dragged on forever, so let's run the full cycle and be done. their open cases 16, 54, 81 and 104 get closed (case 16 drops to 'Low' priority after its close), the customer hears about it the usual way. oh, and opportunity 3 actually came through -- stage 'Closed Won', is_won true, in a single update. agents 7 and 10 each get one mail, subject 'Account 16 cycle complete'. plus three events please: 'Account 16 kickoff EU' on 2026-07-09 with agent 7, 'Account 16 retro' on 2026-07-10 with agent 10, and 'Account 16 exec review' on 2026-07-11 with agent 7 as attendees.\n\nSupport runbook (excerpt):\n- Primary contact: an account's primary contact is the contact with the lowest id at that account.\n- Customer notification on closures: unless the request says otherwise, the account's primary contact receives one email per closed case with subject 'Case <id> closed' (substitute the actual case id) and a brief body, and closure notifications are sent only after every close in the work package is done.\n- Escalation-blocked cases: a case whose transfer history is above the escalation threshold cannot be closed with attempt_close_case; such a case is closed via a direct update that also records the closure timestamp (closed_at).\n- Keep email and event bodies brief, and plan only the actions the work package requires.",
+  "goal": {
+    "cases_closed": [
+      16,
+      54,
+      81,
+      104
+    ],
+    "case_fields": {
+      "16": {
+        "priority": "Low"
+      }
+    },
+    "opp_fields": {
+      "3": {
+        "stage": "Closed Won",
+        "is_won": true
+      }
+    },
+    "emails": [
+      {
+        "recipient": "contact033@example.com",
+        "subject": "Case 16 closed"
+      },
+      {
+        "recipient": "contact033@example.com",
+        "subject": "Case 54 closed"
+      },
+      {
+        "recipient": "contact033@example.com",
+        "subject": "Case 81 closed"
+      },
+      {
+        "recipient": "contact033@example.com",
+        "subject": "Case 104 closed"
+      },
+      {
+        "recipient": "agent07@atlas.com",
+        "subject": "Account 16 cycle complete"
+      },
+      {
+        "recipient": "agent10@atlas.com",
+        "subject": "Account 16 cycle complete"
+      }
+    ],
+    "events": [
+      {
+        "name": "Account 16 kickoff EU",
+        "attendees_contain": [
+          "agent07@atlas.com"
+        ]
+      },
+      {
+        "name": "Account 16 retro",
+        "attendees_contain": [
+          "agent10@atlas.com"
+        ]
+      },
+      {
+        "name": "Account 16 exec review",
+        "attendees_contain": [
+          "agent07@atlas.com"
+        ]
+      }
+    ],
+    "closes_before_emails": true,
+    "no_other_changes": true
+  },
+  "optimal_length": 15,
+  "provenance": {
+    "construction_method": "Surface perturbation (colloquial_buried) of g-high-5's instruction; every id, subject, date, and value remains stated in the text; goal spec and optimal length copied verbatim. Robustness check, not a new task.",
+    "license": "Original work by the author (scenarios, goal specs, action doc); benchmark semantics reference only"
+  }
+}

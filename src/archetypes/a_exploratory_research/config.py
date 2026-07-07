@@ -19,9 +19,12 @@ from src.core.tools.search import tavily_search
 # ── TADF metadata ──
 
 DIMENSIONAL_PROFILE = {
-    "step_predictability": "low",
+    # "mid": the kind of step (a search) is known; the number of searches and
+    # their queries depend on intermediate results (Table-3 level anchors).
+    "step_predictability": "mid",
     "information_availability": "low",
-    "output_ambiguity": "high",
+    # "low": short, closed-form answers verifiable against the curated gold.
+    "output_ambiguity": "low",
     "error_consequence": "low_moderate",
 }
 
@@ -46,24 +49,20 @@ __all__ = [
 
 PLAN_PROMPT = """You are planning a web research task.
 
-Given a research question, decide the minimal set of web search queries needed to gather the facts required to answer it. Do not answer the question now. Return only a SearchPlan with the queries and a brief rationale.
+Decide which web search queries to run to gather the facts needed to answer the question. Up to 10 queries are available. All queries are issued together, before any results come back, so plan the full set now; you cannot revise it based on what the searches return. Do not answer the question yet. Return only a SearchPlan with the queries and a brief rationale.
 
-Guidelines:
-- Plan the minimum number of focused queries needed to answer the question.
-- Each query should target a specific piece of information, not be a paraphrase of the original question.
-- Use as few queries as you can while still being likely to retrieve the necessary facts.
-- Use more queries only when the question genuinely requires combining facts from multiple distinct sources.
+Each query should target a specific piece of information rather than restate the question.
 
 Question: {question}"""
 
 
-SYNTHESIZE_PROMPT = """You are answering a research question based on web search snippets.
+SYNTHESIZE_PROMPT = """You are answering a research question based on web search results.
 
-Use only the information in the snippets below. Give a concise final answer: a number, a name, a year, or a short phrase. Do not explain your reasoning. List the URLs of the snippets you actually used as sources.
+Use only the information in the results below. Give a concise final answer: a number, a name, a year, or a short phrase. Do not explain your reasoning. List the URLs you actually used as sources.
 
 Question: {question}
 
-Snippets:
+Search results (grouped by the query that produced them):
 {snippets}"""
 
 

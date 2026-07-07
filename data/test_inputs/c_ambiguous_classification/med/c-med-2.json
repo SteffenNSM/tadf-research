@@ -2,18 +2,49 @@
   "id": "c-med-2",
   "archetype": "C",
   "difficulty": "med",
-  "sub_class": null,
-  "instruction": "Route this email to the correct support category.",
-  "email": {
-    "sender": "ops-team@northwind.example",
-    "subject": "Onboarding 3 more users",
-    "body": "We're adding three more team members to our plan. Their emails are listed below. Please assign them to the Analytics group with the same role Sarah K. got last week. We ran into a few permission issues during Sarah's onboarding so please make sure access is set correctly from the start.\n\nnew.starter1@northwind.example\nnew.starter2@northwind.example\nnew.starter3@northwind.example"
+  "instruction": "Triage this batch of customer support emails: assign each email to exactly one support category by its primary intent.",
+  "emails": [
+    {
+      "id": "e1",
+      "sender": "user1@customer.example",
+      "subject": "Contractor can't get in",
+      "body": "Our new contractor says the portal 'doesn't work'. But it loads fine for the rest of us, so it isn't an outage — they were simply never granted access. Please give them viewer access to the Atlas project."
+    },
+    {
+      "id": "e2",
+      "sender": "user2@customer.example",
+      "subject": "Double charge among praise",
+      "body": "Love the product and the team's been responsive. Minor: a docs gap on webhooks, for later. The thing I need now: our last invoice has two identical line items — we were double-charged and need one refunded."
+    },
+    {
+      "id": "e3",
+      "sender": "user3@customer.example",
+      "subject": "Sync failing, not the address",
+      "body": "Thanks for fixing our delivery address last week. Unrelated: finance had a charge question we've already resolved. The live problem: our nightly data sync via your API has failed with timeouts for three days and the reports are stale — please investigate."
+    },
+    {
+      "id": "e4",
+      "sender": "user4@customer.example",
+      "subject": "Access after role change",
+      "body": "Since you changed my role I can't see the billing section anymore. Pages load fine for my colleagues, so nothing is down — I just need my permissions put back so I can reach billing."
+    },
+    {
+      "id": "e5",
+      "sender": "user5@customer.example",
+      "subject": "Still charged for removed seats",
+      "body": "We removed three seats last month and the app reflects it correctly. The problem is only this invoice: it still bills the old seat count. Please correct the charge."
+    }
+  ],
+  "expected": {
+    "e1": "Account",
+    "e2": "Billing",
+    "e3": "Technical",
+    "e4": "Account",
+    "e5": "Billing"
   },
-  "expected_label": "Account",
-  "rationale_hint": "Side signal: 'permission issues' during a previous onboarding (Technical-adjacent). Dominant signal: the requester is asking for three new seats to be added with role assignment — an account-level operational change. The mention of past issues is context, not the ask.",
   "provenance": {
     "source_benchmark": "CRMArena-Pro Case Routing / Activity Priority Understanding (Huang et al., 2025)",
-    "adaptation": "Author-constructed email texts; task semantics follow the CRMArena-Pro routing/disambiguation pattern. The five-category label set is mirrored from cases.issue_category in experiments/seed_crm.py so the routing decision is consistent with the local CRM schema.",
+    "construction_method": "Batch-triage task (single input batch -> single labelled output, Section 2.2.3). Difficulty = batch size (3/5/8) x per-email ambiguity; Med/High emails carry competing near-duplicate signals with one primary intent; High emails are verbose with a buried core ask to load the context. Author-constructed from a labelled pool; no benchmark text reproduced.",
     "license": "Original work by the author (email texts and task design); benchmark semantics reference only"
   }
 }

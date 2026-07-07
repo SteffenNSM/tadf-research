@@ -37,6 +37,49 @@ DECISION = Literal[
 ]
 
 
+class QuoteFacts(BaseModel):
+    """Structured facts extracted from a natural-language quote request.
+
+    The redesigned D workflow (mid information availability) receives the
+    request as free text rather than as a structured record. The single LLM
+    call in the workflow is an *extraction* step: it reads the email-style
+    request and emits these flat fields, which the deterministic rule engine
+    then evaluates against the policy clauses fetched from the Policy Registry.
+    The field names match the clause field names in ``policy_data.py``.
+    """
+
+    lead_status: str = Field(
+        description="The lead's status as stated in the request, e.g. 'qualified' or 'unqualified'"
+    )
+    region: str = Field(
+        description="The customer's region, e.g. 'EMEA', 'AMER', 'APAC'"
+    )
+    is_existing: bool = Field(
+        description="True if an existing customer, False if a new/non-existing customer"
+    )
+    has_overdue_invoices: bool = Field(
+        description="True if the customer has overdue invoices outstanding, else False"
+    )
+    has_credit_hold: bool = Field(
+        description="True if the customer is on a credit hold / credit block, else False"
+    )
+    is_new_logo: bool = Field(
+        description="True if the deal is a new-logo acquisition (a brand-new customer win), else False"
+    )
+    segment: str = Field(
+        description="The customer segment as written, e.g. 'Commercial', 'Strategic', 'Restricted'"
+    )
+    amount: float = Field(
+        description="The quote/deal amount in dollars (digits only, no currency symbol or thousands separators)"
+    )
+    base_discount_pct: float = Field(
+        description="The requested base discount as a percentage number (e.g. 8 for 8%)"
+    )
+    term_months: float = Field(
+        description="The contract term length in months as a plain number (e.g. 24)"
+    )
+
+
 class DecisionResult(BaseModel):
     """Final decision after applying the approval policy."""
 

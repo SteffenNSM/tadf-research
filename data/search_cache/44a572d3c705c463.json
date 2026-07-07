@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Great Circle Distance Calculator | Modern Airline Retailing Tools",
+    "url": "https://www.modernairlineretailing.com/tools/great-circle.html",
+    "content": "# Great Circle Distance Calculator. Pick any two airports worldwide to compute the great-circle distance, bearings and midpoint. Results use the WGS84 Earth radius and update instantly for quick network planning and benchmarking. ### Great-circle distance. ### Estimated flight time @ 800 km/h. ### Initial / final bearing. ### Midpoint. #### Origin -. Select an airport to see details. #### Destination -."
+  },
+  {
+    "title": "Great Circle Distance Calculator | OceanCalc",
+    "url": "https://oceancalc.com/tools/great-circle-distance-calculator",
+    "content": "# Great Circle Distance Calculator. ## Great Circle Distance Calculator. ## What is the Great Circle Distance Calculator? Great Circle Distance Calculator applies familiar chart and piloting math in one place for deck and planning use. * Match input units to your chart, GPS, or instrument before trusting the Great Circle Distance Calculator. * ### How is great circle distance calculated? The haversine formula uses the latitudes and longitudes of both points to compute the central angle between them, then multiplies by Earth's radius (in nautical miles, about 3,440) to get distance. * ### Why use nautical miles for great circle? One nautical mile equals one minute of latitude, so great circle distance in nm relates directly to angular distance. Popular calculators: Nautical Mile Converter · Knots to km/h Converter · Hull Speed Calculator · Initial Bearing Calculator · Great Circle Distance Calculator · Boat Fuel Consumption Calculator · VMG Calculator."
+  },
+  {
+    "title": "Great Circle Calculator",
+    "url": "https://www.omnicalculator.com/math/great-circle",
+    "content": "# Great Circle Calculator. We will teach you how to calculate the great circle distance between two points, both on a sphere and a more realistic shape for Earth. ## What is the great circle? Introduction to the great circle between two points. Before the definitions, though, it's better to introduce the situations in which we will test our great circle calculator! The **great circle** is the closed circle deriving from the intersection of a sphere and a plane passing through the center of the sphere. The same holds if we consider the great circle passing through a point on the sphere's surface. When considering two points and the great circle between them, we can define (and calculate) the distance between them on the great circle: there are **two possible values**:. The great circle is the circle containing the **shortest possible path** between two points on a sphere. Earlier, we said that the great circle distance we calculate between two points is the **shortest possible path**."
+  },
+  {
+    "title": "Distance Between Cities Places On Map Distance Calculator",
+    "url": "https://www.distancefromto.net",
+    "content": "# Distance Between Cities on Map. **Distance calculator** finds the distance between cities or places and shows the *distance* in miles and kilometers. Type the city name, location name or the location coordinates in lat long format (lat,long) and hit measure button to calculate the **distance between cities** or *two places*. Find the *distance from cities in miles and kilometers* for flying air distance. — The red line on the map indicates the **Great Circle Distance**. **Distance between cities** or 2 locations are measured in both kilometers, miles and nautical miles at the same time. **Air distance is the bird fly distance** between two locations which is calculated with the great circle formula. **nmi**: is the symbol of nautical miles in distance calculation. Now you can enter the lat long coordinates of places to calculate *distance from to*. * We've updated the cities of country pages, distance between major cities are now listed. And the list of cities of a country are updated."
+  },
+  {
+    "title": "Great Circle Map",
+    "url": "https://www.greatcirclemap.com",
+    "content": "[![Image 1: logo](https://www.greatcirclemap.com/logo.svg)Great Circle Map](https://www.greatcirclemap.com/). Enter two or more airports to draw a route between them on the map and calculate the distance. Name of city or airport-code. ![Image 2: satellite](https://www.greatcirclemap.com/satellite.png). ![Image 3: roadmap](https://www.greatcirclemap.com/roadmap.png)."
+  }
+]

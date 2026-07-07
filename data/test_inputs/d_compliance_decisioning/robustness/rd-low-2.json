@@ -1,0 +1,35 @@
+{
+  "id": "rd-low-2",
+  "archetype": "D",
+  "difficulty": "low",
+  "base_instance": "d-low-5",
+  "perturbation_type": "numeric_shorthand",
+  "critical_fact": "amount (rule P2)",
+  "instruction": "Apply the approval policy to this quote request and return the required decision.",
+  "request_text": "Subject: approval — lead 5005\n\nQuick one: qualified lead (5005), AMER region, new customer, Commercial segment, no overdue invoices, no credit hold, not a new-logo deal. It's a big one — a quarter-million-dollar deal (250k) on a 12-month term, and they're not even asking for a discount (0%). Where does it route?",
+  "quote_request": {
+    "lead": {
+      "id": 5005,
+      "status": "qualified",
+      "account_id": 14
+    },
+    "customer": {
+      "region": "AMER",
+      "is_existing": false,
+      "has_overdue_invoices": false,
+      "segment": "Commercial",
+      "has_credit_hold": false,
+      "is_new_logo": false
+    },
+    "quote": {
+      "amount": 250000,
+      "base_discount_pct": 0,
+      "term_months": 12
+    }
+  },
+  "expected_label": "ESCALATE_REGIONAL_VP",
+  "provenance": {
+    "construction_method": "Surface perturbation (numeric_shorthand) of d-low-5 targeting the decision-critical fact [amount (rule P2)]; gold label unchanged. Robustness check, not a new task.",
+    "license": "Original work by the author (rule set, quote requests, task design); benchmark semantics reference only"
+  }
+}

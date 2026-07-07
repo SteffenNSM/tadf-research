@@ -13,13 +13,18 @@
     "customer": {
       "region": "AMER",
       "is_existing": false,
-      "has_overdue_invoices": false
+      "has_overdue_invoices": false,
+      "segment": "Commercial",
+      "has_credit_hold": false,
+      "is_new_logo": false
     },
     "quote": {
       "amount": 100000,
-      "base_discount_pct": 35
+      "base_discount_pct": 35,
+      "term_months": 12
     }
   },
+  "request_text": "Subject: Quote approval request — lead 5004\n\nHi Compliance team,\n\nCould you run our quote approval policy on the request below and let me know the decision?\n\nThe lead (ID 5004) is currently marked \"qualified\" in the CRM. The customer is in the AMER region, is a new (non-existing) customer, sits in the Commercial segment, has no overdue invoices on file, and is not on any credit hold. The deal is for $100,000 over a 12-month term, with a requested base discount of 35%.\n\nThanks,\nSales Operations",
   "expected_label": "DECLINE",
   "rationale_hint": "Gates pass; effective discount 35 % > 30 %. P1 (over-limit cap) fires → DECLINE.",
   "provenance": {

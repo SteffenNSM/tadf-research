@@ -41,11 +41,36 @@ EMAIL_CATEGORY = Literal[
 
 
 class ClassificationResult(BaseModel):
-    """Final routing decision for a customer email."""
+    """Final routing decision for a single customer email (legacy single-item form)."""
 
     label: EMAIL_CATEGORY = Field(
         description="The category that best captures the requester's primary intent"
     )
     rationale: str = Field(
         description="One short sentence describing what the requester is asking for and why that maps to the chosen category"
+    )
+
+
+class EmailClassification(BaseModel):
+    """The routing decision for one email within a batch."""
+
+    email_id: str = Field(description="The id of the email being classified, copied from the input")
+    label: EMAIL_CATEGORY = Field(
+        description="The category that best captures this email's requester's primary intent"
+    )
+    rationale: str = Field(description="One short sentence justifying the category for this email")
+
+
+class BatchClassification(BaseModel):
+    """The triage result for a batch: one classification per input email.
+
+    The batch-triage task's single delimitable output (Section 2.2.3): one
+    input batch of emails plus the category document, one output list of
+    per-email labels passed to the coordination layer. The workflow produces it
+    with a deterministic map-reduce over fixed-size chunks; the agent produces
+    it by processing the batch in-context.
+    """
+
+    classifications: list[EmailClassification] = Field(
+        description="One EmailClassification per email in the batch (or in the current chunk)"
     )

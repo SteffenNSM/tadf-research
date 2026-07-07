@@ -2,28 +2,26 @@
   "id": "a-high-1",
   "archetype": "A",
   "difficulty": "high",
-  "instruction": "A German company that is internationally leading in endoscopy was founded as a two-person operation in the town regarded as the world centre of medical technology. Name the surgical-instruments manufacturer headquartered in that same town that belongs to the B. Braun group.",
+  "instruction": "The Winkelmann Group is headquartered in a German town in Westphalia (Muensterland). A small river whose name begins with W (a tributary of the Ems, NOT the well-known Weser) flows through that town, and the town's stadium is named after that river. What is the name of that stadium?",
   "ground_truth": {
-    "value": "Aesculap",
-    "unit": "company_name"
+    "value": "Wersestadion",
+    "unit": "stadium"
   },
   "provenance": {
-    "source_benchmark": "BrowseComp (Wei et al., 2025)",
-    "construction_method": "inverted-question (BrowseComp Sec. 2.1); author-constructed",
-    "difficulty_axis": "3 sources; runtime-dependent (the town discovered via the endoscopy leader determines the second-company query)",
-    "domain": "SME hidden champion / cluster",
+    "source_benchmark": "AssistantBench (Yoran et al., 2024); BrowseComp (Wei et al., 2025)",
+    "construction_method": "Chain: Winkelmann Group -> town Ahlen -> river Werse -> Wersestadion. Single-value endpoint (the stadium); the stadium name needs the town and river, which need the company.",
+    "difficulty_axis": "runtime-dependent chain: each search's result is the input to the next (a plan-upfront workflow cannot chain)",
+    "domain": "SME hidden champion + local geography",
     "sources": [
-      "https://www.weltzentrum-der-medizintechnik.de/unternehmen/tuttlingen",
-      "https://en.wikipedia.org/wiki/Karl_Storz_Endoskope",
-      "https://en.wikipedia.org/wiki/Aesculap"
+      "https://de.wikipedia.org/wiki/Winkelmann_Group",
+      "https://de.wikipedia.org/wiki/Wersestadion"
     ],
     "verification": {
-      "memorization_no_tool": "pending",
-      "retrievable_via_tavily": "pending",
-      "one_shot_breaks": "candidate-breaks (second company only findable once Tuttlingen is known; short-circuit risk: 'B. Braun surgical subsidiary' -> Aesculap directly -> confirm via one-shot-break check)",
-      "unique": "yes"
+      "memorization_no_tool": "pending (must be non-memorized on the strongest model used)",
+      "retrievable_via_tavily": "pending (confirm on the run)",
+      "gold_verified": "author-supplied; confirm on the run"
     },
-    "note": "Cluster chain: endoscopy leader -> Karl Storz/Tuttlingen -> B. Braun surgical-instruments co there -> Aesculap.",
-    "license": "Original work by the author (task design); BrowseComp construction method referenced only"
+    "note": "Reused from the prior corpus (a-high-1), converted to a single-value endpoint.",
+    "license": "Original work by the author (task design)"
   }
 }

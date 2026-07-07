@@ -1,0 +1,63 @@
+{
+  "id": "rh-low-1",
+  "archetype": "H",
+  "difficulty": "low",
+  "sub_class": "social_post",
+  "format": "LinkedIn post",
+  "instruction": "hey, marketing pinged me about this twice already -- can you whip up a short LinkedIn post announcing this quarter's product revenue? nothing fancy, the numbers are in the table below.",
+  "table": {
+    "caption": "Q3 2025 revenue by product line (EUR)",
+    "columns": [
+      "Product line",
+      "Q3 revenue"
+    ],
+    "rows": [
+      [
+        "Core",
+        1240000
+      ],
+      [
+        "Analytics",
+        880000
+      ],
+      [
+        "Connect",
+        410000
+      ]
+    ]
+  },
+  "constraints": {
+    "audience": "LinkedIn followers and prospects",
+    "tonality": "upbeat and confident",
+    "min_words": 30,
+    "max_words": 70,
+    "required_points": [
+      {
+        "desc": "Core revenue 1,240,000",
+        "keywords": [
+          "1,240,000",
+          "1.24 million",
+          "1.24m",
+          "1,24"
+        ]
+      }
+    ]
+  },
+  "feedback_rounds": [],
+  "feedback_requirements": [],
+  "allowed_numbers": [
+    3.0,
+    2025.0,
+    410000.0,
+    880000.0,
+    1240000.0,
+    2530000.0
+  ],
+  "rationale_hint": "Two constraints (tone, length) + one required figure; no feedback. Near-parity expected.",
+  "provenance": {
+    "construction_method": "Surface perturbation (colloquial_buried) of h-low-1's brief instruction; the structured constraint, table, feedback, and allowed-number fields are copied verbatim. Robustness check, not a new task.",
+    "license": "Original work by the author (tables, briefs, constraints, judge rubric); benchmark semantics reference only"
+  },
+  "base_instance": "h-low-1",
+  "perturbation_type": "colloquial_buried"
+}

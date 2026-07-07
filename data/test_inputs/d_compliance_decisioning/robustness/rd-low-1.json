@@ -1,0 +1,35 @@
+{
+  "id": "rd-low-1",
+  "archetype": "D",
+  "difficulty": "low",
+  "base_instance": "d-low-1",
+  "perturbation_type": "indirect_status",
+  "critical_fact": "lead_status (gate G1)",
+  "instruction": "Apply the approval policy to this quote request and return the required decision.",
+  "request_text": "Subject: lead 5001 — policy call\n\nHi team, before this goes any further: the lead (5001) hasn't cleared our qualification step — sales hasn't signed it off yet. The customer is a new (non-existing) account in the AMER region, Commercial segment, has no overdue invoices and is not on any credit hold, and this is not a new-logo acquisition. The deal is $50,000 over a 12-month term at a 5% base discount. What's the decision?",
+  "quote_request": {
+    "lead": {
+      "id": 5001,
+      "status": "unqualified",
+      "account_id": 12
+    },
+    "customer": {
+      "region": "AMER",
+      "is_existing": false,
+      "has_overdue_invoices": false,
+      "segment": "Commercial",
+      "has_credit_hold": false,
+      "is_new_logo": false
+    },
+    "quote": {
+      "amount": 50000,
+      "base_discount_pct": 5,
+      "term_months": 12
+    }
+  },
+  "expected_label": "DECLINE",
+  "provenance": {
+    "construction_method": "Surface perturbation (indirect_status) of d-low-1 targeting the decision-critical fact [lead_status (gate G1)]; gold label unchanged. Robustness check, not a new task.",
+    "license": "Original work by the author (rule set, quote requests, task design); benchmark semantics reference only"
+  }
+}

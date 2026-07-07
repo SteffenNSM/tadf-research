@@ -7,8 +7,8 @@
       0,
       0
     ],
-    "gold": "Niesmann Am Dicken Stein GmbH",
-    "no_tool_answer": "I don't know"
+    "gold": "Brueckner Maschinenbau",
+    "no_tool_answer": "Multivac"
   },
   {
     "instance": "a-low-2",
@@ -18,7 +18,7 @@
       0,
       0
     ],
-    "gold": "1948",
+    "gold": "Bruce Doolin Henderson; Johann Philipp Schifferdecker",
     "no_tool_answer": "I don't know"
   },
   {
@@ -29,7 +29,7 @@
       0,
       0
     ],
-    "gold": "Geisenhausen",
+    "gold": "1937; Kreuz Oberhausen",
     "no_tool_answer": "I don't know"
   },
   {
@@ -40,8 +40,8 @@
       0,
       0
     ],
-    "gold": "1937",
-    "no_tool_answer": "I don't know"
+    "gold": "CLAAS; Kloster Marienfeld",
+    "no_tool_answer": "CLAAS AG, Münster St. John of Harsewinkel"
   },
   {
     "instance": "a-low-5",
@@ -51,7 +51,7 @@
       0,
       0
     ],
-    "gold": "Boehen",
+    "gold": "Germany; Manuel Neuer",
     "no_tool_answer": "I don't know"
   },
   {
@@ -62,8 +62,8 @@
       0,
       0
     ],
-    "gold": "46",
-    "no_tool_answer": "I don't know"
+    "gold": "Bauhaus Dessau and Naumburg Cathedral",
+    "no_tool_answer": "Naumburg Cathedral and Wartburg"
   },
   {
     "instance": "a-med-2",
@@ -73,7 +73,7 @@
       0,
       0
     ],
-    "gold": "Brueckner Maschinenbau",
+    "gold": "FC Schalke 04",
     "no_tool_answer": "I don't know"
   },
   {
@@ -84,8 +84,8 @@
       0,
       0
     ],
-    "gold": "Uhlmann Pac-Systeme",
-    "no_tool_answer": "I don't know"
+    "gold": "Toyota: 28 August 1937; Volkswagen: 28 May 1937; Porsche: 25 April 1931",
+    "no_tool_answer": "Toyota: August 28, 1937  \nVolkswagen: May 28, 1937  \nPorsche: September 25, 1931"
   },
   {
     "instance": "a-med-4",
@@ -95,8 +95,8 @@
       0,
       0
     ],
-    "gold": "58",
-    "no_tool_answer": "I don't know"
+    "gold": "VfL Wolfsburg; FC Bayern München; Borussia Dortmund",
+    "no_tool_answer": "Bayern Munich\nBayern Munich\nDynamo Dresden"
   },
   {
     "instance": "a-med-5",
@@ -106,7 +106,7 @@
       0,
       0
     ],
-    "gold": "Uhlmann Pac-Systeme",
+    "gold": "RWE Platz 1; Brüsseler Platz 1; Petuelring 130",
     "no_tool_answer": "I don't know"
   },
   {
@@ -117,8 +117,8 @@
       0,
       0
     ],
-    "gold": "Aesculap",
-    "no_tool_answer": "I don't know"
+    "gold": "Wersestadion",
+    "no_tool_answer": "Aaseestadion"
   },
   {
     "instance": "a-high-2",
@@ -128,7 +128,7 @@
       0,
       0
     ],
-    "gold": "Ziehl-Abegg",
+    "gold": "Alexander Berger",
     "no_tool_answer": "I don't know"
   },
   {
@@ -139,7 +139,7 @@
       0,
       0
     ],
-    "gold": "Karl Mayer",
+    "gold": "Fritz-Walter-Straße 1, 67663 Kaiserslautern",
     "no_tool_answer": "I don't know"
   },
   {
@@ -150,7 +150,7 @@
       0,
       0
     ],
-    "gold": "Multivac",
+    "gold": "Jacob Zuma",
     "no_tool_answer": "I don't know"
   },
   {
@@ -161,7 +161,7 @@
       0,
       0
     ],
-    "gold": "59",
+    "gold": "Katrin Reuscher",
     "no_tool_answer": "I don't know"
   }
 ]

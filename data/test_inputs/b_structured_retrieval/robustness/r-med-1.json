@@ -1,0 +1,16 @@
+{
+  "id": "r-med-1",
+  "archetype": "B",
+  "difficulty": "med",
+  "base_instance": "b-med-2",
+  "perturbation_type": "redundant_selfcorrecting",
+  "instruction": "there's a call on the calendar about a deal we won — with Mayer, i mean Mayer & Co — how much is that won deal worth again?",
+  "ground_truth": {
+    "value": 120000,
+    "unit": "currency"
+  },
+  "provenance": {
+    "construction_method": "Surface perturbation (redundant_selfcorrecting) of b-med-2; gold unchanged. Robustness check, not a new task.",
+    "license": "CC BY-NC 4.0"
+  }
+}

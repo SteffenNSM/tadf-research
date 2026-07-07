@@ -19,7 +19,7 @@ class SearchPlan(BaseModel):
         description="One sentence explaining what each query targets, for traceability"
     )
     queries: list[str] = Field(
-        description="The search queries to run; choose 2-5 for simple questions, 5-8 for complex ones"
+        description="The search queries to run. Up to 10 are available; decide yourself how many the question needs."
     )
 
 

@@ -1,0 +1,16 @@
+{
+  "id": "ra-med-2",
+  "archetype": "A",
+  "difficulty": "med",
+  "base_instance": "a-med-5",
+  "perturbation_type": "redundant_selfcorrecting",
+  "instruction": "i need the street — sorry, street name and building number — of the HQ of RWE AG, of E.ON SE, and of the BMW Group Konzernzentrale",
+  "ground_truth": {
+    "value": "RWE Platz 1; Brüsseler Platz 1; Petuelring 130",
+    "unit": "three_streets"
+  },
+  "provenance": {
+    "construction_method": "Surface perturbation (redundant_selfcorrecting) of a-med-5; gold unchanged. Robustness check, not a new task.",
+    "license": "Original work by the author (task design)"
+  }
+}

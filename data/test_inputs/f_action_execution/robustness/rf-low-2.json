@@ -1,0 +1,13 @@
+{
+  "id": "rf-low-2",
+  "archetype": "F",
+  "difficulty": "low",
+  "base_instance": "f-low-3",
+  "perturbation_type": "values_as_words",
+  "instruction": "please put a meeting called 'Sales review' into the calendar for the fifteenth of June twenty twenty-six, from ten to eleven in the morning, and invite contact010@example.com to it.",
+  "expected_post_state": "An events row exists with name='Sales review', start_time='2026-06-15 10:00:00', and 'contact010@example.com' in attendees.",
+  "provenance": {
+    "construction_method": "Surface perturbation (values_as_words) of f-low-3's instruction; all action values remain stated in the text, post-state gold and predicate unchanged. Robustness check, not a new task.",
+    "license": "Adapted under fair use for academic research"
+  }
+}

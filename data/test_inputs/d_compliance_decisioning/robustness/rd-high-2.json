@@ -1,0 +1,35 @@
+{
+  "id": "rd-high-2",
+  "archetype": "D",
+  "difficulty": "high",
+  "base_instance": "d-high-3",
+  "perturbation_type": "segment_paraphrase",
+  "critical_fact": "segment + new-logo (rule P2s, bonuses B4/B5)",
+  "instruction": "Apply the approval policy to this quote request and return the required decision.",
+  "request_text": "Subject: lead 5013\n\nQualified lead (5013), APAC region, a brand-new customer — this is a new-logo win — with no overdue invoices and no credit hold. Heads up: this is one of our strategic named accounts. The deal is a hundred-and-fifty-thousand-dollar deal on a 24-month term with an 8% base discount. Where does it route?",
+  "quote_request": {
+    "lead": {
+      "id": 5013,
+      "status": "qualified",
+      "account_id": 10
+    },
+    "customer": {
+      "region": "APAC",
+      "is_existing": false,
+      "has_overdue_invoices": false,
+      "has_credit_hold": false,
+      "is_new_logo": true,
+      "segment": "Strategic"
+    },
+    "quote": {
+      "amount": 150000,
+      "base_discount_pct": 8,
+      "term_months": 24
+    }
+  },
+  "expected_label": "ESCALATE_REGIONAL_VP",
+  "provenance": {
+    "construction_method": "Surface perturbation (segment_paraphrase) of d-high-3 targeting the decision-critical fact [segment + new-logo (rule P2s, bonuses B4/B5)]; gold label unchanged. Robustness check, not a new task.",
+    "license": "Original work by the author (rule set, quote requests, task design); benchmark semantics reference only"
+  }
+}

@@ -2,18 +2,35 @@
   "id": "c-low-2",
   "archetype": "C",
   "difficulty": "low",
-  "sub_class": null,
-  "instruction": "Route this email to the correct support category.",
-  "email": {
-    "sender": "lia.chen@bluespruce.example",
-    "subject": "Reporting module crashes on open",
-    "body": "The reporting module crashes every single time I try to open it. Started this morning around 9 AM. Browser console shows a 500 error. Could you look into it?"
+  "instruction": "Triage this batch of customer support emails: assign each email to exactly one support category by its primary intent.",
+  "emails": [
+    {
+      "id": "e1",
+      "sender": "user1@customer.example",
+      "subject": "Add a seat",
+      "body": "Please add my new colleague Sara to our team account with editor permissions."
+    },
+    {
+      "id": "e2",
+      "sender": "user2@customer.example",
+      "subject": "How do I export",
+      "body": "Is there a way to export a report to CSV? I couldn't find it in the docs."
+    },
+    {
+      "id": "e3",
+      "sender": "user3@customer.example",
+      "subject": "Refund not received",
+      "body": "You confirmed a refund two weeks ago but it still hasn't hit our card. Where is it?"
+    }
+  ],
+  "expected": {
+    "e1": "Account",
+    "e2": "Product",
+    "e3": "Billing"
   },
-  "expected_label": "Technical",
-  "rationale_hint": "Single-cluster signal: the requester is reporting a defect (crash + 500 error) and expecting it to be fixed.",
   "provenance": {
     "source_benchmark": "CRMArena-Pro Case Routing / Activity Priority Understanding (Huang et al., 2025)",
-    "adaptation": "Author-constructed email texts; task semantics follow the CRMArena-Pro routing/disambiguation pattern. The five-category label set is mirrored from cases.issue_category in experiments/seed_crm.py so the routing decision is consistent with the local CRM schema.",
+    "construction_method": "Batch-triage task (single input batch -> single labelled output, Section 2.2.3). Difficulty = batch size (3/5/8) x per-email ambiguity; Med/High emails carry competing near-duplicate signals with one primary intent; High emails are verbose with a buried core ask to load the context. Author-constructed from a labelled pool; no benchmark text reproduced.",
     "license": "Original work by the author (email texts and task design); benchmark semantics reference only"
   }
 }

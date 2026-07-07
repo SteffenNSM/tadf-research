@@ -376,5 +376,59 @@
     "body": "Payment received for Opportunity 060. Reference on file.",
     "sent_at": "2025-08-15 10:00:00",
     "status": "inbox"
+  },
+  {
+    "id": 2001,
+    "sender": "anna.brandt@mayer.example",
+    "recipient": "agent01@atlas.com",
+    "subject": "Re: Expansion proposal",
+    "body": "Thanks for the proposal, we are reviewing it internally.",
+    "sent_at": "2025-09-12 09:30:00",
+    "status": "inbox"
+  },
+  {
+    "id": 2002,
+    "sender": "agent03@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Mayer & Co - assessment",
+    "body": "Heads-up: Mayer is very price-sensitive; the renewal was hard-fought on price.",
+    "sent_at": "2025-09-05 14:00:00",
+    "status": "inbox"
+  },
+  {
+    "id": 2003,
+    "sender": "tom.keller@brueckner.example",
+    "recipient": "agent02@atlas.com",
+    "subject": "Delivery delay",
+    "body": "We had a delivery delay last week, please get back to us.",
+    "sent_at": "2025-07-21 11:15:00",
+    "status": "inbox"
+  },
+  {
+    "id": 2004,
+    "sender": "maria.lopez@sunrise.example",
+    "recipient": "agent03@atlas.com",
+    "subject": "Re: Analytics proposal",
+    "body": "Looks good, we still need sign-off from the board.",
+    "sent_at": "2025-09-25 16:40:00",
+    "status": "inbox"
+  },
+  {
+    "id": 2005,
+    "sender": "agent04@atlas.com",
+    "recipient": "agent01@atlas.com",
+    "subject": "Helvetia - risk note",
+    "body": "Caution: Helvetia has a long compliance approval; close no earlier than Q1.",
+    "sent_at": "2025-09-15 08:50:00",
+    "status": "inbox"
+  },
+  {
+    "id": 2006,
+    "sender": "hiro.tanaka@pacificht.example",
+    "recipient": "agent05@atlas.com",
+    "subject": "Pilot feedback",
+    "body": "The pilot is going well, we are considering an expansion.",
+    "sent_at": "2025-08-08 10:05:00",
+    "status": "inbox"
   }
 ]

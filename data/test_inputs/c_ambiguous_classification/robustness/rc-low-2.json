@@ -1,0 +1,37 @@
+{
+  "id": "rc-low-2",
+  "archetype": "C",
+  "difficulty": "low",
+  "base_instance": "c-low-2",
+  "perturbation_type": "colloquial",
+  "instruction": "Triage this batch of customer support emails: assign each email to exactly one support category by its primary intent.",
+  "emails": [
+    {
+      "id": "e1",
+      "sender": "user1@customer.example",
+      "subject": "Add a seat",
+      "body": "hey can u add my new coworker Sara onto our team acct with editor access? thx"
+    },
+    {
+      "id": "e2",
+      "sender": "user2@customer.example",
+      "subject": "How do I export",
+      "body": "yo quick one — any way to export a report to csv? couldnt find it in the docs"
+    },
+    {
+      "id": "e3",
+      "sender": "user3@customer.example",
+      "subject": "Refund not received",
+      "body": "soo that refund u confirmed like 2 weeks ago still hasnt hit our card. wheres it at?"
+    }
+  ],
+  "expected": {
+    "e1": "Account",
+    "e2": "Product",
+    "e3": "Billing"
+  },
+  "provenance": {
+    "construction_method": "Surface perturbation (colloquial) of c-low-2's email bodies; ids/subjects/gold unchanged. Robustness check, not a new task.",
+    "license": "Original work by the author (email texts and task design); benchmark semantics reference only"
+  }
+}

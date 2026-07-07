@@ -1,0 +1,1581 @@
+{
+  "timestamp": "20260706_191832",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "runs": [
+    {
+      "instance": "d-low-1",
+      "difficulty": "low",
+      "sub_class": "no_action_gate_G1",
+      "paradigm": "workflow",
+      "correct": true,
+      "predicted": "DECLINE",
+      "expected": "DECLINE",
+      "score_rationale": "match",
+      "summary": "Gate G1 fired: DECLINE.",
+      "llm_calls": 1,
+      "input_tokens": 835,
+      "output_tokens": 71,
+      "total_tokens": 906,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46896.998631768
+        },
+        {
+          "tool": "get_policy",
+          "t": 46897.276737746
+        },
+        {
+          "tool": "get_policy",
+          "t": 46897.592617783
+        },
+        {
+          "tool": "get_policy",
+          "t": 46897.932728985
+        },
+        {
+          "tool": "get_policy",
+          "t": 46898.292388058
+        },
+        {
+          "tool": "get_policy",
+          "t": 46898.570282035
+        },
+        {
+          "tool": "get_policy",
+          "t": 46898.891424335
+        },
+        {
+          "tool": "get_policy",
+          "t": 46899.155546072
+        },
+        {
+          "tool": "get_policy",
+          "t": 46899.4500061
+        }
+      ],
+      "latency_s": 5.1501468010028475,
+      "errors": []
+    },
+    {
+      "instance": "d-low-1",
+      "difficulty": "low",
+      "sub_class": "no_action_gate_G1",
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": true,
+      "predicted": "DECLINE",
+      "expected": "DECLINE",
+      "score_rationale": "match",
+      "summary": "FINAL_ANSWER: DECLINE",
+      "llm_calls": 3,
+      "input_tokens": 5425,
+      "output_tokens": 139,
+      "total_tokens": 5564,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46903.035457837
+        },
+        {
+          "tool": "get_policy",
+          "t": 46904.881955051
+        },
+        {
+          "tool": "get_policy",
+          "t": 46904.88394272
+        },
+        {
+          "tool": "get_policy",
+          "t": 46904.886655542
+        },
+        {
+          "tool": "get_policy",
+          "t": 46904.889135405
+        },
+        {
+          "tool": "get_policy",
+          "t": 46904.891179788
+        },
+        {
+          "tool": "get_policy",
+          "t": 46904.892960509
+        }
+      ],
+      "latency_s": 3.9070079890007037,
+      "errors": []
+    },
+    {
+      "instance": "d-low-2",
+      "difficulty": "low",
+      "sub_class": "no_action_gate_G2",
+      "paradigm": "workflow",
+      "correct": true,
+      "predicted": "DECLINE",
+      "expected": "DECLINE",
+      "score_rationale": "match",
+      "summary": "Gate G2 fired: DECLINE.",
+      "llm_calls": 1,
+      "input_tokens": 828,
+      "output_tokens": 70,
+      "total_tokens": 898,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46906.050245413
+        },
+        {
+          "tool": "get_policy",
+          "t": 46906.320975603
+        },
+        {
+          "tool": "get_policy",
+          "t": 46906.634073107
+        },
+        {
+          "tool": "get_policy",
+          "t": 46906.980286984
+        },
+        {
+          "tool": "get_policy",
+          "t": 46907.333794261
+        },
+        {
+          "tool": "get_policy",
+          "t": 46907.611549205
+        },
+        {
+          "tool": "get_policy",
+          "t": 46907.930326054
+        },
+        {
+          "tool": "get_policy",
+          "t": 46908.195934944
+        },
+        {
+          "tool": "get_policy",
+          "t": 46908.488845683
+        }
+      ],
+      "latency_s": 3.7462730010011,
+      "errors": []
+    },
+    {
+      "instance": "d-low-2",
+      "difficulty": "low",
+      "sub_class": "no_action_gate_G2",
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": true,
+      "predicted": "DECLINE",
+      "expected": "DECLINE",
+      "score_rationale": "match",
+      "summary": "FINAL_ANSWER: DECLINE",
+      "llm_calls": 3,
+      "input_tokens": 5404,
+      "output_tokens": 139,
+      "total_tokens": 5543,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46910.409834101
+        },
+        {
+          "tool": "get_policy",
+          "t": 46912.556005363
+        },
+        {
+          "tool": "get_policy",
+          "t": 46912.557243068
+        },
+        {
+          "tool": "get_policy",
+          "t": 46912.558832085
+        },
+        {
+          "tool": "get_policy",
+          "t": 46912.561816011
+        },
+        {
+          "tool": "get_policy",
+          "t": 46912.564560676
+        },
+        {
+          "tool": "get_policy",
+          "t": 46912.565686632
+        }
+      ],
+      "latency_s": 3.7856509379998897,
+      "errors": []
+    },
+    {
+      "instance": "d-low-3",
+      "difficulty": "low",
+      "sub_class": null,
+      "paradigm": "workflow",
+      "correct": true,
+      "predicted": "APPROVE",
+      "expected": "APPROVE",
+      "score_rationale": "match",
+      "summary": "Rule P4a fired: APPROVE (bonuses B5, effective 8.0%).",
+      "llm_calls": 1,
+      "input_tokens": 834,
+      "output_tokens": 70,
+      "total_tokens": 904,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46913.58246324
+        },
+        {
+          "tool": "get_policy",
+          "t": 46913.859230768
+        },
+        {
+          "tool": "get_policy",
+          "t": 46914.175064853
+        },
+        {
+          "tool": "get_policy",
+          "t": 46914.517277764
+        },
+        {
+          "tool": "get_policy",
+          "t": 46914.875476918
+        },
+        {
+          "tool": "get_policy",
+          "t": 46915.150742763
+        },
+        {
+          "tool": "get_policy",
+          "t": 46915.468366578
+        },
+        {
+          "tool": "get_policy",
+          "t": 46915.729520063
+        },
+        {
+          "tool": "get_policy",
+          "t": 46916.020257358
+        }
+      ],
+      "latency_s": 3.790126550993591,
+      "errors": []
+    },
+    {
+      "instance": "d-low-3",
+      "difficulty": "low",
+      "sub_class": null,
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": true,
+      "predicted": "APPROVE",
+      "expected": "APPROVE",
+      "score_rationale": "match",
+      "summary": "FINAL_ANSWER: APPROVE",
+      "llm_calls": 3,
+      "input_tokens": 5422,
+      "output_tokens": 139,
+      "total_tokens": 5561,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46918.190301723
+        },
+        {
+          "tool": "get_policy",
+          "t": 46919.728294654
+        },
+        {
+          "tool": "get_policy",
+          "t": 46919.730318774
+        },
+        {
+          "tool": "get_policy",
+          "t": 46919.732331819
+        },
+        {
+          "tool": "get_policy",
+          "t": 46919.733379697
+        },
+        {
+          "tool": "get_policy",
+          "t": 46919.735098227
+        },
+        {
+          "tool": "get_policy",
+          "t": 46919.736665818
+        }
+      ],
+      "latency_s": 3.481057293996855,
+      "errors": []
+    },
+    {
+      "instance": "d-low-4",
+      "difficulty": "low",
+      "sub_class": "no_action_over_limit",
+      "paradigm": "workflow",
+      "correct": true,
+      "predicted": "DECLINE",
+      "expected": "DECLINE",
+      "score_rationale": "match",
+      "summary": "Rule P1 fired: DECLINE (effective 35.0%).",
+      "llm_calls": 1,
+      "input_tokens": 834,
+      "output_tokens": 70,
+      "total_tokens": 904,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46920.855059105
+        },
+        {
+          "tool": "get_policy",
+          "t": 46921.123443394
+        },
+        {
+          "tool": "get_policy",
+          "t": 46921.44217116
+        },
+        {
+          "tool": "get_policy",
+          "t": 46921.781908883
+        },
+        {
+          "tool": "get_policy",
+          "t": 46922.136888599
+        },
+        {
+          "tool": "get_policy",
+          "t": 46922.407394845
+        },
+        {
+          "tool": "get_policy",
+          "t": 46922.719584915
+        },
+        {
+          "tool": "get_policy",
+          "t": 46922.984536142
+        },
+        {
+          "tool": "get_policy",
+          "t": 46923.270135424
+        }
+      ],
+      "latency_s": 3.866644207999343,
+      "errors": []
+    },
+    {
+      "instance": "d-low-4",
+      "difficulty": "low",
+      "sub_class": "no_action_over_limit",
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": true,
+      "predicted": "DECLINE",
+      "expected": "DECLINE",
+      "score_rationale": "match",
+      "summary": "FINAL_ANSWER: DECLINE",
+      "llm_calls": 3,
+      "input_tokens": 5422,
+      "output_tokens": 139,
+      "total_tokens": 5561,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46925.398053413
+        },
+        {
+          "tool": "get_policy",
+          "t": 46926.791371026
+        },
+        {
+          "tool": "get_policy",
+          "t": 46926.79440227
+        },
+        {
+          "tool": "get_policy",
+          "t": 46926.796535725
+        },
+        {
+          "tool": "get_policy",
+          "t": 46926.798212098
+        },
+        {
+          "tool": "get_policy",
+          "t": 46926.799945992
+        },
+        {
+          "tool": "get_policy",
+          "t": 46926.803536436
+        }
+      ],
+      "latency_s": 3.1042721420017187,
+      "errors": []
+    },
+    {
+      "instance": "d-low-5",
+      "difficulty": "low",
+      "sub_class": null,
+      "paradigm": "workflow",
+      "correct": true,
+      "predicted": "ESCALATE_REGIONAL_VP",
+      "expected": "ESCALATE_REGIONAL_VP",
+      "score_rationale": "match",
+      "summary": "Rule P2 fired: ESCALATE_REGIONAL_VP (bonuses B5, effective 3%).",
+      "llm_calls": 1,
+      "input_tokens": 834,
+      "output_tokens": 70,
+      "total_tokens": 904,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46927.825058247
+        },
+        {
+          "tool": "get_policy",
+          "t": 46928.102704244
+        },
+        {
+          "tool": "get_policy",
+          "t": 46928.418454128
+        },
+        {
+          "tool": "get_policy",
+          "t": 46928.756053654
+        },
+        {
+          "tool": "get_policy",
+          "t": 46929.112477494
+        },
+        {
+          "tool": "get_policy",
+          "t": 46929.385398825
+        },
+        {
+          "tool": "get_policy",
+          "t": 46929.704361513
+        },
+        {
+          "tool": "get_policy",
+          "t": 46929.964399121
+        },
+        {
+          "tool": "get_policy",
+          "t": 46930.255019276
+        }
+      ],
+      "latency_s": 3.6794950740004424,
+      "errors": []
+    },
+    {
+      "instance": "d-low-5",
+      "difficulty": "low",
+      "sub_class": null,
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": true,
+      "predicted": "ESCALATE_REGIONAL_VP",
+      "expected": "ESCALATE_REGIONAL_VP",
+      "score_rationale": "match",
+      "summary": "FINAL_ANSWER: ESCALATE_REGIONAL_VP",
+      "llm_calls": 3,
+      "input_tokens": 5422,
+      "output_tokens": 144,
+      "total_tokens": 5566,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46932.21935354
+        },
+        {
+          "tool": "get_policy",
+          "t": 46933.754368452
+        },
+        {
+          "tool": "get_policy",
+          "t": 46933.757047587
+        },
+        {
+          "tool": "get_policy",
+          "t": 46933.758626612
+        },
+        {
+          "tool": "get_policy",
+          "t": 46933.760617659
+        },
+        {
+          "tool": "get_policy",
+          "t": 46933.763432737
+        },
+        {
+          "tool": "get_policy",
+          "t": 46933.765208197
+        }
+      ],
+      "latency_s": 3.583214328995382,
+      "errors": []
+    },
+    {
+      "instance": "d-med-1",
+      "difficulty": "med",
+      "sub_class": null,
+      "paradigm": "workflow",
+      "correct": true,
+      "predicted": "ESCALATE_DIRECTOR",
+      "expected": "ESCALATE_DIRECTOR",
+      "score_rationale": "match",
+      "summary": "Rule P4b fired: ESCALATE_DIRECTOR (bonuses B1+B5, effective 16.0%).",
+      "llm_calls": 1,
+      "input_tokens": 834,
+      "output_tokens": 70,
+      "total_tokens": 904,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46935.089657386
+        },
+        {
+          "tool": "get_policy",
+          "t": 46935.361049884
+        },
+        {
+          "tool": "get_policy",
+          "t": 46935.680509776
+        },
+        {
+          "tool": "get_policy",
+          "t": 46936.026804087
+        },
+        {
+          "tool": "get_policy",
+          "t": 46936.38181856
+        },
+        {
+          "tool": "get_policy",
+          "t": 46936.659625096
+        },
+        {
+          "tool": "get_policy",
+          "t": 46936.981050338
+        },
+        {
+          "tool": "get_policy",
+          "t": 46937.243507479
+        },
+        {
+          "tool": "get_policy",
+          "t": 46937.534991342
+        }
+      ],
+      "latency_s": 3.7865412190003553,
+      "errors": []
+    },
+    {
+      "instance": "d-med-1",
+      "difficulty": "med",
+      "sub_class": null,
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": false,
+      "predicted": "APPROVE",
+      "expected": "ESCALATE_DIRECTOR",
+      "score_rationale": "predicted 'APPROVE', expected 'ESCALATE_DIRECTOR'",
+      "summary": "FINAL_ANSWER: APPROVE",
+      "llm_calls": 3,
+      "input_tokens": 5422,
+      "output_tokens": 139,
+      "total_tokens": 5561,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46939.796104486
+        },
+        {
+          "tool": "get_policy",
+          "t": 46941.128797576
+        },
+        {
+          "tool": "get_policy",
+          "t": 46941.132173187
+        },
+        {
+          "tool": "get_policy",
+          "t": 46941.133975508
+        },
+        {
+          "tool": "get_policy",
+          "t": 46941.135710123
+        },
+        {
+          "tool": "get_policy",
+          "t": 46941.137362882
+        },
+        {
+          "tool": "get_policy",
+          "t": 46941.138914522
+        }
+      ],
+      "latency_s": 3.584957134000433,
+      "errors": []
+    },
+    {
+      "instance": "d-med-2",
+      "difficulty": "med",
+      "sub_class": null,
+      "paradigm": "workflow",
+      "correct": true,
+      "predicted": "ESCALATE_VP",
+      "expected": "ESCALATE_VP",
+      "score_rationale": "match",
+      "summary": "Rule P4c fired: ESCALATE_VP (bonuses B2, effective 21.0%).",
+      "llm_calls": 1,
+      "input_tokens": 830,
+      "output_tokens": 70,
+      "total_tokens": 900,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46942.460032086
+        },
+        {
+          "tool": "get_policy",
+          "t": 46942.735591826
+        },
+        {
+          "tool": "get_policy",
+          "t": 46943.053131012
+        },
+        {
+          "tool": "get_policy",
+          "t": 46943.394410569
+        },
+        {
+          "tool": "get_policy",
+          "t": 46943.752842051
+        },
+        {
+          "tool": "get_policy",
+          "t": 46944.028076959
+        },
+        {
+          "tool": "get_policy",
+          "t": 46944.348673988
+        },
+        {
+          "tool": "get_policy",
+          "t": 46944.61729438
+        },
+        {
+          "tool": "get_policy",
+          "t": 46944.910831121
+        }
+      ],
+      "latency_s": 3.7887678730039624,
+      "errors": []
+    },
+    {
+      "instance": "d-med-2",
+      "difficulty": "med",
+      "sub_class": null,
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": true,
+      "predicted": "ESCALATE_VP",
+      "expected": "ESCALATE_VP",
+      "score_rationale": "match",
+      "summary": "FINAL_ANSWER: ESCALATE_VP",
+      "llm_calls": 3,
+      "input_tokens": 5410,
+      "output_tokens": 142,
+      "total_tokens": 5552,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46947.065824257
+        },
+        {
+          "tool": "get_policy",
+          "t": 46948.500485813
+        },
+        {
+          "tool": "get_policy",
+          "t": 46948.503210298
+        },
+        {
+          "tool": "get_policy",
+          "t": 46948.505427008
+        },
+        {
+          "tool": "get_policy",
+          "t": 46948.508069313
+        },
+        {
+          "tool": "get_policy",
+          "t": 46948.509193114
+        },
+        {
+          "tool": "get_policy",
+          "t": 46948.510755921
+        }
+      ],
+      "latency_s": 3.342703818998416,
+      "errors": []
+    },
+    {
+      "instance": "d-med-3",
+      "difficulty": "med",
+      "sub_class": null,
+      "paradigm": "workflow",
+      "correct": true,
+      "predicted": "ESCALATE_DIRECTOR",
+      "expected": "ESCALATE_DIRECTOR",
+      "score_rationale": "match",
+      "summary": "Rule P3 fired: ESCALATE_DIRECTOR (effective 6.0%).",
+      "llm_calls": 1,
+      "input_tokens": 834,
+      "output_tokens": 70,
+      "total_tokens": 904,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46949.591600046
+        },
+        {
+          "tool": "get_policy",
+          "t": 46949.859439615
+        },
+        {
+          "tool": "get_policy",
+          "t": 46950.172109208
+        },
+        {
+          "tool": "get_policy",
+          "t": 46950.509977404
+        },
+        {
+          "tool": "get_policy",
+          "t": 46950.869145681
+        },
+        {
+          "tool": "get_policy",
+          "t": 46951.14367801
+        },
+        {
+          "tool": "get_policy",
+          "t": 46951.461851206
+        },
+        {
+          "tool": "get_policy",
+          "t": 46951.730387399
+        },
+        {
+          "tool": "get_policy",
+          "t": 46952.015708952
+        }
+      ],
+      "latency_s": 3.8248111749999225,
+      "errors": []
+    },
+    {
+      "instance": "d-med-3",
+      "difficulty": "med",
+      "sub_class": null,
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": false,
+      "predicted": "APPROVE",
+      "expected": "ESCALATE_DIRECTOR",
+      "score_rationale": "predicted 'APPROVE', expected 'ESCALATE_DIRECTOR'",
+      "summary": "FINAL_ANSWER: APPROVE",
+      "llm_calls": 3,
+      "input_tokens": 5422,
+      "output_tokens": 139,
+      "total_tokens": 5561,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46954.131802429
+        },
+        {
+          "tool": "get_policy",
+          "t": 46955.564494397
+        },
+        {
+          "tool": "get_policy",
+          "t": 46955.566273155
+        },
+        {
+          "tool": "get_policy",
+          "t": 46955.567834253
+        },
+        {
+          "tool": "get_policy",
+          "t": 46955.56970649
+        },
+        {
+          "tool": "get_policy",
+          "t": 46955.573365383
+        },
+        {
+          "tool": "get_policy",
+          "t": 46955.57504946
+        }
+      ],
+      "latency_s": 3.1730904520009062,
+      "errors": []
+    },
+    {
+      "instance": "d-med-4",
+      "difficulty": "med",
+      "sub_class": null,
+      "paradigm": "workflow",
+      "correct": true,
+      "predicted": "APPROVE",
+      "expected": "APPROVE",
+      "score_rationale": "match",
+      "summary": "Rule P4a fired: APPROVE (bonuses B1+B2, effective 8%).",
+      "llm_calls": 1,
+      "input_tokens": 830,
+      "output_tokens": 70,
+      "total_tokens": 900,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46956.591010087
+        },
+        {
+          "tool": "get_policy",
+          "t": 46956.865937238
+        },
+        {
+          "tool": "get_policy",
+          "t": 46957.177152034
+        },
+        {
+          "tool": "get_policy",
+          "t": 46957.520504821
+        },
+        {
+          "tool": "get_policy",
+          "t": 46957.880709226
+        },
+        {
+          "tool": "get_policy",
+          "t": 46958.153940915
+        },
+        {
+          "tool": "get_policy",
+          "t": 46958.472037904
+        },
+        {
+          "tool": "get_policy",
+          "t": 46958.738067314
+        },
+        {
+          "tool": "get_policy",
+          "t": 46959.024313466
+        }
+      ],
+      "latency_s": 5.530015142001503,
+      "errors": []
+    },
+    {
+      "instance": "d-med-4",
+      "difficulty": "med",
+      "sub_class": null,
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": true,
+      "predicted": "APPROVE",
+      "expected": "APPROVE",
+      "score_rationale": "match",
+      "summary": "FINAL_ANSWER: APPROVE",
+      "llm_calls": 3,
+      "input_tokens": 5410,
+      "output_tokens": 139,
+      "total_tokens": 5549,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46962.937339362
+        },
+        {
+          "tool": "get_policy",
+          "t": 46964.973245497
+        },
+        {
+          "tool": "get_policy",
+          "t": 46964.977114757
+        },
+        {
+          "tool": "get_policy",
+          "t": 46964.980090221
+        },
+        {
+          "tool": "get_policy",
+          "t": 46964.981735578
+        },
+        {
+          "tool": "get_policy",
+          "t": 46964.98340472
+        },
+        {
+          "tool": "get_policy",
+          "t": 46964.984929317
+        }
+      ],
+      "latency_s": 3.9393279110008734,
+      "errors": []
+    },
+    {
+      "instance": "d-med-5",
+      "difficulty": "med",
+      "sub_class": "no_action_over_limit_via_bonus",
+      "paradigm": "workflow",
+      "correct": true,
+      "predicted": "DECLINE",
+      "expected": "DECLINE",
+      "score_rationale": "match",
+      "summary": "Rule P1 fired: DECLINE (bonuses B1+B5, effective 36.0%).",
+      "llm_calls": 1,
+      "input_tokens": 834,
+      "output_tokens": 70,
+      "total_tokens": 904,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46966.059424118
+        },
+        {
+          "tool": "get_policy",
+          "t": 46966.335863391
+        },
+        {
+          "tool": "get_policy",
+          "t": 46966.653699602
+        },
+        {
+          "tool": "get_policy",
+          "t": 46966.998173453
+        },
+        {
+          "tool": "get_policy",
+          "t": 46967.358650013
+        },
+        {
+          "tool": "get_policy",
+          "t": 46967.636215456
+        },
+        {
+          "tool": "get_policy",
+          "t": 46967.953583499
+        },
+        {
+          "tool": "get_policy",
+          "t": 46968.214747026
+        },
+        {
+          "tool": "get_policy",
+          "t": 46968.509049184
+        }
+      ],
+      "latency_s": 4.05015744100092,
+      "errors": []
+    },
+    {
+      "instance": "d-med-5",
+      "difficulty": "med",
+      "sub_class": "no_action_over_limit_via_bonus",
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": true,
+      "predicted": "DECLINE",
+      "expected": "DECLINE",
+      "score_rationale": "match",
+      "summary": "FINAL_ANSWER: DECLINE",
+      "llm_calls": 3,
+      "input_tokens": 5422,
+      "output_tokens": 139,
+      "total_tokens": 5561,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46971.02717119
+        },
+        {
+          "tool": "get_policy",
+          "t": 46972.360857807
+        },
+        {
+          "tool": "get_policy",
+          "t": 46972.362720844
+        },
+        {
+          "tool": "get_policy",
+          "t": 46972.36415461
+        },
+        {
+          "tool": "get_policy",
+          "t": 46972.365527174
+        },
+        {
+          "tool": "get_policy",
+          "t": 46972.367653547
+        },
+        {
+          "tool": "get_policy",
+          "t": 46972.369279657
+        }
+      ],
+      "latency_s": 3.479531691002194,
+      "errors": []
+    },
+    {
+      "instance": "d-high-1",
+      "difficulty": "high",
+      "sub_class": "boundary_inclusive_triple_bonus",
+      "paradigm": "workflow",
+      "correct": true,
+      "predicted": "ESCALATE_VP",
+      "expected": "ESCALATE_VP",
+      "score_rationale": "match",
+      "summary": "Rule P4c fired: ESCALATE_VP (bonuses B1+B2+B3, effective 30.0%).",
+      "llm_calls": 1,
+      "input_tokens": 830,
+      "output_tokens": 70,
+      "total_tokens": 900,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46973.589277089
+        },
+        {
+          "tool": "get_policy",
+          "t": 46973.862057994
+        },
+        {
+          "tool": "get_policy",
+          "t": 46974.181093928
+        },
+        {
+          "tool": "get_policy",
+          "t": 46974.520927771
+        },
+        {
+          "tool": "get_policy",
+          "t": 46974.871940195
+        },
+        {
+          "tool": "get_policy",
+          "t": 46975.147395768
+        },
+        {
+          "tool": "get_policy",
+          "t": 46975.462735819
+        },
+        {
+          "tool": "get_policy",
+          "t": 46975.728582839
+        },
+        {
+          "tool": "get_policy",
+          "t": 46976.019869185
+        }
+      ],
+      "latency_s": 3.994183144000999,
+      "errors": []
+    },
+    {
+      "instance": "d-high-1",
+      "difficulty": "high",
+      "sub_class": "boundary_inclusive_triple_bonus",
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": true,
+      "predicted": "ESCALATE_VP",
+      "expected": "ESCALATE_VP",
+      "score_rationale": "match",
+      "summary": "FINAL_ANSWER: ESCALATE_VP",
+      "llm_calls": 3,
+      "input_tokens": 5410,
+      "output_tokens": 142,
+      "total_tokens": 5552,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46978.29913226
+        },
+        {
+          "tool": "get_policy",
+          "t": 46980.158577765
+        },
+        {
+          "tool": "get_policy",
+          "t": 46980.160541529
+        },
+        {
+          "tool": "get_policy",
+          "t": 46980.162505378
+        },
+        {
+          "tool": "get_policy",
+          "t": 46980.164612054
+        },
+        {
+          "tool": "get_policy",
+          "t": 46980.167619294
+        },
+        {
+          "tool": "get_policy",
+          "t": 46980.170504217
+        }
+      ],
+      "latency_s": 3.583436110006005,
+      "errors": []
+    },
+    {
+      "instance": "d-high-2",
+      "difficulty": "high",
+      "sub_class": "no_action_over_limit_via_three_bonuses",
+      "paradigm": "workflow",
+      "correct": true,
+      "predicted": "DECLINE",
+      "expected": "DECLINE",
+      "score_rationale": "match",
+      "summary": "Rule P1 fired: DECLINE (bonuses B1+B2+B3, effective 32.0%).",
+      "llm_calls": 1,
+      "input_tokens": 830,
+      "output_tokens": 70,
+      "total_tokens": 900,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46981.16711649
+        },
+        {
+          "tool": "get_policy",
+          "t": 46981.442726958
+        },
+        {
+          "tool": "get_policy",
+          "t": 46981.761463304
+        },
+        {
+          "tool": "get_policy",
+          "t": 46982.107190942
+        },
+        {
+          "tool": "get_policy",
+          "t": 46982.463603139
+        },
+        {
+          "tool": "get_policy",
+          "t": 46982.742490506
+        },
+        {
+          "tool": "get_policy",
+          "t": 46983.062862346
+        },
+        {
+          "tool": "get_policy",
+          "t": 46983.332548673
+        },
+        {
+          "tool": "get_policy",
+          "t": 46983.624358989
+        }
+      ],
+      "latency_s": 3.9960379830008605,
+      "errors": []
+    },
+    {
+      "instance": "d-high-2",
+      "difficulty": "high",
+      "sub_class": "no_action_over_limit_via_three_bonuses",
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": false,
+      "predicted": "ESCALATE_VP",
+      "expected": "DECLINE",
+      "score_rationale": "predicted 'ESCALATE_VP', expected 'DECLINE'",
+      "summary": "FINAL_ANSWER: ESCALATE_VP",
+      "llm_calls": 3,
+      "input_tokens": 5410,
+      "output_tokens": 142,
+      "total_tokens": 5552,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46985.784284334
+        },
+        {
+          "tool": "get_policy",
+          "t": 46987.21067481
+        },
+        {
+          "tool": "get_policy",
+          "t": 46987.212637378
+        },
+        {
+          "tool": "get_policy",
+          "t": 46987.21408458
+        },
+        {
+          "tool": "get_policy",
+          "t": 46987.215568348
+        },
+        {
+          "tool": "get_policy",
+          "t": 46987.218880773
+        },
+        {
+          "tool": "get_policy",
+          "t": 46987.222386195
+        }
+      ],
+      "latency_s": 3.0687647459999425,
+      "errors": []
+    },
+    {
+      "instance": "d-high-3",
+      "difficulty": "high",
+      "sub_class": "new_bonuses_apac_newlogo_strategic_regional_vp",
+      "paradigm": "workflow",
+      "correct": true,
+      "predicted": "ESCALATE_REGIONAL_VP",
+      "expected": "ESCALATE_REGIONAL_VP",
+      "score_rationale": "match",
+      "summary": "Rule P2s fired: ESCALATE_REGIONAL_VP (bonuses B3+B4+B5, effective 17.0%).",
+      "llm_calls": 1,
+      "input_tokens": 842,
+      "output_tokens": 71,
+      "total_tokens": 913,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46988.23207651
+        },
+        {
+          "tool": "get_policy",
+          "t": 46988.50279491
+        },
+        {
+          "tool": "get_policy",
+          "t": 46988.813383153
+        },
+        {
+          "tool": "get_policy",
+          "t": 46989.159075499
+        },
+        {
+          "tool": "get_policy",
+          "t": 46989.511423535
+        },
+        {
+          "tool": "get_policy",
+          "t": 46989.788953357
+        },
+        {
+          "tool": "get_policy",
+          "t": 46990.11183188
+        },
+        {
+          "tool": "get_policy",
+          "t": 46990.381055355
+        },
+        {
+          "tool": "get_policy",
+          "t": 46990.671896989
+        }
+      ],
+      "latency_s": 3.993461641999602,
+      "errors": []
+    },
+    {
+      "instance": "d-high-3",
+      "difficulty": "high",
+      "sub_class": "new_bonuses_apac_newlogo_strategic_regional_vp",
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": true,
+      "predicted": "ESCALATE_REGIONAL_VP",
+      "expected": "ESCALATE_REGIONAL_VP",
+      "score_rationale": "match",
+      "summary": "FINAL_ANSWER: ESCALATE_REGIONAL_VP",
+      "llm_calls": 3,
+      "input_tokens": 5446,
+      "output_tokens": 150,
+      "total_tokens": 5596,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46992.897199465
+        },
+        {
+          "tool": "get_policy",
+          "t": 46994.263714542
+        },
+        {
+          "tool": "get_policy",
+          "t": 46994.266585766
+        },
+        {
+          "tool": "get_policy",
+          "t": 46994.268456391
+        },
+        {
+          "tool": "get_policy",
+          "t": 46994.27214948
+        },
+        {
+          "tool": "get_policy",
+          "t": 46994.275788133
+        },
+        {
+          "tool": "get_policy",
+          "t": 46994.277705011
+        }
+      ],
+      "latency_s": 3.6857053359999554,
+      "errors": []
+    },
+    {
+      "instance": "d-high-4",
+      "difficulty": "high",
+      "sub_class": "no_action_credit_hold_gate_dominates_full_chain",
+      "paradigm": "workflow",
+      "correct": true,
+      "predicted": "DECLINE",
+      "expected": "DECLINE",
+      "score_rationale": "match",
+      "summary": "Gate G4 fired: DECLINE.",
+      "llm_calls": 1,
+      "input_tokens": 829,
+      "output_tokens": 70,
+      "total_tokens": 899,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 46995.912702988
+        },
+        {
+          "tool": "get_policy",
+          "t": 46996.188380731
+        },
+        {
+          "tool": "get_policy",
+          "t": 46996.503221439
+        },
+        {
+          "tool": "get_policy",
+          "t": 46996.849612364
+        },
+        {
+          "tool": "get_policy",
+          "t": 46997.201717152
+        },
+        {
+          "tool": "get_policy",
+          "t": 46997.478800892
+        },
+        {
+          "tool": "get_policy",
+          "t": 46997.795912412
+        },
+        {
+          "tool": "get_policy",
+          "t": 46998.063553712
+        },
+        {
+          "tool": "get_policy",
+          "t": 46998.356733946
+        }
+      ],
+      "latency_s": 4.1065790749999,
+      "errors": []
+    },
+    {
+      "instance": "d-high-4",
+      "difficulty": "high",
+      "sub_class": "no_action_credit_hold_gate_dominates_full_chain",
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": true,
+      "predicted": "DECLINE",
+      "expected": "DECLINE",
+      "score_rationale": "match",
+      "summary": "FINAL_ANSWER: DECLINE",
+      "llm_calls": 3,
+      "input_tokens": 5407,
+      "output_tokens": 139,
+      "total_tokens": 5546,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 47000.825343081
+        },
+        {
+          "tool": "get_policy",
+          "t": 47002.158031151
+        },
+        {
+          "tool": "get_policy",
+          "t": 47002.159924002
+        },
+        {
+          "tool": "get_policy",
+          "t": 47002.161949835
+        },
+        {
+          "tool": "get_policy",
+          "t": 47002.162976396
+        },
+        {
+          "tool": "get_policy",
+          "t": 47002.164802842
+        },
+        {
+          "tool": "get_policy",
+          "t": 47002.166326004
+        }
+      ],
+      "latency_s": 4.5969849309985875,
+      "errors": []
+    },
+    {
+      "instance": "d-high-5",
+      "difficulty": "high",
+      "sub_class": "precedence_P2_high_value_over_bracket",
+      "paradigm": "workflow",
+      "correct": true,
+      "predicted": "ESCALATE_REGIONAL_VP",
+      "expected": "ESCALATE_REGIONAL_VP",
+      "score_rationale": "match",
+      "summary": "Rule P2 fired: ESCALATE_REGIONAL_VP (bonuses B1+B2+B3, effective 17.0%).",
+      "llm_calls": 1,
+      "input_tokens": 830,
+      "output_tokens": 70,
+      "total_tokens": 900,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 47004.616467822
+        },
+        {
+          "tool": "get_policy",
+          "t": 47004.893466066
+        },
+        {
+          "tool": "get_policy",
+          "t": 47005.212900233
+        },
+        {
+          "tool": "get_policy",
+          "t": 47005.551952674
+        },
+        {
+          "tool": "get_policy",
+          "t": 47005.912370825
+        },
+        {
+          "tool": "get_policy",
+          "t": 47006.188023325
+        },
+        {
+          "tool": "get_policy",
+          "t": 47006.509076622
+        },
+        {
+          "tool": "get_policy",
+          "t": 47006.771644994
+        },
+        {
+          "tool": "get_policy",
+          "t": 47007.063346823
+        }
+      ],
+      "latency_s": 5.637793846995919,
+      "errors": []
+    },
+    {
+      "instance": "d-high-5",
+      "difficulty": "high",
+      "sub_class": "precedence_P2_high_value_over_bracket",
+      "paradigm": "agent",
+      "final_answer_line_present": true,
+      "correct": true,
+      "predicted": "ESCALATE_REGIONAL_VP",
+      "expected": "ESCALATE_REGIONAL_VP",
+      "score_rationale": "match",
+      "summary": "FINAL_ANSWER: ESCALATE_REGIONAL_VP",
+      "llm_calls": 3,
+      "input_tokens": 5410,
+      "output_tokens": 144,
+      "total_tokens": 5554,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "list_policies",
+          "t": 47011.272741336
+        },
+        {
+          "tool": "get_policy",
+          "t": 47012.805413962
+        },
+        {
+          "tool": "get_policy",
+          "t": 47012.809957596
+        },
+        {
+          "tool": "get_policy",
+          "t": 47012.811666732
+        },
+        {
+          "tool": "get_policy",
+          "t": 47012.813327111
+        },
+        {
+          "tool": "get_policy",
+          "t": 47012.815030431
+        },
+        {
+          "tool": "get_policy",
+          "t": 47012.816518293
+        }
+      ],
+      "latency_s": 4.649763747998804,
+      "errors": []
+    }
+  ]
+}

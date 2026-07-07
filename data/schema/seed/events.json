@@ -259,5 +259,41 @@
     "start_time": "2025-09-01 09:00:00",
     "end_time": "2025-09-01 09:30:00",
     "status": "confirmed"
+  },
+  {
+    "id": 2001,
+    "name": "Renewal call Mayer & Co",
+    "organizer_email": "agent01@atlas.com",
+    "attendees": "agent01@atlas.com,anna.brandt@mayer.example",
+    "start_time": "2025-10-03 10:00:00",
+    "end_time": "2025-10-03 10:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 2002,
+    "name": "Quarterly review Brueckner",
+    "organizer_email": "agent02@atlas.com",
+    "attendees": "agent02@atlas.com,tom.keller@brueckner.example",
+    "start_time": "2025-09-18 13:00:00",
+    "end_time": "2025-09-18 14:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 2003,
+    "name": "Analytics demo Sunrise",
+    "organizer_email": "agent03@atlas.com",
+    "attendees": "agent03@atlas.com,maria.lopez@sunrise.example",
+    "start_time": "2025-10-10 15:00:00",
+    "end_time": "2025-10-10 16:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": 2004,
+    "name": "Pilot review Pacific",
+    "organizer_email": "agent05@atlas.com",
+    "attendees": "agent05@atlas.com,hiro.tanaka@pacificht.example",
+    "start_time": "2025-09-05 09:00:00",
+    "end_time": "2025-09-05 09:45:00",
+    "status": "confirmed"
   }
 ]

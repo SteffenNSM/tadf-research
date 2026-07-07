@@ -2,18 +2,70 @@
   "id": "c-high-2",
   "archetype": "C",
   "difficulty": "high",
-  "sub_class": "buried_under_compliment",
-  "instruction": "Route this email to the correct support category.",
-  "email": {
-    "sender": "ananya@beacon-partners.example",
-    "subject": "Loving the new dashboard — one quick thing",
-    "body": "Big fan of the new dashboard layout — feels way cleaner than before. Quick thing though: every time I try to export the Q3 numbers to CSV, the download starts and I end up with a 0-byte file. Worked fine before the rollout. Could one of the engineers take a look?"
+  "instruction": "Triage this batch of customer support emails: assign each email to exactly one support category by its primary intent.",
+  "emails": [
+    {
+      "id": "e1",
+      "sender": "user1@customer.example",
+      "subject": "Contractor can't get in",
+      "body": "Our new contractor says the portal 'doesn't work'. But it loads fine for the rest of us, so it isn't an outage — they were simply never granted access. Please give them viewer access to the Atlas project."
+    },
+    {
+      "id": "e2",
+      "sender": "user2@customer.example",
+      "subject": "Double charge among praise",
+      "body": "Love the product and the team's been responsive. Minor: a docs gap on webhooks, for later. The thing I need now: our last invoice has two identical line items — we were double-charged and need one refunded."
+    },
+    {
+      "id": "e3",
+      "sender": "user3@customer.example",
+      "subject": "Sync failing, not the address",
+      "body": "Thanks for fixing our delivery address last week. Unrelated: finance had a charge question we've already resolved. The live problem: our nightly data sync via your API has failed with timeouts for three days and the reports are stale — please investigate."
+    },
+    {
+      "id": "e4",
+      "sender": "user4@customer.example",
+      "subject": "Praise, wishlist, buried refund",
+      "body": "Genuinely one of the better tools we use, and your team's been great. Two small things for later: the webhook docs are thin, and it'd be nice if the mobile app remembered my filters. The one thing I need handled now: we were charged twice for the same subscription on the latest invoice and need one of the duplicate charges refunded."
+    },
+    {
+      "id": "e5",
+      "sender": "user5@customer.example",
+      "subject": "Access request dressed as an outage",
+      "body": "The project portal 'doesn't work' for our new contractor and it's holding up onboarding. To be precise, the pages load fine for everyone else on the team, so this isn't a service outage — the contractor was just never added. Please grant them viewer permissions on the Atlas project workspace."
+    },
+    {
+      "id": "e6",
+      "sender": "user6@customer.example",
+      "subject": "Delivery and billing noise, API is the issue",
+      "body": "Thanks again for sorting our delivery address the other week, and the charge question from finance is resolved on our end. The live problem I need eyes on: our nightly data synchronisation through your API has been failing with timeouts for three straight nights, so all of our dashboards are now showing stale figures. Please investigate the API failures."
+    },
+    {
+      "id": "e7",
+      "sender": "user7@customer.example",
+      "subject": "Quarter recap, one real ask",
+      "body": "Hope you're well — busy quarter here. The team loved the new dashboard, though the export button took a while to find, and our admin had to re-add two seats after someone left (all sorted now). The reason I'm actually writing: our renewal invoice shows a mid-term price increase we never agreed to. Everything else is fine; we just need the pricing on that invoice explained and corrected."
+    },
+    {
+      "id": "e8",
+      "sender": "user8@customer.example",
+      "subject": "Several threads, one urgent",
+      "body": "A few things piled up this week. The hardware add-on shipped late (already resolved with the carrier). Someone also asked whether PDF export is supported — no rush on that. The urgent part: since Tuesday's release the login page throws an error for every one of our users, so nobody can get in. It's clearly on your side — please treat the outage as priority one."
+    }
+  ],
+  "expected": {
+    "e1": "Account",
+    "e2": "Billing",
+    "e3": "Technical",
+    "e4": "Billing",
+    "e5": "Account",
+    "e6": "Technical",
+    "e7": "Billing",
+    "e8": "Technical"
   },
-  "expected_label": "Technical",
-  "rationale_hint": "Buried-core distractor: opens with strong product praise that looks like Product feedback. The actual ask is at the bottom — a defect report on the CSV export feature, with a regression marker ('worked fine before the rollout'). The product compliment is social framing; the request is to fix a bug → Technical.",
   "provenance": {
     "source_benchmark": "CRMArena-Pro Case Routing / Activity Priority Understanding (Huang et al., 2025)",
-    "adaptation": "Author-constructed email texts; task semantics follow the CRMArena-Pro routing/disambiguation pattern. The five-category label set is mirrored from cases.issue_category in experiments/seed_crm.py so the routing decision is consistent with the local CRM schema. High-stratum sub-class: buried_under_compliment.",
+    "construction_method": "Batch-triage task (single input batch -> single labelled output, Section 2.2.3). Difficulty = batch size (3/5/8) x per-email ambiguity; Med/High emails carry competing near-duplicate signals with one primary intent; High emails are verbose with a buried core ask to load the context. Author-constructed from a labelled pool; no benchmark text reproduced.",
     "license": "Original work by the author (email texts and task design); benchmark semantics reference only"
   }
 }

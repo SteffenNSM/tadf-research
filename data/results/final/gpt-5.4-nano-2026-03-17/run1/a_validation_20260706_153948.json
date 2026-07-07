@@ -1,0 +1,1390 @@
+{
+  "timestamp": "20260706_153948",
+  "model": "gpt-5.4-nano-2026-03-17",
+  "runs": [
+    {
+      "instance": "a-low-1",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": "Brueckner Maschinenbau",
+      "correct": false,
+      "answer": "Multivac",
+      "judge_rationale": "The gold answer identifies Brueckner Maschinenbau as the earlier-founded company, but the candidate states Multivac.",
+      "llm_calls": 2,
+      "input_tokens": 4410,
+      "output_tokens": 203,
+      "total_tokens": 4613,
+      "tool_call_count": 10,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33279.972362564
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33281.791044443
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33283.632976315
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33285.29487908
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33286.80745137
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33288.451664639
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33290.287218361
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33292.028521681
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33294.472221032
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33296.226416644
+        }
+      ],
+      "latency_s": 22.40884386700054,
+      "errors": []
+    },
+    {
+      "instance": "a-low-1",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": "Brueckner Maschinenbau",
+      "correct": true,
+      "answer": "Br\u00fcckner Maschinenbau",
+      "judge_rationale": "The candidate answer correctly identifies Brueckner Maschinenbau as the company founded earlier.",
+      "llm_calls": 2,
+      "input_tokens": 3622,
+      "output_tokens": 78,
+      "total_tokens": 3700,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33303.398902955
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33303.400531
+        }
+      ],
+      "latency_s": 4.196829013002571,
+      "errors": []
+    },
+    {
+      "instance": "a-low-2",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": "Bruce Doolin Henderson; Johann Philipp Schifferdecker",
+      "correct": true,
+      "answer": "BCG founder: Bruce Doolin Henderson; Heidelberg Materials (formerly HeidelbergCement) founder: Johann Philipp Schifferdecker",
+      "judge_rationale": "The candidate names the same two founders as the gold answer: Bruce Doolin Henderson for BCG and Johann Philipp Schifferdecker for Heidelberg Materials (formerly HeidelbergCement).",
+      "llm_calls": 2,
+      "input_tokens": 5582,
+      "output_tokens": 237,
+      "total_tokens": 5819,
+      "tool_call_count": 10,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33309.484895632
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33312.038251729
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33316.634747116
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33316.911958285
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33318.981962244
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33320.42132163
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33323.467899715
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33325.150588219
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33326.847647791
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33329.303761148
+        }
+      ],
+      "latency_s": 27.53034182700503,
+      "errors": []
+    },
+    {
+      "instance": "a-low-2",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": "Bruce Doolin Henderson; Johann Philipp Schifferdecker",
+      "correct": true,
+      "answer": "Bruce Henderson; Johann Philipp Schifferdecker",
+      "judge_rationale": "The candidate correctly provides both founders\u2019 names: Bruce Doolin Henderson (as Bruce Henderson) and Johann Philipp Schifferdecker.",
+      "llm_calls": 3,
+      "input_tokens": 9684,
+      "output_tokens": 109,
+      "total_tokens": 9793,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33338.215469558
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33338.216848806
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33339.748394657
+        }
+      ],
+      "latency_s": 6.015989047002222,
+      "errors": []
+    },
+    {
+      "instance": "a-low-3",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": "1937; Kreuz Oberhausen",
+      "correct": true,
+      "answer": "Opened in 1937; the A 2 begins at Kreuz Oberhausen.",
+      "judge_rationale": "The candidate matches the gold by stating the interchange opened in 1937 and that the A 2 begins at Kreuz Oberhausen.",
+      "llm_calls": 2,
+      "input_tokens": 3400,
+      "output_tokens": 210,
+      "total_tokens": 3610,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33346.513001228
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33349.132723056
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33351.230110991
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33353.093914394
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33354.899658109
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33357.781212369
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33359.715433298
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33361.353307842
+        }
+      ],
+      "latency_s": 22.62202414100466,
+      "errors": []
+    },
+    {
+      "instance": "a-low-3",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": "1937; Kreuz Oberhausen",
+      "correct": true,
+      "answer": "1937, Autobahnkreuz Oberhausen",
+      "judge_rationale": "The candidate matches the gold year 1937 and correctly identifies that the A2 begins at Autobahnkreuz (Kreuz) Oberhausen.",
+      "llm_calls": 5,
+      "input_tokens": 15984,
+      "output_tokens": 193,
+      "total_tokens": 16177,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33371.297923832
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33371.299251897
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33375.35147594
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33378.557929912
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33381.876213527
+        }
+      ],
+      "latency_s": 15.136598689001403,
+      "errors": []
+    },
+    {
+      "instance": "a-low-4",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": "CLAAS; Kloster Marienfeld",
+      "correct": true,
+      "answer": "CLAAS; Kloster Marienfeld",
+      "judge_rationale": "The candidate correctly names the company as CLAAS and the monastery as Kloster Marienfeld.",
+      "llm_calls": 2,
+      "input_tokens": 6493,
+      "output_tokens": 226,
+      "total_tokens": 6719,
+      "tool_call_count": 10,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33388.653167339
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33390.217273462
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33392.125400289
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33394.746898542
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33396.887071878
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33398.442600875
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33400.05939228
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33401.601954346
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33403.043095975
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33404.773589882
+        }
+      ],
+      "latency_s": 22.342450025003927,
+      "errors": []
+    },
+    {
+      "instance": "a-low-4",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": "CLAAS; Kloster Marienfeld",
+      "correct": true,
+      "answer": "CLAAS and Kloster Marienfeld (Marienfeld Abbey)",
+      "judge_rationale": "The candidate correctly identifies the company as CLAAS and the important monastery as Kloster Marienfeld (Marienfeld Abbey).",
+      "llm_calls": 2,
+      "input_tokens": 2901,
+      "output_tokens": 110,
+      "total_tokens": 3011,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33412.602980124
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33412.604886989
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33412.606865622
+        }
+      ],
+      "latency_s": 3.555343374995573,
+      "errors": []
+    },
+    {
+      "instance": "a-low-5",
+      "difficulty": "low",
+      "paradigm": "workflow",
+      "ground_truth": "Germany; Manuel Neuer",
+      "correct": true,
+      "answer": "Germany; Manuel Neuer",
+      "judge_rationale": "The candidate correctly states that Germany was knocked out by Italy in the Euro 2012 semi-final and that Germany\u2019s starting goalkeeper was Manuel Neuer.",
+      "llm_calls": 2,
+      "input_tokens": 5817,
+      "output_tokens": 245,
+      "total_tokens": 6062,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33419.449145739
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33419.782704819
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33421.331810736
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33423.710518324
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33426.276386966
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33428.017067521
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33429.503685532
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33431.704050307
+        }
+      ],
+      "latency_s": 19.749106677998498,
+      "errors": []
+    },
+    {
+      "instance": "a-low-5",
+      "difficulty": "low",
+      "paradigm": "agent",
+      "ground_truth": "Germany; Manuel Neuer",
+      "correct": true,
+      "answer": "Germany \u2014 Manuel Neuer",
+      "judge_rationale": "The candidate correctly states that Germany was knocked out by Italy in the Euro 2012 semi-final and that Germany's starting goalkeeper was Manuel Neuer.",
+      "llm_calls": 4,
+      "input_tokens": 15990,
+      "output_tokens": 102,
+      "total_tokens": 16092,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33437.644497034
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33439.351336347
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33503.830333242
+        }
+      ],
+      "latency_s": 71.49404297400179,
+      "errors": []
+    },
+    {
+      "instance": "a-med-1",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": "Bauhaus Dessau and Naumburg Cathedral",
+      "correct": true,
+      "answer": "Bauhaus Dessau and Naumburg Cathedral",
+      "judge_rationale": "The candidate names the same two closest sites\u2014Bauhaus Dessau and Naumburg Cathedral\u2014as the gold answer.",
+      "llm_calls": 2,
+      "input_tokens": 5768,
+      "output_tokens": 206,
+      "total_tokens": 5974,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33512.051856838
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33512.353402812
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33512.657201286
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33513.007077114
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33515.330223945
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33517.770616654
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33519.389619637
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33521.944571978
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33524.765245947
+        }
+      ],
+      "latency_s": 19.564502348999667,
+      "errors": []
+    },
+    {
+      "instance": "a-med-1",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": "Bauhaus Dessau and Naumburg Cathedral",
+      "correct": false,
+      "answer": "Bauhaus Dessau and Wartburg",
+      "judge_rationale": "The candidate selects Bauhaus Dessau and Wartburg, but the gold answer states the closest pair is Bauhaus Dessau and Naumburg Cathedral.",
+      "llm_calls": 3,
+      "input_tokens": 11003,
+      "output_tokens": 230,
+      "total_tokens": 11233,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33531.974992646
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33531.97652038
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33531.978651858
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33534.597946067
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33534.599897299
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33534.600709985
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33534.601531495
+        }
+      ],
+      "latency_s": 7.865028521999193,
+      "errors": []
+    },
+    {
+      "instance": "a-med-2",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": "FC Schalke 04",
+      "correct": false,
+      "answer": "1. FC K\u00f6ln",
+      "judge_rationale": "The gold answer is FC Schalke 04, but the candidate names 1. FC K\u00f6ln, which is a different club.",
+      "llm_calls": 2,
+      "input_tokens": 8853,
+      "output_tokens": 361,
+      "total_tokens": 9214,
+      "tool_call_count": 10,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33544.755900164
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33546.292120115
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33549.028499476
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33550.529412333
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33552.030873059
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33553.468511071
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33555.810378617
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33557.65491061
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33559.501193583
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33560.940355697
+        }
+      ],
+      "latency_s": 24.608677617005014,
+      "errors": []
+    },
+    {
+      "instance": "a-med-2",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": "FC Schalke 04",
+      "correct": false,
+      "answer": "FC St. Pauli",
+      "judge_rationale": "The gold answer is FC Schalke 04, but the candidate names FC St. Pauli, which is a different club.",
+      "llm_calls": 4,
+      "input_tokens": 42526,
+      "output_tokens": 531,
+      "total_tokens": 43057,
+      "tool_call_count": 15,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33629.894774736
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33629.895607233
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33629.896372334
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33629.89707198
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33635.784272522
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33635.785652242
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33635.78693355
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33635.787668865
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33635.788436278
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33635.789321722
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33641.461827571
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33641.463106941
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33641.464591161
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33641.465345571
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33641.466099639
+        }
+      ],
+      "latency_s": 18.412616877998516,
+      "errors": []
+    },
+    {
+      "instance": "a-med-3",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": "Toyota: 28 August 1937; Volkswagen: 28 May 1937; Porsche: 25 April 1931",
+      "correct": true,
+      "answer": "Toyota: August 28, 1937; Volkswagen: May 28, 1937; Porsche: April 25, 1931",
+      "judge_rationale": "The candidate matches the gold founding dates for Toyota (28 August 1937), Volkswagen (28 May 1937), and Porsche (25 April 1931) exactly, with only formatting differences.",
+      "llm_calls": 2,
+      "input_tokens": 6004,
+      "output_tokens": 286,
+      "total_tokens": 6290,
+      "tool_call_count": 10,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33650.84250161
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33653.504200263
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33653.831261313
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33657.09225324
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33659.336940163
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33662.924933866
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33665.277218827
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33667.532985197
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33669.351502966
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33670.809499281
+        }
+      ],
+      "latency_s": 27.40175793099479,
+      "errors": []
+    },
+    {
+      "instance": "a-med-3",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": "Toyota: 28 August 1937; Volkswagen: 28 May 1937; Porsche: 25 April 1931",
+      "correct": true,
+      "answer": "Toyota: August 28, 1937; Volkswagen: May 28, 1937; Porsche: April 25, 1931",
+      "judge_rationale": "The candidate provides the exact founding dates for Toyota (28 August 1937), Volkswagen (28 May 1937), and Porsche (25 April 1931) matching the gold answer.",
+      "llm_calls": 4,
+      "input_tokens": 16705,
+      "output_tokens": 186,
+      "total_tokens": 16891,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33678.393027743
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33678.394412181
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33678.395946724
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33680.129919764
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33681.665081378
+        }
+      ],
+      "latency_s": 11.657181535003474,
+      "errors": []
+    },
+    {
+      "instance": "a-med-4",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": "VfL Wolfsburg; FC Bayern M\u00fcnchen; Borussia Dortmund",
+      "correct": true,
+      "answer": "2008/09: VfL Wolfsburg; 2017/18: Bayern Munich; 1994/95: Borussia Dortmund",
+      "judge_rationale": "The candidate names the correct Bundesliga champions for 2008/09 (VfL Wolfsburg), 2017/18 (FC Bayern M\u00fcnchen/Bayern Munich), and 1994/95 (Borussia Dortmund).",
+      "llm_calls": 2,
+      "input_tokens": 8041,
+      "output_tokens": 243,
+      "total_tokens": 8284,
+      "tool_call_count": 10,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33691.392758955
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33693.10416386
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33694.872471618
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33696.435320868
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33698.048161448
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33700.144685429
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33702.499184496
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33702.785987179
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33703.110691357
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33703.468474696
+        }
+      ],
+      "latency_s": 18.691144106996944,
+      "errors": []
+    },
+    {
+      "instance": "a-med-4",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": "VfL Wolfsburg; FC Bayern M\u00fcnchen; Borussia Dortmund",
+      "correct": true,
+      "answer": "VfL Wolfsburg, FC Bayern Munich, Borussia Dortmund",
+      "judge_rationale": "The candidate lists VfL Wolfsburg for 2008/09, FC Bayern M\u00fcnchen for 2017/18, and Borussia Dortmund for 1994/95, matching the gold answer.",
+      "llm_calls": 2,
+      "input_tokens": 4273,
+      "output_tokens": 100,
+      "total_tokens": 4373,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33711.462065122
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33711.463391595
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33711.464881752
+        }
+      ],
+      "latency_s": 2.9124610170038068,
+      "errors": []
+    },
+    {
+      "instance": "a-med-5",
+      "difficulty": "med",
+      "paradigm": "workflow",
+      "ground_truth": "RWE Platz 1; Br\u00fcsseler Platz 1; Petuelring 130",
+      "correct": true,
+      "answer": "RWE AG: RWE Platz 1; E.ON SE: Br\u00fcsseler Platz 1; BMW Group (Konzernzentrale): Petuelring 130.",
+      "judge_rationale": "The candidate provides the exact street names and building numbers for RWE AG (RWE Platz 1), E.ON SE (Br\u00fcsseler Platz 1), and BMW Group Konzernzentrale (Petuelring 130) matching the gold answer.",
+      "llm_calls": 2,
+      "input_tokens": 5929,
+      "output_tokens": 286,
+      "total_tokens": 6215,
+      "tool_call_count": 10,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33716.322903028
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33716.64233347
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33716.967006051
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33717.297312452
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33717.560845456
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33717.860867017
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33718.154273505
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33720.901644891
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33723.56449472
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33725.042214342
+        }
+      ],
+      "latency_s": 14.49459059000219,
+      "errors": []
+    },
+    {
+      "instance": "a-med-5",
+      "difficulty": "med",
+      "paradigm": "agent",
+      "ground_truth": "RWE Platz 1; Br\u00fcsseler Platz 1; Petuelring 130",
+      "correct": true,
+      "answer": "- RWE AG: **RWE Platz 1**\n- E.ON SE: **Br\u00fcsseler Platz 1**\n- BMW Group (Konzernzentrale): **Petuelring 130**",
+      "judge_rationale": "The candidate provides the same three headquarters addresses as the gold answer: RWE Platz 1, Br\u00fcsseler Platz 1, and Petuelring 130.",
+      "llm_calls": 3,
+      "input_tokens": 6040,
+      "output_tokens": 169,
+      "total_tokens": 6209,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33732.147103147
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33732.148429343
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33732.149932928
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33735.731004094
+        }
+      ],
+      "latency_s": 9.094992866004759,
+      "errors": []
+    },
+    {
+      "instance": "a-high-1",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": "Wersestadion",
+      "correct": false,
+      "answer": "Ems-Stadion",
+      "judge_rationale": "The candidate names Ems-Stadion, but the gold answer for the stadium is specifically Wersestadion.",
+      "llm_calls": 2,
+      "input_tokens": 6390,
+      "output_tokens": 285,
+      "total_tokens": 6675,
+      "tool_call_count": 10,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33745.05155346
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33746.586408677
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33748.738202821
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33750.389228327
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33751.98287482
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33754.774366276
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33756.500892943
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33758.668666655
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33761.222861916
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33763.319811152
+        }
+      ],
+      "latency_s": 32.0432523290001,
+      "errors": []
+    },
+    {
+      "instance": "a-high-1",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": "Wersestadion",
+      "correct": true,
+      "answer": "Wersestadion",
+      "judge_rationale": "The candidate answer matches the gold answer exactly: Wersestadion.",
+      "llm_calls": 4,
+      "input_tokens": 22852,
+      "output_tokens": 253,
+      "total_tokens": 23105,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33777.588315545
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33777.589823433
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33777.591093753
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33777.592468145
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33777.593327519
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33783.141927331
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33786.138435008
+        }
+      ],
+      "latency_s": 14.438209965002898,
+      "errors": []
+    },
+    {
+      "instance": "a-high-2",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": "Alexander Berger",
+      "correct": false,
+      "answer": "Sven Schulze",
+      "judge_rationale": "The candidate names Sven Schulze as mayor in 2016, but the gold answer specifies Alexander Berger.",
+      "llm_calls": 2,
+      "input_tokens": 6898,
+      "output_tokens": 287,
+      "total_tokens": 7185,
+      "tool_call_count": 10,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33793.896100117
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33794.18021957
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33795.848661434
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33798.503015168
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33799.9080803
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33802.699707209
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33805.384976145
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33807.358658527
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33809.459190612
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33811.024442214
+        }
+      ],
+      "latency_s": 25.0530721239993,
+      "errors": []
+    },
+    {
+      "instance": "a-high-2",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": "Alexander Berger",
+      "correct": true,
+      "answer": "Alexander Berger",
+      "judge_rationale": "The candidate answer correctly identifies Alexander Berger as the mayor in 2016.",
+      "llm_calls": 5,
+      "input_tokens": 12705,
+      "output_tokens": 123,
+      "total_tokens": 12828,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33817.85589028
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33819.280746822
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33822.156875228
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33825.76240295
+        }
+      ],
+      "latency_s": 83.2365042829988,
+      "errors": []
+    },
+    {
+      "instance": "a-high-3",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": "Fritz-Walter-Stra\u00dfe 1, 67663 Kaiserslautern",
+      "correct": false,
+      "answer": "Fritz-Walter-Stadion, Fritz-Walter-Weg 1, 67663 Kaiserslautern, Germany",
+      "judge_rationale": "The candidate gives an incorrect stadium name (Fritz-Walter-Stadion instead of the required full address) even though part of the address matches, so it does not express the same factual content as the gold answer.",
+      "llm_calls": 2,
+      "input_tokens": 7719,
+      "output_tokens": 306,
+      "total_tokens": 8025,
+      "tool_call_count": 10,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33903.461799193
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33905.005235338
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33906.681143059
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33908.174324549
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33910.016825208
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33912.844487505
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33914.976640968
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33917.708618578
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33920.604876716
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33922.277697813
+        }
+      ],
+      "latency_s": 28.85444417999679,
+      "errors": []
+    },
+    {
+      "instance": "a-high-3",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": "Fritz-Walter-Stra\u00dfe 1, 67663 Kaiserslautern",
+      "correct": false,
+      "answer": "Fritz-Walter-Stra\u00dfe 11, 67653 Kaiserslautern, Germany",
+      "judge_rationale": "The candidate gives a different street number and postal code (Fritz-Walter-Stra\u00dfe 11, 67653) than the gold answer (Fritz-Walter-Stra\u00dfe 1, 67663), so it does not match the required full address.",
+      "llm_calls": 4,
+      "input_tokens": 10175,
+      "output_tokens": 118,
+      "total_tokens": 10293,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33932.751441149
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33934.078868258
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33937.381399474
+        }
+      ],
+      "latency_s": 9.274344001998543,
+      "errors": []
+    },
+    {
+      "instance": "a-high-4",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": "Barton Springs Pool",
+      "correct": true,
+      "answer": "Barton Springs Pool",
+      "judge_rationale": "The candidate correctly identifies the iconic natural swimming pool as Barton Springs Pool, matching the gold answer exactly.",
+      "llm_calls": 2,
+      "input_tokens": 3544,
+      "output_tokens": 171,
+      "total_tokens": 3715,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 33944.735308205
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33945.011761279
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33946.879911718
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33948.659318064
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33951.079300529
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33953.943772211
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33956.813954188
+        },
+        {
+          "tool": "tavily_search",
+          "t": 33959.068043432
+        }
+      ],
+      "latency_s": 20.388138649999746,
+      "errors": []
+    },
+    {
+      "instance": "a-high-4",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": "Barton Springs Pool",
+      "correct": true,
+      "answer": "Barton Springs Pool",
+      "judge_rationale": "The candidate answer correctly names the iconic natural swimming pool as Barton Springs Pool.",
+      "llm_calls": 3,
+      "input_tokens": 3032,
+      "output_tokens": 78,
+      "total_tokens": 3110,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 34025.217931751
+        },
+        {
+          "tool": "tavily_search",
+          "t": 34027.693197305
+        }
+      ],
+      "latency_s": 65.22422685499623,
+      "errors": []
+    },
+    {
+      "instance": "a-high-5",
+      "difficulty": "high",
+      "paradigm": "workflow",
+      "ground_truth": "Katrin Reuscher",
+      "correct": false,
+      "answer": "Not found in the provided sources",
+      "judge_rationale": "The candidate does not provide the mayor\u2019s name for 2022 (it says it was not found), so it fails to match the gold answer Katrin Reuscher.",
+      "llm_calls": 2,
+      "input_tokens": 5876,
+      "output_tokens": 215,
+      "total_tokens": 6091,
+      "tool_call_count": 10,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 34032.900066146
+        },
+        {
+          "tool": "tavily_search",
+          "t": 34033.22182402
+        },
+        {
+          "tool": "tavily_search",
+          "t": 34036.083278152
+        },
+        {
+          "tool": "tavily_search",
+          "t": 34038.223371297
+        },
+        {
+          "tool": "tavily_search",
+          "t": 34039.805390768
+        },
+        {
+          "tool": "tavily_search",
+          "t": 34041.806561803
+        },
+        {
+          "tool": "tavily_search",
+          "t": 34043.854057543
+        },
+        {
+          "tool": "tavily_search",
+          "t": 34045.382606994
+        },
+        {
+          "tool": "tavily_search",
+          "t": 34049.441616401
+        },
+        {
+          "tool": "tavily_search",
+          "t": 34051.040965049
+        }
+      ],
+      "latency_s": 24.009122784998908,
+      "errors": []
+    },
+    {
+      "instance": "a-high-5",
+      "difficulty": "high",
+      "paradigm": "agent",
+      "ground_truth": "Katrin Reuscher",
+      "correct": true,
+      "answer": "Katrin Judith Reuscher",
+      "judge_rationale": "The candidate names the same mayor as the gold answer, adding only the middle name 'Judith' to Katrin Reuscher.",
+      "llm_calls": 3,
+      "input_tokens": 3786,
+      "output_tokens": 65,
+      "total_tokens": 3851,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "tavily_search",
+          "t": 34057.167038094
+        },
+        {
+          "tool": "tavily_search",
+          "t": 34058.498632918
+        }
+      ],
+      "latency_s": 5.7175616349995835,
+      "errors": []
+    }
+  ]
+}

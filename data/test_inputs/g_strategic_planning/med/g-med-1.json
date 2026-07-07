@@ -3,7 +3,7 @@
   "archetype": "G",
   "difficulty": "med",
   "sub_class": "account_sweep",
-  "instruction": "Plan the cleanup of account 13: close its open cases 18, 22 and 67, email the account's primary contact once per closed case with subject 'Case <id> closed' (e.g. 'Case 18 closed') and brief bodies, sending the notifications only after all closes, and finish with an event named 'Account 13 wrap-up' on 2026-06-29 with agent 1 as attendee.",
+  "instruction": "Support agreed we finally wrap up account 13: close their open cases 18, 22 and 67 and notify the customer in the usual way. Finish with an event named 'Account 13 wrap-up' on 2026-06-29 with agent 1 as attendee.\n\nSupport runbook (excerpt):\n- Primary contact: an account's primary contact is the contact with the lowest id at that account.\n- Customer notification on closures: unless the request says otherwise, the account's primary contact receives one email per closed case with subject 'Case <id> closed' (substitute the actual case id) and a brief body, and closure notifications are sent only after every close in the work package is done.\n- Escalation-blocked cases: a case whose transfer history is above the escalation threshold cannot be closed with attempt_close_case; such a case is closed via a direct update that also records the closure timestamp (closed_at).\n- Keep email and event bodies brief, and plan only the actions the work package requires.",
   "goal": {
     "cases_closed": [
       18,

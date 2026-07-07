@@ -22,6 +22,7 @@ from typing import Any
 from langchain_core.tools import tool
 
 from src.core.db import get_connection
+from src.core.tools._latency import synthetic_delay
 
 #: Tables that may be queried via the generic db_read/db_search tools (Layer 1
 #: CRM access). Emails and events are intentionally excluded: those are Layer 2
@@ -95,6 +96,7 @@ def db_read(table: str, filters: dict[str, Any] | None = None) -> list[dict]:
     Returns:
         A list of matching rows as dictionaries.
     """
+    synthetic_delay("db_read", {"table": table, "filters": filters})
     return read_table(table, filters)
 
 
@@ -115,6 +117,7 @@ def db_search(table: str, column: str, query: str) -> list[dict]:
     """
     if table not in ALLOWED_TABLES:
         raise ValueError(f"Unknown table: {table}")
+    synthetic_delay("db_search", {"table": table, "column": column, "query": query})
     sql = f"SELECT * FROM {table} WHERE {column} LIKE ? COLLATE NOCASE"
     conn = get_connection()
     try:

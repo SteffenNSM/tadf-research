@@ -2,12 +2,12 @@
   "id": "f-high-2",
   "archetype": "F",
   "difficulty": "high",
-  "sub_class": "canonical",
-  "instruction": "For every opportunity in stage 'Proposal' that belongs to an account in the 'Technology' industry, send an email to the account's primary contact (the contact with the lowest id at that account). Subject: 'Proposal follow-up'. Body: 'Hi, following up on the proposal we sent over. I would like to schedule a short call to discuss any questions and the next steps on your side. Please share a time that works in the coming week. Best regards, Sales Team.'",
-  "expected_post_state": "At least one new outbox row per unique primary contact of the Technology+Proposal accounts (recipients are contact012@example.com and contact033@example.com) with subject='Proposal follow-up'. No outbox row with that subject was sent to any other recipient.",
+  "sub_class": "novel (runtime-feedback, no-action-on-failure)",
+  "instruction": "Case 7 looks like a duplicate of case 12 -- please close it with the resolution 'Duplicate of case 12' and handle the follow-up as the support runbook requires.\n\nSupport runbook (excerpt):\n- Case closures go through the attempt_close_case tool; the back-end applies business rules and may refuse a close. Direct status edits to 'Closed' are not permitted.\n- After a successful duplicate close, set the case's priority to 'Low' and confirm to ops@atlas.com by email: subject 'Case <id> closed'.\n- If the back-end refuses the close, the case is under escalation review: do not modify the case in any way (no status, priority, or assignment changes through any tool), and notify ops@atlas.com by email: subject 'Manual review required: case <id>', body quoting the back-end's stated reason.",
+  "expected_post_state": "Case 7 (transfer_count=4) is blocked by the escalation rule: the case row is completely unchanged (status='Open', priority='High', agent_id=2). Exactly one outbox row to ops@atlas.com with subject='Manual review required: case 7'. Zero rows with subject 'Case 7 closed'. Forcing the closure or priority change via db_update fails the predicate.",
   "provenance": {
-    "source_benchmark": "WorkBench (Styles et al., 2024)",
-    "adaptation": "Action-task style adapted from the source benchmark; specific entities (account ids, agent emails, case ids) reference the deterministic seed in seed_crm.py for stable post-state predicates. Sub-class: canonical.",
-    "license": "Adapted under fair use for academic research"
+    "source_benchmark": "Author-constructed (no direct benchmark counterpart); surface style follows WorkBench (Styles et al., 2024) and WorkArena L1/L2 (Drouin et al., 2024)",
+    "adaptation": "Instance designed by the author to operationalize the novel sub-class of archetype F (runtime-feedback dependence / in-context aggregation), following the outcome-centric task construction principle of WorkBench (Styles et al., 2024). No directly liftable counterpart exists in the benchmark corpus. Specific entities (account ids, agent emails, case ids) reference the deterministic seed in seed_crm.py for stable post-state predicates. Sub-class: novel (runtime-feedback, no-action-on-failure).",
+    "license": "Original work by the author (task design); benchmark style reference only"
   }
 }

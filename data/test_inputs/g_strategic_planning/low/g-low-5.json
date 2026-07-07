@@ -3,7 +3,7 @@
   "archetype": "G",
   "difficulty": "low",
   "sub_class": "kickoff",
-  "instruction": "Plan the kickoff for account 6: schedule an event named 'Kickoff Account 6' on 2026-06-22 with agent 7 and the account's primary contact as attendees, email that contact with subject 'Kickoff scheduled' and a brief body, and raise the priority of account 6's open case 21 to 'High'.",
+  "instruction": "Please set up the kickoff for account 6: an event named 'Kickoff Account 6' on 2026-06-22 with agent 7 and the account's primary contact as attendees, plus an email to that contact with subject 'Kickoff scheduled'. While you are at it, their open case 21 goes up to 'High' priority.\n\nSupport runbook (excerpt):\n- Primary contact: an account's primary contact is the contact with the lowest id at that account.\n- Customer notification on closures: unless the request says otherwise, the account's primary contact receives one email per closed case with subject 'Case <id> closed' (substitute the actual case id) and a brief body, and closure notifications are sent only after every close in the work package is done.\n- Escalation-blocked cases: a case whose transfer history is above the escalation threshold cannot be closed with attempt_close_case; such a case is closed via a direct update that also records the closure timestamp (closed_at).\n- Keep email and event bodies brief, and plan only the actions the work package requires.",
   "goal": {
     "case_fields": {
       "21": {

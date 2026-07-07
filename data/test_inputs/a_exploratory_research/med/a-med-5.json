@@ -2,27 +2,27 @@
   "id": "a-med-5",
   "archetype": "A",
   "difficulty": "med",
-  "instruction": "Which company was founded earlier: Uhlmann Pac-Systeme (Laupheim) or Brueckner Maschinenbau (Siegsdorf)? Answer with the company name.",
+  "instruction": "What are the street names and building numbers of the headquarters of RWE AG, E.ON SE, and the BMW Group (Konzernzentrale)?",
   "ground_truth": {
-    "value": "Uhlmann Pac-Systeme",
-    "unit": "company_name"
+    "value": "RWE Platz 1; Brüsseler Platz 1; Petuelring 130",
+    "unit": "three_streets"
   },
   "provenance": {
-    "source_benchmark": "BrowseComp (Wei et al., 2025)",
-    "construction_method": "inverted-question (BrowseComp Sec. 2.1); author-constructed",
-    "difficulty_axis": "number of distinct sources (2, independent / plan-time-decidable)",
-    "domain": "SME hidden champion",
+    "source_benchmark": "AssistantBench (Yoran et al., 2024); BrowseComp (Wei et al., 2025)",
+    "construction_method": "Three corporate-headquarters streets aggregated in parallel (street only, no postcode/city, to reduce gold-format noise).",
+    "difficulty_axis": "three distinct sources aggregated in parallel",
+    "domain": "German corporates",
     "sources": [
-      "https://de.wikipedia.org/wiki/Uhlmann_Pac-Systeme",
-      "https://de.wikipedia.org/wiki/Br%C3%BCckner_Group"
+      "https://en.wikipedia.org/wiki/RWE",
+      "https://en.wikipedia.org/wiki/E.ON",
+      "https://en.wikipedia.org/wiki/BMW"
     ],
     "verification": {
-      "memorization_no_tool": "pending",
-      "retrievable_via_tavily": "pending",
-      "one_shot_breaks": "unlikely (workflow can plan both queries)",
-      "unique": "yes"
+      "memorization_no_tool": "pending (must be non-memorized on the strongest model used)",
+      "retrievable_via_tavily": "pending (confirm on the run)",
+      "gold_verified": "author-supplied; confirm on the run"
     },
-    "note": "Uhlmann 1948 vs Brueckner 1960 -> Uhlmann. Both non-memorized, same industrial sector -> not heuristically guessable; two separate founding-year lookups.",
-    "license": "Original work by the author (task design); BrowseComp construction method referenced only"
+    "note": "",
+    "license": "Original work by the author (task design)"
   }
 }

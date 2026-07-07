@@ -1,0 +1,52 @@
+{
+  "id": "rg-med-2",
+  "archetype": "G",
+  "difficulty": "med",
+  "base_instance": "g-med-2",
+  "perturbation_type": "self_correction_on_ids",
+  "instruction": "plan the account 14 rebalancing please: their open cases 40, 62, 63 and 117 -- sorry, 118, not 117 -- all move to agent 7... no, wait, agent 8, that was the final call. each one gets 'Medium' priority in the same update. agent 8 then gets one mail, subject 'Account 14 cases reassigned', and there is an event named 'Handover sync' on 2026-06-30 with agent 8 as attendee. nothing gets closed.\n\nSupport runbook (excerpt):\n- Primary contact: an account's primary contact is the contact with the lowest id at that account.\n- Customer notification on closures: unless the request says otherwise, the account's primary contact receives one email per closed case with subject 'Case <id> closed' (substitute the actual case id) and a brief body, and closure notifications are sent only after every close in the work package is done.\n- Escalation-blocked cases: a case whose transfer history is above the escalation threshold cannot be closed with attempt_close_case; such a case is closed via a direct update that also records the closure timestamp (closed_at).\n- Keep email and event bodies brief, and plan only the actions the work package requires.",
+  "goal": {
+    "case_fields": {
+      "40": {
+        "agent_id": 8,
+        "priority": "Medium",
+        "status": "Open"
+      },
+      "62": {
+        "agent_id": 8,
+        "priority": "Medium",
+        "status": "Open"
+      },
+      "63": {
+        "agent_id": 8,
+        "priority": "Medium",
+        "status": "Open"
+      },
+      "118": {
+        "agent_id": 8,
+        "priority": "Medium",
+        "status": "Open"
+      }
+    },
+    "emails": [
+      {
+        "recipient": "agent08@atlas.com",
+        "subject": "Account 14 cases reassigned"
+      }
+    ],
+    "events": [
+      {
+        "name": "Handover sync",
+        "attendees_contain": [
+          "agent08@atlas.com"
+        ]
+      }
+    ],
+    "no_other_changes": true
+  },
+  "optimal_length": 6,
+  "provenance": {
+    "construction_method": "Surface perturbation (self_correction_on_ids) of g-med-2's instruction; every id, subject, date, and value remains stated in the text; goal spec and optimal length copied verbatim. Robustness check, not a new task.",
+    "license": "Original work by the author (scenarios, goal specs, action doc); benchmark semantics reference only"
+  }
+}

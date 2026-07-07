@@ -13,13 +13,18 @@
     "customer": {
       "region": "AMER",
       "is_existing": false,
-      "has_overdue_invoices": false
+      "has_overdue_invoices": false,
+      "segment": "Commercial",
+      "has_credit_hold": false,
+      "is_new_logo": false
     },
     "quote": {
       "amount": 4000,
-      "base_discount_pct": 6
+      "base_discount_pct": 6,
+      "term_months": 12
     }
   },
+  "request_text": "Subject: Quote approval request — lead 5008\n\nHi Compliance team,\n\nCould you run our quote approval policy on the request below and let me know the decision?\n\nThe lead (ID 5008) is currently marked \"qualified\" in the CRM. The customer is in the AMER region, is a new (non-existing) customer, sits in the Commercial segment, has no overdue invoices on file, and is not on any credit hold. The deal is for $4,000 over a 12-month term, with a requested base discount of 6%.\n\nThanks,\nSales Operations",
   "expected_label": "ESCALATE_DIRECTOR",
   "rationale_hint": "Gates pass; no bonuses; effective 6 %; quote amount $4,000 < $5,000 AND effective > 5 %. P3 (small-deal constraint) fires → ESCALATE_DIRECTOR. Without P3, the 6 % would APPROVE.",
   "provenance": {

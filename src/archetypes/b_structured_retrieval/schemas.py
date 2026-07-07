@@ -109,3 +109,74 @@ class MultiSourcePlan(BaseModel):
     mail: MailSource | None = Field(default=None, description="Optional Mail source to intersect")
     calendar: CalendarSource | None = Field(default=None, description="Optional Calendar source to intersect")
     operation: Literal["count", "sum"] = Field(description="Final aggregation over the combined set")
+
+
+# ── v3 retrieval plan (text-to-SQL over the full store; difficulty = #sources) ──
+
+
+class RetrievalField(BaseModel):
+    """One answer field, retrieved by a single read-only SQL SELECT.
+
+    The SQL may join any of accounts/contacts/agents/cases/opportunities/emails/
+    events. It must return the field value as the first column of the first row.
+    """
+
+    name: str = Field(description="Field name. Use 'answer' for a single-fact question; use descriptive names (e.g. 'last_contact', 'next_meeting') for multi-field questions.")
+    sql: str = Field(description="A single read-only SELECT returning the field value as the first column of the first row.")
+
+
+class RetrievalPlan(BaseModel):
+    """A multi-source retrieval plan as one read-only SQL query per answer field.
+
+    Single-fact questions produce one field named 'answer'; customer-360
+    questions produce several named fields. The deterministic executor runs each
+    SELECT and assembles the answer; the LLM never computes or aggregates.
+    """
+
+    fields: list[RetrievalField] = Field(description="One entry per answer field; each carries its own SELECT.")
+
+
+class FetchPlan(BaseModel):
+    """Which external (Mail/Calendar) data to retrieve before querying.
+
+    The CRM is a local SQL database queried directly. Mail and Calendar are
+    EXTERNAL services reached only through their search APIs; this plan lists the
+    search queries to issue. The deterministic fetch step runs them and lands the
+    results in the staging tables ``fetched_emails`` and ``fetched_events``,
+    which the query step then joins against the CRM.
+    """
+
+    mail_queries: list[str] = Field(
+        default_factory=list,
+        description="Substrings to search the mailbox for (matched against email subject/body/sender). Use a customer's email domain (e.g. 'mayer.example') or a subject keyword; use '' to fetch all emails. Empty list = no mail needed.",
+    )
+    calendar_queries: list[str] = Field(
+        default_factory=list,
+        description="Substrings to search the calendar for (matched against the event name). Use the customer name (e.g. 'Mayer'); use '' to fetch all events. Empty list = no calendar needed.",
+    )
+
+
+class RetrievalSpec(BaseModel):
+    """A single-shot retrieval plan produced by the workflow's planner node.
+
+    One LLM call, given the question and the tool catalogue, emits: which
+    external (Mail/Calendar) searches to issue, and the read-only SQL to run over
+    the CRM tables plus the staged Mail/Calendar rows. The deterministic nodes
+    dispatch the searches to their APIs (with synthetic latency), stage the
+    results, and run the SQL; the database engine performs the joins and
+    aggregations. A downstream aggregator LLM composes the final answer from the
+    computed field values, so an aggregation the SQL cannot express is left to
+    the aggregator rather than forcing a malformed query.
+    """
+
+    mail_queries: list[str] = Field(
+        default_factory=list,
+        description="Substrings to search the mailbox (subject/body/sender). Use a customer's email domain or a subject keyword; '' fetches all. Empty list = no mail needed.",
+    )
+    calendar_queries: list[str] = Field(
+        default_factory=list,
+        description="Substrings to search the calendar (event name). Use the customer name; '' fetches all. Empty list = no calendar needed.",
+    )
+    fields: list[RetrievalField] = Field(
+        description="One read-only SQL SELECT per answer field over the CRM tables plus fetched_emails/fetched_events. Let the database do the joins and aggregations; return each field's value as the first column of the first row. Use one field named 'answer' for a single-fact question; descriptive names for a multi-part question."
+    )

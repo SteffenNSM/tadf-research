@@ -3,7 +3,7 @@
   "archetype": "G",
   "difficulty": "med",
   "sub_class": "bulk_reassign",
-  "instruction": "Plan the rebalancing of account 14: reassign its open cases 40, 62, 63 and 118 to agent 8, setting each case's priority to 'Medium' in the same update, then email agent 8 once with subject 'Account 14 cases reassigned' and a brief body, and finish with an event named 'Handover sync' on 2026-06-30 with agent 8 as attendee. Do not close any case.",
+  "instruction": "Please plan the account 14 rebalancing: their open cases 40, 62, 63 and 118 all move to agent 8, each set to 'Medium' priority in the same update. Agent 8 gets one email, subject 'Account 14 cases reassigned', and we finish with an event named 'Handover sync' on 2026-06-30 with agent 8 as attendee. Nothing gets closed.\n\nSupport runbook (excerpt):\n- Primary contact: an account's primary contact is the contact with the lowest id at that account.\n- Customer notification on closures: unless the request says otherwise, the account's primary contact receives one email per closed case with subject 'Case <id> closed' (substitute the actual case id) and a brief body, and closure notifications are sent only after every close in the work package is done.\n- Escalation-blocked cases: a case whose transfer history is above the escalation threshold cannot be closed with attempt_close_case; such a case is closed via a direct update that also records the closure timestamp (closed_at).\n- Keep email and event bodies brief, and plan only the actions the work package requires.",
   "goal": {
     "case_fields": {
       "40": {

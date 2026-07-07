@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Major airports near Volklingen, Germany - Travelmath",
+    "url": "https://www.travelmath.com/nearest-airport/Volklingen,+Germany",
+    "content": "The nearest major airport is Saarbrücken Airport (SCN / EDDR). This airport has international and domestic flights from Saarbrucken, Germany and is 23 km from"
+  },
+  {
+    "title": "Airport Near Volklingen, Saarland, Germany",
+    "url": "https://airport.globefeed.com/germany_Nearest_Airport_Result.asp?lat=49.25&lng=6.85&place=Volklingen%2C+Saarland%2C+Germany&sr=gp",
+    "content": "Airport Name, City, IATA Code, Connectivity, Distance. Saarbrücken Airport, Saarbrücken, SCN, 19.25 km. Frankfurt-Hahn Airport, Frankfurt am Main, HHN, 83.22 km."
+  },
+  {
+    "title": "Valley International Airport (HRL) Charter Flights - Linear Air",
+    "url": "https://www.linearair.com/airport/valley-international-in-harlingen-tx-hrl",
+    "content": "HRL is the airport's IATA Code. What are nearby cities and towns to Valley International? Harlingen. Weslaco. San Juan."
+  },
+  {
+    "title": "Airports Near Me - 78550 - Travelmath",
+    "url": "https://www.travelmath.com/nearest-airport/78550",
+    "content": "The nearest major airport is Valley International Airport (HRL / KHRL). This airport has domestic flights from Harlingen ... code. Another major airport is"
+  },
+  {
+    "title": "Lufthansa Developer Center - Nearest Airports",
+    "url": "https://developer.lufthansa.com/docs/read/api_details/reference_data/Nearest_Airport",
+    "content": "# Nearest Airports. Find the 5 closest airports to the given latitude and longitude, irrespective of the radius of the reference point. Hence, a radius is not needed for this service. You can use the distance in the response to decide whether to present the user with more than one option or automatically choose the nearest. GET /references/airports/nearest/{latitude},{longitude} GET /references/airports/nearest/{latitude},{longitude}[? Range: -90 (South Pole) to +90 (North Pole), e.g. Range: -180 (West of Prime Meridian) to +180 (East of Prime Meridian). | *{languageCode**}* | Optionally return the airport names in only this language. If not specified, all languages will be in the response. | 2-letter ISO 639-1 language code, e.g. | .Airports | Container for airport elements. | ..Airport[] | Array of all available airports or one airport matching the request. | ...AirportCode | 3-letter IATA airport code, e.g. | @LanguageCode | 2-letter ISO 639-1 language code for the corresponding item. | ...Distance | How close is this airport to the reference point."
+  }
+]

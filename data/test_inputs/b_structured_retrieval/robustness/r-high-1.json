@@ -1,0 +1,20 @@
+{
+  "id": "r-high-1",
+  "archetype": "B",
+  "difficulty": "high",
+  "base_instance": "b-high-2",
+  "perturbation_type": "jargon_typos",
+  "instruction": "quick rundown on Sunrise Retail pls — total $ we've clsoed, when they last pinged us, n whats our next mtg?",
+  "ground_truth": {
+    "value": {
+      "won_total": 125000,
+      "last_contact": "2025-09-25",
+      "next_meeting": "2025-10-10"
+    },
+    "unit": "multi"
+  },
+  "provenance": {
+    "construction_method": "Surface perturbation (jargon_typos) of b-high-2; gold unchanged. Robustness check, not a new task.",
+    "license": "CC BY-NC 4.0"
+  }
+}
