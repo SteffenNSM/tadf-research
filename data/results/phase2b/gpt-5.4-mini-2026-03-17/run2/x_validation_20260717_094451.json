@@ -1,0 +1,1191 @@
+{
+  "timestamp": "20260717_094451",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "run_label": "run2",
+  "family": "X",
+  "runs": [
+    {
+      "instance": "x1-1",
+      "family": "X",
+      "variant": "x1_rule_on_outcome",
+      "difficulty": "na",
+      "sub_class": "x1_rule_on_outcome",
+      "paradigm": "workflow",
+      "correct": false,
+      "error": "9 validation errors for ReadPlan\nreads.0.args.filters.str\n  Input should be a valid string [type=string_type, input_value={'account_id': 15, 'id': [112, 120]}, input_type=dict]\n    For further informa"
+    },
+    {
+      "instance": "x1-1",
+      "family": "X",
+      "variant": "x1_rule_on_outcome",
+      "difficulty": "na",
+      "sub_class": "x1_rule_on_outcome",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I closed case 120 and notified the primary contact, and for case 112 I raised the priority to High and notified ops for ",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 5,
+      "input_tokens": 18909,
+      "output_tokens": 308,
+      "total_tokens": 19217,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26773.459477123
+        },
+        {
+          "tool": "db_read",
+          "t": 26773.460997015
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26774.775088702
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26774.776076154
+        },
+        {
+          "tool": "send_email",
+          "t": 26775.878114717
+        },
+        {
+          "tool": "db_update",
+          "t": 26777.579465497
+        },
+        {
+          "tool": "send_email",
+          "t": 26777.580352368
+        }
+      ],
+      "latency_s": 6.961996761001501,
+      "errors": []
+    },
+    {
+      "instance": "x1-2",
+      "family": "X",
+      "variant": "x1_rule_on_outcome",
+      "difficulty": "na",
+      "sub_class": "x1_rule_on_outcome",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3314,
+      "output_tokens": 318,
+      "total_tokens": 3632,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26780.616202169
+        },
+        {
+          "tool": "db_read",
+          "t": 26780.924791456
+        },
+        {
+          "tool": "db_read",
+          "t": 26781.268783958
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26783.072161611
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26783.073971572
+        }
+      ],
+      "latency_s": 4.180646691998845,
+      "errors": []
+    },
+    {
+      "instance": "x1-2",
+      "family": "X",
+      "variant": "x1_rule_on_outcome",
+      "difficulty": "na",
+      "sub_class": "x1_rule_on_outcome",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I closed case 5 and notified the account\u2019s primary contact, and for case 45 I raised the priority to High and emailed op",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 12672,
+      "output_tokens": 272,
+      "total_tokens": 12944,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26783.905944428
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26785.160907952
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26785.162972513
+        },
+        {
+          "tool": "send_email",
+          "t": 26786.501225235
+        },
+        {
+          "tool": "db_update",
+          "t": 26786.502021943
+        },
+        {
+          "tool": "send_email",
+          "t": 26786.502613849
+        }
+      ],
+      "latency_s": 5.8873785530013265,
+      "errors": []
+    },
+    {
+      "instance": "x1-3",
+      "family": "X",
+      "variant": "x1_rule_on_outcome",
+      "difficulty": "na",
+      "sub_class": "x1_rule_on_outcome",
+      "paradigm": "workflow",
+      "correct": false,
+      "error": "9 validation errors for ReadPlan\nreads.0.args.filters.str\n  Input should be a valid string [type=string_type, input_value={'id': [8, 31], 'account_id': 12}, input_type=dict]\n    For further informatio"
+    },
+    {
+      "instance": "x1-3",
+      "family": "X",
+      "variant": "x1_rule_on_outcome",
+      "difficulty": "na",
+      "sub_class": "x1_rule_on_outcome",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I closed case 8 and notified the primary contact, and for case 31 I raised priority to High and notified ops after the c",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 12711,
+      "output_tokens": 279,
+      "total_tokens": 12990,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26791.733786476
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26793.490147273
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26793.491095001
+        },
+        {
+          "tool": "send_email",
+          "t": 26795.557728752
+        },
+        {
+          "tool": "db_update",
+          "t": 26795.558854641
+        },
+        {
+          "tool": "send_email",
+          "t": 26795.559829412
+        }
+      ],
+      "latency_s": 6.800127817001339,
+      "errors": []
+    },
+    {
+      "instance": "x1-4",
+      "family": "X",
+      "variant": "x1_rule_on_outcome",
+      "difficulty": "na",
+      "sub_class": "x1_rule_on_outcome",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3272,
+      "output_tokens": 455,
+      "total_tokens": 3727,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26799.46681304
+        },
+        {
+          "tool": "db_read",
+          "t": 26799.743097039
+        },
+        {
+          "tool": "db_read",
+          "t": 26800.07086676
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26802.108664137
+        },
+        {
+          "tool": "send_email",
+          "t": 26802.111352843
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26802.408637809
+        },
+        {
+          "tool": "send_email",
+          "t": 26802.409625272
+        }
+      ],
+      "latency_s": 5.212058918001276,
+      "errors": []
+    },
+    {
+      "instance": "x1-4",
+      "family": "X",
+      "variant": "x1_rule_on_outcome",
+      "difficulty": "na",
+      "sub_class": "x1_rule_on_outcome",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I closed case 66 and emailed account 11\u2019s primary contact, and for case 29 I raised priority to High and notified ops wi",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 12572,
+      "output_tokens": 270,
+      "total_tokens": 12842,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26803.8617193
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26805.498650025
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26805.49990852
+        },
+        {
+          "tool": "send_email",
+          "t": 26806.828690358
+        },
+        {
+          "tool": "db_update",
+          "t": 26806.829384274
+        },
+        {
+          "tool": "send_email",
+          "t": 26806.829929582
+        }
+      ],
+      "latency_s": 5.406097701001272,
+      "errors": []
+    },
+    {
+      "instance": "x1-5",
+      "family": "X",
+      "variant": "x1_rule_on_outcome",
+      "difficulty": "na",
+      "sub_class": "x1_rule_on_outcome",
+      "paradigm": "workflow",
+      "correct": false,
+      "error": "9 validation errors for ReadPlan\nreads.0.args.filters.str\n  Input should be a valid string [type=string_type, input_value={'account_id': 13, 'id': [67, 12]}, input_type=dict]\n    For further informati"
+    },
+    {
+      "instance": "x1-5",
+      "family": "X",
+      "variant": "x1_rule_on_outcome",
+      "difficulty": "na",
+      "sub_class": "x1_rule_on_outcome",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I closed case 67 and emailed the account\u2019s primary contact, and left case 12 untouched because it was already closed.",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 9260,
+      "output_tokens": 163,
+      "total_tokens": 9423,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26810.906101625
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26810.907408612
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26810.908600468
+        },
+        {
+          "tool": "send_email",
+          "t": 26812.358440325
+        }
+      ],
+      "latency_s": 3.7448359339978197,
+      "errors": []
+    },
+    {
+      "instance": "x2-1",
+      "family": "X",
+      "variant": "x2_chain_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x2_chain_heterogeneous",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 2 actions with failures",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2896,
+      "output_tokens": 280,
+      "total_tokens": 3176,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26814.821130743
+        },
+        {
+          "tool": "db_read",
+          "t": 26815.144646392
+        },
+        {
+          "tool": "db_search",
+          "t": 26816.909943682
+        },
+        {
+          "tool": "db_update",
+          "t": 26816.910217736
+        }
+      ],
+      "latency_s": 3.4234389509983885,
+      "errors": [
+        "tool_error: 2 validation errors for db_search\ncolumn\n  Field required [type=missing, input_value={'table': 'opportunities'...rs': {'account_id': 19}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nquery\n  Field required [type=missing, input_value={'table': 'opportunities'...rs': {'account_id': 19}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 1 validation error for db_update\nrecord_id\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='<opportunity_id_1>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/int_parsing"
+      ]
+    },
+    {
+      "instance": "x2-1",
+      "family": "X",
+      "variant": "x2_chain_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x2_chain_heterogeneous",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "I ran the quarterly pipeline touch-up for the account tied to contact040@example.com, updating all eligible opportunitie",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 4,
+      "input_tokens": 12163,
+      "output_tokens": 212,
+      "total_tokens": 12375,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26817.859303859
+        },
+        {
+          "tool": "db_read",
+          "t": 26819.390107199
+        },
+        {
+          "tool": "db_update",
+          "t": 26820.846931412
+        },
+        {
+          "tool": "db_update",
+          "t": 26820.847694841
+        },
+        {
+          "tool": "db_update",
+          "t": 26820.848826837
+        },
+        {
+          "tool": "db_update",
+          "t": 26820.850634135
+        }
+      ],
+      "latency_s": 5.231800386001851,
+      "errors": []
+    },
+    {
+      "instance": "x2-2",
+      "family": "X",
+      "variant": "x2_chain_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x2_chain_heterogeneous",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 1 actions with failures",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2897,
+      "output_tokens": 238,
+      "total_tokens": 3135,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26823.622449214
+        },
+        {
+          "tool": "db_read",
+          "t": 26823.96720265
+        },
+        {
+          "tool": "db_search",
+          "t": 26825.692889943
+        }
+      ],
+      "latency_s": 3.5018000320014835,
+      "errors": [
+        "tool_error: 2 validation errors for db_search\ncolumn\n  Field required [type=missing, input_value={'table': 'opportunities'...ers': {'account_id': 9}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nquery\n  Field required [type=missing, input_value={'table': 'opportunities'...ers': {'account_id': 9}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+      ]
+    },
+    {
+      "instance": "x2-2",
+      "family": "X",
+      "variant": "x2_chain_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x2_chain_heterogeneous",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I updated the non-won opportunities for Contact 017\u2019s account to the runbook stages, and reassigned the 170,957 opportun",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 12125,
+      "output_tokens": 193,
+      "total_tokens": 12318,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26826.525387422
+        },
+        {
+          "tool": "db_read",
+          "t": 26827.820677142
+        },
+        {
+          "tool": "db_update",
+          "t": 26829.156275204
+        },
+        {
+          "tool": "db_update",
+          "t": 26829.158045627
+        },
+        {
+          "tool": "db_update",
+          "t": 26829.159543526
+        }
+      ],
+      "latency_s": 4.6995657379993645,
+      "errors": []
+    },
+    {
+      "instance": "x2-3",
+      "family": "X",
+      "variant": "x2_chain_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x2_chain_heterogeneous",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions with failures",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2897,
+      "output_tokens": 399,
+      "total_tokens": 3296,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26832.107516938
+        },
+        {
+          "tool": "db_read",
+          "t": 26832.410036054
+        },
+        {
+          "tool": "db_search",
+          "t": 26834.530365751
+        },
+        {
+          "tool": "db_update",
+          "t": 26834.5306981
+        },
+        {
+          "tool": "db_update",
+          "t": 26834.531012378
+        },
+        {
+          "tool": "db_update",
+          "t": 26834.531253655
+        }
+      ],
+      "latency_s": 4.100388836002821,
+      "errors": [
+        "tool_error: 2 validation errors for db_search\ncolumn\n  Field required [type=missing, input_value={'table': 'opportunities'...rs': {'account_id': 16}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nquery\n  Field required [type=missing, input_value={'table': 'opportunities'...rs': {'account_id': 16}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 1 validation error for db_update\nrecord_id\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='<opportunity_id>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/int_parsing",
+        "tool_error: 1 validation error for db_update\nrecord_id\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='<opportunity_id>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/int_parsing",
+        "tool_error: 1 validation error for db_update\nrecord_id\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='<opportunity_id>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/int_parsing"
+      ]
+    },
+    {
+      "instance": "x2-3",
+      "family": "X",
+      "variant": "x2_chain_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x2_chain_heterogeneous",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I updated the account\u2019s open opportunities per the runbook: set opportunity 003 and 030 to Proposal, opportunity 009 and",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 12172,
+      "output_tokens": 229,
+      "total_tokens": 12401,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26835.92004244
+        },
+        {
+          "tool": "db_read",
+          "t": 26837.028460671
+        },
+        {
+          "tool": "db_update",
+          "t": 26838.573814545
+        },
+        {
+          "tool": "db_update",
+          "t": 26838.575175267
+        },
+        {
+          "tool": "db_update",
+          "t": 26838.576447086
+        },
+        {
+          "tool": "db_update",
+          "t": 26838.577885979
+        }
+      ],
+      "latency_s": 4.923586331002298,
+      "errors": []
+    },
+    {
+      "instance": "x2-4",
+      "family": "X",
+      "variant": "x2_chain_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x2_chain_heterogeneous",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions with failures",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2898,
+      "output_tokens": 385,
+      "total_tokens": 3283,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26840.821719323
+        },
+        {
+          "tool": "db_read",
+          "t": 26841.148791904
+        },
+        {
+          "tool": "db_search",
+          "t": 26843.693647376
+        },
+        {
+          "tool": "db_update",
+          "t": 26843.693896579
+        },
+        {
+          "tool": "db_update",
+          "t": 26843.694121312
+        },
+        {
+          "tool": "db_update",
+          "t": 26843.694336916
+        }
+      ],
+      "latency_s": 4.1949707829990075,
+      "errors": [
+        "tool_error: 2 validation errors for db_search\ncolumn\n  Field required [type=missing, input_value={'table': 'opportunities'...rs': {'account_id': 20}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nquery\n  Field required [type=missing, input_value={'table': 'opportunities'...rs': {'account_id': 20}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 1 validation error for db_update\nrecord_id\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='{{opportunity_id}}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/int_parsing",
+        "tool_error: 1 validation error for db_update\nrecord_id\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='{{opportunity_id}}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/int_parsing",
+        "tool_error: 1 validation error for db_update\nrecord_id\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='{{opportunity_id}}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/int_parsing"
+      ]
+    },
+    {
+      "instance": "x2-4",
+      "family": "X",
+      "variant": "x2_chain_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x2_chain_heterogeneous",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I updated the account\u2019s eligible opportunities: opportunity 18 moved to Negotiation and was reassigned to agent 9, and o",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 12077,
+      "output_tokens": 166,
+      "total_tokens": 12243,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26845.052753873
+        },
+        {
+          "tool": "db_read",
+          "t": 26846.660770207
+        },
+        {
+          "tool": "db_update",
+          "t": 26847.891728835
+        },
+        {
+          "tool": "db_update",
+          "t": 26847.892563318
+        }
+      ],
+      "latency_s": 5.591857989002165,
+      "errors": []
+    },
+    {
+      "instance": "x2-5",
+      "family": "X",
+      "variant": "x2_chain_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x2_chain_heterogeneous",
+      "paradigm": "workflow",
+      "correct": false,
+      "error": "18 validation errors for ActionPlan\nactions.0.args.record_id.str\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://er"
+    },
+    {
+      "instance": "x2-5",
+      "family": "X",
+      "variant": "x2_chain_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x2_chain_heterogeneous",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I updated the account\u2019s open opportunities by moving opportunity 1 to Proposal and opportunity 44 to Negotiation with ag",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 12245,
+      "output_tokens": 167,
+      "total_tokens": 12412,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26855.263629825
+        },
+        {
+          "tool": "db_read",
+          "t": 26856.582210779
+        },
+        {
+          "tool": "db_update",
+          "t": 26857.688839294
+        },
+        {
+          "tool": "db_update",
+          "t": 26857.690067758
+        }
+      ],
+      "latency_s": 5.333425797998643,
+      "errors": []
+    },
+    {
+      "instance": "x3-1",
+      "family": "X",
+      "variant": "x3_rules_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x3_rules_heterogeneous",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 7 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3562,
+      "output_tokens": 452,
+      "total_tokens": 4014,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26859.926432795
+        },
+        {
+          "tool": "db_update",
+          "t": 26862.381487515
+        },
+        {
+          "tool": "db_update",
+          "t": 26862.383617293
+        },
+        {
+          "tool": "db_update",
+          "t": 26862.385559547
+        },
+        {
+          "tool": "db_update",
+          "t": 26862.387417328
+        },
+        {
+          "tool": "db_update",
+          "t": 26862.389206412
+        },
+        {
+          "tool": "db_update",
+          "t": 26862.391067932
+        },
+        {
+          "tool": "db_update",
+          "t": 26862.392905779
+        }
+      ],
+      "latency_s": 3.6998417309987417,
+      "errors": []
+    },
+    {
+      "instance": "x3-1",
+      "family": "X",
+      "variant": "x3_rules_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x3_rules_heterogeneous",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I applied the triage rules to all non-closed cases for account 15, updating assignments and priorities as specified.",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 10128,
+      "output_tokens": 253,
+      "total_tokens": 10381,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26863.662749323
+        },
+        {
+          "tool": "db_update",
+          "t": 26867.246849364
+        },
+        {
+          "tool": "db_update",
+          "t": 26867.247610852
+        },
+        {
+          "tool": "db_update",
+          "t": 26867.249430048
+        },
+        {
+          "tool": "db_update",
+          "t": 26867.250280539
+        },
+        {
+          "tool": "db_update",
+          "t": 26867.251063663
+        },
+        {
+          "tool": "db_update",
+          "t": 26867.252390842
+        },
+        {
+          "tool": "db_update",
+          "t": 26867.253033503
+        }
+      ],
+      "latency_s": 9.846039902000484,
+      "errors": []
+    },
+    {
+      "instance": "x3-2",
+      "family": "X",
+      "variant": "x3_rules_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x3_rules_heterogeneous",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 5 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3405,
+      "output_tokens": 344,
+      "total_tokens": 3749,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26873.386553841
+        },
+        {
+          "tool": "db_update",
+          "t": 26875.433510611
+        },
+        {
+          "tool": "db_update",
+          "t": 26875.435655736
+        },
+        {
+          "tool": "db_update",
+          "t": 26875.437369836
+        },
+        {
+          "tool": "db_update",
+          "t": 26875.439068935
+        },
+        {
+          "tool": "db_update",
+          "t": 26875.439895322
+        }
+      ],
+      "latency_s": 3.1567537449991505,
+      "errors": []
+    },
+    {
+      "instance": "x3-2",
+      "family": "X",
+      "variant": "x3_rules_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x3_rules_heterogeneous",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I applied the triage rules to account 16\u2019s non-closed cases: case 16 was moved to Medium and assigned to agent 6, cases ",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 9722,
+      "output_tokens": 232,
+      "total_tokens": 9954,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26876.486863096
+        },
+        {
+          "tool": "db_update",
+          "t": 26878.307160779
+        },
+        {
+          "tool": "db_update",
+          "t": 26878.30882783
+        },
+        {
+          "tool": "db_update",
+          "t": 26878.310203642
+        },
+        {
+          "tool": "db_update",
+          "t": 26878.311828106
+        },
+        {
+          "tool": "db_update",
+          "t": 26878.312596937
+        }
+      ],
+      "latency_s": 4.479555507001351,
+      "errors": []
+    },
+    {
+      "instance": "x3-3",
+      "family": "X",
+      "variant": "x3_rules_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x3_rules_heterogeneous",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 5 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3586,
+      "output_tokens": 357,
+      "total_tokens": 3943,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26881.443130113
+        },
+        {
+          "tool": "db_update",
+          "t": 26883.526871476
+        },
+        {
+          "tool": "db_update",
+          "t": 26883.528918371
+        },
+        {
+          "tool": "db_update",
+          "t": 26883.530722126
+        },
+        {
+          "tool": "db_update",
+          "t": 26883.532378283
+        },
+        {
+          "tool": "db_update",
+          "t": 26883.534154374
+        }
+      ],
+      "latency_s": 3.5771577399973467,
+      "errors": []
+    },
+    {
+      "instance": "x3-3",
+      "family": "X",
+      "variant": "x3_rules_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x3_rules_heterogeneous",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I triaged account 18\u2019s open cases by handing high-priority cases to agent 8, raising the medium-priority case to High, a",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 10095,
+      "output_tokens": 229,
+      "total_tokens": 10324,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26884.310221859
+        },
+        {
+          "tool": "db_update",
+          "t": 26886.664081666
+        },
+        {
+          "tool": "db_update",
+          "t": 26886.66545021
+        },
+        {
+          "tool": "db_update",
+          "t": 26886.666666175
+        },
+        {
+          "tool": "db_update",
+          "t": 26886.667834184
+        },
+        {
+          "tool": "db_update",
+          "t": 26886.669313532
+        }
+      ],
+      "latency_s": 4.374849044997973,
+      "errors": []
+    },
+    {
+      "instance": "x3-4",
+      "family": "X",
+      "variant": "x3_rules_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x3_rules_heterogeneous",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 8 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3407,
+      "output_tokens": 536,
+      "total_tokens": 3943,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26889.160167061
+        },
+        {
+          "tool": "db_update",
+          "t": 26892.022114067
+        },
+        {
+          "tool": "db_update",
+          "t": 26892.024300137
+        },
+        {
+          "tool": "db_update",
+          "t": 26892.02528709
+        },
+        {
+          "tool": "db_update",
+          "t": 26892.027315623
+        },
+        {
+          "tool": "db_update",
+          "t": 26892.029117876
+        },
+        {
+          "tool": "db_update",
+          "t": 26892.031020796
+        },
+        {
+          "tool": "db_update",
+          "t": 26892.033423468
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26892.03556084
+        }
+      ],
+      "latency_s": 4.090525284002069,
+      "errors": []
+    },
+    {
+      "instance": "x3-4",
+      "family": "X",
+      "variant": "x3_rules_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x3_rules_heterogeneous",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I triaged account 12\u2019s non-closed cases by reassigning high-priority cases to agent 6, raising medium-priority cases to ",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 9737,
+      "output_tokens": 232,
+      "total_tokens": 9969,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26893.057338333
+        },
+        {
+          "tool": "db_update",
+          "t": 26894.764033288
+        },
+        {
+          "tool": "db_update",
+          "t": 26894.766540777
+        },
+        {
+          "tool": "db_update",
+          "t": 26894.767356487
+        },
+        {
+          "tool": "db_update",
+          "t": 26894.768200574
+        },
+        {
+          "tool": "db_update",
+          "t": 26894.769434298
+        }
+      ],
+      "latency_s": 3.8769014819990844,
+      "errors": []
+    },
+    {
+      "instance": "x3-5",
+      "family": "X",
+      "variant": "x3_rules_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x3_rules_heterogeneous",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 5 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3318,
+      "output_tokens": 376,
+      "total_tokens": 3694,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26899.739353883
+        },
+        {
+          "tool": "db_update",
+          "t": 26902.047222461
+        },
+        {
+          "tool": "db_update",
+          "t": 26902.049381501
+        },
+        {
+          "tool": "db_update",
+          "t": 26902.051499604
+        },
+        {
+          "tool": "db_update",
+          "t": 26902.053405395
+        },
+        {
+          "tool": "db_update",
+          "t": 26902.055176195
+        }
+      ],
+      "latency_s": 6.102472724000108,
+      "errors": []
+    },
+    {
+      "instance": "x3-5",
+      "family": "X",
+      "variant": "x3_rules_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x3_rules_heterogeneous",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I applied the triage rules to all non-closed cases for account 19, updating priorities and/or agent assignments as speci",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 9557,
+      "output_tokens": 213,
+      "total_tokens": 9770,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26902.787957216
+        },
+        {
+          "tool": "db_update",
+          "t": 26904.52119237
+        },
+        {
+          "tool": "db_update",
+          "t": 26904.522524189
+        },
+        {
+          "tool": "db_update",
+          "t": 26904.523691275
+        },
+        {
+          "tool": "db_update",
+          "t": 26904.524940632
+        },
+        {
+          "tool": "db_update",
+          "t": 26904.527799204
+        }
+      ],
+      "latency_s": 3.8159054609968734,
+      "errors": []
+    }
+  ]
+}

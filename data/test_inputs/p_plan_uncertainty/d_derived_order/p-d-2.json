@@ -1,0 +1,15 @@
+{
+ "id": "p-d-2",
+ "archetype": "P",
+ "family": "P (Phase 2b, plan uncertainty)",
+ "variant": "d_derived_order",
+ "difficulty": "na",
+ "sub_class": "d_derived_order",
+ "instruction": "Please ping the owners of the non-closed cases for account 13, subject 'Case <id> escalation check' -- highest priority first, and where the priority is the same, the older case goes first.\n\nNotification runbook (excerpt):\n- One email per record, addressed to the responsible agent (the record's assigned agent; agent addresses follow the agentNN@atlas.com pattern and are listed in the agents table).\n- Send the notifications one at a time in the required order, so the audit trail reflects the sequence.\n- Do not modify any records while notifying.",
+ "expected_post_state": "Four new outbox emails, in send order: case 84 (High, 2025-02-17), case 67 (High, 2025-11-15), case 22 (Medium), case 18 (Low), each to its assigned agent; no records modified.",
+ "provenance": {
+  "source_benchmark": "Author-constructed (Phase 2b family P, plan uncertainty); surface style follows WorkBench (Styles et al., 2024) and the archetype-F instances",
+  "adaptation": "Instance designed by the author to isolate one plan-uncertainty axis (build decision IT-055): action count derivable from a read (a), action count dependent on runtime outcomes (b), unknown source tool (c), or ordering derived from record data (d). Entities reference the deterministic seed in seed_crm.py for stable post-state predicates. Paradigm implementations are reused unchanged from archetype F.",
+  "license": "Original work by the author (task design); benchmark style reference only"
+ }
+}

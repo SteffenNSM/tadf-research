@@ -1,0 +1,16 @@
+{
+ "id": "l-m20-2",
+ "archetype": "L",
+ "family": "L (Phase 2b, payload scaling)",
+ "variant": "mail_scaling",
+ "level": 20,
+ "difficulty": "na",
+ "sub_class": "mail_scaling_x20",
+ "instruction": "Somewhere in the mailbox are the 'Pricing question' mails -- find the oldest one and send a short note to agent03@atlas.com, subject 'Oldest pricing question', with the date it came in.\n\nWorkspace note:\n- Notes state dates in YYYY-MM-DD format.",
+ "expected_post_state": "Exactly one new outbox email to agent03@atlas.com with subject 'Oldest pricing question' and a body containing '2025-03-02' (oldest of 60 'Pricing question' mails among 200 overlay mails); no record changes, no events.",
+ "provenance": {
+  "source_benchmark": "Author-constructed (Phase 2b family L, payload scaling); surface style follows WorkBench (Styles et al., 2024) and the archetype-B/F instances",
+  "adaptation": "Instance designed by the author to scale input volume at constant task content (build decision IT-055): identical instruction templates across payload levels x1/x5/x20; per-instance deterministic overlay (fresh id ranges) inserted after the standard DB reset, identical for both paradigms; aggregation targets (argmax) so payload cannot be bypassed by exact-match filters. Paradigms reused unchanged from archetype F.",
+  "license": "Original work by the author (task design); benchmark style reference only"
+ }
+}

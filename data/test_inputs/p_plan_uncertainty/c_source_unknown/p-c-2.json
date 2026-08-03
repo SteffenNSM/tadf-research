@@ -1,0 +1,15 @@
+{
+ "id": "p-c-2",
+ "archetype": "P",
+ "family": "P (Phase 2b, plan uncertainty)",
+ "variant": "c_source_unknown",
+ "difficulty": "na",
+ "sub_class": "c_source_unknown",
+ "instruction": "When is the product demo with contact010@example.com happening? I couldn't say whether it's on the calendar or only mentioned in an email or a case somewhere. Please find it and send a note to agent06@atlas.com, subject 'Product demo timing', with the date.\n\nWorkspace note:\n- Customer touchpoints end up in different places -- some in the shared mailbox, some on the team calendar, some as CRM cases. Where a given item landed is not always known.\n- Notes state dates in YYYY-MM-DD format.",
+ "expected_post_state": "The item is calendar event 12 ('Product demo', 2025-12-23 18:00). Exactly one new outbox email to agent06@atlas.com with subject 'Product demo timing' and a body containing '2025-12-23'; no CRM changes, no events created or modified.",
+ "provenance": {
+  "source_benchmark": "Author-constructed (Phase 2b family P, plan uncertainty); surface style follows WorkBench (Styles et al., 2024) and the archetype-F instances",
+  "adaptation": "Instance designed by the author to isolate one plan-uncertainty axis (build decision IT-055): action count derivable from a read (a), action count dependent on runtime outcomes (b), unknown source tool (c), or ordering derived from record data (d). Entities reference the deterministic seed in seed_crm.py for stable post-state predicates. Paradigm implementations are reused unchanged from archetype F.",
+  "license": "Original work by the author (task design); benchmark style reference only"
+ }
+}

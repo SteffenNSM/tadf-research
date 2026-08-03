@@ -1,0 +1,106 @@
+{
+  "timestamp": "20260716_155925",
+  "model": "gpt-5.4-nano-2026-03-17",
+  "run_label": "run2",
+  "family": "P",
+  "runs": [
+    {
+      "instance": "p-d-3",
+      "family": "P",
+      "variant": "d_derived_order",
+      "difficulty": "na",
+      "sub_class": "d_derived_order",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3577,
+      "output_tokens": 639,
+      "total_tokens": 4216,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 19779.05216089
+        },
+        {
+          "tool": "db_read",
+          "t": 19779.350691987
+        },
+        {
+          "tool": "send_email",
+          "t": 19783.611363437
+        },
+        {
+          "tool": "send_email",
+          "t": 19783.913489309
+        },
+        {
+          "tool": "send_email",
+          "t": 19784.214275067
+        },
+        {
+          "tool": "send_email",
+          "t": 19784.495087086
+        }
+      ],
+      "latency_s": 8.296402759002376,
+      "errors": []
+    },
+    {
+      "instance": "p-d-3",
+      "family": "P",
+      "variant": "d_derived_order",
+      "difficulty": "na",
+      "sub_class": "d_derived_order",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Sent pipeline review emails (largest deal first) for Account 19 opportunities 012 to agent05@atlas.com, 016 to agent01@a",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 7,
+      "input_tokens": 29034,
+      "output_tokens": 565,
+      "total_tokens": 29599,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 19785.761546402
+        },
+        {
+          "tool": "db_read",
+          "t": 19786.905209631
+        },
+        {
+          "tool": "db_read",
+          "t": 19788.307244157
+        },
+        {
+          "tool": "send_email",
+          "t": 19791.495058266
+        },
+        {
+          "tool": "send_email",
+          "t": 19791.496672539
+        },
+        {
+          "tool": "send_email",
+          "t": 19791.498102879
+        },
+        {
+          "tool": "send_email",
+          "t": 19793.208702142
+        },
+        {
+          "tool": "send_email",
+          "t": 19794.871955612
+        }
+      ],
+      "latency_s": 11.682464608002192,
+      "errors": [
+        "tool_error: 2 validation errors for send_email\nsubject\n  Field required [type=missing, input_value={'recipient': 'functions....anks,\\nuser@atlas.com'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nbody\n  Field required [type=missing, input_value={'recipient': 'functions....anks,\\nuser@atlas.com'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+      ]
+    }
+  ]
+}

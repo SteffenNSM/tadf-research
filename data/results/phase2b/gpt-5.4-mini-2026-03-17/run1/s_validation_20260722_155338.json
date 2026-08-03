@@ -1,0 +1,1039 @@
+{
+  "timestamp": "20260722_155338",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "run_label": "run1",
+  "family": "S",
+  "runs": [
+    {
+      "instance": "x1-1",
+      "family": "S",
+      "variant": "s1_enumerated_switch",
+      "difficulty": "na",
+      "sub_class": "x1_rule_on_outcome",
+      "source_family": "X",
+      "paradigm": "state_machine",
+      "correct": true,
+      "summary": "State machine executed 5 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 4119,
+      "output_tokens": 689,
+      "total_tokens": 4808,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 163650.318665491
+        },
+        {
+          "tool": "db_read",
+          "t": 163650.592728208
+        },
+        {
+          "tool": "db_read",
+          "t": 163650.912391512
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163655.448802638
+        },
+        {
+          "tool": "send_email",
+          "t": 163655.452660912
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163655.754449056
+        },
+        {
+          "tool": "db_update",
+          "t": 163655.755920557
+        },
+        {
+          "tool": "send_email",
+          "t": 163655.758590725
+        }
+      ],
+      "latency_s": 8.66590155599988,
+      "errors": []
+    },
+    {
+      "instance": "x1-2",
+      "family": "S",
+      "variant": "s1_enumerated_switch",
+      "difficulty": "na",
+      "sub_class": "x1_rule_on_outcome",
+      "source_family": "X",
+      "paradigm": "state_machine",
+      "correct": false,
+      "error": "9 validation errors for ReadPlan\nreads.0.args.filters.str\n  Input should be a valid string [type=string_type, input_value={'account_id': 4, 'id': [5, 45]}, input_type=dict]\n    For further information"
+    },
+    {
+      "instance": "x1-3",
+      "family": "S",
+      "variant": "s1_enumerated_switch",
+      "difficulty": "na",
+      "sub_class": "x1_rule_on_outcome",
+      "source_family": "X",
+      "paradigm": "state_machine",
+      "correct": false,
+      "error": "9 validation errors for ReadPlan\nreads.0.args.filters.str\n  Input should be a valid string [type=string_type, input_value={'id': [8, 31], 'account_id': 12}, input_type=dict]\n    For further informatio"
+    },
+    {
+      "instance": "x1-4",
+      "family": "S",
+      "variant": "s1_enumerated_switch",
+      "difficulty": "na",
+      "sub_class": "x1_rule_on_outcome",
+      "source_family": "X",
+      "paradigm": "state_machine",
+      "correct": false,
+      "error": "9 validation errors for ReadPlan\nreads.0.args.filters.str\n  Input should be a valid string [type=string_type, input_value={'id': [66, 29], 'account_id': 11}, input_type=dict]\n    For further informati"
+    },
+    {
+      "instance": "x1-5",
+      "family": "S",
+      "variant": "s1_enumerated_switch",
+      "difficulty": "na",
+      "sub_class": "x1_rule_on_outcome",
+      "source_family": "X",
+      "paradigm": "state_machine",
+      "correct": true,
+      "summary": "State machine executed 3 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 4177,
+      "output_tokens": 636,
+      "total_tokens": 4813,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 163664.568645864
+        },
+        {
+          "tool": "db_read",
+          "t": 163664.849472533
+        },
+        {
+          "tool": "db_read",
+          "t": 163665.160260097
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163668.992800562
+        },
+        {
+          "tool": "send_email",
+          "t": 163668.996358974
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163669.314848111
+        }
+      ],
+      "latency_s": 6.537402607995318,
+      "errors": []
+    },
+    {
+      "instance": "p-b-1",
+      "family": "S",
+      "variant": "s2_bounded_until",
+      "difficulty": "na",
+      "sub_class": "b_count_outcome",
+      "source_family": "P",
+      "paradigm": "state_machine",
+      "correct": false,
+      "summary": "State machine executed 4 actions (batch stopped early)",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 4408,
+      "output_tokens": 737,
+      "total_tokens": 5145,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 163671.193605362
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163675.4100225
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163675.413244026
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163675.415729848
+        },
+        {
+          "tool": "send_email",
+          "t": 163675.41691165
+        }
+      ],
+      "latency_s": 6.368424078013049,
+      "errors": []
+    },
+    {
+      "instance": "p-b-2",
+      "family": "S",
+      "variant": "s2_bounded_until",
+      "difficulty": "na",
+      "sub_class": "b_count_outcome",
+      "source_family": "P",
+      "paradigm": "state_machine",
+      "correct": false,
+      "summary": "State machine executed 2 actions (batch stopped early)",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 4396,
+      "output_tokens": 740,
+      "total_tokens": 5136,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 163692.319404034
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163696.830508253
+        },
+        {
+          "tool": "send_email",
+          "t": 163696.83197118
+        }
+      ],
+      "latency_s": 21.397683100018185,
+      "errors": []
+    },
+    {
+      "instance": "p-b-3",
+      "family": "S",
+      "variant": "s2_bounded_until",
+      "difficulty": "na",
+      "sub_class": "b_count_outcome",
+      "source_family": "P",
+      "paradigm": "state_machine",
+      "correct": false,
+      "summary": "State machine executed 3 actions (batch stopped early)",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 4452,
+      "output_tokens": 771,
+      "total_tokens": 5223,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 163699.165562911
+        },
+        {
+          "tool": "db_read",
+          "t": 163699.454076098
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163704.221193387
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163704.224837499
+        },
+        {
+          "tool": "send_email",
+          "t": 163704.226292761
+        }
+      ],
+      "latency_s": 7.406692581018433,
+      "errors": []
+    },
+    {
+      "instance": "p-b-4",
+      "family": "S",
+      "variant": "s2_bounded_until",
+      "difficulty": "na",
+      "sub_class": "b_count_outcome",
+      "source_family": "P",
+      "paradigm": "state_machine",
+      "correct": true,
+      "summary": "State machine executed 4 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 4402,
+      "output_tokens": 669,
+      "total_tokens": 5071,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 163706.216649447
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163710.34289277
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163710.346203625
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163710.348826594
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163710.351142852
+        }
+      ],
+      "latency_s": 5.76264058900415,
+      "errors": []
+    },
+    {
+      "instance": "p-b-5",
+      "family": "S",
+      "variant": "s2_bounded_until",
+      "difficulty": "na",
+      "sub_class": "b_count_outcome",
+      "source_family": "P",
+      "paradigm": "state_machine",
+      "correct": true,
+      "summary": "State machine executed 3 actions (batch stopped early)",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 4297,
+      "output_tokens": 755,
+      "total_tokens": 5052,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 163711.741774515
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163716.446010467
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163716.449309485
+        },
+        {
+          "tool": "send_email",
+          "t": 163716.450651958
+        }
+      ],
+      "latency_s": 6.3689728589961305,
+      "errors": []
+    },
+    {
+      "instance": "s3-1",
+      "family": "S",
+      "variant": "s3_content_synthesis",
+      "difficulty": "na",
+      "sub_class": "s3_content_synthesis",
+      "source_family": "S",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 6 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 9671,
+      "output_tokens": 474,
+      "total_tokens": 10145,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 163718.722510703
+        },
+        {
+          "tool": "db_search",
+          "t": 163718.994375294
+        },
+        {
+          "tool": "db_search",
+          "t": 163719.270205697
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163722.735753634
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163722.738632548
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163722.739726798
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163722.742126756
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163722.745025514
+        },
+        {
+          "tool": "send_email",
+          "t": 163722.747598194
+        }
+      ],
+      "latency_s": 6.259150316996966,
+      "errors": []
+    },
+    {
+      "instance": "s3-1",
+      "family": "S",
+      "variant": "s3_content_synthesis",
+      "difficulty": "na",
+      "sub_class": "s3_content_synthesis",
+      "source_family": "S",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "I closed cases 62, 40, and 118 for account 14, stopped at the first refused close on case 17, and sent the required batc",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 4,
+      "input_tokens": 14084,
+      "output_tokens": 251,
+      "total_tokens": 14335,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 163724.089988642
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163726.49373954
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163726.495498512
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163726.49635233
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163726.497937471
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163726.499228932
+        },
+        {
+          "tool": "send_email",
+          "t": 163727.761076763
+        }
+      ],
+      "latency_s": 6.51870484900428,
+      "errors": []
+    },
+    {
+      "instance": "s3-1",
+      "family": "S",
+      "variant": "s3_content_synthesis",
+      "difficulty": "na",
+      "sub_class": "s3_content_synthesis",
+      "source_family": "S",
+      "paradigm": "state_machine",
+      "correct": false,
+      "summary": "State machine executed 4 actions (batch stopped early)",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 4576,
+      "output_tokens": 544,
+      "total_tokens": 5120,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 163731.484967832
+        },
+        {
+          "tool": "db_read",
+          "t": 163731.753762033
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163736.527173433
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163736.530261455
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163736.533223963
+        },
+        {
+          "tool": "send_email",
+          "t": 163736.534439263
+        }
+      ],
+      "latency_s": 7.220516564993886,
+      "errors": []
+    },
+    {
+      "instance": "s3-2",
+      "family": "S",
+      "variant": "s3_content_synthesis",
+      "difficulty": "na",
+      "sub_class": "s3_content_synthesis",
+      "source_family": "S",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 6 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3659,
+      "output_tokens": 417,
+      "total_tokens": 4076,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 163738.777820505
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163741.584331792
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163741.585612508
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163741.588610997
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163741.591296254
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163741.593999916
+        },
+        {
+          "tool": "send_email",
+          "t": 163741.596430675
+        }
+      ],
+      "latency_s": 5.0677501799946185,
+      "errors": []
+    },
+    {
+      "instance": "s3-2",
+      "family": "S",
+      "variant": "s3_content_synthesis",
+      "difficulty": "na",
+      "sub_class": "s3_content_synthesis",
+      "source_family": "S",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "I worked the open casework for account 16 oldest-first, closed cases 54, 104, 81, and 16 before the first refusal on cas",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 4,
+      "input_tokens": 14117,
+      "output_tokens": 268,
+      "total_tokens": 14385,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 163743.496470673
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163745.544093394
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163745.546891227
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163745.547720817
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163745.548587245
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163745.550098226
+        },
+        {
+          "tool": "send_email",
+          "t": 163747.002481879
+        }
+      ],
+      "latency_s": 6.971391115017468,
+      "errors": []
+    },
+    {
+      "instance": "s3-2",
+      "family": "S",
+      "variant": "s3_content_synthesis",
+      "difficulty": "na",
+      "sub_class": "s3_content_synthesis",
+      "source_family": "S",
+      "paradigm": "state_machine",
+      "correct": false,
+      "summary": "State machine executed 6 actions (batch stopped early)",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 4578,
+      "output_tokens": 524,
+      "total_tokens": 5102,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 163750.539409184
+        },
+        {
+          "tool": "db_read",
+          "t": 163750.797116045
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163753.924199253
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163753.92714934
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163753.92997907
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163753.932195524
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163753.934729599
+        },
+        {
+          "tool": "send_email",
+          "t": 163753.935937471
+        }
+      ],
+      "latency_s": 5.3171814150118735,
+      "errors": []
+    },
+    {
+      "instance": "s3-3",
+      "family": "S",
+      "variant": "s3_content_synthesis",
+      "difficulty": "na",
+      "sub_class": "s3_content_synthesis",
+      "source_family": "S",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 5 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3661,
+      "output_tokens": 361,
+      "total_tokens": 4022,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 163755.822962084
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163758.704542121
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163758.707643861
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163758.708934058
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163758.711226323
+        },
+        {
+          "tool": "send_email",
+          "t": 163758.713724606
+        }
+      ],
+      "latency_s": 4.710998373979237,
+      "errors": []
+    },
+    {
+      "instance": "s3-3",
+      "family": "S",
+      "variant": "s3_content_synthesis",
+      "difficulty": "na",
+      "sub_class": "s3_content_synthesis",
+      "source_family": "S",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I checked account 12\u2019s open casework, hit a backend refusal on the first oldest open case, left the rest untouched, and ",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 13698,
+      "output_tokens": 139,
+      "total_tokens": 13837,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 163760.132613249
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163761.794518289
+        },
+        {
+          "tool": "send_email",
+          "t": 163762.998511848
+        }
+      ],
+      "latency_s": 5.487204511009622,
+      "errors": []
+    },
+    {
+      "instance": "s3-3",
+      "family": "S",
+      "variant": "s3_content_synthesis",
+      "difficulty": "na",
+      "sub_class": "s3_content_synthesis",
+      "source_family": "S",
+      "paradigm": "state_machine",
+      "correct": false,
+      "summary": "State machine executed 3 actions (batch stopped early)",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 4526,
+      "output_tokens": 516,
+      "total_tokens": 5042,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 163765.988164181
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163769.884371036
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163769.887540328
+        },
+        {
+          "tool": "send_email",
+          "t": 163769.889030791
+        }
+      ],
+      "latency_s": 5.629602455999702,
+      "errors": []
+    },
+    {
+      "instance": "s3-4",
+      "family": "S",
+      "variant": "s3_content_synthesis",
+      "difficulty": "na",
+      "sub_class": "s3_content_synthesis",
+      "source_family": "S",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3726,
+      "output_tokens": 372,
+      "total_tokens": 4098,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 163772.259155728
+        },
+        {
+          "tool": "db_read",
+          "t": 163772.545807122
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163775.958326389
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163775.9613019
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163775.963689567
+        },
+        {
+          "tool": "send_email",
+          "t": 163775.966321023
+        }
+      ],
+      "latency_s": 6.045031090005068,
+      "errors": []
+    },
+    {
+      "instance": "s3-4",
+      "family": "S",
+      "variant": "s3_content_synthesis",
+      "difficulty": "na",
+      "sub_class": "s3_content_synthesis",
+      "source_family": "S",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I closed cases 56, 71, 53, and 98 for account 8 and sent the batch report to ops@atlas.com.",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 14063,
+      "output_tokens": 226,
+      "total_tokens": 14289,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 163777.345914999
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163779.289282132
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163779.290890357
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163779.292622493
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163779.293525932
+        },
+        {
+          "tool": "send_email",
+          "t": 163780.93112127
+        }
+      ],
+      "latency_s": 6.334724792017369,
+      "errors": []
+    },
+    {
+      "instance": "s3-4",
+      "family": "S",
+      "variant": "s3_content_synthesis",
+      "difficulty": "na",
+      "sub_class": "s3_content_synthesis",
+      "source_family": "S",
+      "paradigm": "state_machine",
+      "correct": false,
+      "summary": "State machine executed 5 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 4591,
+      "output_tokens": 474,
+      "total_tokens": 5065,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 163784.275984062
+        },
+        {
+          "tool": "db_read",
+          "t": 163784.565092417
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163787.531006657
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163787.53387302
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163787.536691941
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163787.539302725
+        },
+        {
+          "tool": "send_email",
+          "t": 163787.541992187
+        }
+      ],
+      "latency_s": 5.191585944994586,
+      "errors": []
+    },
+    {
+      "instance": "s3-5",
+      "family": "S",
+      "variant": "s3_content_synthesis",
+      "difficulty": "na",
+      "sub_class": "s3_content_synthesis",
+      "source_family": "S",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 6 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3629,
+      "output_tokens": 444,
+      "total_tokens": 4073,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 163789.501255936
+        },
+        {
+          "tool": "db_read",
+          "t": 163789.780947806
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163792.671169002
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163792.674070258
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163792.675568467
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163792.678316307
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163792.68073225
+        },
+        {
+          "tool": "send_email",
+          "t": 163792.683122561
+        }
+      ],
+      "latency_s": 5.1249117410043254,
+      "errors": []
+    },
+    {
+      "instance": "s3-5",
+      "family": "S",
+      "variant": "s3_content_synthesis",
+      "difficulty": "na",
+      "sub_class": "s3_content_synthesis",
+      "source_family": "S",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "I closed the cases the back-end allowed for account 19 and sent the batch report to ops@atlas.com listing cases 93, 74, ",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 4,
+      "input_tokens": 13960,
+      "output_tokens": 287,
+      "total_tokens": 14247,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 163794.329017342
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163796.357365008
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163796.359018553
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163796.360835455
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163796.361800498
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163796.363361057
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163796.364839076
+        },
+        {
+          "tool": "send_email",
+          "t": 163797.756084538
+        }
+      ],
+      "latency_s": 6.399439965985948,
+      "errors": []
+    },
+    {
+      "instance": "s3-5",
+      "family": "S",
+      "variant": "s3_content_synthesis",
+      "difficulty": "na",
+      "sub_class": "s3_content_synthesis",
+      "source_family": "S",
+      "paradigm": "state_machine",
+      "correct": false,
+      "summary": "State machine executed 4 actions (batch stopped early)",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 4494,
+      "output_tokens": 549,
+      "total_tokens": 5043,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 163801.230010524
+        },
+        {
+          "tool": "db_read",
+          "t": 163801.514189038
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163805.703241798
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163805.706015653
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 163805.708550291
+        },
+        {
+          "tool": "send_email",
+          "t": 163805.709849945
+        }
+      ],
+      "latency_s": 6.581178617983824,
+      "errors": []
+    }
+  ]
+}

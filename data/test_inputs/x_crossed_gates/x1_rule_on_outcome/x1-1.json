@@ -1,0 +1,15 @@
+{
+ "id": "x1-1",
+ "archetype": "X",
+ "family": "X (Phase 2b, crossed gates)",
+ "variant": "x1_rule_on_outcome",
+ "difficulty": "na",
+ "sub_class": "x1_rule_on_outcome",
+ "instruction": "Please close out cases 120 and 112 for account 15 with the resolution 'Reviewed and resolved', and handle the follow-ups as the support runbook requires.\n\nSupport runbook (excerpt):\n- Case closures go through the attempt_close_case tool; the back-end applies business rules and may refuse a close. Direct status edits to 'Closed' are not permitted.\n- If a close succeeds: notify the account's primary contact (the lowest-id contact at that account) by email, subject 'Case <id> closed' (substitute the case id), short confirmation body.\n- If a close is refused for manual review: leave the case status untouched, raise the case's priority to 'High', and notify ops@atlas.com by email, subject 'Manual review required: case <id>', body quoting the back-end's stated reason.\n- If the back-end reports the case is already closed: leave it fully untouched and send no notification for it.",
+ "expected_post_state": "Case 120 closes (transfer_count <= 3): status 'Closed', one email to the account's primary contact ('contact032@example.com') with subject 'Case 120 closed'. Case 112: refused for manual review (transfer_count > 3): status unchanged, priority set to 'High', one email to ops@atlas.com with subject 'Manual review required: case 112'. No other mails, no events, no other case or opportunity changes.",
+ "provenance": {
+  "source_benchmark": "Author-constructed (Phase 2b family X, crossed gates); surface style follows WorkBench (Styles et al., 2024) and the archetype-D/F instances",
+  "adaptation": "Instance designed by the author to cross exactly two routing mechanisms (build decision IT-055): rule matrix on runtime outcomes (x1, D4xD1), read chain into heterogeneous updates (x2, D2xD3), plan-time rule matrix forcing a heterogeneous plan object (x3, D4xD3). Target sets are computed from the deterministic seed with import-time assertions. Paradigm implementations are reused unchanged from archetype F.",
+  "license": "Original work by the author (task design); benchmark style reference only"
+ }
+}

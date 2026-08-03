@@ -1,0 +1,164 @@
+{
+  "timestamp": "20260803_104252",
+  "model": "gpt-5.2-2025-12-11",
+  "run_label": "run1",
+  "family": "B1",
+  "runs": [
+    {
+      "instance": "f-med-3",
+      "family": "B1",
+      "variant": "map_form_confirmation",
+      "difficulty": "med",
+      "sub_class": null,
+      "paradigm": "map_workflow",
+      "correct": true,
+      "summary": "Map workflow processed 9 items, 9 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 11,
+      "input_tokens": 21944,
+      "output_tokens": 1031,
+      "total_tokens": 22975,
+      "tool_call_count": 11,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 122946.535793087
+        },
+        {
+          "tool": "db_read",
+          "t": 122946.813322682
+        },
+        {
+          "tool": "db_update",
+          "t": 122950.76346185
+        },
+        {
+          "tool": "db_update",
+          "t": 122952.825401901
+        },
+        {
+          "tool": "db_update",
+          "t": 122954.873610756
+        },
+        {
+          "tool": "db_update",
+          "t": 122956.954795697
+        },
+        {
+          "tool": "db_update",
+          "t": 122959.175718609
+        },
+        {
+          "tool": "db_update",
+          "t": 122961.426878552
+        },
+        {
+          "tool": "db_update",
+          "t": 122964.045266922
+        },
+        {
+          "tool": "db_update",
+          "t": 122965.957860958
+        },
+        {
+          "tool": "db_update",
+          "t": 122967.727699483
+        }
+      ],
+      "latency_s": 25.43585931499547,
+      "errors": []
+    },
+    {
+      "instance": "f-med-4",
+      "family": "B1",
+      "variant": "map_form_confirmation",
+      "difficulty": "med",
+      "sub_class": null,
+      "paradigm": "map_workflow",
+      "correct": true,
+      "summary": "Map workflow processed 17 items, 17 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 19,
+      "input_tokens": 49790,
+      "output_tokens": 1664,
+      "total_tokens": 51454,
+      "tool_call_count": 18,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 122969.806515324
+        },
+        {
+          "tool": "db_update",
+          "t": 122974.296599972
+        },
+        {
+          "tool": "db_update",
+          "t": 122976.291189804
+        },
+        {
+          "tool": "db_update",
+          "t": 122978.314899252
+        },
+        {
+          "tool": "db_update",
+          "t": 122980.431678116
+        },
+        {
+          "tool": "db_update",
+          "t": 122982.599606957
+        },
+        {
+          "tool": "db_update",
+          "t": 122984.673123887
+        },
+        {
+          "tool": "db_update",
+          "t": 122986.722370074
+        },
+        {
+          "tool": "db_update",
+          "t": 122988.983129129
+        },
+        {
+          "tool": "db_update",
+          "t": 122990.897874669
+        },
+        {
+          "tool": "db_update",
+          "t": 122993.067737143
+        },
+        {
+          "tool": "db_update",
+          "t": 122995.220490873
+        },
+        {
+          "tool": "db_update",
+          "t": 122997.471939102
+        },
+        {
+          "tool": "db_update",
+          "t": 122999.618781364
+        },
+        {
+          "tool": "db_update",
+          "t": 123001.783268662
+        },
+        {
+          "tool": "db_update",
+          "t": 123003.867242022
+        },
+        {
+          "tool": "db_update",
+          "t": 123005.663686221
+        },
+        {
+          "tool": "db_update",
+          "t": 123007.948009007
+        }
+      ],
+      "latency_s": 40.19399552499817,
+      "errors": []
+    }
+  ]
+}

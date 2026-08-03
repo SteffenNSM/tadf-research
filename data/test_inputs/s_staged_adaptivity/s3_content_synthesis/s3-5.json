@@ -1,0 +1,15 @@
+{
+ "id": "s3-5",
+ "archetype": "S",
+ "family": "S (Phase 2b, staged adaptivity)",
+ "variant": "s3_content_synthesis",
+ "difficulty": "na",
+ "sub_class": "s3_content_synthesis",
+ "instruction": "Can you work through the open casework for account 19? Close what the back-end lets you close, resolution 'Handover complete', and file the batch report as the runbook requires.\n\nSupport runbook (excerpt):\n- 'Open casework' covers every case that is not closed (status Open or In Progress).\n- Case closures go through the attempt_close_case tool; the back-end applies business rules and may refuse a close. Direct status edits to 'Closed' are not permitted.\n- Work strictly oldest-first by creation date.\n- Stop at the first refused close: leave that case and every case after it untouched. No escalation mail is needed; the batch report covers the outcome.\n- After the batch (completed or stopped), send exactly ONE report email to ops@atlas.com, subject 'Batch report: account <id>' (substitute the account id).\n- The report body names exactly the cases that were actually closed in THIS run, one line per case in the form 'case <id>'. Do not name any case that was not closed. If no case was closed, the body is the single line 'no cases closed'.",
+ "expected_post_state": "Oldest-first order is 93, 99, 74, 51, 80. Case 99 (transfer_count > 3) is refused; cases 93 are Closed and cases 99, 74, 51, 80 are untouched. Exactly one email to ops@atlas.com with subject 'Batch report: account 19' whose body names exactly the closed cases (93) in the form 'case <id>' and no other case.",
+ "provenance": {
+  "source_benchmark": "Author-constructed (Phase 2b family S, staged adaptivity); surface style follows WorkBench (Styles et al., 2024) and the family-P b-variant",
+  "adaptation": "Instance designed by the author to isolate runtime-dependent CONTENT synthesis (build decision IT-066): the close batch reuses the family-P outcome-dependent stop mechanism, and the required report body is a function of the run's own stop point. Batch orders and refusal points are derived from the deterministic seed with import-time assertions matching the published family-P literals. The canonical paradigm implementations are reused unchanged from archetype F; the state-machine form is defined in src/archetypes/f_action_execution/state_machine.py.",
+  "license": "Original work by the author (task design); benchmark style reference only"
+ }
+}

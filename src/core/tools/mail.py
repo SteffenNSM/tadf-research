@@ -169,6 +169,17 @@ def search_emails(
         filename, headers[5], body{size, data}}, sizeEstimate}``.
     """
     synthetic_delay("search_emails", {"query": query, "date_min": date_min, "date_max": date_max, "status": status})
+    # Gmail-style phrase quoting: a query wrapped in matching quotes is an
+    # exact-phrase search in the real API; for a single phrase that is
+    # equivalent to this tool's substring match, so the quotes are stripped
+    # rather than matched literally. Without this, a quoted query silently
+    # matches nothing -- a simulation-fidelity gap (payloads were
+    # Gmail-shaped per IT-016, query semantics were not), which punished
+    # real-world-correct planner behavior (deviation logged in IT-062).
+    q = (query or "").strip()
+    if len(q) >= 2 and q[0] == q[-1] and q[0] in ('"', "'"):
+        q = q[1:-1].strip()
+    query = q
     clauses: list[str] = []
     params: list[Any] = []
     if query:

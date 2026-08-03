@@ -1,0 +1,1804 @@
+{
+  "timestamp": "20260716_154416",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "run_label": "run2",
+  "family": "P",
+  "runs": [
+    {
+      "instance": "p-a-1",
+      "family": "P",
+      "variant": "a_count_read",
+      "difficulty": "na",
+      "sub_class": "a_count_read",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3102,
+      "output_tokens": 291,
+      "total_tokens": 3393,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18605.977955638
+        },
+        {
+          "tool": "db_update",
+          "t": 18612.07872361
+        },
+        {
+          "tool": "db_update",
+          "t": 18612.082163542
+        },
+        {
+          "tool": "db_update",
+          "t": 18612.084582245
+        },
+        {
+          "tool": "db_update",
+          "t": 18612.087897624
+        }
+      ],
+      "latency_s": 9.197973174999788,
+      "errors": []
+    },
+    {
+      "instance": "p-a-1",
+      "family": "P",
+      "variant": "a_count_read",
+      "difficulty": "na",
+      "sub_class": "a_count_read",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I updated all four open Medium-priority cases for account 15 to High priority.",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 9080,
+      "output_tokens": 172,
+      "total_tokens": 9252,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18614.455003167
+        },
+        {
+          "tool": "db_update",
+          "t": 18615.89222476
+        },
+        {
+          "tool": "db_update",
+          "t": 18615.893089135
+        },
+        {
+          "tool": "db_update",
+          "t": 18615.894515948
+        },
+        {
+          "tool": "db_update",
+          "t": 18615.895781736
+        }
+      ],
+      "latency_s": 4.8651292260001355,
+      "errors": []
+    },
+    {
+      "instance": "p-a-2",
+      "family": "P",
+      "variant": "a_count_read",
+      "difficulty": "na",
+      "sub_class": "a_count_read",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 3 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3075,
+      "output_tokens": 285,
+      "total_tokens": 3360,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18618.667936324
+        },
+        {
+          "tool": "db_read",
+          "t": 18618.952890759
+        },
+        {
+          "tool": "db_update",
+          "t": 18620.781871527
+        },
+        {
+          "tool": "db_update",
+          "t": 18620.784925071
+        },
+        {
+          "tool": "db_update",
+          "t": 18620.787662703
+        }
+      ],
+      "latency_s": 3.784734032000415,
+      "errors": []
+    },
+    {
+      "instance": "p-a-2",
+      "family": "P",
+      "variant": "a_count_read",
+      "difficulty": "na",
+      "sub_class": "a_count_read",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I reassigned all three open cases for account 18 to agent 2 and left all other records untouched.",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 8874,
+      "output_tokens": 151,
+      "total_tokens": 9025,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18622.030936191
+        },
+        {
+          "tool": "db_update",
+          "t": 18623.607283985
+        },
+        {
+          "tool": "db_update",
+          "t": 18623.608788563
+        },
+        {
+          "tool": "db_update",
+          "t": 18623.609939658
+        }
+      ],
+      "latency_s": 3.5669365749999997,
+      "errors": []
+    },
+    {
+      "instance": "p-a-3",
+      "family": "P",
+      "variant": "a_count_read",
+      "difficulty": "na",
+      "sub_class": "a_count_read",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 3 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3008,
+      "output_tokens": 248,
+      "total_tokens": 3256,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18626.08684107
+        },
+        {
+          "tool": "db_update",
+          "t": 18627.805321778
+        },
+        {
+          "tool": "db_update",
+          "t": 18627.808150353
+        },
+        {
+          "tool": "db_update",
+          "t": 18627.810643581
+        }
+      ],
+      "latency_s": 3.4106681009980093,
+      "errors": []
+    },
+    {
+      "instance": "p-a-3",
+      "family": "P",
+      "variant": "a_count_read",
+      "difficulty": "na",
+      "sub_class": "a_count_read",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I updated the priority to Medium for all three account 12 cases currently In Progress.",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 8858,
+      "output_tokens": 144,
+      "total_tokens": 9002,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18628.899100878
+        },
+        {
+          "tool": "db_update",
+          "t": 18630.563666427
+        },
+        {
+          "tool": "db_update",
+          "t": 18630.5653681
+        },
+        {
+          "tool": "db_update",
+          "t": 18630.566746251
+        }
+      ],
+      "latency_s": 3.50734572500005,
+      "errors": []
+    },
+    {
+      "instance": "p-a-4",
+      "family": "P",
+      "variant": "a_count_read",
+      "difficulty": "na",
+      "sub_class": "a_count_read",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2946,
+      "output_tokens": 220,
+      "total_tokens": 3166,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18635.710570006
+        },
+        {
+          "tool": "db_update",
+          "t": 18637.671244478
+        },
+        {
+          "tool": "db_update",
+          "t": 18637.674002174
+        }
+      ],
+      "latency_s": 6.312553936997574,
+      "errors": []
+    },
+    {
+      "instance": "p-a-4",
+      "family": "P",
+      "variant": "a_count_read",
+      "difficulty": "na",
+      "sub_class": "a_count_read",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I updated the two Prospecting opportunities for account 19 to assign agent 5 as the new owner.",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 8697,
+      "output_tokens": 130,
+      "total_tokens": 8827,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18638.873687344
+        },
+        {
+          "tool": "db_update",
+          "t": 18641.7641383
+        },
+        {
+          "tool": "db_update",
+          "t": 18641.766314803
+        }
+      ],
+      "latency_s": 4.991477800998837,
+      "errors": []
+    },
+    {
+      "instance": "p-a-5",
+      "family": "P",
+      "variant": "a_count_read",
+      "difficulty": "na",
+      "sub_class": "a_count_read",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3327,
+      "output_tokens": 292,
+      "total_tokens": 3619,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18644.141094244
+        },
+        {
+          "tool": "db_update",
+          "t": 18646.335707349
+        },
+        {
+          "tool": "db_update",
+          "t": 18646.338830289
+        },
+        {
+          "tool": "db_update",
+          "t": 18646.341517264
+        },
+        {
+          "tool": "db_update",
+          "t": 18646.343616649
+        }
+      ],
+      "latency_s": 3.635413559000881,
+      "errors": []
+    },
+    {
+      "instance": "p-a-5",
+      "family": "P",
+      "variant": "a_count_read",
+      "difficulty": "na",
+      "sub_class": "a_count_read",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Updated all four Open cases for account 16 to High priority and left all other records unchanged.",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 9039,
+      "output_tokens": 170,
+      "total_tokens": 9209,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18647.214813908
+        },
+        {
+          "tool": "db_update",
+          "t": 18651.532447357
+        },
+        {
+          "tool": "db_update",
+          "t": 18651.533125447
+        },
+        {
+          "tool": "db_update",
+          "t": 18651.533812094
+        },
+        {
+          "tool": "db_update",
+          "t": 18651.534594409
+        }
+      ],
+      "latency_s": 6.255302303001372,
+      "errors": []
+    },
+    {
+      "instance": "p-b-1",
+      "family": "P",
+      "variant": "b_count_outcome",
+      "difficulty": "na",
+      "sub_class": "b_count_outcome",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 5 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3597,
+      "output_tokens": 369,
+      "total_tokens": 3966,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18654.06916364
+        },
+        {
+          "tool": "db_read",
+          "t": 18654.341476586
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18657.165017934
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18657.167594566
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18657.16964804
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18657.170517878
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18657.172931063
+        }
+      ],
+      "latency_s": 4.528644550999161,
+      "errors": []
+    },
+    {
+      "instance": "p-b-1",
+      "family": "P",
+      "variant": "b_count_outcome",
+      "difficulty": "na",
+      "sub_class": "b_count_outcome",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I closed cases 62, 40, and 63 for account 14, then stopped at case 17 when the back-end refused closure and notified ops",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 5,
+      "input_tokens": 17426,
+      "output_tokens": 248,
+      "total_tokens": 17674,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18657.947801101
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18660.835242036
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18660.837014798
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18662.543698506
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18662.544795985
+        },
+        {
+          "tool": "send_email",
+          "t": 18663.591053245
+        }
+      ],
+      "latency_s": 8.419115077998867,
+      "errors": []
+    },
+    {
+      "instance": "p-b-2",
+      "family": "P",
+      "variant": "b_count_outcome",
+      "difficulty": "na",
+      "sub_class": "b_count_outcome",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 6 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3531,
+      "output_tokens": 402,
+      "total_tokens": 3933,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18666.995662034
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18670.833015813
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18670.834350719
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18670.83713358
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18670.839547694
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18670.841908377
+        },
+        {
+          "tool": "send_email",
+          "t": 18670.844003401
+        }
+      ],
+      "latency_s": 5.54576757399991,
+      "errors": []
+    },
+    {
+      "instance": "p-b-2",
+      "family": "P",
+      "variant": "b_count_outcome",
+      "difficulty": "na",
+      "sub_class": "b_count_outcome",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "I worked the account 16 open casework oldest-first, closed cases 54, 104, 81, and 16, stopped when case 92 was refused, ",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 4,
+      "input_tokens": 13896,
+      "output_tokens": 266,
+      "total_tokens": 14162,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18671.993737306
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18675.235561484
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18675.237385457
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18675.238168937
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18675.239584312
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18675.24218916
+        },
+        {
+          "tool": "send_email",
+          "t": 18676.451521188
+        }
+      ],
+      "latency_s": 6.625997805000225,
+      "errors": []
+    },
+    {
+      "instance": "p-b-3",
+      "family": "P",
+      "variant": "b_count_outcome",
+      "difficulty": "na",
+      "sub_class": "b_count_outcome",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 5 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3533,
+      "output_tokens": 332,
+      "total_tokens": 3865,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18679.745812118
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18682.333090302
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18682.334082518
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18682.336145029
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18682.3370165
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18682.338827989
+        }
+      ],
+      "latency_s": 4.478118827002618,
+      "errors": []
+    },
+    {
+      "instance": "p-b-3",
+      "family": "P",
+      "variant": "b_count_outcome",
+      "difficulty": "na",
+      "sub_class": "b_count_outcome",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "I closed account 12\u2019s open cases in oldest-first order until case 38 was refused, then notified ops@atlas.com with the m",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 4,
+      "input_tokens": 13906,
+      "output_tokens": 249,
+      "total_tokens": 14155,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18683.530404787
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18685.007296886
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18685.00893807
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18685.010101494
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18685.011570924
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18685.012590371
+        },
+        {
+          "tool": "send_email",
+          "t": 18688.246715341
+        }
+      ],
+      "latency_s": 7.473029423999833,
+      "errors": []
+    },
+    {
+      "instance": "p-b-4",
+      "family": "P",
+      "variant": "b_count_outcome",
+      "difficulty": "na",
+      "sub_class": "b_count_outcome",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 5 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3592,
+      "output_tokens": 413,
+      "total_tokens": 4005,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18691.961801104
+        },
+        {
+          "tool": "db_read",
+          "t": 18692.250703913
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18694.935646149
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18694.938330588
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18694.940592893
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18694.943617503
+        },
+        {
+          "tool": "send_email",
+          "t": 18694.947196847
+        }
+      ],
+      "latency_s": 5.352398777999042,
+      "errors": []
+    },
+    {
+      "instance": "p-b-4",
+      "family": "P",
+      "variant": "b_count_outcome",
+      "difficulty": "na",
+      "sub_class": "b_count_outcome",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Closed all open cases for account 8 in oldest-first order using the Quarterly cleanup resolution.",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 9866,
+      "output_tokens": 160,
+      "total_tokens": 10026,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18695.998408895
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18697.357164715
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18697.35872513
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18697.360506346
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18697.361228659
+        }
+      ],
+      "latency_s": 5.496562386000733,
+      "errors": []
+    },
+    {
+      "instance": "p-b-5",
+      "family": "P",
+      "variant": "b_count_outcome",
+      "difficulty": "na",
+      "sub_class": "b_count_outcome",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 5 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3432,
+      "output_tokens": 335,
+      "total_tokens": 3767,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18704.595760666
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18706.836027901
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18706.838349098
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18706.840690848
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18706.841657407
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18706.843538659
+        }
+      ],
+      "latency_s": 6.096677540997916,
+      "errors": []
+    },
+    {
+      "instance": "p-b-5",
+      "family": "P",
+      "variant": "b_count_outcome",
+      "difficulty": "na",
+      "sub_class": "b_count_outcome",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "I closed account 19\u2019s eligible cases in oldest-first order until case 99 was refused, then emailed ops@atlas.com with th",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 4,
+      "input_tokens": 13629,
+      "output_tokens": 260,
+      "total_tokens": 13889,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18707.630597036
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18709.47908304
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18709.48065505
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18709.482171732
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18709.483998115
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 18709.485229952
+        },
+        {
+          "tool": "send_email",
+          "t": 18713.536393904
+        }
+      ],
+      "latency_s": 8.613762238997879,
+      "errors": []
+    },
+    {
+      "instance": "p-c-1",
+      "family": "P",
+      "variant": "c_source_unknown",
+      "difficulty": "na",
+      "sub_class": "c_source_unknown",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2983,
+      "output_tokens": 434,
+      "total_tokens": 3417,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 18719.057619525
+        },
+        {
+          "tool": "search_events",
+          "t": 18719.323537391
+        },
+        {
+          "tool": "db_search",
+          "t": 18719.635684005
+        },
+        {
+          "tool": "db_read",
+          "t": 18719.95167638
+        },
+        {
+          "tool": "search_emails",
+          "t": 18722.434126683
+        },
+        {
+          "tool": "search_events",
+          "t": 18722.695976592
+        },
+        {
+          "tool": "db_search",
+          "t": 18723.008584306
+        },
+        {
+          "tool": "send_email",
+          "t": 18723.321248401
+        }
+      ],
+      "latency_s": 8.16391091100013,
+      "errors": []
+    },
+    {
+      "instance": "p-c-1",
+      "family": "P",
+      "variant": "c_source_unknown",
+      "difficulty": "na",
+      "sub_class": "c_source_unknown",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found the renewal inquiry in the mailbox and sent agent05@atlas.com a note with the incoming date, 2025-03-16.",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 12553,
+      "output_tokens": 325,
+      "total_tokens": 12878,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 18725.473387698
+        },
+        {
+          "tool": "search_events",
+          "t": 18725.48240826
+        },
+        {
+          "tool": "search_emails",
+          "t": 18725.484491752
+        },
+        {
+          "tool": "db_search",
+          "t": 18725.486774986
+        },
+        {
+          "tool": "db_search",
+          "t": 18728.506012203
+        },
+        {
+          "tool": "db_search",
+          "t": 18728.506917367
+        },
+        {
+          "tool": "search_emails",
+          "t": 18728.50781513
+        },
+        {
+          "tool": "search_events",
+          "t": 18728.510042058
+        },
+        {
+          "tool": "send_email",
+          "t": 18731.237959738
+        }
+      ],
+      "latency_s": 9.085754175001057,
+      "errors": []
+    },
+    {
+      "instance": "p-c-2",
+      "family": "P",
+      "variant": "c_source_unknown",
+      "difficulty": "na",
+      "sub_class": "c_source_unknown",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 1 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3373,
+      "output_tokens": 507,
+      "total_tokens": 3880,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18735.69097191
+        },
+        {
+          "tool": "search_events",
+          "t": 18736.019150071
+        },
+        {
+          "tool": "search_emails",
+          "t": 18736.35777414
+        },
+        {
+          "tool": "search_emails",
+          "t": 18736.6676113
+        },
+        {
+          "tool": "db_search",
+          "t": 18737.003618905
+        },
+        {
+          "tool": "db_search",
+          "t": 18737.336415195
+        },
+        {
+          "tool": "send_email",
+          "t": 18739.136099088
+        }
+      ],
+      "latency_s": 6.604573360000359,
+      "errors": []
+    },
+    {
+      "instance": "p-c-2",
+      "family": "P",
+      "variant": "c_source_unknown",
+      "difficulty": "na",
+      "sub_class": "c_source_unknown",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found the product demo on the calendar for 2025-12-23 and sent agent06@atlas.com a note with that date.",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 9330,
+      "output_tokens": 177,
+      "total_tokens": 9507,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 18740.684572972
+        },
+        {
+          "tool": "search_events",
+          "t": 18740.686079741
+        },
+        {
+          "tool": "db_search",
+          "t": 18740.687704654
+        },
+        {
+          "tool": "send_email",
+          "t": 18742.730430646
+        }
+      ],
+      "latency_s": 5.021237070002826,
+      "errors": []
+    },
+    {
+      "instance": "p-c-3",
+      "family": "P",
+      "variant": "c_source_unknown",
+      "difficulty": "na",
+      "sub_class": "c_source_unknown",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 1 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3230,
+      "output_tokens": 350,
+      "total_tokens": 3580,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18747.223597907
+        },
+        {
+          "tool": "search_emails",
+          "t": 18747.558528586
+        },
+        {
+          "tool": "search_events",
+          "t": 18747.855731631
+        },
+        {
+          "tool": "send_email",
+          "t": 18750.039274564
+        }
+      ],
+      "latency_s": 5.84456563799904,
+      "errors": []
+    },
+    {
+      "instance": "p-c-3",
+      "family": "P",
+      "variant": "c_source_unknown",
+      "difficulty": "na",
+      "sub_class": "c_source_unknown",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found the high-priority issue for account 13 was opened on 2025-11-15 and sent that date to agent10@atlas.com.",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 9413,
+      "output_tokens": 229,
+      "total_tokens": 9642,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 18751.676445462
+        },
+        {
+          "tool": "db_read",
+          "t": 18751.677611494
+        },
+        {
+          "tool": "search_events",
+          "t": 18751.67905017
+        },
+        {
+          "tool": "send_email",
+          "t": 18753.678007868
+        }
+      ],
+      "latency_s": 5.302829055002803,
+      "errors": []
+    },
+    {
+      "instance": "p-c-4",
+      "family": "P",
+      "variant": "c_source_unknown",
+      "difficulty": "na",
+      "sub_class": "c_source_unknown",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 7 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3193,
+      "output_tokens": 639,
+      "total_tokens": 3832,
+      "tool_call_count": 13,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 18758.228622305
+        },
+        {
+          "tool": "search_emails",
+          "t": 18758.574647447
+        },
+        {
+          "tool": "search_events",
+          "t": 18758.832970852
+        },
+        {
+          "tool": "db_search",
+          "t": 18759.15888143
+        },
+        {
+          "tool": "db_search",
+          "t": 18759.451747786
+        },
+        {
+          "tool": "db_search",
+          "t": 18759.791449081
+        },
+        {
+          "tool": "search_emails",
+          "t": 18762.571548306
+        },
+        {
+          "tool": "search_emails",
+          "t": 18762.919897309
+        },
+        {
+          "tool": "search_events",
+          "t": 18763.178130089
+        },
+        {
+          "tool": "db_search",
+          "t": 18763.50584261
+        },
+        {
+          "tool": "db_search",
+          "t": 18763.801024239
+        },
+        {
+          "tool": "db_search",
+          "t": 18764.141906291
+        },
+        {
+          "tool": "send_email",
+          "t": 18764.493370791
+        }
+      ],
+      "latency_s": 9.148716159998003,
+      "errors": []
+    },
+    {
+      "instance": "p-c-4",
+      "family": "P",
+      "variant": "c_source_unknown",
+      "difficulty": "na",
+      "sub_class": "c_source_unknown",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I located the follow-up email from contact006@example.com dated 2025-01-27 and sent agent09@atlas.com a short note with ",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 13840,
+      "output_tokens": 295,
+      "total_tokens": 14135,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 18767.937147728
+        },
+        {
+          "tool": "search_events",
+          "t": 18767.938755613
+        },
+        {
+          "tool": "db_search",
+          "t": 18767.940528665
+        },
+        {
+          "tool": "search_emails",
+          "t": 18771.6105534
+        },
+        {
+          "tool": "search_emails",
+          "t": 18771.611880226
+        },
+        {
+          "tool": "search_events",
+          "t": 18771.61295067
+        },
+        {
+          "tool": "db_search",
+          "t": 18771.613858117
+        },
+        {
+          "tool": "send_email",
+          "t": 18773.658189385
+        }
+      ],
+      "latency_s": 10.078828976002114,
+      "errors": []
+    },
+    {
+      "instance": "p-c-5",
+      "family": "P",
+      "variant": "c_source_unknown",
+      "difficulty": "na",
+      "sub_class": "c_source_unknown",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 3 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2980,
+      "output_tokens": 519,
+      "total_tokens": 3499,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "search_events",
+          "t": 18779.941619316
+        },
+        {
+          "tool": "search_emails",
+          "t": 18780.216064901
+        },
+        {
+          "tool": "db_search",
+          "t": 18780.521541579
+        },
+        {
+          "tool": "search_emails",
+          "t": 18783.745724665
+        },
+        {
+          "tool": "db_search",
+          "t": 18784.05724736
+        },
+        {
+          "tool": "send_email",
+          "t": 18784.36602368
+        }
+      ],
+      "latency_s": 9.720008209998923,
+      "errors": []
+    },
+    {
+      "instance": "p-c-5",
+      "family": "P",
+      "variant": "c_source_unknown",
+      "difficulty": "na",
+      "sub_class": "c_source_unknown",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found the quarterly business review on the calendar for 2025-11-10 and sent agent03@atlas.com a note with that date.",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 12739,
+      "output_tokens": 395,
+      "total_tokens": 13134,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 18786.267257549
+        },
+        {
+          "tool": "db_search",
+          "t": 18786.269392193
+        },
+        {
+          "tool": "search_events",
+          "t": 18786.270122108
+        },
+        {
+          "tool": "search_emails",
+          "t": 18789.212446863
+        },
+        {
+          "tool": "search_events",
+          "t": 18789.213925492
+        },
+        {
+          "tool": "db_search",
+          "t": 18789.215149453
+        },
+        {
+          "tool": "send_email",
+          "t": 18791.051282223
+        }
+      ],
+      "latency_s": 7.680130007000116,
+      "errors": []
+    },
+    {
+      "instance": "p-d-1",
+      "family": "P",
+      "variant": "d_derived_order",
+      "difficulty": "na",
+      "sub_class": "d_derived_order",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 3 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3511,
+      "output_tokens": 368,
+      "total_tokens": 3879,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18799.520021924
+        },
+        {
+          "tool": "db_read",
+          "t": 18799.805299735
+        },
+        {
+          "tool": "send_email",
+          "t": 18803.033132996
+        },
+        {
+          "tool": "send_email",
+          "t": 18803.329297904
+        },
+        {
+          "tool": "send_email",
+          "t": 18803.606593014
+        }
+      ],
+      "latency_s": 11.533738022000762,
+      "errors": []
+    },
+    {
+      "instance": "p-d-1",
+      "family": "P",
+      "variant": "d_derived_order",
+      "difficulty": "na",
+      "sub_class": "d_derived_order",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I sent one reminder email per open case for account 18 in oldest-first order.",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 8,
+      "input_tokens": 26944,
+      "output_tokens": 267,
+      "total_tokens": 27211,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18804.74289684
+        },
+        {
+          "tool": "db_read",
+          "t": 18806.155263001
+        },
+        {
+          "tool": "db_read",
+          "t": 18807.31010808
+        },
+        {
+          "tool": "db_read",
+          "t": 18808.716069336
+        },
+        {
+          "tool": "send_email",
+          "t": 18810.285771406
+        },
+        {
+          "tool": "send_email",
+          "t": 18811.721876261
+        },
+        {
+          "tool": "send_email",
+          "t": 18813.113825904
+        }
+      ],
+      "latency_s": 10.934381555998698,
+      "errors": []
+    },
+    {
+      "instance": "p-d-2",
+      "family": "P",
+      "variant": "d_derived_order",
+      "difficulty": "na",
+      "sub_class": "d_derived_order",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3927,
+      "output_tokens": 498,
+      "total_tokens": 4425,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18816.652810607
+        },
+        {
+          "tool": "db_read",
+          "t": 18816.957037995
+        },
+        {
+          "tool": "send_email",
+          "t": 18820.455640429
+        },
+        {
+          "tool": "send_email",
+          "t": 18820.739462217
+        },
+        {
+          "tool": "send_email",
+          "t": 18821.013812179
+        },
+        {
+          "tool": "send_email",
+          "t": 18821.329599209
+        }
+      ],
+      "latency_s": 6.666981994003436,
+      "errors": []
+    },
+    {
+      "instance": "p-d-2",
+      "family": "P",
+      "variant": "d_derived_order",
+      "difficulty": "na",
+      "sub_class": "d_derived_order",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "I notified the responsible agents for the four non-closed cases on account 13 in priority order, sending one escalation-",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 7,
+      "input_tokens": 28814,
+      "output_tokens": 439,
+      "total_tokens": 29253,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18822.581255959
+        },
+        {
+          "tool": "db_read",
+          "t": 18824.059815121
+        },
+        {
+          "tool": "db_read",
+          "t": 18824.061463352
+        },
+        {
+          "tool": "db_read",
+          "t": 18824.062765876
+        },
+        {
+          "tool": "db_read",
+          "t": 18824.06387239
+        },
+        {
+          "tool": "send_email",
+          "t": 18825.38630687
+        },
+        {
+          "tool": "send_email",
+          "t": 18827.706838566
+        },
+        {
+          "tool": "send_email",
+          "t": 18829.864810196
+        },
+        {
+          "tool": "send_email",
+          "t": 18831.309052981
+        }
+      ],
+      "latency_s": 11.625946885000303,
+      "errors": []
+    },
+    {
+      "instance": "p-d-3",
+      "family": "P",
+      "variant": "d_derived_order",
+      "difficulty": "na",
+      "sub_class": "d_derived_order",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3577,
+      "output_tokens": 446,
+      "total_tokens": 4023,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18834.988795065
+        },
+        {
+          "tool": "db_read",
+          "t": 18835.282766126
+        },
+        {
+          "tool": "send_email",
+          "t": 18839.123797917
+        },
+        {
+          "tool": "send_email",
+          "t": 18839.390024216
+        },
+        {
+          "tool": "send_email",
+          "t": 18839.661567906
+        },
+        {
+          "tool": "send_email",
+          "t": 18840.015513175
+        }
+      ],
+      "latency_s": 7.010522961001698,
+      "errors": []
+    },
+    {
+      "instance": "p-d-3",
+      "family": "P",
+      "variant": "d_derived_order",
+      "difficulty": "na",
+      "sub_class": "d_derived_order",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "I sent one review email each to the owners of account 19\u2019s four open opportunities in descending deal size order.",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 7,
+      "input_tokens": 26599,
+      "output_tokens": 399,
+      "total_tokens": 26998,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18841.00076942
+        },
+        {
+          "tool": "db_read",
+          "t": 18842.701753311
+        },
+        {
+          "tool": "db_read",
+          "t": 18842.703316335
+        },
+        {
+          "tool": "db_read",
+          "t": 18842.704558444
+        },
+        {
+          "tool": "db_read",
+          "t": 18842.70565609
+        },
+        {
+          "tool": "send_email",
+          "t": 18844.095829816
+        },
+        {
+          "tool": "send_email",
+          "t": 18845.478446081
+        },
+        {
+          "tool": "send_email",
+          "t": 18846.999912268
+        },
+        {
+          "tool": "send_email",
+          "t": 18848.952126403
+        }
+      ],
+      "latency_s": 10.157054452996817,
+      "errors": []
+    },
+    {
+      "instance": "p-d-4",
+      "family": "P",
+      "variant": "d_derived_order",
+      "difficulty": "na",
+      "sub_class": "d_derived_order",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3565,
+      "output_tokens": 475,
+      "total_tokens": 4040,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18852.114935729
+        },
+        {
+          "tool": "db_read",
+          "t": 18852.463462475
+        },
+        {
+          "tool": "send_email",
+          "t": 18855.377456887
+        },
+        {
+          "tool": "send_email",
+          "t": 18855.692646054
+        },
+        {
+          "tool": "send_email",
+          "t": 18856.016974486
+        },
+        {
+          "tool": "send_email",
+          "t": 18856.35406415
+        }
+      ],
+      "latency_s": 6.144774104999669,
+      "errors": []
+    },
+    {
+      "instance": "p-d-4",
+      "family": "P",
+      "variant": "d_derived_order",
+      "difficulty": "na",
+      "sub_class": "d_derived_order",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I sent reminder emails for all four open Account 16 cases in oldest-first order: 54, 104, 81, then 16.",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 7,
+      "input_tokens": 26346,
+      "output_tokens": 397,
+      "total_tokens": 26743,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18857.675097594
+        },
+        {
+          "tool": "db_read",
+          "t": 18859.350790745
+        },
+        {
+          "tool": "db_read",
+          "t": 18859.352308511
+        },
+        {
+          "tool": "db_read",
+          "t": 18859.353356741
+        },
+        {
+          "tool": "db_read",
+          "t": 18859.354398699
+        },
+        {
+          "tool": "send_email",
+          "t": 18861.141139477
+        },
+        {
+          "tool": "send_email",
+          "t": 18862.585793606
+        },
+        {
+          "tool": "send_email",
+          "t": 18865.909298384
+        },
+        {
+          "tool": "send_email",
+          "t": 18867.436045712
+        }
+      ],
+      "latency_s": 11.99240784399808,
+      "errors": []
+    },
+    {
+      "instance": "p-d-5",
+      "family": "P",
+      "variant": "d_derived_order",
+      "difficulty": "na",
+      "sub_class": "d_derived_order",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3196,
+      "output_tokens": 417,
+      "total_tokens": 3613,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18870.583246823
+        },
+        {
+          "tool": "db_read",
+          "t": 18870.855593629
+        },
+        {
+          "tool": "send_email",
+          "t": 18873.798308694
+        },
+        {
+          "tool": "send_email",
+          "t": 18874.151166788
+        },
+        {
+          "tool": "send_email",
+          "t": 18874.422857294
+        },
+        {
+          "tool": "send_email",
+          "t": 18874.715371663
+        }
+      ],
+      "latency_s": 6.38057355699857,
+      "errors": []
+    },
+    {
+      "instance": "p-d-5",
+      "family": "P",
+      "variant": "d_derived_order",
+      "difficulty": "na",
+      "sub_class": "d_derived_order",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "I sent four status ping emails for account 15\u2019s open Medium-priority cases in newest-first order to their assigned agent",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 7,
+      "input_tokens": 26398,
+      "output_tokens": 404,
+      "total_tokens": 26802,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 18876.460895325
+        },
+        {
+          "tool": "db_read",
+          "t": 18878.741437348
+        },
+        {
+          "tool": "db_read",
+          "t": 18878.742944774
+        },
+        {
+          "tool": "db_read",
+          "t": 18878.744222972
+        },
+        {
+          "tool": "send_email",
+          "t": 18881.210673212
+        },
+        {
+          "tool": "send_email",
+          "t": 18883.012434777
+        },
+        {
+          "tool": "send_email",
+          "t": 18885.05256413
+        },
+        {
+          "tool": "send_email",
+          "t": 18886.34017583
+        }
+      ],
+      "latency_s": 12.698221001999627,
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+ "id": "l-a1-1",
+ "archetype": "L",
+ "family": "L (Phase 2b, payload scaling)",
+ "variant": "action_scaling",
+ "level": 1,
+ "difficulty": "na",
+ "sub_class": "action_scaling_x1",
+ "instruction": "Quick cleanup for account 906, please: every case there that is still Open and sits at Low priority moves up to Medium.\n\nData-hygiene runbook (excerpt):\n- Apply the change to every record that matches the stated condition -- no more, no fewer.\n- Leave all other records untouched, and do not send any notifications for routine field changes.",
+ "expected_post_state": "The 2 Open+Low cases of overlay account 906 (8 cases total) have priority 'Medium'; every other record unchanged; no mails, no events.",
+ "provenance": {
+  "source_benchmark": "Author-constructed (Phase 2b family L, payload scaling); surface style follows WorkBench (Styles et al., 2024) and the archetype-B/F instances",
+  "adaptation": "Instance designed by the author to scale input volume at constant task content (build decision IT-055): identical instruction templates across payload levels x1/x5/x20; per-instance deterministic overlay (fresh id ranges) inserted after the standard DB reset, identical for both paradigms; aggregation targets (argmax) so payload cannot be bypassed by exact-match filters. Paradigms reused unchanged from archetype F.",
+  "license": "Original work by the author (task design); benchmark style reference only"
+ }
+}

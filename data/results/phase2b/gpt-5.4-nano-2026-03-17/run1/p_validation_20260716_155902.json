@@ -1,0 +1,104 @@
+{
+  "timestamp": "20260716_155902",
+  "model": "gpt-5.4-nano-2026-03-17",
+  "run_label": "run1",
+  "family": "P",
+  "runs": [
+    {
+      "instance": "p-d-3",
+      "family": "P",
+      "variant": "d_derived_order",
+      "difficulty": "na",
+      "sub_class": "d_derived_order",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3934,
+      "output_tokens": 661,
+      "total_tokens": 4595,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_search",
+          "t": 19736.167618918
+        },
+        {
+          "tool": "db_read",
+          "t": 19736.487406471
+        },
+        {
+          "tool": "db_read",
+          "t": 19736.782553196
+        },
+        {
+          "tool": "send_email",
+          "t": 19741.638507365
+        },
+        {
+          "tool": "send_email",
+          "t": 19741.941981721
+        },
+        {
+          "tool": "send_email",
+          "t": 19742.241996179
+        },
+        {
+          "tool": "send_email",
+          "t": 19742.522417255
+        }
+      ],
+      "latency_s": 9.724620431999938,
+      "errors": []
+    },
+    {
+      "instance": "p-d-3",
+      "family": "P",
+      "variant": "d_derived_order",
+      "difficulty": "na",
+      "sub_class": "d_derived_order",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "Sent pipeline review emails (one per opportunity, biggest deal first) to the responsible agents for Account 19 for Oppor",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 5,
+      "input_tokens": 18521,
+      "output_tokens": 421,
+      "total_tokens": 18942,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 19744.266864893
+        },
+        {
+          "tool": "db_read",
+          "t": 19745.850258215
+        },
+        {
+          "tool": "db_read",
+          "t": 19767.942736784
+        },
+        {
+          "tool": "send_email",
+          "t": 19771.690378034
+        },
+        {
+          "tool": "send_email",
+          "t": 19771.692178487
+        },
+        {
+          "tool": "send_email",
+          "t": 19771.693711159
+        },
+        {
+          "tool": "send_email",
+          "t": 19771.694570115
+        }
+      ],
+      "latency_s": 30.961153755997657,
+      "errors": []
+    }
+  ]
+}

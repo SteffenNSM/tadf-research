@@ -1,0 +1,542 @@
+{
+  "timestamp": "20260722_160932",
+  "model": "gpt-5.2-2025-12-11",
+  "run_label": "run2",
+  "family": "P",
+  "runs": [
+    {
+      "instance": "p-c-1",
+      "family": "P",
+      "variant": "c_source_unknown",
+      "difficulty": "na",
+      "sub_class": "c_source_unknown",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 5 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3142,
+      "output_tokens": 892,
+      "total_tokens": 4034,
+      "tool_call_count": 11,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 164326.45655034
+        },
+        {
+          "tool": "search_emails",
+          "t": 164326.80610487
+        },
+        {
+          "tool": "search_events",
+          "t": 164327.070563236
+        },
+        {
+          "tool": "db_read",
+          "t": 164327.361294443
+        },
+        {
+          "tool": "db_read",
+          "t": 164327.679938547
+        },
+        {
+          "tool": "db_search",
+          "t": 164328.011987425
+        },
+        {
+          "tool": "search_emails",
+          "t": 164336.099355618
+        },
+        {
+          "tool": "search_events",
+          "t": 164336.385728057
+        },
+        {
+          "tool": "db_search",
+          "t": 164336.735461509
+        },
+        {
+          "tool": "db_search",
+          "t": 164337.043110028
+        },
+        {
+          "tool": "send_email",
+          "t": 164337.336884264
+        }
+      ],
+      "latency_s": 20.1256824839802,
+      "errors": []
+    },
+    {
+      "instance": "p-c-1",
+      "family": "P",
+      "variant": "c_source_unknown",
+      "difficulty": "na",
+      "sub_class": "c_source_unknown",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found the renewal inquiry as an email from **contact012@example.com** with subject **\u201cRenewal inquiry\u201d** dated **2025-",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 5,
+      "input_tokens": 17155,
+      "output_tokens": 325,
+      "total_tokens": 17480,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "search_events",
+          "t": 164340.921760055
+        },
+        {
+          "tool": "search_emails",
+          "t": 164340.922956438
+        },
+        {
+          "tool": "db_search",
+          "t": 164340.924261008
+        },
+        {
+          "tool": "db_search",
+          "t": 164340.92524496
+        },
+        {
+          "tool": "db_read",
+          "t": 164343.643790585
+        },
+        {
+          "tool": "search_emails",
+          "t": 164346.105771398
+        },
+        {
+          "tool": "send_email",
+          "t": 164348.264212379
+        }
+      ],
+      "latency_s": 12.996068433014443,
+      "errors": []
+    },
+    {
+      "instance": "p-c-2",
+      "family": "P",
+      "variant": "c_source_unknown",
+      "difficulty": "na",
+      "sub_class": "c_source_unknown",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 1 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 6901,
+      "output_tokens": 901,
+      "total_tokens": 7802,
+      "tool_call_count": 12,
+      "tool_calls": [
+        {
+          "tool": "search_events",
+          "t": 164368.531299658
+        },
+        {
+          "tool": "search_events",
+          "t": 164368.848921436
+        },
+        {
+          "tool": "search_emails",
+          "t": 164369.194129351
+        },
+        {
+          "tool": "search_emails",
+          "t": 164369.488501838
+        },
+        {
+          "tool": "search_emails",
+          "t": 164369.801721666
+        },
+        {
+          "tool": "search_emails",
+          "t": 164370.153114739
+        },
+        {
+          "tool": "db_read",
+          "t": 164370.507645035
+        },
+        {
+          "tool": "db_read",
+          "t": 164370.837499728
+        },
+        {
+          "tool": "db_search",
+          "t": 164371.141361411
+        },
+        {
+          "tool": "db_search",
+          "t": 164371.409226478
+        },
+        {
+          "tool": "db_search",
+          "t": 164371.744241117
+        },
+        {
+          "tool": "send_email",
+          "t": 164375.220804101
+        }
+      ],
+      "latency_s": 24.758064055000432,
+      "errors": []
+    },
+    {
+      "instance": "p-c-2",
+      "family": "P",
+      "variant": "c_source_unknown",
+      "difficulty": "na",
+      "sub_class": "c_source_unknown",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found the product demo on the team calendar: it\u2019s scheduled for **2025-12-23** (18:00\u201318:45 UTC) with **contact010@exa",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 9498,
+      "output_tokens": 274,
+      "total_tokens": 9772,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "search_events",
+          "t": 164378.322161593
+        },
+        {
+          "tool": "search_emails",
+          "t": 164378.324008494
+        },
+        {
+          "tool": "db_search",
+          "t": 164378.325429023
+        },
+        {
+          "tool": "db_search",
+          "t": 164378.326776187
+        },
+        {
+          "tool": "send_email",
+          "t": 164381.12544883
+        }
+      ],
+      "latency_s": 8.373654505005106,
+      "errors": []
+    },
+    {
+      "instance": "p-c-3",
+      "family": "P",
+      "variant": "c_source_unknown",
+      "difficulty": "na",
+      "sub_class": "c_source_unknown",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 5 actions with failures",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3265,
+      "output_tokens": 717,
+      "total_tokens": 3982,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 164389.727785173
+        },
+        {
+          "tool": "search_emails",
+          "t": 164390.06940772
+        },
+        {
+          "tool": "search_emails",
+          "t": 164390.423269936
+        },
+        {
+          "tool": "search_events",
+          "t": 164390.685155365
+        },
+        {
+          "tool": "db_search",
+          "t": 164397.06686803
+        },
+        {
+          "tool": "search_emails",
+          "t": 164397.067229377
+        },
+        {
+          "tool": "search_emails",
+          "t": 164397.335423381
+        },
+        {
+          "tool": "search_events",
+          "t": 164397.602626789
+        },
+        {
+          "tool": "send_email",
+          "t": 164397.950807429
+        }
+      ],
+      "latency_s": 14.324369653011672,
+      "errors": [
+        "tool_error: 1 validation error for db_search\ncolumn\n  Field required [type=missing, input_value={'table': 'cases', 'query...ty='High'\", 'limit': 50}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+      ]
+    },
+    {
+      "instance": "p-c-3",
+      "family": "P",
+      "variant": "c_source_unknown",
+      "difficulty": "na",
+      "sub_class": "c_source_unknown",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found a high-priority CRM case for Account 13 (Case 067) opened on **2025-11-15**, and I emailed agent10@atlas.com wit",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 9392,
+      "output_tokens": 238,
+      "total_tokens": 9630,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 164400.793484511
+        },
+        {
+          "tool": "search_emails",
+          "t": 164400.794192561
+        },
+        {
+          "tool": "search_events",
+          "t": 164400.795030248
+        },
+        {
+          "tool": "send_email",
+          "t": 164402.942530786
+        }
+      ],
+      "latency_s": 7.090164768014802,
+      "errors": []
+    },
+    {
+      "instance": "p-c-4",
+      "family": "P",
+      "variant": "c_source_unknown",
+      "difficulty": "na",
+      "sub_class": "c_source_unknown",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 7 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 6173,
+      "output_tokens": 1022,
+      "total_tokens": 7195,
+      "tool_call_count": 16,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 164413.378340304
+        },
+        {
+          "tool": "search_emails",
+          "t": 164413.655431598
+        },
+        {
+          "tool": "search_emails",
+          "t": 164413.948841044
+        },
+        {
+          "tool": "search_events",
+          "t": 164414.307590192
+        },
+        {
+          "tool": "search_events",
+          "t": 164414.598163386
+        },
+        {
+          "tool": "db_search",
+          "t": 164414.914495923
+        },
+        {
+          "tool": "db_read",
+          "t": 164415.235233255
+        },
+        {
+          "tool": "db_search",
+          "t": 164415.540218913
+        },
+        {
+          "tool": "db_search",
+          "t": 164415.79242726
+        },
+        {
+          "tool": "search_emails",
+          "t": 164425.079911427
+        },
+        {
+          "tool": "search_emails",
+          "t": 164425.355741215
+        },
+        {
+          "tool": "search_emails",
+          "t": 164425.653071113
+        },
+        {
+          "tool": "search_events",
+          "t": 164425.955045557
+        },
+        {
+          "tool": "search_events",
+          "t": 164426.235795362
+        },
+        {
+          "tool": "db_search",
+          "t": 164426.553467419
+        },
+        {
+          "tool": "send_email",
+          "t": 164426.835257859
+        }
+      ],
+      "latency_s": 21.802141897991532,
+      "errors": []
+    },
+    {
+      "instance": "p-c-4",
+      "family": "P",
+      "variant": "c_source_unknown",
+      "difficulty": "na",
+      "sub_class": "c_source_unknown",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I located the proposal follow-up as an email from **contact006@example.com** (\u201cFollow-up on proposal\u201d) received on **202",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 10433,
+      "output_tokens": 303,
+      "total_tokens": 10736,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 164429.660026814
+        },
+        {
+          "tool": "db_read",
+          "t": 164429.661959954
+        },
+        {
+          "tool": "search_events",
+          "t": 164429.662786289
+        },
+        {
+          "tool": "db_read",
+          "t": 164433.96017124
+        },
+        {
+          "tool": "send_email",
+          "t": 164433.961162548
+        }
+      ],
+      "latency_s": 9.252204574004281,
+      "errors": []
+    },
+    {
+      "instance": "p-c-5",
+      "family": "P",
+      "variant": "c_source_unknown",
+      "difficulty": "na",
+      "sub_class": "c_source_unknown",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 1 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 6583,
+      "output_tokens": 790,
+      "total_tokens": 7373,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "search_events",
+          "t": 164445.245009247
+        },
+        {
+          "tool": "search_events",
+          "t": 164445.56237458
+        },
+        {
+          "tool": "search_emails",
+          "t": 164445.835391952
+        },
+        {
+          "tool": "search_emails",
+          "t": 164446.12307225
+        },
+        {
+          "tool": "search_emails",
+          "t": 164446.452726379
+        },
+        {
+          "tool": "search_emails",
+          "t": 164446.753509254
+        },
+        {
+          "tool": "db_read",
+          "t": 164447.05674931
+        },
+        {
+          "tool": "db_read",
+          "t": 164447.33697731
+        },
+        {
+          "tool": "send_email",
+          "t": 164451.166040675
+        }
+      ],
+      "latency_s": 15.00027424399741,
+      "errors": []
+    },
+    {
+      "instance": "p-c-5",
+      "family": "P",
+      "variant": "c_source_unknown",
+      "difficulty": "na",
+      "sub_class": "c_source_unknown",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found the QBR on the team calendar: **\u201cQuarterly business review\u201d with contact016@example.com is scheduled for 2025-11",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 9601,
+      "output_tokens": 292,
+      "total_tokens": 9893,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "search_events",
+          "t": 164454.279013712
+        },
+        {
+          "tool": "search_emails",
+          "t": 164454.336933936
+        },
+        {
+          "tool": "db_search",
+          "t": 164454.338429214
+        },
+        {
+          "tool": "db_search",
+          "t": 164454.339432097
+        },
+        {
+          "tool": "send_email",
+          "t": 164456.693753682
+        }
+      ],
+      "latency_s": 308.1621695169888,
+      "errors": []
+    }
+  ]
+}

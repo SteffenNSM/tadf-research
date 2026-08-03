@@ -1,0 +1,1472 @@
+{
+  "timestamp": "20260717_095000",
+  "model": "gpt-5.2-2025-12-11",
+  "run_label": "run1",
+  "family": "X",
+  "runs": [
+    {
+      "instance": "x1-1",
+      "family": "X",
+      "variant": "x1_rule_on_outcome",
+      "difficulty": "na",
+      "sub_class": "x1_rule_on_outcome",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 8 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3240,
+      "output_tokens": 824,
+      "total_tokens": 4064,
+      "tool_call_count": 11,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26912.929995234
+        },
+        {
+          "tool": "db_read",
+          "t": 26913.245817152
+        },
+        {
+          "tool": "db_read",
+          "t": 26913.595760843
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26921.111590906
+        },
+        {
+          "tool": "send_email",
+          "t": 26921.113812816
+        },
+        {
+          "tool": "db_update",
+          "t": 26921.410861914
+        },
+        {
+          "tool": "send_email",
+          "t": 26921.412996013
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26921.726170565
+        },
+        {
+          "tool": "send_email",
+          "t": 26921.727148561
+        },
+        {
+          "tool": "db_update",
+          "t": 26922.045480808
+        },
+        {
+          "tool": "send_email",
+          "t": 26922.047064994
+        }
+      ],
+      "latency_s": 14.036239647997718,
+      "errors": []
+    },
+    {
+      "instance": "x1-1",
+      "family": "X",
+      "variant": "x1_rule_on_outcome",
+      "difficulty": "na",
+      "sub_class": "x1_rule_on_outcome",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "- **Case 120 (account 15):** Closed successfully via `attempt_close_case` with resolution **\u201cReviewed and resolved\u201d**, a",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 13336,
+      "output_tokens": 460,
+      "total_tokens": 13796,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26925.003167374
+        },
+        {
+          "tool": "db_read",
+          "t": 26925.005107968
+        },
+        {
+          "tool": "db_read",
+          "t": 26925.005937903
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26927.187411313
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26927.188230834
+        },
+        {
+          "tool": "send_email",
+          "t": 26930.837305573
+        },
+        {
+          "tool": "db_update",
+          "t": 26930.838271914
+        },
+        {
+          "tool": "send_email",
+          "t": 26930.838991236
+        }
+      ],
+      "latency_s": 13.195171831997868,
+      "errors": []
+    },
+    {
+      "instance": "x1-2",
+      "family": "X",
+      "variant": "x1_rule_on_outcome",
+      "difficulty": "na",
+      "sub_class": "x1_rule_on_outcome",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 8 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3300,
+      "output_tokens": 819,
+      "total_tokens": 4119,
+      "tool_call_count": 11,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26939.642978218
+        },
+        {
+          "tool": "db_read",
+          "t": 26939.953735899
+        },
+        {
+          "tool": "db_read",
+          "t": 26940.278218614
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26948.553918064
+        },
+        {
+          "tool": "send_email",
+          "t": 26948.556551344
+        },
+        {
+          "tool": "db_update",
+          "t": 26948.897338502
+        },
+        {
+          "tool": "send_email",
+          "t": 26948.898525261
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26949.248511443
+        },
+        {
+          "tool": "send_email",
+          "t": 26949.249326102
+        },
+        {
+          "tool": "db_update",
+          "t": 26949.551769594
+        },
+        {
+          "tool": "send_email",
+          "t": 26949.554404801
+        }
+      ],
+      "latency_s": 14.178285869998945,
+      "errors": []
+    },
+    {
+      "instance": "x1-2",
+      "family": "X",
+      "variant": "x1_rule_on_outcome",
+      "difficulty": "na",
+      "sub_class": "x1_rule_on_outcome",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "- **Case 5 (account 4):** Successfully closed via `attempt_close_case` with resolution **\u201cReviewed and resolved\u201d** and n",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 13548,
+      "output_tokens": 466,
+      "total_tokens": 14014,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26952.341889465
+        },
+        {
+          "tool": "db_read",
+          "t": 26952.34290055
+        },
+        {
+          "tool": "db_read",
+          "t": 26952.344066131
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26954.402680546
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26954.403576865
+        },
+        {
+          "tool": "send_email",
+          "t": 26957.993536746
+        },
+        {
+          "tool": "db_update",
+          "t": 26957.994771848
+        },
+        {
+          "tool": "send_email",
+          "t": 26957.995404555
+        }
+      ],
+      "latency_s": 11.244184061997657,
+      "errors": []
+    },
+    {
+      "instance": "x1-3",
+      "family": "X",
+      "variant": "x1_rule_on_outcome",
+      "difficulty": "na",
+      "sub_class": "x1_rule_on_outcome",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 8 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3300,
+      "output_tokens": 829,
+      "total_tokens": 4129,
+      "tool_call_count": 11,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26965.449496692
+        },
+        {
+          "tool": "db_read",
+          "t": 26965.73733235
+        },
+        {
+          "tool": "db_read",
+          "t": 26966.086621464
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26973.829769154
+        },
+        {
+          "tool": "send_email",
+          "t": 26973.831395172
+        },
+        {
+          "tool": "db_update",
+          "t": 26974.137645333
+        },
+        {
+          "tool": "send_email",
+          "t": 26974.138498671
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26974.498384567
+        },
+        {
+          "tool": "send_email",
+          "t": 26974.49947767
+        },
+        {
+          "tool": "db_update",
+          "t": 26974.834193615
+        },
+        {
+          "tool": "send_email",
+          "t": 26974.836054594
+        }
+      ],
+      "latency_s": 14.038645909997285,
+      "errors": []
+    },
+    {
+      "instance": "x1-3",
+      "family": "X",
+      "variant": "x1_rule_on_outcome",
+      "difficulty": "na",
+      "sub_class": "x1_rule_on_outcome",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "- **Case 8 (Account 12):** Closed via `attempt_close_case` with resolution **\u201cReviewed and resolved\u201d**, then emailed the",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 13517,
+      "output_tokens": 461,
+      "total_tokens": 13978,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26977.119254754
+        },
+        {
+          "tool": "db_read",
+          "t": 26977.120460932
+        },
+        {
+          "tool": "db_read",
+          "t": 26977.121754868
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26986.245878409
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 26986.246650573
+        },
+        {
+          "tool": "send_email",
+          "t": 26988.887274743
+        },
+        {
+          "tool": "db_update",
+          "t": 26988.888700098
+        },
+        {
+          "tool": "send_email",
+          "t": 26988.889429594
+        }
+      ],
+      "latency_s": 16.76371930499954,
+      "errors": []
+    },
+    {
+      "instance": "x1-4",
+      "family": "X",
+      "variant": "x1_rule_on_outcome",
+      "difficulty": "na",
+      "sub_class": "x1_rule_on_outcome",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 8 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3272,
+      "output_tokens": 814,
+      "total_tokens": 4086,
+      "tool_call_count": 11,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 26995.683745692
+        },
+        {
+          "tool": "db_read",
+          "t": 26996.009116825
+        },
+        {
+          "tool": "db_read",
+          "t": 26996.330046186
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 27003.411671123
+        },
+        {
+          "tool": "send_email",
+          "t": 27003.416495324
+        },
+        {
+          "tool": "db_update",
+          "t": 27003.708406387
+        },
+        {
+          "tool": "send_email",
+          "t": 27003.710790945
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 27003.981065534
+        },
+        {
+          "tool": "send_email",
+          "t": 27003.981805001
+        },
+        {
+          "tool": "db_update",
+          "t": 27004.316410524
+        },
+        {
+          "tool": "send_email",
+          "t": 27004.318246129
+        }
+      ],
+      "latency_s": 12.649018268999498,
+      "errors": []
+    },
+    {
+      "instance": "x1-4",
+      "family": "X",
+      "variant": "x1_rule_on_outcome",
+      "difficulty": "na",
+      "sub_class": "x1_rule_on_outcome",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "- **Case 66 (account 11):** Successfully closed via `attempt_close_case` with resolution **\u201cReviewed and resolved\u201d**; no",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 13459,
+      "output_tokens": 470,
+      "total_tokens": 13929,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 27006.528391202
+        },
+        {
+          "tool": "db_read",
+          "t": 27006.529497631
+        },
+        {
+          "tool": "db_read",
+          "t": 27006.530657846
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 27008.558832114
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 27008.559774016
+        },
+        {
+          "tool": "send_email",
+          "t": 27011.730082583
+        },
+        {
+          "tool": "db_update",
+          "t": 27011.731198468
+        },
+        {
+          "tool": "send_email",
+          "t": 27011.731834986
+        }
+      ],
+      "latency_s": 12.629274851999071,
+      "errors": []
+    },
+    {
+      "instance": "x1-5",
+      "family": "X",
+      "variant": "x1_rule_on_outcome",
+      "difficulty": "na",
+      "sub_class": "x1_rule_on_outcome",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 8 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3312,
+      "output_tokens": 829,
+      "total_tokens": 4141,
+      "tool_call_count": 11,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 27021.512156195
+        },
+        {
+          "tool": "db_read",
+          "t": 27021.78859003
+        },
+        {
+          "tool": "db_read",
+          "t": 27022.105949923
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 27030.369911634
+        },
+        {
+          "tool": "send_email",
+          "t": 27030.371685564
+        },
+        {
+          "tool": "db_update",
+          "t": 27030.689513796
+        },
+        {
+          "tool": "send_email",
+          "t": 27030.690474113
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 27030.95648316
+        },
+        {
+          "tool": "send_email",
+          "t": 27030.957640126
+        },
+        {
+          "tool": "db_update",
+          "t": 27031.306119851
+        },
+        {
+          "tool": "send_email",
+          "t": 27031.307355668
+        }
+      ],
+      "latency_s": 14.386178845001268,
+      "errors": []
+    },
+    {
+      "instance": "x1-5",
+      "family": "X",
+      "variant": "x1_rule_on_outcome",
+      "difficulty": "na",
+      "sub_class": "x1_rule_on_outcome",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "- **Case 67 (account 13):** Closed successfully via `attempt_close_case` with resolution **\u201cReviewed and resolved\u201d**, th",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 13033,
+      "output_tokens": 306,
+      "total_tokens": 13339,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 27036.579814482
+        },
+        {
+          "tool": "db_read",
+          "t": 27036.581296829
+        },
+        {
+          "tool": "db_read",
+          "t": 27036.582612186
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 27039.99528902
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 27039.996182211
+        },
+        {
+          "tool": "send_email",
+          "t": 27042.042569593
+        }
+      ],
+      "latency_s": 13.209152280996932,
+      "errors": []
+    },
+    {
+      "instance": "x2-1",
+      "family": "X",
+      "variant": "x2_chain_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x2_chain_heterogeneous",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 0 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2904,
+      "output_tokens": 222,
+      "total_tokens": 3126,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 27048.302987124
+        },
+        {
+          "tool": "db_read",
+          "t": 27048.624508402
+        }
+      ],
+      "latency_s": 6.368083999001101,
+      "errors": []
+    },
+    {
+      "instance": "x2-1",
+      "family": "X",
+      "variant": "x2_chain_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x2_chain_heterogeneous",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I identified contact040@example.com as belonging to account_id **19**, then applied the quarterly pipeline touch-up to a",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 12126,
+      "output_tokens": 275,
+      "total_tokens": 12401,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 27052.901130752
+        },
+        {
+          "tool": "db_read",
+          "t": 27054.546553466
+        },
+        {
+          "tool": "db_update",
+          "t": 27057.037371407
+        },
+        {
+          "tool": "db_update",
+          "t": 27057.03840017
+        },
+        {
+          "tool": "db_update",
+          "t": 27057.039224895
+        }
+      ],
+      "latency_s": 8.935919102998014,
+      "errors": []
+    },
+    {
+      "instance": "x2-2",
+      "family": "X",
+      "variant": "x2_chain_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x2_chain_heterogeneous",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2979,
+      "output_tokens": 413,
+      "total_tokens": 3392,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 27064.470269465
+        },
+        {
+          "tool": "db_read",
+          "t": 27064.816545472
+        },
+        {
+          "tool": "db_read",
+          "t": 27065.124915824
+        },
+        {
+          "tool": "db_read",
+          "t": 27065.433911692
+        },
+        {
+          "tool": "db_read",
+          "t": 27068.769557319
+        },
+        {
+          "tool": "db_read",
+          "t": 27069.028343446
+        }
+      ],
+      "latency_s": 9.089113309000822,
+      "errors": []
+    },
+    {
+      "instance": "x2-2",
+      "family": "X",
+      "variant": "x2_chain_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x2_chain_heterogeneous",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I identified **contact017@example.com** as belonging to **account_id = 9**, then applied the quarterly pipeline touch-up",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 12125,
+      "output_tokens": 312,
+      "total_tokens": 12437,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 27070.496017793
+        },
+        {
+          "tool": "db_read",
+          "t": 27072.515804838
+        },
+        {
+          "tool": "db_update",
+          "t": 27074.994167058
+        },
+        {
+          "tool": "db_update",
+          "t": 27074.994940486
+        },
+        {
+          "tool": "db_update",
+          "t": 27074.996097128
+        }
+      ],
+      "latency_s": 8.693705797999428,
+      "errors": []
+    },
+    {
+      "instance": "x2-3",
+      "family": "X",
+      "variant": "x2_chain_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x2_chain_heterogeneous",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 5 actions with failures",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2986,
+      "output_tokens": 671,
+      "total_tokens": 3657,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 27082.595423534
+        },
+        {
+          "tool": "db_read",
+          "t": 27082.899385141
+        },
+        {
+          "tool": "db_read",
+          "t": 27083.201001414
+        },
+        {
+          "tool": "db_read",
+          "t": 27083.525773505
+        },
+        {
+          "tool": "db_read",
+          "t": 27089.558486428
+        },
+        {
+          "tool": "db_search",
+          "t": 27089.815671183
+        },
+        {
+          "tool": "db_update",
+          "t": 27089.816151628
+        },
+        {
+          "tool": "db_update",
+          "t": 27089.817560731
+        },
+        {
+          "tool": "db_update",
+          "t": 27089.818674957
+        }
+      ],
+      "latency_s": 11.748306467001385,
+      "errors": [
+        "tool_error: 1 validation error for db_search\ncolumn\n  Field required [type=missing, input_value={'table': 'opportunities'...ed Won','Closed Lost')\"}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+      ]
+    },
+    {
+      "instance": "x2-3",
+      "family": "X",
+      "variant": "x2_chain_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x2_chain_heterogeneous",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found that **contact033@example.com** belongs to **account_id 16** and applied the quarterly pipeline touch-up to all ",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 12172,
+      "output_tokens": 318,
+      "total_tokens": 12490,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 27091.196293441
+        },
+        {
+          "tool": "db_read",
+          "t": 27092.937819522
+        },
+        {
+          "tool": "db_update",
+          "t": 27095.395489278
+        },
+        {
+          "tool": "db_update",
+          "t": 27095.396995009
+        },
+        {
+          "tool": "db_update",
+          "t": 27095.398426595
+        },
+        {
+          "tool": "db_update",
+          "t": 27095.400443823
+        }
+      ],
+      "latency_s": 8.765614302999893,
+      "errors": []
+    },
+    {
+      "instance": "x2-4",
+      "family": "X",
+      "variant": "x2_chain_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x2_chain_heterogeneous",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 2 actions with failures",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2926,
+      "output_tokens": 391,
+      "total_tokens": 3317,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 27102.970460634
+        },
+        {
+          "tool": "db_read",
+          "t": 27103.292901408
+        },
+        {
+          "tool": "db_read",
+          "t": 27103.624882072
+        },
+        {
+          "tool": "db_read",
+          "t": 27107.193377746
+        },
+        {
+          "tool": "db_search",
+          "t": 27107.470148545
+        }
+      ],
+      "latency_s": 8.837826051996672,
+      "errors": [
+        "tool_error: 2 validation errors for db_search\ncolumn\n  Field required [type=missing, input_value={'table': 'opportunities'...': 20, 'is_won': False}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nquery\n  Field required [type=missing, input_value={'table': 'opportunities'...': 20, 'is_won': False}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+      ]
+    },
+    {
+      "instance": "x2-4",
+      "family": "X",
+      "variant": "x2_chain_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x2_chain_heterogeneous",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I identified **contact043@example.com** as belonging to **account_id = 20**, then applied the quarterly pipeline touch-u",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 12077,
+      "output_tokens": 252,
+      "total_tokens": 12329,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 27108.706923653
+        },
+        {
+          "tool": "db_read",
+          "t": 27110.1400277
+        },
+        {
+          "tool": "db_update",
+          "t": 27112.189737563
+        },
+        {
+          "tool": "db_update",
+          "t": 27112.191405871
+        }
+      ],
+      "latency_s": 6.945869589002541,
+      "errors": []
+    },
+    {
+      "instance": "x2-5",
+      "family": "X",
+      "variant": "x2_chain_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x2_chain_heterogeneous",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2985,
+      "output_tokens": 433,
+      "total_tokens": 3418,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 27118.888822262
+        },
+        {
+          "tool": "db_read",
+          "t": 27119.243275984
+        },
+        {
+          "tool": "db_read",
+          "t": 27119.544622937
+        },
+        {
+          "tool": "db_read",
+          "t": 27119.883147008
+        },
+        {
+          "tool": "db_read",
+          "t": 27123.475386361
+        },
+        {
+          "tool": "db_read",
+          "t": 27123.74417671
+        }
+      ],
+      "latency_s": 9.553903953998088,
+      "errors": []
+    },
+    {
+      "instance": "x2-5",
+      "family": "X",
+      "variant": "x2_chain_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x2_chain_heterogeneous",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Ran the quarterly pipeline touch-up for the account associated with **contact005@example.com** (account_id **3**) by upd",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 12245,
+      "output_tokens": 230,
+      "total_tokens": 12475,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 27125.400377797
+        },
+        {
+          "tool": "db_read",
+          "t": 27127.132893866
+        },
+        {
+          "tool": "db_update",
+          "t": 27129.394193182
+        },
+        {
+          "tool": "db_update",
+          "t": 27129.395906237
+        }
+      ],
+      "latency_s": 7.468120863002696,
+      "errors": []
+    },
+    {
+      "instance": "x3-1",
+      "family": "X",
+      "variant": "x3_rules_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x3_rules_heterogeneous",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 7 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3562,
+      "output_tokens": 497,
+      "total_tokens": 4059,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 27134.462714619
+        },
+        {
+          "tool": "db_update",
+          "t": 27139.427550775
+        },
+        {
+          "tool": "db_update",
+          "t": 27139.430289138
+        },
+        {
+          "tool": "db_update",
+          "t": 27139.432572172
+        },
+        {
+          "tool": "db_update",
+          "t": 27139.434773071
+        },
+        {
+          "tool": "db_update",
+          "t": 27139.436879783
+        },
+        {
+          "tool": "db_update",
+          "t": 27139.439086023
+        },
+        {
+          "tool": "db_update",
+          "t": 27139.441085092
+        }
+      ],
+      "latency_s": 7.9019353309995495,
+      "errors": []
+    },
+    {
+      "instance": "x3-1",
+      "family": "X",
+      "variant": "x3_rules_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x3_rules_heterogeneous",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Applied the triage matrix to every non-closed case for account **15**:\n\n- **Case 57 (High)** \u2192 reassigned to **agent 1**",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 10128,
+      "output_tokens": 394,
+      "total_tokens": 10522,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 27140.993783558
+        },
+        {
+          "tool": "db_update",
+          "t": 27146.865867974
+        },
+        {
+          "tool": "db_update",
+          "t": 27146.866826573
+        },
+        {
+          "tool": "db_update",
+          "t": 27146.868292625
+        },
+        {
+          "tool": "db_update",
+          "t": 27146.869751838
+        },
+        {
+          "tool": "db_update",
+          "t": 27146.871138947
+        },
+        {
+          "tool": "db_update",
+          "t": 27146.872910381
+        },
+        {
+          "tool": "db_update",
+          "t": 27146.873806403
+        }
+      ],
+      "latency_s": 10.610666600001423,
+      "errors": []
+    },
+    {
+      "instance": "x3-2",
+      "family": "X",
+      "variant": "x3_rules_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x3_rules_heterogeneous",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 5 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3405,
+      "output_tokens": 393,
+      "total_tokens": 3798,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 27152.487158946
+        },
+        {
+          "tool": "db_update",
+          "t": 27156.925191561
+        },
+        {
+          "tool": "db_update",
+          "t": 27156.928164099
+        },
+        {
+          "tool": "db_update",
+          "t": 27156.930739986
+        },
+        {
+          "tool": "db_update",
+          "t": 27156.933230948
+        },
+        {
+          "tool": "db_update",
+          "t": 27156.93545978
+        }
+      ],
+      "latency_s": 6.835969536998164,
+      "errors": []
+    },
+    {
+      "instance": "x3-2",
+      "family": "X",
+      "variant": "x3_rules_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x3_rules_heterogeneous",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Applied the triage matrix to all non-closed cases for account **16** (no notifications sent):\n\n- **Case 16 (Low, Open)**",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 9722,
+      "output_tokens": 322,
+      "total_tokens": 10044,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 27158.334359605
+        },
+        {
+          "tool": "db_update",
+          "t": 27161.356972217
+        },
+        {
+          "tool": "db_update",
+          "t": 27161.358613444
+        },
+        {
+          "tool": "db_update",
+          "t": 27161.359991661
+        },
+        {
+          "tool": "db_update",
+          "t": 27161.36127676
+        },
+        {
+          "tool": "db_update",
+          "t": 27161.362934388
+        }
+      ],
+      "latency_s": 7.542487865001021,
+      "errors": []
+    },
+    {
+      "instance": "x3-3",
+      "family": "X",
+      "variant": "x3_rules_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x3_rules_heterogeneous",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 5 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3704,
+      "output_tokens": 494,
+      "total_tokens": 4198,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 27167.515665619
+        },
+        {
+          "tool": "db_read",
+          "t": 27167.83885773
+        },
+        {
+          "tool": "db_read",
+          "t": 27168.1541362
+        },
+        {
+          "tool": "db_update",
+          "t": 27172.503183578
+        },
+        {
+          "tool": "db_update",
+          "t": 27172.506311131
+        },
+        {
+          "tool": "db_update",
+          "t": 27172.509001614
+        },
+        {
+          "tool": "db_update",
+          "t": 27172.51137802
+        },
+        {
+          "tool": "db_update",
+          "t": 27172.51364154
+        }
+      ],
+      "latency_s": 7.9859759059982025,
+      "errors": []
+    },
+    {
+      "instance": "x3-3",
+      "family": "X",
+      "variant": "x3_rules_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x3_rules_heterogeneous",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Applied the triage matrix to every **non-closed** case for **account_id = 18**:\n\n- **Case 20 (High)** \u2192 reassigned to **",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 10095,
+      "output_tokens": 326,
+      "total_tokens": 10421,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 27173.641508421
+        },
+        {
+          "tool": "db_update",
+          "t": 27176.295721552
+        },
+        {
+          "tool": "db_update",
+          "t": 27176.298501791
+        },
+        {
+          "tool": "db_update",
+          "t": 27176.299414058
+        },
+        {
+          "tool": "db_update",
+          "t": 27176.300393349
+        },
+        {
+          "tool": "db_update",
+          "t": 27176.301290659
+        }
+      ],
+      "latency_s": 6.414083821000531,
+      "errors": []
+    },
+    {
+      "instance": "x3-4",
+      "family": "X",
+      "variant": "x3_rules_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x3_rules_heterogeneous",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 5 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3525,
+      "output_tokens": 490,
+      "total_tokens": 4015,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 27182.636763237
+        },
+        {
+          "tool": "db_read",
+          "t": 27182.960498853
+        },
+        {
+          "tool": "db_read",
+          "t": 27183.310513019
+        },
+        {
+          "tool": "db_update",
+          "t": 27187.659431171
+        },
+        {
+          "tool": "db_update",
+          "t": 27187.662697572
+        },
+        {
+          "tool": "db_update",
+          "t": 27187.665286181
+        },
+        {
+          "tool": "db_update",
+          "t": 27187.667508882
+        },
+        {
+          "tool": "db_update",
+          "t": 27187.669593714
+        }
+      ],
+      "latency_s": 8.694132653999986,
+      "errors": []
+    },
+    {
+      "instance": "x3-4",
+      "family": "X",
+      "variant": "x3_rules_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x3_rules_heterogeneous",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Applied the triage matrix to all non-closed cases for account **12** (no notifications sent):\n\n- **Case 8 (High, Open):*",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 9737,
+      "output_tokens": 339,
+      "total_tokens": 10076,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 27191.135661788
+        },
+        {
+          "tool": "db_update",
+          "t": 27196.708416397
+        },
+        {
+          "tool": "db_update",
+          "t": 27196.710107162
+        },
+        {
+          "tool": "db_update",
+          "t": 27196.711505499
+        },
+        {
+          "tool": "db_update",
+          "t": 27196.712725756
+        },
+        {
+          "tool": "db_update",
+          "t": 27196.714265754
+        }
+      ],
+      "latency_s": 11.636407674999646,
+      "errors": []
+    },
+    {
+      "instance": "x3-5",
+      "family": "X",
+      "variant": "x3_rules_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x3_rules_heterogeneous",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 5 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3436,
+      "output_tokens": 497,
+      "total_tokens": 3933,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 27202.506474945
+        },
+        {
+          "tool": "db_read",
+          "t": 27202.790186816
+        },
+        {
+          "tool": "db_read",
+          "t": 27203.055467178
+        },
+        {
+          "tool": "db_update",
+          "t": 27207.375176254
+        },
+        {
+          "tool": "db_update",
+          "t": 27207.378400077
+        },
+        {
+          "tool": "db_update",
+          "t": 27207.381286393
+        },
+        {
+          "tool": "db_update",
+          "t": 27207.383614272
+        },
+        {
+          "tool": "db_update",
+          "t": 27207.38589219
+        }
+      ],
+      "latency_s": 8.030853538999509,
+      "errors": []
+    },
+    {
+      "instance": "x3-5",
+      "family": "X",
+      "variant": "x3_rules_heterogeneous",
+      "difficulty": "na",
+      "sub_class": "x3_rules_heterogeneous",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Applied the triage matrix to account **19**\u2019s **non-closed** cases (left the already-closed case 2 unchanged):\n\n- **Case",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 9557,
+      "output_tokens": 353,
+      "total_tokens": 9910,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 27208.931781946
+        },
+        {
+          "tool": "db_update",
+          "t": 27211.898757221
+        },
+        {
+          "tool": "db_update",
+          "t": 27211.901019038
+        },
+        {
+          "tool": "db_update",
+          "t": 27211.902322861
+        },
+        {
+          "tool": "db_update",
+          "t": 27211.903495643
+        },
+        {
+          "tool": "db_update",
+          "t": 27211.904637055
+        }
+      ],
+      "latency_s": 7.949028398998053,
+      "errors": []
+    }
+  ]
+}

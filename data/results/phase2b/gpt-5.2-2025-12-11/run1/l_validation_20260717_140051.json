@@ -1,0 +1,360 @@
+{
+  "timestamp": "20260717_140051",
+  "model": "gpt-5.2-2025-12-11",
+  "run_label": "run1",
+  "family": "L",
+  "runs": [
+    {
+      "instance": "l-m1-1",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x1",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 1 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3566,
+      "output_tokens": 314,
+      "total_tokens": 3880,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 42192.000146257
+        },
+        {
+          "tool": "search_emails",
+          "t": 42192.327321724
+        },
+        {
+          "tool": "send_email",
+          "t": 42194.884841486
+        }
+      ],
+      "latency_s": 7.366851614002371,
+      "errors": []
+    },
+    {
+      "instance": "l-m1-1",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x1",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found the oldest inbox email with subject **\u201cInvoice reminder\u201d** (dated **2025-03-02**) and emailed **agent02@atlas.co",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 10070,
+      "output_tokens": 129,
+      "total_tokens": 10199,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 42196.326838582
+        },
+        {
+          "tool": "send_email",
+          "t": 42198.17682119
+        }
+      ],
+      "latency_s": 5.1508157510033925,
+      "errors": []
+    },
+    {
+      "instance": "l-m1-2",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x1",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 1 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3535,
+      "output_tokens": 258,
+      "total_tokens": 3793,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 42202.790412294
+        },
+        {
+          "tool": "send_email",
+          "t": 42205.635577235
+        }
+      ],
+      "latency_s": 5.602739891000965,
+      "errors": []
+    },
+    {
+      "instance": "l-m1-2",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x1",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I searched the inbox for \u201cShipping delay,\u201d found the oldest message (dated **2025-03-02**), and emailed **agent04@atlas.",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 10069,
+      "output_tokens": 130,
+      "total_tokens": 10199,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 42207.441380939
+        },
+        {
+          "tool": "send_email",
+          "t": 42209.701267157
+        }
+      ],
+      "latency_s": 5.874531301000388,
+      "errors": []
+    },
+    {
+      "instance": "l-m5-1",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x5",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 1 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 6677,
+      "output_tokens": 250,
+      "total_tokens": 6927,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 42214.3108258
+        },
+        {
+          "tool": "send_email",
+          "t": 42217.594243943
+        }
+      ],
+      "latency_s": 5.9843005260045175,
+      "errors": []
+    },
+    {
+      "instance": "l-m5-1",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x5",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I searched the inbox for \u201cContract renewal,\u201d identified the oldest message (dated **2025-03-02**), and emailed agent06@a",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 16374,
+      "output_tokens": 128,
+      "total_tokens": 16502,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 42220.20129812
+        },
+        {
+          "tool": "send_email",
+          "t": 42223.113157643
+        }
+      ],
+      "latency_s": 7.514393800003745,
+      "errors": []
+    },
+    {
+      "instance": "l-m5-2",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x5",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 1 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 6822,
+      "output_tokens": 280,
+      "total_tokens": 7102,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 42228.37848972
+        },
+        {
+          "tool": "send_email",
+          "t": 42231.503491234
+        }
+      ],
+      "latency_s": 6.380199327002629,
+      "errors": []
+    },
+    {
+      "instance": "l-m5-2",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x5",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found the oldest \u201cOnboarding documents\u201d email (received on **2025-03-02**) and emailed agent08@atlas.com with the subj",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 16672,
+      "output_tokens": 126,
+      "total_tokens": 16798,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 42233.30218666
+        },
+        {
+          "tool": "send_email",
+          "t": 42235.388474677
+        }
+      ],
+      "latency_s": 5.492834491000394,
+      "errors": []
+    },
+    {
+      "instance": "l-m20-1",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x20",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 1 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 18641,
+      "output_tokens": 266,
+      "total_tokens": 18907,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 42240.232264531
+        },
+        {
+          "tool": "send_email",
+          "t": 42244.303654105
+        }
+      ],
+      "latency_s": 7.221043664001627,
+      "errors": []
+    },
+    {
+      "instance": "l-m20-1",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x20",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found the oldest \u201cDowntime notice\u201d email (date received: **2025-03-02**) and emailed agent01@atlas.com with subject **",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 40415,
+      "output_tokens": 136,
+      "total_tokens": 40551,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 42246.519160475
+        },
+        {
+          "tool": "send_email",
+          "t": 42249.144366269
+        }
+      ],
+      "latency_s": 6.885027035998064,
+      "errors": []
+    },
+    {
+      "instance": "l-m20-2",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x20",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 1 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 18367,
+      "output_tokens": 253,
+      "total_tokens": 18620,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 42254.474247748
+        },
+        {
+          "tool": "send_email",
+          "t": 42258.989072467
+        }
+      ],
+      "latency_s": 7.780969669001934,
+      "errors": []
+    },
+    {
+      "instance": "l-m20-2",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x20",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found the oldest email with subject **\u201cPricing question\u201d** (dated **2025-03-02**) and emailed **agent03@atlas.com** wi",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 39866,
+      "output_tokens": 137,
+      "total_tokens": 40003,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 42261.081517072
+        },
+        {
+          "tool": "send_email",
+          "t": 42263.198096738
+        }
+      ],
+      "latency_s": 6.351089145995502,
+      "errors": []
+    }
+  ]
+}

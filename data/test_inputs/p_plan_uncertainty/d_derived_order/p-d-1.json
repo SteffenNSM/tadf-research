@@ -1,0 +1,15 @@
+{
+ "id": "p-d-1",
+ "archetype": "P",
+ "family": "P (Phase 2b, plan uncertainty)",
+ "variant": "d_derived_order",
+ "difficulty": "na",
+ "sub_class": "d_derived_order",
+ "instruction": "The Open cases for account 18 need a reminder to whoever is responsible -- one mail per case, subject 'Case <id> reminder' (with the case id filled in), and please work through them oldest first so the audit trail is in order.\n\nNotification runbook (excerpt):\n- One email per record, addressed to the responsible agent (the record's assigned agent; agent addresses follow the agentNN@atlas.com pattern and are listed in the agents table).\n- Send the notifications one at a time in the required order, so the audit trail reflects the sequence.\n- Do not modify any records while notifying.",
+ "expected_post_state": "Three new outbox emails, in send order: case 89 (agent 3), case 32 (agent 5), case 30 (agent 4) -- the creation-date order 2025-04-02, 2025-06-04, 2025-10-16. Recipients are the assigned agents; subjects 'Case <id> reminder'; no records modified.",
+ "provenance": {
+  "source_benchmark": "Author-constructed (Phase 2b family P, plan uncertainty); surface style follows WorkBench (Styles et al., 2024) and the archetype-F instances",
+  "adaptation": "Instance designed by the author to isolate one plan-uncertainty axis (build decision IT-055): action count derivable from a read (a), action count dependent on runtime outcomes (b), unknown source tool (c), or ordering derived from record data (d). Entities reference the deterministic seed in seed_crm.py for stable post-state predicates. Paradigm implementations are reused unchanged from archetype F.",
+  "license": "Original work by the author (task design); benchmark style reference only"
+ }
+}

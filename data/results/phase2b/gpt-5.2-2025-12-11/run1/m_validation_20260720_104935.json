@@ -1,0 +1,1336 @@
+{
+  "timestamp": "20260720_104935",
+  "model": "gpt-5.2-2025-12-11",
+  "run_label": "run1",
+  "family": "M",
+  "runs": [
+    {
+      "instance": "m1-1",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3260,
+      "output_tokens": 601,
+      "total_tokens": 3861,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94865.406227276
+        },
+        {
+          "tool": "db_read",
+          "t": 94865.695061833
+        },
+        {
+          "tool": "db_read",
+          "t": 94866.01127803
+        },
+        {
+          "tool": "db_read",
+          "t": 94866.334928877
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94871.568331294
+        },
+        {
+          "tool": "send_email",
+          "t": 94871.571098359
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94871.863292248
+        },
+        {
+          "tool": "send_email",
+          "t": 94871.8644467
+        }
+      ],
+      "latency_s": 11.403109963008319,
+      "errors": []
+    },
+    {
+      "instance": "m1-1",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "Closed cases **62** and **40** for account **14** via `attempt_close_case` with resolution **\u201cBatch review complete\u201d** (",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 4,
+      "input_tokens": 13223,
+      "output_tokens": 376,
+      "total_tokens": 13599,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94874.125670882
+        },
+        {
+          "tool": "db_read",
+          "t": 94874.126860662
+        },
+        {
+          "tool": "db_read",
+          "t": 94874.128028511
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94875.993976291
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94875.995000514
+        },
+        {
+          "tool": "send_email",
+          "t": 94878.504676453
+        },
+        {
+          "tool": "send_email",
+          "t": 94878.505547762
+        }
+      ],
+      "latency_s": 8.61629351999727,
+      "errors": []
+    },
+    {
+      "instance": "m1-2",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3146,
+      "output_tokens": 540,
+      "total_tokens": 3686,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94886.130673419
+        },
+        {
+          "tool": "db_read",
+          "t": 94886.464839693
+        },
+        {
+          "tool": "db_read",
+          "t": 94886.733831041
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94892.422442153
+        },
+        {
+          "tool": "send_email",
+          "t": 94892.425558287
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94892.713805243
+        },
+        {
+          "tool": "send_email",
+          "t": 94892.715018232
+        }
+      ],
+      "latency_s": 12.211802393998369,
+      "errors": []
+    },
+    {
+      "instance": "m1-2",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "Closed cases **89** (created **2025-04-02**, oldest-first) and **32** (created **2025-06-04**) for account **18** with r",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 4,
+      "input_tokens": 13027,
+      "output_tokens": 376,
+      "total_tokens": 13403,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94894.748098899
+        },
+        {
+          "tool": "db_read",
+          "t": 94894.749198251
+        },
+        {
+          "tool": "db_read",
+          "t": 94894.750410759
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94896.545930504
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94896.546733293
+        },
+        {
+          "tool": "send_email",
+          "t": 94899.032997067
+        },
+        {
+          "tool": "send_email",
+          "t": 94899.034143533
+        }
+      ],
+      "latency_s": 8.636093130000518,
+      "errors": []
+    },
+    {
+      "instance": "m1-3",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3177,
+      "output_tokens": 575,
+      "total_tokens": 3752,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94906.835276355
+        },
+        {
+          "tool": "db_read",
+          "t": 94907.141588602
+        },
+        {
+          "tool": "db_read",
+          "t": 94907.43988078
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94914.172296916
+        },
+        {
+          "tool": "send_email",
+          "t": 94914.174964626
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94914.51295389
+        },
+        {
+          "tool": "send_email",
+          "t": 94914.514129242
+        }
+      ],
+      "latency_s": 13.111713746009627,
+      "errors": []
+    },
+    {
+      "instance": "m1-3",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "Closed cases **56** (created **2025-01-03**) and **71** (created **2025-02-05**) for account **8** via `attempt_close_ca",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 4,
+      "input_tokens": 13136,
+      "output_tokens": 386,
+      "total_tokens": 13522,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94916.823584109
+        },
+        {
+          "tool": "db_read",
+          "t": 94916.824702578
+        },
+        {
+          "tool": "db_read",
+          "t": 94916.825965299
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94918.865995904
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94918.866657949
+        },
+        {
+          "tool": "send_email",
+          "t": 94921.530956202
+        },
+        {
+          "tool": "send_email",
+          "t": 94921.531953771
+        }
+      ],
+      "latency_s": 9.06027558700589,
+      "errors": []
+    },
+    {
+      "instance": "m1-4",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3207,
+      "output_tokens": 549,
+      "total_tokens": 3756,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94927.397489702
+        },
+        {
+          "tool": "db_read",
+          "t": 94927.744683419
+        },
+        {
+          "tool": "db_read",
+          "t": 94928.07710206
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94934.141736389
+        },
+        {
+          "tool": "send_email",
+          "t": 94934.144072421
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94934.445213794
+        },
+        {
+          "tool": "send_email",
+          "t": 94934.446100617
+        }
+      ],
+      "latency_s": 10.897152610006742,
+      "errors": []
+    },
+    {
+      "instance": "m1-4",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "Closed cases **93** (created 2025-01-28) and **74** (created 2025-02-25) for account **19** via `attempt_close_case` wit",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 4,
+      "input_tokens": 13258,
+      "output_tokens": 390,
+      "total_tokens": 13648,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94936.585565813
+        },
+        {
+          "tool": "db_read",
+          "t": 94936.586577487
+        },
+        {
+          "tool": "db_read",
+          "t": 94936.587704129
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94938.399912905
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94938.400892958
+        },
+        {
+          "tool": "send_email",
+          "t": 94941.189642308
+        },
+        {
+          "tool": "send_email",
+          "t": 94941.190675964
+        }
+      ],
+      "latency_s": 10.439455444997293,
+      "errors": []
+    },
+    {
+      "instance": "m1-5",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3260,
+      "output_tokens": 587,
+      "total_tokens": 3847,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94948.858967116
+        },
+        {
+          "tool": "db_read",
+          "t": 94949.136837922
+        },
+        {
+          "tool": "db_read",
+          "t": 94949.433442832
+        },
+        {
+          "tool": "db_read",
+          "t": 94949.745677738
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94954.812944053
+        },
+        {
+          "tool": "send_email",
+          "t": 94954.815895094
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94955.153424789
+        },
+        {
+          "tool": "send_email",
+          "t": 94955.15436708
+        }
+      ],
+      "latency_s": 10.148771662003128,
+      "errors": []
+    },
+    {
+      "instance": "m1-5",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "Closed cases **54** (created **2025-01-13**, oldest-first) and **104** for account **16** via `attempt_close_case` with ",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 4,
+      "input_tokens": 13200,
+      "output_tokens": 369,
+      "total_tokens": 13569,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94957.38939485
+        },
+        {
+          "tool": "db_read",
+          "t": 94957.390529425
+        },
+        {
+          "tool": "db_read",
+          "t": 94957.391663911
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94959.114271495
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94959.115445396
+        },
+        {
+          "tool": "send_email",
+          "t": 94961.333944353
+        },
+        {
+          "tool": "send_email",
+          "t": 94961.335414336
+        }
+      ],
+      "latency_s": 8.904527202990721,
+      "errors": []
+    },
+    {
+      "instance": "m2-1",
+      "family": "M",
+      "variant": "m2_silent_drift",
+      "difficulty": "na",
+      "sub_class": "m2_silent_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3036,
+      "output_tokens": 383,
+      "total_tokens": 3419,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94969.272433381
+        },
+        {
+          "tool": "db_read",
+          "t": 94969.546450341
+        },
+        {
+          "tool": "db_read",
+          "t": 94969.815913599
+        },
+        {
+          "tool": "db_update",
+          "t": 94973.491713523
+        },
+        {
+          "tool": "db_update",
+          "t": 94973.49365632
+        }
+      ],
+      "latency_s": 9.112786191995838,
+      "errors": []
+    },
+    {
+      "instance": "m2-1",
+      "family": "M",
+      "variant": "m2_silent_drift",
+      "difficulty": "na",
+      "sub_class": "m2_silent_drift",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "Updated account 15 in the requested order: reassigned case **117** to **agent 2**, then raised case **120** priority to ",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 3,
+      "input_tokens": 8777,
+      "output_tokens": 167,
+      "total_tokens": 8944,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94974.98722052
+        },
+        {
+          "tool": "db_read",
+          "t": 94974.988404441
+        },
+        {
+          "tool": "db_update",
+          "t": 94976.931350444
+        },
+        {
+          "tool": "db_update",
+          "t": 94976.932342593
+        }
+      ],
+      "latency_s": 4.6637198199896375,
+      "errors": []
+    },
+    {
+      "instance": "m2-2",
+      "family": "M",
+      "variant": "m2_silent_drift",
+      "difficulty": "na",
+      "sub_class": "m2_silent_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3036,
+      "output_tokens": 362,
+      "total_tokens": 3398,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94981.436145106
+        },
+        {
+          "tool": "db_read",
+          "t": 94981.727086757
+        },
+        {
+          "tool": "db_read",
+          "t": 94982.076091648
+        },
+        {
+          "tool": "db_update",
+          "t": 94985.030440874
+        },
+        {
+          "tool": "db_update",
+          "t": 94985.032831188
+        }
+      ],
+      "latency_s": 6.8360408330045175,
+      "errors": []
+    },
+    {
+      "instance": "m2-2",
+      "family": "M",
+      "variant": "m2_silent_drift",
+      "difficulty": "na",
+      "sub_class": "m2_silent_drift",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "Updated case **8** (account **12**) to assign it to **agent 4**, then updated case **42** (account **12**) to **High** p",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 3,
+      "input_tokens": 8777,
+      "output_tokens": 176,
+      "total_tokens": 8953,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94986.402482186
+        },
+        {
+          "tool": "db_read",
+          "t": 94986.40356715
+        },
+        {
+          "tool": "db_update",
+          "t": 94993.423473514
+        },
+        {
+          "tool": "db_update",
+          "t": 94993.424493348
+        }
+      ],
+      "latency_s": 9.846964572992874,
+      "errors": []
+    },
+    {
+      "instance": "m2-3",
+      "family": "M",
+      "variant": "m2_silent_drift",
+      "difficulty": "na",
+      "sub_class": "m2_silent_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3091,
+      "output_tokens": 412,
+      "total_tokens": 3503,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94999.665708968
+        },
+        {
+          "tool": "db_read",
+          "t": 94999.994840369
+        },
+        {
+          "tool": "db_read",
+          "t": 95000.302108517
+        },
+        {
+          "tool": "db_read",
+          "t": 95000.651197274
+        },
+        {
+          "tool": "db_update",
+          "t": 95003.865069869
+        },
+        {
+          "tool": "db_update",
+          "t": 95003.867384193
+        }
+      ],
+      "latency_s": 8.942095181002514,
+      "errors": []
+    },
+    {
+      "instance": "m2-3",
+      "family": "M",
+      "variant": "m2_silent_drift",
+      "difficulty": "na",
+      "sub_class": "m2_silent_drift",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "Updated account 11\u2019s cases in the requested order: reassigned case **66** to agent **3**, then raised case **91** priori",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 3,
+      "input_tokens": 8779,
+      "output_tokens": 181,
+      "total_tokens": 8960,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 95005.380270389
+        },
+        {
+          "tool": "db_read",
+          "t": 95005.381524608
+        },
+        {
+          "tool": "db_update",
+          "t": 95007.175967852
+        },
+        {
+          "tool": "db_update",
+          "t": 95007.176922444
+        }
+      ],
+      "latency_s": 5.021384711988503,
+      "errors": []
+    },
+    {
+      "instance": "m2-4",
+      "family": "M",
+      "variant": "m2_silent_drift",
+      "difficulty": "na",
+      "sub_class": "m2_silent_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3035,
+      "output_tokens": 372,
+      "total_tokens": 3407,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 95012.771261191
+        },
+        {
+          "tool": "db_read",
+          "t": 95013.05316422
+        },
+        {
+          "tool": "db_read",
+          "t": 95013.39412824
+        },
+        {
+          "tool": "db_update",
+          "t": 95016.73026832
+        },
+        {
+          "tool": "db_update",
+          "t": 95016.73247976
+        }
+      ],
+      "latency_s": 7.7991382609907305,
+      "errors": []
+    },
+    {
+      "instance": "m2-4",
+      "family": "M",
+      "variant": "m2_silent_drift",
+      "difficulty": "na",
+      "sub_class": "m2_silent_drift",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "Updated account 13 in the requested order: reassigned case **67** to **agent 5**, then raised case **22** priority to **",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 3,
+      "input_tokens": 8775,
+      "output_tokens": 180,
+      "total_tokens": 8955,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 95018.164768379
+        },
+        {
+          "tool": "db_read",
+          "t": 95018.166081652
+        },
+        {
+          "tool": "db_update",
+          "t": 95019.925972384
+        },
+        {
+          "tool": "db_update",
+          "t": 95019.926921489
+        }
+      ],
+      "latency_s": 5.0248198170011165,
+      "errors": []
+    },
+    {
+      "instance": "m2-5",
+      "family": "M",
+      "variant": "m2_silent_drift",
+      "difficulty": "na",
+      "sub_class": "m2_silent_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3036,
+      "output_tokens": 357,
+      "total_tokens": 3393,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 95025.495197469
+        },
+        {
+          "tool": "db_read",
+          "t": 95025.805176008
+        },
+        {
+          "tool": "db_read",
+          "t": 95026.15310616
+        },
+        {
+          "tool": "db_update",
+          "t": 95029.169953369
+        },
+        {
+          "tool": "db_update",
+          "t": 95029.172213363
+        }
+      ],
+      "latency_s": 7.371785449999152,
+      "errors": []
+    },
+    {
+      "instance": "m2-5",
+      "family": "M",
+      "variant": "m2_silent_drift",
+      "difficulty": "na",
+      "sub_class": "m2_silent_drift",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "Updated account 4\u2019s records in order: reassigned case **5** to **agent 2**, then raised case **72** priority from **Medi",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 3,
+      "input_tokens": 8777,
+      "output_tokens": 183,
+      "total_tokens": 8960,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 95030.763290841
+        },
+        {
+          "tool": "db_read",
+          "t": 95030.764675848
+        },
+        {
+          "tool": "db_update",
+          "t": 95035.037693114
+        },
+        {
+          "tool": "db_update",
+          "t": 95035.038752312
+        }
+      ],
+      "latency_s": 7.808711512989248,
+      "errors": []
+    },
+    {
+      "instance": "m3-1",
+      "family": "M",
+      "variant": "m3_guarded_drift",
+      "difficulty": "na",
+      "sub_class": "m3_guarded_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3079,
+      "output_tokens": 419,
+      "total_tokens": 3498,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 95040.532201734
+        },
+        {
+          "tool": "db_read",
+          "t": 95040.866403527
+        },
+        {
+          "tool": "db_read",
+          "t": 95041.134393168
+        },
+        {
+          "tool": "db_read",
+          "t": 95044.924600985
+        },
+        {
+          "tool": "db_update",
+          "t": 95045.257621684
+        },
+        {
+          "tool": "db_read",
+          "t": 95045.260199531
+        },
+        {
+          "tool": "db_update",
+          "t": 95045.531630896
+        }
+      ],
+      "latency_s": 8.509758301006514,
+      "errors": []
+    },
+    {
+      "instance": "m3-1",
+      "family": "M",
+      "variant": "m3_guarded_drift",
+      "difficulty": "na",
+      "sub_class": "m3_guarded_drift",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "- Case **70** (account 1): re-checked status (**In Progress**) and reassigned it to **agent 8**.  \n- Case **64** (accoun",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 5,
+      "input_tokens": 15311,
+      "output_tokens": 244,
+      "total_tokens": 15555,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 95047.343960119
+        },
+        {
+          "tool": "db_read",
+          "t": 95047.345140485
+        },
+        {
+          "tool": "db_read",
+          "t": 95048.77098136
+        },
+        {
+          "tool": "db_update",
+          "t": 95050.351654162
+        },
+        {
+          "tool": "db_read",
+          "t": 95051.530424178
+        }
+      ],
+      "latency_s": 8.475822042993968,
+      "errors": []
+    },
+    {
+      "instance": "m3-2",
+      "family": "M",
+      "variant": "m3_guarded_drift",
+      "difficulty": "na",
+      "sub_class": "m3_guarded_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3132,
+      "output_tokens": 488,
+      "total_tokens": 3620,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 95059.465729897
+        },
+        {
+          "tool": "db_read",
+          "t": 95059.804492286
+        },
+        {
+          "tool": "db_read",
+          "t": 95060.082148142
+        },
+        {
+          "tool": "db_read",
+          "t": 95060.437491068
+        },
+        {
+          "tool": "db_read",
+          "t": 95064.289046844
+        },
+        {
+          "tool": "db_update",
+          "t": 95064.629729708
+        },
+        {
+          "tool": "db_read",
+          "t": 95064.631657335
+        },
+        {
+          "tool": "db_update",
+          "t": 95064.913265656
+        }
+      ],
+      "latency_s": 10.867723799005034,
+      "errors": []
+    },
+    {
+      "instance": "m3-2",
+      "family": "M",
+      "variant": "m3_guarded_drift",
+      "difficulty": "na",
+      "sub_class": "m3_guarded_drift",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "- **Change 1 (case 75 \u2192 agent 6):** Re-checked case 75 status (was **Open**) and updated assignment to **agent_id = 6**.",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 5,
+      "input_tokens": 15300,
+      "output_tokens": 252,
+      "total_tokens": 15552,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 95067.041593631
+        },
+        {
+          "tool": "db_read",
+          "t": 95067.042611587
+        },
+        {
+          "tool": "db_read",
+          "t": 95068.678656053
+        },
+        {
+          "tool": "db_update",
+          "t": 95070.391376118
+        },
+        {
+          "tool": "db_read",
+          "t": 95071.673581922
+        }
+      ],
+      "latency_s": 9.272877394003444,
+      "errors": []
+    },
+    {
+      "instance": "m3-3",
+      "family": "M",
+      "variant": "m3_guarded_drift",
+      "difficulty": "na",
+      "sub_class": "m3_guarded_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3132,
+      "output_tokens": 509,
+      "total_tokens": 3641,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 95078.886963746
+        },
+        {
+          "tool": "db_read",
+          "t": 95079.154054009
+        },
+        {
+          "tool": "db_read",
+          "t": 95079.500920952
+        },
+        {
+          "tool": "db_read",
+          "t": 95079.851697041
+        },
+        {
+          "tool": "db_read",
+          "t": 95084.016063155
+        },
+        {
+          "tool": "db_update",
+          "t": 95084.281827273
+        },
+        {
+          "tool": "db_read",
+          "t": 95084.283907127
+        },
+        {
+          "tool": "db_update",
+          "t": 95084.639499617
+        }
+      ],
+      "latency_s": 10.409121559001505,
+      "errors": []
+    },
+    {
+      "instance": "m3-3",
+      "family": "M",
+      "variant": "m3_guarded_drift",
+      "difficulty": "na",
+      "sub_class": "m3_guarded_drift",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "- **Case 57 (acct 15):** Re-checked status (Open) and reassigned it to **agent 4**.  \n- **Case 60 (acct 15):** Re-checke",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 5,
+      "input_tokens": 15536,
+      "output_tokens": 237,
+      "total_tokens": 15773,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 95086.504082099
+        },
+        {
+          "tool": "db_read",
+          "t": 95086.504768907
+        },
+        {
+          "tool": "db_read",
+          "t": 95086.505454444
+        },
+        {
+          "tool": "db_read",
+          "t": 95087.932186192
+        },
+        {
+          "tool": "db_update",
+          "t": 95089.434127146
+        },
+        {
+          "tool": "db_read",
+          "t": 95091.927978732
+        }
+      ],
+      "latency_s": 9.366990472000907,
+      "errors": []
+    },
+    {
+      "instance": "m3-4",
+      "family": "M",
+      "variant": "m3_guarded_drift",
+      "difficulty": "na",
+      "sub_class": "m3_guarded_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3092,
+      "output_tokens": 454,
+      "total_tokens": 3546,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 95097.644792857
+        },
+        {
+          "tool": "db_read",
+          "t": 95097.986559607
+        },
+        {
+          "tool": "db_read",
+          "t": 95098.330884108
+        },
+        {
+          "tool": "db_read",
+          "t": 95102.067186118
+        },
+        {
+          "tool": "db_update",
+          "t": 95102.379359322
+        },
+        {
+          "tool": "db_read",
+          "t": 95102.40798246
+        },
+        {
+          "tool": "db_update",
+          "t": 95102.737728375
+        }
+      ],
+      "latency_s": 8.615833320989623,
+      "errors": []
+    },
+    {
+      "instance": "m3-4",
+      "family": "M",
+      "variant": "m3_guarded_drift",
+      "difficulty": "na",
+      "sub_class": "m3_guarded_drift",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "1) Case 20 (account 18): re-checked status = **In Progress** (not closed) and reassigned it to **agent 9**.  \n2) Case 30",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 5,
+      "input_tokens": 15327,
+      "output_tokens": 261,
+      "total_tokens": 15588,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 95104.762699454
+        },
+        {
+          "tool": "db_read",
+          "t": 95104.765317357
+        },
+        {
+          "tool": "db_read",
+          "t": 95106.609881385
+        },
+        {
+          "tool": "db_update",
+          "t": 95108.41330038
+        },
+        {
+          "tool": "db_read",
+          "t": 95109.745922758
+        }
+      ],
+      "latency_s": 10.510742045997176,
+      "errors": []
+    },
+    {
+      "instance": "m3-5",
+      "family": "M",
+      "variant": "m3_guarded_drift",
+      "difficulty": "na",
+      "sub_class": "m3_guarded_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3132,
+      "output_tokens": 523,
+      "total_tokens": 3655,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 95119.166048593
+        },
+        {
+          "tool": "db_read",
+          "t": 95119.515218718
+        },
+        {
+          "tool": "db_read",
+          "t": 95119.791901471
+        },
+        {
+          "tool": "db_read",
+          "t": 95120.116148251
+        },
+        {
+          "tool": "db_read",
+          "t": 95124.549154395
+        },
+        {
+          "tool": "db_update",
+          "t": 95124.899455561
+        },
+        {
+          "tool": "db_read",
+          "t": 95124.902657585
+        },
+        {
+          "tool": "db_update",
+          "t": 95125.180440607
+        }
+      ],
+      "latency_s": 11.820763390001957,
+      "errors": []
+    },
+    {
+      "instance": "m3-5",
+      "family": "M",
+      "variant": "m3_guarded_drift",
+      "difficulty": "na",
+      "sub_class": "m3_guarded_drift",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I reassigned case **31** (account 12) to **agent 7** after confirming it was not closed; I did **not** change case **38*",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 5,
+      "input_tokens": 15304,
+      "output_tokens": 205,
+      "total_tokens": 15509,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 95127.052049215
+        },
+        {
+          "tool": "db_read",
+          "t": 95127.053351811
+        },
+        {
+          "tool": "db_read",
+          "t": 95128.658204516
+        },
+        {
+          "tool": "db_update",
+          "t": 95130.430413751
+        },
+        {
+          "tool": "db_read",
+          "t": 95131.808263986
+        }
+      ],
+      "latency_s": 9.037018414004706,
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,480 @@
+{
+  "timestamp": "20260720_115134",
+  "model": "gpt-5.4-nano-2026-03-17",
+  "run_label": "run2",
+  "family": "M",
+  "runs": [
+    {
+      "instance": "m1-1",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3260,
+      "output_tokens": 539,
+      "total_tokens": 3799,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 98788.146403653
+        },
+        {
+          "tool": "db_read",
+          "t": 98788.428104497
+        },
+        {
+          "tool": "db_read",
+          "t": 98788.739987425
+        },
+        {
+          "tool": "db_read",
+          "t": 98789.061041374
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98792.038101797
+        },
+        {
+          "tool": "send_email",
+          "t": 98792.04100221
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98792.318014321
+        },
+        {
+          "tool": "send_email",
+          "t": 98792.319683798
+        }
+      ],
+      "latency_s": 7.793586995001533,
+      "errors": []
+    },
+    {
+      "instance": "m1-1",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Closed case **62** with resolution **\u201cBatch review complete\u201d** and emailed the account\u2019s primary contact (**contact029@e",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 12814,
+      "output_tokens": 265,
+      "total_tokens": 13079,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 98794.05022321
+        },
+        {
+          "tool": "db_read",
+          "t": 98794.051950966
+        },
+        {
+          "tool": "db_read",
+          "t": 98794.053584464
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98795.543467534
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98795.544773365
+        },
+        {
+          "tool": "send_email",
+          "t": 98797.020213158
+        }
+      ],
+      "latency_s": 6.002633682001033,
+      "errors": []
+    },
+    {
+      "instance": "m1-2",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3160,
+      "output_tokens": 516,
+      "total_tokens": 3676,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 98800.688084773
+        },
+        {
+          "tool": "db_read",
+          "t": 98800.948396934
+        },
+        {
+          "tool": "db_read",
+          "t": 98801.254489652
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98804.198240492
+        },
+        {
+          "tool": "send_email",
+          "t": 98804.201268361
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98804.484630374
+        },
+        {
+          "tool": "send_email",
+          "t": 98804.48584927
+        }
+      ],
+      "latency_s": 6.110783423995599,
+      "errors": []
+    },
+    {
+      "instance": "m1-2",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Closed case **89** with resolution **\u201cBatch review complete\u201d** and emailed the account\u2019s primary contact (**contact039@e",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 12616,
+      "output_tokens": 276,
+      "total_tokens": 12892,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 98806.26519576
+        },
+        {
+          "tool": "db_read",
+          "t": 98806.266581972
+        },
+        {
+          "tool": "db_read",
+          "t": 98806.268313946
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98807.892627393
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98807.893795479
+        },
+        {
+          "tool": "send_email",
+          "t": 98809.187270428
+        }
+      ],
+      "latency_s": 6.234574328002054,
+      "errors": []
+    },
+    {
+      "instance": "m1-3",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3191,
+      "output_tokens": 516,
+      "total_tokens": 3707,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 98813.266738196
+        },
+        {
+          "tool": "db_read",
+          "t": 98813.543245038
+        },
+        {
+          "tool": "db_read",
+          "t": 98813.820048571
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98816.732990171
+        },
+        {
+          "tool": "send_email",
+          "t": 98816.736736914
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98817.021076022
+        },
+        {
+          "tool": "send_email",
+          "t": 98817.022539676
+        }
+      ],
+      "latency_s": 6.28272056899732,
+      "errors": []
+    },
+    {
+      "instance": "m1-3",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Closed case **56** with resolution **\u201cBatch review complete\u201d** and emailed account 8\u2019s primary contact (**contact015@exa",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 5,
+      "input_tokens": 15861,
+      "output_tokens": 265,
+      "total_tokens": 16126,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 98818.761943907
+        },
+        {
+          "tool": "db_read",
+          "t": 98818.765816727
+        },
+        {
+          "tool": "db_read",
+          "t": 98818.768927467
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98820.158214569
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98821.129673764
+        },
+        {
+          "tool": "send_email",
+          "t": 98822.230252768
+        }
+      ],
+      "latency_s": 8.163787486002548,
+      "errors": []
+    },
+    {
+      "instance": "m1-4",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3282,
+      "output_tokens": 629,
+      "total_tokens": 3911,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 98828.690222081
+        },
+        {
+          "tool": "db_read",
+          "t": 98829.034961304
+        },
+        {
+          "tool": "db_read",
+          "t": 98829.368717873
+        },
+        {
+          "tool": "db_read",
+          "t": 98829.683281239
+        },
+        {
+          "tool": "db_read",
+          "t": 98830.015823868
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98833.210427659
+        },
+        {
+          "tool": "send_email",
+          "t": 98833.213534012
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98833.569983867
+        },
+        {
+          "tool": "send_email",
+          "t": 98833.571182811
+        }
+      ],
+      "latency_s": 8.258343363995664,
+      "errors": []
+    },
+    {
+      "instance": "m1-4",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I attempted to close cases **93** and **74** for account **19** using the required `attempt_close_case` tool (oldest-fir",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 12818,
+      "output_tokens": 305,
+      "total_tokens": 13123,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 98835.177443309
+        },
+        {
+          "tool": "db_read",
+          "t": 98835.178443831
+        },
+        {
+          "tool": "db_read",
+          "t": 98835.180145748
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98836.725614175
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98836.726800178
+        },
+        {
+          "tool": "send_email",
+          "t": 98837.748461737
+        }
+      ],
+      "latency_s": 5.611469733994454,
+      "errors": []
+    },
+    {
+      "instance": "m1-5",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3206,
+      "output_tokens": 517,
+      "total_tokens": 3723,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 98841.854002989
+        },
+        {
+          "tool": "db_read",
+          "t": 98842.125735822
+        },
+        {
+          "tool": "db_read",
+          "t": 98842.421970073
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98845.334387744
+        },
+        {
+          "tool": "send_email",
+          "t": 98845.337713112
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98845.675570313
+        },
+        {
+          "tool": "send_email",
+          "t": 98845.677078989
+        }
+      ],
+      "latency_s": 6.414951384009328,
+      "errors": []
+    },
+    {
+      "instance": "m1-5",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Closed case **54** with resolution **\u201cBatch review complete\u201d** and emailed the account\u2019s primary contact (**contact033@e",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 12818,
+      "output_tokens": 272,
+      "total_tokens": 13090,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 98847.586405908
+        },
+        {
+          "tool": "db_read",
+          "t": 98847.587466752
+        },
+        {
+          "tool": "db_read",
+          "t": 98847.588478231
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98849.129798571
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98849.130863894
+        },
+        {
+          "tool": "send_email",
+          "t": 98851.152091137
+        }
+      ],
+      "latency_s": 6.690226052000071,
+      "errors": []
+    }
+  ]
+}

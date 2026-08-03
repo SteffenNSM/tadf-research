@@ -1,0 +1,15 @@
+{
+ "id": "x2-5",
+ "archetype": "X",
+ "family": "X (Phase 2b, crossed gates)",
+ "variant": "x2_chain_heterogeneous",
+ "difficulty": "na",
+ "sub_class": "x2_chain_heterogeneous",
+ "instruction": "Could you run the quarterly pipeline touch-up for the account that contact005@example.com belongs to? The runbook rules apply.\n\nPipeline runbook (excerpt):\n- The touch-up covers every opportunity of that account that is not yet won or lost.\n- Opportunities at 100,000 or above move to stage 'Negotiation'; those below move to stage 'Proposal'.\n- Opportunities at 120,000 or above additionally get agent 3 as their new owner.\n- Change nothing else, and send no notifications for routine field changes.",
+ "expected_post_state": "The account is 3 (via contact contact005@example.com). Expected updates over its not-won-or-lost opportunities: opp 1: stage=Proposal; opp 44: stage=Negotiation, owner_agent_id=3. All other opportunity fields and records unchanged; no mails, no events.",
+ "provenance": {
+  "source_benchmark": "Author-constructed (Phase 2b family X, crossed gates); surface style follows WorkBench (Styles et al., 2024) and the archetype-D/F instances",
+  "adaptation": "Instance designed by the author to cross exactly two routing mechanisms (build decision IT-055): rule matrix on runtime outcomes (x1, D4xD1), read chain into heterogeneous updates (x2, D2xD3), plan-time rule matrix forcing a heterogeneous plan object (x3, D4xD3). Target sets are computed from the deterministic seed with import-time assertions. Paradigm implementations are reused unchanged from archetype F.",
+  "license": "Original work by the author (task design); benchmark style reference only"
+ }
+}

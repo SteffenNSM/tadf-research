@@ -1,0 +1,2518 @@
+{
+  "timestamp": "20260717_125101",
+  "model": "gpt-5.4-nano-2026-03-17",
+  "run_label": "run1",
+  "family": "L",
+  "runs": [
+    {
+      "instance": "l-s1-1",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x1",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 1 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3034,
+      "output_tokens": 186,
+      "total_tokens": 3220,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 37855.888498234
+        },
+        {
+          "tool": "db_update",
+          "t": 37857.196554118
+        }
+      ],
+      "latency_s": 3.0770986190036638,
+      "errors": []
+    },
+    {
+      "instance": "l-s1-1",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x1",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Updated account **900**\u2019s oldest still-**Open** case (**case_id 9000**) to **priority = High**; left all other cases unc",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 9592,
+      "output_tokens": 92,
+      "total_tokens": 9684,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_search",
+          "t": 37858.215287565
+        },
+        {
+          "tool": "db_update",
+          "t": 37859.862538154
+        }
+      ],
+      "latency_s": 3.543077643000288,
+      "errors": []
+    },
+    {
+      "instance": "l-s1-2",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x1",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3090,
+      "output_tokens": 295,
+      "total_tokens": 3385,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 37862.41970022
+        },
+        {
+          "tool": "db_read",
+          "t": 37862.679954832
+        },
+        {
+          "tool": "db_read",
+          "t": 37864.465907065
+        },
+        {
+          "tool": "db_update",
+          "t": 37864.74917016
+        }
+      ],
+      "latency_s": 3.961313378997147,
+      "errors": []
+    },
+    {
+      "instance": "l-s1-2",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x1",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found the oldest case for account 901 that is still Open (case **9300**, created **2025-01-10 09:00:00**) and updated ",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 9592,
+      "output_tokens": 105,
+      "total_tokens": 9697,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_search",
+          "t": 37865.89325246
+        },
+        {
+          "tool": "db_update",
+          "t": 37867.122148756
+        }
+      ],
+      "latency_s": 3.3264895690008416,
+      "errors": []
+    },
+    {
+      "instance": "l-s5-1",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x5",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 1 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3914,
+      "output_tokens": 192,
+      "total_tokens": 4106,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 37869.375251134
+        },
+        {
+          "tool": "db_update",
+          "t": 37870.836720501
+        }
+      ],
+      "latency_s": 2.7132206310052425,
+      "errors": []
+    },
+    {
+      "instance": "l-s5-1",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x5",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found account **902**\u2019s oldest case that is still **Open** (**Case 9600**, created **2025-01-10 09:00:00**) and update",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 14732,
+      "output_tokens": 104,
+      "total_tokens": 14836,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_search",
+          "t": 37871.812605161
+        },
+        {
+          "tool": "db_update",
+          "t": 37873.369583722
+        }
+      ],
+      "latency_s": 3.912955071995384,
+      "errors": []
+    },
+    {
+      "instance": "l-s5-2",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x5",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 2 actions with failures",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3970,
+      "output_tokens": 320,
+      "total_tokens": 4290,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 37877.123519949
+        },
+        {
+          "tool": "db_read",
+          "t": 37877.381538901
+        },
+        {
+          "tool": "db_search",
+          "t": 37879.314658959
+        },
+        {
+          "tool": "db_update",
+          "t": 37879.31929888
+        }
+      ],
+      "latency_s": 4.515728398000647,
+      "errors": [
+        "tool_error: 2 validation errors for db_search\ncolumn\n  Field required [type=missing, input_value={'table': 'cases', 'filte...der': 'asc', 'limit': 1}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nquery\n  Field required [type=missing, input_value={'table': 'cases', 'filte...der': 'asc', 'limit': 1}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+      ]
+    },
+    {
+      "instance": "l-s5-2",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x5",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found account **903**\u2019s oldest case that is still **Open** (**case id 9900**, created **2025-01-10 09:00:00**) and upd",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 14732,
+      "output_tokens": 107,
+      "total_tokens": 14839,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_search",
+          "t": 37886.86914834
+        },
+        {
+          "tool": "db_update",
+          "t": 37888.313788551
+        }
+      ],
+      "latency_s": 10.303704596997704,
+      "errors": []
+    },
+    {
+      "instance": "l-s20-1",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x20",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 2 actions with failures",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 7114,
+      "output_tokens": 253,
+      "total_tokens": 7367,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 37890.921179784
+        },
+        {
+          "tool": "db_search",
+          "t": 37892.751644229
+        },
+        {
+          "tool": "db_update",
+          "t": 37892.75322057
+        }
+      ],
+      "latency_s": 3.0817391620003036,
+      "errors": [
+        "tool_error: 2 validation errors for db_search\ncolumn\n  Field required [type=missing, input_value={'table': 'cases', 'filte...der': 'asc', 'limit': 1}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nquery\n  Field required [type=missing, input_value={'table': 'cases', 'filte...der': 'asc', 'limit': 1}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+      ]
+    },
+    {
+      "instance": "l-s20-1",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x20",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Updated account **904**\u2019s oldest still-*Open* case (**Case ID 10200**, created **2025-01-10 09:00:00**) to **High** prio",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 34012,
+      "output_tokens": 109,
+      "total_tokens": 34121,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_search",
+          "t": 37895.230795728
+        },
+        {
+          "tool": "db_update",
+          "t": 37896.992969257
+        }
+      ],
+      "latency_s": 5.203526466000767,
+      "errors": []
+    },
+    {
+      "instance": "l-s20-2",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x20",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 7170,
+      "output_tokens": 288,
+      "total_tokens": 7458,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 37899.981721895
+        },
+        {
+          "tool": "db_read",
+          "t": 37900.278495246
+        },
+        {
+          "tool": "db_read",
+          "t": 37902.178424314
+        },
+        {
+          "tool": "db_update",
+          "t": 37902.483090454
+        }
+      ],
+      "latency_s": 4.321994958998403,
+      "errors": []
+    },
+    {
+      "instance": "l-s20-2",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x20",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Raised priority to **High** for account **905**\u2019s oldest still-open case (**Case ID 10500**); left all other cases uncha",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 34008,
+      "output_tokens": 87,
+      "total_tokens": 34095,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 37903.842959669
+        },
+        {
+          "tool": "db_update",
+          "t": 37905.460893332
+        }
+      ],
+      "latency_s": 4.61187052999594,
+      "errors": []
+    },
+    {
+      "instance": "l-a1-1",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x1",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2944,
+      "output_tokens": 238,
+      "total_tokens": 3182,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 37908.503783457
+        },
+        {
+          "tool": "db_update",
+          "t": 37910.8368591
+        },
+        {
+          "tool": "db_update",
+          "t": 37910.839182822
+        }
+      ],
+      "latency_s": 3.6793160200031707,
+      "errors": []
+    },
+    {
+      "instance": "l-a1-1",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x1",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Updated account **906** cases that were **Open** with **Low** priority\u2014**case 10800** and **case 10801**\u2014to **Medium** p",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 8681,
+      "output_tokens": 150,
+      "total_tokens": 8831,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 37912.26209135
+        },
+        {
+          "tool": "db_update",
+          "t": 37913.588673473
+        },
+        {
+          "tool": "db_update",
+          "t": 37913.590382642
+        }
+      ],
+      "latency_s": 3.973163729002408,
+      "errors": []
+    },
+    {
+      "instance": "l-a1-2",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x1",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2944,
+      "output_tokens": 225,
+      "total_tokens": 3169,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 37916.33674894
+        },
+        {
+          "tool": "db_update",
+          "t": 37918.080277061
+        },
+        {
+          "tool": "db_update",
+          "t": 37918.082740292
+        }
+      ],
+      "latency_s": 3.2174842530002934,
+      "errors": []
+    },
+    {
+      "instance": "l-a1-2",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x1",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Updated account **907** cases that were **Open** with **Low** priority\u2014**case 11100** and **case 11101**\u2014to **Medium** p",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 8681,
+      "output_tokens": 150,
+      "total_tokens": 8831,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 37919.34898762
+        },
+        {
+          "tool": "db_update",
+          "t": 37921.578693324
+        },
+        {
+          "tool": "db_update",
+          "t": 37921.580318618
+        }
+      ],
+      "latency_s": 4.8016846789978445,
+      "errors": []
+    },
+    {
+      "instance": "l-a5-1",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x5",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 10 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3584,
+      "output_tokens": 585,
+      "total_tokens": 4169,
+      "tool_call_count": 11,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 37924.323087572
+        },
+        {
+          "tool": "db_update",
+          "t": 37928.391331252
+        },
+        {
+          "tool": "db_update",
+          "t": 37928.39422288
+        },
+        {
+          "tool": "db_update",
+          "t": 37928.396795377
+        },
+        {
+          "tool": "db_update",
+          "t": 37928.399010779
+        },
+        {
+          "tool": "db_update",
+          "t": 37928.40114513
+        },
+        {
+          "tool": "db_update",
+          "t": 37928.403238505
+        },
+        {
+          "tool": "db_update",
+          "t": 37928.405541548
+        },
+        {
+          "tool": "db_update",
+          "t": 37928.407520756
+        },
+        {
+          "tool": "db_update",
+          "t": 37928.410088181
+        },
+        {
+          "tool": "db_update",
+          "t": 37928.412329606
+        }
+      ],
+      "latency_s": 5.4735000299988315,
+      "errors": []
+    },
+    {
+      "instance": "l-a5-1",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x5",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "For account **908**, I updated **all 10** cases that were **Open** with **Low** priority (case IDs **11400\u201311409**) to *",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 10337,
+      "output_tokens": 365,
+      "total_tokens": 10702,
+      "tool_call_count": 11,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 37930.587842993
+        },
+        {
+          "tool": "db_update",
+          "t": 37934.039244341
+        },
+        {
+          "tool": "db_update",
+          "t": 37934.040646541
+        },
+        {
+          "tool": "db_update",
+          "t": 37934.043146315
+        },
+        {
+          "tool": "db_update",
+          "t": 37934.044093993
+        },
+        {
+          "tool": "db_update",
+          "t": 37934.045197051
+        },
+        {
+          "tool": "db_update",
+          "t": 37934.04628737
+        },
+        {
+          "tool": "db_update",
+          "t": 37934.048113011
+        },
+        {
+          "tool": "db_update",
+          "t": 37934.049364666
+        },
+        {
+          "tool": "db_update",
+          "t": 37934.051082117
+        },
+        {
+          "tool": "db_update",
+          "t": 37934.052110461
+        }
+      ],
+      "latency_s": 6.8840972739999415,
+      "errors": []
+    },
+    {
+      "instance": "l-a5-2",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x5",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 10 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3584,
+      "output_tokens": 554,
+      "total_tokens": 4138,
+      "tool_call_count": 11,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 37936.494319251
+        },
+        {
+          "tool": "db_update",
+          "t": 37940.206919051
+        },
+        {
+          "tool": "db_update",
+          "t": 37940.209589278
+        },
+        {
+          "tool": "db_update",
+          "t": 37940.211954334
+        },
+        {
+          "tool": "db_update",
+          "t": 37940.214261505
+        },
+        {
+          "tool": "db_update",
+          "t": 37940.216684633
+        },
+        {
+          "tool": "db_update",
+          "t": 37940.218971987
+        },
+        {
+          "tool": "db_update",
+          "t": 37940.221244272
+        },
+        {
+          "tool": "db_update",
+          "t": 37940.223531106
+        },
+        {
+          "tool": "db_update",
+          "t": 37940.225954657
+        },
+        {
+          "tool": "db_update",
+          "t": 37940.2284406
+        }
+      ],
+      "latency_s": 4.882610716995259,
+      "errors": []
+    },
+    {
+      "instance": "l-a5-2",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x5",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "For account **909**, I updated **all 10** cases that were **Open** with **Low** priority to **Medium** priority, leaving",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 10337,
+      "output_tokens": 355,
+      "total_tokens": 10692,
+      "tool_call_count": 11,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 37941.262654138
+        },
+        {
+          "tool": "db_update",
+          "t": 37944.847750524
+        },
+        {
+          "tool": "db_update",
+          "t": 37944.849204023
+        },
+        {
+          "tool": "db_update",
+          "t": 37944.850631139
+        },
+        {
+          "tool": "db_update",
+          "t": 37944.85208005
+        },
+        {
+          "tool": "db_update",
+          "t": 37944.853769497
+        },
+        {
+          "tool": "db_update",
+          "t": 37944.855064506
+        },
+        {
+          "tool": "db_update",
+          "t": 37944.856625184
+        },
+        {
+          "tool": "db_update",
+          "t": 37944.857538742
+        },
+        {
+          "tool": "db_update",
+          "t": 37944.85910666
+        },
+        {
+          "tool": "db_update",
+          "t": 37944.861017409
+        }
+      ],
+      "latency_s": 6.023001831003057,
+      "errors": []
+    },
+    {
+      "instance": "l-a20-1",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x20",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 40 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 5984,
+      "output_tokens": 1726,
+      "total_tokens": 7710,
+      "tool_call_count": 41,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 37947.864386022
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.328329904
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.330993854
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.333228837
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.336320464
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.338642532
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.340733085
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.342977432
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.345313329
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.347625732
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.349567344
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.351930786
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.354250777
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.35640341
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.358469875
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.360674339
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.362835881
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.364838626
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.366818038
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.369422568
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.371482858
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.373873987
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.375943978
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.378118262
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.380700747
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.38293985
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.385564982
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.388392635
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.390715592
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.392949314
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.395163332
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.397668364
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.399793705
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.402075516
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.404627841
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.406676619
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.408683345
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.410911821
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.413250465
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.415326519
+        },
+        {
+          "tool": "db_update",
+          "t": 37959.417449618
+        }
+      ],
+      "latency_s": 13.114737743999285,
+      "errors": []
+    },
+    {
+      "instance": "l-a20-1",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x20",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Updated account **910**: all **Open** cases with **priority = Low** (case IDs **12000\u201312039**) now have **priority = Med",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 16547,
+      "output_tokens": 1136,
+      "total_tokens": 17683,
+      "tool_call_count": 41,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 37960.599959472
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.529187727
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.530776077
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.532582035
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.533509656
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.535354894
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.537471332
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.539447032
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.540774023
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.542583079
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.543568081
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.545636109
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.546759591
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.548425317
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.549584615
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.551203452
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.552416833
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.554358319
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.556202401
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.557405879
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.559322319
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.560274269
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.562440976
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.563619836
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.565503845
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.566734503
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.570189547
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.573384236
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.57684277
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.57870849
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.580690669
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.581835074
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.583633728
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.585288399
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.588550715
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.590707628
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.594700094
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.59909748
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.602783669
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.606029631
+        },
+        {
+          "tool": "db_update",
+          "t": 37968.608055083
+        }
+      ],
+      "latency_s": 10.372574769004132,
+      "errors": []
+    },
+    {
+      "instance": "l-a20-2",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x20",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 157 actions with failures",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 9178,
+      "output_tokens": 5626,
+      "total_tokens": 14804,
+      "tool_call_count": 158,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 37971.058951193
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.948762772
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.949100856
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.949385154
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.949661807
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.949932568
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.950219504
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.950487244
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.950757965
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.951026233
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.951305822
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.951574849
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.951848337
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.952112653
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.952624141
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.952958847
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.953237893
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.953510116
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.953770831
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.954031162
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.954291275
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.954548408
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.954822891
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.955083395
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.955346052
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.955606852
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.955867134
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.956123593
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.956380585
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.956640521
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.957127394
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.957396063
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.9576564
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.957913744
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.958172328
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.958429031
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.958684917
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.95893944
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.959202521
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.959460089
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.959715116
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.959969439
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.960220726
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.96047113
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.960727131
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.961204017
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.961477259
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.961740417
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.961997516
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.962252094
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.962505493
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.962770409
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.963030991
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.963302535
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.96361475
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.963875246
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.964137147
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.964395513
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.964657183
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.964914261
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.965170623
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.965657924
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.965928311
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.96619097
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.966451781
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.96671189
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.96696987
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.967225214
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.967483217
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.967743625
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.968006252
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.968263962
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.968522542
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.968777508
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.96903131
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.969293325
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.969547452
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.970040339
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.970314437
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.970577452
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.97083441
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.971088468
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.971344112
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.971602197
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.971859767
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.972115555
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.972384054
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.972641571
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.972898201
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.973153195
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.97343978
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.973708817
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.974205856
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.974484218
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.974758918
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.975025419
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.975284901
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.975543674
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.975799316
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.976055533
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.976316813
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.976576903
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.976844975
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.977100001
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.977352621
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.977603454
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.977862689
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.97812321
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.978614337
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.978890725
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.979164829
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.979424691
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.979678372
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.979937567
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.980200039
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.980457599
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.980716109
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.980974249
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.981238712
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.981495501
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.981755001
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.982010702
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.982265547
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.982536963
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.983026994
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.98329242
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.983652044
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.983942468
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.984218422
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.984492269
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.984770069
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.985034932
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.985299761
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.985572771
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.985847325
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.986109832
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.986389517
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.986650099
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.986917027
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.987413221
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.987717876
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.98799123
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.988265464
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.988528064
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.988788112
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.989050187
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.989312167
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.989573441
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.989835942
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.990099308
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.990368308
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.990631376
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.990896962
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.991166622
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.991435197
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.99218849
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.992471539
+        },
+        {
+          "tool": "db_update",
+          "t": 38006.992743372
+        }
+      ],
+      "latency_s": 37.14423931899364,
+      "errors": [
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':..., 'priority': 'Medium'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+      ]
+    },
+    {
+      "instance": "l-a20-2",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x20",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Updated all Open, Low-priority cases for account **911** by changing their **priority to Medium** (cases **12300\u201312339**",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 16547,
+      "output_tokens": 1130,
+      "total_tokens": 17677,
+      "tool_call_count": 41,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 38008.085231483
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.961553903
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.963079946
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.965164259
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.96598487
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.96765723
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.969541398
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.971432238
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.97225431
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.973756229
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.974814238
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.976913504
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.977952209
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.980274864
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.981524837
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.982623212
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.984480212
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.985392052
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.987178225
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.988367263
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.990137298
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.991036516
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.992805019
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.994687749
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.995730603
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.996805236
+        },
+        {
+          "tool": "db_update",
+          "t": 38017.999070647
+        },
+        {
+          "tool": "db_update",
+          "t": 38018.00040995
+        },
+        {
+          "tool": "db_update",
+          "t": 38018.00210258
+        },
+        {
+          "tool": "db_update",
+          "t": 38018.004795291
+        },
+        {
+          "tool": "db_update",
+          "t": 38018.007234372
+        },
+        {
+          "tool": "db_update",
+          "t": 38018.010524154
+        },
+        {
+          "tool": "db_update",
+          "t": 38018.012929583
+        },
+        {
+          "tool": "db_update",
+          "t": 38018.015321678
+        },
+        {
+          "tool": "db_update",
+          "t": 38018.018874136
+        },
+        {
+          "tool": "db_update",
+          "t": 38018.021705903
+        },
+        {
+          "tool": "db_update",
+          "t": 38018.023975673
+        },
+        {
+          "tool": "db_update",
+          "t": 38018.026398996
+        },
+        {
+          "tool": "db_update",
+          "t": 38018.028614326
+        },
+        {
+          "tool": "db_update",
+          "t": 38018.030905755
+        },
+        {
+          "tool": "db_update",
+          "t": 38018.033252448
+        }
+      ],
+      "latency_s": 13.1916830629998,
+      "errors": []
+    },
+    {
+      "instance": "l-m1-1",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x1",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 1 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2828,
+      "output_tokens": 354,
+      "total_tokens": 3182,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 38022.581534376
+        },
+        {
+          "tool": "search_emails",
+          "t": 38022.873003041
+        },
+        {
+          "tool": "search_emails",
+          "t": 38024.921793676
+        }
+      ],
+      "latency_s": 4.973577573000512,
+      "errors": []
+    },
+    {
+      "instance": "l-m1-1",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x1",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found the oldest \u201cInvoice reminder\u201d email (dated **2025-03-02**) and sent a short note to **agent02@atlas.com** with s",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 10126,
+      "output_tokens": 147,
+      "total_tokens": 10273,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 38026.302376772
+        },
+        {
+          "tool": "send_email",
+          "t": 38028.112058887
+        }
+      ],
+      "latency_s": 4.233132601999387,
+      "errors": []
+    },
+    {
+      "instance": "l-m1-2",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x1",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2772,
+      "output_tokens": 350,
+      "total_tokens": 3122,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 38031.151697128
+        },
+        {
+          "tool": "search_emails",
+          "t": 38033.476609732
+        },
+        {
+          "tool": "send_email",
+          "t": 38033.776078248
+        }
+      ],
+      "latency_s": 4.621329906003666,
+      "errors": []
+    },
+    {
+      "instance": "l-m1-2",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x1",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found the oldest \u201cShipping delay\u201d email (dated **2025-03-02**) and sent a short note to **agent04@atlas.com** with sub",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 10124,
+      "output_tokens": 141,
+      "total_tokens": 10265,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 38035.211161164
+        },
+        {
+          "tool": "send_email",
+          "t": 38036.697185929
+        }
+      ],
+      "latency_s": 4.079539782003849,
+      "errors": []
+    },
+    {
+      "instance": "l-m5-1",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x5",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 1 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 6759,
+      "output_tokens": 356,
+      "total_tokens": 7115,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 38040.121796373
+        },
+        {
+          "tool": "search_emails",
+          "t": 38040.457970952
+        },
+        {
+          "tool": "send_email",
+          "t": 38042.688735502
+        }
+      ],
+      "latency_s": 4.728020554000977,
+      "errors": []
+    },
+    {
+      "instance": "l-m5-1",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x5",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found the oldest \u201cContract renewal\u201d email (received **2025-03-02**) and sent **agent06@atlas.com** a short note with s",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 16463,
+      "output_tokens": 151,
+      "total_tokens": 16614,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 38044.010184538
+        },
+        {
+          "tool": "send_email",
+          "t": 38046.097825528
+        }
+      ],
+      "latency_s": 4.817889480000304,
+      "errors": []
+    },
+    {
+      "instance": "l-m5-2",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x5",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2775,
+      "output_tokens": 339,
+      "total_tokens": 3114,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 38049.402580616
+        },
+        {
+          "tool": "search_emails",
+          "t": 38051.855247469
+        },
+        {
+          "tool": "send_email",
+          "t": 38052.195505738
+        }
+      ],
+      "latency_s": 4.6695229440010735,
+      "errors": []
+    },
+    {
+      "instance": "l-m5-2",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x5",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found the oldest \u201cOnboarding documents\u201d email (dated **2025-03-02**) and sent agent08@atlas.com a short note with subj",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 16757,
+      "output_tokens": 150,
+      "total_tokens": 16907,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 38054.090174873
+        },
+        {
+          "tool": "send_email",
+          "t": 38055.665045443
+        }
+      ],
+      "latency_s": 4.592096432003018,
+      "errors": []
+    },
+    {
+      "instance": "l-m20-1",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x20",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 1 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 18667,
+      "output_tokens": 298,
+      "total_tokens": 18965,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 38059.031414802
+        },
+        {
+          "tool": "send_email",
+          "t": 38061.109505006
+        }
+      ],
+      "latency_s": 4.231029112001124,
+      "errors": []
+    },
+    {
+      "instance": "l-m20-1",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x20",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found the oldest \u201cDowntime notice\u201d email (dated **2025-03-02**) and sent a short note to **agent01@atlas.com** with su",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 40443,
+      "output_tokens": 147,
+      "total_tokens": 40590,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 38062.610436661
+        },
+        {
+          "tool": "send_email",
+          "t": 38064.358052422
+        }
+      ],
+      "latency_s": 4.447721848999208,
+      "errors": []
+    },
+    {
+      "instance": "l-m20-2",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x20",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2828,
+      "output_tokens": 450,
+      "total_tokens": 3278,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 38068.442608788
+        },
+        {
+          "tool": "search_emails",
+          "t": 38068.702264367
+        },
+        {
+          "tool": "search_emails",
+          "t": 38071.086733048
+        },
+        {
+          "tool": "search_emails",
+          "t": 38071.345939418
+        }
+      ],
+      "latency_s": 5.783995270001469,
+      "errors": []
+    },
+    {
+      "instance": "l-m20-2",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x20",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Sent an email to **agent03@atlas.com** with subject **\u201cOldest pricing question\u201d**, noting that the oldest \u201cPricing quest",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 39920,
+      "output_tokens": 144,
+      "total_tokens": 40064,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 38072.741261804
+        },
+        {
+          "tool": "send_email",
+          "t": 38074.783901526
+        }
+      ],
+      "latency_s": 4.5966693829977885,
+      "errors": []
+    }
+  ]
+}

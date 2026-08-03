@@ -1,0 +1,108 @@
+{
+  "timestamp": "20260716_155944",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "run_label": "run1",
+  "family": "P",
+  "runs": [
+    {
+      "instance": "p-d-3",
+      "family": "P",
+      "variant": "d_derived_order",
+      "difficulty": "na",
+      "sub_class": "d_derived_order",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3577,
+      "output_tokens": 447,
+      "total_tokens": 4024,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 19800.541620665
+        },
+        {
+          "tool": "db_read",
+          "t": 19800.838662496
+        },
+        {
+          "tool": "send_email",
+          "t": 19803.586468615
+        },
+        {
+          "tool": "send_email",
+          "t": 19803.858613442
+        },
+        {
+          "tool": "send_email",
+          "t": 19804.125025699
+        },
+        {
+          "tool": "send_email",
+          "t": 19804.473678375
+        }
+      ],
+      "latency_s": 6.529629696000484,
+      "errors": []
+    },
+    {
+      "instance": "p-d-3",
+      "family": "P",
+      "variant": "d_derived_order",
+      "difficulty": "na",
+      "sub_class": "d_derived_order",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "I emailed the responsible agents for account 19\u2019s four open opportunities in descending deal size order.",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 7,
+      "input_tokens": 26508,
+      "output_tokens": 398,
+      "total_tokens": 26906,
+      "tool_call_count": 9,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 19805.605932478
+        },
+        {
+          "tool": "db_read",
+          "t": 19807.199931044
+        },
+        {
+          "tool": "db_read",
+          "t": 19807.200700852
+        },
+        {
+          "tool": "db_read",
+          "t": 19807.202506003
+        },
+        {
+          "tool": "db_read",
+          "t": 19807.204545724
+        },
+        {
+          "tool": "send_email",
+          "t": 19809.274988357
+        },
+        {
+          "tool": "send_email",
+          "t": 19810.589083718
+        },
+        {
+          "tool": "send_email",
+          "t": 19812.063090119
+        },
+        {
+          "tool": "send_email",
+          "t": 19813.994800748
+        }
+      ],
+      "latency_s": 11.345515208999132,
+      "errors": []
+    }
+  ]
+}

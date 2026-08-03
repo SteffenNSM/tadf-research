@@ -1,0 +1,419 @@
+{
+  "model": "gpt-5.4-mini-2026-03-17",
+  "records": [
+    {
+      "instance": "l-m1-1",
+      "correct": false,
+      "class": "READ_MISS",
+      "read_plan": {
+        "rationale": "Find the oldest email with subject 'Invoice reminder' and extract its received date so the action planner can compose the note to agent02@atlas.com.",
+        "reads": [
+          {
+            "tool": "search_emails",
+            "args": {
+              "query": "\"Invoice reminder\"",
+              "status": "inbox"
+            },
+            "rationale": "Locate all inbox emails matching the invoice reminder subject so the oldest one can be identified."
+          }
+        ]
+      },
+      "read_chars": 2,
+      "action_plan": {
+        "rationale": "Identify the oldest inbox email matching 'Invoice reminder', extract its incoming date, and send a brief note to agent02@atlas.com with that date in the subject line as requested.",
+        "actions": [
+          {
+            "tool": "search_emails",
+            "args": {
+              "query": "\"Invoice reminder\"",
+              "status": "inbox"
+            },
+            "rationale": "Find all matching invoice reminder emails so the oldest one can be selected."
+          },
+          {
+            "tool": "send_email",
+            "args": {
+              "recipient": "agent02@atlas.com",
+              "subject": "Oldest invoice reminder",
+              "body": "The oldest invoice reminder came in on [date from the oldest matching email].",
+              "sender": "user@atlas.com"
+            },
+            "rationale": "Send the short note to the requested agent using the oldest email's incoming date."
+          }
+        ]
+      },
+      "new_outbox": [
+        {
+          "id": 94810,
+          "recipient": "agent02@atlas.com",
+          "subject": "Oldest invoice reminder",
+          "body": "The oldest invoice reminder came in on [date from the oldest matching email]."
+        }
+      ],
+      "telemetry": {
+        "llm_calls": 2,
+        "input_tokens": 2736,
+        "output_tokens": 255,
+        "total_tokens": 2991,
+        "tool_call_count": 3,
+        "tool_calls": [
+          {
+            "tool": "search_emails",
+            "t": 41724.622217973
+          },
+          {
+            "tool": "search_emails",
+            "t": 41726.913526856
+          },
+          {
+            "tool": "send_email",
+            "t": 41727.234090788
+          }
+        ],
+        "latency_s": 6.362090682996495,
+        "errors": []
+      }
+    },
+    {
+      "instance": "l-m1-2",
+      "correct": false,
+      "class": "READ_MISS",
+      "read_plan": {
+        "rationale": "Find the oldest email with subject or content related to 'Shipping delay' and extract its received date so the action planner can compose a note with the correct date.",
+        "reads": [
+          {
+            "tool": "search_emails",
+            "args": {
+              "query": "\"Shipping delay\"",
+              "status": "inbox"
+            },
+            "rationale": "Fetch candidate shipping delay emails from the inbox with their headers and dates."
+          }
+        ]
+      },
+      "read_chars": 2,
+      "action_plan": {
+        "rationale": "Find the oldest inbox email matching 'Shipping delay', extract its incoming date, and send a brief note to agent04@atlas.com with that date in the subject line as requested.",
+        "actions": [
+          {
+            "tool": "search_emails",
+            "args": {
+              "query": "\"Shipping delay\"",
+              "status": "inbox"
+            },
+            "rationale": "Locate all matching Shipping delay emails so the oldest one can be identified from the returned dates."
+          },
+          {
+            "tool": "send_email",
+            "args": {
+              "recipient": "agent04@atlas.com",
+              "subject": "Oldest shipping delay",
+              "body": "The oldest Shipping delay email came in on [date].",
+              "sender": "user@atlas.com"
+            },
+            "rationale": "Send the short note to the agent using the date from the oldest matching email."
+          }
+        ]
+      },
+      "new_outbox": [
+        {
+          "id": 95210,
+          "recipient": "agent04@atlas.com",
+          "subject": "Oldest shipping delay",
+          "body": "The oldest Shipping delay email came in on [date]."
+        }
+      ],
+      "telemetry": {
+        "llm_calls": 2,
+        "input_tokens": 2736,
+        "output_tokens": 254,
+        "total_tokens": 2990,
+        "tool_call_count": 3,
+        "tool_calls": [
+          {
+            "tool": "search_emails",
+            "t": 41729.045335811
+          },
+          {
+            "tool": "search_emails",
+            "t": 41730.906942356
+          },
+          {
+            "tool": "send_email",
+            "t": 41731.166421785
+          }
+        ],
+        "latency_s": 3.956710448001104,
+        "errors": []
+      }
+    },
+    {
+      "instance": "l-m5-1",
+      "correct": true,
+      "class": "OK",
+      "read_plan": {
+        "rationale": "Find the oldest email whose subject or content indicates 'Contract renewal' so the action planner can forward the exact date to agent06@atlas.com.",
+        "reads": [
+          {
+            "tool": "search_emails",
+            "args": {
+              "query": "Contract renewal",
+              "status": "inbox"
+            },
+            "rationale": "Locate matching mailbox messages and retrieve their ids, headers, and received dates."
+          }
+        ]
+      },
+      "read_chars": 10650,
+      "action_plan": {
+        "rationale": "Identify the oldest Contract renewal email from the provided search results and send agent06@atlas.com a short note including its received date in YYYY-MM-DD format.",
+        "actions": [
+          {
+            "tool": "send_email",
+            "args": {
+              "recipient": "agent06@atlas.com",
+              "subject": "Oldest contract renewal",
+              "body": "The oldest Contract renewal email came in on 2025-03-02.",
+              "sender": "user@atlas.com"
+            },
+            "rationale": "Send the requested note with the oldest email's date."
+          }
+        ]
+      },
+      "new_outbox": [
+        {
+          "id": 95650,
+          "recipient": "agent06@atlas.com",
+          "subject": "Oldest contract renewal",
+          "body": "The oldest Contract renewal email came in on 2025-03-02."
+        }
+      ],
+      "telemetry": {
+        "llm_calls": 2,
+        "input_tokens": 6667,
+        "output_tokens": 201,
+        "total_tokens": 6868,
+        "tool_call_count": 2,
+        "tool_calls": [
+          {
+            "tool": "search_emails",
+            "t": 41735.512248921
+          },
+          {
+            "tool": "send_email",
+            "t": 41737.322126533
+          }
+        ],
+        "latency_s": 6.079787947004661,
+        "errors": []
+      }
+    },
+    {
+      "instance": "l-m5-2",
+      "correct": false,
+      "class": "READ_MISS",
+      "read_plan": {
+        "rationale": "Find the oldest email matching the onboarding documents subject so the action planner can reply with the correct date and recipient address.",
+        "reads": [
+          {
+            "tool": "search_emails",
+            "args": {
+              "query": "\"Onboarding documents\"",
+              "status": "inbox"
+            },
+            "rationale": "Locate onboarding documents emails in the mailbox and retrieve their dates and message IDs."
+          }
+        ]
+      },
+      "read_chars": 2,
+      "action_plan": {
+        "rationale": "Find the oldest matching inbox email and send a brief notification including its received date to agent08@atlas.com.",
+        "actions": [
+          {
+            "tool": "search_emails",
+            "args": {
+              "query": "\"Onboarding documents\"",
+              "status": "inbox"
+            },
+            "rationale": "Locate all matching onboarding documents emails in the inbox."
+          },
+          {
+            "tool": "send_email",
+            "args": {
+              "recipient": "agent08@atlas.com",
+              "subject": "Oldest onboarding documents",
+              "body": "The oldest \"Onboarding documents\" email came in on [DATE].",
+              "sender": "user@atlas.com"
+            },
+            "rationale": "Send the requested note after filling in the email's received date."
+          }
+        ]
+      },
+      "new_outbox": [
+        {
+          "id": 96050,
+          "recipient": "agent08@atlas.com",
+          "subject": "Oldest onboarding documents",
+          "body": "The oldest \"Onboarding documents\" email came in on [DATE]."
+        }
+      ],
+      "telemetry": {
+        "llm_calls": 2,
+        "input_tokens": 2739,
+        "output_tokens": 226,
+        "total_tokens": 2965,
+        "tool_call_count": 3,
+        "tool_calls": [
+          {
+            "tool": "search_emails",
+            "t": 41739.00000975
+          },
+          {
+            "tool": "search_emails",
+            "t": 41740.992051787
+          },
+          {
+            "tool": "send_email",
+            "t": 41741.26536148
+          }
+        ],
+        "latency_s": 3.9503636749941506,
+        "errors": []
+      }
+    },
+    {
+      "instance": "l-m20-1",
+      "correct": false,
+      "class": "READ_MISS",
+      "read_plan": {
+        "rationale": "Find the oldest mailbox message with subject Downtime notice and extract its received date so the action planner can send a note with that date.",
+        "reads": [
+          {
+            "tool": "search_emails",
+            "args": {
+              "query": "\"Downtime notice\"",
+              "status": "inbox"
+            },
+            "rationale": "List inbox emails matching the Downtime notice subject so we can identify the oldest one."
+          }
+        ]
+      },
+      "read_chars": 2,
+      "action_plan": {
+        "rationale": "Find the oldest inbox email matching the downtime notice subject, then send a brief note to the specified agent including its received date.",
+        "actions": [
+          {
+            "tool": "search_emails",
+            "args": {
+              "query": "\"Downtime notice\"",
+              "status": "inbox"
+            },
+            "rationale": "Locate all matching downtime notice emails so the oldest one can be identified."
+          },
+          {
+            "tool": "send_email",
+            "args": {
+              "recipient": "agent01@atlas.com",
+              "subject": "Oldest downtime notice",
+              "body": "The oldest downtime notice came in on [DATE].",
+              "sender": "user@atlas.com"
+            },
+            "rationale": "Send the requested note to the agent using the date from the oldest matching email."
+          }
+        ]
+      },
+      "new_outbox": [
+        {
+          "id": 96600,
+          "recipient": "agent01@atlas.com",
+          "subject": "Oldest downtime notice",
+          "body": "The oldest downtime notice came in on [DATE]."
+        }
+      ],
+      "telemetry": {
+        "llm_calls": 2,
+        "input_tokens": 2739,
+        "output_tokens": 238,
+        "total_tokens": 2977,
+        "tool_call_count": 3,
+        "tool_calls": [
+          {
+            "tool": "search_emails",
+            "t": 41742.814957212
+          },
+          {
+            "tool": "search_emails",
+            "t": 41744.769279786
+          },
+          {
+            "tool": "send_email",
+            "t": 41745.108565916
+          }
+        ],
+        "latency_s": 3.784529067001131,
+        "errors": []
+      }
+    },
+    {
+      "instance": "l-m20-2",
+      "correct": true,
+      "class": "OK",
+      "read_plan": {
+        "rationale": "Find the oldest email with subject containing 'Pricing question' and extract its received date so the action planner can send a note with that date.",
+        "reads": [
+          {
+            "tool": "search_emails",
+            "args": {
+              "query": "Pricing question",
+              "status": "inbox"
+            },
+            "rationale": "List matching inbox emails so the oldest one can be identified and its headers read."
+          }
+        ]
+      },
+      "read_chars": 42600,
+      "action_plan": {
+        "rationale": "Identify the oldest 'Pricing question' email from the provided search results and email agent03@atlas.com a short note with its received date in YYYY-MM-DD format.",
+        "actions": [
+          {
+            "tool": "send_email",
+            "args": {
+              "recipient": "agent03@atlas.com",
+              "subject": "Oldest pricing question",
+              "body": "The oldest 'Pricing question' email came in on 2025-03-02.",
+              "sender": "user@atlas.com"
+            },
+            "rationale": "Send the requested note containing the oldest email's received date."
+          }
+        ]
+      },
+      "new_outbox": [
+        {
+          "id": 97000,
+          "recipient": "agent03@atlas.com",
+          "subject": "Oldest pricing question",
+          "body": "The oldest 'Pricing question' email came in on 2025-03-02."
+        }
+      ],
+      "telemetry": {
+        "llm_calls": 2,
+        "input_tokens": 18357,
+        "output_tokens": 206,
+        "total_tokens": 18563,
+        "tool_call_count": 2,
+        "tool_calls": [
+          {
+            "tool": "search_emails",
+            "t": 41746.758299718
+          },
+          {
+            "tool": "send_email",
+            "t": 41749.031468308
+          }
+        ],
+        "latency_s": 3.9366483140038326,
+        "errors": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+ "id": "p-c-4",
+ "archetype": "P",
+ "family": "P (Phase 2b, plan uncertainty)",
+ "variant": "c_source_unknown",
+ "difficulty": "na",
+ "sub_class": "c_source_unknown",
+ "instruction": "There was a follow-up on a proposal from contact006@example.com at some point -- mailbox, calendar, or case, no idea where it landed. Please locate it and send a short note to agent09@atlas.com, subject 'Proposal follow-up timing', with the date it reached us.\n\nWorkspace note:\n- Customer touchpoints end up in different places -- some in the shared mailbox, some on the team calendar, some as CRM cases. Where a given item landed is not always known.\n- Notes state dates in YYYY-MM-DD format.",
+ "expected_post_state": "The item is email 9 (inbox, 'Follow-up on proposal', sent 2025-01-27). Exactly one new outbox email to agent09@atlas.com with subject 'Proposal follow-up timing' and a body containing '2025-01-27'; no CRM changes, no events.",
+ "provenance": {
+  "source_benchmark": "Author-constructed (Phase 2b family P, plan uncertainty); surface style follows WorkBench (Styles et al., 2024) and the archetype-F instances",
+  "adaptation": "Instance designed by the author to isolate one plan-uncertainty axis (build decision IT-055): action count derivable from a read (a), action count dependent on runtime outcomes (b), unknown source tool (c), or ordering derived from record data (d). Entities reference the deterministic seed in seed_crm.py for stable post-state predicates. Paradigm implementations are reused unchanged from archetype F.",
+  "license": "Original work by the author (task design); benchmark style reference only"
+ }
+}

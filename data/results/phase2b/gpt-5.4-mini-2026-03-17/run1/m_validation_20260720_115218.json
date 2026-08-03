@@ -1,0 +1,316 @@
+{
+  "timestamp": "20260720_115218",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "run_label": "run1",
+  "family": "M",
+  "runs": [
+    {
+      "instance": "m1-1",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "error": "9 validation errors for ReadPlan\nreads.0.args.filters.str\n  Input should be a valid string [type=string_type, input_value={'account_id': 14, 'id': [40, 62]}, input_type=dict]\n    For further informati"
+    },
+    {
+      "instance": "m1-1",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I closed case 62 and emailed the account\u2019s primary contact, and case 40 was already closed so I left it untouched and se",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 5,
+      "input_tokens": 16250,
+      "output_tokens": 228,
+      "total_tokens": 16478,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 98859.471513401
+        },
+        {
+          "tool": "db_read",
+          "t": 98859.474110428
+        },
+        {
+          "tool": "db_read",
+          "t": 98859.475337276
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98860.753187848
+        },
+        {
+          "tool": "send_email",
+          "t": 98862.155737283
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98863.315646104
+        }
+      ],
+      "latency_s": 6.334365604998311,
+      "errors": []
+    },
+    {
+      "instance": "m1-2",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "error": "9 validation errors for ReadPlan\nreads.0.args.filters.str\n  Input should be a valid string [type=string_type, input_value={'account_id': 18, 'id': [89, 32]}, input_type=dict]\n    For further informati"
+    },
+    {
+      "instance": "m1-2",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I closed case 89 and notified account 18\u2019s primary contact, and case 32 was already closed so I left it untouched and se",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 5,
+      "input_tokens": 16010,
+      "output_tokens": 229,
+      "total_tokens": 16239,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 98867.352168982
+        },
+        {
+          "tool": "db_read",
+          "t": 98867.35347059
+        },
+        {
+          "tool": "db_read",
+          "t": 98867.35472283
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98868.49554031
+        },
+        {
+          "tool": "send_email",
+          "t": 98869.910562172
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98871.204617317
+        }
+      ],
+      "latency_s": 6.247703019995242,
+      "errors": []
+    },
+    {
+      "instance": "m1-3",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3177,
+      "output_tokens": 412,
+      "total_tokens": 3589,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 98874.110813325
+        },
+        {
+          "tool": "db_read",
+          "t": 98874.414042561
+        },
+        {
+          "tool": "db_read",
+          "t": 98874.705444852
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98876.843831286
+        },
+        {
+          "tool": "send_email",
+          "t": 98876.847207615
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98877.179222363
+        },
+        {
+          "tool": "send_email",
+          "t": 98877.180616421
+        }
+      ],
+      "latency_s": 5.067746917004115,
+      "errors": []
+    },
+    {
+      "instance": "m1-3",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I closed case 56 with the provided resolution and notified the account\u2019s primary contact, and case 71 was already closed",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 12683,
+      "output_tokens": 246,
+      "total_tokens": 12929,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 98878.689600163
+        },
+        {
+          "tool": "db_read",
+          "t": 98878.69120863
+        },
+        {
+          "tool": "db_read",
+          "t": 98878.692987358
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98879.952833882
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98879.95398528
+        },
+        {
+          "tool": "send_email",
+          "t": 98881.074942232
+        }
+      ],
+      "latency_s": 5.106613290001405,
+      "errors": []
+    },
+    {
+      "instance": "m1-4",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "error": "9 validation errors for ReadPlan\nreads.0.args.filters.str\n  Input should be a valid string [type=string_type, input_value={'account_id': 19, 'id': [74, 93]}, input_type=dict]\n    For further informati"
+    },
+    {
+      "instance": "m1-4",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I closed case 93 and notified the account\u2019s primary contact, and case 74 was already closed so I left it untouched and s",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 12732,
+      "output_tokens": 233,
+      "total_tokens": 12965,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 98885.258195194
+        },
+        {
+          "tool": "db_read",
+          "t": 98885.259505006
+        },
+        {
+          "tool": "db_read",
+          "t": 98885.260990724
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98886.665432227
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98886.666546793
+        },
+        {
+          "tool": "send_email",
+          "t": 98887.580521613
+        }
+      ],
+      "latency_s": 4.936891279998235,
+      "errors": []
+    },
+    {
+      "instance": "m1-5",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "error": "9 validation errors for ReadPlan\nreads.0.args.filters.str\n  Input should be a valid string [type=string_type, input_value={'account_id': 16, 'id': [54, 104]}, input_type=dict]\n    For further informat"
+    },
+    {
+      "instance": "m1-5",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I closed case 54 and emailed the account\u2019s primary contact, and case 104 was already closed so I left it untouched and s",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 5,
+      "input_tokens": 16250,
+      "output_tokens": 228,
+      "total_tokens": 16478,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 98892.031686861
+        },
+        {
+          "tool": "db_read",
+          "t": 98892.032929748
+        },
+        {
+          "tool": "db_read",
+          "t": 98892.034388176
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98893.254270427
+        },
+        {
+          "tool": "send_email",
+          "t": 98894.246750695
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 98895.476466333
+        }
+      ],
+      "latency_s": 5.69835339099518,
+      "errors": []
+    }
+  ]
+}

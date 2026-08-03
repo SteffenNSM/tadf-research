@@ -192,6 +192,24 @@ def attempt_close_case(case_id: int, resolution_summary: str) -> dict[str, Any]:
     """
     conn = get_connection()
     try:
+        # ATOMIC close (IT-064): check-and-write in a single conditional
+        # UPDATE, as a real backend would enforce it. The earlier
+        # SELECT-then-UPDATE shape was a TOCTOU surface: under parallel tool
+        # calls (the model may emit several closes in one turn and LangGraph
+        # executes them concurrently) a second close could pass the stale
+        # status check and overwrite state that changed after its read.
+        # Sequential behavior and all reason strings are unchanged.
+        # Internal escalation policy (intentionally not documented in the
+        # schema): cases with a high recent transfer count are routed to
+        # manual review and cannot be closed via this tool.
+        cursor = conn.execute(
+            "UPDATE cases SET status = 'Closed', closed_at = datetime('now') "
+            "WHERE id = ? AND status != 'Closed' AND COALESCE(transfer_count, 0) <= 3",
+            (case_id,),
+        )
+        conn.commit()
+        if cursor.rowcount == 1:
+            return {"closed": True, "id": case_id, "resolution_summary": resolution_summary[:80]}
         row = conn.execute(
             "SELECT id, status, transfer_count FROM cases WHERE id = ?", (case_id,)
         ).fetchone()
@@ -199,19 +217,9 @@ def attempt_close_case(case_id: int, resolution_summary: str) -> dict[str, Any]:
             return {"closed": False, "reason": f"case {case_id} not found"}
         if row["status"] == "Closed":
             return {"closed": False, "reason": "case is already closed"}
-        # Internal escalation policy (intentionally not documented in the
-        # schema): cases with a high recent transfer count are routed to
-        # manual review and cannot be closed via this tool.
-        if (row["transfer_count"] or 0) > 3:
-            return {
-                "closed": False,
-                "reason": "case escalated for manual review; automatic close is not permitted",
-            }
-        conn.execute(
-            "UPDATE cases SET status = 'Closed', closed_at = datetime('now') WHERE id = ?",
-            (case_id,),
-        )
-        conn.commit()
-        return {"closed": True, "id": case_id, "resolution_summary": resolution_summary[:80]}
+        return {
+            "closed": False,
+            "reason": "case escalated for manual review; automatic close is not permitted",
+        }
     finally:
         conn.close()

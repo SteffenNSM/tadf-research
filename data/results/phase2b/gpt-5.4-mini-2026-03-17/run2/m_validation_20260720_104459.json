@@ -1,0 +1,1054 @@
+{
+  "timestamp": "20260720_104459",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "run_label": "run2",
+  "family": "M",
+  "runs": [
+    {
+      "instance": "m1-1",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "error": "9 validation errors for ReadPlan\nreads.0.args.filters.str\n  Input should be a valid string [type=string_type, input_value={'id': [40, 62]}, input_type=dict]\n    For further information visit https://e"
+    },
+    {
+      "instance": "m1-1",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I closed case 62 and emailed the primary contact, and case 40 was already closed so I left it untouched with no notifica",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 5,
+      "input_tokens": 16250,
+      "output_tokens": 226,
+      "total_tokens": 16476,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94717.929856648
+        },
+        {
+          "tool": "db_read",
+          "t": 94717.931208054
+        },
+        {
+          "tool": "db_read",
+          "t": 94717.932359711
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94719.319521934
+        },
+        {
+          "tool": "send_email",
+          "t": 94720.160598478
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94722.051996325
+        }
+      ],
+      "latency_s": 6.624315438006306,
+      "errors": []
+    },
+    {
+      "instance": "m1-2",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "error": "9 validation errors for ReadPlan\nreads.0.args.filters.str\n  Input should be a valid string [type=string_type, input_value={'account_id': 18, 'id': [89, 32]}, input_type=dict]\n    For further informati"
+    },
+    {
+      "instance": "m1-2",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "I closed cases 89 and 32 with the requested resolution and sent closure notifications to the account\u2019s primary contact.",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 5,
+      "input_tokens": 18667,
+      "output_tokens": 252,
+      "total_tokens": 18919,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94727.317429666
+        },
+        {
+          "tool": "db_read",
+          "t": 94729.743950071
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94729.744786856
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94729.745687698
+        },
+        {
+          "tool": "send_email",
+          "t": 94731.273431372
+        },
+        {
+          "tool": "send_email",
+          "t": 94733.320562638
+        }
+      ],
+      "latency_s": 9.131298637992586,
+      "errors": []
+    },
+    {
+      "instance": "m1-3",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "error": "9 validation errors for ReadPlan\nreads.0.args.filters.str\n  Input should be a valid string [type=string_type, input_value={'account_id': 8, 'id': [56, 71]}, input_type=dict]\n    For further informatio"
+    },
+    {
+      "instance": "m1-3",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "I closed cases 56 and 71 with the resolution \u201cBatch review complete\u201d and emailed the account\u2019s primary contact with clos",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 4,
+      "input_tokens": 13111,
+      "output_tokens": 313,
+      "total_tokens": 13424,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94737.336958248
+        },
+        {
+          "tool": "db_read",
+          "t": 94737.338085409
+        },
+        {
+          "tool": "db_read",
+          "t": 94737.339458675
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94738.645535552
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94738.646090711
+        },
+        {
+          "tool": "send_email",
+          "t": 94740.10348863
+        },
+        {
+          "tool": "send_email",
+          "t": 94740.10559152
+        }
+      ],
+      "latency_s": 5.41294611300691,
+      "errors": []
+    },
+    {
+      "instance": "m1-4",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "error": "9 validation errors for ReadPlan\nreads.0.args.filters.str\n  Input should be a valid string [type=string_type, input_value={'account_id': 19, 'id': [74, 93]}, input_type=dict]\n    For further informati"
+    },
+    {
+      "instance": "m1-4",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "I closed cases 93 and 74 with the requested resolution and sent closure notifications to the account\u2019s primary contact.",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 4,
+      "input_tokens": 13129,
+      "output_tokens": 303,
+      "total_tokens": 13432,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94744.382402476
+        },
+        {
+          "tool": "db_read",
+          "t": 94744.383648062
+        },
+        {
+          "tool": "db_read",
+          "t": 94744.384972434
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94746.218445452
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94746.219082009
+        },
+        {
+          "tool": "send_email",
+          "t": 94748.063699126
+        },
+        {
+          "tool": "send_email",
+          "t": 94748.064681817
+        }
+      ],
+      "latency_s": 5.96883370699652,
+      "errors": []
+    },
+    {
+      "instance": "m1-5",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "error": "9 validation errors for ReadPlan\nreads.0.args.filters.str\n  Input should be a valid string [type=string_type, input_value={'account_id': 16, 'id': [54, 104]}, input_type=dict]\n    For further informat"
+    },
+    {
+      "instance": "m1-5",
+      "family": "M",
+      "variant": "m1_observable_drift",
+      "difficulty": "na",
+      "sub_class": "m1_observable_drift",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I closed case 54 and emailed the account\u2019s primary contact, and case 104 was already closed so I left it untouched and s",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 5,
+      "input_tokens": 16250,
+      "output_tokens": 228,
+      "total_tokens": 16478,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94754.575011541
+        },
+        {
+          "tool": "db_read",
+          "t": 94754.576143361
+        },
+        {
+          "tool": "db_read",
+          "t": 94754.577543436
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94755.6387558
+        },
+        {
+          "tool": "send_email",
+          "t": 94756.746969077
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 94759.739789763
+        }
+      ],
+      "latency_s": 9.693781232999754,
+      "errors": []
+    },
+    {
+      "instance": "m2-1",
+      "family": "M",
+      "variant": "m2_silent_drift",
+      "difficulty": "na",
+      "sub_class": "m2_silent_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2991,
+      "output_tokens": 275,
+      "total_tokens": 3266,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94762.508449182
+        },
+        {
+          "tool": "db_read",
+          "t": 94762.817853735
+        },
+        {
+          "tool": "db_update",
+          "t": 94764.726966127
+        },
+        {
+          "tool": "db_update",
+          "t": 94764.729183443
+        }
+      ],
+      "latency_s": 3.8532819130050484,
+      "errors": []
+    },
+    {
+      "instance": "m2-1",
+      "family": "M",
+      "variant": "m2_silent_drift",
+      "difficulty": "na",
+      "sub_class": "m2_silent_drift",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "I reassigned case 117 to agent 2 and raised case 120 to High priority.",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 5,
+      "input_tokens": 14621,
+      "output_tokens": 125,
+      "total_tokens": 14746,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94767.36724426
+        },
+        {
+          "tool": "db_read",
+          "t": 94768.636533812
+        },
+        {
+          "tool": "db_update",
+          "t": 94769.978813772
+        },
+        {
+          "tool": "db_update",
+          "t": 94771.105412273
+        }
+      ],
+      "latency_s": 7.377103182996507,
+      "errors": []
+    },
+    {
+      "instance": "m2-2",
+      "family": "M",
+      "variant": "m2_silent_drift",
+      "difficulty": "na",
+      "sub_class": "m2_silent_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2977,
+      "output_tokens": 253,
+      "total_tokens": 3230,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94773.636361698
+        },
+        {
+          "tool": "db_read",
+          "t": 94773.921787035
+        },
+        {
+          "tool": "db_update",
+          "t": 94776.329249799
+        },
+        {
+          "tool": "db_update",
+          "t": 94776.331221906
+        }
+      ],
+      "latency_s": 4.183374092986924,
+      "errors": []
+    },
+    {
+      "instance": "m2-2",
+      "family": "M",
+      "variant": "m2_silent_drift",
+      "difficulty": "na",
+      "sub_class": "m2_silent_drift",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "I reassigned case 8 to agent 4 and raised case 42 to High priority.",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 3,
+      "input_tokens": 8777,
+      "output_tokens": 153,
+      "total_tokens": 8930,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94777.312643827
+        },
+        {
+          "tool": "db_read",
+          "t": 94777.314185251
+        },
+        {
+          "tool": "db_update",
+          "t": 94778.525214448
+        },
+        {
+          "tool": "db_update",
+          "t": 94778.526277043
+        }
+      ],
+      "latency_s": 2.941173464001622,
+      "errors": []
+    },
+    {
+      "instance": "m2-3",
+      "family": "M",
+      "variant": "m2_silent_drift",
+      "difficulty": "na",
+      "sub_class": "m2_silent_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2978,
+      "output_tokens": 252,
+      "total_tokens": 3230,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94781.140460563
+        },
+        {
+          "tool": "db_read",
+          "t": 94781.468196552
+        },
+        {
+          "tool": "db_update",
+          "t": 94783.15755687
+        },
+        {
+          "tool": "db_update",
+          "t": 94783.159579648
+        }
+      ],
+      "latency_s": 3.8445433220040286,
+      "errors": []
+    },
+    {
+      "instance": "m2-3",
+      "family": "M",
+      "variant": "m2_silent_drift",
+      "difficulty": "na",
+      "sub_class": "m2_silent_drift",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "I reassigned case 66 to agent 3 and raised case 91 to High priority.",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 3,
+      "input_tokens": 8779,
+      "output_tokens": 153,
+      "total_tokens": 8932,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94784.126538752
+        },
+        {
+          "tool": "db_read",
+          "t": 94784.127766331
+        },
+        {
+          "tool": "db_update",
+          "t": 94785.440844286
+        },
+        {
+          "tool": "db_update",
+          "t": 94785.441441036
+        }
+      ],
+      "latency_s": 3.586696911996114,
+      "errors": []
+    },
+    {
+      "instance": "m2-4",
+      "family": "M",
+      "variant": "m2_silent_drift",
+      "difficulty": "na",
+      "sub_class": "m2_silent_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2976,
+      "output_tokens": 258,
+      "total_tokens": 3234,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94788.333877571
+        },
+        {
+          "tool": "db_read",
+          "t": 94788.619674394
+        },
+        {
+          "tool": "db_update",
+          "t": 94790.256819667
+        },
+        {
+          "tool": "db_update",
+          "t": 94790.258956497
+        }
+      ],
+      "latency_s": 3.4618212529894663,
+      "errors": []
+    },
+    {
+      "instance": "m2-4",
+      "family": "M",
+      "variant": "m2_silent_drift",
+      "difficulty": "na",
+      "sub_class": "m2_silent_drift",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "I reassigned case 67 to agent 5 and raised case 22 to High priority.",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 3,
+      "input_tokens": 8775,
+      "output_tokens": 153,
+      "total_tokens": 8928,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94791.465236701
+        },
+        {
+          "tool": "db_read",
+          "t": 94791.466273362
+        },
+        {
+          "tool": "db_update",
+          "t": 94792.920012807
+        },
+        {
+          "tool": "db_update",
+          "t": 94792.920870504
+        }
+      ],
+      "latency_s": 3.4319272709981306,
+      "errors": []
+    },
+    {
+      "instance": "m2-5",
+      "family": "M",
+      "variant": "m2_silent_drift",
+      "difficulty": "na",
+      "sub_class": "m2_silent_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3036,
+      "output_tokens": 279,
+      "total_tokens": 3315,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94795.169611648
+        },
+        {
+          "tool": "db_read",
+          "t": 94795.47834947
+        },
+        {
+          "tool": "db_read",
+          "t": 94795.827185673
+        },
+        {
+          "tool": "db_update",
+          "t": 94797.543936079
+        },
+        {
+          "tool": "db_update",
+          "t": 94797.546403475
+        }
+      ],
+      "latency_s": 3.809844671006431,
+      "errors": []
+    },
+    {
+      "instance": "m2-5",
+      "family": "M",
+      "variant": "m2_silent_drift",
+      "difficulty": "na",
+      "sub_class": "m2_silent_drift",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "I reassigned case 5 to agent 2 and raised case 72 to High priority.",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 5,
+      "input_tokens": 14620,
+      "output_tokens": 125,
+      "total_tokens": 14745,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94798.511710863
+        },
+        {
+          "tool": "db_read",
+          "t": 94799.854413108
+        },
+        {
+          "tool": "db_update",
+          "t": 94801.301289319
+        },
+        {
+          "tool": "db_update",
+          "t": 94802.645889942
+        }
+      ],
+      "latency_s": 6.041931964005926,
+      "errors": []
+    },
+    {
+      "instance": "m3-1",
+      "family": "M",
+      "variant": "m3_guarded_drift",
+      "difficulty": "na",
+      "sub_class": "m3_guarded_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3079,
+      "output_tokens": 389,
+      "total_tokens": 3468,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94805.718049491
+        },
+        {
+          "tool": "db_read",
+          "t": 94806.05323835
+        },
+        {
+          "tool": "db_read",
+          "t": 94806.319807474
+        },
+        {
+          "tool": "db_read",
+          "t": 94810.426362382
+        },
+        {
+          "tool": "db_update",
+          "t": 94810.761263766
+        },
+        {
+          "tool": "db_read",
+          "t": 94810.763448948
+        },
+        {
+          "tool": "db_update",
+          "t": 94811.026389846
+        }
+      ],
+      "latency_s": 7.402290190992062,
+      "errors": []
+    },
+    {
+      "instance": "m3-1",
+      "family": "M",
+      "variant": "m3_guarded_drift",
+      "difficulty": "na",
+      "sub_class": "m3_guarded_drift",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I handed case 70 over to agent 8 and left case 64 unchanged because it is closed.",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 5,
+      "input_tokens": 14795,
+      "output_tokens": 122,
+      "total_tokens": 14917,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94811.953668767
+        },
+        {
+          "tool": "db_read",
+          "t": 94813.089952453
+        },
+        {
+          "tool": "db_update",
+          "t": 94814.315562503
+        },
+        {
+          "tool": "db_read",
+          "t": 94815.490137335
+        }
+      ],
+      "latency_s": 5.704601488003391,
+      "errors": []
+    },
+    {
+      "instance": "m3-2",
+      "family": "M",
+      "variant": "m3_guarded_drift",
+      "difficulty": "na",
+      "sub_class": "m3_guarded_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3132,
+      "output_tokens": 403,
+      "total_tokens": 3535,
+      "tool_call_count": 8,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94818.565303431
+        },
+        {
+          "tool": "db_read",
+          "t": 94818.904294282
+        },
+        {
+          "tool": "db_read",
+          "t": 94819.186745482
+        },
+        {
+          "tool": "db_read",
+          "t": 94819.544099497
+        },
+        {
+          "tool": "db_read",
+          "t": 94821.998470716
+        },
+        {
+          "tool": "db_update",
+          "t": 94822.336920952
+        },
+        {
+          "tool": "db_read",
+          "t": 94822.338814162
+        },
+        {
+          "tool": "db_update",
+          "t": 94822.621252471
+        }
+      ],
+      "latency_s": 5.850480995999533,
+      "errors": []
+    },
+    {
+      "instance": "m3-2",
+      "family": "M",
+      "variant": "m3_guarded_drift",
+      "difficulty": "na",
+      "sub_class": "m3_guarded_drift",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "I reassigned case 75 to agent 6 and raised case 110 to High priority.",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 4,
+      "input_tokens": 11691,
+      "output_tokens": 139,
+      "total_tokens": 11830,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94823.535862524
+        },
+        {
+          "tool": "db_read",
+          "t": 94824.573794051
+        },
+        {
+          "tool": "db_update",
+          "t": 94825.878554401
+        },
+        {
+          "tool": "db_update",
+          "t": 94825.880036608
+        }
+      ],
+      "latency_s": 4.10812296999211,
+      "errors": []
+    },
+    {
+      "instance": "m3-3",
+      "family": "M",
+      "variant": "m3_guarded_drift",
+      "difficulty": "na",
+      "sub_class": "m3_guarded_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3019,
+      "output_tokens": 325,
+      "total_tokens": 3344,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94828.302606304
+        },
+        {
+          "tool": "db_read",
+          "t": 94828.570077602
+        },
+        {
+          "tool": "db_read",
+          "t": 94830.65462066
+        },
+        {
+          "tool": "db_update",
+          "t": 94830.921292271
+        },
+        {
+          "tool": "db_read",
+          "t": 94830.923634842
+        },
+        {
+          "tool": "db_update",
+          "t": 94831.269753773
+        }
+      ],
+      "latency_s": 4.501258096992387,
+      "errors": []
+    },
+    {
+      "instance": "m3-3",
+      "family": "M",
+      "variant": "m3_guarded_drift",
+      "difficulty": "na",
+      "sub_class": "m3_guarded_drift",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I reassigned case 57 to agent 4 and left case 60 unchanged because it was already closed.",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 11586,
+      "output_tokens": 100,
+      "total_tokens": 11686,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94831.976750895
+        },
+        {
+          "tool": "db_update",
+          "t": 94833.261637903
+        },
+        {
+          "tool": "db_read",
+          "t": 94834.243753218
+        }
+      ],
+      "latency_s": 4.210738611989655,
+      "errors": []
+    },
+    {
+      "instance": "m3-4",
+      "family": "M",
+      "variant": "m3_guarded_drift",
+      "difficulty": "na",
+      "sub_class": "m3_guarded_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3019,
+      "output_tokens": 342,
+      "total_tokens": 3361,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94836.851379808
+        },
+        {
+          "tool": "db_read",
+          "t": 94837.167719956
+        },
+        {
+          "tool": "db_read",
+          "t": 94839.305865753
+        },
+        {
+          "tool": "db_update",
+          "t": 94839.616274168
+        },
+        {
+          "tool": "db_read",
+          "t": 94839.618287907
+        },
+        {
+          "tool": "db_update",
+          "t": 94839.944526728
+        }
+      ],
+      "latency_s": 4.419839836002211,
+      "errors": []
+    },
+    {
+      "instance": "m3-4",
+      "family": "M",
+      "variant": "m3_guarded_drift",
+      "difficulty": "na",
+      "sub_class": "m3_guarded_drift",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I reassigned case 20 to agent 9 and left case 30 unchanged because it is closed.",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 11589,
+      "output_tokens": 99,
+      "total_tokens": 11688,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94840.938597315
+        },
+        {
+          "tool": "db_update",
+          "t": 94842.223278041
+        },
+        {
+          "tool": "db_read",
+          "t": 94843.237504838
+        }
+      ],
+      "latency_s": 5.048133050993783,
+      "errors": []
+    },
+    {
+      "instance": "m3-5",
+      "family": "M",
+      "variant": "m3_guarded_drift",
+      "difficulty": "na",
+      "sub_class": "m3_guarded_drift",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3019,
+      "output_tokens": 313,
+      "total_tokens": 3332,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94846.58528774
+        },
+        {
+          "tool": "db_read",
+          "t": 94846.938165188
+        },
+        {
+          "tool": "db_read",
+          "t": 94848.832232756
+        },
+        {
+          "tool": "db_update",
+          "t": 94849.182105786
+        },
+        {
+          "tool": "db_read",
+          "t": 94849.183836208
+        },
+        {
+          "tool": "db_update",
+          "t": 94849.462180328
+        }
+      ],
+      "latency_s": 4.428231479003443,
+      "errors": []
+    },
+    {
+      "instance": "m3-5",
+      "family": "M",
+      "variant": "m3_guarded_drift",
+      "difficulty": "na",
+      "sub_class": "m3_guarded_drift",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I reassigned case 31 to agent 7 and left case 38 unchanged because it was closed when I re-checked it.",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 5,
+      "input_tokens": 14791,
+      "output_tokens": 128,
+      "total_tokens": 14919,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 94850.875314365
+        },
+        {
+          "tool": "db_read",
+          "t": 94852.719189742
+        },
+        {
+          "tool": "db_update",
+          "t": 94854.972400475
+        },
+        {
+          "tool": "db_read",
+          "t": 94856.611813281
+        }
+      ],
+      "latency_s": 8.664395297993906,
+      "errors": []
+    }
+  ]
+}

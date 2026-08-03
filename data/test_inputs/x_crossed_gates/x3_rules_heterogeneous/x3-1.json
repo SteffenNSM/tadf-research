@@ -1,0 +1,15 @@
+{
+ "id": "x3-1",
+ "archetype": "X",
+ "family": "X (Phase 2b, crossed gates)",
+ "variant": "x3_rules_heterogeneous",
+ "difficulty": "na",
+ "sub_class": "x3_rules_heterogeneous",
+ "instruction": "Please run the triage matrix over account 15's open casework (every case that is not closed).\n\nTriage runbook (excerpt):\n- High-priority cases are handed to agent 1 (assignment only; the priority stays).\n- Medium-priority cases are raised to High priority (the assigned agent stays).\n- Low-priority cases are raised to Medium priority AND handed to agent 9.\n- Apply the matching rule to every non-closed case of the account; change nothing else; no notifications.",
+ "expected_post_state": "Expected per the matrix: case 57: agent_id=1; case 60: priority=Medium, agent_id=9; case 68: priority=High; case 112: priority=High; case 116: priority=High; case 117: agent_id=1; case 120: priority=High. Closed cases and all other records untouched; no mails, no events.",
+ "provenance": {
+  "source_benchmark": "Author-constructed (Phase 2b family X, crossed gates); surface style follows WorkBench (Styles et al., 2024) and the archetype-D/F instances",
+  "adaptation": "Instance designed by the author to cross exactly two routing mechanisms (build decision IT-055): rule matrix on runtime outcomes (x1, D4xD1), read chain into heterogeneous updates (x2, D2xD3), plan-time rule matrix forcing a heterogeneous plan object (x3, D4xD3). Target sets are computed from the deterministic seed with import-time assertions. Paradigm implementations are reused unchanged from archetype F.",
+  "license": "Original work by the author (task design); benchmark style reference only"
+ }
+}

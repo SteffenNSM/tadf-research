@@ -1,0 +1,416 @@
+{
+  "timestamp": "20260716_151352",
+  "model": "gpt-5.4-nano-2026-03-17",
+  "run_label": "adhoc",
+  "family": "P",
+  "runs": [
+    {
+      "instance": "p-a-1",
+      "family": "P",
+      "variant": "a_count_read",
+      "difficulty": "na",
+      "sub_class": "a_count_read",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3102,
+      "output_tokens": 306,
+      "total_tokens": 3408,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 16989.313629078
+        },
+        {
+          "tool": "db_update",
+          "t": 16991.613692928
+        },
+        {
+          "tool": "db_update",
+          "t": 16991.616356299
+        },
+        {
+          "tool": "db_update",
+          "t": 16991.618543531
+        },
+        {
+          "tool": "db_update",
+          "t": 16991.620571121
+        }
+      ],
+      "latency_s": 4.6229029489986715,
+      "errors": []
+    },
+    {
+      "instance": "p-a-1",
+      "family": "P",
+      "variant": "a_count_read",
+      "difficulty": "na",
+      "sub_class": "a_count_read",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Raised priority from **Medium** to **High** for all **Open** cases on **account 15** (case IDs: **68, 112, 116, 120**) a",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 9080,
+      "output_tokens": 200,
+      "total_tokens": 9280,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 16998.201750168
+        },
+        {
+          "tool": "db_update",
+          "t": 17000.075528571
+        },
+        {
+          "tool": "db_update",
+          "t": 17000.076993903
+        },
+        {
+          "tool": "db_update",
+          "t": 17000.079010759
+        },
+        {
+          "tool": "db_update",
+          "t": 17000.079851121
+        }
+      ],
+      "latency_s": 10.028397245998349,
+      "errors": []
+    },
+    {
+      "instance": "p-b-1",
+      "family": "P",
+      "variant": "b_count_outcome",
+      "difficulty": "na",
+      "sub_class": "b_count_outcome",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 6 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3543,
+      "output_tokens": 448,
+      "total_tokens": 3991,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 17003.324062573
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 17006.316437149
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 17006.319494252
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 17006.322182008
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 17006.32455981
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 17006.325610758
+        },
+        {
+          "tool": "send_email",
+          "t": 17006.328359139
+        }
+      ],
+      "latency_s": 4.93729366199841,
+      "errors": []
+    },
+    {
+      "instance": "p-b-1",
+      "family": "P",
+      "variant": "b_count_outcome",
+      "difficulty": "na",
+      "sub_class": "b_count_outcome",
+      "paradigm": "agent",
+      "correct": false,
+      "summary": "I closed the oldest eligible open cases for account 14 (cases **62** and **40**) with resolution **\u201cRoutine cleanup\u201d**, ",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 6,
+      "input_tokens": 20849,
+      "output_tokens": 231,
+      "total_tokens": 21080,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 17009.175417392
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 17010.677076333
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 17012.192004356
+        },
+        {
+          "tool": "attempt_close_case",
+          "t": 17013.497345649
+        },
+        {
+          "tool": "send_email",
+          "t": 17016.512335119
+        }
+      ],
+      "latency_s": 11.73016018799899,
+      "errors": []
+    },
+    {
+      "instance": "p-c-1",
+      "family": "P",
+      "variant": "c_source_unknown",
+      "difficulty": "na",
+      "sub_class": "c_source_unknown",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 10 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 6192,
+      "output_tokens": 995,
+      "total_tokens": 7187,
+      "tool_call_count": 16,
+      "tool_calls": [
+        {
+          "tool": "db_search",
+          "t": 17021.798894199
+        },
+        {
+          "tool": "db_read",
+          "t": 17022.124090818
+        },
+        {
+          "tool": "db_search",
+          "t": 17022.387650531
+        },
+        {
+          "tool": "db_search",
+          "t": 17022.740112145
+        },
+        {
+          "tool": "db_search",
+          "t": 17022.999928655
+        },
+        {
+          "tool": "db_read",
+          "t": 17023.259231553
+        },
+        {
+          "tool": "search_emails",
+          "t": 17028.451889512
+        },
+        {
+          "tool": "search_emails",
+          "t": 17028.720054487
+        },
+        {
+          "tool": "search_emails",
+          "t": 17029.068964236
+        },
+        {
+          "tool": "search_emails",
+          "t": 17029.340761477
+        },
+        {
+          "tool": "search_events",
+          "t": 17029.675637568
+        },
+        {
+          "tool": "db_search",
+          "t": 17029.994890882
+        },
+        {
+          "tool": "db_search",
+          "t": 17030.348694852
+        },
+        {
+          "tool": "db_search",
+          "t": 17030.606599566
+        },
+        {
+          "tool": "db_search",
+          "t": 17030.892261614
+        },
+        {
+          "tool": "send_email",
+          "t": 17031.226694099
+        }
+      ],
+      "latency_s": 13.17480826999963,
+      "errors": []
+    },
+    {
+      "instance": "p-c-1",
+      "family": "P",
+      "variant": "c_source_unknown",
+      "difficulty": "na",
+      "sub_class": "c_source_unknown",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found the renewal inquiry email from **contact012@example.com** (\u201cRenewal inquiry\u201d) dated **2025-03-16**, and I sent a",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 4,
+      "input_tokens": 14342,
+      "output_tokens": 471,
+      "total_tokens": 14813,
+      "tool_call_count": 12,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 17034.015563088
+        },
+        {
+          "tool": "search_events",
+          "t": 17034.017308256
+        },
+        {
+          "tool": "db_search",
+          "t": 17034.018691656
+        },
+        {
+          "tool": "db_search",
+          "t": 17034.019765764
+        },
+        {
+          "tool": "db_search",
+          "t": 17034.020917754
+        },
+        {
+          "tool": "db_search",
+          "t": 17034.022268097
+        },
+        {
+          "tool": "db_search",
+          "t": 17034.023014261
+        },
+        {
+          "tool": "db_search",
+          "t": 17034.024161585
+        },
+        {
+          "tool": "search_emails",
+          "t": 17036.71987891
+        },
+        {
+          "tool": "search_emails",
+          "t": 17036.721266012
+        },
+        {
+          "tool": "search_events",
+          "t": 17036.722249664
+        },
+        {
+          "tool": "send_email",
+          "t": 17039.192162252
+        }
+      ],
+      "latency_s": 9.26808284299841,
+      "errors": []
+    },
+    {
+      "instance": "p-d-1",
+      "family": "P",
+      "variant": "d_derived_order",
+      "difficulty": "na",
+      "sub_class": "d_derived_order",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 3 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3511,
+      "output_tokens": 528,
+      "total_tokens": 4039,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 17044.548900042
+        },
+        {
+          "tool": "db_read",
+          "t": 17044.833492394
+        },
+        {
+          "tool": "send_email",
+          "t": 17048.009271587
+        },
+        {
+          "tool": "send_email",
+          "t": 17048.344469152
+        },
+        {
+          "tool": "send_email",
+          "t": 17048.690151977
+        }
+      ],
+      "latency_s": 8.082615390001592,
+      "errors": []
+    },
+    {
+      "instance": "p-d-1",
+      "family": "P",
+      "variant": "d_derived_order",
+      "difficulty": "na",
+      "sub_class": "d_derived_order",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Sent reminder emails one-at-a-time to the assigned agents for account 18\u2019s open cases in oldest-first order: Case 089 \u2192 ",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 6,
+      "input_tokens": 21411,
+      "output_tokens": 396,
+      "total_tokens": 21807,
+      "tool_call_count": 7,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 17050.262885163
+        },
+        {
+          "tool": "db_read",
+          "t": 17051.797690937
+        },
+        {
+          "tool": "db_read",
+          "t": 17051.799475423
+        },
+        {
+          "tool": "db_read",
+          "t": 17051.800281406
+        },
+        {
+          "tool": "send_email",
+          "t": 17053.629051064
+        },
+        {
+          "tool": "send_email",
+          "t": 17055.468619416
+        },
+        {
+          "tool": "send_email",
+          "t": 17059.12100916
+        }
+      ],
+      "latency_s": 15.093363911997585,
+      "errors": []
+    }
+  ]
+}

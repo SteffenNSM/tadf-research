@@ -1,0 +1,210 @@
+{
+  "instance": "s3-1",
+  "model": "gpt-5.2-2025-12-11",
+  "correct": true,
+  "predicate_rationale": "post-state predicate satisfied",
+  "messages": [
+    {
+      "type": "HumanMessage",
+      "content": "Can you work through the open casework for account 14? Close what the back-end lets you close, resolution 'Routine cleanup', and file the batch report as the runbook requires.\n\nSupport runbook (excerpt):\n- 'Open casework' covers every case that is not closed (status Open or In Progress).\n- Case closures go through the attempt_close_case tool; the back-end applies business rules and may refuse a close. Direct status edits to 'Closed' are not permitted.\n- Work strictly oldest-first by creation date.\n- Stop at the first refused close: leave that case and every case after it untouched. No escalation mail is needed; the batch report covers the outcome.\n- After the batch (completed or stopped), send exactly ONE report email to ops@atlas.com, subject 'Batch report: account <id>' (substitute the account id).\n- The report body names exactly the cases that were actually closed in THIS run, one line per case in the form 'case <id>'. Do not name any case that was not closed. If no case was closed, the body is the single line 'no cases closed'."
+    },
+    {
+      "type": "AIMessage",
+      "content": "",
+      "tool_calls": [
+        {
+          "name": "db_read",
+          "args": {
+            "table": "cases",
+            "filters": {
+              "account_id": 14
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ToolMessage",
+      "content": "[{\"id\": 17, \"account_id\": 14, \"agent_id\": 8, \"subject\": \"Case 017\", \"issue_category\": \"Billing\", \"status\": \"In Progress\", \"priority\": \"High\", \"created_at\": \"2025-08-09 14:00:00\", \"closed_at\": null, \"transfer_count\": 5}, {\"id\": 27, \"account_id\": 14, \"agent_id\": 10, \"subject\": \"Case 027\", \"issue_category\": \"Product\", \"status\": \"Closed\", \"priority\": \"High\", \"created_at\": \"2025-10-24 09:00:00\", \"closed_at\": \"2025-10-25 07:00:00\", \"transfer_count\": 2}, {\"id\": 40, \"account_id\": 14, \"agent_id\": 1, \"subject\": \"Case 040\", \"issue_category\": \"Technical\", \"status\": \"Open\", \"priority\": \"High\", \"created_at\": \"2025-05-02 11:00:00\", \"closed_at\": null, \"transfer_count\": 2}, {\"id\": 62, \"account_id\": 14, \"agent_id\": 7, \"subject\": \"Case 062\", \"issue_category\": \"Shipping\", \"status\": \"Open\", \"priority\": \"High\", \"created_at\": \"2025-03-20 12:00:00\", \"closed_at\": null, \"transfer_count\": 3}, {\"id\": 63, \"account_id\": 14, \"agent_id\": 7, \"subject\": \"Case 063\", \"issue_category\": \"Product\", \"status\": \"Open\", \"priority\": \"High\", \"created_at\": \"2025-08-01 09:00:00\", \"closed_at\": null, \"transfer_count\": 0}, {\"id\": 113, \"account_id\": 14, \"agent_id\": 8, \"subject\": \"Case 113\", \"issue_category\": \"Account\", \"status\": \"Closed\", \"priority\": \"Low\", \"created_at\": \"2025-05-30 17:00:00\", \"closed_at\": \"2025-06-02 16:00:00\", \"transfer_count\": 3}, {\"id\": 118, \"account_id\": 14, \"agent_id\": 1, \"subject\": \"Case 118\", \"issue_category\": \"Shipping\", \"status\": \"Open\", \"priority\": \"High\", \"created_at\": \"2025-10-20 15:00:00\", \"closed_at\": null, \"transfer_count\": 3}]"
+    },
+    {
+      "type": "AIMessage",
+      "content": "",
+      "tool_calls": [
+        {
+          "name": "attempt_close_case",
+          "args": {
+            "case_id": 62,
+            "resolution_summary": "Routine cleanup"
+          }
+        }
+      ]
+    },
+    {
+      "type": "ToolMessage",
+      "content": "{\"closed\": true, \"id\": 62, \"resolution_summary\": \"Routine cleanup\"}"
+    },
+    {
+      "type": "AIMessage",
+      "content": "",
+      "tool_calls": [
+        {
+          "name": "attempt_close_case",
+          "args": {
+            "case_id": 40,
+            "resolution_summary": "Routine cleanup"
+          }
+        }
+      ]
+    },
+    {
+      "type": "ToolMessage",
+      "content": "{\"closed\": true, \"id\": 40, \"resolution_summary\": \"Routine cleanup\"}"
+    },
+    {
+      "type": "AIMessage",
+      "content": "",
+      "tool_calls": [
+        {
+          "name": "attempt_close_case",
+          "args": {
+            "case_id": 63,
+            "resolution_summary": "Routine cleanup"
+          }
+        }
+      ]
+    },
+    {
+      "type": "ToolMessage",
+      "content": "{\"closed\": true, \"id\": 63, \"resolution_summary\": \"Routine cleanup\"}"
+    },
+    {
+      "type": "AIMessage",
+      "content": "",
+      "tool_calls": [
+        {
+          "name": "attempt_close_case",
+          "args": {
+            "case_id": 17,
+            "resolution_summary": "Routine cleanup"
+          }
+        }
+      ]
+    },
+    {
+      "type": "ToolMessage",
+      "content": "{\"closed\": false, \"reason\": \"case escalated for manual review; automatic close is not permitted\"}"
+    },
+    {
+      "type": "AIMessage",
+      "content": "",
+      "tool_calls": [
+        {
+          "name": "send_email",
+          "args": {
+            "recipient": "ops@atlas.com",
+            "subject": "Batch report: account 14",
+            "body": "case 62\ncase 40\ncase 63",
+            "sender": "user@atlas.com"
+          }
+        }
+      ]
+    },
+    {
+      "type": "ToolMessage",
+      "content": "{\"id\": \"2007\", \"threadId\": \"2007\", \"labelIds\": [\"SENT\"], \"snippet\": \"case 62\\ncase 40\\ncase 63\", \"historyId\": \"2007\", \"internalDate\": \"1784733585000\", \"payload\": {\"partId\": \"\", \"mimeType\": \"text/plain\", \"filename\": \"\", \"headers\": [{\"name\": \"From\", \"value\": \"user@atlas.com\"}, {\"name\": \"To\", \"value\": \"ops@atlas.com\"}, {\"name\": \"Subject\", \"value\": \"Batch report: account 14\"}, {\"name\": \"Date\", \"value\": \"Wed, 22 Jul 2026 15:19:45 +0000\"}, {\"name\": \"Message-ID\", \"value\": \"<2007@atlas.local>\"}], \"body\": {\"size\": 23, \"data\": \"Y2FzZSA2MgpjYXNlIDQwCmNhc2UgNjM\"}}, \"sizeEstimate\": 323}"
+    },
+    {
+      "type": "AIMessage",
+      "content": "Closed cases 62, 40, and 63 for account 14 (oldest-first) with resolution \u201cRoutine cleanup\u201d, then stopped when case 17 was refused by the back-end, and sent the required single batch report email to ops@atlas.com listing only the closed cases."
+    }
+  ],
+  "outbox_tail": [
+    {
+      "id": 2007,
+      "recipient": "ops@atlas.com",
+      "subject": "Batch report: account 14",
+      "body": "case 62\ncase 40\ncase 63"
+    },
+    {
+      "id": 20,
+      "recipient": "contact028@example.com",
+      "subject": "Update on your case",
+      "body": "Please see attached or reply with any questions."
+    },
+    {
+      "id": 19,
+      "recipient": "contact036@example.com",
+      "subject": "Renewal options",
+      "body": "Please see attached or reply with any questions."
+    },
+    {
+      "id": 18,
+      "recipient": "contact009@example.com",
+      "subject": "Quarterly check-in",
+      "body": "Please see attached or reply with any questions."
+    },
+    {
+      "id": 17,
+      "recipient": "contact008@example.com",
+      "subject": "Renewal options",
+      "body": "Please see attached or reply with any questions."
+    }
+  ],
+  "cases_closed_this_run": [
+    {
+      "id": 40,
+      "account_id": 14,
+      "status": "Closed",
+      "transfer_count": 2
+    },
+    {
+      "id": 62,
+      "account_id": 14,
+      "status": "Closed",
+      "transfer_count": 3
+    },
+    {
+      "id": 63,
+      "account_id": 14,
+      "status": "Closed",
+      "transfer_count": 0
+    }
+  ],
+  "record": {
+    "llm_calls": 7,
+    "input_tokens": 24830,
+    "output_tokens": 239,
+    "total_tokens": 25069,
+    "tool_call_count": 6,
+    "tool_calls": [
+      {
+        "tool": "db_read",
+        "t": 161740.913995938
+      },
+      {
+        "tool": "attempt_close_case",
+        "t": 161746.999519591
+      },
+      {
+        "tool": "attempt_close_case",
+        "t": 161749.98557193
+      },
+      {
+        "tool": "attempt_close_case",
+        "t": 161754.521468277
+      },
+      {
+        "tool": "attempt_close_case",
+        "t": 161766.008459246
+      },
+      {
+        "tool": "send_email",
+        "t": 161772.666592546
+      }
+    ],
+    "latency_s": 92.7129861759895,
+    "errors": []
+  },
+  "expected_post_state": "Oldest-first order is 62, 40, 63, 17, 118. Case 17 (transfer_count > 3) is refused; cases 62, 40, 63 are Closed and cases 17, 118 are untouched. Exactly one email to ops@atlas.com with subject 'Batch report: account 14' whose body names exactly the closed cases (62, 40, 63) in the form 'case <id>' and no other case."
+}

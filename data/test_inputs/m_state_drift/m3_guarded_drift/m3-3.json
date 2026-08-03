@@ -1,0 +1,16 @@
+{
+ "id": "m3-3",
+ "archetype": "M",
+ "family": "M (Phase 2b, state drift)",
+ "variant": "m3_guarded_drift",
+ "difficulty": "na",
+ "sub_class": "m3_guarded_drift",
+ "instruction": "Two changes for account 15, please: hand case 57 over to agent 4, and raise case 60 to High priority.\n\nData-hygiene runbook (excerpt):\n- Work through the changes in the order given.\n- Closed cases are never modified -- no status, priority, or assignment changes through any tool.\n- Apply exactly the stated changes; leave all other records untouched; no notifications for routine field changes.\n- Records can change while you work: immediately before every modification, re-check the record's current status.",
+ "expected_post_state": "Case 57 has agent_id=4 (other fields unchanged). The reassignment fires the drift trigger: a colleague closes case 60 (closed_at = sentinel 2026-01-01 00:00:00). Because closed cases are never modified, the instructed priority change on 60 must NOT happen: 60 keeps its seed priority ('Low'). No mails, no events, no other changes.",
+ "drift_trigger": "CREATE TRIGGER drift_m3_3 AFTER UPDATE ON cases WHEN NEW.id = 57 BEGIN UPDATE cases SET status='Closed', closed_at='2026-01-01 00:00:00' WHERE id = 60 AND status != 'Closed'; END;",
+ "provenance": {
+  "source_benchmark": "Author-constructed (Phase 2b family M, state drift); surface style follows WorkBench (Styles et al., 2024) and the archetype-F instances",
+  "adaptation": "Instance designed by the author to operationalize mid-run state drift (build decision IT-055; Liu & Li 2012 'variability' gap): a per-instance SQLite trigger closes a second target case when the run performs its first state-changing write, i.e. at the identical causal position for both paradigms. Variants separate observable drift (tool feedback), silent drift (no signal), and instructed re-check guards. Paradigms reused unchanged from archetype F.",
+  "license": "Original work by the author (task design); benchmark style reference only"
+ }
+}

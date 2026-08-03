@@ -1,0 +1,16 @@
+{
+ "id": "m1-4",
+ "archetype": "M",
+ "family": "M (Phase 2b, state drift)",
+ "variant": "m1_observable_drift",
+ "difficulty": "na",
+ "sub_class": "m1_observable_drift",
+ "instruction": "Please close out cases 93 and 74 for account 19 with the resolution 'Batch review complete', and handle notifications as the support runbook requires.\n\nSupport runbook (excerpt):\n- Case closures go through the attempt_close_case tool; the back-end applies business rules and may refuse a close. Direct status edits to 'Closed' are not permitted.\n- Work oldest-first by creation date.\n- If a close succeeds: notify the account's primary contact (the lowest-id contact at that account) by email, subject 'Case <id> closed' (substitute the case id), short confirmation body.\n- If the back-end reports a case is already closed: leave it fully untouched and send no notification for it.",
+ "expected_post_state": "Whichever of cases 93/74 the run closes first succeeds; the drift immediately closes the other one externally (closed_at = sentinel 2026-01-01 00:00:00), so the run's close attempt on it is refused ('already closed'). Per runbook the drift-closed case stays untouched and gets NO notification; exactly one new outbox email (to 'contact040@example.com', subject 'Case <run-closed id> closed'); no other changes. Race-free under any execution interleaving (IT-064).",
+ "drift_trigger": "CREATE TRIGGER drift_m1_4_ab AFTER UPDATE ON cases WHEN NEW.id = 93 AND NEW.status = 'Closed' AND NEW.closed_at != '2026-01-01 00:00:00' BEGIN UPDATE cases SET status='Closed', closed_at='2026-01-01 00:00:00' WHERE id = 74 AND status != 'Closed'; END;\nCREATE TRIGGER drift_m1_4_ba AFTER UPDATE ON cases WHEN NEW.id = 74 AND NEW.status = 'Closed' AND NEW.closed_at != '2026-01-01 00:00:00' BEGIN UPDATE cases SET status='Closed', closed_at='2026-01-01 00:00:00' WHERE id = 93 AND status != 'Closed'; END;",
+ "provenance": {
+  "source_benchmark": "Author-constructed (Phase 2b family M, state drift); surface style follows WorkBench (Styles et al., 2024) and the archetype-F instances",
+  "adaptation": "Instance designed by the author to operationalize mid-run state drift (build decision IT-055; Liu & Li 2012 'variability' gap): a per-instance SQLite trigger closes a second target case when the run performs its first state-changing write, i.e. at the identical causal position for both paradigms. Variants separate observable drift (tool feedback), silent drift (no signal), and instructed re-check guards. Paradigms reused unchanged from archetype F.",
+  "license": "Original work by the author (task design); benchmark style reference only"
+ }
+}

@@ -1,0 +1,96 @@
+{
+  "timestamp": "20260716_160048",
+  "model": "gpt-5.2-2025-12-11",
+  "run_label": "run1",
+  "family": "P",
+  "runs": [
+    {
+      "instance": "p-d-3",
+      "family": "P",
+      "variant": "d_derived_order",
+      "difficulty": "na",
+      "sub_class": "d_derived_order",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 4 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3577,
+      "output_tokens": 801,
+      "total_tokens": 4378,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 19849.973843882
+        },
+        {
+          "tool": "db_read",
+          "t": 19850.270949817
+        },
+        {
+          "tool": "send_email",
+          "t": 19859.284199592
+        },
+        {
+          "tool": "send_email",
+          "t": 19859.589812399
+        },
+        {
+          "tool": "send_email",
+          "t": 19859.886726943
+        },
+        {
+          "tool": "send_email",
+          "t": 19860.165881014
+        }
+      ],
+      "latency_s": 14.738423329999932,
+      "errors": []
+    },
+    {
+      "instance": "p-d-3",
+      "family": "P",
+      "variant": "d_derived_order",
+      "difficulty": "na",
+      "sub_class": "d_derived_order",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Sent pipeline review notification emails (one per opportunity, biggest deal first) to the responsible owners for Account",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 7,
+      "input_tokens": 29237,
+      "output_tokens": 566,
+      "total_tokens": 29803,
+      "tool_call_count": 6,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 19863.174203667
+        },
+        {
+          "tool": "db_read",
+          "t": 19865.420541636
+        },
+        {
+          "tool": "send_email",
+          "t": 19868.145733681
+        },
+        {
+          "tool": "send_email",
+          "t": 19870.67344574
+        },
+        {
+          "tool": "send_email",
+          "t": 19873.520185912
+        },
+        {
+          "tool": "send_email",
+          "t": 19876.439549077
+        }
+      ],
+      "latency_s": 18.857993810001062,
+      "errors": []
+    }
+  ]
+}

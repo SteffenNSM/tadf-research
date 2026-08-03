@@ -1,0 +1,1994 @@
+{
+  "timestamp": "20260717_125432",
+  "model": "gpt-5.4-nano-2026-03-17",
+  "run_label": "run2",
+  "family": "L",
+  "runs": [
+    {
+      "instance": "l-s1-1",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x1",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 1 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3034,
+      "output_tokens": 192,
+      "total_tokens": 3226,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 38081.7940789
+        },
+        {
+          "tool": "db_update",
+          "t": 38083.627510473
+        }
+      ],
+      "latency_s": 4.109671051002806,
+      "errors": []
+    },
+    {
+      "instance": "l-s1-1",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x1",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found the oldest case for account 900 that is still Open (case **9000**, created **2025-01-10 09:00:00**) and updated ",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 9592,
+      "output_tokens": 103,
+      "total_tokens": 9695,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_search",
+          "t": 38085.033735001
+        },
+        {
+          "tool": "db_update",
+          "t": 38086.875116122
+        }
+      ],
+      "latency_s": 4.243299708003178,
+      "errors": []
+    },
+    {
+      "instance": "l-s1-2",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x1",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3090,
+      "output_tokens": 296,
+      "total_tokens": 3386,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 38089.638858946
+        },
+        {
+          "tool": "db_read",
+          "t": 38089.898895878
+        },
+        {
+          "tool": "db_read",
+          "t": 38091.834847628
+        },
+        {
+          "tool": "db_update",
+          "t": 38092.114940921
+        }
+      ],
+      "latency_s": 4.173617829001159,
+      "errors": []
+    },
+    {
+      "instance": "l-s1-2",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x1",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found the oldest case for account 901 that is still Open (case **9300**) and updated its **priority** to **High**\u2014leav",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 9592,
+      "output_tokens": 95,
+      "total_tokens": 9687,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_search",
+          "t": 38093.019856559
+        },
+        {
+          "tool": "db_update",
+          "t": 38094.193770998
+        }
+      ],
+      "latency_s": 3.1033718539983965,
+      "errors": []
+    },
+    {
+      "instance": "l-s5-1",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x5",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 2 actions with failures",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3914,
+      "output_tokens": 257,
+      "total_tokens": 4171,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 38096.599078912
+        },
+        {
+          "tool": "db_search",
+          "t": 38098.652393763
+        },
+        {
+          "tool": "db_update",
+          "t": 38098.65276784
+        }
+      ],
+      "latency_s": 3.3837073859976954,
+      "errors": [
+        "tool_error: 2 validation errors for db_search\ncolumn\n  Field required [type=missing, input_value={'table': 'cases', 'filte...der': 'asc', 'limit': 1}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nquery\n  Field required [type=missing, input_value={'table': 'cases', 'filte...der': 'asc', 'limit': 1}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+      ]
+    },
+    {
+      "instance": "l-s5-1",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x5",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Updated account **902**: the single longest-open **Open** case (**case_id 9600**) had its priority raised from **Low** t",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 10550,
+      "output_tokens": 101,
+      "total_tokens": 10651,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 38099.993300541
+        },
+        {
+          "tool": "db_update",
+          "t": 38101.285603
+        }
+      ],
+      "latency_s": 6.009500323998509,
+      "errors": []
+    },
+    {
+      "instance": "l-s5-2",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x5",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 2 actions with failures",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3970,
+      "output_tokens": 320,
+      "total_tokens": 4290,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 38106.222695252
+        },
+        {
+          "tool": "db_read",
+          "t": 38106.483571475
+        },
+        {
+          "tool": "db_search",
+          "t": 38108.516150637
+        },
+        {
+          "tool": "db_update",
+          "t": 38108.516486658
+        }
+      ],
+      "latency_s": 3.8016117500010296,
+      "errors": [
+        "tool_error: 2 validation errors for db_search\ncolumn\n  Field required [type=missing, input_value={'table': 'cases', 'filte...der': 'asc', 'limit': 1}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nquery\n  Field required [type=missing, input_value={'table': 'cases', 'filte...der': 'asc', 'limit': 1}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+      ]
+    },
+    {
+      "instance": "l-s5-2",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x5",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found account **903**\u2019s oldest case that is still **Open** (**case id 9900**, created **2025-01-10 09:00:00**) and upd",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 14732,
+      "output_tokens": 107,
+      "total_tokens": 14839,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_search",
+          "t": 38110.973694724
+        },
+        {
+          "tool": "db_update",
+          "t": 38112.294679398
+        }
+      ],
+      "latency_s": 4.824267848998716,
+      "errors": []
+    },
+    {
+      "instance": "l-s20-1",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x20",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 7170,
+      "output_tokens": 320,
+      "total_tokens": 7490,
+      "tool_call_count": 4,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 38115.105036625
+        },
+        {
+          "tool": "db_read",
+          "t": 38115.414120768
+        },
+        {
+          "tool": "db_read",
+          "t": 38117.659085406
+        },
+        {
+          "tool": "db_update",
+          "t": 38117.980508512
+        }
+      ],
+      "latency_s": 4.586439266000525,
+      "errors": []
+    },
+    {
+      "instance": "l-s20-1",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x20",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Updated account **904**\u2019s oldest still-*Open* case (**Case ID 10200**, created **2025-01-10 09:00:00**) to **High** prio",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 34012,
+      "output_tokens": 109,
+      "total_tokens": 34121,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_search",
+          "t": 38118.825652871
+        },
+        {
+          "tool": "db_update",
+          "t": 38119.893147759
+        }
+      ],
+      "latency_s": 3.0806036369976937,
+      "errors": []
+    },
+    {
+      "instance": "l-s20-2",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x20",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 1 actions with failures",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 7170,
+      "output_tokens": 243,
+      "total_tokens": 7413,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 38122.905081286
+        },
+        {
+          "tool": "db_read",
+          "t": 38123.205101719
+        },
+        {
+          "tool": "db_update",
+          "t": 38125.585442419
+        }
+      ],
+      "latency_s": 4.466769778999151,
+      "errors": [
+        "tool_error: 2 validation errors for db_update\ntable\n  Field required [type=missing, input_value={'updates': {'record_id':...00, 'priority': 'High'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrecord_id\n  Field required [type=missing, input_value={'updates': {'record_id':...00, 'priority': 'High'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+      ]
+    },
+    {
+      "instance": "l-s20-2",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x20",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Raised priority to **High** for account **905**\u2019s oldest still-open case (**Case ID 10500**); left all other cases uncha",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 34008,
+      "output_tokens": 87,
+      "total_tokens": 34095,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 38126.643233013
+        },
+        {
+          "tool": "db_update",
+          "t": 38128.960191785
+        }
+      ],
+      "latency_s": 4.626551906003442,
+      "errors": []
+    },
+    {
+      "instance": "l-a1-1",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x1",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2944,
+      "output_tokens": 236,
+      "total_tokens": 3180,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 38131.445803836
+        },
+        {
+          "tool": "db_update",
+          "t": 38133.821321154
+        },
+        {
+          "tool": "db_update",
+          "t": 38133.824098386
+        }
+      ],
+      "latency_s": 3.559815066997544,
+      "errors": []
+    },
+    {
+      "instance": "l-a1-1",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x1",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Updated account 906\u2019s cases that were **Open** with **Low** priority\u2014**case 10800** and **case 10801**\u2014to **Medium** pri",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 8681,
+      "output_tokens": 150,
+      "total_tokens": 8831,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 38135.006670411
+        },
+        {
+          "tool": "db_update",
+          "t": 38137.153918509
+        },
+        {
+          "tool": "db_update",
+          "t": 38137.155571075
+        }
+      ],
+      "latency_s": 4.553382808997412,
+      "errors": []
+    },
+    {
+      "instance": "l-a1-2",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x1",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2944,
+      "output_tokens": 227,
+      "total_tokens": 3171,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 38139.576719109
+        },
+        {
+          "tool": "db_update",
+          "t": 38145.001188858
+        },
+        {
+          "tool": "db_update",
+          "t": 38145.004221664
+        }
+      ],
+      "latency_s": 6.574476171001152,
+      "errors": []
+    },
+    {
+      "instance": "l-a1-2",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x1",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Updated account **907** cases that were **Open** with **Low** priority\u2014**case 11100** and **case 11101**\u2014to **Medium** p",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 8681,
+      "output_tokens": 150,
+      "total_tokens": 8831,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 38146.064450584
+        },
+        {
+          "tool": "db_update",
+          "t": 38147.80700273
+        },
+        {
+          "tool": "db_update",
+          "t": 38147.80851197
+        }
+      ],
+      "latency_s": 3.579885775994626,
+      "errors": []
+    },
+    {
+      "instance": "l-a5-1",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x5",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 10 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3584,
+      "output_tokens": 573,
+      "total_tokens": 4157,
+      "tool_call_count": 11,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 38150.260541088
+        },
+        {
+          "tool": "db_update",
+          "t": 38154.227926185
+        },
+        {
+          "tool": "db_update",
+          "t": 38154.231347324
+        },
+        {
+          "tool": "db_update",
+          "t": 38154.233957751
+        },
+        {
+          "tool": "db_update",
+          "t": 38154.236240206
+        },
+        {
+          "tool": "db_update",
+          "t": 38154.238548183
+        },
+        {
+          "tool": "db_update",
+          "t": 38154.240923299
+        },
+        {
+          "tool": "db_update",
+          "t": 38154.243165907
+        },
+        {
+          "tool": "db_update",
+          "t": 38154.245487837
+        },
+        {
+          "tool": "db_update",
+          "t": 38154.247721369
+        },
+        {
+          "tool": "db_update",
+          "t": 38154.250042716
+        }
+      ],
+      "latency_s": 5.5331961210031295,
+      "errors": []
+    },
+    {
+      "instance": "l-a5-1",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x5",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "For account **908**, I updated **all 10** cases that were **Open** with **Low** priority (case IDs **11400\u201311409**) to *",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 10337,
+      "output_tokens": 365,
+      "total_tokens": 10702,
+      "tool_call_count": 11,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 38155.172723564
+        },
+        {
+          "tool": "db_update",
+          "t": 38158.454209777
+        },
+        {
+          "tool": "db_update",
+          "t": 38158.455547143
+        },
+        {
+          "tool": "db_update",
+          "t": 38158.456784689
+        },
+        {
+          "tool": "db_update",
+          "t": 38158.458185406
+        },
+        {
+          "tool": "db_update",
+          "t": 38158.459765884
+        },
+        {
+          "tool": "db_update",
+          "t": 38158.461459265
+        },
+        {
+          "tool": "db_update",
+          "t": 38158.4636563
+        },
+        {
+          "tool": "db_update",
+          "t": 38158.464535051
+        },
+        {
+          "tool": "db_update",
+          "t": 38158.466811835
+        },
+        {
+          "tool": "db_update",
+          "t": 38158.467840967
+        }
+      ],
+      "latency_s": 5.356159162998665,
+      "errors": []
+    },
+    {
+      "instance": "l-a5-2",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x5",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 12 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 4378,
+      "output_tokens": 648,
+      "total_tokens": 5026,
+      "tool_call_count": 13,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 38160.977507647
+        },
+        {
+          "tool": "db_update",
+          "t": 38165.621516071
+        },
+        {
+          "tool": "db_update",
+          "t": 38165.624690323
+        },
+        {
+          "tool": "db_update",
+          "t": 38165.627114585
+        },
+        {
+          "tool": "db_update",
+          "t": 38165.629214337
+        },
+        {
+          "tool": "db_update",
+          "t": 38165.631541377
+        },
+        {
+          "tool": "db_update",
+          "t": 38165.633645823
+        },
+        {
+          "tool": "db_update",
+          "t": 38165.635896039
+        },
+        {
+          "tool": "db_update",
+          "t": 38165.637996207
+        },
+        {
+          "tool": "db_update",
+          "t": 38165.640083287
+        },
+        {
+          "tool": "db_update",
+          "t": 38165.642191165
+        },
+        {
+          "tool": "db_update",
+          "t": 38165.644145652
+        },
+        {
+          "tool": "db_update",
+          "t": 38165.645271494
+        }
+      ],
+      "latency_s": 5.985489701000915,
+      "errors": []
+    },
+    {
+      "instance": "l-a5-2",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x5",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "For account **909**, I updated **all 10** cases that were **Open** with **Low** priority to **Medium** priority, leaving",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 10337,
+      "output_tokens": 354,
+      "total_tokens": 10691,
+      "tool_call_count": 11,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 38166.642704554
+        },
+        {
+          "tool": "db_update",
+          "t": 38169.175534602
+        },
+        {
+          "tool": "db_update",
+          "t": 38169.176912862
+        },
+        {
+          "tool": "db_update",
+          "t": 38169.178639052
+        },
+        {
+          "tool": "db_update",
+          "t": 38169.179659709
+        },
+        {
+          "tool": "db_update",
+          "t": 38169.181414761
+        },
+        {
+          "tool": "db_update",
+          "t": 38169.182924935
+        },
+        {
+          "tool": "db_update",
+          "t": 38169.183861728
+        },
+        {
+          "tool": "db_update",
+          "t": 38169.186148447
+        },
+        {
+          "tool": "db_update",
+          "t": 38169.18709167
+        },
+        {
+          "tool": "db_update",
+          "t": 38169.188730294
+        }
+      ],
+      "latency_s": 4.716111659996386,
+      "errors": []
+    },
+    {
+      "instance": "l-a20-1",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x20",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 40 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 5984,
+      "output_tokens": 1989,
+      "total_tokens": 7973,
+      "tool_call_count": 41,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 38171.79130564
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.245539676
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.248832138
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.251446536
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.253747302
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.25602363
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.258300172
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.260650968
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.262951454
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.265061146
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.267304661
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.26949713
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.271877651
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.274156177
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.276449049
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.27867866
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.280894222
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.282953289
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.285125309
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.28724475
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.289398888
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.29195914
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.294042207
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.296277502
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.298380481
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.300643729
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.302785669
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.304988764
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.30713216
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.309383489
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.311619769
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.313967017
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.316072927
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.318124197
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.320343805
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.322536963
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.324709759
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.32697199
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.328994336
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.331351907
+        },
+        {
+          "tool": "db_update",
+          "t": 38184.333490363
+        }
+      ],
+      "latency_s": 13.922865647000435,
+      "errors": []
+    },
+    {
+      "instance": "l-a20-1",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x20",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Updated all **Open** cases for **account 910** with **Low** priority to **Medium** (cases **12000\u201312039**, 40 records), ",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 16547,
+      "output_tokens": 1139,
+      "total_tokens": 17686,
+      "tool_call_count": 41,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 38185.384048127
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.580662867
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.582097897
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.583529921
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.584826503
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.587073246
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.588079256
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.589861312
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.59070325
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.592488526
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.593611263
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.595829722
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.597060087
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.59795229
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.599685374
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.600607445
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.602143402
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.604301341
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.605202465
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.607156007
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.608233908
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.609917805
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.610827474
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.612949372
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.614245834
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.616523979
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.61801897
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.619103848
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.620536511
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.622151541
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.624062327
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.627649115
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.629911235
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.632360931
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.634682518
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.638069204
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.64152934
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.643912212
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.646177948
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.648448396
+        },
+        {
+          "tool": "db_update",
+          "t": 38193.650743918
+        }
+      ],
+      "latency_s": 10.761862498999108,
+      "errors": []
+    },
+    {
+      "instance": "l-a20-2",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x20",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 60 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 9178,
+      "output_tokens": 2472,
+      "total_tokens": 11650,
+      "tool_call_count": 61,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 38196.645556544
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.805044817
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.808577474
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.811214616
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.813545973
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.8157982
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.818104681
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.820389866
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.822699619
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.824949087
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.827202934
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.829457025
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.831663354
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.833870173
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.836097688
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.838448952
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.840535916
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.842701694
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.844786924
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.846961991
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.84921201
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.851746648
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.853811151
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.855925187
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.857981848
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.860100012
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.862132424
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.864220846
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.866226433
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.868302081
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.870361386
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.872321811
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.874226841
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.876212548
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.878196173
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.880348042
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.882379299
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.88436764
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.886437548
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.888596567
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.890646747
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.89270001
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.893766234
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.894793729
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.895836854
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.896866287
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.898094406
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.899120934
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.900150712
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.901175128
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.902243539
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.903294239
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.904361282
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.905399027
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.90643915
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.907476337
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.908509996
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.909537694
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.910563901
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.911588836
+        },
+        {
+          "tool": "db_update",
+          "t": 38211.912636552
+        }
+      ],
+      "latency_s": 16.76181585500308,
+      "errors": []
+    },
+    {
+      "instance": "l-a20-2",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x20",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Updated all **Open** cases for **account 911** with **priority = Low** to **priority = Medium** (cases **12300\u201312339**, ",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 16547,
+      "output_tokens": 1145,
+      "total_tokens": 17692,
+      "tool_call_count": 41,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 38213.134983817
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.04597606
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.047833381
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.048723214
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.0500854
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.05212609
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.053889036
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.055389225
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.056400324
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.057916604
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.059913361
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.061062212
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.062768739
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.06374499
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.065587742
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.066912844
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.068749781
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.069805546
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.071721575
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.072557536
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.074223794
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.075773801
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.077713516
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.078708238
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.08078997
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.082150885
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.083394768
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.084808408
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.086581242
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.089314722
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.090812776
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.092909744
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.09511167
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.098671905
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.10119131
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.103307983
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.105705282
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.108110277
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.110634756
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.112212521
+        },
+        {
+          "tool": "db_update",
+          "t": 38223.113852264
+        }
+      ],
+      "latency_s": 12.559218756003247,
+      "errors": []
+    },
+    {
+      "instance": "l-m1-1",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x1",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2772,
+      "output_tokens": 371,
+      "total_tokens": 3143,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 38226.241705771
+        },
+        {
+          "tool": "search_emails",
+          "t": 38228.906445151
+        },
+        {
+          "tool": "send_email",
+          "t": 38229.194096371
+        }
+      ],
+      "latency_s": 4.964350886999455,
+      "errors": []
+    },
+    {
+      "instance": "l-m1-1",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x1",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found the oldest \u201cInvoice reminder\u201d email (dated **2025-03-02**) and sent it to **agent02@atlas.com** with subject **\u201c",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 10121,
+      "output_tokens": 141,
+      "total_tokens": 10262,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 38230.410187716
+        },
+        {
+          "tool": "send_email",
+          "t": 38231.976487011
+        }
+      ],
+      "latency_s": 4.609254824994423,
+      "errors": []
+    },
+    {
+      "instance": "l-m1-2",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x1",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 3 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2828,
+      "output_tokens": 499,
+      "total_tokens": 3327,
+      "tool_call_count": 5,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 38236.261905033
+        },
+        {
+          "tool": "search_emails",
+          "t": 38236.562669072
+        },
+        {
+          "tool": "search_emails",
+          "t": 38239.314693626
+        },
+        {
+          "tool": "search_emails",
+          "t": 38239.613079322
+        },
+        {
+          "tool": "send_email",
+          "t": 38239.957780199
+        }
+      ],
+      "latency_s": 6.152306176998536,
+      "errors": []
+    },
+    {
+      "instance": "l-m1-2",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x1",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found the oldest \u201cShipping delay\u201d email (received 2025-03-02) and sent a note to **agent04@atlas.com** with subject **",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 10131,
+      "output_tokens": 147,
+      "total_tokens": 10278,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 38241.560408627
+        },
+        {
+          "tool": "send_email",
+          "t": 38246.414835158
+        }
+      ],
+      "latency_s": 9.867910294997273,
+      "errors": []
+    },
+    {
+      "instance": "l-m5-1",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x5",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2772,
+      "output_tokens": 331,
+      "total_tokens": 3103,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 38252.015554977
+        },
+        {
+          "tool": "search_emails",
+          "t": 38254.093624303
+        },
+        {
+          "tool": "send_email",
+          "t": 38254.356352123
+        }
+      ],
+      "latency_s": 4.428901619998214,
+      "errors": []
+    },
+    {
+      "instance": "l-m5-1",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x5",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found the oldest \u201cContract renewal\u201d email (received on **2025-03-02**) and sent agent06@atlas.com a short note with su",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 16425,
+      "output_tokens": 143,
+      "total_tokens": 16568,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 38256.143255615
+        },
+        {
+          "tool": "send_email",
+          "t": 38258.436766228
+        }
+      ],
+      "latency_s": 5.066113124994445,
+      "errors": []
+    },
+    {
+      "instance": "l-m5-2",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x5",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2775,
+      "output_tokens": 366,
+      "total_tokens": 3141,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 38261.841136218
+        },
+        {
+          "tool": "search_emails",
+          "t": 38264.056991572
+        },
+        {
+          "tool": "send_email",
+          "t": 38264.399642617
+        }
+      ],
+      "latency_s": 4.955600301000231,
+      "errors": []
+    },
+    {
+      "instance": "l-m5-2",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 5,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x5",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found the oldest \u201cOnboarding documents\u201d email (dated **2025-03-02**) and sent a short note to **agent08@atlas.com** wi",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 16754,
+      "output_tokens": 153,
+      "total_tokens": 16907,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 38266.595946447
+        },
+        {
+          "tool": "send_email",
+          "t": 38268.149515178
+        }
+      ],
+      "latency_s": 4.801076037001621,
+      "errors": []
+    },
+    {
+      "instance": "l-m20-1",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x20",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 18667,
+      "output_tokens": 361,
+      "total_tokens": 19028,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 38271.156742325
+        },
+        {
+          "tool": "search_emails",
+          "t": 38273.551661704
+        },
+        {
+          "tool": "send_email",
+          "t": 38273.810256753
+        }
+      ],
+      "latency_s": 4.506938001002709,
+      "errors": []
+    },
+    {
+      "instance": "l-m20-1",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x20",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Sent an email to **agent01@atlas.com** with subject **\u201cOldest downtime notice\u201d** noting that the oldest \u201cDowntime notice",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 40487,
+      "output_tokens": 146,
+      "total_tokens": 40633,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 38275.087651622
+        },
+        {
+          "tool": "send_email",
+          "t": 38276.91065439
+        }
+      ],
+      "latency_s": 4.078790551000566,
+      "errors": []
+    },
+    {
+      "instance": "l-m20-2",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x20",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 1 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 18449,
+      "output_tokens": 370,
+      "total_tokens": 18819,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 38280.55204541
+        },
+        {
+          "tool": "search_emails",
+          "t": 38280.868328245
+        },
+        {
+          "tool": "send_email",
+          "t": 38282.995462784
+        }
+      ],
+      "latency_s": 5.088989675001358,
+      "errors": []
+    },
+    {
+      "instance": "l-m20-2",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 20,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x20",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Found the oldest \u201cPricing question\u201d email (received on **2025-03-02**) and sent a note to **agent03@atlas.com** with sub",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 39934,
+      "output_tokens": 146,
+      "total_tokens": 40080,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 38284.595742958
+        },
+        {
+          "tool": "send_email",
+          "t": 38286.151252346
+        }
+      ],
+      "latency_s": 4.151936671005387,
+      "errors": []
+    }
+  ]
+}

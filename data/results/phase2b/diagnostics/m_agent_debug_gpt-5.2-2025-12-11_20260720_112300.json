@@ -1,0 +1,680 @@
+{
+  "model": "gpt-5.2-2025-12-11",
+  "records": [
+    {
+      "instance": "m1-1",
+      "correct": false,
+      "steps": [
+        {
+          "tool": "db_read",
+          "args": {
+            "table": "cases",
+            "filters": {
+              "id": 62
+            }
+          },
+          "response": "[{\"id\": 62, \"account_id\": 14, \"agent_id\": 7, \"subject\": \"Case 062\", \"issue_category\": \"Shipping\", \"status\": \"Open\", \"priority\": \"High\", \"created_at\": \"2025-03-20 12:00:00\", \"closed_at\": null, \"transfe"
+        },
+        {
+          "tool": "db_read",
+          "args": {
+            "table": "cases",
+            "filters": {
+              "id": 40
+            }
+          },
+          "response": "[{\"id\": 40, \"account_id\": 14, \"agent_id\": 1, \"subject\": \"Case 040\", \"issue_category\": \"Technical\", \"status\": \"Open\", \"priority\": \"High\", \"created_at\": \"2025-05-02 11:00:00\", \"closed_at\": null, \"transf"
+        },
+        {
+          "tool": "db_read",
+          "args": {
+            "table": "contacts",
+            "filters": {
+              "account_id": 14
+            }
+          },
+          "response": "[{\"id\": 29, \"account_id\": 14, \"name\": \"Contact 029\", \"email\": \"contact029@example.com\"}, {\"id\": 30, \"account_id\": 14, \"name\": \"Contact 030\", \"email\": \"contact030@example.com\"}, {\"id\": 31, \"account_id\""
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 62,
+            "resolution_summary": "Batch review complete"
+          },
+          "response": "{\"closed\": true, \"id\": 62, \"resolution_summary\": \"Batch review complete\"}"
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 40,
+            "resolution_summary": "Batch review complete"
+          },
+          "response": "{\"closed\": true, \"id\": 40, \"resolution_summary\": \"Batch review complete\"}"
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact029@example.com",
+            "subject": "Case 62 closed",
+            "body": "Hello Contact 029,\n\nConfirmation that case 62 has been closed. Resolution: Batch review complete.\n\nRegards,\nSupport",
+            "sender": "user@atlas.com"
+          },
+          "response": "{\"id\": \"2008\", \"threadId\": \"2008\", \"labelIds\": [\"SENT\"], \"snippet\": \"Hello Contact 029,\\n\\nConfirmation that case 62 has been closed. Resolution: Batch review complete.\\n\\nRegards,\\nSupport\", \"history"
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact029@example.com",
+            "subject": "Case 40 closed",
+            "body": "Hello Contact 029,\n\nConfirmation that case 40 has been closed. Resolution: Batch review complete.\n\nRegards,\nSupport",
+            "sender": "user@atlas.com"
+          },
+          "response": "{\"id\": \"2007\", \"threadId\": \"2007\", \"labelIds\": [\"SENT\"], \"snippet\": \"Hello Contact 029,\\n\\nConfirmation that case 40 has been closed. Resolution: Batch review complete.\\n\\nRegards,\\nSupport\", \"history"
+        }
+      ],
+      "post_a": {
+        "id": 62,
+        "status": "Closed",
+        "closed_at": "2026-07-20 09:22:12",
+        "priority": "High"
+      },
+      "post_b": {
+        "id": 40,
+        "status": "Closed",
+        "closed_at": "2026-07-20 09:22:12",
+        "priority": "High"
+      },
+      "mails": [
+        {
+          "id": 2007,
+          "recipient": "contact029@example.com",
+          "subject": "Case 40 closed"
+        },
+        {
+          "id": 2008,
+          "recipient": "contact029@example.com",
+          "subject": "Case 62 closed"
+        }
+      ],
+      "telemetry": {
+        "llm_calls": 4,
+        "input_tokens": 13205,
+        "output_tokens": 386,
+        "total_tokens": 13591,
+        "tool_call_count": 7,
+        "tool_calls": [
+          {
+            "tool": "db_read",
+            "t": 97088.814920516
+          },
+          {
+            "tool": "db_read",
+            "t": 97088.81652257
+          },
+          {
+            "tool": "db_read",
+            "t": 97088.817849519
+          },
+          {
+            "tool": "attempt_close_case",
+            "t": 97091.247288269
+          },
+          {
+            "tool": "attempt_close_case",
+            "t": 97091.248429214
+          },
+          {
+            "tool": "send_email",
+            "t": 97094.002635126
+          },
+          {
+            "tool": "send_email",
+            "t": 97094.004217818
+          }
+        ],
+        "latency_s": 10.774796108991723,
+        "errors": []
+      }
+    },
+    {
+      "instance": "m1-2",
+      "correct": false,
+      "steps": [
+        {
+          "tool": "db_read",
+          "args": {
+            "table": "cases",
+            "filters": {
+              "id": 89
+            }
+          },
+          "response": "[{\"id\": 89, \"account_id\": 18, \"agent_id\": 3, \"subject\": \"Case 089\", \"issue_category\": \"Shipping\", \"status\": \"Open\", \"priority\": \"Low\", \"created_at\": \"2025-04-02 13:00:00\", \"closed_at\": null, \"transfer"
+        },
+        {
+          "tool": "db_read",
+          "args": {
+            "table": "cases",
+            "filters": {
+              "id": 32
+            }
+          },
+          "response": "[{\"id\": 32, \"account_id\": 18, \"agent_id\": 5, \"subject\": \"Case 032\", \"issue_category\": \"Billing\", \"status\": \"Open\", \"priority\": \"Low\", \"created_at\": \"2025-06-04 17:00:00\", \"closed_at\": null, \"transfer_"
+        },
+        {
+          "tool": "db_read",
+          "args": {
+            "table": "contacts",
+            "filters": {
+              "account_id": 18
+            }
+          },
+          "response": "[{\"id\": 39, \"account_id\": 18, \"name\": \"Contact 039\", \"email\": \"contact039@example.com\"}]"
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 89,
+            "resolution_summary": "Batch review complete"
+          },
+          "response": "{\"closed\": true, \"id\": 89, \"resolution_summary\": \"Batch review complete\"}"
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 32,
+            "resolution_summary": "Batch review complete"
+          },
+          "response": "{\"closed\": true, \"id\": 32, \"resolution_summary\": \"Batch review complete\"}"
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact039@example.com",
+            "subject": "Case 89 closed",
+            "body": "Hello,\n\nThis is a quick confirmation that case 89 has been closed. Resolution: Batch review complete.\n\nRegards,\nSupport",
+            "sender": "user@atlas.com"
+          },
+          "response": "{\"id\": \"2007\", \"threadId\": \"2007\", \"labelIds\": [\"SENT\"], \"snippet\": \"Hello,\\n\\nThis is a quick confirmation that case 89 has been closed. Resolution: Batch review complete.\\n\\nRegards,\\nSupport\", \"his"
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact039@example.com",
+            "subject": "Case 32 closed",
+            "body": "Hello,\n\nThis is a quick confirmation that case 32 has been closed. Resolution: Batch review complete.\n\nRegards,\nSupport",
+            "sender": "user@atlas.com"
+          },
+          "response": "{\"id\": \"2008\", \"threadId\": \"2008\", \"labelIds\": [\"SENT\"], \"snippet\": \"Hello,\\n\\nThis is a quick confirmation that case 32 has been closed. Resolution: Batch review complete.\\n\\nRegards,\\nSupport\", \"his"
+        }
+      ],
+      "post_a": {
+        "id": 89,
+        "status": "Closed",
+        "closed_at": "2026-07-20 09:22:22",
+        "priority": "Low"
+      },
+      "post_b": {
+        "id": 32,
+        "status": "Closed",
+        "closed_at": "2026-07-20 09:22:22",
+        "priority": "Low"
+      },
+      "mails": [
+        {
+          "id": 2007,
+          "recipient": "contact039@example.com",
+          "subject": "Case 89 closed"
+        },
+        {
+          "id": 2008,
+          "recipient": "contact039@example.com",
+          "subject": "Case 32 closed"
+        }
+      ],
+      "telemetry": {
+        "llm_calls": 4,
+        "input_tokens": 13027,
+        "output_tokens": 382,
+        "total_tokens": 13409,
+        "tool_call_count": 7,
+        "tool_calls": [
+          {
+            "tool": "db_read",
+            "t": 97098.328974007
+          },
+          {
+            "tool": "db_read",
+            "t": 97098.330359527
+          },
+          {
+            "tool": "db_read",
+            "t": 97098.331832907
+          },
+          {
+            "tool": "attempt_close_case",
+            "t": 97100.425652697
+          },
+          {
+            "tool": "attempt_close_case",
+            "t": 97100.426811121
+          },
+          {
+            "tool": "send_email",
+            "t": 97103.085295849
+          },
+          {
+            "tool": "send_email",
+            "t": 97103.086580978
+          }
+        ],
+        "latency_s": 9.133147868997185,
+        "errors": []
+      }
+    },
+    {
+      "instance": "m1-3",
+      "correct": false,
+      "steps": [
+        {
+          "tool": "db_read",
+          "args": {
+            "table": "cases",
+            "filters": {
+              "id": 56
+            }
+          },
+          "response": "[{\"id\": 56, \"account_id\": 8, \"agent_id\": 3, \"subject\": \"Case 056\", \"issue_category\": \"Product\", \"status\": \"In Progress\", \"priority\": \"Medium\", \"created_at\": \"2025-01-03 10:00:00\", \"closed_at\": null, \""
+        },
+        {
+          "tool": "db_read",
+          "args": {
+            "table": "cases",
+            "filters": {
+              "id": 71
+            }
+          },
+          "response": "[{\"id\": 71, \"account_id\": 8, \"agent_id\": 4, \"subject\": \"Case 071\", \"issue_category\": \"Billing\", \"status\": \"Open\", \"priority\": \"High\", \"created_at\": \"2025-02-05 09:00:00\", \"closed_at\": null, \"transfer_"
+        },
+        {
+          "tool": "db_read",
+          "args": {
+            "table": "contacts",
+            "filters": {
+              "account_id": 8
+            }
+          },
+          "response": "[{\"id\": 15, \"account_id\": 8, \"name\": \"Contact 015\", \"email\": \"contact015@example.com\"}, {\"id\": 16, \"account_id\": 8, \"name\": \"Contact 016\", \"email\": \"contact016@example.com\"}]"
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 56,
+            "resolution_summary": "Batch review complete"
+          },
+          "response": "{\"closed\": true, \"id\": 56, \"resolution_summary\": \"Batch review complete\"}"
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 71,
+            "resolution_summary": "Batch review complete"
+          },
+          "response": "{\"closed\": true, \"id\": 71, \"resolution_summary\": \"Batch review complete\"}"
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact015@example.com",
+            "subject": "Case 56 closed",
+            "body": "Hello,\n\nThis is a confirmation that case 56 has been closed. Resolution: Batch review complete.\n\nRegards,\nSupport",
+            "sender": "user@atlas.com"
+          },
+          "response": "{\"id\": \"2008\", \"threadId\": \"2008\", \"labelIds\": [\"SENT\"], \"snippet\": \"Hello,\\n\\nThis is a confirmation that case 56 has been closed. Resolution: Batch review complete.\\n\\nRegards,\\nSupport\", \"historyId"
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact015@example.com",
+            "subject": "Case 71 closed",
+            "body": "Hello,\n\nThis is a confirmation that case 71 has been closed. Resolution: Batch review complete.\n\nRegards,\nSupport",
+            "sender": "user@atlas.com"
+          },
+          "response": "{\"id\": \"2007\", \"threadId\": \"2007\", \"labelIds\": [\"SENT\"], \"snippet\": \"Hello,\\n\\nThis is a confirmation that case 71 has been closed. Resolution: Batch review complete.\\n\\nRegards,\\nSupport\", \"historyId"
+        }
+      ],
+      "post_a": {
+        "id": 56,
+        "status": "Closed",
+        "closed_at": "2026-07-20 09:22:32",
+        "priority": "Medium"
+      },
+      "post_b": {
+        "id": 71,
+        "status": "Closed",
+        "closed_at": "2026-07-20 09:22:32",
+        "priority": "High"
+      },
+      "mails": [
+        {
+          "id": 2007,
+          "recipient": "contact015@example.com",
+          "subject": "Case 71 closed"
+        },
+        {
+          "id": 2008,
+          "recipient": "contact015@example.com",
+          "subject": "Case 56 closed"
+        }
+      ],
+      "telemetry": {
+        "llm_calls": 4,
+        "input_tokens": 13106,
+        "output_tokens": 386,
+        "total_tokens": 13492,
+        "tool_call_count": 7,
+        "tool_calls": [
+          {
+            "tool": "db_read",
+            "t": 97107.555065207
+          },
+          {
+            "tool": "db_read",
+            "t": 97107.556730101
+          },
+          {
+            "tool": "db_read",
+            "t": 97107.559931423
+          },
+          {
+            "tool": "attempt_close_case",
+            "t": 97110.479133158
+          },
+          {
+            "tool": "attempt_close_case",
+            "t": 97110.480253659
+          },
+          {
+            "tool": "send_email",
+            "t": 97112.809889471
+          },
+          {
+            "tool": "send_email",
+            "t": 97112.811131106
+          }
+        ],
+        "latency_s": 9.739309003998642,
+        "errors": []
+      }
+    },
+    {
+      "instance": "m1-4",
+      "correct": false,
+      "steps": [
+        {
+          "tool": "db_read",
+          "args": {
+            "table": "cases",
+            "filters": {
+              "id": 93
+            }
+          },
+          "response": "[{\"id\": 93, \"account_id\": 19, \"agent_id\": 5, \"subject\": \"Case 093\", \"issue_category\": \"Billing\", \"status\": \"Open\", \"priority\": \"Low\", \"created_at\": \"2025-01-28 11:00:00\", \"closed_at\": null, \"transfer_"
+        },
+        {
+          "tool": "db_read",
+          "args": {
+            "table": "cases",
+            "filters": {
+              "id": 74
+            }
+          },
+          "response": "[{\"id\": 74, \"account_id\": 19, \"agent_id\": 7, \"subject\": \"Case 074\", \"issue_category\": \"Account\", \"status\": \"In Progress\", \"priority\": \"High\", \"created_at\": \"2025-02-25 09:00:00\", \"closed_at\": null, \"t"
+        },
+        {
+          "tool": "db_read",
+          "args": {
+            "table": "contacts",
+            "filters": {
+              "account_id": 19
+            }
+          },
+          "response": "[{\"id\": 40, \"account_id\": 19, \"name\": \"Contact 040\", \"email\": \"contact040@example.com\"}, {\"id\": 41, \"account_id\": 19, \"name\": \"Contact 041\", \"email\": \"contact041@example.com\"}, {\"id\": 42, \"account_id\""
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 93,
+            "resolution_summary": "Batch review complete"
+          },
+          "response": "{\"closed\": true, \"id\": 93, \"resolution_summary\": \"Batch review complete\"}"
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 74,
+            "resolution_summary": "Batch review complete"
+          },
+          "response": "{\"closed\": true, \"id\": 74, \"resolution_summary\": \"Batch review complete\"}"
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact040@example.com",
+            "subject": "Case 93 closed",
+            "body": "Hello,\n\nThis is a confirmation that Case 93 has been closed.\nResolution: Batch review complete.\n\nRegards,\nSupport",
+            "sender": "user@atlas.com"
+          },
+          "response": "{\"id\": \"2007\", \"threadId\": \"2007\", \"labelIds\": [\"SENT\"], \"snippet\": \"Hello,\\n\\nThis is a confirmation that Case 93 has been closed.\\nResolution: Batch review complete.\\n\\nRegards,\\nSupport\", \"historyI"
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact040@example.com",
+            "subject": "Case 74 closed",
+            "body": "Hello,\n\nThis is a confirmation that Case 74 has been closed.\nResolution: Batch review complete.\n\nRegards,\nSupport",
+            "sender": "user@atlas.com"
+          },
+          "response": "{\"id\": \"2008\", \"threadId\": \"2008\", \"labelIds\": [\"SENT\"], \"snippet\": \"Hello,\\n\\nThis is a confirmation that Case 74 has been closed.\\nResolution: Batch review complete.\\n\\nRegards,\\nSupport\", \"historyI"
+        }
+      ],
+      "post_a": {
+        "id": 93,
+        "status": "Closed",
+        "closed_at": "2026-07-20 09:22:46",
+        "priority": "Low"
+      },
+      "post_b": {
+        "id": 74,
+        "status": "Closed",
+        "closed_at": "2026-07-20 09:22:46",
+        "priority": "High"
+      },
+      "mails": [
+        {
+          "id": 2007,
+          "recipient": "contact040@example.com",
+          "subject": "Case 93 closed"
+        },
+        {
+          "id": 2008,
+          "recipient": "contact040@example.com",
+          "subject": "Case 74 closed"
+        }
+      ],
+      "telemetry": {
+        "llm_calls": 4,
+        "input_tokens": 13200,
+        "output_tokens": 364,
+        "total_tokens": 13564,
+        "tool_call_count": 7,
+        "tool_calls": [
+          {
+            "tool": "db_read",
+            "t": 97117.330763095
+          },
+          {
+            "tool": "db_read",
+            "t": 97117.332042495
+          },
+          {
+            "tool": "db_read",
+            "t": 97117.333582352
+          },
+          {
+            "tool": "attempt_close_case",
+            "t": 97124.411995654
+          },
+          {
+            "tool": "attempt_close_case",
+            "t": 97124.413082686
+          },
+          {
+            "tool": "send_email",
+            "t": 97127.046608858
+          },
+          {
+            "tool": "send_email",
+            "t": 97127.048014131
+          }
+        ],
+        "latency_s": 14.010507546990993,
+        "errors": []
+      }
+    },
+    {
+      "instance": "m1-5",
+      "correct": false,
+      "steps": [
+        {
+          "tool": "db_read",
+          "args": {
+            "table": "cases",
+            "filters": {
+              "id": 54
+            }
+          },
+          "response": "[{\"id\": 54, \"account_id\": 16, \"agent_id\": 10, \"subject\": \"Case 054\", \"issue_category\": \"Billing\", \"status\": \"Open\", \"priority\": \"Medium\", \"created_at\": \"2025-01-13 09:00:00\", \"closed_at\": null, \"trans"
+        },
+        {
+          "tool": "db_read",
+          "args": {
+            "table": "cases",
+            "filters": {
+              "id": 104
+            }
+          },
+          "response": "[{\"id\": 104, \"account_id\": 16, \"agent_id\": 9, \"subject\": \"Case 104\", \"issue_category\": \"Account\", \"status\": \"Open\", \"priority\": \"Medium\", \"created_at\": \"2025-05-18 09:00:00\", \"closed_at\": null, \"trans"
+        },
+        {
+          "tool": "db_read",
+          "args": {
+            "table": "contacts",
+            "filters": {
+              "account_id": 16
+            }
+          },
+          "response": "[{\"id\": 33, \"account_id\": 16, \"name\": \"Contact 033\", \"email\": \"contact033@example.com\"}, {\"id\": 34, \"account_id\": 16, \"name\": \"Contact 034\", \"email\": \"contact034@example.com\"}, {\"id\": 35, \"account_id\""
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 54,
+            "resolution_summary": "Batch review complete"
+          },
+          "response": "{\"closed\": true, \"id\": 54, \"resolution_summary\": \"Batch review complete\"}"
+        },
+        {
+          "tool": "attempt_close_case",
+          "args": {
+            "case_id": 104,
+            "resolution_summary": "Batch review complete"
+          },
+          "response": "{\"closed\": true, \"id\": 104, \"resolution_summary\": \"Batch review complete\"}"
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact033@example.com",
+            "subject": "Case 54 closed",
+            "body": "Hello,\n\nThis is a confirmation that Case 54 has been closed. Resolution: Batch review complete.\n\nRegards,\nSupport Team",
+            "sender": "user@atlas.com"
+          },
+          "response": "{\"id\": \"2008\", \"threadId\": \"2008\", \"labelIds\": [\"SENT\"], \"snippet\": \"Hello,\\n\\nThis is a confirmation that Case 54 has been closed. Resolution: Batch review complete.\\n\\nRegards,\\nSupport Team\", \"hist"
+        },
+        {
+          "tool": "send_email",
+          "args": {
+            "recipient": "contact033@example.com",
+            "subject": "Case 104 closed",
+            "body": "Hello,\n\nThis is a confirmation that Case 104 has been closed. Resolution: Batch review complete.\n\nRegards,\nSupport Team",
+            "sender": "user@atlas.com"
+          },
+          "response": "{\"id\": \"2007\", \"threadId\": \"2007\", \"labelIds\": [\"SENT\"], \"snippet\": \"Hello,\\n\\nThis is a confirmation that Case 104 has been closed. Resolution: Batch review complete.\\n\\nRegards,\\nSupport Team\", \"his"
+        }
+      ],
+      "post_a": {
+        "id": 54,
+        "status": "Closed",
+        "closed_at": "2026-07-20 09:22:55",
+        "priority": "Medium"
+      },
+      "post_b": {
+        "id": 104,
+        "status": "Closed",
+        "closed_at": "2026-07-20 09:22:55",
+        "priority": "Medium"
+      },
+      "mails": [
+        {
+          "id": 2007,
+          "recipient": "contact033@example.com",
+          "subject": "Case 104 closed"
+        },
+        {
+          "id": 2008,
+          "recipient": "contact033@example.com",
+          "subject": "Case 54 closed"
+        }
+      ],
+      "telemetry": {
+        "llm_calls": 4,
+        "input_tokens": 13212,
+        "output_tokens": 383,
+        "total_tokens": 13595,
+        "tool_call_count": 7,
+        "tool_calls": [
+          {
+            "tool": "db_read",
+            "t": 97131.414098048
+          },
+          {
+            "tool": "db_read",
+            "t": 97131.415373199
+          },
+          {
+            "tool": "db_read",
+            "t": 97131.416881612
+          },
+          {
+            "tool": "attempt_close_case",
+            "t": 97133.706322006
+          },
+          {
+            "tool": "attempt_close_case",
+            "t": 97133.707406149
+          },
+          {
+            "tool": "send_email",
+            "t": 97136.302990785
+          },
+          {
+            "tool": "send_email",
+            "t": 97136.304216398
+          }
+        ],
+        "latency_s": 9.37610813100764,
+        "errors": []
+      }
+    }
+  ]
+}

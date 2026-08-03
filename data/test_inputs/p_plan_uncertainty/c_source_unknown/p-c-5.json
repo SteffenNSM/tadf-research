@@ -1,0 +1,15 @@
+{
+ "id": "p-c-5",
+ "archetype": "P",
+ "family": "P (Phase 2b, plan uncertainty)",
+ "variant": "c_source_unknown",
+ "difficulty": "na",
+ "sub_class": "c_source_unknown",
+ "instruction": "I need the date of the quarterly business review with contact016@example.com -- might be a calendar entry, might only exist in the mailbox or as a case note. Find it and send a note to agent03@atlas.com, subject 'QBR timing contact016', with the date.\n\nWorkspace note:\n- Customer touchpoints end up in different places -- some in the shared mailbox, some on the team calendar, some as CRM cases. Where a given item landed is not always known.\n- Notes state dates in YYYY-MM-DD format.",
+ "expected_post_state": "The item is calendar event 8 ('Quarterly business review' with contact016, 2025-11-10). Exactly one new outbox email to agent03@atlas.com with subject 'QBR timing contact016' and a body containing '2025-11-10'; no CRM changes, no events created or modified.",
+ "provenance": {
+  "source_benchmark": "Author-constructed (Phase 2b family P, plan uncertainty); surface style follows WorkBench (Styles et al., 2024) and the archetype-F instances",
+  "adaptation": "Instance designed by the author to isolate one plan-uncertainty axis (build decision IT-055): action count derivable from a read (a), action count dependent on runtime outcomes (b), unknown source tool (c), or ordering derived from record data (d). Entities reference the deterministic seed in seed_crm.py for stable post-state predicates. Paradigm implementations are reused unchanged from archetype F.",
+  "license": "Original work by the author (task design); benchmark style reference only"
+ }
+}

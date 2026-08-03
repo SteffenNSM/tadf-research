@@ -1,0 +1,194 @@
+{
+  "timestamp": "20260717_124655",
+  "model": "gpt-5.4-nano-2026-03-17",
+  "run_label": "adhoc",
+  "family": "L",
+  "runs": [
+    {
+      "instance": "l-s1-1",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x1",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 1 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 3034,
+      "output_tokens": 186,
+      "total_tokens": 3220,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 37807.170369678
+        },
+        {
+          "tool": "db_update",
+          "t": 37808.859832304
+        }
+      ],
+      "latency_s": 3.7380119459994603,
+      "errors": []
+    },
+    {
+      "instance": "l-s1-1",
+      "family": "L",
+      "variant": "scan_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "scan_scaling_x1",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Updated account **900**\u2019s oldest still-**Open** case (**case_id 9000**) to **priority = High**; left all other cases unc",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 9592,
+      "output_tokens": 92,
+      "total_tokens": 9684,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "db_search",
+          "t": 37810.298492496
+        },
+        {
+          "tool": "db_update",
+          "t": 37811.481202579
+        }
+      ],
+      "latency_s": 3.6398315690021263,
+      "errors": []
+    },
+    {
+      "instance": "l-a1-1",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x1",
+      "paradigm": "workflow",
+      "correct": true,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2944,
+      "output_tokens": 238,
+      "total_tokens": 3182,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 37814.496000942
+        },
+        {
+          "tool": "db_update",
+          "t": 37816.330792043
+        },
+        {
+          "tool": "db_update",
+          "t": 37816.333223678
+        }
+      ],
+      "latency_s": 3.783909293997567,
+      "errors": []
+    },
+    {
+      "instance": "l-a1-1",
+      "family": "L",
+      "variant": "action_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "action_scaling_x1",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "Updated account **906**: all cases with **status = Open** and **priority = Low** (cases **10800** and **10801**) were ch",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 8681,
+      "output_tokens": 153,
+      "total_tokens": 8834,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "db_read",
+          "t": 37817.846215431
+        },
+        {
+          "tool": "db_update",
+          "t": 37819.39341922
+        },
+        {
+          "tool": "db_update",
+          "t": 37819.394889219
+        }
+      ],
+      "latency_s": 4.124431245996675,
+      "errors": []
+    },
+    {
+      "instance": "l-m1-1",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x1",
+      "paradigm": "workflow",
+      "correct": false,
+      "summary": "Executed 2 actions",
+      "predicate_rationale": "post-state predicate not satisfied",
+      "llm_calls": 2,
+      "input_tokens": 2772,
+      "output_tokens": 377,
+      "total_tokens": 3149,
+      "tool_call_count": 3,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 37822.550696357
+        },
+        {
+          "tool": "search_emails",
+          "t": 37824.658578985
+        },
+        {
+          "tool": "send_email",
+          "t": 37824.950405674
+        }
+      ],
+      "latency_s": 4.740750914999808,
+      "errors": []
+    },
+    {
+      "instance": "l-m1-1",
+      "family": "L",
+      "variant": "mail_scaling",
+      "level": 1,
+      "difficulty": "na",
+      "sub_class": "mail_scaling_x1",
+      "paradigm": "agent",
+      "correct": true,
+      "summary": "I found the oldest \u201cInvoice reminder\u201d email (dated **2025-03-02**) and sent it a short note to **agent02@atlas.com** wit",
+      "predicate_rationale": "post-state predicate satisfied",
+      "llm_calls": 3,
+      "input_tokens": 10121,
+      "output_tokens": 144,
+      "total_tokens": 10265,
+      "tool_call_count": 2,
+      "tool_calls": [
+        {
+          "tool": "search_emails",
+          "t": 37826.264168403
+        },
+        {
+          "tool": "send_email",
+          "t": 37828.313900644
+        }
+      ],
+      "latency_s": 4.558180449996144,
+      "errors": []
+    }
+  ]
+}
