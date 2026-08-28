@@ -86,7 +86,7 @@ Design Science Research (DSR) methodology (Hevner et al., 2004; Peffers et al., 
 
 ### Evaluation Metrics
 
-Co-primary: Task Completion Rate (TCR; B, C, D, F) or Output Quality Score (OQS; A, E, G, H), and Token Cost (TC). Secondary: Latency (L), Error Rate (ER), Tool-Call Count (TCC), Robustness (R). Aggregate Performance Score (APS) weights derived from practitioner interviews (Phase 3).
+Co-primary: Task Completion Rate (TCR; B, C, D, F) or Output Quality Score (OQS; A, E, G, H), and Token Cost (TC). Secondary: Latency (L), Error Rate (ER), Tool-Call Count (TCC), Robustness (R). Aggregate Performance Score (APS) reported under equal weights with a weight-sensitivity analysis, as a secondary synthesis indicator. Criterion weights in the decision instrument are architect-set per deployment; Phase 3 validates comprehensibility and applicability, not a weight vector.
 
 ### Four Comparison Conditions
 
@@ -109,7 +109,7 @@ Co-primary: Task Completion Rate (TCR; B, C, D, F) or Output Quality Score (OQS;
 |-------|-------|--------|----------------|
 | 1 | Literature review, conceptual foundation | Taxonomy, evaluation instrument | Ch. 2, 3, 4.2, 4.3 |
 | 2 | Controlled task-level experiments | Performance matrix, TADF v1 rules | Ch. 4.4, 4.5 |
-| 3 | Practitioner evaluation | Validated APS weights, refined TADF | Ch. 5.1 |
+| 3 | Practitioner evaluation | Utility/comprehensibility evidence, refined TADF | Ch. 5.1 |
 | 4 | Case study validation | Hybrid pipeline, APS comparison | Ch. 5.2 |
 
 ## Current Status (2026-06-11)
